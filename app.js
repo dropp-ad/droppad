@@ -41,6 +41,7 @@
   var fmtLong = utc({ weekday: "long", day: "numeric", month: "long" });
   var fmtFull = utc({ day: "numeric", month: "long", year: "numeric" });
   var fmtMonth = utc({ month: "long", year: "numeric" });
+  var fmtMonthShort = utc({ month: "short" });
   var fmtStamp = new Intl.DateTimeFormat("pt-BR", { timeZone: TZ, day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
   function weekday(s) { return fmtWd.format(toDate(s)).replace(".", ""); }
   function longDay(s) { return fmtLong.format(toDate(s)); }
@@ -502,11 +503,17 @@
     var lastDay = "";
     th.entries.forEach(function (x, i) {
       var groupEl = el("div", "eh-reel-group");
-      if (x.c.date !== lastDay) {
+      var firstOfDay = x.c.date !== lastDay;
+      if (firstOfDay) {
         lastDay = x.c.date;
-        var d = el("div", "eh-reel-day");
+        var nDay = {};
+        th.entries.forEach(function (e) { if (e.c.date === x.c.date) nDay[e.c.id] = 1; });
+        var d = el("div", "eh-reel-day" + (x.c.date === state.today ? " eh-reel-today" : ""));
+        d.setAttribute("aria-label", fullDay(x.c.date));
+        d.appendChild(el("span", "eh-rd-wd", x.c.date === state.today ? "Hoje" : weekday(x.c.date)));
         d.appendChild(el("b", null, x.c.date.slice(8)));
-        d.appendChild(el("span", null, x.c.date === state.today ? "hoje" : weekday(x.c.date)));
+        d.appendChild(el("span", "eh-rd-mo", fmtMonthShort.format(toDate(x.c.date)).replace(".", "")));
+        d.appendChild(el("span", "eh-rd-n", plural(Object.keys(nDay).length)));
         groupEl.appendChild(d);
       }
       var isCard = x.kind === "card";
@@ -524,7 +531,10 @@
       th.reel.appendChild(groupEl);
       if (i === th.idx) {
         requestAnimationFrame(function () {
-          t.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+          var target = firstOfDay ? groupEl : t;
+          var r = th.reel, box = target.getBoundingClientRect(), rb = r.getBoundingClientRect();
+          var left = r.scrollLeft + box.left - rb.left - (firstOfDay ? 0 : Math.max(0, (rb.width - box.width) / 2));
+          r.scrollTo({ left: Math.max(0, left), behavior: "smooth" });
         });
       }
     });
