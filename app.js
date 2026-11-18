@@ -77,7 +77,7 @@
   }
 
   /* ---------- Estado ---------- */
-  var state = { items: [], today: todayYmd(), sel: null, month: todayYmd().slice(0, 7), region: ALL, loaded: false };
+  var state = { items: [], today: todayYmd(), sel: null, month: todayYmd().slice(0, 7), region: ALL, loaded: false, depth: 6 };
 
   function visible() {
     return state.region === ALL ? state.items : state.items.filter(function (c) { return c.region === state.region; });
@@ -90,10 +90,10 @@
   function viewItems() {
     var list = visible();
     if (state.sel) return list.filter(function (c) { return c.date === state.sel; });
-    var from = shift(state.today, -5);
+    var from = shift(state.today, -(state.depth - 1));
     return list.filter(function (c) { return c.date >= from && c.date <= state.today; });
   }
-  function heading() { return state.sel ? fullDay(state.sel) : "Hoje e os últimos 5 dias"; }
+  function heading() { return state.sel ? fullDay(state.sel) : "Hoje e os últimos " + (state.depth - 1) + " dias"; }
 
   /* ---------- Feed ---------- */
   function renderStrip(map) {
@@ -216,12 +216,54 @@
     var feed = $("feed");
     feed.textContent = "";
     if (!state.loaded) return;
-    if (state.sel) feed.appendChild(group(state.sel, map[state.sel] || [], true));
-    else for (var i = 0; i < 6; i++) { var day = shift(state.today, -i); feed.appendChild(group(day, map[day] || [], false)); }
+    if (state.sel) { feed.appendChild(group(state.sel, map[state.sel] || [], true)); return; }
+    appendDays(feed, map, 0, state.depth);
+  }
+
+  /* ---------- Rolagem infinita: ao chegar no fim, carrega os dias anteriores ---------- */
+  var STEP = 7, moreIO = null;
+  function oldestDay() {
+    var l = visible();
+    return l.length ? l[l.length - 1].date : state.today;
+  }
+  function appendDays(feed, map, start, end) {
+    var old = feed.querySelector(".eh-more");
+    if (old) old.remove();
+    if (moreIO) { moreIO.disconnect(); moreIO = null; }
+    var oldest = oldestDay();
+    for (var i = start; i < end; i++) {
+      var day = shift(state.today, -i);
+      if (day < oldest) break;
+      var list = map[day] || [];
+      if (i >= 6 && !list.length) continue; /* além dos 6 primeiros, pula dias vazios */
+      feed.appendChild(group(day, list, false));
+    }
+    if (shift(state.today, -(end - 1)) > oldest) {
+      var more = el("button", "eh-more", "Carregar dias anteriores");
+      more.type = "button";
+      more.addEventListener("click", loadMore);
+      feed.appendChild(more);
+      if ("IntersectionObserver" in window) {
+        moreIO = new IntersectionObserver(function (es) {
+          if (es.some(function (e) { return e.isIntersecting; })) loadMore();
+        }, { rootMargin: "600px 0px" });
+        moreIO.observe(more);
+      }
+    } else {
+      feed.appendChild(el("p", "eh-none eh-end", "Início do arquivo: " + fullDay(oldest) + "."));
+    }
+  }
+  function loadMore() {
+    if (state.sel || !state.loaded) return;
+    var start = state.depth;
+    state.depth += STEP;
+    appendDays($("feed"), byDay(visible()), start, state.depth);
+    $("view-title").textContent = heading();
   }
 
   function go(day) {
     state.sel = day;
+    state.depth = 6;
     if (day) state.month = day.slice(0, 7);
     var h = "#" + (day ? "dia-" + day : "ultimos");
     if (location.hash !== h) location.hash = h;
