@@ -282,6 +282,48 @@
     return vimeoPromise;
   }
 
+
+  /* ---------- Popularidade: views e likes do YouTube, ao vivo ---------- */
+  var popCache = {};
+  function fmtNum(n) {
+    if (n >= 1e6) return (n / 1e6).toFixed(n >= 1e7 ? 0 : 1).replace(".", ",") + " mi";
+    if (n >= 1e3) return (n / 1e3).toFixed(n >= 1e4 ? 0 : 1).replace(".", ",") + " mil";
+    return String(n);
+  }
+  function popOf(id) {
+    if (!popCache[id]) {
+      var key = "eh-pop-" + id, saved = null;
+      try { saved = JSON.parse(sessionStorage.getItem(key)); } catch (err) { saved = null; }
+      popCache[id] = saved ? Promise.resolve(saved) :
+        fetch("https://returnyoutubedislikeapi.com/votes?videoId=" + encodeURIComponent(id))
+          .then(function (r) { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+          .then(function (j) {
+            var v = { views: +j.viewCount || 0, likes: +j.likes || 0 };
+            if (v.views) { try { sessionStorage.setItem(key, JSON.stringify(v)); } catch (err) { /* sem storage */ } }
+            return v;
+          })
+          .catch(function () { return { views: 0, likes: 0 }; });
+    }
+    return popCache[id];
+  }
+  function popText(v, date) {
+    if (!v || !v.views) return "";
+    var days = Math.max(1, Math.round((toDate(state.today) - toDate(date)) / 864e5) + 1);
+    var t = "👁 " + fmtNum(v.views) + " views";
+    if (v.likes) t += " · 👍 " + fmtNum(v.likes);
+    if (v.views / days >= 50000) t = "🔥 " + t;
+    return t;
+  }
+  // Preenche um elemento com a popularidade do filme do YouTube (se houver dado).
+  function fillPop(node, e) {
+    node.hidden = true;
+    if (!e || e.kind !== "yt") return;
+    popOf(e.id).then(function (v) {
+      var t = popText(v, e.c.date);
+      if (t) { node.textContent = t; node.hidden = false; }
+    });
+  }
+
   /* ---------- Modo teatro ---------- */
   // A timeline tem filmes (tocam aqui) e notícias sem filme (aparecem como card).
   function entriesFor(items) {
@@ -357,7 +399,8 @@
     var who = el("p", "eh-now-who");
     var title = el("p", "eh-now-title");
     var ag = el("p", "eh-now-ag");
-    txt.appendChild(who); txt.appendChild(title); txt.appendChild(ag);
+    var popEl = el("p", "eh-now-pop");
+    txt.appendChild(who); txt.appendChild(title); txt.appendChild(ag); txt.appendChild(popEl);
     info.appendChild(count); info.appendChild(txt);
     var ctrl = el("div", "eh-now-ctrl");
     var prev = el("button", null, "◀ Anterior"); prev.type = "button";
@@ -382,7 +425,7 @@
     th = {
       entries: entries, films: films, idx: 0, ended: false, token: 0, yt: null, vm: null,
       root: root, ytBox: ytBox, vmBox: vmBox, cardBox: cardBox, endBox: endBox,
-      count: count, who: who, title: title, ag: ag, prev: prev, next: next, read: read, notice: notice, reel: reel,
+      count: count, who: who, title: title, ag: ag, pop: popEl, prev: prev, next: next, read: read, notice: notice, reel: reel,
       opener: document.activeElement, overflow: document.body.style.overflow
     };
     document.body.style.overflow = "hidden";
@@ -495,6 +538,7 @@
     th.title.textContent = c.title;
     th.ag.textContent = c.agency;
     th.ag.hidden = !c.agency;
+    fillPop(th.pop, e);
     th.prev.disabled = th.idx === 0;
     th.next.disabled = th.idx >= th.entries.length - 1;
     th.read.hidden = !c.url;
@@ -525,6 +569,9 @@
       t.appendChild(el("span", "eh-tile-who", flagOf(x.c.cc) + " " + x.c.brand));
       t.appendChild(el("span", "eh-tile-title", x.c.title));
       t.appendChild(el("span", "eh-tile-ag", x.parts > 1 ? "Filme " + x.part + " de " + x.parts : (x.c.agency || x.c.source)));
+      var tp = el("span", "eh-tile-pop");
+      t.appendChild(tp);
+      fillPop(tp, x);
       if (i === th.idx) t.appendChild(el("span", "eh-tile-live", isCard ? "Aberto" : th.ended ? "Terminou" : "Tocando"));
       else if (isCard) t.appendChild(el("span", "eh-tile-nofilm", "Sem filme"));
       t.addEventListener("click", function () { show(i); });
@@ -590,6 +637,16 @@
     root.appendChild(bar);
 
     var slides = [];
+    var intro = el("section", "eh-fs eh-fs-intro");
+    var ib = el("div", "eh-fs-introin");
+    ib.appendChild(el("span", "eh-fs-introkick", "Todo dia, o mundo inteiro"));
+    ib.appendChild(el("h1", null, "Estreou Hoje"));
+    ib.appendChild(el("p", null, "As campanhas publicitárias que acabaram de estrear em agências e marcas do mundo todo, numa fila só. Os filmes tocam aqui, um atrás do outro, com quantas pessoas já viram cada um."));
+    ib.appendChild(el("p", "eh-fs-introsub", plural(Object.keys(viewItems().reduce(function (m, c) { m[c.id] = 1; return m; }, {})).length) + " · " + heading().toLowerCase()));
+    ib.appendChild(el("span", "eh-fs-hint", "Deslize para cima ↑"));
+    intro.appendChild(ib);
+    root.appendChild(intro);
+    slides.push({ kind: "intro", node: intro });
     var lastDay = "";
     var perDay = {};
     entries.forEach(function (e) { (perDay[e.c.date] = perDay[e.c.date] || {})[e.c.id] = 1; });
@@ -632,7 +689,6 @@
 
     var start = -1;
     if (startId) start = slides.findIndex(function (s) { return s.e && s.e.c.id === startId && s.kind !== "day"; });
-    if (start < 0) start = slides.findIndex(function (s) { return s.kind === "yt" || s.kind === "vimeo"; });
     if (start < 0) start = 0;
     if (start > 0) slides[start].node.scrollIntoView();
   }
@@ -681,6 +737,9 @@
     info.appendChild(el("p", "eh-fs-who", flagOf(c.cc) + " " + c.brand + (e.parts > 1 ? " · filme " + e.part + " de " + e.parts : "")));
     if (!isCard) info.appendChild(el("p", "eh-fs-title", c.title));
     if (c.agency) info.appendChild(el("p", "eh-fs-ag", c.agency));
+    var fp = el("p", "eh-fs-pop");
+    info.appendChild(fp);
+    fillPop(fp, e);
     if (c.url) info.appendChild(link("eh-fs-read", "Ler em " + (c.source || "fonte") + " ↗", c.url));
     s.appendChild(info);
     root.appendChild(s);
