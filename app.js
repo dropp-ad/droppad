@@ -1,4 +1,4 @@
-/* Adrop: feed por dia, calendário, filtro por região e modo teatro
+/* AD Drop: feed por dia, calendário, filtro por região e modo teatro
    com player embutido (YouTube e Vimeo). Os dados vêm de campaigns.json. */
 (function () {
   "use strict";
@@ -640,7 +640,7 @@
     var intro = el("section", "eh-fs eh-fs-intro");
     var ib = el("div", "eh-fs-introin");
     ib.appendChild(el("span", "eh-fs-introkick", "Todo dia, o mundo inteiro"));
-    ib.appendChild(el("h1", null, "Adrop"));
+    ib.appendChild(el("h1", null, "AD Drop"));
     ib.appendChild(el("p", null, "As campanhas publicitárias que acabaram de estrear em agências e marcas do mundo todo, numa fila só. Os filmes tocam aqui, um atrás do outro, com quantas pessoas já viram cada um."));
     ib.appendChild(el("p", "eh-fs-introsub", plural(Object.keys(viewItems().reduce(function (m, c) { m[c.id] = 1; return m; }, {})).length) + " · " + heading().toLowerCase()));
     ib.appendChild(el("span", "eh-fs-hint", "Deslize para cima ↑"));

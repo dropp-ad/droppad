@@ -1,4 +1,4 @@
-# Adrop
+# AD Drop
 
 Feed diário das campanhas publicitárias que estrearam no mundo, com calendário, filtro por região e modo teatro (filmes do YouTube e do Vimeo tocando em sequência; campanhas sem filme aparecem como card).
 
