@@ -2156,5 +2156,861 @@
     "cc": "HK",
     "summary": "O McDonald's de Hong Kong uniu o universo de fantasia sombria criado por Jackson Wang ao seu cardápio premium num cardápio de Halloween com hambúrguer de pão preto, embalagens especiais e lojas tematizadas.",
     "addedAt": "2026-11-18T04:49:21Z"
+  },
+  {
+    "id": "2026-10-15-wise-the-smartest-thing-you-can-do-right-now",
+    "date": "2026-10-15",
+    "brand": "Wise",
+    "title": "The Smartest Thing You Can Do Right Now",
+    "agency": "Little Big Engine",
+    "source": "Ads of the World",
+    "url": "https://www.adsoftheworld.com/campaigns/humorous-campaign-to-showcase-chequing-account-in-canada",
+    "region": "Canadá",
+    "cc": "CA",
+    "yt": [
+      "ietpNs2rQT4",
+      "dI8BwHSqWP0",
+      "0C4EFoSQtb8"
+    ],
+    "summary": "Três filmes bem-humorados mostram recém-chegados ao Canadá lidando com dólares canadenses e outras moedas até descobrirem a conta corrente da Wise.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-14-o-boticario-acerola-e-vai-2x",
+    "date": "2026-10-14",
+    "brand": "O Boticário",
+    "title": "Cuide-se Bem Acerola & Vai em 2x",
+    "agency": "AlmapBBDO / SoWhat",
+    "source": "Grandes Nomes da Propaganda",
+    "url": "https://grandesnomesdapropaganda.com.br/sem-categoria/o-boticario-traz-pump-it-up-para-cuide-se-bem-acerola-vai/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "mQITmBouT98"
+    ],
+    "summary": "Embalado por \"Pump It Up\", o filme da nova linha pré e pós-treino foi pensado para ser assistido em velocidade 2x e tem Júlia Mazzocco como protagonista.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-14-just-eat-quedate-en-el-momento",
+    "date": "2026-10-14",
+    "brand": "Just Eat",
+    "title": "Quédate en el momento",
+    "agency": "VCCP",
+    "source": "Reason Why",
+    "url": "https://www.reasonwhy.es/actualidad/nueva-plataforma-just-eat-quedate-en-el-momento",
+    "region": "Espanha",
+    "cc": "ES",
+    "yt": [
+      "Euv8bUtgdJw"
+    ],
+    "summary": "A Just Eat estreia na Espanha sua nova plataforma global, de tom mais emotivo, com um avô dando mamadeira ao neto para mostrar que o delivery evita interromper os momentos que importam.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-14-aviva-menopause-monopoly",
+    "date": "2026-10-14",
+    "brand": "Aviva",
+    "title": "Menopause Monopoly",
+    "agency": "Saatchi & Saatchi",
+    "source": "Creative Salon",
+    "url": "https://creative.salon/articles/work/saatchi-saatchi-channel-4-aviva-omd",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "summary": "A seguradora criou com a Hasbro uma edição especial do Monopoly sobre a menopausa, jogada por apresentadoras num episódio do Channel 4 para estimular conversas abertas sobre o tema.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-14-woolmark-return-to-real",
+    "date": "2026-10-14",
+    "brand": "Woolmark",
+    "title": "Return to Real",
+    "agency": "Wieden+Kennedy Sydney",
+    "source": "B&T",
+    "url": "https://www.bandt.com.au/woolmark-puts-wool-up-against-artificial-world-in-new-campaign-via-wiedenkennedy-sydney/",
+    "region": "Austrália",
+    "cc": "AU",
+    "yt": [
+      "s7GTB-dRkMQ"
+    ],
+    "summary": "A nova plataforma global da Woolmark posiciona a lã como resposta natural a um mundo cada vez mais artificial, com filmes, mídia exterior, criadores de conteúdo e uma instalação numa fazenda de ovelhas.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-14-tac-shredmill",
+    "date": "2026-10-14",
+    "brand": "TAC",
+    "title": "Shredmill – Check Your Gear Before You Hit the Road",
+    "agency": "Clemenger BBDO",
+    "source": "B&T",
+    "url": "https://www.bandt.com.au/tac-tears-up-bikers-clothes-with-confronting-shredmill-simulator-via-clemenger-bbdo/",
+    "region": "Austrália",
+    "cc": "AU",
+    "video": "https://vimeo.com/1234914851",
+    "summary": "A TAC, de Victoria, criou uma esteira abrasiva em tamanho real que mostra em segundos como roupas de motociclista se desgastam no asfalto, levando os pilotos a consultar as notas de proteção do MotoCAP.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-14-thrifty-moving-champs",
+    "date": "2026-10-14",
+    "brand": "Thrifty",
+    "title": "Moving Champs",
+    "agency": "CampaignLab",
+    "source": "B&T",
+    "url": "https://www.bandt.com.au/thrifty-pairs-australias-strongest-man-with-tetris-champion-in-latest-work-via-campaignlab/",
+    "region": "Austrália",
+    "cc": "AU",
+    "summary": "A locadora Thrifty juntou o homem mais forte da Austrália e um campeão de Tetris a equipes de mudança reais em Sydney para dar dicas de como carregar peso e encaixar tudo no veículo.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-13-bradesco-empresas-selton-mello-locale",
+    "date": "2026-10-13",
+    "brand": "Bradesco Empresas e Negócios",
+    "title": "Selton Mello e a Locale Trattoria",
+    "agency": "AlmapBBDO",
+    "source": "Meio & Mensagem",
+    "url": "https://www.meioemensagem.com.br/comunicacao/campanhas-da-semana-velocidade-e-cultura-pop",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "z6De_HQ3NoM"
+    ],
+    "summary": "Selton Mello vira garoto-propaganda de um restaurante paulistano cliente do banco para mostrar o sucesso dos negócios que contam com o Bradesco.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-13-lala-mexiconteiners",
+    "date": "2026-10-13",
+    "brand": "Lala",
+    "title": "Mexiconteiners",
+    "agency": "Zurda México",
+    "source": "Reason Why",
+    "url": "https://www.reasonwhy.es/actualidad/lala-adapta-packaging-envases-crema-costumbre-mexicana-guardar-comida",
+    "region": "México",
+    "cc": "MX",
+    "video": "https://vimeo.com/1235335985",
+    "summary": "A Lala redesenha seus potes de creme para o hábito mexicano de reutilizá-los na geladeira, com um espaço para escrever o que está guardado na segunda vida da embalagem.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-13-andina-refajo-pibe-valderrama",
+    "date": "2026-10-13",
+    "brand": "Andina Refajo",
+    "title": "Lo auténtico no se cambia",
+    "agency": "Sancho BBDO",
+    "source": "El Economista",
+    "url": "https://eleconomista.com.ar/deportes/pibe-valderrama-melena-falso-rapado-campana-marketing-andina-n98928",
+    "region": "Colômbia",
+    "cc": "CO",
+    "summary": "Carlos \"El Pibe\" Valderrama apareceu raspando a cabeleira em vídeo e, dois dias depois, revelou que era uma prótese numa ação da Andina Refajo que liga seu visual autêntico à identidade da bebida.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-13-chipotle-big-ass-chipotle-bag",
+    "date": "2026-10-13",
+    "brand": "Chipotle",
+    "title": "Big Ass Chipotle Bag",
+    "agency": "",
+    "source": "Marketing Dive",
+    "url": "https://www.marketingdive.com/news/brand-new-bag-chipotle-unreal-snacks-reach-for-fashion-relevancy/832488/",
+    "region": "Estados Unidos",
+    "cc": "US",
+    "summary": "Para divulgar suas refeições para a família, a Chipotle criou uma sacola de delivery gigante, com quase um metro de largura, sorteada entre membros do programa de fidelidade.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-13-kwik-fit-kwik-chat",
+    "date": "2026-10-13",
+    "brand": "Kwik Fit",
+    "title": "Kwik Chat",
+    "agency": "VCCP",
+    "source": "Tyrepress",
+    "url": "https://www.tyrepress.com/2026/10/kwik-fit-initiates-kwik-chat-encourages-customers-to-use-mot-time-to-check-in-on-loved-ones/",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "summary": "A rede de autocentros incentiva os clientes a usar o tempo de espera da revisão do carro para conversar com quem amam, apoiando a saúde mental.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-13-bhuja-dhum-dhum",
+    "date": "2026-10-13",
+    "brand": "Bhuja",
+    "title": "Dhum Dhum",
+    "agency": "Sure Studios",
+    "source": "B&T",
+    "url": "https://www.bandt.com.au/bhuja-channels-dhum-dhum-for-first-brand-campaign-in-60-years/",
+    "region": "Austrália",
+    "cc": "AU",
+    "yt": [
+      "PMLb50MAtPI"
+    ],
+    "summary": "Em sua primeira campanha de marca em 60 anos, o snack Bhuja estreia nova identidade com um filme ao som de \"Dhum Dhum\", em que a personagem Asha e o tigre Raja percorrem paisagens australianas.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-13-medibank-untangle",
+    "date": "2026-10-13",
+    "brand": "Medibank",
+    "title": "Untangle",
+    "agency": "Colenso BBDO",
+    "source": "B&T",
+    "url": "https://www.bandt.com.au/medibank-launches-mental-fitness-platform-untangle-via-colenso-bbdo/",
+    "region": "Austrália",
+    "cc": "AU",
+    "yt": [
+      "X_nB4RFvhtc"
+    ],
+    "summary": "A Medibank lança a plataforma nacional Untangle, que apresenta a saúde mental como uma série de pequenas ações cotidianas para as pessoas se sentirem mais leves e no controle.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-12-sprite-never-stop-refreshing-the-game",
+    "date": "2026-10-12",
+    "brand": "Sprite",
+    "title": "Never Stop Refreshing the Game",
+    "agency": "",
+    "source": "Marketing Dive",
+    "url": "https://www.marketingdive.com/news/how-sprite-is-refreshing-its-nba-sponsorship-with-a-global-focus/832599/",
+    "region": "Estados Unidos",
+    "cc": "US",
+    "yt": [
+      "81dQggAAVCU"
+    ],
+    "summary": "Com a volta da Coca-Cola ao patrocínio da NBA, a Sprite lança uma plataforma global com Nikola Jokić e Anthony Edwards, latas com QR code e reforma de quadras comunitárias.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-12-ocean-park-grave-rave",
+    "date": "2026-10-12",
+    "brand": "Ocean Park",
+    "title": "Halloween Fest 2026: The Grave Rave",
+    "agency": "",
+    "source": "Marketing-Interactive",
+    "url": "https://www.marketing-interactive.com/ocean-park-unveils-ai-driven-campaign-this-halloween",
+    "region": "Hong Kong",
+    "cc": "HK",
+    "summary": "Pela primeira vez, o parque Ocean Park divulga seu festival de Halloween com visuais totalmente gerados por IA, em vídeos, mídia exterior, influenciadores e ativações em shoppings de Hong Kong.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-11-mcdonalds-happy-view",
+    "date": "2026-10-11",
+    "brand": "McDonald's",
+    "title": "Happy View",
+    "agency": "Galeria",
+    "source": "Exame",
+    "url": "https://exame.com/marketing/5-campanhas-da-semana-para-conferir-especial-dia-das-criancas/",
+    "region": "Brasil",
+    "cc": "BR",
+    "summary": "Com o Hospital CEMA, a caixa do McLanche Feliz virou um kit lúdico de triagem visual, com lentes e teste de acuidade, e crianças ganharam exames de vista gratuitos em São Paulo.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-11-rappi-ooh-mexico",
+    "date": "2026-10-11",
+    "brand": "Rappi",
+    "title": "Mochila Rappi em OOH",
+    "agency": "Super",
+    "source": "Revista Mercado",
+    "url": "https://mercado.com.ar/marketing/super-desarrolla-una-campana-de-publicidad-exterior-para-rappi-en-tres-ciudades-mexicanas",
+    "region": "México",
+    "cc": "MX",
+    "summary": "A Rappi ocupa a Cidade do México, Guadalajara e Monterrey com peças de mídia exterior e formatos especiais construídos em torno de sua mochila de entrega para reforçar rapidez e parceiros exclusivos.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-10-fundacao-bradesco-reescrever",
+    "date": "2026-10-10",
+    "brand": "Fundação Bradesco",
+    "title": "Reescrever",
+    "agency": "Crispin",
+    "source": "Propmark",
+    "url": "https://propmark.com.br/anunciantes/fundacao-bradesco-reune-historia-reais-para-o-dia-dos-professores/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "l_5wu8BB0dM"
+    ],
+    "summary": "Filme documental para o Dia dos Professores acompanha o reencontro da professora Rosi com ex-alunos que seguiram caminhos diferentes graças à educação.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-09-vivo-presenca-sem-interferencia",
+    "date": "2026-10-09",
+    "brand": "Vivo",
+    "title": "Presença sem interferência",
+    "agency": "Africa Creative",
+    "source": "Meio & Mensagem",
+    "url": "https://www.meioemensagem.com.br/comunicacao/no-dia-das-criancas-vivo-convida-a-conexao-fora-das-telas",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "q3hRjeiG-CQ"
+    ],
+    "summary": "Com o celular esquecido em outro cômodo, mãe e filha embarcam numa história de dragão, num filme de Dia das Crianças que critica a interferência da tecnologia na convivência familiar.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-09-ale-pode-confiar",
+    "date": "2026-10-09",
+    "brand": "Postos ALE",
+    "title": "Postos ALE. Pode confiar",
+    "agency": "TV1",
+    "source": "Grandes Nomes da Propaganda",
+    "url": "https://grandesnomesdapropaganda.com.br/anunciantes/ale-lanca-campanha-com-fernanda-gentil-e-rubens-barrichello/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "WMCvu8EeHAs"
+    ],
+    "summary": "Fernanda Gentil e Rubens Barrichello reforçam a confiança no atendimento da rede e nos combustíveis Energy em nova campanha institucional da distribuidora.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-09-magistral-brazudo",
+    "date": "2026-10-09",
+    "brand": "Magistral",
+    "title": "Brazudo",
+    "agency": "Pluma Agency",
+    "source": "Adlatina",
+    "url": "https://www.adlatina.com/publicidad/preestreno-magistral-y-pluma-agency-reviven-un-clasico-de-la-marca-para-lanzar-su-nuevo-antigrasa",
+    "region": "Argentina",
+    "cc": "AR",
+    "summary": "Para lançar seu desengordurante em spray, a Magistral reinterpreta com humor o lendário comercial do fisiculturista de 18 anos atrás, agora com o lutador Vicente Viloni, mostrando que limpar não exige mais esforço.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-09-fini-bloodyshake",
+    "date": "2026-10-09",
+    "brand": "Fini",
+    "title": "Bloodyshake",
+    "agency": "",
+    "source": "Marketing Directo",
+    "url": "https://www.marketingdirecto.com/creacion/campanas-de-marketing/fini-milfshakes-construyen-campana-donacion-sangre-halloween",
+    "region": "Espanha",
+    "cc": "ES",
+    "yt": [
+      "F0UGRYlcsjU"
+    ],
+    "summary": "Fini e Milfshakes fizeram uma campanha anônima de doação de sangue que arrecadou mais de 225 litros e depois revelaram o Bloodyshake, um doce líquido de Halloween em embalagem que imita uma bolsa de sangue.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-09-jacobs-namaste",
+    "date": "2026-10-09",
+    "brand": "Jacob's",
+    "title": "Namaste",
+    "agency": "Boys+Girls",
+    "source": "Adworld.ie",
+    "url": "https://www.adworld.ie/2026/10/09/boysgirls-rolls-out-namaste-in-latest-jacobs-campaign/",
+    "region": "Irlanda",
+    "cc": "IE",
+    "video": "https://vimeo.com/1234321018",
+    "summary": "Uma mãe tenta manter a paciência diante do relato interminável da filha recém-chegada de viagem, até que os Cream Crackers com manteiga e cheddar a fazem se sentir em casa de novo.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-09-durex-get-wood-rising",
+    "date": "2026-10-09",
+    "brand": "Durex",
+    "title": "Get Wood Rising",
+    "agency": "McCann UK",
+    "source": "Creative Salon",
+    "url": "https://creative.salon/articles/work/durex-get-wood-rising-mccann-uk",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "summary": "A Durex se uniu ao time amador Woodley United e escalou Sean Dyche como diretor de futebol fictício numa série de vídeos que usa a busca do acesso para falar de desempenho sexual com bom humor.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-09-indriya-festival-of-love",
+    "date": "2026-10-09",
+    "brand": "Indriya (Aditya Birla Jewellery)",
+    "title": "Festival of Love",
+    "agency": "Ogilvy West",
+    "source": "MediaNews4U",
+    "url": "https://www.medianews4u.com/indriya-celebrates-the-love-within-diwali-with-festival-of-love-featuring-aditi-rao-hydari-and-siddharth/",
+    "region": "Índia",
+    "cc": "IN",
+    "yt": [
+      "aE9aURmKwSY"
+    ],
+    "summary": "Com Aditi Rao Hydari e Siddharth, a joalheria Indriya mostra um casal recebendo amigos no Diwali e apresenta a coleção de ouro Padmika, inspirada na deusa Lakshmi.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-08-ftd-educacao-dia-dos-professores",
+    "date": "2026-10-08",
+    "brand": "FTD Educação",
+    "title": "Campanha documental do Dia dos Professores",
+    "agency": "",
+    "source": "Grandes Nomes da Propaganda",
+    "url": "https://grandesnomesdapropaganda.com.br/mercado-digital/ftd-educacao-estreia-campanha-documental-para-o-dia-dos-professores/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "Kp4cz6TmDx0"
+    ],
+    "summary": "Em formato documental, a editora acompanha a rotina real de três professores que já produzem conteúdo sobre o próprio dia a dia, longe da ideia de heroísmo.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-08-dominos-mes-da-boca-maluca",
+    "date": "2026-10-08",
+    "brand": "Domino's",
+    "title": "Mês da Boca Maluca",
+    "agency": "Milà",
+    "source": "Grandes Nomes da Propaganda",
+    "url": "https://grandesnomesdapropaganda.com.br/mercado-digital/dominos-transforma-bocas-azuis-em-videoclipe-para-apresentar-pizza-maluca/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "ijSmRrQRNVg"
+    ],
+    "summary": "Três bocas azuladas estrelam um videoclipe de funk para divulgar a Pizza Maluca, edição limitada com recheio azul que tinge a boca de quem come.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-08-quintoandar-sons-da-infancia",
+    "date": "2026-10-08",
+    "brand": "QuintoAndar",
+    "title": "Sons da infância",
+    "agency": "",
+    "source": "Omelete",
+    "url": "https://www.omelete.com.br/mangas-animes/wendel-ursula-bezerra-goku-naruto-quinto-andar-dia-das-criancas",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "Kc4BmNSDMSA"
+    ],
+    "summary": "No Dia das Crianças, os dubladores Wendel e Úrsula Bezerra, vozes de Goku e Naruto, contrapõem a casa sonhada na infância ao lar conquistado na vida adulta.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-08-espolon-fare-share",
+    "date": "2026-10-08",
+    "brand": "Espolòn",
+    "title": "Fare Share",
+    "agency": "",
+    "source": "Marketing Dive",
+    "url": "https://www.marketingdive.com/news/espolon-tequila-combats-surge-pricing-with-ride-hailing-refund-program/832452/",
+    "region": "Estados Unidos",
+    "cc": "US",
+    "summary": "Contra a tarifa dinâmica dos apps de transporte no Halloween, a tequila Espolòn reembolsa metade das corridas de quem enviar o recibo, até US$ 25.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-08-rivian-halloween-mode",
+    "date": "2026-10-08",
+    "brand": "Rivian",
+    "title": "Halloween Mode",
+    "agency": "Bob Industries",
+    "source": "Ads of the World",
+    "url": "https://www.adsoftheworld.com/campaigns/halloween-mode",
+    "region": "Estados Unidos",
+    "cc": "US",
+    "yt": [
+      "AzErJdWUDTE",
+      "lEYdKQKMFtU"
+    ],
+    "summary": "Uma atualização remota em parceria com a Sony transforma os carros da Rivian em veículos caça-fantasmas de 'Os Caça-Fantasmas', com sons, luzes e um Ecto-R1 em tamanho real apresentado por Bill Murray.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-08-waitrose-fine-dine-in",
+    "date": "2026-10-08",
+    "brand": "Waitrose",
+    "title": "It's Not Fine Dining, It's Fine Dine In",
+    "agency": "Wonderhood Studios",
+    "source": "Retail Times",
+    "url": "https://retailtimes.co.uk/waitrose-turns-staying-in-into-fine-dine-in-with-new-wonderhood-studios-campaign/",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "summary": "Dois filmes curtos fazem parecer que os clientes estão em um restaurante, mas revelam que eles comem em casa as refeições prontas da Waitrose, numa tentativa de conquistar jovens que pediriam delivery.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-08-auracam-shubh-shuruat",
+    "date": "2026-10-08",
+    "brand": "AuraCam",
+    "title": "Shubh Shuruat",
+    "agency": "",
+    "source": "MediaNews4U",
+    "url": "https://www.medianews4u.com/auracam-marks-navratri-with-a-new-film-celebrating-auspicious-beginnings/",
+    "region": "Índia",
+    "cc": "IN",
+    "yt": [
+      "igmue7Z99No"
+    ],
+    "summary": "A marca de cânfora AuraCam celebra o Navratri com um filme que revisita, em linguagem atual, rituais como a oração, a chama da aarti e a purificação da casa.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-07-youse-overthinking",
+    "date": "2026-10-07",
+    "brand": "Youse",
+    "title": "Overthinking",
+    "agency": "Tech and Soul",
+    "source": "Grandes Nomes da Propaganda",
+    "url": "https://grandesnomesdapropaganda.com.br/anunciantes/youse-apresenta-nova-marca-com-campanha-overthinking/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "56ZzBx4u2kg"
+    ],
+    "summary": "Para estrear sua nova identidade visual, a seguradora dramatiza a angústia de pensar demais antes de uma grande decisão, sob o mote \"Menos preocupação, mais Youse\".",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-07-philips-walita-walitas-do-brasil",
+    "date": "2026-10-07",
+    "brand": "Philips Walita",
+    "title": "Walitas do Brasil",
+    "agency": "iD\\TBWA",
+    "source": "Meio & Mensagem",
+    "url": "https://www.meioemensagem.com.br/comunicacao/campanhas-da-semana-memorias-travessuras-e-homenagens",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "hEZ3w29qimA"
+    ],
+    "summary": "Partindo do dado do IBGE de que 74 brasileiros se chamam Walita, a marca conta a história de três mulheres batizadas com o nome para celebrar suas oito décadas.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-07-fosters-hollywood-nashville-chicken",
+    "date": "2026-10-07",
+    "brand": "Foster's Hollywood",
+    "title": "Nashville Chicken Selection",
+    "agency": "McCann",
+    "source": "Marketing Directo",
+    "url": "https://www.marketingdirecto.com/creacion/campanas-de-marketing/fosters-hollywood-defiende-cambio-habitos-consumo-nueva-nashville-chicken-selection",
+    "region": "Espanha",
+    "cc": "ES",
+    "yt": [
+      "6zWWRbYX95o"
+    ],
+    "summary": "A rede de restaurantes lança seu frango frito para compartilhar defendendo que ninguém precisa abrir mão do que gosta quando pode aproveitar de um jeito melhor.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-07-herb-light-cannabis-horror-stories",
+    "date": "2026-10-07",
+    "brand": "Herb Light",
+    "title": "Cannabis Horror Stories",
+    "agency": "Quality Meats",
+    "source": "Muse by Clios",
+    "url": "https://musebyclios.com/cannabis/thc-beverage-herb-light-wants-your-cannabis-horror-stories-for-halloween/",
+    "region": "Estados Unidos",
+    "cc": "US",
+    "summary": "A bebida com baixo teor de THC pede histórias de terror canábicas em clima de filme B retrô e premia dois vencedores com um fim de semana numa 'ScareBnB' assombrada em Illinois.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-07-verizon-feel-the-love",
+    "date": "2026-10-07",
+    "brand": "Verizon",
+    "title": "Feel the Love",
+    "agency": "",
+    "source": "Auralcrave",
+    "url": "https://auralcrave.com/en/2026/10/07/conrad-from-the-summer-i-turned-pretty-has-found-love-in-the-new-verizon-commercial/",
+    "region": "Estados Unidos",
+    "cc": "US",
+    "yt": [
+      "kWtg_n6sZXM"
+    ],
+    "summary": "Ao som de 'Is This Love', do Whitesnake, Chris Briney vive um romance retrô e ansioso à espera de uma ligação, mas o que o faz sorrir é a oferta diária do Verizon Shine.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-07-sour-patch-kids-not-as-sweet-as-they-look",
+    "date": "2026-10-07",
+    "brand": "Sour Patch Kids",
+    "title": "Not As Sweet As They Look",
+    "agency": "VCCP",
+    "source": "Creative Salon",
+    "url": "https://creative.salon/articles/work/sour-patch-kids-not-as-sweet-as-they-look-vccp",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "summary": "Na primeira campanha integrada da bala no Reino Unido, painéis especiais em Londres e Bristol mostram as Sour Patch Kids destruindo um cartaz vizinho da Oreo, brincando com a rivalidade entre as marcas.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-07-mnd-association-life-stripped-away",
+    "date": "2026-10-07",
+    "brand": "MND Association",
+    "title": "Life Stripped Away",
+    "agency": "Pablo",
+    "source": "Creative Salon",
+    "url": "https://creative.salon/articles/work/mnd-association-life-stripped-away-pablo",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "summary": "Primeira campanha de marca da associação britânica de doença do neurônio motor acompanha Jaki, cantora cujos sintomas surgiram no dia do casamento, e usa fotos \"despidas\" que preservam só os olhos dos retratados.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-06-coca-cola-joao-gomes-retornaveis",
+    "date": "2026-10-06",
+    "brand": "Coca-Cola",
+    "title": "João Gomes e as retornáveis",
+    "agency": "VML",
+    "source": "Meio & Mensagem",
+    "url": "https://www.meioemensagem.com.br/comunicacao/coca-cola-reforca-embalagens-retornaveis-com-joao-gomes",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "0h6ENbktY9o"
+    ],
+    "summary": "João Gomes canta em ritmo de piseiro o jingle clássico da marca num filme que lembra que, devolvendo a garrafa retornável, o consumidor paga só pelo líquido.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-06-adidas-gracias-10",
+    "date": "2026-10-06",
+    "brand": "Adidas",
+    "title": "Gracias 10",
+    "agency": "Newcycle",
+    "source": "Reason Why",
+    "url": "https://www.reasonwhy.es/actualidad/asi-ha-despedido-adidas-messi-argentina-dos-decadas-patrocinio",
+    "region": "Argentina",
+    "cc": "AR",
+    "yt": [
+      "K_QpJs5y9ZI"
+    ],
+    "summary": "Na despedida de Messi da seleção argentina, a Adidas levou uma camisa gigante de 30 metros de Rosário ao gramado do Monumental e lançou um documentário sobre os últimos dias do craque com a Albiceleste.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-05-sip-carreteras-sipeadas",
+    "date": "2026-10-05",
+    "brand": "Sip",
+    "title": "Carreteras Sipeadas",
+    "agency": "Potro",
+    "source": "Adlatina",
+    "url": "https://www.adlatina.com/publicidad/preestreno-potro-y-sip-buscan-que-en-el-per-pasen-de-conocer-la-billetera-a-usarla",
+    "region": "Peru",
+    "cc": "PE",
+    "summary": "A carteira digital peruana reescreve a canção \"Carreteras mojadas\", de Christian Meier, numa história em dois capítulos por mercados e oficinas para transformar \"sipear\" em gíria cotidiana para pagar e transferir.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-05-twix-hallowmas-ii",
+    "date": "2026-10-05",
+    "brand": "Twix",
+    "title": "Hallowmas II",
+    "agency": "adam&eve\\TBWA",
+    "source": "Ads of the World",
+    "url": "https://www.adsoftheworld.com/campaigns/hallowmas-968a6458-44f9-419d-9b46-66bb66efbd32",
+    "region": "Estados Unidos",
+    "cc": "US",
+    "summary": "O Papai Noel zumbi volta pelo segundo ano para misturar Halloween e Natal, distribuindo Twix em lugares inesperados e abrindo um concurso de fotos e vídeos com US$ 20 mil em prêmios.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-05-kalyan-jewellers-navratri-shakti",
+    "date": "2026-10-05",
+    "brand": "Kalyan Jewellers",
+    "title": "As muitas formas de Shakti (Navratri)",
+    "agency": "",
+    "source": "MediaNews4U",
+    "url": "https://www.medianews4u.com/kalyan-jewellers-celebrates-the-many-forms-of-shakti-in-new-navratri-campaign/",
+    "region": "Índia",
+    "cc": "IN",
+    "yt": [
+      "P8nGu6MDP5Y"
+    ],
+    "summary": "O filme de Navratri da Kalyan Jewellers mostra Shakti nas mulheres que sustentam a família, como mãe, filha e irmã, entre rituais caseiros, garba e uma aarti final em torno do kalash.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-04-intermarche-ces-dimanches-la",
+    "date": "2026-10-04",
+    "brand": "Intermarché",
+    "title": "Ces dimanches-là",
+    "agency": "Romance",
+    "source": "J'ai un pote dans la com",
+    "url": "https://jai-un-pote-dans-la.com/intermarche-romance-racontent-repas-famille-dimanches-la/",
+    "region": "França",
+    "cc": "FR",
+    "yt": [
+      "qW9cmJmnre0"
+    ],
+    "summary": "Filme de 85 segundos dirigido por Katia Lewkowicz retrata um longo almoço de domingo em família com estética do cinema francês dos anos 70, para divulgar a linha Terroirs de produtos de origem francesa.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-02-kfc-coroleo-leo-santana",
+    "date": "2026-10-02",
+    "brand": "KFC",
+    "title": "Coroléo: Léo Santana apresenta os novos OriGGinais",
+    "agency": "Lola\\TBWA",
+    "source": "Meio & Mensagem",
+    "url": "https://www.meioemensagem.com.br/comunicacao/campanhas-da-semana-celebracoes-causas-e-inovacao",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "GescLz-Iptc"
+    ],
+    "summary": "Léo Santana encarna o Coroléo, versão brasileira do Coronel Sanders, para lançar a linha renovada de sanduíches extra crocantes da rede.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-02-mastercard-incomparable",
+    "date": "2026-10-02",
+    "brand": "Mastercard",
+    "title": "Incomparable",
+    "agency": "McCann Miami",
+    "source": "Adlatina",
+    "url": "https://www.adlatina.com/publicidad/preestreno-mastercard-y-mccann-miami-presentan-incomparable-campaa-que-recupera-el-icnico-eslogan-de-la-marca",
+    "region": "Argentina",
+    "cc": "AR",
+    "summary": "Com humor e referências da cultura argentina, a Mastercard pergunta para onde iria toda a paixão do torcedor sem o futebol e resgata o clássico bordão das coisas que o dinheiro não pode comprar.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-02-angry-orchard-angry-orchard-video",
+    "date": "2026-10-02",
+    "brand": "Angry Orchard",
+    "title": "Angry Orchard Video",
+    "agency": "",
+    "source": "Fangoria",
+    "url": "https://www.fangoria.com/angry-orchard-scream-pop-up/",
+    "region": "Estados Unidos",
+    "cc": "US",
+    "summary": "A sidra Angry Orchard abriu em Nova York uma locadora de vídeo dos anos 90 inspirada em 'Pânico', com degustação, produtos exclusivos e a presença de Skeet Ulrich para lançar seu pacote de Halloween.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-02-ikea-storage-is-sexy",
+    "date": "2026-10-02",
+    "brand": "IKEA",
+    "title": "Storage Is Sexy",
+    "agency": "Mother",
+    "source": "Creative Salon",
+    "url": "https://creative.salon/articles/work/ikea-storage-is-sexy-mother",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "summary": "A IKEA britânica criou um programa de namoro em que os solteiros escolhem o par pelo guarda-roupa PAX de cada um, com cartazes de rua que imitam perfis de aplicativo de encontros.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-02-very-ie-weve-got-the-very-thing",
+    "date": "2026-10-02",
+    "brand": "Very.ie",
+    "title": "We've Got the Very Thing",
+    "agency": "Boys + Girls",
+    "source": "Adworld.ie",
+    "url": "https://www.adworld.ie/2026/10/02/very-ie-launches-new-irish-brand-platform-with-boys-girls/",
+    "region": "Irlanda",
+    "cc": "IE",
+    "yt": [
+      "3HJ2YS2dkZ4"
+    ],
+    "summary": "Na nova plataforma do varejista online irlandês, uma mãe compra uma máquina de karaokê para o filho e fones com cancelamento de ruído para si, ao som de \"A Little Respect\", do Erasure.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-02-zydus-easiest-exam-season-3",
+    "date": "2026-10-02",
+    "brand": "Zydus",
+    "title": "Easiest Exam – Temporada 3",
+    "agency": "",
+    "source": "MediaNews4U",
+    "url": "https://www.medianews4u.com/zydus-launches-season-3-of-easiest-exam-campaign-for-breast-cancer-awareness-month/",
+    "region": "Índia",
+    "cc": "IN",
+    "yt": [
+      "gvQQMinGkrM"
+    ],
+    "summary": "No mês de conscientização sobre o câncer de mama, a Zydus volta a incentivar as mulheres a fazer o autoexame mensal de três minutos, com um gesto de mão como lembrete e música de Bhoomi Trivedi.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-01-piracanjuba-pi-ra-can-ju-ba-leite-em-po",
+    "date": "2026-10-01",
+    "brand": "Piracanjuba",
+    "title": "Pi-ra-can-ju-ba: linha de leite em pó",
+    "agency": "AlmapBBDO",
+    "source": "Grandes Nomes da Propaganda",
+    "url": "https://grandesnomesdapropaganda.com.br/?p=246985",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "ieFjTAvsdJk"
+    ],
+    "summary": "Num intervalo de café no escritório, a marca recorre à sua famosa pronúncia sílaba por sílaba para apresentar a linha de leite em pó em campanha nacional.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-01-corona-club-corona",
+    "date": "2026-10-01",
+    "brand": "Corona",
+    "title": "Club Corona",
+    "agency": "GUT México",
+    "source": "Récord",
+    "url": "https://www.record.com.mx/historia/club-corona-reune-a-figuras-de-la-liga-mx-para-llevar-serenata-a-los-aficionados-2026100103575110414",
+    "region": "México",
+    "cc": "MX",
+    "summary": "Corona lança uma plataforma de fidelidade em que torcedores da Liga MX escaneiam tampinhas para acumular pontos, dobrados durante os jogos e triplicados logo após os gols, e estreia com uma serenata de jogadores para os fãs.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-01-reeses-trick-or-treatiest-street",
+    "date": "2026-10-01",
+    "brand": "Reese's",
+    "title": "Trick-or-Treatiest Street in America",
+    "agency": "",
+    "source": "Muse by Clios",
+    "url": "https://musebyclios.com/advertising/christina-ricci-and-kathy-najimy-lead-reeses-hunt-for-the-trick-or-treatiest-street-in-america/",
+    "region": "Estados Unidos",
+    "cc": "US",
+    "summary": "A Reese's montou um 'Conselho de Halloween' com Christina Ricci e Kathy Najimy para escolher, entre 150 candidatas, a melhor rua para pedir doces nos EUA, que ganha uma festa de quarteirão com a Zillow.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-01-ad-council-the-secret-to-motherhood",
+    "date": "2026-10-01",
+    "brand": "Ad Council",
+    "title": "The Secret to Motherhood",
+    "agency": "Mischief USA",
+    "source": "Marketing Report",
+    "url": "https://marketingreport.one/creation/ad-council-tackles-motherhood-stigma.html",
+    "region": "Estados Unidos",
+    "cc": "US",
+    "yt": [
+      "R0B4VbCmLPc"
+    ],
+    "summary": "Dentro da plataforma Love, Your Mind, o Ad Council lança PSAs em inglês e espanhol mostrando o lado oculto da maternidade recente para incentivar mães a cuidarem da saúde mental sem estigma.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-01-calm-life-lines",
+    "date": "2026-10-01",
+    "brand": "CALM",
+    "title": "Life Lines",
+    "agency": "Ogilvy Health UK",
+    "source": "Creative Salon",
+    "url": "https://creative.salon/articles/work/ogilvy-health-uk-national-poetry-day-calm",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "summary": "No Dia Nacional da Poesia, a ONG de prevenção ao suicídio distribuiu em estações e pubs uma antologia de poemas de 14 linhas escritos por pessoas afetadas pelo suicídio, com espaço para o leitor escrever os próprios versos.",
+    "addedAt": "2026-11-18T05:36:28Z"
+  },
+  {
+    "id": "2026-10-01-mtr-foods-indias-sweetest-language",
+    "date": "2026-10-01",
+    "brand": "MTR Foods",
+    "title": "India's Sweetest Language",
+    "agency": "Social Panga",
+    "source": "MediaNews4U",
+    "url": "https://www.medianews4u.com/mtr-foods-unveils-indias-sweetest-language-campaign-to-celebrate-festive-traditions/",
+    "region": "Índia",
+    "cc": "IN",
+    "yt": [
+      "fWf2lZjQQbE"
+    ],
+    "summary": "Para a temporada festiva, a MTR Foods trata os doces como a forma com que as famílias indianas demonstram afeto, unindo um livro ilustrado, um filme digital e a ampliação de sua linha de doces.",
+    "addedAt": "2026-11-18T05:36:28Z"
   }
 ]
