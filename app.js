@@ -216,7 +216,7 @@
     var feed = $("feed");
     feed.textContent = "";
     if (!state.loaded) return;
-    if (state.sel) { feed.appendChild(group(state.sel, map[state.sel] || [], true)); return; }
+    if (state.sel) { feed.appendChild(group(state.sel, map[state.sel] || [], true)); appendDays(feed, map, 1, state.depth); return; }
     appendDays(feed, map, 0, state.depth);
   }
 
@@ -232,13 +232,13 @@
     if (moreIO) { moreIO.disconnect(); moreIO = null; }
     var oldest = oldestDay();
     for (var i = start; i < end; i++) {
-      var day = shift(state.today, -i);
+      var day = shift(state.sel || state.today, -i);
       if (day < oldest) break;
       var list = map[day] || [];
-      if (i >= 6 && !list.length) continue; /* além dos 6 primeiros, pula dias vazios */
+      if ((state.sel || i >= 6) && !list.length) continue; /* além dos 6 primeiros, pula dias vazios */
       feed.appendChild(group(day, list, false));
     }
-    if (shift(state.today, -(end - 1)) > oldest) {
+    if (shift(state.sel || state.today, -(end - 1)) > oldest) {
       var more = el("button", "eh-more", "Carregar dias anteriores");
       more.type = "button";
       more.addEventListener("click", loadMore);
@@ -254,11 +254,11 @@
     }
   }
   function loadMore() {
-    if (state.sel || !state.loaded) return;
+    if (!state.loaded) return;
     var start = state.depth;
     state.depth += STEP;
     appendDays($("feed"), byDay(visible()), start, state.depth);
-    $("view-title").textContent = heading();
+    if (!state.sel) $("view-title").textContent = heading();
   }
 
   function go(day) {
@@ -274,6 +274,7 @@
     var m = /^#dia-(\d{4}-\d{2}-\d{2})$/.exec(location.hash || "");
     var day = m && isDay(m[1]) && m[1] <= state.today ? m[1] : null;
     state.sel = day;
+    state.depth = 6;
     if (day) state.month = day.slice(0, 7);
     render();
   }
