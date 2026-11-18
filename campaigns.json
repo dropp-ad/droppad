@@ -3667,5 +3667,895 @@
     "cc": "US",
     "summary": "As marcas de limpeza da P&G, parceiras oficiais da NFL, recrutam a criadora Ann Michael Maye para dar dicas de limpeza pós-jogo e sorteiam uma viagem ao Super Bowl.",
     "addedAt": "2026-11-18T06:46:37Z"
+  },
+  {
+    "id": "2026-09-15-ipanema-voce-nao-e-todo-mundo",
+    "date": "2026-09-15",
+    "brand": "Ipanema",
+    "title": "Você não é todo mundo",
+    "agency": "AlmapBBDO",
+    "source": "Propmark",
+    "url": "https://propmark.com.br/anunciantes/ipanema-lanca-voce-nao-e-todo-mundo-em-nova-fase-da-marca/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "wmQa8_OmdGA"
+    ],
+    "summary": "Na primeira peça da AlmapBBDO para a marca, crianças devolvem aos adultos o velho conselho de mãe para estimular escolhas próprias, no lançamento da linha Sempre Nova.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-15-jersey-mikes-game-day-mikes-way",
+    "date": "2026-09-15",
+    "brand": "Jersey Mike's",
+    "title": "Game Day Mike's Way",
+    "agency": "Highdive",
+    "source": "Marketing Dive",
+    "url": "https://www.marketingdive.com/news/jersey-mikes-kicks-off-nfl-campaign-as-digital-marketing-spend-surges/830330/",
+    "region": "EUA",
+    "cc": "US",
+    "yt": [
+      "GyCCg4wWZJc"
+    ],
+    "summary": "Continuando a rivalidade com Eli Manning, Danny DeVito vira o maior quarterback de todos os tempos numa cinebiografia falsa que abre a campanha da Jersey Mike's na NFL.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-14-febraban-pare-pense-e-desconfie",
+    "date": "2026-09-14",
+    "brand": "Febraban",
+    "title": "Pare, Pense e Desconfie",
+    "agency": "iD\\TBWA",
+    "source": "Marcas pelo Mundo",
+    "url": "https://marcaspelomundo.com.br/anunciantes/e-se-o-golpe-nao-parecer-golpe-febraban-escala-rafael-portugal-em-nova-campanha/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "yUsvPEkH0pA"
+    ],
+    "summary": "Rafael Portugal comanda uma bem-humorada Central da Consciência que ensina a desconfiar de pedidos aparentemente legítimos antes de fazer um Pix ou passar dados.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-14-ihop-stuffed-french-toast",
+    "date": "2026-09-14",
+    "brand": "IHOP",
+    "title": "Stuffed French Toast",
+    "agency": "",
+    "source": "Restaurant Dive",
+    "url": "https://www.restaurantdive.com/news/ihop-stuffed-french-toast-vanilla-cream-relaunch/830115/",
+    "region": "EUA",
+    "cc": "US",
+    "yt": [
+      "0WqnQI-dS20"
+    ],
+    "summary": "Embalada por uma trilha do Katseye, a campanha da IHOP celebra o retorno da rabanada recheada, que a rede posiciona como um pequeno luxo acessível.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-14-les-produits-laitiers-amis-pour-la-vie",
+    "date": "2026-09-14",
+    "brand": "Les Produits Laitiers",
+    "title": "Nos amis pour la vie",
+    "agency": "Brainsonic",
+    "source": "J'ai un pote dans la com",
+    "url": "https://jai-un-pote-dans-la.com/les-produits-laitiers-ressuscitent-signature-culte-brainsonic/",
+    "region": "França",
+    "cc": "FR",
+    "yt": [
+      "0R0-_0dBIFc"
+    ],
+    "summary": "O Cniel ressuscita o slogan de 1981 dos laticínios franceses e o reinterpreta como 'collabs' de combinações clássicas, como pão com manteiga e raclette com batata.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-14-ssvp-sortir-de-lisolement",
+    "date": "2026-09-14",
+    "brand": "Société de Saint-Vincent-de-Paul",
+    "title": "Sortir de l'isolement ne se fait pas seul",
+    "agency": "STRIKE x LIMITE x D&D Consulting",
+    "source": "J'ai un pote dans la com",
+    "url": "https://jai-un-pote-dans-la.com/la-societe-de-saint-vincent-de-paul-presence-contre-isolement/",
+    "region": "França",
+    "cc": "FR",
+    "yt": [
+      "1MPjxG3V6_w"
+    ],
+    "summary": "A associação destaca o trabalho de seus 17 mil voluntários contra a solidão e a precariedade, buscando atrair novos voluntários e doações com filme, cartazes e peças digitais.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-14-michelob-ultra-superior-movement",
+    "date": "2026-09-14",
+    "brand": "Michelob Ultra",
+    "title": "Superior Movement",
+    "agency": "Wild Fi",
+    "source": "Adlatina",
+    "url": "https://www.adlatina.com/campa%C3%B1as/superior-movement",
+    "region": "Porto Rico",
+    "cc": "PR",
+    "summary": "Campanha porto-riquenha da Michelob Ultra assinada pela Wild Fi, ligada ao estilo de vida ativo da marca.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-12-hilti-rewind",
+    "date": "2026-09-12",
+    "brand": "Hilti",
+    "title": "REWIND",
+    "agency": "",
+    "source": "MediaNews4U",
+    "url": "https://www.medianews4u.com/hilti-india-launches-rewind-film-celebrating-engineers-shaping-modern-india/",
+    "region": "Índia",
+    "cc": "IN",
+    "yt": [
+      "AGFRzsSZpY4"
+    ],
+    "summary": "Para o Dia Nacional do Engenheiro, a Hilti Índia rebobina grandes obras de infraestrutura até as ideias e cálculos que as originaram.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-11-zip-needwant",
+    "date": "2026-09-11",
+    "brand": "Zip",
+    "title": "Needwant / It Pays to Zip",
+    "agency": "Droga5 ANZ",
+    "source": "B&T",
+    "url": "https://www.bandt.com.au/zip-explores-the-everyday-balance-between-needs-wants-in-new-droga5-campaign/",
+    "region": "Austrália",
+    "cc": "AU",
+    "yt": [
+      "i80Je1kOSjI",
+      "S_BjoXpO7s4"
+    ],
+    "summary": "Dois filmes dirigidos por Torstein Bjørklund mostram compras que são ao mesmo tempo necessidade e desejo, inaugurando a plataforma 'It Pays to Zip' do serviço de pagamentos.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-11-leapmotor-so-much-to-love",
+    "date": "2026-09-11",
+    "brand": "Leapmotor",
+    "title": "So Much To Love",
+    "agency": "cummins&partners",
+    "source": "B&T",
+    "url": "https://www.bandt.com.au/leapmotor-australia-launches-so-much-to-love-brand-platform-with-talking-ambassadog-lenny-via-cumminspartners/",
+    "region": "Austrália",
+    "cc": "AU",
+    "yt": [
+      "GSJitKGVxYM",
+      "zCFY1laOyZ8"
+    ],
+    "summary": "A montadora chinesa de elétricos apresenta sua plataforma na Austrália com Lenny, um cachorro falante que explica tecnologia, segurança e preço dos carros.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-11-leitbom-se-deu-bom-e-leitbom",
+    "date": "2026-09-11",
+    "brand": "LeitBom",
+    "title": "Se deu bom, é LeitBom",
+    "agency": "AlmapBBDO",
+    "source": "Marcas pelo Mundo",
+    "url": "https://marcaspelomundo.com.br/anunciantes/apos-seis-decadas-leitbom-faz-sua-primeira-grande-campanha/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "RQUW3ogJbgI"
+    ],
+    "summary": "Na primeira grande campanha em mais de 60 anos, a marca se apropria da expressão \"deu bom\" com um menino que bagunça a cozinha, mas acerta no café da manhã dos pais.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-11-nissan-comparou-comprou-xuxa",
+    "date": "2026-09-11",
+    "brand": "Nissan",
+    "title": "Comparou. Comprou Nissan",
+    "agency": "Lola\\TBWA",
+    "source": "Meio & Mensagem",
+    "url": "https://www.meioemensagem.com.br/comunicacao/nissan-sera-a-nova-nave-de-xuxa-meneghel",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "ixHgvBGFTW4"
+    ],
+    "summary": "Depois de um teaser que pôs a famosa nave à venda, Xuxa aparece ao som de \"Doce Mel\" trocando o veículo icônico por um Nissan.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-11-cadbury-theres-magic-in-more",
+    "date": "2026-09-11",
+    "brand": "Cadbury",
+    "title": "There's Magic in More",
+    "agency": "Saatchi & Saatchi New York / MiltonOne",
+    "source": "Marketing Dive",
+    "url": "https://www.marketingdive.com/news/cadbury-pairs-crystal-clutch-with-comedy-series-for-major-us-campaign/830112/",
+    "region": "EUA",
+    "cc": "US",
+    "yt": [
+      "H4nOUL-HYnA"
+    ],
+    "summary": "Na maior campanha da Cadbury nos EUA, um filme apresenta o \"Departamento do Mais\" e vem acompanhado de uma série cômica e de uma bolsa de cristais Swarovski criada com a Luar.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-11-animal-libre-choose-cruelty",
+    "date": "2026-09-11",
+    "brand": "Animal Libre",
+    "title": "Choose Cruelty. Cruelty Free.",
+    "agency": "The Plan",
+    "source": "Ads of the World",
+    "url": "https://www.adsoftheworld.com/campaigns/choose-cruelty-cruelty-free-9d8d8392-2378-416f-bb71-6ecbc32dc02e",
+    "region": "Chile",
+    "cc": "CL",
+    "summary": "Às vésperas das Fiestas Patrias, a ONG recria cenas de abate só com ingredientes vegetais e questiona por que o público tolera a crueldade real se a falsa já incomoda.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-10-vi-everyone-is-a-vip",
+    "date": "2026-09-10",
+    "brand": "Vi (Vodafone Idea)",
+    "title": "Everyone is a VIP on Vi",
+    "agency": "Ogilvy Mumbai",
+    "source": "Manifest",
+    "url": "https://manifest-media.in/video/campaigns/100926/vi-gets-a-new-look-shah-rukh-khan-makes-it-about-him.html",
+    "region": "Índia",
+    "cc": "IN",
+    "yt": [
+      "9ZA8e6JJQ80"
+    ],
+    "summary": "Para apresentar sua nova identidade visual, a operadora Vi escala Shah Rukh Khan num filme bem-humorado em que o astro discute a pronúncia e a 'mudança' da marca.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-10-heinz-quarterback-nfl",
+    "date": "2026-09-10",
+    "brand": "Heinz",
+    "title": "Quando seu ketchup está na endzone, todo mundo vira um quarterback",
+    "agency": "David",
+    "source": "Marcas pelo Mundo",
+    "url": "https://marcaspelomundo.com.br/anunciantes/heinz-transforma-chacoalhada-do-ketchup-em-passe-de-quarterback-da-nfl/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "a7ITFrdyQ9k"
+    ],
+    "summary": "Para marcar sua entrada na NFL no Brasil, a Heinz compara a chacoalhada no frasco de ketchup ao lançamento de um quarterback, com ativação no jogo do Maracanã.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-10-cvv-minha-ia",
+    "date": "2026-09-10",
+    "brand": "CVV",
+    "title": "#MinhaIA",
+    "agency": "BeHumble",
+    "source": "Meio & Mensagem",
+    "url": "https://www.meioemensagem.com.br/comunicacao/cvv-fala-de-ia-de-carne-e-osso-no-setembro-amarelo",
+    "region": "Brasil",
+    "cc": "BR",
+    "video": "https://www.instagram.com/reel/DdGtbtGxiXt/",
+    "summary": "No Setembro Amarelo, o CVV brinca com nomes próprios para lembrar que a escuta de amigos e familiares de carne e osso não pode ser trocada por chatbots.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-10-johnsonville-sausage-for-dinner-2026",
+    "date": "2026-09-10",
+    "brand": "Johnsonville",
+    "title": "Sausage for Dinner 2026",
+    "agency": "Hold Fast Co.",
+    "source": "Ads of the World",
+    "url": "https://www.adsoftheworld.com/campaigns/sausage-for-dinner",
+    "region": "EUA",
+    "cc": "US",
+    "summary": "Em plena temporada de eleições legislativas, a Johnsonville satiriza a propaganda política lançando a linguiça como candidata ao jantar e revertendo doações para combater a fome.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-10-bonobos-weekday-warrior-show",
+    "date": "2026-09-10",
+    "brand": "Bonobos",
+    "title": "The Weekday Warrior Show",
+    "agency": "",
+    "source": "Retail Dive",
+    "url": "https://www.retaildive.com/news/why-bonobos-fall-campaign-centers-on-episodic-content-with-jack-quaid/830071/",
+    "region": "EUA",
+    "cc": "US",
+    "yt": [
+      "n0E7B35T9l8"
+    ],
+    "summary": "A campanha de outono da Bonobos aposta numa série cômica para as redes estrelada por Jack Quaid, que estreia apresentando a calça Weekday Warrior.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-10-currys-full-dad-mode",
+    "date": "2026-09-10",
+    "brand": "Currys",
+    "title": "Full Dad Mode",
+    "agency": "AMV BBDO",
+    "source": "Creative Salon",
+    "url": "https://creative.salon/articles/work/currys-dad-energy-amv-bbdo",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "summary": "Funcionários da Currys encarnam pais obcecados por economia, aproveitando a tendência 'dad energy' para dar conselhos não solicitados sobre aparelhos que poupam energia, água e tempo.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-09-kayo-sports-not-many-nrl-finals",
+    "date": "2026-09-09",
+    "brand": "Kayo Sports / Fox League",
+    "title": "Not Many (NRL Finals)",
+    "agency": "",
+    "source": "B&T",
+    "url": "https://www.bandt.com.au/kayo-sports-gets-fans-hyped-with-nrl-finals-spot-featuring-first-nations-hip-hop-group-3/",
+    "region": "Austrália",
+    "cc": "AU",
+    "yt": [
+      "_LvDDhPL3zU"
+    ],
+    "summary": "Para abrir as finais da NRL, Kayo e Fox League recriam o hit 'Not Many', de Scribe, com o grupo de hip-hop indígena 3% e Fred Leone.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-09-suzano-efeito-borboleta",
+    "date": "2026-09-09",
+    "brand": "Suzano",
+    "title": "Efeito Borboleta",
+    "agency": "Milà",
+    "source": "Meio & Mensagem",
+    "url": "https://www.meioemensagem.com.br/comunicacao/mila-cria-efeito-borboleta-em-comercial-da-suzano",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "d1hyYTxuNWk"
+    ],
+    "summary": "Na estreia da Milà na conta, uma borboleta de origami animada passa por copos, embalagens e livros para mostrar que pequenas escolhas de consumo geram grandes efeitos.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-09-toyota-the-game-wont-stop",
+    "date": "2026-09-09",
+    "brand": "Toyota",
+    "title": "The Game Won't Stop",
+    "agency": "Saatchi & Saatchi",
+    "source": "LBB Online",
+    "url": "https://lbbonline.com/news/Toyotas-New-NFL-Campaign-Passes-the-Light-to-Footballs-Next-Generation",
+    "region": "EUA",
+    "cc": "US",
+    "yt": [
+      "2IWg5O6XH8o"
+    ],
+    "summary": "Estreando na transmissão de abertura da NFL, o filme mostra Brock Purdy, Eli Manning e jovens atletas do NFL FLAG numa partida que avança noite adentro iluminada pelos faróis de veículos Toyota.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-09-caesars-sportsbook-weve-had-some-work-done",
+    "date": "2026-09-09",
+    "brand": "Caesars Sportsbook",
+    "title": "We've Had Some Work Done",
+    "agency": "Fellow Kids",
+    "source": "Muse by Clios",
+    "url": "https://musebyclios.com/sports/clay-matthews-gets-preposterously-pumped-up-for-caesars-sportsbook/",
+    "region": "EUA",
+    "cc": "US",
+    "summary": "Coberto de próteses exageradas numa paródia da onda \"looksmaxxing\", o ex-jogador Clay Matthews divulga o aplicativo de apostas reformulado, que ficou \"quase irreconhecível\".",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-09-peugeot-unexpected-made-easy",
+    "date": "2026-09-09",
+    "brand": "Peugeot",
+    "title": "Unexpected Made Easy",
+    "agency": "777 France",
+    "source": "J'ai un pote dans la com",
+    "url": "https://jai-un-pote-dans-la.com/peugeot-transforme-galeres-pros-terrain-de-jeu-campagne/",
+    "region": "França",
+    "cc": "FR",
+    "yt": [
+      "srbVxoycsIw"
+    ],
+    "summary": "Eletricista, florista e carregadores enfrentam imprevistos do dia a dia numa campanha 360° dos utilitários Peugeot que termina com a assinatura 'Prêts pour l'imprévu'.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-09-co-op-big-shop-faff",
+    "date": "2026-09-09",
+    "brand": "Co-op",
+    "title": "Big Shop Faff",
+    "agency": "VCCP",
+    "source": "LBB Online",
+    "url": "https://lbbonline.com/news/Co-op-Takes-On-the-Big-Shop-Faff",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "summary": "Novo capítulo de 'Pop to Co-op' ironiza o transtorno das grandes compras semanais e apresenta as lojas de bairro, com preços equiparados aos da Aldi, como alternativa prática.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-09-boots-give-it-some-boots",
+    "date": "2026-09-09",
+    "brand": "Boots",
+    "title": "Give It Some Boots",
+    "agency": "WPP",
+    "source": "Boots UK",
+    "url": "https://www.boots-uk.com/newsroom/news-item/boots-launches-new-brand-platform-give-it-some-boots-with-high-impact-campaign/",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "yt": [
+      "AV68jHr1HqA"
+    ],
+    "summary": "A nova plataforma de marca da Boots celebra os momentos ao mesmo tempo lindos e brutais da vida, com filmes para TV e cinema e cabines de karaokê circulando pelo país.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-09-naranja-x-la-manija-de-oro",
+    "date": "2026-09-09",
+    "brand": "Naranja X",
+    "title": "La manija de oro",
+    "agency": "Febrero Made",
+    "source": "Adlatina",
+    "url": "https://www.adlatina.com/campa%C3%B1as/la-manija-de-oro",
+    "region": "Argentina",
+    "cc": "AR",
+    "summary": "Peça da fintech argentina Naranja X criada pela Febrero Made, batizada de 'La manija de oro'.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-09-delonghi-brad-pitt-magnifica-duo",
+    "date": "2026-09-09",
+    "brand": "De'Longhi",
+    "title": "Brad Pitt e os 16 cães (Magnifica Duo)",
+    "agency": "LOLA Madrid",
+    "source": "Reason Why",
+    "url": "https://www.reasonwhy.es/actualidad/brad-pitt-perros-delonghi-campana-spike-jonze-lola-madrid",
+    "region": "Espanha",
+    "cc": "ES",
+    "yt": [
+      "7K13bjG_kJ4"
+    ],
+    "summary": "Dirigido por Spike Jonze, o filme mostra Brad Pitt tentando saborear um café enquanto 16 cachorros julgam cada gesto dele, para lançar a máquina Magnifica Duo.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-08-dare-done-it-with-dare",
+    "date": "2026-09-08",
+    "brand": "Dare Iced Coffee",
+    "title": "Done It With Dare",
+    "agency": "Thinkerbell",
+    "source": "B&T",
+    "url": "https://www.bandt.com.au/dare-iced-coffee-unveils-new-done-it-with-dare-brand-platform-via-thinkerbell/",
+    "region": "Austrália",
+    "cc": "AU",
+    "yt": [
+      "f-gAmy_7WOk"
+    ],
+    "summary": "A marca de café gelado lança plataforma que provoca a 'nação procrastinadora' a tirar tarefas do papel, com filme, ação em Melbourne e o jogador Cameron Munster.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-08-99-pede-pro-universo-9-9",
+    "date": "2026-09-08",
+    "brand": "99",
+    "title": "Pede pro Universo 9.9",
+    "agency": "",
+    "source": "Meio & Mensagem",
+    "url": "https://www.meioemensagem.com.br/comunicacao/99-lanca-campanha-com-marcia-sensitiva-para-o-9-9",
+    "region": "Brasil",
+    "cc": "BR",
+    "video": "https://www.instagram.com/reel/Dc8syTNREW3/",
+    "summary": "Márcia Sensitiva usa a numerologia do dia 9/9 para divulgar descontos em todo o ecossistema da 99, de comida e mercado a serviços financeiros.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-08-primark-thats-kinda-game-changing",
+    "date": "2026-09-08",
+    "brand": "Primark",
+    "title": "That's Kinda Game-Changing",
+    "agency": "VCCP",
+    "source": "shots",
+    "url": "https://shots.net/news/view/primark-changes-the-game",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "summary": "Para lançar a linha esportiva Primark Form, o filme imita a seriedade dos comerciais de esporte em preto e branco até que um grupo de mulheres manda o narrador se calar.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-07-coffee-meets-bagel-lets-get-serious",
+    "date": "2026-09-07",
+    "brand": "Coffee Meets Bagel",
+    "title": "Let's Get Serious",
+    "agency": "Paper Moose",
+    "source": "LBB Online",
+    "url": "https://lbbonline.com/news/coffee-meets-bagel-lets-get-serious-paper-moose",
+    "region": "Austrália",
+    "cc": "AU",
+    "summary": "O app de namoro estreia na Austrália com mídia exterior e social cheia de trocadilhos sobre ghosting e perfis superficiais, mirando quem busca relação séria.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-07-vinted-live-better-for-less",
+    "date": "2026-09-07",
+    "brand": "Vinted",
+    "title": "Live Better For Less",
+    "agency": "WPP Media",
+    "source": "Creative Salon",
+    "url": "https://creative.salon/articles/work/vinted-live-better-for-less-wpp-media",
+    "region": "Europa",
+    "cc": "",
+    "summary": "A Vinted estreia uma série de entretenimento pan-europeia em que apresentadores locais ajudam pessoas a vender e reaproveitar o que já têm, com versões adaptadas para sete mercados.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-07-argos-connie-and-trevor-mafia-bosses",
+    "date": "2026-09-07",
+    "brand": "Argos",
+    "title": "Connie and Trevor: Mafia Bosses",
+    "agency": "T&P",
+    "source": "Creative Salon",
+    "url": "https://creative.salon/articles/work/argos-t-p-connie-and-trevor-mafia-bosses",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "summary": "Os mascotes Connie e Trevor assumem ares de chefões da máfia para mostrar, com humor, que a Argos vende muito mais do que brinquedos.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-07-latin-us-rescue-colombia",
+    "date": "2026-09-07",
+    "brand": "Latín us",
+    "title": "Rescue Colombia",
+    "agency": "IdeasJCO",
+    "source": "Adlatina",
+    "url": "https://www.adlatina.com/campa%C3%B1as/latn-us",
+    "region": "Colômbia",
+    "cc": "CO",
+    "summary": "O xampu Lu Rescue, da Latín us, vira veículo de ajuda às vítimas do terremoto na Colômbia em ação idealizada pela IdeasJCO.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-07-bcp-el-mejor-plan-es-cuidarnos",
+    "date": "2026-09-07",
+    "brand": "BCP",
+    "title": "El mejor plan es cuidarnos",
+    "agency": "TBWA Perú",
+    "source": "Adlatina",
+    "url": "https://www.adlatina.com/campa%C3%B1as/el-mejor-plan-es-cuidarnos",
+    "region": "Peru",
+    "cc": "PE",
+    "summary": "O banco BCP e a TBWA convocam os peruanos, com a participação de Kiara Jiménez, a se prepararem com antecedência para o fenômeno El Niño.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-06-cheez-it-couch-committee",
+    "date": "2026-09-06",
+    "brand": "Cheez-It",
+    "title": "Couch Committee",
+    "agency": "BBDO New York",
+    "source": "Marketing Dive",
+    "url": "https://www.marketingdive.com/news/campaign-trail-cheez-it-convenes-couch-committee-for-college-football/830011/",
+    "region": "EUA",
+    "cc": "US",
+    "yt": [
+      "I5cYXXO-_gA"
+    ],
+    "summary": "Num sofá gigante em formato de Cheez-It, um comitê de comentaristas de poltrona debate polêmicas do futebol universitário e vota com placas de \"In\" ou \"Out\".",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-06-direct-assurance-chat-noir",
+    "date": "2026-09-06",
+    "brand": "Direct Assurance",
+    "title": "Chat noir",
+    "agency": "Artefact 3000",
+    "source": "J'ai un pote dans la com",
+    "url": "https://jai-un-pote-dans-la.com/direct-assurance-film-chat-noir-artefact-3000/",
+    "region": "França",
+    "cc": "FR",
+    "yt": [
+      "j-vp6GGWUYY"
+    ],
+    "summary": "Pai e filha adotam um gato preto e passam a culpá-lo por uma série de azares, num filme que brinca com códigos de suspense para promover o atendimento de sinistros da seguradora online.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-05-very-thats-the-very-thing",
+    "date": "2026-09-05",
+    "brand": "Very",
+    "title": "That's the Very Thing",
+    "agency": "HelloStudio",
+    "source": "The Very Group",
+    "url": "https://www.theverygroup.com/media/news/2026/very-launches-new-multi-category-atl-campaign-led-by-in-house-teams-/",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "yt": [
+      "8VAt8V6Fj2M"
+    ],
+    "summary": "Criada pela agência interna da varejista, a campanha de outono usa o logo em cubo da Very como portal para um universo de mais de 20 marcas, embalada por 'Canned Heat', do Jamiroquai.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-04-klook-get-your-travel-right",
+    "date": "2026-09-04",
+    "brand": "Klook",
+    "title": "Get your travel right",
+    "agency": "BBH Singapore",
+    "source": "Marketing-Interactive",
+    "url": "https://www.marketing-interactive.com/klook-gets-benjamin-kheng-to-put-a-new-jingle-in-singaporeans-heads",
+    "region": "Singapura",
+    "cc": "SG",
+    "yt": [
+      "YV7Izg96uug"
+    ],
+    "summary": "A Klook adapta sua campanha global de viagens para Singapura com um jingle inédito do artista Benjamin Kheng e um quiz de perfis de viajante.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-04-aditya-birla-sun-life-comeback-morcha",
+    "date": "2026-09-04",
+    "brand": "Aditya Birla Sun Life Mutual Fund",
+    "title": "The Comeback Morcha",
+    "agency": "AGENCY09",
+    "source": "Mediainfoline",
+    "url": "https://www.mediainfoline.com/advertising/aditya-birla-sun-life-mutual-funds-the-comeback-morcha-adds-a-fresh-perspective-to-teachers-day",
+    "region": "Índia",
+    "cc": "IN",
+    "yt": [
+      "qjyZ9vTtEt8"
+    ],
+    "summary": "No Dia do Professor, um filme feito com IA põe giz, réguas e lousa em protesto para lembrar que as lições da escola valem para o planejamento financeiro.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-04-kfc-balde-idol",
+    "date": "2026-09-04",
+    "brand": "KFC",
+    "title": "Terça do Balde: Balde-Idol",
+    "agency": "Lola\\TBWA",
+    "source": "Grandes Nomes da Propaganda",
+    "url": "https://grandesnomesdapropaganda.com.br/anunciantes/kfc-transforma-o-balde-em-idolo-pop-em-nova-fase-da-terca-do-balde/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "ghh7GTJaMvM"
+    ],
+    "summary": "A nova fase da Terça do Balde trata o balde de frango como um ídolo pop que faz comeback toda semana, com 40% de desconto às terças até o fim do ano.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-04-olla-dia-do-sexo",
+    "date": "2026-09-04",
+    "brand": "Olla",
+    "title": "Olla & Uber te ajudam a chegar lá",
+    "agency": "",
+    "source": "Meio & Mensagem",
+    "url": "https://www.meioemensagem.com.br/marketing/olla-expande-o-dia-do-sexo-para-mobilidade-e-delivery",
+    "region": "Brasil",
+    "cc": "BR",
+    "summary": "Criadora do Dia do Sexo, a Olla leva a data para a mobilidade e o delivery com descontos em corridas da Uber e ofertas no iFood, sempre lembrando o uso de preservativo.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-04-nissan-tell-them-a-heisman-sent-you",
+    "date": "2026-09-04",
+    "brand": "Nissan",
+    "title": "Tell Them a Heisman Sent You",
+    "agency": "",
+    "source": "Carscoops",
+    "url": "https://www.carscoops.com/2026/09/2026-football-kickoff-ads/",
+    "region": "EUA",
+    "cc": "US",
+    "yt": [
+      "FvNE0u895JE"
+    ],
+    "summary": "A Nissan reformula a tradicional Heisman House como série episódica com vencedores do troféu, como Barry Sanders e Travis Hunter, para divulgar o Rogue Hybrid 2027.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-04-vodafone-supermobile",
+    "date": "2026-09-04",
+    "brand": "Vodafone",
+    "title": "SuperMobile",
+    "agency": "Leo UK",
+    "source": "LBB Online",
+    "url": "https://lbbonline.com/news/Vodafone-SuperMobile-Roman-Kemp-Leo-UK",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "yt": [
+      "YqLS_kiP_4E"
+    ],
+    "summary": "Estrelado por Roman Kemp, o filme transforma situações cotidianas em cenas de filme de ação para lançar o SuperMobile, serviço da Vodafone com velocidade mínima garantida e segurança reforçada.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-04-sernova-un-sabor-que-re-conoces",
+    "date": "2026-09-04",
+    "brand": "Sernova",
+    "title": "Un sabor que re-conocés",
+    "agency": "Room23",
+    "source": "Adlatina",
+    "url": "https://www.adlatina.com/campa%C3%B1as/un-sabor-que-re-conocs",
+    "region": "Argentina",
+    "cc": "AR",
+    "summary": "A vodka Sernova, da Fratelli Branca, aposta no reconhecimento do seu sabor em nova campanha criada pela Room23.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-04-pedidosya-nuestro-super",
+    "date": "2026-09-04",
+    "brand": "PedidosYa",
+    "title": "Nuestro Súper",
+    "agency": "Anita&Vega",
+    "source": "Adlatina",
+    "url": "https://www.adlatina.com/campa%C3%B1as/nuestro-sper",
+    "region": "Argentina",
+    "cc": "AR",
+    "summary": "O PedidosYa promove seu serviço de mercado como o supermercado próprio dos argentinos em filme assinado pela Anita&Vega.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-04-iansa-dulces-por-naturaleza",
+    "date": "2026-09-04",
+    "brand": "Iansa",
+    "title": "Dulces por Naturaleza",
+    "agency": "Redon",
+    "source": "Adlatina",
+    "url": "https://www.adlatina.com/campa%C3%B1as/dulces-por-naturaleza",
+    "region": "Chile",
+    "cc": "CL",
+    "summary": "A Redon abre uma nova fase da plataforma de marca da açucareira chilena Iansa, centrada na doçura de origem natural.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-03-johnnie-walker-striding-ney",
+    "date": "2026-09-03",
+    "brand": "Johnnie Walker",
+    "title": "Striding Ney",
+    "agency": "AlmapBBDO",
+    "source": "Propmark",
+    "url": "https://propmark.com.br/anunciantes/johnnie-walker-resgata-primeiro-passo-de-ney-matogrosso-no-rock-in-rio/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "fPOJiZrMYZ0"
+    ],
+    "summary": "Narrado por Ney Matogrosso em sua primeira campanha solo, o filme revive a estreia do cantor como primeira atração do Rock in Rio de 1985 e liga o momento ao Keep Walking.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-03-modelo-its-not-just-game-day-its-tradition",
+    "date": "2026-09-03",
+    "brand": "Modelo",
+    "title": "It's Not Just Game Day. It's Tradition.",
+    "agency": "Grey New York",
+    "source": "LBB Online",
+    "url": "https://lbbonline.com/news/Modelo-College-Football-Traditions-Grey",
+    "region": "EUA",
+    "cc": "US",
+    "summary": "Com três novos filmes e o maior investimento da marca no futebol americano universitário, a Modelo homenageia os torcedores que mantêm vivos os rituais e rivalidades do esporte.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-03-peperami-tu-antojo-sabe",
+    "date": "2026-09-03",
+    "brand": "Peperami",
+    "title": "Tu antojo sabe",
+    "agency": "Ganem México",
+    "source": "Adlatina",
+    "url": "https://www.adlatina.com/campa%C3%B1as/tu-antojo-sabe",
+    "region": "México",
+    "cc": "MX",
+    "summary": "A Peperami, da Qualtia, brinca com aqueles momentos em que a vontade de beliscar vence qualquer resistência.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-02-gulf-pride-kuch-behad-kar",
+    "date": "2026-09-02",
+    "brand": "Gulf Pride",
+    "title": "Kuch Behad Kar",
+    "agency": "Curativity",
+    "source": "MediaNews4U",
+    "url": "https://www.medianews4u.com/gulf-pride-unveils-kuch-behad-kar-brand-platform-featuring-ms-dhoni/",
+    "region": "Índia",
+    "cc": "IN",
+    "summary": "O óleo de motor Gulf Pride lança nova plataforma com MS Dhoni que exalta motociclistas com ambição maior que a cilindrada de suas motos.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-02-bradesco-b-ia-10-anos",
+    "date": "2026-09-02",
+    "brand": "Bradesco",
+    "title": "10 anos da b.ia",
+    "agency": "AlmapBBDO",
+    "source": "Grandes Nomes da Propaganda",
+    "url": "https://grandesnomesdapropaganda.com.br/anunciantes/bradesco-celebra-os-10-anos-da-b-ia-com-filme/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "gUPW_mxgLMI"
+    ],
+    "summary": "Em tom de humor, o filme reúne várias assistentes virtuais que se juntam para homenagear a b.ia, a inteligência artificial do banco, pelos seus dez anos.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-02-instituto-protea-a-espera",
+    "date": "2026-09-02",
+    "brand": "Instituto Protea",
+    "title": "A Espera",
+    "agency": "AlmapBBDO",
+    "source": "Grandes Nomes da Propaganda",
+    "url": "https://grandesnomesdapropaganda.com.br/anunciantes/instituto-protea-e-almapbbdo-se-unem-ema-espera/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "NA9rWKQoP9A"
+    ],
+    "summary": "Com narração de Ana Furtado e pacientes reais, a campanha nacional mostra que, no câncer de mama, a demora para começar o tratamento vira inimiga das mulheres.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-02-nubank-fiscal-de-naming-rights",
+    "date": "2026-09-02",
+    "brand": "Nubank",
+    "title": "Fiscal de naming rights do Nubank Parque",
+    "agency": "Nubank Creative Hub",
+    "source": "Meio & Mensagem",
+    "url": "https://www.meioemensagem.com.br/comunicacao/fred-bruno-e-fiscal-de-naming-rights-do-nubank-parque",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "q6BKFUT6tpk"
+    ],
+    "summary": "Fred Bruno faz o papel de fiscal que corrige quem ainda chama a arena do Palmeiras pelo nome antigo, na primeira campanha para popularizar o Nubank Parque.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-02-indurama-bosques",
+    "date": "2026-09-02",
+    "brand": "Indurama",
+    "title": "Bosques",
+    "agency": "Lemon",
+    "source": "Adlatina",
+    "url": "https://www.adlatina.com/campa%C3%B1as/naturalmente-fresco",
+    "region": "Peru",
+    "cc": "PE",
+    "summary": "A Indurama apresenta 'Bosques', peça que destaca o frescor natural dos alimentos guardados em suas geladeiras.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-01-kfc-picklecore",
+    "date": "2026-09-01",
+    "brand": "KFC",
+    "title": "Picklecore",
+    "agency": "Special",
+    "source": "B&T",
+    "url": "https://www.bandt.com.au/kfc-taps-into-pickle-obsession-with-new-picklecore-brand-campaign-via-special/",
+    "region": "Austrália",
+    "cc": "AU",
+    "video": "https://vimeo.com/1223604629",
+    "summary": "A KFC australiana transforma a mania por picles em tendência de alta moda para divulgar seu cardápio temporário com hambúrguer, Pepsi e batatas sabor picles.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-01-hersheys-katseye-pinky-up",
+    "date": "2026-09-01",
+    "brand": "Hershey's",
+    "title": "Pinky Up (Creme Bars com Katseye)",
+    "agency": "Martin / MiltonOne",
+    "source": "Marketing Dive",
+    "url": "https://www.marketingdive.com/news/how-hersheys-katseye-campaign-takes-on-gen-zs-desire-for-indulgence/829013/",
+    "region": "EUA",
+    "cc": "US",
+    "yt": [
+      "AlHHyTWQFzw"
+    ],
+    "summary": "A Hershey's apresenta suas novas Creme Bars com o grupo Katseye num filme de metrô embalado pela música \"Pinky Up\", apostando no gosto da Geração Z por pequenos prazeres.",
+    "addedAt": "2026-11-18T09:35:48Z"
+  },
+  {
+    "id": "2026-09-01-hovis-strength-baked-in",
+    "date": "2026-09-01",
+    "brand": "Hovis",
+    "title": "Strength Baked In",
+    "agency": "VCCP",
+    "source": "Grocery Gazette",
+    "url": "https://www.grocerygazette.co.uk/2026/09/01/hovis-launches-4m-nationwide-campaign/",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "summary": "A Hovis investe 4 milhões de libras em uma campanha multicanal que resgata os antigos letreiros pintados da marca em fachadas pelo Reino Unido para reforçar sua herança.",
+    "addedAt": "2026-11-18T09:35:48Z"
   }
 ]
