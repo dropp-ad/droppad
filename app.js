@@ -308,6 +308,7 @@
   }
 
   function openTheater(startId) {
+    if (MOBILE.matches) { openFeed(startId); return; }
     if (th) closeTheater();
     var entries = entriesFor(viewItems());
     var films = entries.filter(function (e) { return e.kind !== "card"; }).length;
@@ -560,6 +561,252 @@
       actions.appendChild(cont);
     }
     box.appendChild(actions);
+  }
+
+  /* ---------- Modo teatro no celular: feed vertical, um filme por tela ---------- */
+  var MOBILE = window.matchMedia("(max-width: 700px)");
+  var fd = null;
+
+  function openFeed(startId) {
+    if (fd) closeFeed();
+    var entries = entriesFor(viewItems());
+    var root = el("div", "eh-feed");
+    root.setAttribute("role", "dialog");
+    root.setAttribute("aria-modal", "true");
+    root.setAttribute("aria-label", "Modo teatro: " + heading());
+
+    var bar = el("div", "eh-fd-bar");
+    var titleBox = el("div", "eh-fd-head");
+    titleBox.appendChild(el("span", "eh-fd-eyebrow", "Modo teatro"));
+    titleBox.appendChild(el("span", "eh-fd-h", heading()));
+    bar.appendChild(titleBox);
+    var sound = el("button", "eh-fd-btn", "🔇 Som");
+    sound.type = "button";
+    var close = el("button", "eh-fd-btn", "✕");
+    close.type = "button";
+    close.setAttribute("aria-label", "Fechar");
+    bar.appendChild(sound);
+    bar.appendChild(close);
+    root.appendChild(bar);
+
+    var slides = [];
+    var lastDay = "";
+    var perDay = {};
+    entries.forEach(function (e) { (perDay[e.c.date] = perDay[e.c.date] || {})[e.c.id] = 1; });
+    entries.forEach(function (e) {
+      if (e.c.date !== lastDay) {
+        lastDay = e.c.date;
+        var d = el("section", "eh-fs eh-fs-day");
+        var inner = el("div", "eh-fs-dayin");
+        inner.appendChild(el("span", "eh-fs-wd", e.c.date === state.today ? "Hoje" : weekday(e.c.date)));
+        inner.appendChild(el("b", null, e.c.date.slice(8)));
+        inner.appendChild(el("span", "eh-fs-mo", fmtMonthShort.format(toDate(e.c.date)).replace(".", "")));
+        inner.appendChild(el("span", "eh-fs-n", plural(Object.keys(perDay[e.c.date]).length)));
+        inner.appendChild(el("span", "eh-fs-hint", "Deslize para cima ↑"));
+        d.appendChild(inner);
+        root.appendChild(d);
+        slides.push({ kind: "day", node: d, e: e });
+      }
+      slides.push(buildSlide(e, root));
+    });
+    if (!entries.length) {
+      var empty = el("section", "eh-fs eh-fs-day");
+      empty.appendChild(el("p", "eh-fs-empty", "Nenhuma campanha nesta seleção."));
+      root.appendChild(empty);
+    }
+
+    document.body.appendChild(root);
+    fd = { root: root, slides: slides, cur: -1, player: null, kind: "", timer: null, sound: false, soundBtn: sound,
+      opener: document.activeElement, overflow: document.body.style.overflow, token: 0 };
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", onFeedKey);
+    close.addEventListener("click", closeFeed);
+    sound.addEventListener("click", function () { setSound(!fd.sound); });
+
+    fd.io = new IntersectionObserver(function (list) {
+      list.forEach(function (it) {
+        if (it.isIntersecting && it.intersectionRatio >= 0.6) activate(slides.findIndex(function (s) { return s.node === it.target; }));
+      });
+    }, { root: root, threshold: [0.6] });
+    slides.forEach(function (s) { fd.io.observe(s.node); });
+
+    var start = -1;
+    if (startId) start = slides.findIndex(function (s) { return s.e && s.e.c.id === startId && s.kind !== "day"; });
+    if (start < 0) start = slides.findIndex(function (s) { return s.kind === "yt" || s.kind === "vimeo"; });
+    if (start < 0) start = 0;
+    if (start > 0) slides[start].node.scrollIntoView();
+  }
+
+  function buildSlide(e, root) {
+    var c = e.c;
+    var isCard = e.kind === "card";
+    var s = el("section", "eh-fs" + (isCard ? " eh-fs-card" : ""));
+    if (e.kind === "yt") {
+      var bg = el("div", "eh-fs-bg");
+      bg.style.backgroundImage = "url(https://i.ytimg.com/vi/" + e.id + "/hqdefault.jpg)";
+      s.appendChild(bg);
+    }
+    var media = null, tap = null, prog = null;
+    if (!isCard) {
+      media = el("div", "eh-fs-media");
+      if (e.kind === "yt") {
+        var poster = el("img", "eh-fs-poster");
+        poster.src = "https://i.ytimg.com/vi/" + e.id + "/hqdefault.jpg";
+        poster.alt = "";
+        poster.loading = "lazy";
+        media.appendChild(poster);
+      }
+      var mount = el("div", "eh-fs-mount");
+      media.appendChild(mount);
+      tap = el("button", "eh-fs-tap");
+      tap.type = "button";
+      tap.setAttribute("aria-label", "Tocar ou pausar");
+      media.appendChild(tap);
+      prog = el("div", "eh-fs-prog");
+      prog.appendChild(el("i"));
+      media.appendChild(prog);
+      s.appendChild(media);
+    } else {
+      var box = el("div", "eh-fs-cardbox");
+      box.appendChild(el("span", "eh-fs-nofilm", "Sem filme"));
+      box.appendChild(el("h3", null, c.title));
+      if (c.summary) box.appendChild(el("p", null, c.summary));
+      var out = outsideFilm(c);
+      if (out) box.appendChild(link("eh-fs-out", "Ver o filme no " + hostName(out) + " ↗", out));
+      s.appendChild(box);
+    }
+
+    var info = el("div", "eh-fs-info");
+    info.appendChild(el("span", "eh-fs-date", (c.date === state.today ? "Hoje" : weekday(c.date)) + " · " + c.date.slice(8) + " " + fmtMonthShort.format(toDate(c.date)).replace(".", "")));
+    info.appendChild(el("p", "eh-fs-who", flagOf(c.cc) + " " + c.brand + (e.parts > 1 ? " · filme " + e.part + " de " + e.parts : "")));
+    if (!isCard) info.appendChild(el("p", "eh-fs-title", c.title));
+    if (c.agency) info.appendChild(el("p", "eh-fs-ag", c.agency));
+    if (c.url) info.appendChild(link("eh-fs-read", "Ler em " + (c.source || "fonte") + " ↗", c.url));
+    s.appendChild(info);
+    root.appendChild(s);
+    var slide = { kind: e.kind, node: s, e: e, media: media, mount: mount, tap: tap, prog: prog };
+    if (tap) tap.addEventListener("click", function () { togglePlay(slide); });
+    return slide;
+  }
+
+  function stopPlayer() {
+    if (!fd) return;
+    fd.token++;
+    clearInterval(fd.timer);
+    var p = fd.player;
+    fd.player = null;
+    if (p) {
+      try { if (fd.kind === "yt") p.destroy(); else p.destroy().catch(function () {}); } catch (err) { /* já destruído */ }
+    }
+    fd.slides.forEach(function (s) {
+      if (s.mount) s.mount.textContent = "";
+      if (s.node) s.node.classList.remove("eh-fs-on", "eh-fs-paused");
+    });
+  }
+
+  function activate(i) {
+    if (!fd || i < 0 || i === fd.cur) return;
+    fd.cur = i;
+    stopPlayer();
+    var s = fd.slides[i];
+    if (s.kind !== "yt" && s.kind !== "vimeo") return;
+    var token = fd.token;
+    var host = el("div");
+    s.mount.appendChild(host);
+    var ok = function () { return fd && token === fd.token; };
+    var onEnd = function () { if (ok()) goNextFilm(); };
+    if (s.kind === "yt") {
+      loadYouTube().then(function (YT) {
+        if (!ok()) return;
+        fd.kind = "yt";
+        fd.player = new YT.Player(host, {
+          videoId: s.e.id, width: "100%", height: "100%",
+          playerVars: { autoplay: 1, mute: fd.sound ? 0 : 1, playsinline: 1, controls: 0, rel: 0, modestbranding: 1, iv_load_policy: 3, fs: 0 },
+          events: {
+            onReady: function (ev) {
+              if (!ok()) return;
+              if (fd.sound) ev.target.unMute(); else ev.target.mute();
+              ev.target.playVideo();
+            },
+            onStateChange: function (ev) {
+              if (!ok()) return;
+              if (ev.data === 1) { s.node.classList.add("eh-fs-on"); s.node.classList.remove("eh-fs-paused"); }
+              if (ev.data === 2) s.node.classList.add("eh-fs-paused");
+              if (ev.data === 0) onEnd();
+            },
+            onError: function () { if (ok()) s.node.classList.add("eh-fs-err"); }
+          }
+        });
+        watchProgress(s, function () { return [fd.player.getCurrentTime(), fd.player.getDuration()]; });
+      });
+      return;
+    }
+    loadVimeo().then(function (Vimeo) {
+      if (!ok()) return;
+      fd.kind = "vimeo";
+      var p = new Vimeo.Player(host, { url: s.e.url, autoplay: true, muted: !fd.sound, playsinline: true, controls: false, dnt: true });
+      fd.player = p;
+      p.on("play", function () { if (ok()) { s.node.classList.add("eh-fs-on"); s.node.classList.remove("eh-fs-paused"); } });
+      p.on("pause", function () { if (ok()) s.node.classList.add("eh-fs-paused"); });
+      p.on("ended", onEnd);
+      p.on("timeupdate", function (d) { if (ok()) s.prog.firstChild.style.width = (d.percent * 100) + "%"; });
+      p.ready().catch(function () { if (ok()) s.node.classList.add("eh-fs-err"); });
+    });
+  }
+
+  function watchProgress(s, get) {
+    clearInterval(fd.timer);
+    var token = fd.token;
+    fd.timer = setInterval(function () {
+      if (!fd || token !== fd.token || !fd.player || !fd.player.getDuration) return;
+      try {
+        var t = get();
+        if (t[1]) s.prog.firstChild.style.width = Math.min(100, t[0] / t[1] * 100) + "%";
+      } catch (err) { /* player ainda carregando */ }
+    }, 250);
+  }
+
+  function togglePlay(s) {
+    if (!fd || fd.slides[fd.cur] !== s || !fd.player) return;
+    if (fd.kind === "yt") {
+      if (fd.player.getPlayerState && fd.player.getPlayerState() === 1) fd.player.pauseVideo();
+      else fd.player.playVideo();
+    } else {
+      fd.player.getPaused().then(function (paused) { if (paused) fd.player.play(); else fd.player.pause(); });
+    }
+  }
+
+  function setSound(on) {
+    if (!fd) return;
+    fd.sound = on;
+    fd.soundBtn.textContent = on ? "🔊 Som" : "🔇 Som";
+    fd.soundBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    if (!fd.player) return;
+    if (fd.kind === "yt") { if (on) fd.player.unMute(); else fd.player.mute(); fd.player.playVideo(); }
+    else fd.player.setMuted(!on).catch(function () {});
+  }
+
+  function goNextFilm() {
+    for (var i = fd.cur + 1; i < fd.slides.length; i++) {
+      var k = fd.slides[i].kind;
+      if (k === "yt" || k === "vimeo") { fd.slides[i].node.scrollIntoView({ behavior: "smooth" }); return; }
+    }
+  }
+
+  function onFeedKey(e) {
+    if (e.key === "Escape") closeFeed();
+  }
+
+  function closeFeed() {
+    if (!fd) return;
+    stopPlayer();
+    fd.io.disconnect();
+    document.removeEventListener("keydown", onFeedKey);
+    document.body.style.overflow = fd.overflow;
+    fd.root.remove();
+    var opener = fd.opener;
+    fd = null;
+    if (opener && opener.focus) opener.focus();
   }
 
   /* ---------- Início ---------- */
