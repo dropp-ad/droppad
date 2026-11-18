@@ -582,9 +582,9 @@
     bar.appendChild(titleBox);
     var sound = el("button", "eh-fd-btn", "🔇 Som");
     sound.type = "button";
-    var close = el("button", "eh-fd-btn", "✕");
+    var close = el("button", "eh-fd-btn", "📅 Dias");
     close.type = "button";
-    close.setAttribute("aria-label", "Fechar");
+    close.setAttribute("aria-label", "Fechar o feed e escolher um dia");
     bar.appendChild(sound);
     bar.appendChild(close);
     root.appendChild(bar);
@@ -823,6 +823,8 @@
       s.hidden = state.items.length > 0;
       s.textContent = "Ainda não há campanhas registradas.";
       render();
+      // No celular o site já abre no feed; o botão "Dias" leva para o calendário.
+      if (MOBILE.matches && state.items.length) openTheater(null);
     })
     .catch(function () {
       $("status").textContent = "Não foi possível carregar as campanhas. Recarregue a página em alguns minutos.";
