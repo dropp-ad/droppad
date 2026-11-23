@@ -8,7 +8,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var TZ = "America/Sao_Paulo";
   var LOTE = 10;
-  var SLIDE_MS = 6500;
+  var SLIDE_MS = 8000;
 
   /* ---------- Dados ---------- */
   function str(v) { return typeof v === "string" ? v.trim() : ""; }
@@ -232,7 +232,10 @@
     return art;
   }
 
-  /* ---------- Carrossel: campanha sem filme, contada com as fotos ---------- */
+  /* ---------- Carrossel: campanha sem filme, a notícia inteira contada slide a slide ----------
+     Cada foto da matéria é usada uma vez; quando as fotos acabam, o slide ganha um grafismo
+     feito aqui mesmo (número em destaque, aspas, marca, padrões), sempre no formato da referência:
+     imagem em cima, faixa preta com o texto em serifa embaixo. */
   // Texto do slide com destaques em negrito: marca, agência, números e nomes entre aspas.
   function rich(text, c) {
     var p = el("p");
@@ -250,43 +253,82 @@
     if (last < text.length) p.appendChild(document.createTextNode(text.slice(last)));
     return p;
   }
-
-  /* ---------- Carrossel: campanha sem filme, contada slide a slide com as fotos ---------- */
+  var NUM_RE = /(?:R\$|US\$|€|£)\s?[\d.,]+(?:\s?(?:mil|milhões|milhão|bilhões|bilhão|bi|mi))?|\b\d[\d.,]*\s?(?:%|mil|milhões|milhão|bilhões|bilhão)|\b(?:19|20)\d{2}\b|\b\d{2,}[\d.,]*\b/;
+  var QUOTE_RE = /[“"]([^”"]{8,90})[”"]/;
+  function graphic(c, line, k) {
+    var g = el("div", "gfx");
+    var h = hue(c.brand || c.title);
+    g.style.setProperty("--h", h);
+    var num = line.match(NUM_RE), q = line.match(QUOTE_RE);
+    if (num && k % 2 === 1) {
+      g.classList.add("gfx-num");
+      g.appendChild(el("span", "big", num[0].replace(/\s+/g, " ")));
+    } else if (q) {
+      g.classList.add("gfx-quote");
+      g.appendChild(el("span", "qmark", "“"));
+      g.appendChild(el("span", "qtext", q[1]));
+    } else {
+      var kind = ["gfx-type", "gfx-rings", "gfx-stripes", "gfx-grid"][k % 4];
+      g.classList.add(kind);
+      var word = c.brand || c.title;
+      if (kind === "gfx-grid") {
+        var ini = word.replace(/[^0-9A-Za-zÀ-ÿ]/g, "").charAt(0).toUpperCase() || "•";
+        for (var n = 0; n < 24; n++) g.appendChild(el("span", null, ini));
+      } else {
+        g.appendChild(el("span", "big", word));
+      }
+    }
+    return g;
+  }
   function buildStory(art, media, c) {
-    var pics = c.images.length ? c.images : c.image ? [c.image] : [];
-    var lines = [c.title].concat(c.story.length ? c.story : c.summary ? [c.summary] : []);
-    if (c.summary && c.story.length && lines.indexOf(c.summary) < 0 && lines.length < 3) lines.splice(1, 0, c.summary);
-    var n = Math.min(9, Math.max(lines.length, 1));
-    var kicker = (c.brand || c.source || "").toUpperCase() + (c.agency ? "  ·  " + c.agency.toUpperCase() : "");
+    var pics = c.images.length ? c.images.slice() : c.image ? [c.image] : [];
+    var lines = [c.title];
+    if (c.summary && c.story.join(" ").indexOf(c.summary.slice(0, 40)) < 0) lines.push(c.summary);
+    lines = lines.concat(c.story).slice(0, 11);
+    var meta = [["Marca", c.brand], ["Agência", c.agency], ["Origem", c.region ? flagOf(c.cc) + " " + c.region : ""], ["Publicado em", c.source]]
+      .filter(function (x) { return x[1]; });
+    var n = lines.length + 1; // + ficha técnica
     var slides = [];
     var dots = el("div", "sdots");
     for (var k = 0; k < n; k++) {
       var sl = el("div", "slide" + (k === 0 ? " on" : ""));
-      var ph = el("div", "ph");
-      if (pics.length) {
-        ph.appendChild(img(pics[k % pics.length], (function (box) { return function () { box.appendChild(poster(c)); }; })(ph)));
+      var top = el("div", "ph");
+      if (k === n - 1) {
+        top.appendChild(graphic(c, "", 0));
+      } else if (k < pics.length) {
+        top.appendChild(img(pics[k], (function (box, line, kk) { return function () { box.appendChild(graphic(c, line, kk)); }; })(top, lines[k], k)));
       } else {
-        ph.appendChild(poster(c));
+        top.appendChild(graphic(c, lines[k], k));
       }
-      sl.appendChild(ph);
+      sl.appendChild(top);
+      sl.appendChild(el("span", "mark", "dA"));
       var panel = el("div", "panel");
-      panel.appendChild(el("span", "kicker", kicker));
-      panel.appendChild(rich(lines[k] || "", c));
-      if (k === n - 1 && c.url) panel.appendChild(link("more-link", "Ler a matéria completa em " + (c.source || "fonte") + " ↗", c.url));
+      panel.appendChild(el("span", "kicker", "DROPP AD"));
+      if (k === n - 1) {
+        var fic = el("div", "ficha");
+        meta.forEach(function (x) {
+          var row = el("p");
+          row.appendChild(el("span", null, x[0] + " "));
+          row.appendChild(el("b", null, x[1]));
+          fic.appendChild(row);
+        });
+        panel.appendChild(fic);
+        if (c.url) panel.appendChild(link("more-link", "Ler a matéria completa ↗", c.url));
+      } else {
+        panel.appendChild(rich(lines[k], c));
+      }
       sl.appendChild(panel);
       media.appendChild(sl);
       slides.push(sl);
       dots.appendChild(el("i", k === 0 ? "on" : ""));
     }
-    if (n > 1) {
-      var prev = el("button", "sarrow sprev", "‹"), next = el("button", "sarrow snext", "›");
-      prev.type = next.type = "button";
-      prev.setAttribute("aria-label", "Slide anterior");
-      next.setAttribute("aria-label", "Próximo slide");
-      prev.addEventListener("click", function (e) { e.stopPropagation(); if (!(active && active.art === art)) activate(art, true); storyGo(art, art._story.i - 1); });
-      next.addEventListener("click", function (e) { e.stopPropagation(); if (!(active && active.art === art)) activate(art, true); storyGo(art, art._story.i + 1); });
-      media.appendChild(prev); media.appendChild(next); media.appendChild(dots);
-    }
+    var prev = el("button", "sarrow sprev", "‹"), next = el("button", "sarrow snext", "›");
+    prev.type = next.type = "button";
+    prev.setAttribute("aria-label", "Slide anterior");
+    next.setAttribute("aria-label", "Próximo slide");
+    prev.addEventListener("click", function (e) { e.stopPropagation(); if (!(active && active.art === art)) activate(art, true); storyGo(art, art._story.i - 1); });
+    next.addEventListener("click", function (e) { e.stopPropagation(); if (!(active && active.art === art)) activate(art, true); storyGo(art, art._story.i + 1); });
+    media.appendChild(prev); media.appendChild(next); media.appendChild(dots);
     art._story = { slides: slides, dots: dots.children, i: 0, t: 0 };
     media.addEventListener("click", function (e) {
       if (!(active && active.art === art)) { activate(art, true); return; }
@@ -557,7 +599,8 @@
       $("status").hidden = true;
       renderAll();
     })
-    .catch(function () {
+    .catch(function (err) {
+      console.log("ERRO", err && err.stack);
       $("status").textContent = "Não foi possível carregar as campanhas. Recarregue a página em alguns minutos.";
     });
 })();

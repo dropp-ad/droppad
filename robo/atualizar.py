@@ -457,32 +457,44 @@ def fotos_de(pagina, base, limite=8):
     return out[:limite]
 
 
-def historia_de(pagina, limite=8):
-    """Primeiras frases dos parágrafos da matéria, traduzidas, para contar a ideia no carrossel."""
+def historia_de(pagina, limite=10, alvo=300):
+    """A matéria inteira, em blocos de ~300 caracteres (um por slide), traduzida para o português:
+    é o roteiro do carrossel que conta a notícia."""
     miolo = corpo_da_materia(pagina)
     frases = []
     for m in re.finditer(r"<p\b[^>]*>(.*?)</p>", miolo, re.S | re.I):
         t = limpar(m.group(1))
-        if not (70 <= len(t) <= 700) or re.search(r"cookie|newsletter|subscribe|assine|inscreva|suscr|©|all rights|credits?:|^(client|agency|cliente|agência|agencia|director|diretor)\b", t, re.I):
+        if len(t) < 50 or re.search(r"cookie|newsletter|subscribe|assine|inscreva|suscr|©|all rights|leia também|leia mais|read more|"
+                                     r"^(credits?|ficha técnica|client|agency|cliente|agência|agencia|director|diretor|produção|production)\b", t, re.I):
             continue
-        f = primeira_frase(t, 260)
-        if f and f not in frases:
-            frases.append(f)
-        if len(frases) >= limite:
+        frases += [f.strip() for f in re.split(r"(?<=[.!?])\s+(?=[A-ZÀ-Ý“\"'])", t) if len(f.strip()) > 2]
+    blocos, atual = [], ""
+    for f in frases:
+        if atual and len(atual) + len(f) + 1 > alvo:
+            blocos.append(atual)
+            atual = f
+        else:
+            atual = (atual + " " + f).strip()
+        if len(blocos) >= limite:
             break
-    if not frases:
+    if atual and len(blocos) < limite:
+        blocos.append(atual)
+    blocos = [b if len(b) <= alvo + 120 else b[:alvo + 100].rsplit(" ", 1)[0] + "…" for b in blocos]
+    if not blocos:
         return []
-    junto = traduzir("\n".join(frases))
+    junto = traduzir("\n".join(blocos))
     partes = [x.strip() for x in junto.split("\n") if x.strip()]
-    return partes if len(partes) == len(frases) else frases
+    return partes if len(partes) == len(blocos) else blocos
 
 
 def completar_fotos(camp, estado, limite=160):
     """Abre a matéria de cada campanha sem filme: embute o filme que estiver lá (YouTube, Vimeo,
     Instagram, TikTok) e, se não houver filme, guarda as fotos e as frases para o carrossel."""
-    feitas = set(estado.setdefault("midia_v2", []))
+    feitas = set(estado.setdefault("midia_v3", []))
     bloq = set(estado.get("bloqueados_yt", []))
-    alvo = [c for c in camp if not c.get("yt") and not c.get("video") and c.get("url") and c["url"] not in feitas][:limite]
+    alvo = [c for c in camp if not c.get("yt") and not c.get("video") and c.get("url") and c["url"] not in feitas]
+    alvo.sort(key=lambda c: c.get("date", ""), reverse=True)  # mais recentes primeiro
+    alvo = alvo[:limite]
 
     def job(c):
         try:
@@ -517,11 +529,11 @@ def completar_fotos(camp, estado, limite=160):
         if fotos:
             c["images"] = fotos
             c.setdefault("image", fotos[0])
-        if hist and not yts:
+        if hist and not yts and len(hist) >= len(c.get("story", [])):
             c["story"] = hist
         if yts or video or fotos:
             n += 1
-    estado["midia_v2"] = sorted(feitas)
+    estado["midia_v3"] = sorted(feitas)
     estado["bloqueados_yt"] = sorted(bloq)
     return n
 
