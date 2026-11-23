@@ -224,10 +224,11 @@ a { color: inherit; }
   top: -54px; left: calc(100cqh * -0.11875);
   width: calc(100cqh * 0.8) !important; height: calc(100cqh + 54px + 420px) !important;
 }
-.is-vert.playing .cover { opacity: 1; filter: blur(28px) brightness(.45); }
-.is-vert.playing .host { z-index: 3; }
+.is-vert .cover { opacity: 1; filter: blur(28px) brightness(.45); }
+.is-vert .host { z-index: 3; }
+.is-vert .bigplay { display: none; }
 .is-vert .mute, .is-vert .bar { display: none !important; }
-@media (min-width: 861px) { .is-vert.playing .ov { display: none; } }
+@media (min-width: 861px) { .is-vert .ov { display: none; } }
 
 .more { height: 1px; }
 .end { text-align: center; color: var(--muted); padding: 40vh 0; margin: 0; scroll-snap-align: end; }

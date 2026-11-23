@@ -177,8 +177,23 @@
       if (csrc) cover.appendChild(img(csrc, function () { cover.appendChild(poster(c)); }));
       else cover.appendChild(poster(c));
       if (f0.kind === "ig" || f0.kind === "tt") art.classList.add("is-vert", f0.kind === "ig" ? "is-ig" : "is-tt");
+      var host0 = el("div", "host");
+      if (f0.kind === "ig" || f0.kind === "tt") {
+        // post do Instagram/TikTok aparece direto, sem capa antes (carrega quando chega perto da tela)
+        var box0 = el("div");
+        var fr0 = el("iframe");
+        fr0.src = f0.src;
+        fr0.loading = "lazy";
+        fr0.allow = "autoplay; encrypted-media; picture-in-picture; clipboard-write";
+        fr0.setAttribute("allowfullscreen", "");
+        fr0.setAttribute("scrolling", "no");
+        fr0.title = c.brand + " no " + (f0.kind === "ig" ? "Instagram" : "TikTok");
+        box0.appendChild(fr0);
+        host0.appendChild(box0);
+        art.classList.add("embed-on");
+      }
       media.appendChild(cover);
-      media.appendChild(el("div", "host"));
+      media.appendChild(host0);
       media.appendChild(el("span", "bigplay"));
       media.appendChild(el("span", "fail", "Este filme só toca no YouTube ↗"));
       var mute = el("button", "mute");
@@ -397,7 +412,7 @@
     try { if (a.player) a.player.destroy(); } catch (e) { /* já destruído */ }
     a.art.classList.remove("playing", "paused", "loading", "live");
     var host = a.art.querySelector(".host");
-    if (host) host.textContent = "";
+    if (host && !a.art.classList.contains("is-vert")) host.textContent = "";
     var bar = a.art.querySelector(".bar i");
     if (bar) bar.style.width = "0";
   }
@@ -440,6 +455,11 @@
     function paused() { if (alive()) art.classList.add("paused"); }
     function failed() { if (alive()) { art.classList.remove("loading", "playing"); art.classList.add("failed"); } }
 
+    if ((f.kind === "ig" || f.kind === "tt") && art.querySelector(".host iframe")) {
+      slot.remove();
+      playing();
+      return;
+    }
     if (f.kind === "ig" || f.kind === "tt") {
       // player do Instagram/TikTok: aparece no centro do quadro, em pé
       var fr = el("iframe");
