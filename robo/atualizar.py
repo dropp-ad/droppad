@@ -608,7 +608,7 @@ def ler_canais(fontes, estado, dias=45):
             data = data_de(texto_de(e, "published"))
             if not vid or not titulo or not data or data < limite or data > HOJE.isoformat():
                 continue
-            if EXCLUI.search(titulo) or PERGUNTA.search(titulo) or re.search(r"#shorts|reel|showreel|credentials|we are hiring|vagas", titulo, re.I):
+            if EXCLUI.search(titulo) or PERGUNTA.search(titulo) or re.search(r"#shorts|reel|showreel|credentials|we are hiring|vagas|introducing|platform|plataforma|podcast|webinar|our people|culture", titulo, re.I):
                 continue
             desc = ""
             for g in e.iter():

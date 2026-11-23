@@ -671,7 +671,10 @@
       "youtube": [
         "dpzcomunicacao",
         "dpz",
-        "DPZTBWA"
+        "DPZTBWA",
+        "DPZCOMUNICACAO",
+        "dpzbrasil",
+        "DPZagencia"
       ],
       "regiao": "Brasil",
       "cc": "BR"
@@ -699,7 +702,10 @@
       "nome": "WMcCann",
       "youtube": [
         "wmccann",
-        "WMcCannBrasil"
+        "WMcCannBrasil",
+        "WMcCannBR",
+        "wmccannbrasil",
+        "WMcCannOficial"
       ],
       "regiao": "Brasil",
       "cc": "BR"
@@ -729,7 +735,9 @@
       "nome": "Droga5",
       "youtube": [
         "droga5",
-        "Droga5"
+        "Droga5",
+        "Droga5NY",
+        "droga5newyork"
       ],
       "regiao": "EUA",
       "cc": "US"
@@ -770,7 +778,10 @@
       "youtube": [
         "VML",
         "vml",
-        "VMLY&R"
+        "VMLY&R",
+        "VMLGlobal",
+        "vmlbrasil",
+        "VMLYR"
       ],
       "regiao": "Global",
       "cc": ""
@@ -779,7 +790,9 @@
       "nome": "Publicis",
       "youtube": [
         "PublicisWorldwide",
-        "publicis"
+        "publicis",
+        "publicisgroupe",
+        "PublicisBrasil"
       ],
       "regiao": "Global",
       "cc": ""
@@ -809,7 +822,9 @@
       "confere": "Saatchi",
       "youtube": [
         "saatchiandsaatchi",
-        "SaatchiSaatchi"
+        "SaatchiSaatchi",
+        "SaatchiandSaatchiWorld",
+        "saatchi"
       ],
       "regiao": "Global",
       "cc": ""
@@ -819,7 +834,9 @@
       "confere": "Johannes",
       "youtube": [
         "johannesleonardo",
-        "JohannesLeonardo"
+        "JohannesLeonardo",
+        "JLAgency",
+        "johannesleonardoagency"
       ],
       "regiao": "EUA",
       "cc": "US"
