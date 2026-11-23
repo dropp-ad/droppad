@@ -29,7 +29,7 @@
       "falhas": 0
     },
     "Janela Publicitária": {
-      "falhas": 2
+      "falhas": 3
     },
     "Creativosbr": {
       "url": "https://creativosbr.com.br/feed/",
@@ -48,38 +48,38 @@
       "falhas": 0
     },
     "Insider Latam": {
-      "url": "https://insiderlatam.com/feed/",
+      "url": "https://insiderlatam.com/rss",
       "falhas": 0
     },
     "Adlatina": {
-      "falhas": 2
+      "falhas": 3
     },
     "Merca2.0": {
       "url": "https://www.merca20.com/feed/",
       "falhas": 0
     },
     "Revista Mercado": {
-      "falhas": 2
+      "falhas": 3
     },
     "Latinspots": {
-      "falhas": 2
+      "falhas": 3
     },
     "InformaBTL": {
       "url": "https://www.informabtl.com/feed/",
       "falhas": 0
     },
     "Reason Why": {
-      "falhas": 2
+      "falhas": 3
     },
     "Marketing Directo": {
       "url": "https://www.marketingdirecto.com/feed/",
       "falhas": 0
     },
     "PuroMarketing": {
-      "falhas": 2
+      "falhas": 3
     },
     "Control Publicidad": {
-      "falhas": 2
+      "falhas": 3
     },
     "El Publicista": {
       "url": "https://www.elpublicista.es/rss",
@@ -94,37 +94,37 @@
       "falhas": 0
     },
     "Ads of the World": {
-      "falhas": 2
+      "falhas": 3
     },
     "DesignRush News": {
-      "falhas": 2
+      "falhas": 3
     },
     "Ads of Brands": {
-      "falhas": 2
+      "falhas": 3
     },
     "ContentGrip": {
       "url": "https://www.contentgrip.com/feed/",
       "falhas": 0
     },
     "LBB Online": {
-      "falhas": 2
+      "falhas": 3
     },
     "Adworld.ie": {
       "url": "https://www.adworld.ie/feed/",
       "falhas": 0
     },
     "Creative Salon": {
-      "falhas": 2
+      "falhas": 3
     },
     "Creative Review": {
-      "falhas": 2
+      "falhas": 3
     },
     "Decision Marketing": {
       "url": "https://www.decisionmarketing.co.uk/feed/",
       "falhas": 0
     },
     "Retail Gazette": {
-      "falhas": 2
+      "falhas": 3
     },
     "Marketing Beat": {
       "url": "https://www.marketing-beat.co.uk/feed/",
@@ -135,7 +135,7 @@
       "falhas": 0
     },
     "The Drum": {
-      "falhas": 2
+      "falhas": 3
     },
     "J'ai un pote dans la com": {
       "url": "https://www.jai-un-pote-dans-la.com/feed/",
@@ -174,17 +174,17 @@
       "falhas": 0
     },
     "Marketech APAC": {
-      "falhas": 2
+      "falhas": 3
     },
     "Marketing-Interactive": {
-      "falhas": 2
+      "falhas": 3
     },
     "MediaNews4U": {
       "url": "https://www.medianews4u.com/feed/",
       "falhas": 0
     },
     "Manifest Media": {
-      "falhas": 2
+      "falhas": 3
     },
     "afaqs": {
       "url": "https://www.afaqs.com/rss",
@@ -200,14 +200,14 @@
     "cadillacnews.com": "sem-feed",
     "uk.news.yahoo.com": "sem-feed",
     "oglobo.globo.com": "sem-feed",
-    "brasil247.com": "pendente",
-    "maisgoias.com.br": "pendente",
-    "abcmais.com": "pendente",
-    "lesechos.fr": "pendente",
-    "ohmymag.com": "pendente",
-    "20min.ch": "pendente",
-    "lanouvellerepublique.fr": "pendente",
-    "meinbezirk.at": "pendente",
+    "brasil247.com": "sem-feed",
+    "maisgoias.com.br": "sem-feed",
+    "abcmais.com": "sem-feed",
+    "lesechos.fr": "sem-feed",
+    "ohmymag.com": "sem-feed",
+    "20min.ch": "sem-feed",
+    "lanouvellerepublique.fr": "sem-feed",
+    "meinbezirk.at": "sem-feed",
     "welt.de": "pendente",
     "osthessen-news.de": "pendente",
     "spox.com": "pendente",
@@ -221,7 +221,38 @@
     "iodonna.it": "pendente",
     "moviemag.it": "pendente",
     "it.beincrypto.com": "pendente",
-    "travel.thewom.it": "pendente"
+    "travel.thewom.it": "pendente",
+    "telugutimes.net": "pendente",
+    "adgully.com": "pendente",
+    "techbit.pt": "pendente",
+    "cmjornal.pt": "pendente",
+    "ambitur.pt": "pendente",
+    "valor.globo.com": "pendente",
+    "nit.pt": "pendente",
+    "passageirodeprimeira.com": "pendente",
+    "24noticias.sapo.pt": "pendente",
+    "criativaonline.com.br": "pendente",
+    "acervo.publico.pt": "pendente",
+    "anoticia.pt": "pendente",
+    "storyboard18.com": "pendente",
+    "bestmediainfo.com": "pendente",
+    "ipmark.com": "pendente",
+    "marketinginsiderreview.com": "pendente",
+    "ecosistemastartup.com": "pendente",
+    "clarin.com": "pendente",
+    "informador.mx": "pendente",
+    "catalunyapress.es": "pendente",
+    "ifmnoticias.com": "pendente",
+    "motor16.com": "pendente",
+    "elimparcial.es": "pendente",
+    "newsdigitales.com": "pendente",
+    "yogonet.com": "pendente",
+    "poltronanerd.com.br": "pendente",
+    "d7.dnoticias.pt": "pendente",
+    "mpce.mp.br": "pendente",
+    "conexaoto.com.br": "pendente",
+    "romanews.com.br": "pendente",
+    "jwave.com.br": "pendente"
   },
   "bloqueados_yt": [
     "A4c6TvOxSko",
@@ -230,15 +261,15 @@
   ],
   "arquivo": {
     "Meio & Mensagem": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Propmark": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Grandes Nomes da Propaganda": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Marcas pelo Mundo": {
@@ -250,11 +281,11 @@
       "fim": true
     },
     "Nosso Meio": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "ABC da Comunicação": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Janela Publicitária": {
@@ -262,23 +293,23 @@
       "fim": false
     },
     "Creativosbr": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "B9": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Exame": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Roastbrief": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Insider Latam": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Adlatina": {
@@ -286,7 +317,7 @@
       "fim": false
     },
     "Merca2.0": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Revista Mercado": {
@@ -298,7 +329,7 @@
       "fim": false
     },
     "InformaBTL": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Reason Why": {
@@ -318,15 +349,15 @@
       "fim": false
     },
     "El Publicista": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Marketing Dive": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Muse by Clios": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Ads of the World": {
@@ -342,7 +373,7 @@
       "fim": false
     },
     "ContentGrip": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "LBB Online": {
@@ -350,7 +381,7 @@
       "fim": false
     },
     "Adworld.ie": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Creative Salon": {
@@ -362,7 +393,7 @@
       "fim": false
     },
     "Decision Marketing": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Retail Gazette": {
@@ -370,11 +401,11 @@
       "fim": false
     },
     "Marketing Beat": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Creative Boom": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "The Drum": {
@@ -382,39 +413,39 @@
       "fim": false
     },
     "J'ai un pote dans la com": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "CB News": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "B&T": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Mediaweek": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Mumbrella": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "The Stable": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Campaign Brief": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Campaign Brief NZ": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Campaign Brief Asia": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Marketech APAC": {
@@ -426,7 +457,7 @@
       "fim": false
     },
     "MediaNews4U": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Manifest Media": {
@@ -434,11 +465,26 @@
       "fim": false
     },
     "afaqs": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     }
   },
-  "proxima_busca": 12,
-  "ultima_execucao": "2026-11-23T14:56:42.642401+00:00",
-  "ultimas_novas": 64
+  "proxima_busca": 18,
+  "ultima_execucao": "2026-11-23T15:35:57.762523+00:00",
+  "ultimas_novas": 40,
+  "sem_imagem": [
+    "https://clubedecriacao.com.br/ultimas-noticias/",
+    "https://grandesnomesdapropaganda.com.br/lancamentos-de-mercado/china-in-box-lanca-campanha-inspirada-na-culinaria-oriental/",
+    "https://news.designrush.com/essentia-water-rookie-workout-experience-i-play-rocky-campaign",
+    "https://news.designrush.com/kalshi-martha-stewart-insider-trading-ad-es-muy-good",
+    "https://news.designrush.com/shopify-mother-la-just-an-idea-campaign-sidekick-ai-entrepreneurs",
+    "https://voenews.com.br/gollog-lanca-campanha-com-foco-no-segmento-b2b-inteligencia-na-entrega-faz-o-seu-negocio-voar/",
+    "https://www.abcdacomunicacao.com.br/melody-estrela-campanha-da-uber-para-o-lancamento-do-elas-indicam-moto/",
+    "https://www.abcdacomunicacao.com.br/predictus-lanca-novo-posicionamento-de-marca-com-campanha-sobre-os-movimentos-que-antecedem-uma-decisao/",
+    "https://www.adworld.ie/2026/11/13/acne-dublin-uses-generative-ai-to-create-new-cpl-brand-campaign/",
+    "https://www.adworld.ie/2026/11/13/citroen-ireland-launches-le-comfort-campaign-with-bloom/",
+    "https://www.adworld.ie/2026/11/13/kfc-ireland-becomes-kentucky-fried-parrott-in-campaign-starring-troy-parrott-and-emma-doran/",
+    "https://www.adworld.ie/2026/11/13/re-turn-and-boys-girls-turn-a-discarded-can-into-a-crisis-of-conscience/",
+    "https://www.adworld.ie/2026/11/20/bullfinch-brings-jedward-back-to-the-audition-room-for-dominos-campaign/"
+  ]
 }
