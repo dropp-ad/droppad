@@ -123,6 +123,8 @@ EXCLUI = re.compile(r"""\b(award|awards|winners?|shortlist|jury|júri|jurado|pr�
     trailer|tráiler|teaser\s+trailer|bilheteria|taquilla|box\s+office|cinemas|ingressos|boletos|estreno\s+de|reality|novela|série|serie\s+de|episódio|
     conference|conferência|congresso|summit|evento|festival|ranking|top\s+\d+|melhores|best\s+ads|lo\s+mejor|semana|week'?s|weekly|roundup|
     tendências|tendencias|trends?|estratégias|estrategias|desafi\w+|mercado\s+de|setor|sector|investimento|inversión|guide|guia|guía|
+    conversa|charla|habla\s+de|habla\s+sobre|explica|explains|talks|shares\s+how|on\s+how|insights?|
+    panel|painel|keynote|palestra|awlatam|masterclass|depoimento|testimonial|
     afiliada|fidelidade|equipe\s+comercial|equipo\s+comercial|reforça\s+equipe|screens?|telas?|pantallas?|
     agent|agente|agentes|retail\s+media|media\s+bill|calls\s+for|crece|cresce|grows|growth|reúne\s+membros|studio|
     associação|asociación|association|sindicato|regulação|regulación|regulation|lei|ley|law|loyalty\s+program|app\s+update|tutorial|dicas|tips|curso|course|vagas|jobs)\b""", re.I | re.X)
@@ -449,7 +451,7 @@ def fotos_de(pagina, base, limite=8):
     return out[:limite]
 
 
-def historia_de(pagina, limite=4):
+def historia_de(pagina, limite=8):
     """Primeiras frases dos parágrafos da matéria, traduzidas, para contar a ideia no carrossel."""
     miolo = corpo_da_materia(pagina)
     frases = []
@@ -457,7 +459,7 @@ def historia_de(pagina, limite=4):
         t = limpar(m.group(1))
         if not (70 <= len(t) <= 700) or re.search(r"cookie|newsletter|subscribe|assine|inscreva|suscr|©|all rights|credits?:|^(client|agency|cliente|agência|agencia|director|diretor)\b", t, re.I):
             continue
-        f = primeira_frase(t, 200)
+        f = primeira_frase(t, 260)
         if f and f not in frases:
             frases.append(f)
         if len(frases) >= limite:

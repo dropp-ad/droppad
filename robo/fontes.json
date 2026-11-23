@@ -143,18 +143,6 @@
       "so_campanhas": false
     },
     {
-      "nome": "Insider Latam",
-      "urls": [
-        "https://insiderlatam.com/feed/",
-        "https://insiderlatam.com/rss",
-        "https://insiderlatam.com/rss.xml",
-        "https://insiderlatam.com/feed"
-      ],
-      "regiao": "Argentina",
-      "cc": "AR",
-      "so_campanhas": false
-    },
-    {
       "nome": "Adlatina",
       "urls": [
         "https://www.adlatina.com/feed/",

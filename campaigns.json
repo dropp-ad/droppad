@@ -665,22 +665,6 @@
     "image": "https://www.abcdacomunicacao.com.br/wp-content/themes/jnews/assets/img/jeg-empty.png"
   },
   {
-    "id": "2026-11-19-ocesa-ocesa-apuesta-por-el-experience-adve",
-    "date": "2026-11-19",
-    "brand": "OCESA",
-    "title": "OCESA apuesta por el “experience advertising” para conectar marcas y fans",
-    "agency": "",
-    "source": "Insider Latam",
-    "url": "https://insiderlatam.com/ocesa-apuesta-por-el-experience-advertising-para-conectar-marcas-y-fans/",
-    "region": "Argentina",
-    "cc": "AR",
-    "yt": [
-      "7nVLp25GAtA"
-    ],
-    "summary": "Durante sua participação na Advertising Week Latam, Armando Calvillo, Diretor de Marketing da OCESA, explicou como a empresa integra marcas em seus eventos e experiências de entretenimento, tendo o fandom como ponto de partida.",
-    "addedAt": "2026-11-23T14:56:42Z"
-  },
-  {
     "id": "2026-11-19-profeco-y-meta-profeco-y-meta-lanzan-campana-contra",
     "date": "2026-11-19",
     "brand": "Profeco y Meta",
@@ -2180,6 +2164,22 @@
     ]
   },
   {
+    "id": "2026-11-13-oreo-en-este-comico-spot-de-oreo-a-papa-n",
+    "date": "2026-11-13",
+    "brand": "Oreo",
+    "title": "En este cómico spot de Oreo a Papá Noel le roban las galletas (y no tiene piedad con el ladrón)",
+    "agency": "",
+    "source": "Marketing Directo",
+    "url": "https://www.marketingdirecto.com/campanas-navidenas/comico-spot-oreo-papa-noel-roban-galletas-no-tiene-piedad-ladron",
+    "region": "Espanha",
+    "cc": "ES",
+    "yt": [
+      "D6PTjyks_-I"
+    ],
+    "summary": "No novo comercial de Natal Oreo, Papai Noel se vinga de um pai que ousou roubar seus biscoitos.",
+    "addedAt": "2026-11-23T14:56:42Z"
+  },
+  {
     "id": "2026-11-13-apple-apple-apuesta-por-el-storytelling-em",
     "date": "2026-11-13",
     "brand": "Apple",
@@ -2195,22 +2195,6 @@
     "images": [
       "https://files.merca20.com/uploads/2026/09/bigstock-NEW-YORK-CITY-NY-DEC-Ap-30718862.jpg"
     ]
-  },
-  {
-    "id": "2026-11-13-oreo-en-este-comico-spot-de-oreo-a-papa-n",
-    "date": "2026-11-13",
-    "brand": "Oreo",
-    "title": "En este cómico spot de Oreo a Papá Noel le roban las galletas (y no tiene piedad con el ladrón)",
-    "agency": "",
-    "source": "Marketing Directo",
-    "url": "https://www.marketingdirecto.com/campanas-navidenas/comico-spot-oreo-papa-noel-roban-galletas-no-tiene-piedad-ladron",
-    "region": "Espanha",
-    "cc": "ES",
-    "yt": [
-      "D6PTjyks_-I"
-    ],
-    "summary": "No novo comercial de Natal Oreo, Papai Noel se vinga de um pai que ousou roubar seus biscoitos.",
-    "addedAt": "2026-11-23T14:56:42Z"
   },
   {
     "id": "2026-11-13-kfc-ireland-kentucky-fried-parrott",
@@ -5950,22 +5934,6 @@
     "addedAt": "2026-11-18T04:49:21Z"
   },
   {
-    "id": "2026-10-19-verisure-entrevista-com-o-vampiro",
-    "date": "2026-10-19",
-    "brand": "Verisure",
-    "title": "Entrevista com o Vampiro",
-    "agency": "Milà",
-    "source": "Meio & Mensagem",
-    "url": "https://www.meioemensagem.com.br/comunicacao/campanhas-da-semana-grandes-causas-e-ideias-globais",
-    "region": "Brasil",
-    "cc": "BR",
-    "yt": [
-      "lwMAix3LmlA"
-    ],
-    "summary": "No especial de Halloween, uma noiva morta-viva entrevista um vampiro arrependido de tentar invadir uma casa protegida pelos alarmes da marca.",
-    "addedAt": "2026-11-18T04:49:21Z"
-  },
-  {
     "id": "2026-10-19-shell-tenes-con-que",
     "date": "2026-10-19",
     "brand": "Shell V-Power",
@@ -6041,6 +6009,22 @@
       "EHTcRBeOWqg"
     ],
     "summary": "O movimento de gentileza de Singapura recontou 'Os Três Porquinhos' num bairro residencial local, com Benjamin Kheng interpretando os três protagonistas, num filme em duas partes sobre escolhas cotidianas e comunidade.",
+    "addedAt": "2026-11-18T04:49:21Z"
+  },
+  {
+    "id": "2026-10-19-verisure-entrevista-com-o-vampiro",
+    "date": "2026-10-19",
+    "brand": "Verisure",
+    "title": "Entrevista com o Vampiro",
+    "agency": "Milà",
+    "source": "Meio & Mensagem",
+    "url": "https://www.meioemensagem.com.br/comunicacao/campanhas-da-semana-grandes-causas-e-ideias-globais",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "lwMAix3LmlA"
+    ],
+    "summary": "No especial de Halloween, uma noiva morta-viva entrevista um vampiro arrependido de tentar invadir uma casa protegida pelos alarmes da marca.",
     "addedAt": "2026-11-18T04:49:21Z"
   },
   {

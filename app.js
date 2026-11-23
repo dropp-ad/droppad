@@ -8,7 +8,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var TZ = "America/Sao_Paulo";
   var LOTE = 10;
-  var SLIDE_MS = 4800;
+  var SLIDE_MS = 6500;
 
   /* ---------- Dados ---------- */
   function str(v) { return typeof v === "string" ? v.trim() : ""; }
@@ -233,52 +233,72 @@
   }
 
   /* ---------- Carrossel: campanha sem filme, contada com as fotos ---------- */
+  // Texto do slide com destaques em negrito: marca, agência, números e nomes entre aspas.
+  function rich(text, c) {
+    var p = el("p");
+    var keys = [c.brand, c.agency].filter(function (k) { return k && k.length > 1; })
+      .map(function (k) { return k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); });
+    var pat = "(" + (keys.length ? keys.join("|") + "|" : "") +
+      "[“\"‘'][^”\"’']{2,60}[”\"’']|(?:R\\$|US\\$|€|£)\\s?[\\d.,]+(?:\\s?(?:mil|milhões|milhão|bilhões|bilhão|mi|bi))?|\\b\\d[\\d.,]*\\s?(?:%|mil|milhões|milhão|bilhões|bilhão|anos|dias|cidades|países|pessoas|lojas)?\\b)";
+    var re = new RegExp(pat, "g"), last = 0, m;
+    while ((m = re.exec(text))) {
+      if (m.index > last) p.appendChild(document.createTextNode(text.slice(last, m.index)));
+      p.appendChild(el("b", null, m[0]));
+      last = m.index + m[0].length;
+      if (!m[0].length) re.lastIndex++;
+    }
+    if (last < text.length) p.appendChild(document.createTextNode(text.slice(last)));
+    return p;
+  }
+
+  /* ---------- Carrossel: campanha sem filme, contada slide a slide com as fotos ---------- */
   function buildStory(art, media, c) {
     var pics = c.images.length ? c.images : c.image ? [c.image] : [];
     var lines = [c.title].concat(c.story.length ? c.story : c.summary ? [c.summary] : []);
-    var n = Math.min(6, Math.max(pics.length, lines.length, 1));
-    var bars = el("div", "segs");
+    if (c.summary && c.story.length && lines.indexOf(c.summary) < 0 && lines.length < 3) lines.splice(1, 0, c.summary);
+    var n = Math.min(9, Math.max(lines.length, 1));
+    var kicker = (c.brand || c.source || "").toUpperCase() + (c.agency ? "  ·  " + c.agency.toUpperCase() : "");
     var slides = [];
+    var dots = el("div", "sdots");
     for (var k = 0; k < n; k++) {
-      var s = el("div", "slide" + (k === 0 ? " on" : ""));
+      var sl = el("div", "slide" + (k === 0 ? " on" : ""));
+      var ph = el("div", "ph");
       if (pics.length) {
-        var pic = pics[k % pics.length];
-        var im = img(pic, (function (sl) { return function () { sl.insertBefore(poster(c), sl.firstChild); }; })(s));
-        if (k >= pics.length) im.style.objectPosition = ["center", "left center", "right center", "center top", "center bottom"][k % 5];
-        s.appendChild(im);
+        ph.appendChild(img(pics[k % pics.length], (function (box) { return function () { box.appendChild(poster(c)); }; })(ph)));
       } else {
-        s.appendChild(poster(c));
+        ph.appendChild(poster(c));
       }
-      var line = lines[k] || "";
-      if (line) {
-        var cap = el("div", "cap" + (k === 0 ? " cap-first" : ""));
-        if (k === 0) cap.appendChild(el("span", "cap-brand", c.brand || ""));
-        cap.appendChild(el("p", null, line));
-        s.appendChild(cap);
-      }
-      media.appendChild(s);
-      slides.push(s);
-      var seg = el("span", "seg");
-      seg.appendChild(el("i"));
-      bars.appendChild(seg);
+      sl.appendChild(ph);
+      var panel = el("div", "panel");
+      panel.appendChild(el("span", "kicker", kicker));
+      panel.appendChild(rich(lines[k] || "", c));
+      if (k === n - 1 && c.url) panel.appendChild(link("more-link", "Ler a matéria completa em " + (c.source || "fonte") + " ↗", c.url));
+      sl.appendChild(panel);
+      media.appendChild(sl);
+      slides.push(sl);
+      dots.appendChild(el("i", k === 0 ? "on" : ""));
     }
-    if (n > 1) media.appendChild(bars);
-    art._story = { slides: slides, segs: bars.children, i: 0, t: 0 };
+    if (n > 1) {
+      var prev = el("button", "sarrow sprev", "‹"), next = el("button", "sarrow snext", "›");
+      prev.type = next.type = "button";
+      prev.setAttribute("aria-label", "Slide anterior");
+      next.setAttribute("aria-label", "Próximo slide");
+      prev.addEventListener("click", function (e) { e.stopPropagation(); if (!(active && active.art === art)) activate(art, true); storyGo(art, art._story.i - 1); });
+      next.addEventListener("click", function (e) { e.stopPropagation(); if (!(active && active.art === art)) activate(art, true); storyGo(art, art._story.i + 1); });
+      media.appendChild(prev); media.appendChild(next); media.appendChild(dots);
+    }
+    art._story = { slides: slides, dots: dots.children, i: 0, t: 0 };
     media.addEventListener("click", function (e) {
-      var st = art._story;
       if (!(active && active.art === art)) { activate(art, true); return; }
       var r = media.getBoundingClientRect();
-      storyGo(art, e.clientX - r.left < r.width / 3 ? st.i - 1 : st.i + 1);
+      storyGo(art, e.clientX - r.left < r.width / 3 ? art._story.i - 1 : art._story.i + 1);
     });
   }
   function storyGo(art, i) {
     var st = art._story, n = st.slides.length;
     i = (i + n) % n;
     st.slides.forEach(function (s, k) { s.classList.toggle("on", k === i); });
-    Array.prototype.forEach.call(st.segs, function (g, k) {
-      g.classList.toggle("done", k < i);
-      g.firstChild.style.width = k < i ? "100%" : "0%";
-    });
+    Array.prototype.forEach.call(st.dots, function (d, k) { d.className = k === i ? "on" : ""; });
     st.i = i;
     st.t = 0;
   }
@@ -356,7 +376,6 @@
       me.timer = setInterval(function () {
         if (!alive() || document.hidden || art.matches(":hover")) return;
         st.t += 100;
-        if (st.segs[st.i]) st.segs[st.i].firstChild.style.width = Math.min(100, st.t / SLIDE_MS * 100) + "%";
         if (st.t >= SLIDE_MS && st.slides.length > 1) storyGo(art, st.i + 1);
       }, 100);
       return;
@@ -499,11 +518,8 @@
       b.addEventListener("click", function () { fn(); window.scrollTo(0, 0); renderAll(); });
       box.appendChild(b);
     }
-    chip("Tudo", !state.region && !state.onlyFilms, function () { state.region = ""; state.onlyFilms = false; });
-    chip("Só filmes", state.onlyFilms, function () { state.onlyFilms = !state.onlyFilms; });
-    REGIOES.forEach(function (r) {
-      chip(r.nome, state.region === r.nome, function () { state.region = state.region === r.nome ? "" : r.nome; });
-    });
+    chip("Mundo", !state.region, function () { state.region = ""; });
+    chip("Brasil", state.region === "Brasil", function () { state.region = "Brasil"; });
   }
 
   /* ---------- Teclado: setas pulam de campanha em campanha ---------- */
