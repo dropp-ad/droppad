@@ -25,11 +25,11 @@
       "falhas": 0
     },
     "ABC da Comunicação": {
-      "url": "https://www.abcdacomunicacao.com.br/feed/",
+      "url": "https://www.abcdacomunicacao.com.br/feed",
       "falhas": 0
     },
     "Janela Publicitária": {
-      "falhas": 1
+      "falhas": 2
     },
     "Creativosbr": {
       "url": "https://creativosbr.com.br/feed/",
@@ -52,34 +52,34 @@
       "falhas": 0
     },
     "Adlatina": {
-      "falhas": 1
+      "falhas": 2
     },
     "Merca2.0": {
       "url": "https://www.merca20.com/feed/",
       "falhas": 0
     },
     "Revista Mercado": {
-      "falhas": 1
+      "falhas": 2
     },
     "Latinspots": {
-      "falhas": 1
+      "falhas": 2
     },
     "InformaBTL": {
       "url": "https://www.informabtl.com/feed/",
       "falhas": 0
     },
     "Reason Why": {
-      "falhas": 1
+      "falhas": 2
     },
     "Marketing Directo": {
       "url": "https://www.marketingdirecto.com/feed/",
       "falhas": 0
     },
     "PuroMarketing": {
-      "falhas": 1
+      "falhas": 2
     },
     "Control Publicidad": {
-      "falhas": 1
+      "falhas": 2
     },
     "El Publicista": {
       "url": "https://www.elpublicista.es/rss",
@@ -94,37 +94,37 @@
       "falhas": 0
     },
     "Ads of the World": {
-      "falhas": 1
+      "falhas": 2
     },
     "DesignRush News": {
-      "falhas": 1
+      "falhas": 2
     },
     "Ads of Brands": {
-      "falhas": 1
+      "falhas": 2
     },
     "ContentGrip": {
       "url": "https://www.contentgrip.com/feed/",
       "falhas": 0
     },
     "LBB Online": {
-      "falhas": 1
+      "falhas": 2
     },
     "Adworld.ie": {
       "url": "https://www.adworld.ie/feed/",
       "falhas": 0
     },
     "Creative Salon": {
-      "falhas": 1
+      "falhas": 2
     },
     "Creative Review": {
-      "falhas": 1
+      "falhas": 2
     },
     "Decision Marketing": {
       "url": "https://www.decisionmarketing.co.uk/feed/",
       "falhas": 0
     },
     "Retail Gazette": {
-      "falhas": 1
+      "falhas": 2
     },
     "Marketing Beat": {
       "url": "https://www.marketing-beat.co.uk/feed/",
@@ -135,7 +135,7 @@
       "falhas": 0
     },
     "The Drum": {
-      "falhas": 1
+      "falhas": 2
     },
     "J'ai un pote dans la com": {
       "url": "https://www.jai-un-pote-dans-la.com/feed/",
@@ -174,27 +174,271 @@
       "falhas": 0
     },
     "Marketech APAC": {
-      "falhas": 1
+      "falhas": 2
     },
     "Marketing-Interactive": {
-      "falhas": 1
+      "falhas": 2
     },
     "MediaNews4U": {
       "url": "https://www.medianews4u.com/feed/",
       "falhas": 0
     },
     "Manifest Media": {
-      "falhas": 1
+      "falhas": 2
     },
     "afaqs": {
       "url": "https://www.afaqs.com/rss",
       "falhas": 0
     }
   },
-  "testados": {},
-  "bloqueados_yt": [],
-  "arquivo": {},
-  "proxima_busca": 6,
-  "ultima_execucao": "2026-11-23T14:48:37.278503+00:00",
-  "ultimas_novas": 65
+  "testados": {
+    "msn.com": "sem-feed",
+    "houstonchronicle.com": "sem-feed",
+    "marketscreener.com": "sem-feed",
+    "socialsamosa.com": "sem-feed",
+    "yahoo.com": "sem-feed",
+    "cadillacnews.com": "sem-feed",
+    "uk.news.yahoo.com": "sem-feed",
+    "oglobo.globo.com": "sem-feed",
+    "brasil247.com": "pendente",
+    "maisgoias.com.br": "pendente",
+    "abcmais.com": "pendente",
+    "lesechos.fr": "pendente",
+    "ohmymag.com": "pendente",
+    "20min.ch": "pendente",
+    "lanouvellerepublique.fr": "pendente",
+    "meinbezirk.at": "pendente",
+    "welt.de": "pendente",
+    "osthessen-news.de": "pendente",
+    "spox.com": "pendente",
+    "mediakey.it": "pendente",
+    "lagazzettadelpubblicitario.it": "pendente",
+    "engage.it": "pendente",
+    "newsdellavalle.com": "pendente",
+    "mbnews.it": "pendente",
+    "marsicalive.it": "pendente",
+    "radioroma.it": "pendente",
+    "iodonna.it": "pendente",
+    "moviemag.it": "pendente",
+    "it.beincrypto.com": "pendente",
+    "travel.thewom.it": "pendente"
+  },
+  "bloqueados_yt": [
+    "A4c6TvOxSko",
+    "HwdCvZ8SFvs",
+    "bp0T184hVY0"
+  ],
+  "arquivo": {
+    "Meio & Mensagem": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Propmark": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Grandes Nomes da Propaganda": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Marcas pelo Mundo": {
+      "pagina": 2,
+      "fim": true
+    },
+    "Clube de Criação": {
+      "pagina": 1,
+      "fim": true
+    },
+    "Nosso Meio": {
+      "pagina": 3,
+      "fim": false
+    },
+    "ABC da Comunicação": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Janela Publicitária": {
+      "pagina": 1,
+      "fim": false
+    },
+    "Creativosbr": {
+      "pagina": 3,
+      "fim": false
+    },
+    "B9": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Exame": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Roastbrief": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Insider Latam": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Adlatina": {
+      "pagina": 1,
+      "fim": false
+    },
+    "Merca2.0": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Revista Mercado": {
+      "pagina": 1,
+      "fim": false
+    },
+    "Latinspots": {
+      "pagina": 1,
+      "fim": false
+    },
+    "InformaBTL": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Reason Why": {
+      "pagina": 1,
+      "fim": false
+    },
+    "Marketing Directo": {
+      "pagina": 2,
+      "fim": true
+    },
+    "PuroMarketing": {
+      "pagina": 1,
+      "fim": false
+    },
+    "Control Publicidad": {
+      "pagina": 1,
+      "fim": false
+    },
+    "El Publicista": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Marketing Dive": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Muse by Clios": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Ads of the World": {
+      "pagina": 1,
+      "fim": false
+    },
+    "DesignRush News": {
+      "pagina": 1,
+      "fim": false
+    },
+    "Ads of Brands": {
+      "pagina": 1,
+      "fim": false
+    },
+    "ContentGrip": {
+      "pagina": 3,
+      "fim": false
+    },
+    "LBB Online": {
+      "pagina": 1,
+      "fim": false
+    },
+    "Adworld.ie": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Creative Salon": {
+      "pagina": 1,
+      "fim": false
+    },
+    "Creative Review": {
+      "pagina": 1,
+      "fim": false
+    },
+    "Decision Marketing": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Retail Gazette": {
+      "pagina": 1,
+      "fim": false
+    },
+    "Marketing Beat": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Creative Boom": {
+      "pagina": 3,
+      "fim": false
+    },
+    "The Drum": {
+      "pagina": 1,
+      "fim": false
+    },
+    "J'ai un pote dans la com": {
+      "pagina": 3,
+      "fim": false
+    },
+    "CB News": {
+      "pagina": 3,
+      "fim": false
+    },
+    "B&T": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Mediaweek": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Mumbrella": {
+      "pagina": 3,
+      "fim": false
+    },
+    "The Stable": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Campaign Brief": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Campaign Brief NZ": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Campaign Brief Asia": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Marketech APAC": {
+      "pagina": 1,
+      "fim": false
+    },
+    "Marketing-Interactive": {
+      "pagina": 1,
+      "fim": false
+    },
+    "MediaNews4U": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Manifest Media": {
+      "pagina": 1,
+      "fim": false
+    },
+    "afaqs": {
+      "pagina": 3,
+      "fim": false
+    }
+  },
+  "proxima_busca": 12,
+  "ultima_execucao": "2026-11-23T14:56:42.642401+00:00",
+  "ultimas_novas": 64
 }
