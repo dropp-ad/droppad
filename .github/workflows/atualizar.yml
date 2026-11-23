@@ -37,13 +37,13 @@ jobs:
           python-version: "3.12"
 
       - name: Inspecionar matérias
-        if: ${{ inputs.inspecionar != '' }}
+        if: ${{ inputs.inspecionar }}
         env:
           URLS: ${{ inputs.inspecionar }}
         run: SEM_TRADUCAO=1 python robo/inspecionar.py $URLS
 
       - name: Buscar campanhas e publicar
-        if: ${{ inputs.inspecionar == '' || inputs.inspecionar == null }}
+        if: ${{ !inputs.inspecionar }}
         env:
           GH_TOKEN: ${{ github.token }}
           SIMULAR: ${{ inputs.simular && '1' || '' }}
