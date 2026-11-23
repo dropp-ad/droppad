@@ -126,6 +126,43 @@
     { nome: "Ásia-Pacífico", cc: ["AU", "NZ", "IN", "SG", "JP", "KR", "CN", "HK", "TW", "TH", "MY", "ID", "PH", "VN", "PK", "BD", "LK"] },
     { nome: "Global", cc: [] }
   ];
+  /* país de quem entra: vira o destaque ao lado de "Mundo" */
+  var dn = null;
+  try { dn = new Intl.DisplayNames(["pt-BR"], { type: "region" }); } catch (e) { /* navegador antigo */ }
+  function countryName(cc) {
+    var nomes = { BR: "Brasil", US: "EUA", GB: "Reino Unido" };
+    if (nomes[cc]) return nomes[cc];
+    try { return (dn && dn.of(cc)) || cc; } catch (e) { return cc; }
+  }
+  function guessCountry() {
+    var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""];
+    for (var i = 0; i < langs.length; i++) {
+      var m = String(langs[i]).match(/[-_]([A-Za-z]{2})\b/);
+      if (m) return m[1].toUpperCase();
+    }
+    return "BR";
+  }
+  function detectCountry() {
+    var saved = "";
+    try { saved = localStorage.getItem("ddrop-cc") || ""; } catch (e) { /* sem storage */ }
+    if (/^[A-Z]{2}$/.test(saved)) return Promise.resolve(saved);
+    var ctl = window.AbortController ? new AbortController() : null;
+    var to = setTimeout(function () { if (ctl) ctl.abort(); }, 2500);
+    return fetch("https://api.country.is/", ctl ? { signal: ctl.signal } : {})
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        clearTimeout(to);
+        var cc = String(j && j.country || "").toUpperCase();
+        if (!/^[A-Z]{2}$/.test(cc)) throw new Error("cc");
+        try { localStorage.setItem("ddrop-cc", cc); } catch (e) { /* sem storage */ }
+        return cc;
+      })
+      .catch(function () { clearTimeout(to); return guessCountry(); });
+  }
+  function regiaoDoPais(cc) {
+    for (var i = 0; i < REGIOES.length - 1; i++) if (REGIOES[i].cc.indexOf(cc) >= 0) return REGIOES[i].nome;
+    return "";
+  }
   function regiaoDe(c) {
     for (var i = 0; i < REGIOES.length - 1; i++) {
       var r = REGIOES[i];
@@ -135,7 +172,7 @@
   }
 
   /* ---------- Estado ---------- */
-  var state = { items: [], list: [], shown: 0, region: "", onlyFilms: false, perDay: {} };
+  var state = { items: [], list: [], shown: 0, region: "", onlyFilms: false, perDay: {}, home: { cc: "BR", label: "Brasil" } };
   var sound = false;
 
   var popCache = {};
@@ -160,10 +197,23 @@
     var day = el("span", "day");
     day.appendChild(el("b", null, dayName(c.date)));
     day.appendChild(el("span", null, dayDate(c.date)));
+    var who = el("span", "who");
+    if (c.brand) who.appendChild(el("b", null, c.brand));
+    if (c.agency) who.appendChild(el("span", null, c.agency));
+    who.appendChild(el("span", "ctry", flagOf(c.cc) + " " + (c.region || "Global")));
+    day.appendChild(who);
     top.appendChild(day);
+    var side = el("span", "side");
     var tot = state.perDay[c.date] || 0;
-    top.appendChild(el("span", "pos", (idxInDay + 1) + " de " + tot));
+    side.appendChild(el("span", "pos", (idxInDay + 1) + " de " + tot));
+    var sh = el("button", "share", "Compartilhar");
+    sh.type = "button";
+    sh.setAttribute("aria-label", "Compartilhar esta campanha");
+    sh.addEventListener("click", function (e) { e.stopPropagation(); share(c, sh); });
+    side.appendChild(sh);
+    top.appendChild(side);
     art.appendChild(top);
+    art.dataset.id = c.id;
 
     var frame = el("div", "frame");
     var media = el("div", "media");
@@ -229,7 +279,6 @@
     // texto: aparece ao passar o mouse sobre o quadro (no celular, fica embaixo)
     var ov = el("div", "ov");
     ov.appendChild(el("h3", "brand", c.brand || c.source || "Campanha"));
-    ov.appendChild(el("p", "meta", [flagOf(c.cc) + " " + (c.region || "Global"), c.agency].filter(Boolean).join("  ·  ")));
     ov.appendChild(el("p", "title", c.title));
     if (c.summary && c.fl.length) ov.appendChild(el("p", "sum", c.summary));
     var foot = el("p", "foot");
@@ -246,6 +295,57 @@
     if (io) io.observe(media);
     return art;
   }
+
+  /* ---------- Compartilhar: link que abre direto na campanha ---------- */
+  function linkOf(c) { return location.origin + location.pathname + "#c=" + encodeURIComponent(c.id); }
+  function toast(msg) {
+    var t = $("toast");
+    if (!t) { t = el("div", "toast"); t.id = "toast"; t.setAttribute("role", "status"); document.body.appendChild(t); }
+    t.textContent = msg;
+    t.classList.add("on");
+    clearTimeout(t._h);
+    t._h = setTimeout(function () { t.classList.remove("on"); }, 2200);
+  }
+  function share(c, btn) {
+    var url = linkOf(c);
+    var title = (c.brand ? c.brand + ": " : "") + c.title;
+    try { history.replaceState(null, "", "#c=" + encodeURIComponent(c.id)); } catch (e) { /* nada */ }
+    if (navigator.share && matchMedia("(pointer: coarse)").matches) {
+      navigator.share({ title: title, text: title + " · dropp Ad", url: url }).catch(function () {});
+      return;
+    }
+    function done() { toast("Link copiado"); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, function () { fallback(); });
+    else fallback();
+    function fallback() {
+      var ta = el("textarea"); ta.value = url; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); done(); } catch (e) { window.prompt("Copie o link:", url); }
+      ta.remove();
+    }
+  }
+  function sharedId() {
+    var m = location.hash.match(/^#c=(.+)$/);
+    return m ? decodeURIComponent(m[1]) : "";
+  }
+  function goTo(id) {
+    if (!id) return false;
+    var idx = -1;
+    for (var i = 0; i < state.list.length; i++) if (state.list[i].id === id) { idx = i; break; }
+    if (idx < 0) {
+      if (!state.items.some(function (c) { return c.id === id; })) return false;
+      state.region = ""; state.onlyFilms = false; renderAll(); // o filtro escondia a campanha
+      for (i = 0; i < state.list.length; i++) if (state.list[i].id === id) { idx = i; break; }
+      if (idx < 0) return false;
+    }
+    while (state.shown <= idx) renderMore();
+    var art = document.querySelector('.post[data-id="' + (window.CSS && CSS.escape ? CSS.escape(id) : id) + '"]');
+    if (!art) return false;
+    art.scrollIntoView({ block: "start" });
+    setTimeout(function () { art.scrollIntoView({ block: "start" }); }, 400); // de novo, depois das fontes/imagens
+    return true;
+  }
+  window.addEventListener("hashchange", function () { goTo(sharedId()); });
 
   /* ---------- Carrossel: campanha sem filme, a notícia inteira contada slide a slide ----------
      Cada foto da matéria é usada uma vez; quando as fotos acabam, o slide ganha um grafismo
@@ -557,6 +657,13 @@
       feed.appendChild(el("p", "end", state.list.length ? "Você chegou ao início do arquivo." : "Nenhuma campanha com esse filtro."));
     }
   }
+  // o país do visitante; se o arquivo não tiver nada de lá, vale a região (ex.: Ásia-Pacífico)
+  function homeMatch(c) { return state.home.reg ? regiaoDe(c) === state.home.reg : c.cc === state.home.cc; }
+  function setHome(cc) {
+    var has = state.items.some(function (c) { return c.cc === cc; });
+    var reg = has ? "" : regiaoDoPais(cc);
+    state.home = { cc: cc, label: has || !reg ? countryName(cc) : reg, reg: reg };
+  }
   function renderAll() {
     deactivate();
     ratios.clear();
@@ -566,7 +673,8 @@
     dayIdx = {};
     state.list = state.items.filter(function (c) {
       if (state.onlyFilms && !c.fl.length) return false;
-      if (state.region && regiaoDe(c) !== state.region) return false;
+      if (state.region === "home") { if (!homeMatch(c)) return false; }
+      else if (state.region && regiaoDe(c) !== state.region) return false;
       return true;
     });
     state.perDay = {};
@@ -584,8 +692,9 @@
       b.addEventListener("click", function () { fn(); window.scrollTo(0, 0); renderAll(); });
       box.appendChild(b);
     }
+    var h = state.home;
+    chip(flagOf(h.cc) + " " + h.label, state.region === "home", function () { state.region = "home"; });
     chip("Mundo", !state.region, function () { state.region = ""; });
-    chip("Brasil", state.region === "Brasil", function () { state.region = "Brasil"; });
     // tipo: só vídeos ou tudo
     var t = $("tipo");
     t.textContent = "";
@@ -630,8 +739,12 @@
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (raw) {
       state.items = normalize(raw);
-      $("status").hidden = true;
-      renderAll();
+      return detectCountry().then(function (cc) {
+        setHome(cc);
+        $("status").hidden = true;
+        renderAll();
+        goTo(sharedId());
+      });
     })
     .catch(function (err) {
       console.log("ERRO", err && err.stack);
