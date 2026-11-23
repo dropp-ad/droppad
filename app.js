@@ -1,4 +1,4 @@
-/* AD Drop: feed por dia, calendário, filtro por região e modo teatro
+/* AD Drop: vitrine estilo streaming (destaque, fileiras, ficha da campanha), calendário, filtros e modo teatro
    com player embutido (YouTube e Vimeo). Os dados vêm de campaigns.json. */
 (function () {
   "use strict";
@@ -20,7 +20,7 @@
         agency: str(x.agency), source: str(x.source), url: safeUrl(str(x.url)),
         region: str(x.region), cc: str(x.cc).toUpperCase(), summary: str(x.summary),
         yt: Array.isArray(x.yt) ? x.yt.map(str).filter(function (s) { return /^[\w-]{11}$/.test(s); }) : [],
-        video: safeUrl(str(x.video)), addedAt: str(x.addedAt)
+        video: safeUrl(str(x.video)), image: safeUrl(str(x.image)), addedAt: str(x.addedAt)
       };
     }).filter(function (c) { return isDay(c.date) && c.title; })
       .sort(function (a, b) {
@@ -77,221 +77,542 @@
   }
 
   /* ---------- Estado ---------- */
-  var state = { items: [], today: todayYmd(), sel: null, month: todayYmd().slice(0, 7), region: ALL, loaded: false, depth: 6 };
-
-  function visible() {
-    return state.region === ALL ? state.items : state.items.filter(function (c) { return c.region === state.region; });
+  var REGIOES = [
+    { nome: "Brasil", cc: ["BR"] },
+    { nome: "América Latina", cc: ["MX", "AR", "CO", "CL", "PE", "EC", "UY", "PY", "BO", "VE", "CR", "PA", "GT", "DO", "PR", "SV", "HN", "NI", "CU"] },
+    { nome: "EUA e Canadá", cc: ["US", "CA"] },
+    { nome: "Europa", cc: ["GB", "IE", "FR", "DE", "ES", "PT", "IT", "NL", "SE", "NO", "DK", "FI", "PL", "BE", "CH", "AT", "CZ", "GR", "HU", "RO", "TR", "UA"], extra: ["Europa"] },
+    { nome: "Ásia-Pacífico", cc: ["AU", "NZ", "IN", "SG", "JP", "KR", "CN", "HK", "TW", "TH", "MY", "ID", "PH", "VN", "PK", "BD", "LK"] }
+  ];
+  var OUTROS = "Global e outros";
+  function regiaoDe(c) {
+    for (var i = 0; i < REGIOES.length; i++) {
+      var r = REGIOES[i];
+      if (r.cc.indexOf(c.cc) >= 0 || (r.extra && r.extra.indexOf(c.region) >= 0)) return r.nome;
+    }
+    return OUTROS;
   }
+  var state = { items: [], today: todayYmd(), sel: null, month: todayYmd().slice(0, 7), region: ALL, q: "", film: false, loaded: false };
+
+  function norm(s) { return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+  function filtered() {
+    var q = norm(state.q.trim());
+    return state.items.filter(function (c) {
+      if (state.sel && c.date !== state.sel) return false;
+      if (state.region !== ALL && regiaoDe(c) !== state.region) return false;
+      if (state.film && !isPlayable(c)) return false;
+      if (q && norm([c.brand, c.title, c.agency, c.source, c.region, c.summary].join(" ")).indexOf(q) < 0) return false;
+      return true;
+    });
+  }
+  function isHome() { return !state.sel && state.region === ALL && !state.q.trim() && !state.film; }
   function byDay(list) {
     var m = {};
     list.forEach(function (c) { (m[c.date] = m[c.date] || []).push(c); });
     return m;
   }
+  // Usado pelo modo teatro: o que está na tela agora.
   function viewItems() {
-    var list = visible();
-    if (state.sel) return list.filter(function (c) { return c.date === state.sel; });
-    var from = shift(state.today, -(state.depth - 1));
-    return list.filter(function (c) { return c.date >= from && c.date <= state.today; });
+    if (!isHome()) return filtered();
+    var from = shift(state.today, -5);
+    return state.items.filter(function (c) { return c.date >= from && c.date <= state.today; });
   }
-  function heading() { return state.sel ? fullDay(state.sel) : "Hoje e os últimos " + (state.depth - 1) + " dias"; }
+  function heading() {
+    if (isHome()) return "Hoje e os últimos 5 dias";
+    var p = [];
+    if (state.sel) p.push(fullDay(state.sel));
+    if (state.region !== ALL) p.push(state.region);
+    if (state.film) p.push("só com filme");
+    if (state.q.trim()) p.push("“" + state.q.trim() + "”");
+    return p.join(" · ");
+  }
+  function relDay(d) {
+    if (d === state.today) return "Hoje";
+    if (d === shift(state.today, -1)) return "Ontem";
+    var s = longDay(d);
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
 
-  /* ---------- Feed ---------- */
-  function renderStrip(map) {
-    var strip = $("strip");
-    strip.textContent = "";
-    for (var i = 0; i < 6; i++) {
-      (function (day, i) {
-        var n = (map[day] || []).length;
-        var b = el("button", n ? "eh-day" : "eh-day eh-day-zero");
-        b.type = "button";
-        b.setAttribute("aria-pressed", state.sel === day ? "true" : "false");
-        b.appendChild(el("span", "eh-day-wd", i === 0 ? "Hoje" : weekday(day)));
-        b.appendChild(el("span", "eh-day-num", day.slice(8)));
-        b.appendChild(el("span", "eh-day-cnt", n ? plural(n) : "nada ainda"));
-        b.addEventListener("click", function () { go(state.sel === day ? null : day); });
-        strip.appendChild(b);
-      })(shift(state.today, -i), i);
+  /* ---------- Imagens ---------- */
+  function ytThumb(id, big) { return "https://i.ytimg.com/vi/" + id + "/" + (big ? "maxresdefault" : "hqdefault") + ".jpg"; }
+  function thumbOf(c, big) {
+    if (c.yt.length) return ytThumb(c.yt[0], big);
+    if (c.image) return c.image;
+    var v = vimeoOf(c.video);
+    if (v) return "https://vumbnail.com/" + v.id + (big ? "_large" : "") + ".jpg";
+    return "";
+  }
+  function hue(s) { var h = 0; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) % 360; return h; }
+  // Capa gerada para campanhas sem imagem: nome da marca em tipografia grande.
+  function poster(c) {
+    var p = el("div", "ad-poster");
+    var h = hue(c.brand || c.title);
+    p.style.setProperty("--h1", h);
+    p.style.setProperty("--h2", (h + 55) % 360);
+    p.appendChild(el("span", "ad-poster-brand", c.brand || c.title));
+    p.appendChild(el("span", "ad-poster-flag", flagOf(c.cc)));
+    return p;
+  }
+  function media(c, big) {
+    var box = el("div", "ad-media");
+    var src = thumbOf(c, big);
+    if (!src) { box.appendChild(poster(c)); return box; }
+    var img = el("img");
+    img.alt = "";
+    img.loading = big ? "eager" : "lazy";
+    img.decoding = "async";
+    img.referrerPolicy = "no-referrer";
+    img.src = src;
+    img.addEventListener("load", function () {
+      // a "maxresdefault" que não existe vem como uma imagem cinza de 120px
+      if (big && c.yt.length && img.naturalWidth <= 120) { img.src = ytThumb(c.yt[0], false); return; }
+      box.classList.add("ad-loaded");
+    });
+    img.addEventListener("error", function () {
+      if (big && c.yt.length && img.src.indexOf("maxres") > 0) { img.src = ytThumb(c.yt[0], false); return; }
+      img.remove(); box.appendChild(poster(c));
+      if (box.parentNode && box.parentNode.classList) box.parentNode.classList.add("ad-noimg");
+    });
+    box.appendChild(img);
+    return box;
+  }
+
+  /* ---------- Cartão ---------- */
+  function card(c) {
+    var b = el("button", "ad-card");
+    b.type = "button";
+    b.setAttribute("aria-label", (c.brand ? c.brand + ": " : "") + c.title);
+    b.appendChild(media(c, false));
+    if (!thumbOf(c, false)) b.classList.add("ad-noimg");
+    if (isPlayable(c)) b.appendChild(el("span", "ad-play", "▶"));
+    if (c.date === state.today) b.appendChild(el("span", "ad-new", "Novo"));
+    var cap = el("div", "ad-cap");
+    var top = el("div", "ad-cap-top");
+    top.appendChild(el("span", "ad-flag", flagOf(c.cc)));
+    if (c.brand) top.appendChild(el("span", "ad-cap-brand", c.brand));
+    cap.appendChild(top);
+    cap.appendChild(el("span", "ad-cap-title", c.title));
+    var meta = el("span", "ad-cap-meta", [c.agency, c.source].filter(Boolean).join(" · "));
+    cap.appendChild(meta);
+    b.appendChild(cap);
+    b.addEventListener("click", function () { openInfo(c, b); });
+    return b;
+  }
+
+  /* ---------- Fileiras ---------- */
+  function row(title, list, opts) {
+    opts = opts || {};
+    var s = el("section", "ad-row");
+    var h = el("div", "ad-row-head");
+    var h2 = el("h2", null, title);
+    h.appendChild(h2);
+    if (opts.sub) h.appendChild(el("span", "ad-row-sub", opts.sub));
+    if (opts.all) {
+      var all = el("button", "ad-row-all", "Ver tudo ›");
+      all.type = "button";
+      all.addEventListener("click", opts.all);
+      h.appendChild(all);
+    }
+    s.appendChild(h);
+    var wrap = el("div", "ad-track-wrap");
+    var track = el("div", "ad-track");
+    list.forEach(function (c) { track.appendChild(card(c)); });
+    var prev = el("button", "ad-arrow ad-prev", "‹"), next = el("button", "ad-arrow ad-next", "›");
+    prev.type = next.type = "button";
+    prev.setAttribute("aria-label", "Anteriores");
+    next.setAttribute("aria-label", "Próximos");
+    function step(dir) { track.scrollBy({ left: dir * track.clientWidth * 0.9, behavior: "smooth" }); }
+    prev.addEventListener("click", function () { step(-1); });
+    next.addEventListener("click", function () { step(1); });
+    function arrows() {
+      prev.hidden = track.scrollLeft < 8;
+      next.hidden = track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
+    }
+    track.addEventListener("scroll", arrows, { passive: true });
+    requestAnimationFrame(arrows);
+    wrap.appendChild(prev); wrap.appendChild(track); wrap.appendChild(next);
+    s.appendChild(wrap);
+    return s;
+  }
+
+  /* ---------- Destaque (hero) ---------- */
+  var hero = { list: [], i: 0, timer: null, preview: null };
+  function pickHero() {
+    var from = shift(state.today, -3), seen = {}, out = [];
+    var pool = state.items.filter(function (c) { return c.yt.length && c.date >= from; });
+    if (pool.length < 3) pool = state.items.filter(function (c) { return c.yt.length; });
+    pool.forEach(function (c) {
+      var k = norm(c.brand);
+      if (out.length < 6 && !seen[k]) { seen[k] = 1; out.push(c); }
+    });
+    return out;
+  }
+  function renderHero() {
+    var box = $("hero");
+    clearTimeout(hero.timer); clearTimeout(hero.preview);
+    box.textContent = "";
+    box.hidden = !isHome() || !hero.list.length;
+    if (box.hidden) return;
+    var c = hero.list[hero.i];
+    var bg = media(c, true);
+    bg.classList.add("ad-hero-bg");
+    box.appendChild(bg);
+    box.appendChild(el("div", "ad-hero-shade"));
+    var info = el("div", "ad-hero-info");
+    var eye = el("p", "ad-hero-eye");
+    eye.appendChild(el("span", "ad-pill", c.date === state.today ? "Estreou hoje" : relDay(c.date)));
+    eye.appendChild(document.createTextNode(flagOf(c.cc) + " " + (c.region || "")));
+    info.appendChild(eye);
+    var h1 = el("h1", "ad-hero-brand", c.brand || c.title);
+    var n = (c.brand || c.title).length;
+    h1.style.setProperty("--k", (n <= 6 ? 11 : n <= 10 ? 8.5 : n <= 16 ? 6.5 : 5) + "vw");
+    h1.style.setProperty("--max", (n <= 6 ? 150 : n <= 10 ? 120 : n <= 16 ? 92 : 72) + "px");
+    info.appendChild(h1);
+    if (c.brand) info.appendChild(el("p", "ad-hero-title", c.title));
+    var meta = [c.agency && "Agência " + c.agency, c.source].filter(Boolean).join(" · ");
+    if (meta) info.appendChild(el("p", "ad-hero-meta", meta));
+    if (c.summary) info.appendChild(el("p", "ad-hero-sum", c.summary));
+    var acts = el("div", "ad-hero-acts");
+    var play = el("button", "ad-btn ad-btn-play", "▶ Assistir");
+    play.type = "button";
+    play.addEventListener("click", function () { openTheater(c.id); });
+    var more = el("button", "ad-btn ad-btn-ghost", "ⓘ Mais informações");
+    more.type = "button";
+    more.addEventListener("click", function () { openInfo(c, more); });
+    acts.appendChild(play); acts.appendChild(more);
+    info.appendChild(acts);
+    box.appendChild(info);
+    if (hero.list.length > 1) {
+      var dots = el("div", "ad-hero-dots");
+      hero.list.forEach(function (x, i) {
+        var d = el("button", i === hero.i ? "ad-dot ad-dot-on" : "ad-dot");
+        d.type = "button";
+        d.setAttribute("aria-label", "Destaque " + (i + 1) + ": " + (x.brand || x.title));
+        d.addEventListener("click", function () { hero.i = i; renderHero(); });
+        dots.appendChild(d);
+      });
+      box.appendChild(dots);
+    }
+    // No computador, depois de um instante o filme começa a tocar mudo no fundo.
+    var calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!MOBILE.matches && !calm) {
+      hero.preview = setTimeout(function () {
+        if (th || fd || document.hidden) return;
+        var f = el("iframe", "ad-hero-video");
+        var id = c.yt[0];
+        f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&mute=1&controls=0&loop=1&playlist=" + id + "&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1";
+        f.allow = "autoplay; encrypted-media";
+        f.tabIndex = -1;
+        f.setAttribute("aria-hidden", "true");
+        f.addEventListener("load", function () { setTimeout(function () { f.classList.add("ad-on"); }, 900); });
+        bg.appendChild(f);
+      }, 2500);
+    }
+    hero.timer = setTimeout(function () {
+      if (th || fd || document.hidden || !isHome()) return;
+      hero.i = (hero.i + 1) % hero.list.length;
+      renderHero();
+    }, 16000);
+  }
+
+  /* ---------- Página inicial e resultados ---------- */
+  var moreIO = null, homeCursor = null, gridList = [], gridShown = 0;
+  function stopMore() { if (moreIO) { moreIO.disconnect(); moreIO = null; } }
+  function sentinel(box, fn) {
+    var s = el("div", "ad-sentinel");
+    box.appendChild(s);
+    if ("IntersectionObserver" in window) {
+      moreIO = new IntersectionObserver(function (es) {
+        if (es.some(function (e) { return e.isIntersecting; })) { stopMore(); s.remove(); fn(); }
+      }, { rootMargin: "900px 0px" });
+      moreIO.observe(s);
+    } else {
+      var b = el("button", "ad-more", "Carregar mais");
+      b.type = "button";
+      b.addEventListener("click", function () { s.remove(); fn(); });
+      s.appendChild(b);
     }
   }
 
-  function renderCal(map) {
+  function renderHome(box) {
+    var map = byDay(state.items);
+    var today = map[state.today] || [];
+    var yest = map[shift(state.today, -1)] || [];
+    if (today.length) box.appendChild(row("Estreou hoje", today, { sub: plural(today.length), all: function () { go(state.today); } }));
+    else box.appendChild(row("Últimas estreias", state.items.slice(0, 24)));
+    if (yest.length) box.appendChild(row("Ontem", yest, { sub: plural(yest.length), all: function () { go(shift(state.today, -1)); } }));
+    var films = state.items.filter(function (c) { return isPlayable(c) && c.date >= shift(state.today, -6); }).slice(0, 30);
+    if (films.length >= 4) box.appendChild(row("Filmes da semana", films, { sub: "para assistir em sequência", all: function () { state.film = true; render(); } }));
+    var recent = state.items.filter(function (c) { return c.date >= shift(state.today, -13); });
+    REGIOES.forEach(function (r) {
+      var l = recent.filter(function (c) { return regiaoDe(c) === r.nome; }).slice(0, 30);
+      if (l.length >= 3) box.appendChild(row(r.nome, l, { sub: "últimas duas semanas", all: function () { state.region = r.nome; render(); } }));
+    });
+    homeCursor = shift(state.today, -2);
+    moreDays(box, map);
+  }
+  function moreDays(box, map) {
+    var oldest = state.items.length ? state.items[state.items.length - 1].date : state.today;
+    var added = 0;
+    while (homeCursor >= oldest && added < 5) {
+      var d = homeCursor, l = map[d] || [];
+      homeCursor = shift(homeCursor, -1);
+      if (!l.length) continue;
+      box.appendChild(row(relDay(d), l, { sub: plural(l.length), all: (function (day) { return function () { go(day); }; })(d) }));
+      added++;
+    }
+    if (homeCursor >= oldest) sentinel(box, function () { moreDays(box, map); });
+    else box.appendChild(el("p", "ad-end", "Início do arquivo: " + fullDay(oldest) + "."));
+  }
+
+  function renderGrid(box) {
+    gridList = filtered();
+    gridShown = 0;
+    var head = el("div", "ad-grid-head");
+    var t = el("div");
+    t.appendChild(el("p", "ad-grid-eye", state.sel ? relDay(state.sel) : "Resultados"));
+    t.appendChild(el("h1", "ad-grid-title", heading()));
+    t.appendChild(el("p", "ad-grid-sub", gridList.length ? plural(gridList.length) : "Nenhuma campanha encontrada."));
+    head.appendChild(t);
+    var acts = el("div", "ad-grid-acts");
+    if (state.sel) {
+      var prev = el("button", "ad-btn ad-btn-ghost ad-btn-sm", "‹ Dia anterior");
+      prev.type = "button";
+      prev.addEventListener("click", function () { go(shift(state.sel, -1)); });
+      acts.appendChild(prev);
+      if (state.sel < state.today) {
+        var nx = el("button", "ad-btn ad-btn-ghost ad-btn-sm", "Dia seguinte ›");
+        nx.type = "button";
+        nx.addEventListener("click", function () { go(shift(state.sel, 1)); });
+        acts.appendChild(nx);
+      }
+    }
+    if (gridList.length) {
+      var play = el("button", "ad-btn ad-btn-play ad-btn-sm", "▶ Assistir tudo");
+      play.type = "button";
+      play.addEventListener("click", function () { openTheater(null); });
+      acts.appendChild(play);
+    }
+    var clear = el("button", "ad-btn ad-btn-ghost ad-btn-sm", "✕ Voltar ao início");
+    clear.type = "button";
+    clear.addEventListener("click", clearAll);
+    acts.appendChild(clear);
+    head.appendChild(acts);
+    box.appendChild(head);
+    var grid = el("div", "ad-grid");
+    box.appendChild(grid);
+    moreGrid(box, grid);
+  }
+  function moreGrid(box, grid) {
+    gridList.slice(gridShown, gridShown + 48).forEach(function (c) { grid.appendChild(card(c)); });
+    gridShown += 48;
+    if (gridShown < gridList.length) sentinel(box, function () { moreGrid(box, grid); });
+  }
+
+  /* ---------- Filtros (barra de cima) ---------- */
+  function renderChips() {
+    var box = $("chips");
+    box.textContent = "";
+    function chip(label, on, fn) {
+      var b = el("button", "ad-chip", label);
+      b.type = "button";
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      b.addEventListener("click", fn);
+      box.appendChild(b);
+    }
+    chip("Tudo", isHome(), clearAll);
+    chip("▶ Com filme", state.film, function () { state.film = !state.film; render(); });
+    REGIOES.concat([{ nome: OUTROS }]).forEach(function (r) {
+      chip(r.nome, state.region === r.nome, function () { state.region = state.region === r.nome ? ALL : r.nome; render(); });
+    });
+  }
+
+  function renderCal() {
+    var map = byDay(state.items);
     var month = state.month;
-    var first = toDate(month + "-01");
-    var y = first.getUTCFullYear(), m = first.getUTCMonth();
-    var count = new Date(Date.UTC(y, m + 1, 0)).getUTCDate();
     $("cal-title").textContent = monthName(month);
     var g = $("cal");
     g.textContent = "";
-    ["D", "S", "T", "Q", "Q", "S", "S"].forEach(function (d) { g.appendChild(el("div", "eh-dow", d)); });
+    ["D", "S", "T", "Q", "Q", "S", "S"].forEach(function (d) { g.appendChild(el("div", "ad-dow", d)); });
+    var first = toDate(month + "-01");
     for (var k = 0; k < first.getUTCDay(); k++) g.appendChild(el("div"));
-    for (var d = 1; d <= count; d++) {
+    var days = new Date(Date.UTC(first.getUTCFullYear(), first.getUTCMonth() + 1, 0)).getUTCDate();
+    for (var d = 1; d <= days; d++) {
       (function (day, d) {
         var n = (map[day] || []).length;
-        var c = el("button", "eh-cell" + (n ? " eh-has" : "") + (day === state.today ? " eh-today" : ""), String(d));
+        var c = el("button", "ad-cell" + (n ? " ad-has" : "") + (day === state.today ? " ad-today" : ""), String(d));
         c.type = "button";
         c.disabled = day > state.today;
         c.setAttribute("aria-pressed", state.sel === day ? "true" : "false");
         c.setAttribute("aria-label", fullDay(day) + (n ? ", " + plural(n) : ""));
-        c.addEventListener("click", function () { go(day); });
+        c.addEventListener("click", function () { toggleCal(false); go(day); });
         g.appendChild(c);
       })(month + "-" + pad(d), d);
     }
-    var next = new Date(Date.UTC(y, m + 1, 1)).toISOString().slice(0, 7);
-    $("next").disabled = next + "-01" > state.today;
+    var next = new Date(Date.UTC(first.getUTCFullYear(), first.getUTCMonth() + 1, 1)).toISOString().slice(0, 10);
+    $("next").disabled = next > state.today;
+  }
+  function toggleCal(open) {
+    var p = $("calpop");
+    if (open === undefined) open = p.hidden;
+    p.hidden = !open;
+    $("open-cal").setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) renderCal();
   }
 
-  function renderChips() {
-    var seen = {}, list = [];
-    state.items.forEach(function (c) { if (c.region && !seen[c.region]) { seen[c.region] = 1; list.push(c.region); } });
-    list.sort(function (a, b) { return a.localeCompare(b, "pt-BR"); });
-    var regions = [ALL].concat(list);
-    if (regions.indexOf(state.region) < 0) state.region = ALL;
-    var box = $("chips");
-    box.textContent = "";
-    regions.forEach(function (r) {
-      var b = el("button", "eh-chip", r);
-      b.type = "button";
-      b.setAttribute("aria-pressed", state.region === r ? "true" : "false");
-      b.addEventListener("click", function () { state.region = r; render(); });
-      box.appendChild(b);
-    });
-  }
-
-  function card(c) {
-    var a = el("article", "eh-card");
-    var top = el("div", "eh-card-top");
-    var f = el("span", "eh-flag", flagOf(c.cc));
-    f.setAttribute("role", "img");
-    f.setAttribute("aria-label", c.region || "Vários países");
-    f.title = c.region || "Vários países";
-    top.appendChild(f);
-    if (c.brand) top.appendChild(el("span", "eh-brand", c.brand));
-    a.appendChild(top);
-    a.appendChild(el("h4", null, c.title));
-    if (c.summary) a.appendChild(el("p", "eh-sum", c.summary));
-    var meta = el("div", "eh-meta");
-    if (c.agency) { var s = el("span", null, "Agência: "); s.appendChild(el("b", null, c.agency)); meta.appendChild(s); }
-    if (c.region) meta.appendChild(el("span", null, c.region));
-    if (meta.childNodes.length) a.appendChild(meta);
-    var links = el("div", "eh-links");
-    if (isPlayable(c)) {
-      var w = el("button", "eh-watch", "▶ Assistir aqui");
-      w.type = "button";
-      w.addEventListener("click", function () { openTheater(c.id); });
-      links.appendChild(w);
-    }
-    var out = outsideFilm(c);
-    if (out) links.appendChild(link("eh-go", "Ver o filme no " + hostName(out) + " ↗", out));
-    if (c.url) links.appendChild(link("eh-go", "Abrir em " + (c.source || "fonte") + " ↗", c.url));
-    if (links.childNodes.length) a.appendChild(links);
-    return a;
-  }
-
-  function group(day, list, single) {
-    var s = el("section", "eh-group");
-    var h = el("div", "eh-group-head");
-    h.appendChild(el("h3", null, longDay(day)));
-    if (day === state.today) h.appendChild(el("span", "eh-tag", "hoje"));
-    h.appendChild(el("span", "eh-group-n", list.length ? plural(list.length) : ""));
-    s.appendChild(h);
-    if (!list.length) {
-      s.appendChild(el("p", "eh-none", single
-        ? "Nenhuma campanha registrada neste dia" + (state.region !== ALL ? " para " + state.region : "") + "."
-        : "Nada registrado."));
-    } else {
-      var box = el("div", "eh-cards");
-      list.forEach(function (c) { box.appendChild(card(c)); });
-      s.appendChild(box);
-    }
-    return s;
-  }
-
+  var lastHome = null;
   function render() {
-    var map = byDay(visible());
-    renderStrip(map);
-    renderCal(map);
+    stopMore();
     renderChips();
-    $("view-title").textContent = heading();
-    $("back").hidden = !state.sel;
-    var feed = $("feed");
-    feed.textContent = "";
+    var box = $("feed");
+    box.textContent = "";
     if (!state.loaded) return;
-    if (state.sel) { feed.appendChild(group(state.sel, map[state.sel] || [], true)); appendDays(feed, map, 1, state.depth); return; }
-    appendDays(feed, map, 0, state.depth);
-  }
-
-  /* ---------- Rolagem infinita: ao chegar no fim, carrega os dias anteriores ---------- */
-  var STEP = 7, moreIO = null;
-  function oldestDay() {
-    var l = visible();
-    return l.length ? l[l.length - 1].date : state.today;
-  }
-  function appendDays(feed, map, start, end) {
-    var old = feed.querySelector(".eh-more");
-    if (old) old.remove();
-    if (moreIO) { moreIO.disconnect(); moreIO = null; }
-    var oldest = oldestDay();
-    for (var i = start; i < end; i++) {
-      var day = shift(state.sel || state.today, -i);
-      if (day < oldest) break;
-      var list = map[day] || [];
-      if ((state.sel || i >= 6) && !list.length) continue; /* além dos 6 primeiros, pula dias vazios */
-      feed.appendChild(group(day, list, false));
-    }
-    if (shift(state.sel || state.today, -(end - 1)) > oldest) {
-      var more = el("button", "eh-more", "Carregar dias anteriores");
-      more.type = "button";
-      more.addEventListener("click", loadMore);
-      feed.appendChild(more);
-      if ("IntersectionObserver" in window) {
-        moreIO = new IntersectionObserver(function (es) {
-          if (es.some(function (e) { return e.isIntersecting; })) loadMore();
-        }, { rootMargin: "600px 0px" });
-        moreIO.observe(more);
-      }
+    if (isHome()) {
+      if (!hero.list.length) hero.list = pickHero();
+      renderHero();
+      renderHome(box);
     } else {
-      feed.appendChild(el("p", "eh-none eh-end", "Início do arquivo: " + fullDay(oldest) + "."));
+      renderHero();
+      renderGrid(box);
     }
+    if (lastHome !== isHome()) { window.scrollTo(0, 0); lastHome = isHome(); }
   }
-  function loadMore() {
-    if (!state.loaded) return;
-    var start = state.depth;
-    state.depth += STEP;
-    appendDays($("feed"), byDay(visible()), start, state.depth);
-    if (!state.sel) $("view-title").textContent = heading();
+  function clearAll() {
+    state.region = ALL; state.film = false; state.q = ""; $("q").value = "";
+    if (state.sel) go(null); else render();
+    window.scrollTo(0, 0);
   }
-
   function go(day) {
     state.sel = day;
-    state.depth = 6;
     if (day) state.month = day.slice(0, 7);
-    var h = "#" + (day ? "dia-" + day : "ultimos");
-    if (location.hash !== h) location.hash = h;
+    var h = day ? "#dia-" + day : "";
+    if (location.hash !== h) {
+      if (h) location.hash = h;
+      else history.replaceState(null, "", location.pathname + location.search);
+    }
     render();
+    window.scrollTo(0, 0);
   }
   function fromHash() {
     state.today = todayYmd();
     var m = /^#dia-(\d{4}-\d{2}-\d{2})$/.exec(location.hash || "");
     var day = m && isDay(m[1]) && m[1] <= state.today ? m[1] : null;
     state.sel = day;
-    state.depth = 6;
     if (day) state.month = day.slice(0, 7);
     render();
   }
 
-  $("back").addEventListener("click", function () { go(null); });
+  /* ---------- Ficha da campanha ("Mais informações") ---------- */
+  var info = null;
+  function openInfo(c, opener) {
+    closeInfo();
+    var root = el("div", "ad-modal");
+    root.setAttribute("role", "dialog");
+    root.setAttribute("aria-modal", "true");
+    root.setAttribute("aria-label", (c.brand ? c.brand + ": " : "") + c.title);
+    var panel = el("div", "ad-modal-panel");
+    var top = el("div", "ad-modal-media");
+    top.appendChild(media(c, true));
+    top.appendChild(el("div", "ad-modal-shade"));
+    var x = el("button", "ad-modal-x", "✕");
+    x.type = "button";
+    x.setAttribute("aria-label", "Fechar");
+    x.addEventListener("click", closeInfo);
+    top.appendChild(x);
+    var head = el("div", "ad-modal-head");
+    head.appendChild(el("h2", "ad-modal-brand", c.brand || c.title));
+    var acts = el("div", "ad-hero-acts");
+    if (isPlayable(c)) {
+      var play = el("button", "ad-btn ad-btn-play", "▶ Assistir");
+      play.type = "button";
+      play.addEventListener("click", function () { closeInfo(); openTheater(c.id); });
+      acts.appendChild(play);
+    }
+    var out = outsideFilm(c);
+    if (out) acts.appendChild(link("ad-btn ad-btn-ghost", "Ver o filme no " + hostName(out) + " ↗", out));
+    if (c.url) acts.appendChild(link("ad-btn ad-btn-ghost", "Ler em " + (c.source || "fonte") + " ↗", c.url));
+    head.appendChild(acts);
+    top.appendChild(head);
+    panel.appendChild(top);
+    var body = el("div", "ad-modal-body");
+    var main = el("div");
+    var tags = el("p", "ad-modal-tags");
+    tags.appendChild(el("span", "ad-pill", relDay(c.date)));
+    tags.appendChild(document.createTextNode(fullDay(c.date)));
+    main.appendChild(tags);
+    if (c.brand) main.appendChild(el("h3", "ad-modal-title", c.title));
+    if (c.summary) main.appendChild(el("p", "ad-modal-sum", c.summary));
+    if (c.yt.length) {
+      var pop = el("p", "ad-modal-pop");
+      main.appendChild(pop);
+      popOf(c.yt[0]).then(function (v) { pop.textContent = popText(v, c.date); });
+    }
+    body.appendChild(main);
+    var side = el("dl", "ad-modal-side");
+    [["Marca", c.brand], ["Agência", c.agency], ["Origem", c.region ? flagOf(c.cc) + " " + c.region : ""], ["Fonte", c.source],
+     ["Filmes", c.yt.length > 1 ? c.yt.length + " filmes" : ""]].forEach(function (p) {
+      if (!p[1]) return;
+      side.appendChild(el("dt", null, p[0]));
+      side.appendChild(el("dd", null, p[1]));
+    });
+    body.appendChild(side);
+    panel.appendChild(body);
+    var same = state.items.filter(function (o) { return o.date === c.date && o.id !== c.id; }).slice(0, 9);
+    if (same.length) {
+      var more = el("div", "ad-modal-more");
+      more.appendChild(el("h3", null, "Estrearam no mesmo dia"));
+      var g = el("div", "ad-modal-grid");
+      same.forEach(function (o) { g.appendChild(card(o)); });
+      more.appendChild(g);
+      panel.appendChild(more);
+    }
+    root.appendChild(panel);
+    root.addEventListener("click", function (e) { if (e.target === root) closeInfo(); });
+    document.body.appendChild(root);
+    info = { root: root, opener: opener, overflow: document.body.style.overflow };
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", onInfoKey);
+    requestAnimationFrame(function () { root.classList.add("ad-open"); x.focus(); });
+  }
+  function onInfoKey(e) { if (e.key === "Escape") closeInfo(); }
+  function closeInfo() {
+    if (!info) return;
+    document.removeEventListener("keydown", onInfoKey);
+    document.body.style.overflow = info.overflow;
+    info.root.remove();
+    var o = info.opener;
+    info = null;
+    if (o && o.focus && document.body.contains(o)) o.focus({ preventScroll: true });
+  }
+
+  /* ---------- Barra de cima ---------- */
+  $("open-cal").addEventListener("click", function (e) { e.stopPropagation(); toggleCal(); });
+  document.addEventListener("click", function (e) {
+    var p = $("calpop");
+    if (!p.hidden && !p.contains(e.target)) toggleCal(false);
+  });
   $("prev").addEventListener("click", function () {
     var f = toDate(state.month + "-01");
     state.month = new Date(Date.UTC(f.getUTCFullYear(), f.getUTCMonth() - 1, 1)).toISOString().slice(0, 7);
-    render();
+    renderCal();
   });
   $("next").addEventListener("click", function () {
     var f = toDate(state.month + "-01");
     state.month = new Date(Date.UTC(f.getUTCFullYear(), f.getUTCMonth() + 1, 1)).toISOString().slice(0, 7);
-    render();
+    renderCal();
+  });
+  $("logo").addEventListener("click", function (e) { e.preventDefault(); clearAll(); });
+  var qTimer = null;
+  $("q").addEventListener("input", function () {
+    clearTimeout(qTimer);
+    var v = this.value;
+    qTimer = setTimeout(function () { state.q = v; render(); }, 220);
   });
   $("open-theater").addEventListener("click", function () { openTheater(null); });
   window.addEventListener("hashchange", fromHash);
+  window.addEventListener("scroll", function () {
+    $("nav").classList.toggle("ad-nav-solid", window.scrollY > 24);
+  }, { passive: true });
 
   /* ---------- Players externos ---------- */
   var ytPromise = null, vimeoPromise = null;
@@ -622,6 +943,7 @@
       th.reel.appendChild(groupEl);
       if (i === th.idx) {
         requestAnimationFrame(function () {
+          if (!th) return;
           var target = firstOfDay ? groupEl : t;
           var r = th.reel, box = target.getBoundingClientRect(), rb = r.getBoundingClientRect();
           var left = r.scrollLeft + box.left - rb.left - (firstOfDay ? 0 : Math.max(0, (rb.width - box.width) / 2));
@@ -925,8 +1247,6 @@
       s.hidden = state.items.length > 0;
       s.textContent = "Ainda não há campanhas registradas.";
       render();
-      // No celular o site já abre no feed; o botão "Dias" leva para o calendário.
-      if (MOBILE.matches && state.items.length) openTheater(null);
     })
     .catch(function () {
       $("status").textContent = "Não foi possível carregar as campanhas. Recarregue a página em alguns minutos.";

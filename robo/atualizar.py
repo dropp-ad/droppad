@@ -194,7 +194,7 @@ def agencia_de(texto):
     for r in AGENCIA_RE:
         m = re.search(r, texto)
         if m:
-            a = m.group(1).strip(" .,;")
+            a = re.split(r"[.;,]\s", m.group(1))[0].strip(" .,;")
             if 1 < len(a) <= 50:
                 return a
     return ""
@@ -369,6 +369,43 @@ def corpo_da_materia(pagina):
     return pagina
 
 
+IMG_RE = [r'<meta[^>]+property=["\']og:image(?::secure_url)?["\'][^>]+content=["\']([^"\']+)',
+          r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+          r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)']
+
+
+def imagem_de(pagina, base):
+    for r in IMG_RE:
+        m = re.search(r, pagina, re.I)
+        if m:
+            u = urllib.parse.urljoin(base, html.unescape(m.group(1).strip()))
+            if u.startswith("https://") and not re.search(r"logo|default|placeholder|favicon|avatar", u, re.I):
+                return u
+    return ""
+
+
+def completar_imagens(camp, estado, limite=60):
+    """Busca a imagem de capa (og:image) das campanhas antigas que não têm filme nem imagem."""
+    tentadas = set(estado.setdefault("sem_imagem", []))
+    alvo = [c for c in camp if not c.get("yt") and not c.get("image") and c.get("url") and c["url"] not in tentadas][:limite]
+
+    def job(c):
+        try:
+            return c, imagem_de(baixar(c["url"], timeout=15), c["url"])
+        except Exception:  # noqa: BLE001
+            return c, ""
+    n = 0
+    with cf.ThreadPoolExecutor(10) as ex:
+        for c, img in ex.map(job, alvo):
+            if img:
+                c["image"] = img
+                n += 1
+            else:
+                tentadas.add(c["url"])
+    estado["sem_imagem"] = sorted(tentadas)
+    return n
+
+
 # ---------------------------------------------------------------- tradução (opcional)
 def traduzir(s):
     if not s or os.environ.get("SEM_TRADUCAO"):
@@ -517,22 +554,23 @@ def main():
         try:
             pag = baixar(it["link"], timeout=20)
         except Exception:  # noqa: BLE001
-            return par, [], "", ""
+            return par, [], "", "", ""
         miolo = corpo_da_materia(pag)
         yts, vimeo = filmes_de(miolo)
         if not yts and not vimeo and miolo is not pag:
             yts, vimeo = filmes_de(re.sub(r"<(aside|footer|nav)\b.*?</\1>", "", pag, flags=re.S | re.I))
+        img = imagem_de(pag, it["link"])
         desc = ""
         m = re.search(r'<meta[^>]+(?:property="og:description"|name="description")[^>]+content="([^"]+)"', pag)
         if m:
             desc = m.group(1)
-        return par, yts, vimeo, desc
+        return par, yts, vimeo, desc, img
     with cf.ThreadPoolExecutor(10) as ex:
         resultados = list(ex.map(job_materia, fila))
 
     # vídeo que aparece em várias matérias do mesmo site é da página, não da campanha
     por_dom = {}
-    for (it, f), yts, _, _ in resultados:
+    for (it, f), yts, _, _, _ in resultados:
         dom = urllib.parse.urlparse(it["link"]).netloc
         for y in yts:
             por_dom.setdefault((dom, y), 0)
@@ -542,7 +580,7 @@ def main():
             bloqueados.add(y)
 
     novas = []
-    for (it, f), yts, vimeo, desc in resultados:
+    for (it, f), yts, vimeo, desc, img in resultados:
         if len(novas) >= MAX_NOVAS:
             break
         yts = [y for y in yts if y not in bloqueados]
@@ -569,6 +607,8 @@ def main():
             c["yt"] = yts
         elif vimeo:
             c["video"] = vimeo
+        if img and not yts:
+            c["image"] = img
         c["summary"] = traduzir(primeira_frase(resumo_txt)) if resumo_txt else ""
         c["addedAt"] = AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")
         novas.append(c)
@@ -577,7 +617,11 @@ def main():
         yts_usados.update(yts)
         marca_dia.add((chave(marca), it["data"]))
 
-    # 7) salva
+    # 7) capas das campanhas antigas sem filme
+    capas = 0 if SIMULAR else completar_imagens(camp, estado)
+    log("Capas novas em campanhas antigas:", capas)
+
+    # 8) salva
     if SIMULAR:
         log("SIMULAÇÃO: %d novas (nada foi salvo)" % len(novas))
         for c in novas:
@@ -588,7 +632,7 @@ def main():
     estado["ultimas_novas"] = len(novas)
     salvar_json(ESTADO, estado)
     salvar_json(FONTES, fontes)
-    if novas:
+    if novas or capas:
         camp += novas
         camp.sort(key=lambda c: (c.get("date", ""), c.get("addedAt", "")), reverse=True)
         assert len({c["id"] for c in camp}) == len(camp)
