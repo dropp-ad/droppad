@@ -588,7 +588,7 @@ def main():
             continue  # o mesmo filme já está no site (mesma campanha, outra fonte)
         titulo = it["titulo"]
         resumo_txt = limpar(it["resumo"]) or limpar(desc) or limpar(it["corpo"])
-        texto = f"{titulo} {resumo_txt} {limpar(it['corpo'])[:1500]}"
+        texto = f"{titulo}. {resumo_txt}. {limpar(it['corpo'])[:1500]}"
         marca = marca_de(titulo)
         if not marca:
             continue  # sem marca identificável, provavelmente não é campanha

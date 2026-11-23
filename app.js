@@ -142,19 +142,23 @@
     var art = el("article", "post");
     art._c = c;
 
-    var head = el("header", "post-head");
-    head.appendChild(avatar(c));
-    var who = el("div", "who");
-    var line1 = el("div", "who-1");
-    line1.appendChild(el("b", null, c.brand || c.source || "Campanha"));
-    line1.appendChild(el("span", "flag", flagOf(c.cc)));
-    who.appendChild(line1);
-    var sub = [c.agency, c.region].filter(Boolean).join(" · ");
-    if (sub) who.appendChild(el("span", "who-2", sub));
-    head.appendChild(who);
-    head.appendChild(el("time", "when", dayShort(c.date)));
-    art.appendChild(head);
+    // texto à esquerda, no fundo preto
+    var info = el("div", "info");
+    info.appendChild(el("h3", "brand", c.brand || c.source || "Campanha"));
+    var meta = el("p", "meta");
+    meta.textContent = [flagOf(c.cc) + " " + (c.region || "Global"), c.agency].filter(Boolean).join("  ·  ");
+    info.appendChild(meta);
+    info.appendChild(el("p", "title", c.title));
+    if (c.summary) info.appendChild(el("p", "sum", c.summary));
+    var foot = el("p", "foot");
+    if (c.url) foot.appendChild(link("src", (c.source || "Fonte") + " ↗", c.url));
+    var pop = el("span", "pop");
+    foot.appendChild(pop);
+    if (c.yt.length) popOf(c.yt[0]).then(function (v) { if (v.views) pop.textContent = fmtNum(v.views) + " views"; });
+    info.appendChild(foot);
+    art.appendChild(info);
 
+    // quadro do filme
     var media = el("div", "media");
     var cover = el("div", "cover");
     var src = fl.length ? (fl[0].kind === "yt" ? ytThumb(fl[0].id) : "https://vumbnail.com/" + fl[0].id + "_large.jpg") : c.image;
@@ -175,8 +179,8 @@
     if (fl.length) {
       art.classList.add("has-film");
       media.appendChild(el("div", "host"));
-      media.appendChild(el("span", "bigplay", "▶"));
-      media.appendChild(el("span", "fail", "Este filme só toca no YouTube"));
+      media.appendChild(el("span", "bigplay"));
+      media.appendChild(el("span", "fail", "Este filme só toca no YouTube ↗"));
       var mute = el("button", "mute");
       mute.type = "button";
       mute.setAttribute("aria-label", "Ligar ou desligar o som");
@@ -194,7 +198,6 @@
           dots.appendChild(d);
         });
         media.appendChild(dots);
-        media.appendChild(el("span", "count", "1/" + fl.length));
       }
       media.addEventListener("click", function (e) {
         if (e.target === mute) { setSound(!sound); if (!(active && active.art === art)) activate(art, true); return; }
@@ -209,21 +212,6 @@
       media.appendChild(link("readover", "Ler a matéria ↗", c.url));
     }
     art.appendChild(media);
-
-    var body = el("div", "post-body");
-    var acts = el("div", "acts");
-    if (c.url) acts.appendChild(link("act", "↗ " + (c.source || "Fonte"), c.url));
-    var pop = el("span", "pop");
-    acts.appendChild(pop);
-    if (c.yt.length) popOf(c.yt[0]).then(function (v) {
-      if (v.views) pop.textContent = "👁 " + fmtNum(v.views) + (v.likes ? "   ♥ " + fmtNum(v.likes) : "");
-    });
-    body.appendChild(acts);
-    var cap = el("p", "cap");
-    cap.appendChild(el("b", null, c.title));
-    if (c.summary) cap.appendChild(document.createTextNode(" " + c.summary));
-    body.appendChild(cap);
-    art.appendChild(body);
 
     media._art = art;
     art._media = media;
@@ -267,7 +255,7 @@
       entries.forEach(function (e) { ratios.set(e.target, e.isIntersecting ? e.intersectionRatio : 0); });
       clearTimeout(pickTimer);
       pickTimer = setTimeout(pick, 150);
-    }, { threshold: [0, .2, .4, .5, .6, .7, .8, .9, 1], rootMargin: "-100px 0px 0px 0px" });
+    }, { threshold: [0, .2, .4, .5, .6, .7, .8, .9, 1], rootMargin: "-120px 0px 0px 0px" });
   }
   // Toca o post com filme mais visível na tela; para o que saiu.
   function pick() {
@@ -388,13 +376,21 @@
     var feed = $("feed");
     var slice = state.list.slice(state.shown, state.shown + LOTE);
     slice.forEach(function (c) {
-      if (c.date !== state.lastDay) {
+      if (c.date !== state.lastDay || !state.section) {
         state.lastDay = c.date;
-        var sep = el("div", "sep");
-        sep.appendChild(el("span", null, dayTitle(c.date)));
-        feed.appendChild(sep);
+        // um bloco por dia, com o título do dia preso no topo enquanto o dia rola
+        var sec = el("section", "day");
+        var h = el("h2", "day-h");
+        h.appendChild(el("span", "day-name", dayTitle(c.date)));
+        var n = state.list.filter(function (x) { return x.date === c.date; });
+        var nf = n.filter(function (x) { return films(x).length; }).length;
+        h.appendChild(el("span", "day-date", (dayTitle(c.date) === "Hoje" || dayTitle(c.date) === "Ontem" ? fmtLong.format(toDate(c.date)) + "  ·  " : "") +
+          n.length + (n.length === 1 ? " campanha" : " campanhas") + (nf ? "  ·  " + nf + (nf === 1 ? " filme" : " filmes") : "")));
+        sec.appendChild(h);
+        feed.appendChild(sec);
+        state.section = sec;
       }
-      feed.appendChild(post(c));
+      state.section.appendChild(post(c));
     });
     state.shown += slice.length;
     var old = $("more");
@@ -428,6 +424,7 @@
     $("feed").textContent = "";
     state.shown = 0;
     state.lastDay = "";
+    state.section = null;
     state.list = state.items.filter(function (c) {
       if (state.onlyFilms && !films(c).length) return false;
       if (state.region && regiaoDe(c) !== state.region) return false;
@@ -448,9 +445,9 @@
       box.appendChild(b);
     }
     chip("Tudo", !state.region && !state.onlyFilms, function () { state.region = ""; state.onlyFilms = false; });
-    chip("▶ Só filmes", state.onlyFilms, function () { state.onlyFilms = !state.onlyFilms; });
+    chip("Só filmes", state.onlyFilms, function () { state.onlyFilms = !state.onlyFilms; });
     REGIOES.forEach(function (r) {
-      chip(r.ico + " " + r.nome, state.region === r.nome, function () { state.region = state.region === r.nome ? "" : r.nome; });
+      chip(r.nome, state.region === r.nome, function () { state.region = state.region === r.nome ? "" : r.nome; });
     });
   }
 
@@ -464,6 +461,9 @@
       try { if (active.kind === "yt") active.player.playVideo(); else active.player.play(); } catch (e) { /* nada */ }
     }
   });
+  function measure() { document.documentElement.style.setProperty("--hh", document.querySelector(".bar-top").offsetHeight + "px"); }
+  measure();
+  window.addEventListener("resize", measure);
   setupIO();
   fetch("campaigns.json", { cache: "no-store" })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
@@ -471,7 +471,6 @@
       state.items = normalize(raw);
       var last = state.items.reduce(function (m, c) { return c.addedAt > m ? c.addedAt : m; }, "");
       var t = last ? new Date(last) : null;
-      $("updated").textContent = t && !isNaN(t) ? "atualizado " + fmtStamp.format(t) : "";
       $("status").hidden = true;
       renderAll();
     })
