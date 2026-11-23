@@ -6,7 +6,12 @@ on:
   schedule:
     - cron: "7 13,16,17,22 * * *"
     - cron: "7 1 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      simular:
+        description: "Só simular (não publica nada)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -30,11 +35,13 @@ jobs:
       - name: Buscar campanhas e publicar
         env:
           GH_TOKEN: ${{ github.token }}
+          SIMULAR: ${{ inputs.simular && '1' || '' }}
         run: |
           git config user.name "AD Drop robô"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for tentativa in 1 2 3; do
             python robo/atualizar.py
+            if [ -n "$SIMULAR" ]; then exit 0; fi
             git add campaigns.json robo/estado.json robo/fontes.json
             if git diff --cached --quiet; then
               echo "Nada novo."

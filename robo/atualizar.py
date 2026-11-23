@@ -41,6 +41,8 @@ MAX_NOVAS = 150           # campanhas novas por execução
 PAGINAS_ARQUIVO = 2       # páginas antigas por feed em cada execução
 BUSCAS_POR_RODADA = 6
 TESTES_DESCOBERTA = 8     # sites novos testados por rodada
+MAX_POR_FONTE_DIA = 5     # para nenhuma fonte dominar o dia
+SIMULAR = bool(os.environ.get("SIMULAR"))
 UA = "Mozilla/5.0 (compatible; ADDropBot/1.0; +https://github.com/pedrorosas/estreou-hoje)"
 
 AGORA = dt.datetime.now(dt.timezone.utc)
@@ -108,45 +110,74 @@ def primeira_frase(s, n=240):
 
 
 # ---------------------------------------------------------------- filtro
-INCLUI = re.compile(r"""\b(campaign|campaigns|campanha|campanhas|campaña|campañas|campagne|kampagne|campagna|
-    ad|ads|advert|spot|spots|tvc|commercial|comercial|filme|film|anúncio|anuncio|anuncia|
-    launch(es|ed)?|unveil(s|ed)?|debut(s|ed)?|lança|lançou|lanza|lanzó|estreia|estrena|presenta|apresenta|
-    rolls?\s+out|stars?|protagoniza|estrelad[ao]|activation|ativação|activación|stunt|ooh|outdoor|
-    christmas|natal|navidad|noël|weihnacht|black\s+friday|super\s+bowl)\b""", re.I | re.X)
-EXCLUI = re.compile(r"""\b(award|awards|winners?|shortlist|jury|júri|jurado|prêmio|premio|premiação|premiados|
-    cannes\s+lions\s+(winners|shortlist)|effie|appoint(s|ed|ment)?|hires?|hired|promot(es|ed|ion)|joins|named|
-    contrata|contratação|nomeia|nomeado|assume|deixa\s+a|ficha|nombra|nombramiento|
-    wins?\s+(the\s+)?account|pitch|conquista\s+(a\s+)?conta|gana\s+la\s+cuenta|account\s+move|review|licitação|
-    study|survey|report|research|estudo|pesquisa|relatório|estudio|encuesta|informe|
+FORTE = re.compile(r"""(\bcampaign|\bcampanha|\bcampaña|\bcampagne|\bkampagne|\bcampagna|\bads?\b|\badvert|\bspots?\b|\btvc\b|
+    \bcommercials?\b|\bcomerciais\b|\bcomercial\b|\bfilme\b|\bfilm\b|\banúncio|\banuncio|\bpublicidade|\bpublicitári|\bpublicitari|
+    \bactivation|\bativação|\bactivación|\bbrand\s+film|\bnew\s+work\b|\bjingle|\bmanifesto|\bmanifiesto|\bwerbung|\bpub\b|\bstunt\b|\bOOH\b)""", re.I | re.X)
+EXCLUI = re.compile(r"""\b(award|awards|winners?|shortlist|jury|júri|jurado|prêmio|premio|premiação|premiados|effie|lions|
+    appoint(s|ed|ment)?|hires?|hired|promot(es|ed|ion)|joins|named|contrata|contratação|nomeia|nomeado|assume|ficha|nombra|nombramiento|
+    ceo|cmo|cco|cfo|diretora?|director|directora|head\s+of|vice-?president|executiv[oa]s?|
+    wins?|won|bags|retains|mandate|commissions|aor|agency\s+of\s+record|pitch|conquista|gana|account|licitação|concorrência|
+    study|survey|report|research|estudo|pesquisa|relatório|estudio|encuesta|informe|dados|data\s+shows|
     podcast|webinar|interview|entrevista|opinion|opinião|opinión|column|coluna|obituary|layoffs?|demissões|
-    revenue|earnings|lucro|faturamento|acquires|acquisition|aquisição|adquiere|merger|fusão|
-    event\s+recap|conference|evento|festival\s+line-?up|ranking|top\s+\d+|lista\s+de|list\s+of)\b""", re.I | re.X)
+    revenue|earnings|lucro|faturamento|vendas\s+crescem|acquires|acquisition|aquisição|adquiere|merger|fusão|ipo|
+    trailer|tráiler|teaser\s+trailer|bilheteria|taquilla|box\s+office|cinemas|ingressos|boletos|estreno\s+de|reality|novela|série|serie\s+de|episódio|
+    conference|conferência|congresso|summit|evento|festival|ranking|top\s+\d+|melhores|best\s+ads|lo\s+mejor|semana|week'?s|weekly|roundup|
+    tendências|tendencias|trends?|estratégias|estrategias|desafi\w+|mercado\s+de|setor|sector|investimento|inversión|guide|guia|guía|
+    afiliada|fidelidade|loyalty\s+program|app\s+update|tutorial|dicas|tips|curso|course|vagas|jobs)\b""", re.I | re.X)
+PERGUNTA = re.compile(r"(\?|¿|^(why|how|what|when|is|are|can|should|por\s+que|porque|como|cómo|qué|que|o\s+que|quando|quem)\b)", re.I)
 
 
-def parece_campanha(titulo, resumo, so_campanhas=False):
-    t = f"{titulo} {resumo}"
-    if EXCLUI.search(titulo):
+def parece_campanha(titulo, resumo="", so_campanhas=False):
+    if EXCLUI.search(titulo) or PERGUNTA.search(titulo.strip()):
         return False
     if so_campanhas:
         return True
-    return bool(INCLUI.search(t))
+    return bool(FORTE.search(titulo))
 
 
 # ---------------------------------------------------------------- marca / agência / país
-VERBOS = r"(?:launch(?:es|ed)?|unveil(?:s|ed)?|debut(?:s|ed)?|rolls? out|introduces?|releases?|drops?|celebrates?|returns?|teams up|taps|turns|brings|goes|gets|makes|asks|wants|lança|lançou|apresenta|estreia|celebra|aposta|traz|convida|faz|ganha|lanza|presenta|estrena|apuesta|celebra|invita|lance|dévoile|présente|startet|zeigt)"
+VERBOS = r"(?:apela|appeals|presentan|lanzan|lançam|apresentam|estrelam|unen|unem|transforms?|transforma|convierte|leva|levou|reúne|chama|homenageia|promove|mostra|muestra|invites?|shows?|puts?|helps?|launch(?:es|ed)?|unveil(?:s|ed)?|debut(?:s|ed)?|rolls? out|introduces?|releases?|drops?|celebrates?|returns?|teams up|taps|turns|brings|goes|gets|makes|asks|wants|lança|lançou|apresenta|estreia|celebra|aposta|traz|convida|faz|ganha|lanza|presenta|estrena|apuesta|celebra|invita|lance|dévoile|présente|startet|zeigt)"
+
+
+NAO_MARCA = {"black friday", "cyber monday", "natal", "navidad", "christmas", "noel", "noël", "outdoor", "marketing", "publicidade",
+             "publicidad", "campanha", "campaign", "campaña", "the", "new", "nova", "novo", "nueva", "nuevo", "why", "how", "ia", "ai",
+             "australian", "american", "british", "global", "holiday", "festive", "brasil", "brazil", "méxico", "mexico", "argentina",
+             "españa", "spain", "uk", "us", "eua", "india", "this", "esta", "este", "a", "o", "el", "la", "le", "les", "os", "as",
+             "black", "friday", "dia", "day", "mundial", "copa", "vantagens", "brand", "marca", "marcas", "brands", "agency", "agência", "agencia"}
+
+
+def marca_ok(m):
+    m = (m or "").strip(" \"'“”‘’.,")
+    if not m or len(m) > 40 or len(m.split()) > 4:
+        return ""
+    if sem_acento(m).lower() in {sem_acento(x) for x in NAO_MARCA}:
+        return ""
+    if not re.match(r"[A-Z0-9À-Ý]", m):
+        return ""
+    return m
 
 
 def marca_de(titulo):
     t = titulo.strip(" \"'“”‘’")
-    m = re.match(r"^([^:|–—]{2,40})\s*[:|–—]\s+", t)
-    if m and len(m.group(1).split()) <= 5:
-        return m.group(1).strip(" \"'“”")
-    m = re.match(r"^([A-Z0-9À-Ý][\w&'’.\-À-ÿ]*(?:\s+(?:[A-Z0-9À-Ý&][\w&'’.\-À-ÿ]*|de|do|da|of|the|y|e|&)){0,4}?)(?:'s|’s)?\s+(?:new\s+|nova\s+|novo\s+|nueva\s+|nuevo\s+)?" + VERBOS + r"\b", t)
-    if m:
-        return m.group(1).strip()
-    m = re.search(r"\b(?:for|para|de|da|do|pour|für)\s+([A-Z][\w&'’.\-À-ÿ]*(?:\s+[A-Z][\w&'’.\-À-ÿ]*){0,2})", t)
-    if m:
-        return m.group(1).strip()
+    m = re.match(r"^([^:|–—]{2,40})\s*[:|–—]\s+[\"'“‘]", t)
+    if m and marca_ok(m.group(1)):
+        return marca_ok(m.group(1))
+    m = re.match(r"^([A-Z0-9À-Ý][\w&'’.\-À-ÿ]*(?:\s+(?:[A-Z0-9À-Ý&][\w&'’.\-À-ÿ]*|de|do|da|of|the|y|e|&)){0,3}?)(?:'s|’s)?\s+(?:new\s+|nova\s+|novo\s+|nueva\s+|nuevo\s+)?" + VERBOS + r"\b", t)
+    if m and marca_ok(m.group(1)):
+        return marca_ok(m.group(1))
+    m = re.search(r"\b(?:campanha|campaña|campagne|filme|anúncio|anuncio|comercial|spot)\s+(?:d[aoe]s?|del|de\s+la)\s+([A-Z0-9][\w&'’.\-À-ÿ]*(?:\s+[A-Z0-9][\w&'’.\-À-ÿ]*){0,2})", t)
+    if m and marca_ok(m.group(1)):
+        return marca_ok(m.group(1))
+    m = re.search(r"([A-Z0-9][\w&'’.\-À-ÿ]*(?:\s+[A-Z0-9][\w&'’.\-À-ÿ]*){0,2})(?:'s|’s)\s+(?:\w+\s+){0,3}(?:campaign|ad|spot|film)\b", t)
+    if m and marca_ok(m.group(1)):
+        return marca_ok(m.group(1))
+    if ": " in t:
+        r = marca_de(t.split(": ", 1)[1])
+        if r:
+            return r
+    m = re.search(r"\b(?:for|para|pour|für)\s+([A-Z][\w&'’.\-À-ÿ]*(?:\s+[A-Z][\w&'’.\-À-ÿ]*){0,2})", t)
+    if m and marca_ok(m.group(1)):
+        return marca_ok(m.group(1))
     return ""
 
 
@@ -377,7 +408,7 @@ def main():
         u = it["link"].split("?")[0].rstrip("/")
         if u in urls:
             return
-        if not parece_campanha(it["titulo"], limpar(it["resumo"])[:400], fonte.get("so_campanhas")):
+        if not parece_campanha(it["titulo"], "", fonte.get("so_campanhas")):
             return
         candidatos.append((it, fonte))
 
@@ -434,9 +465,6 @@ def main():
                 dom = urllib.parse.urlparse(it["link"]).netloc.replace("www.", "")
                 if not dom:
                     continue
-                nome, cc = pais_por_dominio(dom)
-                fonte = {"nome": dom, "urls": [], "regiao": nome, "cc": cc, "so_campanhas": False}
-                considerar(it, fonte, inicio_normal)
                 if dom not in conhecidos and dom not in estado["testados"]:
                     estado["testados"][dom] = "pendente"
 
@@ -449,8 +477,8 @@ def main():
                 txt = baixar(u, timeout=12)
                 if parece_feed(txt):
                     itens = ler_feed(txt)
-                    bons = [i for i in itens if parece_campanha(i["titulo"], limpar(i["resumo"]))]
-                    if len(itens) >= 3 and len(bons) >= 2:
+                    bons = [i for i in itens if parece_campanha(i["titulo"])]
+                    if len(itens) >= 8 and len(bons) >= 3 and len(bons) >= 0.25 * len(itens):
                         achou = u
                         break
             except Exception:  # noqa: BLE001
@@ -463,12 +491,16 @@ def main():
             log("  FONTE NOVA:", dom, achou)
 
     # 5) tira repetidos entre os candidatos e ordena (mais recentes primeiro)
-    vistos, fila = set(), []
+    vistos, fila, por_fonte_dia = set(), [], {}
     for it, f in sorted(candidatos, key=lambda x: x[0]["data"], reverse=True):
         u = it["link"].split("?")[0].rstrip("/")
         k = chave(it["titulo"])
         if u in vistos or k in vistos or (len(k) > 12 and k in titulos):
             continue
+        fd = (f["nome"], it["data"])
+        if por_fonte_dia.get(fd, 0) >= MAX_POR_FONTE_DIA:
+            continue
+        por_fonte_dia[fd] = por_fonte_dia.get(fd, 0) + 1
         vistos.update({u, k})
         fila.append((it, f))
     log("Candidatos a campanha:", len(fila))
@@ -538,6 +570,11 @@ def main():
         yts_usados.update(yts)
 
     # 7) salva
+    if SIMULAR:
+        log("SIMULAÇÃO: %d novas (nada foi salvo)" % len(novas))
+        for c in novas:
+            log("  ~", c["date"], c["source"], "|", c["brand"], "|", c["title"][:90], "|", "filme" if c.get("yt") or c.get("video") else "card", "|", c["region"])
+        return 0
     estado["bloqueados_yt"] = sorted(bloqueados)
     estado["ultima_execucao"] = AGORA.isoformat()
     estado["ultimas_novas"] = len(novas)
