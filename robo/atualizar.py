@@ -384,7 +384,7 @@ def imagem_de(pagina, base):
     return ""
 
 
-def completar_imagens(camp, estado, limite=60):
+def completar_imagens(camp, estado, limite=150):
     """Busca a imagem de capa (og:image) das campanhas antigas que não têm filme nem imagem."""
     tentadas = set(estado.setdefault("sem_imagem", []))
     alvo = [c for c in camp if not c.get("yt") and not c.get("image") and c.get("url") and c["url"] not in tentadas][:limite]
