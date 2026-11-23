@@ -209,10 +209,21 @@ a { color: inherit; }
 .gfx-grid span { font-family: var(--serif); font-weight: 700; font-size: clamp(30px, 6vh, 70px); line-height: 1.15; text-align: center; color: hsl(var(--h) 80% 60%); opacity: .8; }
 .gfx-grid span:nth-child(odd) { opacity: .25; }
 
-/* Instagram e TikTok: player em pé no centro, capa desfocada atrás */
-.is-vert .host { pointer-events: auto; display: flex; justify-content: center; }
-.is-vert .host > div { position: relative !important; width: auto !important; display: flex; justify-content: center; }
-.is-vert .host iframe { position: relative !important; inset: auto; height: 100% !important; width: auto !important; aspect-ratio: 9 / 16; min-width: 326px; background: #000; }
+/* Instagram e TikTok: só o vídeo, em pé no centro (o resto do post do Instagram fica cortado) */
+.is-vert .media { container-type: size; }
+.is-vert .host { pointer-events: auto; }
+.is-vert .host > div {
+  position: absolute !important; top: 0; bottom: 0; left: 50%;
+  width: calc(100cqh * 9 / 16) !important; height: 100% !important;
+  transform: translateX(-50%); overflow: hidden; background: #000;
+}
+.is-vert .host iframe { position: absolute !important; border: 0; background: #000; }
+.is-tt .host iframe { inset: 0; width: 100% !important; height: 100% !important; }
+/* o embed do Instagram tem cabeçalho de 54px e vídeo 4:5; mostramos só a faixa 9:16 do vídeo */
+.is-ig .host iframe {
+  top: -54px; left: calc(100cqh * -0.11875);
+  width: calc(100cqh * 0.8) !important; height: calc(100cqh + 54px + 420px) !important;
+}
 .is-vert.playing .cover { opacity: 1; filter: blur(28px) brightness(.45); }
 .is-vert.playing .host { z-index: 3; }
 .is-vert .mute, .is-vert .bar { display: none !important; }

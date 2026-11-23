@@ -176,7 +176,7 @@
       var csrc = f0.kind === "yt" ? ytThumb(f0.id) : f0.kind === "vimeo" ? "https://vumbnail.com/" + f0.id + "_large.jpg" : (c.image || c.images[0] || "");
       if (csrc) cover.appendChild(img(csrc, function () { cover.appendChild(poster(c)); }));
       else cover.appendChild(poster(c));
-      if (f0.kind === "ig" || f0.kind === "tt") art.classList.add("is-vert");
+      if (f0.kind === "ig" || f0.kind === "tt") art.classList.add("is-vert", f0.kind === "ig" ? "is-ig" : "is-tt");
       media.appendChild(cover);
       media.appendChild(el("div", "host"));
       media.appendChild(el("span", "bigplay"));
