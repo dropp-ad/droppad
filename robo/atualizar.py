@@ -36,7 +36,7 @@ ESTADO = os.path.join(RAIZ, "robo", "estado.json")
 TZ = ZoneInfo("America/Sao_Paulo")
 ARQUIVO_INICIO = "2025-11-17"
 JANELA_DIAS = 10          # no modo normal, aceita campanhas de até 10 dias atrás
-MAX_MATERIAS = 160        # matérias abertas por execução (para achar filmes)
+MAX_MATERIAS = 300        # matérias abertas por execução (para achar filmes)
 MAX_NOVAS = 150           # campanhas novas por execução
 PAGINAS_ARQUIVO = 2       # páginas antigas por feed em cada execução
 BUSCAS_POR_RODADA = 6
@@ -123,8 +123,10 @@ EXCLUI = re.compile(r"""\b(award|awards|winners?|shortlist|jury|júri|jurado|pr�
     trailer|tráiler|teaser\s+trailer|bilheteria|taquilla|box\s+office|cinemas|ingressos|boletos|estreno\s+de|reality|novela|série|serie\s+de|episódio|
     conference|conferência|congresso|summit|evento|festival|ranking|top\s+\d+|melhores|best\s+ads|lo\s+mejor|semana|week'?s|weekly|roundup|
     tendências|tendencias|trends?|estratégias|estrategias|desafi\w+|mercado\s+de|setor|sector|investimento|inversión|guide|guia|guía|
-    afiliada|fidelidade|loyalty\s+program|app\s+update|tutorial|dicas|tips|curso|course|vagas|jobs)\b""", re.I | re.X)
-PERGUNTA = re.compile(r"(\?|¿|^(why|how|what|when|is|are|can|should|por\s+que|porque|como|cómo|qué|que|o\s+que|quando|quem)\b)", re.I)
+    afiliada|fidelidade|equipe\s+comercial|equipo\s+comercial|reforça\s+equipe|screens?|telas?|pantallas?|
+    agent|agente|agentes|retail\s+media|media\s+bill|calls\s+for|crece|cresce|grows|growth|reúne\s+membros|studio|
+    associação|asociación|association|sindicato|regulação|regulación|regulation|lei|ley|law|loyalty\s+program|app\s+update|tutorial|dicas|tips|curso|course|vagas|jobs)\b""", re.I | re.X)
+PERGUNTA = re.compile(r"(\?|¿|^(why|how|what|when|is|are|can|should|por\s+que|porque|como|cómo|qué|que|o\s+que|quando|quem)\b|^(en|in|em)\s+(19|20)\d\d\b)", re.I)
 
 
 def parece_campanha(titulo, resumo="", so_campanhas=False):
@@ -147,7 +149,9 @@ NAO_MARCA = {"black friday", "cyber monday", "natal", "navidad", "christmas", "n
 
 
 def marca_ok(m):
-    m = (m or "").strip(" \"'“”‘’.,")
+    m = re.sub(r"\s+(campaign|campanha|campaña|ad|ads)$", "", (m or "").strip(" \"'“”‘’.,"), flags=re.I)
+    if re.search(r"[.!?]\s|-based$|^\d+$", m):
+        return ""
     if not m or len(m) > 40 or len(m.split()) > 4:
         return ""
     if sem_acento(m).lower() in {sem_acento(x) for x in NAO_MARCA}:
