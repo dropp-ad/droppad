@@ -38,6 +38,8 @@ for url in sys.argv[1:]:
     print("-- links de trabalhos", len(links))
     for u in links[:60]:
         print("   ", u)
+    for m in re.finditer(r'"(_createdAt|_updatedAt|publishedAt|releaseDate|launchDate|date|year)"\s*:\s*"?([^",}]{2,40})', pag):
+        print("   DATA", m.group(1), m.group(2))
     for pad in [r'<meta[^>]+property="og:[^"]+"[^>]*>', r'<meta[^>]+name="(?:description|date|article:published_time)"[^>]*>', r'"datePublished"\s*:\s*"[^"]+"', r"<title>[^<]+</title>"]:
         for m in re.finditer(pad, pag, re.I):
             print("   META", m.group(0)[:250])
