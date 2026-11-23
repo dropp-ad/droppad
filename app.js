@@ -215,7 +215,7 @@
         media.appendChild(dots);
       }
       media.addEventListener("click", function (e) {
-        if (e.target === mute) { setSound(!sound); if (!(active && active.art === art)) activate(art, true); return; }
+        if (e.target === mute) { mute.blur(); setSound(!sound); if (!(active && active.art === art)) activate(art, true); return; }
         if (art.classList.contains("is-vert") && active && active.art === art) return;
         if (art.classList.contains("failed")) { window.open("https://www.youtube.com/watch?v=" + c.fl[+art.dataset.part || 0].id, "_blank", "noopener"); return; }
         if (active && active.art === art) { if (!sound) setSound(true); else togglePause(); }
@@ -412,7 +412,11 @@
     try { if (a.player) a.player.destroy(); } catch (e) { /* já destruído */ }
     a.art.classList.remove("playing", "paused", "loading", "live");
     var host = a.art.querySelector(".host");
-    if (host && !a.art.classList.contains("is-vert")) host.textContent = "";
+    if (host && a.art.classList.contains("is-vert")) {
+      // Instagram/TikTok não aceitam pausa de fora: recarregar o post faz o vídeo parar
+      var fr = host.querySelector("iframe");
+      if (fr) { var src = fr.src; fr.src = "about:blank"; fr.src = src; }
+    } else if (host) host.textContent = "";
     var bar = a.art.querySelector(".bar i");
     if (bar) bar.style.width = "0";
   }
@@ -479,7 +483,7 @@
         me.player = new YT.Player(slot, {
           videoId: f.id,
           host: "https://www.youtube-nocookie.com",
-          playerVars: { autoplay: 1, mute: 1, controls: 0, rel: 0, playsinline: 1, modestbranding: 1, iv_load_policy: 3, disablekb: 1, fs: 0 },
+          playerVars: { autoplay: 1, mute: 1, controls: 1, rel: 0, playsinline: 1, modestbranding: 1, iv_load_policy: 3, fs: 1, cc_lang_pref: "pt", hl: "pt-BR" },
           events: {
             onReady: function (e) { if (!alive()) return; if (sound) e.target.unMute(); else e.target.mute(); e.target.playVideo(); },
             onStateChange: function (e) { if (e.data === 1) playing(); else if (e.data === 2) paused(); else if (e.data === 0) ended(); },
@@ -499,7 +503,7 @@
         if (!alive()) return;
         var p = new Vimeo.Player(slot, {
           url: "https://vimeo.com/" + f.id + (f.hash ? "/" + f.hash : ""),
-          autoplay: true, muted: !sound, loop: c.fl.length === 1, playsinline: true, controls: false, dnt: true, responsive: true
+          autoplay: true, muted: !sound, loop: c.fl.length === 1, playsinline: true, controls: true, dnt: true, responsive: true, texttrack: "pt"
         });
         me.player = p;
         p.on("play", playing);

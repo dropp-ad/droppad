@@ -128,6 +128,8 @@ EXCLUI = re.compile(r"""\b(award|awards|winners?|shortlist|jury|júri|jurado|pr�
     afiliada|fidelidade|equipe\s+comercial|equipo\s+comercial|reforça\s+equipe|screens?|telas?|pantallas?|
     agent|agente|agentes|retail\s+media|media\s+bill|calls\s+for|crece|cresce|grows|growth|reúne\s+membros|studio|
     associação|asociación|association|sindicato|regulação|regulación|regulation|lei|ley|law|loyalty\s+program|app\s+update|tutorial|dicas|tips|curso|course|vagas|jobs)\b""", re.I | re.X)
+ENTREVISTA = re.compile(r"\b(entrevista|entrevistado|interview|interviewed|bate-papo|conversamos|conversou com|charlamos|en diálogo con|platicamos|"
+                        r"sits down with|in conversation with|q&a|podcast|depoimento|testimonial)\b", re.I)
 PERGUNTA = re.compile(r"(\?|¿|^(why|how|what|when|is|are|can|should|por\s+que|porque|como|cómo|qué|que|o\s+que|quando|quem)\b|^(en|in|em)\s+(19|20)\d\d\b)", re.I)
 
 
@@ -158,6 +160,8 @@ def marca_ok(m):
     if not m or len(m) > 40 or len(m.split()) > 4:
         return ""
     if sem_acento(m).lower() in {sem_acento(x) for x in NAO_MARCA}:
+        return ""
+    if sem_acento(m.split()[0]).lower() in {"navidad", "natal", "christmas", "black", "halloween", "verano", "verao", "summer", "dia", "copa", "mundial"}:
         return ""
     if not re.match(r"[A-Z0-9À-Ý]", m):
         return ""
@@ -880,6 +884,9 @@ def main():
         yts, vimeo = filmes_de(miolo)
         if not yts and not vimeo and it.get("corpo"):
             yts, vimeo = filmes_de(it["corpo"])
+        # matéria de entrevista: o vídeo embutido é a conversa, não a campanha
+        if ENTREVISTA.search(it["titulo"] + " " + limpar(miolo)[:1500]) or "insiderlatam" in it["link"]:
+            yts, vimeo = [], ""
         img = imagem_de(pag, it["link"])
         fotos = fotos_de(pag, it["link"], data=it["data"]) if not yts and not vimeo else []
         hist = historia_de(pag) if not yts and not vimeo else []
