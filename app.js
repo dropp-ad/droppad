@@ -19,9 +19,21 @@
     var m = (u || "").match(/vimeo\.com\/(?:video\/)?(\d+)(?:\/([0-9a-f]+))?/i);
     return m ? { id: m[1], hash: m[2] || "" } : null;
   }
+  // Instagram e TikTok entram como filmes verticais, embutidos com o player deles.
+  function socialOf(u) {
+    var m = (u || "").match(/instagram\.com\/(p|reel|reels|tv)\/([\w-]+)/i);
+    if (m) return { kind: "ig", id: m[2], src: "https://www.instagram.com/" + (m[1].indexOf("reel") === 0 ? "reel" : m[1]) + "/" + m[2] + "/embed/" };
+    m = (u || "").match(/tiktok\.com\/@[^/]+\/video\/(\d+)/i);
+    if (m) return { kind: "tt", id: m[1], src: "https://www.tiktok.com/player/v1/" + m[1] + "?autoplay=1&muted=1&loop=1&controls=1&description=0&music_info=0" };
+    return null;
+  }
   function films(c) {
     var out = c.yt.map(function (id) { return { kind: "yt", id: id }; });
-    if (!out.length) { var v = vimeoOf(c.video); if (v) out.push({ kind: "vimeo", id: v.id, hash: v.hash }); }
+    if (!out.length) {
+      var v = vimeoOf(c.video);
+      if (v) out.push({ kind: "vimeo", id: v.id, hash: v.hash });
+      else { var so = socialOf(c.video); if (so) out.push(so); }
+    }
     return out;
   }
   function normalize(raw) {
@@ -161,7 +173,10 @@
       art.classList.add("is-film");
       var cover = el("div", "cover");
       var f0 = c.fl[0];
-      cover.appendChild(img(f0.kind === "yt" ? ytThumb(f0.id) : "https://vumbnail.com/" + f0.id + "_large.jpg", function () { cover.appendChild(poster(c)); }));
+      var csrc = f0.kind === "yt" ? ytThumb(f0.id) : f0.kind === "vimeo" ? "https://vumbnail.com/" + f0.id + "_large.jpg" : (c.image || c.images[0] || "");
+      if (csrc) cover.appendChild(img(csrc, function () { cover.appendChild(poster(c)); }));
+      else cover.appendChild(poster(c));
+      if (f0.kind === "ig" || f0.kind === "tt") art.classList.add("is-vert");
       media.appendChild(cover);
       media.appendChild(el("div", "host"));
       media.appendChild(el("span", "bigplay"));
@@ -186,6 +201,7 @@
       }
       media.addEventListener("click", function (e) {
         if (e.target === mute) { setSound(!sound); if (!(active && active.art === art)) activate(art, true); return; }
+        if (art.classList.contains("is-vert") && active && active.art === art) return;
         if (art.classList.contains("failed")) { window.open("https://www.youtube.com/watch?v=" + c.fl[+art.dataset.part || 0].id, "_blank", "noopener"); return; }
         if (active && active.art === art) { if (!sound) setSound(true); else togglePause(); }
         else activate(art, true);
@@ -363,6 +379,19 @@
     function paused() { if (alive()) art.classList.add("paused"); }
     function failed() { if (alive()) { art.classList.remove("loading", "playing"); art.classList.add("failed"); } }
 
+    if (f.kind === "ig" || f.kind === "tt") {
+      // player do Instagram/TikTok: aparece no centro do quadro, em pé
+      var fr = el("iframe");
+      fr.src = f.src;
+      fr.allow = "autoplay; encrypted-media; picture-in-picture; clipboard-write";
+      fr.setAttribute("allowfullscreen", "");
+      fr.setAttribute("scrolling", "no");
+      fr.title = c.brand + " no " + (f.kind === "ig" ? "Instagram" : "TikTok");
+      slot.appendChild(fr);
+      fr.addEventListener("load", playing);
+      setTimeout(playing, 2500);
+      return;
+    }
     if (f.kind === "yt") {
       loadYT().then(function (YT) {
         if (!alive()) return;

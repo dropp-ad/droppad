@@ -238,3 +238,12 @@ a { color: inherit; }
 @media (max-width: 860px) {
   .cap-brand { display: none; }
 }
+
+/* Instagram e TikTok: player em pé no centro, capa desfocada atrás */
+.is-vert .host { pointer-events: auto; display: flex; justify-content: center; background: transparent; }
+.is-vert .host > div { position: relative !important; width: auto !important; display: flex; justify-content: center; }
+.is-vert .host iframe { position: relative !important; inset: auto; height: 100% !important; width: auto !important; aspect-ratio: 9 / 16; min-width: 326px; background: #000; }
+.is-vert.playing .cover { opacity: 1; filter: blur(28px) brightness(.45); transform: scale(1.15); }
+.is-vert.playing .host { z-index: 3; }
+.is-vert .mute, .is-vert .bar { display: none !important; }
+@media (min-width: 861px) { .is-vert.playing .ov { display: none; } }

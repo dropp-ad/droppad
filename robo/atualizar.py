@@ -347,26 +347,54 @@ YT = re.compile(r"(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=|shorts/|v/)|
 VIMEO = re.compile(r"player\.vimeo\.com/video/(\d+)(?:\?h=([0-9a-f]+))?|vimeo\.com/(\d{6,})(?:/([0-9a-f]{6,}))?")
 
 
+INSTA = re.compile(r"instagram\.com/(p|reel|reels|tv)/([\w-]{6,})")
+TIKTOK = re.compile(r"tiktok\.com/@[\w.-]+/video/(\d{8,})")
+
+
 def filmes_de(pagina):
+    """IDs do YouTube e, se não houver, um vídeo de Vimeo, Instagram ou TikTok embutido."""
     yts = []
     for m in YT.finditer(pagina):
         if m.group(1) not in yts:
             yts.append(m.group(1))
-    vimeo = ""
+    video = ""
     for m in VIMEO.finditer(pagina):
         vid, h = (m.group(1), m.group(2)) if m.group(1) else (m.group(3), m.group(4))
-        vimeo = "https://vimeo.com/%s/%s" % (vid, h) if h else "https://vimeo.com/%s" % vid
+        video = "https://vimeo.com/%s/%s" % (vid, h) if h else "https://vimeo.com/%s" % vid
         break
-    return yts[:4], vimeo
+    if not video:
+        m = INSTA.search(pagina)
+        if m:
+            video = "https://www.instagram.com/%s/%s/" % ("reel" if m.group(1).startswith("reel") else m.group(1), m.group(2))
+    if not video:
+        m = TIKTOK.search(pagina)
+        if m:
+            video = "https://www.tiktok.com/" + m.group(0).split("tiktok.com/", 1)[1]
+    return yts[:4], video
+
+
+INICIO_MIOLO = re.compile(r'class="[^"]*\b(entry-content|post-content|article-body|article__body|articleBody|single-content|td-post-content|'
+                          r'elementor-widget-theme-post-content|post-body|post__content|content-text|materia-conteudo|texto-materia|'
+                          r'news-content|article-content|story-body|rich-text)\b', re.I)
+FIM_MIOLO = re.compile(r'class="[^"]*\b(related|relacionad|jp-relatedposts|sharedaddy|share-|comments?-area|comentarios|post-tags|'
+                       r'tags-links|newsletter|author-box|elementor-widget-post-navigation|elementor-widget-posts|leia-tambem|veja-tambem)|<footer\b', re.I)
 
 
 def corpo_da_materia(pagina):
-    """Pega só o miolo da matéria (para não pegar vídeo da barra lateral)."""
-    for pad in (r"<article\b.*?</article>", r'<div[^>]+class="[^"]*(?:entry-content|post-content|article-body|article__body|single-content|td-post-content)[^"]*".*?</div>\s*</div>'):
-        m = re.search(pad, pagina, re.S | re.I)
-        if m and len(m.group(0)) > 500:
-            return m.group(0)
-    return pagina
+    """Pega só o miolo da matéria (para não pegar vídeo nem foto da barra lateral ou dos relacionados)."""
+    m = INICIO_MIOLO.search(pagina)
+    if m:
+        ini = pagina.rfind("<", 0, m.start())
+        fim = FIM_MIOLO.search(pagina, m.end())
+        trecho = pagina[ini: fim.start() if fim else ini + 80000]
+        if len(limpar(trecho)) > 300:
+            return trecho
+    arts = re.findall(r"<article\b.*?</article>", pagina, re.S | re.I)
+    if arts:
+        maior = max(arts, key=lambda a: len(limpar(a)))
+        if len(limpar(maior)) > 600:
+            return maior
+    return re.sub(r"<(aside|footer|nav|header)\b.*?</\1>", "", pagina, flags=re.S | re.I)
 
 
 IMG_RE = [r'<meta[^>]+property=["\']og:image(?::secure_url)?["\'][^>]+content=["\']([^"\']+)',
@@ -441,30 +469,52 @@ def historia_de(pagina, limite=4):
     return partes if len(partes) == len(frases) else frases
 
 
-def completar_fotos(camp, estado, limite=120):
-    """Campanhas sem filme ganham fotos e frases da matéria para o carrossel."""
-    tentadas = set(estado.setdefault("sem_fotos", []))
-    alvo = [c for c in camp if not c.get("yt") and not c.get("video") and "images" not in c
-            and c.get("url") and c["url"] not in tentadas][:limite]
+def completar_fotos(camp, estado, limite=160):
+    """Abre a matéria de cada campanha sem filme: embute o filme que estiver lá (YouTube, Vimeo,
+    Instagram, TikTok) e, se não houver filme, guarda as fotos e as frases para o carrossel."""
+    feitas = set(estado.setdefault("midia_v2", []))
+    bloq = set(estado.get("bloqueados_yt", []))
+    alvo = [c for c in camp if not c.get("yt") and not c.get("video") and c.get("url") and c["url"] not in feitas][:limite]
 
     def job(c):
         try:
             pag = baixar(c["url"], timeout=15)
-            return c, fotos_de(pag, c["url"]), historia_de(pag)
         except Exception:  # noqa: BLE001
-            return c, [], []
-    n = 0
+            return c, None
+        yts, video = filmes_de(corpo_da_materia(pag))
+        return c, (yts, video, fotos_de(pag, c["url"]), historia_de(pag) if not yts and not video else [])
     with cf.ThreadPoolExecutor(8) as ex:
-        for c, fotos, hist in ex.map(job, alvo):
-            if fotos:
-                c["images"] = fotos
-                c.setdefault("image", fotos[0])
-                n += 1
-            else:
-                tentadas.add(c["url"])
-            if hist:
-                c["story"] = hist
-    estado["sem_fotos"] = sorted(tentadas)
+        res = list(ex.map(job, alvo))
+    # vídeo repetido em várias matérias do mesmo site é da página, não da campanha
+    cont = {}
+    for c, r in res:
+        if r:
+            dom = urllib.parse.urlparse(c["url"]).netloc
+            for y in r[0]:
+                cont[(dom, y)] = cont.get((dom, y), 0) + 1
+    bloq.update(y for (d, y), n in cont.items() if n > 1)
+    usados = {y for c in camp for y in c.get("yt", [])}
+    n = 0
+    for c, r in res:
+        feitas.add(c["url"])
+        if r is None:
+            continue  # o site recusou o acesso: fica como está
+        yts, video, fotos, hist = r
+        yts = [y for y in yts if y not in bloq and y not in usados]
+        if yts:
+            c["yt"] = yts
+            usados.update(yts)
+        elif video:
+            c["video"] = video
+        if fotos:
+            c["images"] = fotos
+            c.setdefault("image", fotos[0])
+        if hist and not yts:
+            c["story"] = hist
+        if yts or video or fotos:
+            n += 1
+    estado["midia_v2"] = sorted(feitas)
+    estado["bloqueados_yt"] = sorted(bloq)
     return n
 
 
@@ -638,11 +688,16 @@ def main():
         try:
             pag = baixar(it["link"], timeout=20)
         except Exception:  # noqa: BLE001
+            pag = ""
+        if it.get("corpo"):
+            # o texto completo que o próprio site publica no feed também traz os filmes e as fotos
+            pag = (pag + "\n" if pag else "") + "<article>" + it["corpo"] + "</article>"
+        if not pag:
             return par, [], "", "", "", [], []
         miolo = corpo_da_materia(pag)
         yts, vimeo = filmes_de(miolo)
-        if not yts and not vimeo and miolo is not pag:
-            yts, vimeo = filmes_de(re.sub(r"<(aside|footer|nav)\b.*?</\1>", "", pag, flags=re.S | re.I))
+        if not yts and not vimeo and it.get("corpo"):
+            yts, vimeo = filmes_de(it["corpo"])
         img = imagem_de(pag, it["link"])
         fotos = fotos_de(pag, it["link"]) if not yts and not vimeo else []
         hist = historia_de(pag) if not yts and not vimeo else []
