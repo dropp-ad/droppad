@@ -633,5 +633,205 @@
       "regiao": "Reino Unido",
       "cc": "GB"
     }
+  ],
+  "agencias": [
+    {
+      "nome": "Mother",
+      "confere": "Mother",
+      "youtube": [
+        "MotherLondon",
+        "motherlondon",
+        "mother"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB"
+    },
+    {
+      "nome": "AlmapBBDO",
+      "youtube": [
+        "almapbbdo",
+        "AlmapBBDO"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR"
+    },
+    {
+      "nome": "Africa Creative",
+      "confere": "Africa",
+      "youtube": [
+        "africacreative",
+        "AfricaCreativeDDB",
+        "africa"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR"
+    },
+    {
+      "nome": "DPZ",
+      "youtube": [
+        "dpzcomunicacao",
+        "dpz",
+        "DPZTBWA"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR"
+    },
+    {
+      "nome": "GUT",
+      "youtube": [
+        "gutagency",
+        "GUTSaoPaulo",
+        "gut"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR"
+    },
+    {
+      "nome": "Artplan",
+      "youtube": [
+        "artplan",
+        "ArtplanBrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR"
+    },
+    {
+      "nome": "WMcCann",
+      "youtube": [
+        "wmccann",
+        "WMcCannBrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR"
+    },
+    {
+      "nome": "Ogilvy",
+      "youtube": [
+        "ogilvy",
+        "Ogilvy",
+        "OgilvyBrasil"
+      ],
+      "regiao": "Global",
+      "cc": ""
+    },
+    {
+      "nome": "Wieden+Kennedy",
+      "confere": "Wieden",
+      "youtube": [
+        "wiedenkennedy",
+        "WiedenKennedy",
+        "wk"
+      ],
+      "regiao": "EUA",
+      "cc": "US"
+    },
+    {
+      "nome": "Droga5",
+      "youtube": [
+        "droga5",
+        "Droga5"
+      ],
+      "regiao": "EUA",
+      "cc": "US"
+    },
+    {
+      "nome": "BBH",
+      "youtube": [
+        "BBHLondon",
+        "bbhlondon",
+        "bbh"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB"
+    },
+    {
+      "nome": "adam&eveDDB",
+      "confere": "adam",
+      "youtube": [
+        "adamandeveDDB",
+        "adamandeveddb",
+        "adamandeve"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB"
+    },
+    {
+      "nome": "Uncommon",
+      "youtube": [
+        "uncommoncreativestudio",
+        "UncommonStudio",
+        "uncommon"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB"
+    },
+    {
+      "nome": "VML",
+      "youtube": [
+        "VML",
+        "vml",
+        "VMLY&R"
+      ],
+      "regiao": "Global",
+      "cc": ""
+    },
+    {
+      "nome": "Publicis",
+      "youtube": [
+        "PublicisWorldwide",
+        "publicis"
+      ],
+      "regiao": "Global",
+      "cc": ""
+    },
+    {
+      "nome": "Leo Burnett",
+      "confere": "Leo",
+      "youtube": [
+        "LeoBurnett",
+        "leoburnett",
+        "leo"
+      ],
+      "regiao": "Global",
+      "cc": ""
+    },
+    {
+      "nome": "TBWA",
+      "youtube": [
+        "TBWAWorldwide",
+        "tbwa"
+      ],
+      "regiao": "Global",
+      "cc": ""
+    },
+    {
+      "nome": "Saatchi & Saatchi",
+      "confere": "Saatchi",
+      "youtube": [
+        "saatchiandsaatchi",
+        "SaatchiSaatchi"
+      ],
+      "regiao": "Global",
+      "cc": ""
+    },
+    {
+      "nome": "Johannes Leonardo",
+      "confere": "Johannes",
+      "youtube": [
+        "johannesleonardo",
+        "JohannesLeonardo"
+      ],
+      "regiao": "EUA",
+      "cc": "US"
+    },
+    {
+      "nome": "Mischief",
+      "youtube": [
+        "mischiefusa",
+        "mischief"
+      ],
+      "regiao": "EUA",
+      "cc": "US"
+    }
   ]
 }

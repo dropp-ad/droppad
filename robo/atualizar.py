@@ -561,6 +561,74 @@ def completar_imagens(camp, estado, limite=150):
 
 
 # ---------------------------------------------------------------- portfólios de agências
+def canal_id(ag, estado):
+    """Descobre o ID do canal do YouTube da agência a partir dos @ candidatos (guarda o resultado)."""
+    cache = estado.setdefault("canais", {})
+    if ag["nome"] in cache:
+        return cache[ag["nome"]]
+    chave_ag = chave(ag.get("confere", ag["nome"]))
+    for h in ag["youtube"]:
+        try:
+            pag = baixar("https://www.youtube.com/@" + h.lstrip("@"), timeout=15)
+        except Exception:  # noqa: BLE001
+            continue
+        m = re.search(r'"(?:channelId|externalId)"\s*:\s*"(UC[\w-]{22})"', pag) or re.search(r"/channel/(UC[\w-]{22})", pag)
+        t = re.search(r'<meta property="og:title" content="([^"]+)"', pag)
+        nome = html.unescape(t.group(1)) if t else ""
+        if m and chave_ag[:5] in chave(nome):
+            cache[ag["nome"]] = {"id": m.group(1), "canal": nome, "handle": h}
+            log("  canal encontrado:", ag["nome"], "→", nome, m.group(1))
+            return cache[ag["nome"]]
+    cache[ag["nome"]] = None
+    log("  canal não encontrado:", ag["nome"])
+    return None
+
+
+def ler_canais(fontes, estado, dias=45):
+    """Vídeos novos dos canais de YouTube das agências: cada vídeo vira uma campanha com filme."""
+    out = []
+    limite = (HOJE - dt.timedelta(days=dias)).isoformat()
+    for ag in fontes.get("agencias", []):
+        if not ag.get("youtube"):
+            continue
+        cid = canal_id(ag, estado)
+        if not cid:
+            continue
+        try:
+            xml = baixar("https://www.youtube.com/feeds/videos.xml?channel_id=" + cid["id"])
+            raiz = ET.fromstring(xml.encode("utf-8"))
+        except Exception as e:  # noqa: BLE001
+            log("  canal falhou:", ag["nome"], e)
+            continue
+        for e in raiz.iter():
+            if tag(e) != "entry":
+                continue
+            vid = texto_de(e, "videoId")
+            titulo = limpar(texto_de(e, "title"))
+            data = data_de(texto_de(e, "published"))
+            if not vid or not titulo or not data or data < limite or data > HOJE.isoformat():
+                continue
+            if EXCLUI.search(titulo) or PERGUNTA.search(titulo) or re.search(r"#shorts|reel|showreel|credentials|we are hiring|vagas", titulo, re.I):
+                continue
+            desc = ""
+            for g in e.iter():
+                if tag(g) == "description" and g.text:
+                    desc = g.text
+            partes = [x.strip() for x in re.split(r"\s+[|–—]\s+|\s+-\s+|:\s+", titulo) if x.strip()]
+            marca = marca_ok(partes[0]) if len(partes) > 1 else ""
+            marca = marca or marca_de(titulo)
+            if not marca or chave(marca) == chave(ag["nome"]):
+                continue  # vídeo institucional da agência, não campanha
+            nome_t = " — ".join(partes[1:]) if len(partes) > 1 and marca == marca_ok(partes[0]) else titulo
+            out.append({"id": "%s-%s-%s" % (data, slug(marca, 20), slug(nome_t, 36)), "date": data, "brand": marca,
+                        "title": nome_t, "agency": ag["nome"], "source": "YouTube · " + cid["canal"],
+                        "url": "https://www.youtube.com/watch?v=" + vid, "region": ag.get("regiao", "Global"),
+                        "cc": ag.get("cc", ""), "yt": [vid],
+                        "summary": traduzir(primeira_frase(desc)) if desc and len(desc) > 40 else "",
+                        "addedAt": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")})
+    return out
+
+
 def ler_portfolios(fontes, estado, camp, max_por_site=10, dias=60):
     """Lê a página de trabalhos de cada agência (fontes.json → "portfolios") e transforma cada
     trabalho novo em campanha: marca, data de publicação no site, filme (Vimeo/YouTube) e fotos."""
@@ -850,7 +918,7 @@ def main():
         marca_dia.add((chave(marca), it["data"]))
 
     # 6b) sites das próprias agências (portfólio): cada trabalho novo vira uma campanha
-    for c in ler_portfolios(fontes, estado, camp):
+    for c in ler_portfolios(fontes, estado, camp) + ler_canais(fontes, estado):
         if (chave(c["brand"]), c["date"]) in marca_dia or c["id"] in ids:
             continue
         if c.get("yt") and all(y in yts_usados for y in c["yt"]):
