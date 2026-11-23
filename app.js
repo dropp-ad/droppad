@@ -299,7 +299,7 @@
     var pics = c.images.length ? c.images.slice() : c.image ? [c.image] : [];
     var lines = [c.title];
     if (c.summary && c.story.join(" ").indexOf(c.summary.slice(0, 40)) < 0) lines.push(c.summary);
-    lines = lines.concat(c.story).slice(0, 11);
+    lines = lines.concat(c.story).slice(0, 4); // máximo de 5 slides: 4 de texto + ficha técnica
     var meta = [["Marca", c.brand], ["Agência", c.agency], ["Origem", c.region ? flagOf(c.cc) + " " + c.region : ""], ["Publicado em", c.source]]
       .filter(function (x) { return x[1]; });
     var n = lines.length + 1; // + ficha técnica
@@ -582,6 +582,16 @@
     }
     chip("Mundo", !state.region, function () { state.region = ""; });
     chip("Brasil", state.region === "Brasil", function () { state.region = "Brasil"; });
+    // tipo: só vídeos ou tudo
+    var t = $("tipo");
+    t.textContent = "";
+    [["VIDEOS", true], ["ALL", false]].forEach(function (x) {
+      var b = el("button", "chip", x[0]);
+      b.type = "button";
+      b.setAttribute("aria-pressed", state.onlyFilms === x[1] ? "true" : "false");
+      b.addEventListener("click", function () { state.onlyFilms = x[1]; window.scrollTo(0, 0); renderAll(); });
+      t.appendChild(b);
+    });
   }
 
   /* ---------- Teclado: setas pulam de campanha em campanha ---------- */

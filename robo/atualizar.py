@@ -423,14 +423,23 @@ RUIM_IMG = re.compile(r"logo|default|placeholder|favicon|avatar|gravatar|icon|em
                       r"\b(?:\d{2,3})x(?:\d{2,3})\.|share|button|badge|author|profile|newsletter|\.svg|\.gif", re.I)
 
 
-def fotos_de(pagina, base, limite=8):
-    """Imagens da matéria (capa + fotos do miolo), para o carrossel das campanhas sem filme."""
+def fotos_de(pagina, base, limite=4, data=None):
+    """Só imagens da própria notícia: a capa (og:image) e as fotos que estão no texto da matéria.
+    Fica de fora: foto que é link para outra matéria (relacionadas), miniatura, logo, banner,
+    imagem enviada ao site em outro mês (de outra matéria) e o que vem depois do fim do texto."""
     out = []
+    ym = None
+    if data:
+        y, mth = int(data[:4]), int(data[5:7])
+        ym = {(y, mth), (y, mth - 1) if mth > 1 else (y - 1, 12), (y, mth + 1) if mth < 12 else (y + 1, 1)}
 
     def add(u):
         u = urllib.parse.urljoin(base, html.unescape(u.strip()))
         if not u.startswith("https://") or RUIM_IMG.search(u) or not re.search(r"\.(jpe?g|png|webp)(\?|$)|/image|/img|wp-content/uploads", u, re.I):
             return
+        mu = re.search(r"/uploads/(\d{4})/(\d{2})/", u)
+        if ym and mu and (int(mu.group(1)), int(mu.group(2))) not in ym:
+            return  # imagem de outra época: é de outra matéria
         k = re.sub(r"-\d{2,4}x\d{2,4}(?=\.\w+$)", "", u.split("?")[0])
         if k not in [re.sub(r"-\d{2,4}x\d{2,4}(?=\.\w+$)", "", x.split("?")[0]) for x in out]:
             out.append(u)
@@ -438,9 +447,22 @@ def fotos_de(pagina, base, limite=8):
     if capa:
         add(capa)
     miolo = corpo_da_materia(pagina)
+    dom = urllib.parse.urlparse(base).netloc
     for m in re.finditer(r"<img\b[^>]*>", miolo, re.I):
         t = m.group(0)
-        if re.search(r'alt=["\'][^"\']*(background|logo|avatar|icon)', t, re.I):
+        if re.search(r'alt=["\'][^"\']*(background|logo|avatar|icon|banner|publicidade|anúncio|advert)', t, re.I):
+            continue
+        if re.search(r'class=["\'][^"\']*(thumb|avatar|related|widget|ad-|ads|banner|logo|icon|emoji|author)', t, re.I):
+            continue
+        # foto dentro de link para outra página do site = card de "leia também"
+        antes = miolo[max(0, m.start() - 400): m.start()]
+        a = antes.rfind("<a ")
+        if a >= 0 and "</a>" not in antes[a:]:
+            href = re.search(r'href=["\']([^"\']+)', antes[a:])
+            if href and not re.search(r"\.(jpe?g|png|webp)(\?|$)", href.group(1), re.I):
+                continue
+        w = re.search(r'\bwidth=["\']?(\d+)', t)
+        if w and int(w.group(1)) < 400:
             continue
         srcset = re.search(r'(?:data-srcset|srcset)=["\']([^"\']+)', t)
         if srcset:
@@ -448,11 +470,10 @@ def fotos_de(pagina, base, limite=8):
             cands = [(int(re.sub(r"\D", "", c[1]) or 0) if len(c) > 1 else 0, c[0]) for c in cands]
             if cands:
                 add(max(cands)[1])
-                continue
-        s = re.search(r'(?:data-lazy-src|data-src|data-original|src)=["\']([^"\']+)', t)
-        w = re.search(r'width=["\']?(\d+)', t)
-        if s and not (w and int(w.group(1)) < 300):
-            add(s.group(1))
+        else:
+            s = re.search(r'(?:data-lazy-src|data-src|data-original|src)=["\']([^"\']+)', t)
+            if s:
+                add(s.group(1))
         if len(out) >= limite:
             break
     return out[:limite]
@@ -488,10 +509,10 @@ def historia_de(pagina, limite=10, alvo=300):
     return partes if len(partes) == len(blocos) else blocos
 
 
-def completar_fotos(camp, estado, limite=160):
+def completar_fotos(camp, estado, limite=220):
     """Abre a matéria de cada campanha sem filme: embute o filme que estiver lá (YouTube, Vimeo,
     Instagram, TikTok) e, se não houver filme, guarda as fotos e as frases para o carrossel."""
-    feitas = set(estado.setdefault("midia_v3", []))
+    feitas = set(estado.setdefault("midia_v4", []))
     bloq = set(estado.get("bloqueados_yt", []))
     alvo = [c for c in camp if not c.get("yt") and not c.get("video") and c.get("url") and c["url"] not in feitas]
     alvo.sort(key=lambda c: c.get("date", ""), reverse=True)  # mais recentes primeiro
@@ -503,7 +524,7 @@ def completar_fotos(camp, estado, limite=160):
         except Exception:  # noqa: BLE001
             return c, None
         yts, video = filmes_de(corpo_da_materia(pag))
-        return c, (yts, video, fotos_de(pag, c["url"]), historia_de(pag) if not yts and not video else [])
+        return c, (yts, video, fotos_de(pag, c["url"], data=c.get("date")), historia_de(pag) if not yts and not video else [])
     with cf.ThreadPoolExecutor(8) as ex:
         res = list(ex.map(job, alvo))
     # vídeo repetido em várias matérias do mesmo site é da página, não da campanha
@@ -527,14 +548,14 @@ def completar_fotos(camp, estado, limite=160):
             usados.update(yts)
         elif video:
             c["video"] = video
+        c["images"] = fotos  # substitui as fotos antigas (podiam ser de outras matérias)
         if fotos:
-            c["images"] = fotos
-            c.setdefault("image", fotos[0])
+            c["image"] = fotos[0]
         if hist and not yts and len(hist) >= len(c.get("story", [])):
             c["story"] = hist
         if yts or video or fotos:
             n += 1
-    estado["midia_v3"] = sorted(feitas)
+    estado["midia_v4"] = sorted(feitas)
     estado["bloqueados_yt"] = sorted(bloq)
     return n
 
@@ -860,7 +881,7 @@ def main():
         if not yts and not vimeo and it.get("corpo"):
             yts, vimeo = filmes_de(it["corpo"])
         img = imagem_de(pag, it["link"])
-        fotos = fotos_de(pag, it["link"]) if not yts and not vimeo else []
+        fotos = fotos_de(pag, it["link"], data=it["data"]) if not yts and not vimeo else []
         hist = historia_de(pag) if not yts and not vimeo else []
         desc = ""
         m = re.search(r'<meta[^>]+(?:property="og:description"|name="description")[^>]+content="([^"]+)"', pag)
