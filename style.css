@@ -37,6 +37,9 @@ a { color: inherit; }
 .chip:hover, .chip[aria-pressed="true"] { color: var(--ink); }
 .logo { justify-self: center; font-family: var(--display); font-weight: 900; font-size: 24px; line-height: 1; text-decoration: none; color: var(--ink); }
 .logo span { color: var(--hot); margin-left: 1px; }
+/* logo animado: o fundo branco do vídeo some sobre o fundo da página */
+.logo { display: block; height: 40px; }
+.logo-vid { display: block; height: 100%; width: auto; mix-blend-mode: multiply; pointer-events: none; }
 .right { justify-self: end; display: flex; align-items: center; gap: 18px; }
 .tipo { gap: 4px; padding: 2px; border-radius: 999px; background: rgba(0, 0, 0, .06); }
 .tipo .chip { padding: 3px 10px; border-radius: 999px; font-size: 11.5px; }
@@ -227,7 +230,7 @@ a { color: inherit; }
 /* ---------- celular ---------- */
 @media (max-width: 860px) {
   .bar-in { height: 44px; gap: 8px; }
-  .logo { font-size: 21px; }
+  .logo { height: 32px; }
   .chips { gap: 10px; }
   .right { gap: 10px; }
   .post { padding: 10px 0 16px; }
