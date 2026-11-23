@@ -147,7 +147,8 @@ NAO_MARCA = {"black friday", "cyber monday", "natal", "navidad", "christmas", "n
              "publicidad", "campanha", "campaign", "campaña", "the", "new", "nova", "novo", "nueva", "nuevo", "why", "how", "ia", "ai",
              "australian", "american", "british", "global", "holiday", "festive", "brasil", "brazil", "méxico", "mexico", "argentina",
              "españa", "spain", "uk", "us", "eua", "india", "this", "esta", "este", "a", "o", "el", "la", "le", "les", "os", "as",
-             "black", "friday", "dia", "day", "mundial", "copa", "vantagens", "brand", "marca", "marcas", "brands", "agency", "agência", "agencia"}
+             "black", "friday", "dia", "day", "mundial", "copa", "vantagens", "brand", "marca", "marcas", "brands", "agency", "agência", "agencia",
+             "film", "filme", "spot", "case", "case study", "commercial", "comercial", "tvc", "ad", "ads", "video", "vídeo", "official", "oficial"}
 
 
 def marca_ok(m):
@@ -613,7 +614,7 @@ def ler_canais(fontes, estado, dias=45):
             data = data_de(texto_de(e, "published"))
             if not vid or not titulo or not data or data < limite or data > HOJE.isoformat():
                 continue
-            if EXCLUI.search(titulo) or PERGUNTA.search(titulo) or re.search(r"#shorts|reel|showreel|credentials|we are hiring|vagas|introducing|platform|plataforma|podcast|webinar|our people|culture", titulo, re.I):
+            if EXCLUI.search(titulo) or PERGUNTA.search(titulo) or re.search(r"#shorts|reel|showreel|credentials|we are hiring|vagas|introducing|platform|plataforma|podcast|webinar|our people|culture|dinner|breakdown|stack|linkedin|tips|how to|panel|talk|summit|lessons|guide|insight|keynote|interview|behind the|bastidores|making of|recap|highlights|event|evento|live|ao vivo|trailer", titulo, re.I):
                 continue
             desc = ""
             for g in e.iter():
