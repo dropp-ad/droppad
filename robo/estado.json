@@ -29,7 +29,7 @@
       "falhas": 0
     },
     "Janela Publicitária": {
-      "falhas": 7
+      "falhas": 8
     },
     "Creativosbr": {
       "url": "https://creativosbr.com.br/feed/",
@@ -52,34 +52,34 @@
       "falhas": 0
     },
     "Adlatina": {
-      "falhas": 7
+      "falhas": 8
     },
     "Merca2.0": {
       "url": "https://www.merca20.com/feed/",
       "falhas": 0
     },
     "Revista Mercado": {
-      "falhas": 7
+      "falhas": 8
     },
     "Latinspots": {
-      "falhas": 7
+      "falhas": 8
     },
     "InformaBTL": {
       "url": "https://www.informabtl.com/feed/",
       "falhas": 0
     },
     "Reason Why": {
-      "falhas": 7
+      "falhas": 8
     },
     "Marketing Directo": {
       "url": "https://www.marketingdirecto.com/feed/",
       "falhas": 0
     },
     "PuroMarketing": {
-      "falhas": 7
+      "falhas": 8
     },
     "Control Publicidad": {
-      "falhas": 7
+      "falhas": 8
     },
     "El Publicista": {
       "url": "https://www.elpublicista.es/rss",
@@ -94,30 +94,30 @@
       "falhas": 0
     },
     "Ads of the World": {
-      "falhas": 7
+      "falhas": 8
     },
     "DesignRush News": {
-      "falhas": 7
+      "falhas": 8
     },
     "Ads of Brands": {
-      "falhas": 7
+      "falhas": 8
     },
     "ContentGrip": {
       "url": "https://www.contentgrip.com/feed/",
       "falhas": 0
     },
     "LBB Online": {
-      "falhas": 7
+      "falhas": 8
     },
     "Adworld.ie": {
       "url": "https://www.adworld.ie/feed/",
       "falhas": 0
     },
     "Creative Salon": {
-      "falhas": 7
+      "falhas": 8
     },
     "Creative Review": {
-      "falhas": 7
+      "falhas": 8
     },
     "Decision Marketing": {
       "url": "https://www.decisionmarketing.co.uk/feed/",
@@ -136,7 +136,7 @@
       "falhas": 0
     },
     "The Drum": {
-      "falhas": 7
+      "falhas": 8
     },
     "J'ai un pote dans la com": {
       "url": "https://www.jai-un-pote-dans-la.com/feed/",
@@ -175,20 +175,24 @@
       "falhas": 0
     },
     "Marketech APAC": {
-      "falhas": 7
+      "falhas": 8
     },
     "Marketing-Interactive": {
-      "falhas": 7
+      "falhas": 8
     },
     "MediaNews4U": {
       "url": "https://www.medianews4u.com/feed/",
       "falhas": 0
     },
     "Manifest Media": {
-      "falhas": 7
+      "falhas": 8
     },
     "afaqs": {
       "url": "https://www.afaqs.com/rss",
+      "falhas": 0
+    },
+    "marketinginsiderreview.com": {
+      "url": "https://marketinginsiderreview.com/feed/",
       "falhas": 0
     }
   },
@@ -241,14 +245,14 @@
     "marketinginsiderreview.com": "fonte",
     "ecosistemastartup.com": "sem-feed",
     "clarin.com": "sem-feed",
-    "informador.mx": "pendente",
-    "catalunyapress.es": "pendente",
-    "ifmnoticias.com": "pendente",
-    "motor16.com": "pendente",
-    "elimparcial.es": "pendente",
-    "newsdigitales.com": "pendente",
-    "yogonet.com": "pendente",
-    "poltronanerd.com.br": "pendente",
+    "informador.mx": "sem-feed",
+    "catalunyapress.es": "sem-feed",
+    "ifmnoticias.com": "sem-feed",
+    "motor16.com": "sem-feed",
+    "elimparcial.es": "sem-feed",
+    "newsdigitales.com": "sem-feed",
+    "yogonet.com": "sem-feed",
+    "poltronanerd.com.br": "sem-feed",
     "d7.dnoticias.pt": "pendente",
     "mpce.mp.br": "pendente",
     "conexaoto.com.br": "pendente",
@@ -297,7 +301,13 @@
     "infomoney.com.br": "pendente",
     "gazetadoparana.com.br": "pendente",
     "cnnbrasil.com.br": "pendente",
-    "correiobraziliense.com.br": "pendente"
+    "correiobraziliense.com.br": "pendente",
+    "foodaffairs.it": "pendente",
+    "noticiasautomotivas.com.br": "pendente",
+    "diariodamidia.com.br": "pendente",
+    "brasiliaetc.com.br": "pendente",
+    "faxaju.com.br": "pendente",
+    "subrayado.com.uy": "pendente"
   },
   "bloqueados_yt": [
     "A4c6TvOxSko",
@@ -306,15 +316,15 @@
   ],
   "arquivo": {
     "Meio & Mensagem": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Propmark": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Grandes Nomes da Propaganda": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Marcas pelo Mundo": {
@@ -326,11 +336,11 @@
       "fim": true
     },
     "Nosso Meio": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "ABC da Comunicação": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Janela Publicitária": {
@@ -338,19 +348,19 @@
       "fim": false
     },
     "Creativosbr": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "B9": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Exame": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Roastbrief": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Insider Latam": {
@@ -363,7 +373,7 @@
     },
     "Merca2.0": {
       "pagina": 13,
-      "fim": false
+      "fim": true
     },
     "Revista Mercado": {
       "pagina": 1,
@@ -374,7 +384,7 @@
       "fim": false
     },
     "InformaBTL": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Reason Why": {
@@ -394,11 +404,11 @@
       "fim": false
     },
     "El Publicista": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Marketing Dive": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Muse by Clios": {
@@ -418,7 +428,7 @@
       "fim": false
     },
     "ContentGrip": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "LBB Online": {
@@ -426,7 +436,7 @@
       "fim": false
     },
     "Adworld.ie": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Creative Salon": {
@@ -438,11 +448,11 @@
       "fim": false
     },
     "Decision Marketing": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Retail Gazette": {
-      "pagina": 7,
+      "pagina": 9,
       "fim": false
     },
     "Marketing Beat": {
@@ -450,7 +460,7 @@
       "fim": true
     },
     "Creative Boom": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "The Drum": {
@@ -458,39 +468,39 @@
       "fim": false
     },
     "J'ai un pote dans la com": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "CB News": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "B&T": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Mediaweek": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Mumbrella": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "The Stable": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Campaign Brief": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Campaign Brief NZ": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Campaign Brief Asia": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Marketech APAC": {
@@ -502,7 +512,7 @@
       "fim": false
     },
     "MediaNews4U": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Manifest Media": {
@@ -510,13 +520,17 @@
       "fim": false
     },
     "afaqs": {
-      "pagina": 13,
+      "pagina": 15,
+      "fim": false
+    },
+    "marketinginsiderreview.com": {
+      "pagina": 3,
       "fim": false
     }
   },
-  "proxima_busca": 10,
-  "ultima_execucao": "2026-11-23T18:18:29.335811+00:00",
-  "ultimas_novas": 38,
+  "proxima_busca": 16,
+  "ultima_execucao": "2026-11-23T18:27:24.655990+00:00",
+  "ultimas_novas": 47,
   "sem_imagem": [
     "https://bookingagentinfo.com/news/coco-gauff-partners-with-mercedes-benz-on-new-u-s-open-campaign/",
     "https://clubedecriacao.com.br/ultimas-noticias/",
@@ -653,6 +667,8 @@
     "https://www.adworld.ie/2026/07/10/epic-explores-irish-identity-in-new-campaign-from-the-public-house/",
     "https://www.adworld.ie/2026/07/24/paddy-power-turns-dublin-wheel-clamps-into-ads-for-comedy-festival/",
     "https://www.adworld.ie/2026/08/07/ulster-museum-reclaims-familiar-put-down-in-new-bigbold-campaign/",
+    "https://www.adworld.ie/2026/09/25/bonfire-and-ardmore-team-up-on-irish-language-campaign-for-beacon-care-fertility/",
+    "https://www.adworld.ie/2026/10/02/goosebump-rolls-out-first-ever-national-campaign-for-homevalue/",
     "https://www.adworld.ie/2026/10/09/boysgirls-rolls-out-namaste-in-latest-jacobs-campaign/",
     "https://www.adworld.ie/2026/10/09/out-look-sky-takes-sides-across-ooh-for-war/",
     "https://www.adworld.ie/2026/10/16/ardmore-group-brings-visit-pennsylvania-campaign-to-nfl-london-game/",
@@ -721,30 +737,47 @@
     "Mother London": [
       "https://www.motherlondon.com/work/IKEA-SKYRIM",
       "https://www.motherlondon.com/work/Ikea-Iftar-at-ours",
+      "https://www.motherlondon.com/work/Nationwide-scamchecker",
       "https://www.motherlondon.com/work/OLAPLEX-Science-never-looked-so-good",
+      "https://www.motherlondon.com/work/Uber-Eats-Premier-League",
+      "https://www.motherlondon.com/work/Uber-Eats-Romanced-Enough",
       "https://www.motherlondon.com/work/anthropic",
       "https://www.motherlondon.com/work/back-market-promise",
+      "https://www.motherlondon.com/work/claude-keep-thinking",
+      "https://www.motherlondon.com/work/coinbase-%20everything-is-fine",
       "https://www.motherlondon.com/work/figs-team-usa",
       "https://www.motherlondon.com/work/ikea",
+      "https://www.motherlondon.com/work/ikea-brighton",
       "https://www.motherlondon.com/work/ikea-dating-show",
       "https://www.motherlondon.com/work/kfc-avengers-doomsday",
       "https://www.motherlondon.com/work/kfc-believe3",
       "https://www.motherlondon.com/work/kfc-dont-crack",
+      "https://www.motherlondon.com/work/kfc-gravy-meets-pastry",
+      "https://www.motherlondon.com/work/kfc-stranger-things",
       "https://www.motherlondon.com/work/m&s-summer-2026",
       "https://www.motherlondon.com/work/marks-and-spencer-autumn",
       "https://www.motherlondon.com/work/marks-spencer-christmas",
+      "https://www.motherlondon.com/work/marks-spencer-lets-go-autumn",
       "https://www.motherlondon.com/work/marks-spencer-love-that",
       "https://www.motherlondon.com/work/marks-spencer-winter",
       "https://www.motherlondon.com/work/netflix-find-the-thing",
+      "https://www.motherlondon.com/work/shes-back-marks-and-spencer",
       "https://www.motherlondon.com/work/surrender-to-tender",
       "https://www.motherlondon.com/work/uber-reserve",
       "https://www.motherlondon.com/work/who-could-cook-at-a-time-like-this"
     ]
   },
   "midia_v3": [
+    "https://adsofbrands.net/en/news/john-lewis-and-saatchi-saatchi-offer-a-dose-of-gifting-honesty-with-daisy-may-cooper-for-mother-s-d/9587",
     "https://bmeditores.mx/avicultura/la-union-nacional-de-avicultores-presenta-el-poder-del-huevo-mexicano/",
     "https://bookingagentinfo.com/news/coco-gauff-partners-with-mercedes-benz-on-new-u-s-open-campaign/",
     "https://campaignbrief.co.nz/",
+    "https://campaignbrief.co.nz/2026/05/20/new-zealand-listens-to-us-mediaworks-turns-up-the-volume-with-new-brand-campaign/",
+    "https://campaignbrief.co.nz/2026/05/27/thundergrid-launches-new-from-powerless-to-powerful-campaign-via-art-of-the-possible/",
+    "https://campaignbrief.co.nz/2026/08/19/kiwirail-tracksafe-make-a-high-fashion-statement-in-new-trainspotter-campaign-for-rail-safety-week-via-eightyone/",
+    "https://campaignbrief.co.nz/2026/08/19/sealord-launches-skipper-pet-food-with-feed-them-beautiful-campaign-via-motion-sickness/",
+    "https://campaignbrief.co.nz/2026/08/24/nzhl-helps-kiwi-get-ahead-without-selling-clean-urine-to-cyclists-in-new-campaign-via-bad-magic/",
+    "https://campaignbrief.co.nz/2026/08/28/numberworksnwords-launches-its-first-australian-tv-campaign-via-junior-films/",
     "https://campaignbrief.co.nz/2026/09/02/one-new-zealand-wants-kiwis-to-pick-up-the-phone-in-new-misinterpreted-campaign-via-mccann/",
     "https://campaignbrief.co.nz/2026/09/04/maccas-invites-aotearoa-to-celebrate-its-50th-birthday-in-new-campaign-via-mccann-nz/",
     "https://campaignbrief.co.nz/2026/09/04/playstation-new-zealand-turns-local-chippy-into-nostalgic-activation-via-eleven-pr-nz/",
@@ -765,7 +798,10 @@
     "https://campaignbrief.com/little-rocket-to-deliver-national-youth-mental-health-and-wellbeing-campaign-for-naccho/",
     "https://campaignbrief.com/our-watchs-the-line-shows-teens-relationship-drama-can-feel-like-the-end-of-the-world-but-isnt-in-new-campaign-via-clemenger-bbdo/",
     "https://campaignbrief.com/selfwealth-launches-new-identity-and-campaign-via-bam/",
+    "https://campaignbrief.com/the-cheesecake-shop-celebrates-its-bakers-in-new-handmade-happiness-campaign-via-elevencom/",
+    "https://campaignbrief.com/the-contenders-unveils-new-brand-with-a-sharper-focus-on-commercial-value/",
     "https://campaignbrief.com/the-poolhouse-turns-the-backyard-pool-into-the-best-room-in-the-house-in-new-campaign-via-crave/",
+    "https://campaignbrief.com/the-ras-just-swing-campaign-launches-in-australia-to-welcome-more-people-into-golf/",
     "https://campaignbriefasia.com/2026/07/13/sunsilk-taps-babymonster-for-an-authentic-look-at-life-beyond-the-spotlight-and-glamour/",
     "https://campaignbriefasia.com/2026/09/28/space-villains-strike-back-in-telstras-new-network-security-campaign-with-steve-buscemi-via-bear-meets-eagle-on-fire-with-61/",
     "https://campaignbriefasia.com/2026/10/19/22feet-pits-food-pharmer-against-a-stern-professor-in-flipkarts-own-protein-campaign/",
@@ -774,29 +810,46 @@
     "https://clubedecriacao.com.br/ultimas-noticias/",
     "https://clutchpoints.com/nba/washington-wizards/nike-honors-wizards-aj-dybantsa-with-epic-wale-ad-after-no-1-pick",
     "https://cosmeticsbusiness.com/selfridges-unveils-christmas-campaign-2026-london-manchester-birmingham",
+    "https://creative.salon/articles/work/admiral-ready-for-anything-mccann-bristol",
     "https://creative.salon/articles/work/allwyn-home-of-feelings",
     "https://creative.salon/articles/work/alzheimers-society-lost-memorybilia-nca",
     "https://creative.salon/articles/work/argos-t-p-connie-and-trevor-mafia-bosses",
     "https://creative.salon/articles/work/audible-give-blood-with-dracula-nhs-blood-and-transplant-wpp-media",
     "https://creative.salon/articles/work/barclays-good-move-vccp",
+    "https://creative.salon/articles/work/cadbury-easter-egg-hunt-vccp",
+    "https://creative.salon/articles/work/cadbury-made-to-share-vccp",
     "https://creative.salon/articles/work/cadbury-twirl-hatton-golden-ogilvy",
     "https://creative.salon/articles/work/canva-i-wish-i-was-you-dept",
     "https://creative.salon/articles/work/capital-com-built-for-better-decisions-ogilvy-uk",
+    "https://creative.salon/articles/work/catsan-luxury-litter-trays-adam-eve-tbwa",
+    "https://creative.salon/articles/work/chupa-chups-no-more-wrestling-bbh",
     "https://creative.salon/articles/work/durex-get-wood-rising-mccann-uk",
     "https://creative.salon/articles/work/easyjet-drop-everything-dept",
     "https://creative.salon/articles/work/ee-you-did-us-proud-yes-boys-saatchi-saatchi",
+    "https://creative.salon/articles/work/esure-calm-down-deer-guy-co-vccp-media",
+    "https://creative.salon/articles/work/havas-birds-eye-fish-finger-billboard",
     "https://creative.salon/articles/work/hawkstone-kaleb-s-leap-t-p",
+    "https://creative.salon/articles/work/helly-hansen-grey-london-shared-challenges",
     "https://creative.salon/articles/work/hilton-don-t-take-me-home-adam-eve-tbwa",
     "https://creative.salon/articles/work/john-lewis-the-honest-dad-unboxing-saatchi-saatchi",
+    "https://creative.salon/articles/work/kitkat-vml-uk-70-years",
+    "https://creative.salon/articles/work/lets-get-absolutely-buttered-anchor-havas",
+    "https://creative.salon/articles/work/m-and-s-love-that-mother",
+    "https://creative.salon/articles/work/marmite-dishes-of-love-and-hate-adam-eve-tbwa",
     "https://creative.salon/articles/work/mnd-association-life-stripped-away-pablo",
     "https://creative.salon/articles/work/morrisons-market-street-monsters-leo-uk",
+    "https://creative.salon/articles/work/nurofen-the-pain-game-mccann",
     "https://creative.salon/articles/work/ogilvy-health-uk-national-poetry-day-calm",
     "https://creative.salon/articles/work/pablo-aldi-ireland-june-2026",
     "https://creative.salon/articles/work/plusnet-massive-value-massive-plus-saatchi-saatchi",
     "https://creative.salon/articles/work/saatchi-saatchi-channel-4-aviva-omd",
     "https://creative.salon/articles/work/schweppes-with-time-comes-taste-ogilvy",
     "https://creative.salon/articles/work/sour-patch-kids-not-as-sweet-as-they-look-vccp",
+    "https://creative.salon/articles/work/st-germain-delight-in-life-new-commercial-arts",
+    "https://creative.salon/articles/work/take-a-hike-mammut-dept",
     "https://creative.salon/articles/work/tango-you-know-when-you-ve-been-tango-d-vccp",
+    "https://creative.salon/articles/work/time-for-a-coke-wpp-openx-ogilvy-uk",
+    "https://creative.salon/articles/work/tombola-weber-shandwick-collective-grime-gran",
     "https://creative.salon/articles/work/toy-story-5-argos-t-p",
     "https://creative.salon/articles/work/vodafone-the-nation-s-biggest-network-leo-uk",
     "https://creativosbr.com.br/cruz-vermelha-lanca-campanha-desejos-de-natal-para-combater-a-inseguranca-alimentar/?utm_source=rss&utm_medium=rss&utm_campaign=cruz-vermelha-lanca-campanha-desejos-de-natal-para-combater-a-inseguranca-alimentar",
@@ -820,21 +873,33 @@
     "https://hypebae.com/2026/6/calvin-klein-pride-month-collection-campaign-jordan-rand-underwear-denim-where-to-buy",
     "https://hypebeast.com/2026/8/travis-scott-us-open-cactus-jack-nike-collab-carlos-alcaraz",
     "https://insideretail.co.nz/2026/08/24/the-warehouse-bets-on-new-campaign-to-return-to-retail-market-leadership/",
+    "https://insiderlatam.com/corona-pone-en-valor-el-extra-de-mexico-de-cara-al-mundial-2026/",
     "https://insiderlatam.com/dirty-kitchen-y-bancolombia-presentan-tu-plata-ahora-habla-otros-idiomas/",
+    "https://insiderlatam.com/dos-equis-convirtio-un-escenario-de-cdmx-en-una-misteriosa-instalacion-artistica/",
+    "https://insiderlatam.com/grupo-lala-presenta-golalazo-una-campana-que-nutre-la-pasion-mundialista-de-mexico/",
+    "https://insiderlatam.com/koku-y-branca-emprenden-una-expedicion-lunar-en-su-nueva-campana/",
+    "https://insiderlatam.com/molotov-convierte-su-cancion-frijolero-en-un-potente-mensaje-para-las-personas-deportadas/",
+    "https://insiderlatam.com/rockstar-y-febrero-made-vuelven-a-celebrar-el-mes-del-laburante/",
     "https://insiderlatam.com/sopas-maruchan-y-archer-troy-presentan-el-final-de-la-trilogia-sonrisas-maruchan/",
+    "https://jai-un-pote-dans-la.com/seloger-lance-sa-nouvelle-campagne-publicitaire-avec-marcel/",
     "https://janela.com.br/2026/07/07/carioca-piraque-traduz-a-alma-brasileira-em-nova-campanha/",
     "https://lacamara.pe/dia-del-nino-tottus-lanza-nuevas-colecciones-de-juguetes-y-experiencias-en-tiendas/",
     "https://lbbonline.com/news/Academy-Sports-Outdoors-Ask-Them",
     "https://lbbonline.com/news/Aldi-Puts-England-Pride-Before-Nordpak",
     "https://lbbonline.com/news/Allwyn-Powerball-VCCP-Studio-59",
     "https://lbbonline.com/news/America250-Giving-4th",
+    "https://lbbonline.com/news/Burger-King-UK-Rewards-Marathon-Runners-with-a-Whopper-of-a-Finish",
     "https://lbbonline.com/news/Carlsberg-If-Carlsberg-Did",
     "https://lbbonline.com/news/Chrysler-Turns-Parents-Favourite-Four-Letter-Acronyms-Into-Minivan-Campaign",
     "https://lbbonline.com/news/Co-op-Takes-On-the-Big-Shop-Faff",
+    "https://lbbonline.com/news/David-Tennant-MoneySuperMarkets-New-Commercial-Arts",
     "https://lbbonline.com/news/Dennys-Canada-Canada-Day-Full-Punch",
     "https://lbbonline.com/news/HEINZ-Customisable-Ketchup-Love-Lid",
+    "https://lbbonline.com/news/Hisense-Terry-Crews-FIFA-World-Cup-2026",
     "https://lbbonline.com/news/Jaffa-Cakes-Full-Moon-Half-Moon-Campaign-UK-Solar-Eclipse",
+    "https://lbbonline.com/news/La-Roche-Posay-Sponsors-Jannik-Sinners-Shadow",
     "https://lbbonline.com/news/Marmites-WeMite-Jars-Pack-a-Taste-of-Home-for-England-Fans",
+    "https://lbbonline.com/news/McDonalds-McCrispy-Leo-UK",
     "https://lbbonline.com/news/Molson-Coors-The-Beer-Fling-alma",
     "https://lbbonline.com/news/Mostaza-Rappi-2022-World-Cup-Lucky-Meals",
     "https://lbbonline.com/news/Paddy-Power-Gets-Tactical-Ahead-of-England-Match",
@@ -842,18 +907,38 @@
     "https://lbbonline.com/news/Rennie-Wind-Relief-Fart-Cover-up-McCann-London",
     "https://lbbonline.com/news/Riksbyggen-BBDO-Nordics-Swedens-Smallest-Homes-Housing-Crisis",
     "https://lbbonline.com/news/Specsavers-Cheerplugs-England-fans-noise-levels",
+    "https://lbbonline.com/news/Toyota-RAV4-Imagine-the-Possibilities",
     "https://lbbonline.com/news/VML-Canada-The-Globe-Mail-Contemporary-Design-System",
+    "https://lbbonline.com/news/Valvoline-FIFA-World-Cup-2026",
+    "https://lbbonline.com/news/Vanish-The-Unbearable-Blazer",
     "https://lbbonline.com/news/degree-new-york-summer-subway-central-boiler-room-stunt",
+    "https://lbbonline.com/news/monzo-a-new-era-of-banking-bbh-dublin",
+    "https://lbbonline.com/news/tesco-joyful-fruit-giant-free-fruit-veg-for-schools-programme",
+    "https://marcaspelomundo.com.br/anunciantes/dasa-transforma-silencio-dos-sintomas-em-alerta-na-campanha-marco-lilas-2026/",
     "https://marketech-apac.com/7-eleven-singapore-shifts-from-convenience-to-discovery-with-new-find-the-good-stuff-campaign/",
+    "https://marketech-apac.com/the-mall-group-launches-kudthai-to-fuse-culture-and-commerce-during-songkran/",
+    "https://marketech-apac.com/toyota-launches-long-live-recreation-campaign-for-new-rav4-in-australia/",
+    "https://marketing.ie/tesco-allows-apres-match-extra-time/",
     "https://marketingdive.com/news/vitaminwater-broadens-multicultural-marketing-canvas-with-neighborhue/824744",
+    "https://marketingnewscanada.com/news/this-week-in-canadian-marketing-march-19-2026",
+    "https://marketingnewscanada.com/news/this-week-in-canadian-marketing-may-8-2026",
+    "https://mcsaatchi.com/news/ncsc-launches-cyber-resilience-campaign",
     "https://mediaweek.com.au/jameson-turns-dan-does-footy-s-fake-kayo-leak-into-giveaway/",
+    "https://mercado.com.ar/marketing/arredo-presenta-sale-amor-campana-de-febrero-con-combos-y-promociones-para-el-hogar",
     "https://mercado.com.ar/marketing/coca-cola-argentina-impulsa-la-campana-nos-une-el-pais-que-queremos-sobre-su-cadena-de-valor",
     "https://mercado.com.ar/marketing/coca-cola-argentina-reune-coca-cola-sprite-y-fanta-en-la-campana-juntos-mejor",
+    "https://mercado.com.ar/marketing/coca-cola-y-grey-mexico-presentan-sintamos-juntos-rumbo-a-la-copa-mundial-2026",
+    "https://mercado.com.ar/marketing/dgo-y-dentsu-creative-activan-campana-regional-para-el-mundial-fifa-2026",
+    "https://mercado.com.ar/marketing/dsports-y-black-table-presentan-locos-campana-regional-en-la-antesala-del-mundial-2026",
+    "https://mercado.com.ar/marketing/gaes-presento-en-madrid-su-spot-the-special-test-rooms-con-jose-corbacho",
     "https://mercado.com.ar/marketing/glaciar-baja-en-sodio-estreno-campana-mundialista-con-foco-en-prevencion-cardiovascular",
     "https://mercado.com.ar/marketing/jetsmart-y-sony-pictures-activan-una-campana-regional-por-spider-man-un-nuevo-dia",
+    "https://mercado.com.ar/marketing/kotex-presento-verano-sin-tabu-campana-sobre-menstruacion-en-playa-y-pileta",
     "https://mercado.com.ar/marketing/mostaza-lanzo-la-cuarta-merlo-y-ya-es-cabala",
     "https://mercado.com.ar/marketing/paladini-y-mercado-mccann-llevan-argentine-kansas-al-cruce-cultural-del-mundial",
+    "https://mercado.com.ar/marketing/plenitud-presento-no-te-contengas-y-sumo-a-cathy-fulop-como-embajadora",
     "https://mercado.com.ar/marketing/super-desarrolla-una-campana-de-publicidad-exterior-para-rappi-en-tres-ciudades-mexicanas",
+    "https://mercado.com.ar/marketing/volkswagen-argentina-y-bernbach-estrenan-campana-360-vamos-por-mas-historias-vamos-argentina",
     "https://ministryofsport.com/starbucks-leverages-global-football-fever-with-captain-armband-cup-sleeve-activation/",
     "https://mumbrella.com.au/bench-media-launches-ai-assistant-aura-for-campaign-analysis-944811",
     "https://mumbrella.com.au/cars24-launches-major-campaign-to-change-used-car-buying-habits-945422",
@@ -867,51 +952,77 @@
     "https://mumbrella.com.au/turo-brings-cheat-codes-to-life-with-sydney-activation-offering-luxury-car-experiences-943678",
     "https://mundodomarketing.com.br/halloween-2026-as-campanhas-das-marcas-que-transformam-a-data-em-experiencia",
     "https://musebyclios.com/ad-of-the-week/ishowspeed-and-a-mannequin-hit-the-road-for-expedia/",
+    "https://musebyclios.com/advertising/a-scroll-stoppr-pickles-in-donuts-and-more-april-fools-pranks/",
     "https://musebyclios.com/advertising/confused-coms-precocious-puppets-will-have-you-laughing-til-the-cows-come-home",
+    "https://musebyclios.com/advertising/ghosts-buffaloes-and-warrior-kitties-crave-dominos-dip/",
+    "https://musebyclios.com/advertising/harrys-says-you-dont-need-to-strike-oil-to-get-a-great-shave-and-smell-great/",
     "https://musebyclios.com/advertising/its-amazon-prime-day-so-etsy-lets-other-jeffs-shine/",
     "https://musebyclios.com/advertising/its-okay-to-be-a-hot-mess-sometimes-maruchan-says/",
     "https://musebyclios.com/advertising/kalshi-explains-itself-and-serves-the-worlds-longest-sandwich/",
     "https://musebyclios.com/advertising/strange-brew-liquid-death-iced-tea-vs-long-island-iced-tea/",
+    "https://musebyclios.com/advertising/the-sonic-guys-return-in-commercials-for-jiffy-lube/",
+    "https://musebyclios.com/advertising/timothee-chalamet-laces-up-for-adidas-in-weeks-top-spot/?utm_source=rss&utm_medium=rss&utm_campaign=timothee-chalamet-laces-up-for-adidas-in-weeks-top-spot",
     "https://musebyclios.com/advertising/you-had-to-be-at-least-100-years-old-to-star-in-this-titos-vodka-ad/",
     "https://musebyclios.com/cannabis/nug-on-the-rug-spreads-cheer-so-be-nice-not-naughty/",
     "https://musebyclios.com/experiential/doordash-spirit-board-channels-the-spooky-season/",
+    "https://musebyclios.com/film-tv/danny-trejo-wields-a-machete-for-mountain-dew/",
     "https://musebyclios.com/film-tv/its-world-cup-season-that-makes-gordon-ramsay-even-more-of-a-prig/",
     "https://musebyclios.com/health/bigfoots-haircare-secret-its-e-l-f/",
+    "https://musebyclios.com/sports/buzzballz-grabs-all-the-attention-that-makes-streaker-steve-mad/",
     "https://musebyclios.com/sports/mls-invites-fans-across-usa-to-celebrate-following-world-cup-summer/",
+    "https://musebyclios.com/sports/soccer-royalty-visits-mcdonalds-for-fifa-collectible-cups/",
     "https://musebyclios.com/worldviews/budget-directs-space-capsule-crashes-your-pool-party/",
     "https://news.designrush.com/audi-e-tron-after-dark-bbh-london-silverstone",
     "https://news.designrush.com/essentia-water-rookie-workout-experience-i-play-rocky-campaign",
     "https://news.designrush.com/kalshi-martha-stewart-insider-trading-ad-es-muy-good",
+    "https://news.designrush.com/loreal-paris-devil-wears-prada-2-oscars-ad-kendall-jenner-simone-ashley",
+    "https://news.designrush.com/michelob-ultra-fifa-world-cup-2026-messi-pulisic-billy-bob-thornton",
+    "https://news.designrush.com/nerds-andy-cohen-super-bowl-60-teaser",
     "https://news.designrush.com/openai-uses-messi-in-world-cup-push",
+    "https://news.designrush.com/panera-mothers-day-campaign-72andsunny-meet-your-mom",
     "https://news.designrush.com/stella-artois-world-cup-2026-gut-new-york-kissing-the-gold-chalice",
+    "https://news.mazdausa.com/2026-03-15-MAZDA-LAUNCHES-THE-ALL-NEW-CX-5-WITH-A-FIVE-FILM-CAMPAIGN-INSPIRED-BY-HOLLYWOOD-GENRES",
+    "https://news.samsung.com/global/samsungs-open-always-wins-campaign-comes-to-life-in-milan",
+    "https://news.samsung.com/mx/samsung-presenta-el-anfitrion-de-la-mejor-vision-del-juego-una-campana-con-los-porteros-mas-iconicos-de-latinoamerica",
+    "https://nossomeio.com.br/ala-promove-encontro-entre-joao-gomes-e-dona-tania-em-tributo-a-essencia-do-nordeste/",
     "https://nossomeio.com.br/apos-eliminacao-na-copa-cbf-lanca-campanha-para-marcar-inicio-de-novo-ciclo-da-selecao/",
     "https://nossomeio.com.br/aussie-transforma-diferentes-pronuncias-da-marca-em-campanha-de-anti-branding/",
     "https://nossomeio.com.br/campanha-halloween-bigdooh-aquarela-midia-ooh/",
     "https://nossomeio.com.br/cenphub-salvador-regionalizacao-publicidade/",
     "https://nossomeio.com.br/com-desafio-de-palpites-frosty-conecta-marujinho-ao-clima-de-torcida-da-copa-do-mundo/",
+    "https://nossomeio.com.br/docile-leva-cuca-para-campanha-de-halloween-e-aposta-em-referencias-do-folclore-brasileiro/",
     "https://nossomeio.com.br/grupo-de-midia-ceara-um-ano-retomada/",
     "https://nossomeio.com.br/magalu-aposta-em-influenciadores-e-14-horas-de-lives-para-campanha-de-black-friday/",
     "https://nossomeio.com.br/yobem-campanha-viva-o-seu-movimento-kerline/",
     "https://occidente.co/colombia/el-orgullo-que-nos-conecta-procolombia-marca-pais-20-julio/",
+    "https://okdiario.com/lifestyle/ouigo-reta-maldicion-oporto-invita-parejas-cambiar-destino-amor-semana-santa-16403159",
     "https://p2pi.com/dawn-cascade-campaign-offers-tips-game-day-cleanup",
+    "https://propmark.com.br/anunciantes/camila-queiroz-dira-paes-e-debora-nascimento-estrelam-campanha-de-dia-das-maes-de-c-a/",
+    "https://propmark.com.br/anunciantes/campanha-de-dia-das-maes-da-kopenhagen-foca-na-identidade-feminina-para-presentear/",
     "https://propmark.com.br/anunciantes/casas-bahia-escala-joao-gomes-para-dia-dos-pais/",
     "https://propmark.com.br/anunciantes/coca-cola-lanca-campanha-de-dia-dos-pais-sobre-conexao-a-mesa/",
     "https://propmark.com.br/anunciantes/com-edilson-diney-e-biro-biro-keeta-surpreende-entregadores-em-acao-inedita/",
     "https://propmark.com.br/anunciantes/com-giovanna-lancellotti-quem-disse-berenice-revisita-seus-sucessos/",
     "https://propmark.com.br/anunciantes/dengo-aposta-em-experiencias-compartilhadas-para-o-dia-dos-pais/",
     "https://propmark.com.br/anunciantes/dengo-lanca-campanha-de-natal-2026-com-12-novidades-no-portfolio/",
+    "https://propmark.com.br/anunciantes/esportes-da-sorte-lanca-campanha-nacional-para-o-carnaval-2026/",
+    "https://propmark.com.br/anunciantes/grazi-massafera-e-sophie-charlotte-estrelam-campanha-de-dia-das-maes-da-hering/",
     "https://propmark.com.br/anunciantes/havaianas-celebra-brasilidade-em-campanha-de-verao-criada-pela-galeria/",
     "https://propmark.com.br/anunciantes/hering-aposta-no-humor-para-campanha-de-natal-criada-pela-almapbbdo/",
     "https://propmark.com.br/anunciantes/lilly-cria-banca-dos-absurdos-para-combater-desinformacao-sobre-obesidade/",
     "https://propmark.com.br/anunciantes/mercedes-benz-celebra-70-anos-no-brasil-com-campanha-institucional-da-betc-havas/",
+    "https://propmark.com.br/anunciantes/natura-lanca-campanha-sobre-maternidade-e-propoe-nova-percepcao-do-tempo/",
     "https://propmark.com.br/anunciantes/nos-eua-bem-brasil-transforma-cidade-brazil-em-brasil-durante-a-copa/",
+    "https://propmark.com.br/anunciantes/nova-campanha-de-pascoa-da-brasil-cacau-traz-leo-santana-e-evolucao-do-laboratorio-de-recheios/",
     "https://propmark.com.br/anunciantes/pringles-resgata-essencia-do-churrasco-em-nova-campanha-da-monks/",
+    "https://propmark.com.br/anunciantes/quem-disse-berenice-destaca-novo-creamy-tint-em-campanha-de-dia-do-beijo/",
     "https://propmark.com.br/anunciantes/rafa-kalimann-estrela-campanha-da-seara-apos-multa-por-quebra-de-contrato-com-perdigao/",
     "https://propmark.com.br/anunciantes/reserva-aposta-na-paternidade-ativa-em-campanha-de-dia-dos-pais/",
     "https://propmark.com.br/anunciantes/sem-parar-leva-30-clientes-para-reencontrar-os-pais/",
     "https://propmark.com.br/anunciantes/unilever-convoca-jovens-para-massificar-o-uso-da-versao-liquida-do-sabonete-lux/",
     "https://propmark.com.br/mercado/iab-brasil-lanca-tres-guias-para-aprimorar-mensuracao-na-publicidade-digital/",
     "https://retailtimes.co.uk/morrisons-christmas-ad-unveiled-a-festive-fairytale-thats-just-right/",
+    "https://retailtimes.co.uk/tesco-mobile-flips-the-dread-of-the-doormat-in-new-bbh-campaign/",
     "https://retailtimes.co.uk/waitrose-turns-staying-in-into-fine-dine-in-with-new-wonderhood-studios-campaign/",
     "https://revistaapolice.com.br/?p=143437",
     "https://roastbrief.com.mx/2026/06/aqui-esta-la-campana-de-taco-bell-que-lleva-el-juego-de-palabras-al-terreno-de-juego/",
@@ -925,49 +1036,77 @@
     "https://roastbrief.com.mx/2026/11/inpost-convierte-sus-lockers-y-su-flota-en-soportes-de-comunicacion-en-su-nueva-campana-para-la-peak-season/",
     "https://roastbrief.com.mx/2026/11/netflix-ads-lanza-la-segunda-edicion-de-still-watching-y-demuestra-que-el-publico-nunca-habia-estado-tan-atento-a-lo-que-elige-ver/",
     "https://shots.net/news/view/crouching-tiger-hidden-gum-disease",
+    "https://shots.net/news/view/experience-new-with-air-india",
+    "https://shots.net/news/view/revlon-wants-you-to-be-unforgettable",
     "https://sporked.com/article/carls-jr-birthday-giveaway/",
     "https://thedailypour.com/vodka/svedka-water-cooler-craig-robinson/",
     "https://theshelbyreport.com/2026/09/23/del-real-foods-expands-distribution-launches-hispanic-heritage-month-campaign/",
     "https://voenews.com.br/gollog-lanca-campanha-com-foco-no-segmento-b2b-inteligencia-na-entrega-faz-o-seu-negocio-voar/",
+    "https://www.abcdacomunicacao.com.br/?p=340972",
     "https://www.abcdacomunicacao.com.br/avenue-lanca-campanha-com-a-livelo-que-oferece-pontos-a-novos-investidores-internacionais/",
+    "https://www.abcdacomunicacao.com.br/com-o-mote-maes-que-movem-centauro-lanca-campanha-de-dia-das-maes-com-milene-domingues-e-ronald/",
     "https://www.abcdacomunicacao.com.br/dabelle-beauty-apresenta-campanha-o-matte-que-da-match-para-lancamento-do-lip-combo-boca-perfeita-matte/",
     "https://www.abcdacomunicacao.com.br/haskell-e-vizzela-lancam-collab-com-campanha-digital-que-reune-duplas-de-influenciadoras/",
     "https://www.abcdacomunicacao.com.br/melody-estrela-campanha-da-uber-para-o-lancamento-do-elas-indicam-moto/",
+    "https://www.abcdacomunicacao.com.br/morana-celebra-o-dia-da-mulher-com-campanha-que-exalta-sororidade-pertencimento-e-forca-coletiva/",
     "https://www.abcdacomunicacao.com.br/predictus-lanca-novo-posicionamento-de-marca-com-campanha-sobre-os-movimentos-que-antecedem-uma-decisao/",
     "https://www.abcdacomunicacao.com.br/uol-lanca-campanha-defenda-a-verdade-assine-o-uol/",
+    "https://www.adcouncil.org/news-insights/press-releases/the-ad-council-taps-teen-insights-voices-for-a-bold-new-approach-to-teen-mental-health",
     "https://www.adlatina.com/campa%C3%B1as/archivos-x",
     "https://www.adlatina.com/campa%C3%B1as/argentina-nunca-se-achica",
+    "https://www.adlatina.com/campa%C3%B1as/crditos-uvas",
     "https://www.adlatina.com/campa%C3%B1as/nuestro-ftbol",
+    "https://www.adlatina.com/campa%C3%B1as/si-pasa-lo-que-todos-queremos-que-pase",
     "https://www.adlatina.com/publicidad/nuevo-merci-advertising-e-ivess-cuentan-historias-de-amor-que-tienen-al-sifn-como-protagonista",
+    "https://www.adlatina.com/publicidad/preestreno-isla-mxico-y-flamin-hot-ensea-a-los-mexicanos-a-ser-buenos-anfitriones",
     "https://www.adlatina.com/publicidad/preestreno-mastercard-y-mccann-miami-presentan-incomparable-campaa-que-recupera-el-icnico-eslogan-de-la-marca",
+    "https://www.adlatina.com/publicidad/preestreno-merci-advertising-y-universal-assistance-lanzan-dos-nuevos-spots-de-la-campaa-historias-que-cuestan-cero",
+    "https://www.adlatina.com/publicidad/preestreno-room-23-y-huggies-estan-en-el-momento-justo-que-nace-un-hincha",
+    "https://www.adnews.com.au/campaigns/australian-eggs-the-easter-og-via-liquid-ideas",
     "https://www.adnews.com.au/campaigns/gravox-for-creatures-of-comfort-via-tbwa-melbourne",
+    "https://www.adnews.com.au/campaigns/woolworths-hot-cross-buns-via-dentsu-creative",
+    "https://www.adnews.com.au/news/dairy-farmers-scrolling-girl-via-the-royals",
+    "https://www.adobomagazine.com/?p=337158",
+    "https://www.adsofbrands.net/en/news/from-garage-to-performance-audi-uk-partners-with-the-brit-awards-in-new-campaign-by-bbh/9518",
     "https://www.adsoftheworld.com/campaigns/cat-bodega",
     "https://www.adsoftheworld.com/campaigns/for-all-sides-of-her-nature",
     "https://www.adsoftheworld.com/campaigns/honesty-is-our-policy",
     "https://www.adsoftheworld.com/campaigns/made-by-canadians",
     "https://www.adsoftheworld.com/campaigns/papa-johnblox",
+    "https://www.adsoftheworld.com/campaigns/phone-addiction-kills",
     "https://www.adsoftheworld.com/campaigns/you-are-the-occasion",
+    "https://www.adsoftheworld.com/campaigns/you-shouldn-t-have-cd386ac0-d2d4-4c98-bafe-9fc46b65fb91",
+    "https://www.advanced-television.com/2026/04/13/wrap-launches-sky-backed-rescue-me-tv-campaign/",
     "https://www.advanced-television.com/2026/07/13/ee-tv-launches-the-ultimate-flex-campaign/",
+    "https://www.adworld.ie/2026/06/05/insurer-lets-loose-no-drama-llama-as-part-of-new-campaign/",
     "https://www.adworld.ie/2026/07/03/irish-times-rolls-out-nationwide-summer-ooh-campaign/",
     "https://www.adworld.ie/2026/07/10/epic-explores-irish-identity-in-new-campaign-from-the-public-house/",
     "https://www.adworld.ie/2026/07/24/paddy-power-turns-dublin-wheel-clamps-into-ads-for-comedy-festival/",
+    "https://www.adworld.ie/2026/09/25/bonfire-and-ardmore-team-up-on-irish-language-campaign-for-beacon-care-fertility/",
     "https://www.adworld.ie/2026/10/09/out-look-sky-takes-sides-across-ooh-for-war/",
     "https://www.adworld.ie/2026/10/23/edelman-rolls-out-new-irish-brand-campaign-for-knorr/",
+    "https://www.aldipresscentre.co.uk/product-news/objection-aldis-legaldi-law-firm-revealed-as-april-fools-hoax/",
+    "https://www.anglianhome.co.uk/news/the-nations-favourite",
     "https://www.appliedartsmag.com/blog/dentsu-creative-turns-ikea-products-into-national-flags-a18536/",
     "https://www.bandt.com.au/alba-thermal-springs-spa-urges-workers-to-switch-off-in-new-campaign-via-hero/",
     "https://www.bandt.com.au/asb-launches-new-sponsorship-campaign-via-droga5-anz/",
     "https://www.bandt.com.au/auckland-transport-thompson-spencer-launch-all-aboard-campaign-to-celebrate-city-rail-link-opening/",
     "https://www.bandt.com.au/australia-posts-new-campaign-puts-small-businesses-side-hustles-in-the-spotlight/",
     "https://www.bandt.com.au/bastion-aotearoa-cco-taika-waititi-zeekr-live-in-a-lane-of-one/",
+    "https://www.bandt.com.au/bold-honest-and-true-the-financial-review-launches-new-brand-campaign-via-howatsonco/",
     "https://www.bandt.com.au/carlton-draught-launches-victoria-wide-search-for-the-most-legendary-pub/",
     "https://www.bandt.com.au/cooee-partners-with-jcdecaux-for-naidoc-week-campaign/",
     "https://www.bandt.com.au/droga5-puts-child-poverty-in-the-frame-with-kidscan-reflections-campaign/",
+    "https://www.bandt.com.au/fabric-reimagines-macquarie-centre-as-a-modern-playground-in-new-ad/",
     "https://www.bandt.com.au/jcdecaux-nz-launches-the-fern-is-all-of-us-campaign-for-commonwealth-games/",
     "https://www.bandt.com.au/kylie-minogue-stars-in-aamis-renowned-afl-match-day-delivery-spot-via-wpp-media/",
+    "https://www.bandt.com.au/mcdonalds-launches-you-know-where-campaign-via-akcelo/",
     "https://www.bandt.com.au/news-corp-australia-launches-second-think-again-campaign-to-drive-dementia-awareness/",
     "https://www.bandt.com.au/omas-national-ooh-network-gets-behind-the-big-issue-for-its-30th-anniversary/",
+    "https://www.bandt.com.au/pizza-hut-launches-cheeky-first-sweet-then-heat-campaign-for-the-return-of-hot-honey-via-jnr/",
     "https://www.bandt.com.au/samsung-takes-over-sydney-melbourne-with-new-foldables-campaign-via-cheil-australia/",
     "https://www.bandt.com.au/thrifty-pairs-australias-strongest-man-with-tetris-champion-in-latest-work-via-campaignlab/",
+    "https://www.bandt.com.au/tp-australia-cooks-up-big-yum-campaign-for-masterfoods/",
     "https://www.bnnbloomberg.ca/press-releases/2026/07/28/open-farm-introduces-pets-are-perfect-so-we-must-be-too-defining-the-next-chapter-of-its-brand-evolution/",
     "https://www.cbnews.fr/node/102252",
     "https://www.chilevision.cl/partners-chv/ni-sanchez-ni-vidal-ni-medel-garay-chile-va-al-mundial/amp/",
@@ -979,15 +1118,32 @@
     "https://www.creativeboom.com/inspiration/why-is-this-new-york-agency-asking-women-to-send-nudes/",
     "https://www.creativeboom.com/news/royal-portrait-painter-swaps-palaces-for-a-barnsley-chippy-a-catford-corner-shop-and-a-pub-run-by-slugger/",
     "https://www.creativereview.co.uk/mcdonalds-side-missions-xbox-campaign/",
+    "https://www.davidreviews.com/Reviews/2026/Asda_Valentines_Day_TartCheese/",
+    "https://www.decisionmarketing.co.uk/?p=130548",
+    "https://www.decisionmarketing.co.uk/news/axa-blitz-exposes-the-hidden-language-of-financial-abuse",
     "https://www.decisionmarketing.co.uk/news/belvoir-farm-presses-home-quality-in-first-joint-tv-ad",
     "https://www.decisionmarketing.co.uk/news/samsung-tv-plus-unveils-new-suite-of-interactive-ads",
+    "https://www.dfb.de/news/dfb-kampagne-gestartet-es-ist-wm-wenn",
+    "https://www.elespanol.com/treintayseis/deporte/celta-de-vigo/20260304/carta-abierta-celta-madonna-imagen-camiseta-convirtio-mito/1003744155205_0.html",
+    "https://www.exchange4media.com/industry-briefing-news/britannia-cakes-turns-slip-ups-into-a-fudge-it-moment-152053.html",
     "https://www.famouscampaigns.com/?p=46066",
+    "https://www.famouscampaigns.com/?p=46295",
     "https://www.fangoria.com/angry-orchard-scream-pop-up/",
+    "https://www.gov.ie/en/department-of-foreign-affairs/press-releases/minister-mcentee-launches-st-patricks-day-campaign-celebrating-the-global-reach-of-ireland",
+    "https://www.grocerygazette.co.uk/2026/03/30/mms-taps-michael-and-hilary-whitehall-for-easter-campaign/",
+    "https://www.grocerygazette.co.uk/2026/05/22/tesco-launches-new-inclusive-now-were-cooking-campaign/",
     "https://www.grocerygazette.co.uk/2026/09/01/hovis-launches-4m-nationwide-campaign/",
+    "https://www.horizont.net/agenturen/nachrichten/mccann-germany-loral-paris-und-iris-berben-plaedieren-fuer-selbstwert-zum-weltfrauentag-233397",
+    "https://www.horizont.net/marketing/nachrichten/auf-die-huette-fertig-los-deutsche-telekom-das-ist-die-kampagne-mit-thomas-mueller-zur-wm-233773",
     "https://www.horizont.net/marketing/nachrichten/partner-des-dfb-google-beantwortet-im-wm-sommer-alle-fussballfragen-234635",
+    "https://www.indianbroadcastingworld.com/?p=95782",
+    "https://www.infobae.com/mexico/2026/03/12/suprema-corte-relanza-campana-para-mujeres-indigenas-zapotecas-yaquis-y-mayas-en-que-consiste/",
+    "https://www.larepublica.co/ocio/ryan-castro-y-colombiana-celebran-el-futbol-desde-el-barrio-con-campana-de-la-seleccion-4403269",
+    "https://www.latinspots.com/noticia/coca-cola-lanza-su-ambiciosa-campaa-para-el-mundial-2026/95777",
     "https://www.marketing-interactive.com/backing-australia-or-mexico-this-world-cup-gyg-is-making-those-goals-worth-more",
     "https://www.marketing-interactive.com/lost-yourself-in-a-story-that-s-exactly-where-audible-wants-you",
     "https://www.marketing-interactive.com/ocean-park-unveils-ai-driven-campaign-this-halloween",
+    "https://www.marketingbrew.com/stories/2026/03/31/geico-womens-sports-march-madness",
     "https://www.marketingdirecto.com/anunciantes-general/lays-celebra-victoria-espana-copa-mundial-fifa-edicion-limitada",
     "https://www.marketingdirecto.com/campanas-navidenas/decathlon-arranca-navidad-campana-que-mira-50-anos-historia",
     "https://www.marketingdirecto.com/campanas-navidenas/macaulay-culkin-vuelve-ser-kevin-mccallister-spot-mcdonalds-repleto-guinos-solo-casa",
@@ -997,9 +1153,15 @@
     "https://www.marketingdirecto.com/creacion/campanas-de-marketing/the-north-face-transforma-iconica-chaqueta-acolchada-valla-publicitaria-tridimensional",
     "https://www.marketingdive.com/news/brand-new-bag-chipotle-unreal-snacks-reach-for-fashion-relevancy/832488/",
     "https://www.marketingdive.com/news/espolon-tequila-combats-surge-pricing-with-ride-hailing-refund-program/832452/",
+    "https://www.marketingdive.com/news/graza-olive-oil-enters-new-category-with-largest-paid-campaign-to-date/813675/",
     "https://www.marketingdive.com/news/heineken-pilots-opentable-program-that-rewards-designated-drivers/826292/",
+    "https://www.marketingdive.com/news/heinz-celebrates-inaugural-nfl-partnership-with-draft-day-celebration/817981/",
+    "https://www.marketingdive.com/news/mars-gum-brands-mix-memes-borrowed-nostalgia-in-global-campaign/816064/",
+    "https://www.marketingdive.com/news/mikes-hard-lemonade-looks-to-win-over-gen-z-with-animated-lemons/816212/",
     "https://www.marketingdive.com/news/mikes-hot-honey-spurs-experimentation-with-soccer-infused-campaign/824276/",
+    "https://www.marketingdive.com/news/olaplex-links-with-snl-star-to-blend-science-style-and-humor-in-new-ads/812907",
     "https://www.marketingdive.com/news/patron-embraces-dia-de-muertos-for-one-night-only-comedy-show/872814/",
+    "https://www.marketingdive.com/news/popeyes-bites-into-anime-fandom-with-one-piece-collaboration/817266/",
     "https://www.marketingdive.com/news/why-febreze-is-taking-on-soccer-stink-via-podcasts-experiences/824307/",
     "https://www.mediainfoline.com/advertising/louis-philippe-kenny-sebastian-tell-india-get-onam-right-in-new-festive-campaign",
     "https://www.medianews4u.com/gulf-pride-unveils-kuch-behad-kar-brand-platform-featuring-ms-dhoni/",
@@ -1008,11 +1170,20 @@
     "https://www.medianews4u.com/nexxen-partners-with-gracenote-to-expand-content-based-targeting-for-ctv-advertising/",
     "https://www.medianews4u.com/rajkummar-rao-fronts-trayas-proof-hai-boss-campaign-built-on-real-customer-results/",
     "https://www.medianews4u.com/zee5-unite8-sports-launch-poora-india-watchega-campaign-ahead-of-fifa-world-cup-2026/",
+    "https://www.mediaweek.com.au/brand-campaigns/football-australia-reprises-til-its-done-in-new-commbank-matildas-campaign-via-ogilvy",
+    "https://www.mediaweek.com.au/news-australia-launches-eofy-campaign-with-news-com-au-checkout/",
+    "https://www.meioemensagem.com.br/comunicacao/burger-king-e-serasa-dao-sanduiche-gratis-na-madrugada",
+    "https://www.meioemensagem.com.br/comunicacao/campanhas-da-semana-garantindo-o-treino-pos-carnaval",
+    "https://www.meioemensagem.com.br/comunicacao/com-galvao-e-vini-jr-betnacional-quer-ativar-a-paixao-dos-torcedores",
     "https://www.meioemensagem.com.br/comunicacao/jaguar-reune-florence-pugh-e-annie-leibovitz-em-campanha",
     "https://www.meioemensagem.com.br/comunicacao/kopenhagen-revisita-passado-com-edson-e-enzo-celulari",
     "https://www.meioemensagem.com.br/comunicacao/o-boticario-chama-tadeu-schmidt-para-trend-de-dia-dos-pais",
     "https://www.meioemensagem.com.br/marketing/mercado-ads-estreia-anuncios-em-video-no-mercado-livre",
     "https://www.meioemensagem.com.br/marketing/olla-expande-o-dia-do-sexo-para-mobilidade-e-delivery",
+    "https://www.meioemensagem.com.br/midia/ivc-lanca-auditoria-de-ooh-programatico",
+    "https://www.merca20.com/?p=12547775",
+    "https://www.merca20.com/?p=12552524",
+    "https://www.merca20.com/?p=12552527",
     "https://www.merca20.com/?p=12578987",
     "https://www.merca20.com/?p=12586495",
     "https://www.merca20.com/?p=12586607",
@@ -1025,34 +1196,48 @@
     "https://www.merca20.com/chipotle-convierte-los-tatuajes-de-wiz-khalifa-en-empaques-de-edicion-limitada-ofrecera-comida-gratis-y-revive-una-campana-que-rompio-records-de-ventas/?utm_source=rss&utm_medium=rss&utm_campaign=chipotle-convierte-los-tatuajes-de-wiz-khalifa-en-empaques-de-edicion-limitada-ofrecera-comida-gratis-y-revive-una-campana-que-rompio-records-de-ventas",
     "https://www.merca20.com/conoce-la-campana-de-tiktok-que-muestra-muebles-en-recorridos-por-casas-e-incorpora-el-estilo-de-soho/?utm_source=rss&utm_medium=rss&utm_campaign=conoce-la-campana-de-tiktok-que-muestra-muebles-en-recorridos-por-casas-e-incorpora-el-estilo-de-soho",
     "https://www.merca20.com/isa-transforma-el-ooh-con-datos-e-inteligencia-artificial/?utm_source=rss&utm_medium=rss&utm_campaign=isa-transforma-el-ooh-con-datos-e-inteligencia-artificial",
+    "https://www.merca20.com/kfc-campana-publicitaria-dia-de-la-madre-colombia-chile/",
     "https://www.merca20.com/lancome-reune-a-demi-moore-zoe-saldana-y-vanessa-kirby-en-campana-sobre-salud-mental-que-llega-a-mexico/?utm_source=rss&utm_medium=rss&utm_campaign=lancome-reune-a-demi-moore-zoe-saldana-y-vanessa-kirby-en-campana-sobre-salud-mental-que-llega-a-mexico",
     "https://www.merca20.com/lego-en-argentina-milei-rasti-tienda/?utm_source=rss&utm_medium=rss&utm_campaign=lego-en-argentina-milei-rasti-tienda",
     "https://www.merca20.com/lego-reune-a-daft-punk-marvel-k-pop-demon-hunters-y-mas-en-su-campana-de-navidad-2026-anuncia-experiencias-presenciales-y-esto-debes-conocer/?utm_source=rss&utm_medium=rss&utm_campaign=lego-reune-a-daft-punk-marvel-k-pop-demon-hunters-y-mas-en-su-campana-de-navidad-2026-anuncia-experiencias-presenciales-y-esto-debes-conocer",
     "https://www.merca20.com/macaulay-culkin-kevin-comercial-mcdonalds-navidad-2026/?utm_source=rss&utm_medium=rss&utm_campaign=macaulay-culkin-kevin-comercial-mcdonalds-navidad-2026",
+    "https://www.merca20.com/mercedes-benz-perfume-i-am-mercedes-pagoda-1968/?utm_source=rss&utm_medium=rss&utm_campaign=mercedes-benz-perfume-i-am-mercedes-pagoda-1968",
     "https://www.merca20.com/messi-aprende-ajedrez-con-chatgpt-y-esta-campana-de-openai-convierte-la-jugada-en-tendencia/?utm_source=rss&utm_medium=rss&utm_campaign=messi-aprende-ajedrez-con-chatgpt-y-esta-campana-de-openai-convierte-la-jugada-en-tendencia",
     "https://www.merca20.com/openai-presenta-nuevos-anuncios-visuales-en-chatgpt-y-los-negocios-ya-pueden-registrarse/?utm_source=rss&utm_medium=rss&utm_campaign=openai-presenta-nuevos-anuncios-visuales-en-chatgpt-y-los-negocios-ya-pueden-registrarse",
     "https://www.merca20.com/oxxo-convierte-su-programa-de-lealtad-en-una-herramienta-comercial-spin-premia-participa-en-mas-de-la-mitad-de-sus-ventas/?utm_source=rss&utm_medium=rss&utm_campaign=oxxo-convierte-su-programa-de-lealtad-en-una-herramienta-comercial-spin-premia-participa-en-mas-de-la-mitad-de-sus-ventas",
+    "https://www.merca20.com/pinterest-lanza-visual-search-ads-y-abre-una-nueva-batalla-por-la-publicidad-visual/?utm_source=rss&utm_medium=rss&utm_campaign=pinterest-lanza-visual-search-ads-y-abre-una-nueva-batalla-por-la-publicidad-visual",
     "https://www.merca20.com/powerade-convierte-la-polemica-de-sydney-sweeney-y-el-deporte-en-esta-nueva-oportunidad-publicitaria/?utm_source=rss&utm_medium=rss&utm_campaign=powerade-convierte-la-polemica-de-sydney-sweeney-y-el-deporte-en-esta-nueva-oportunidad-publicitaria",
     "https://www.merca20.com/pringles-lleva-su-iconica-lata-hasta-la-tumba-con-esta-campana-de-halloween/?utm_source=rss&utm_medium=rss&utm_campaign=pringles-lleva-su-iconica-lata-hasta-la-tumba-con-esta-campana-de-halloween",
     "https://www.merca20.com/profeco-y-meta-lanzan-campana-contra-fraudes-a-adultos-mayores-estas-son-las-estafas-que-buscan-prevenir/?utm_source=rss&utm_medium=rss&utm_campaign=profeco-y-meta-lanzan-campana-contra-fraudes-a-adultos-mayores-estas-son-las-estafas-que-buscan-prevenir",
     "https://www.merca20.com/rotoplas-lanza-campana-para-mejorar-las-condiciones-de-acceso-al-agua-de-comunidades-artesanas-en-mexico/?utm_source=rss&utm_medium=rss&utm_campaign=rotoplas-lanza-campana-para-mejorar-las-condiciones-de-acceso-al-agua-de-comunidades-artesanas-en-mexico",
     "https://www.merca20.com/selena-gomez-y-demi-lovato-reviven-la-nostalgia-de-disney-con-nueva-campana-para-rare-beauty/?utm_source=rss&utm_medium=rss&utm_campaign=selena-gomez-y-demi-lovato-reviven-la-nostalgia-de-disney-con-nueva-campana-para-rare-beauty",
     "https://www.merca20.com/walmart-reune-a-the-muppets-en-su-campana-navidena-con-su-propio-villancico/?utm_source=rss&utm_medium=rss&utm_campaign=walmart-reune-a-the-muppets-en-su-campana-navidena-con-su-propio-villancico",
+    "https://www.merca20.com/xbox-presenta-una-patente-para-interrumpir-misiones-en-videojuegos-con-anuncios/?utm_source=rss&utm_medium=rss&utm_campaign=xbox-presenta-una-patente-para-interrumpir-misiones-en-videojuegos-con-anuncios",
+    "https://www.minuto30.com/amp/que-comience-el-fichaje-nacional-cerveza-aguila-paraliza-las-redes-con-su-comercial-para-el-mundial-2026/1696570/",
     "https://www.mktesportivo.com/2026/07/philco-aposta-na-copa-do-mundo-para-impulsionar-campanha-de-dia-dos-pais/",
     "https://www.motherlondon.com/work/ikea-dating-show",
     "https://www.motherlondon.com/work/kfc-avengers-doomsday",
     "https://www.motherlondon.com/work/marks-spencer-christmas",
     "https://www.noticiasnqn.com.ar/noticias/2026/07/30/345704-messi-colapinto-y-de-paul-protagonizan-una-publicidad-con-ia-ambientada-en-vaca-muerta",
+    "https://www.noticiasrcn.com/economia/arturo-calle-lanza-campana-de-madres-y-proyecta-crecimiento-en-su-linea-para-mujeres-1019477",
     "https://www.periodicopublicidad.com/articulo/campanas/eso-si-da-miedo/20261029090000180009.html",
     "https://www.periodicopublicidad.com/articulo/spots/campana-que-facilita-camino-estrenar-nissan/20261105112040180233.html",
     "https://www.portafolio.co/negocios/empresas/grupo-exito-apuesta-por-la-moda-hecha-en-colombia-para-la-temporada-del-dia-del-padre-495866",
+    "https://www.prnewswire.com/mx/comunicados-de-prensa/kenia-os-y-pantene-convierten-una-misteriosa-busqueda-en-el-momento-viral-del-ano-302685865.html",
     "https://www.produ.com/especiales/mundial-2026/noticias/mercado-play-estrena-serie-documental-muchachas-sobre-las-esposas-de-varios-jugadores-de-la-seleccion-argentina",
+    "https://www.pulse.bot/marketing/news/afl-celebrates-the-feeling-of-footy-in-new-brand-campaign-if-you-feel-it-youre-in-on-it-via-tbwa-650498c1-f913-4b71-8533-e7eb3596626f",
     "https://www.puromarketing.com/174/217264/telepizza-thinketers-lanzan-campana-para-frenar-comentarios-odio-hacia-colectivo-lgtbiq",
     "https://www.puromarketing.com/24/217227/original-campana-wecamp-lleva-confort-naturaleza-asfalto-madrid-barcelona",
     "https://www.puromarketing.com/24/217407/nueva-campana-verano-imagina-energia-ayuda-entender-consumo-casa",
     "https://www.puromarketing.com/9/217364/nueva-campana-publicitaria-nestea-todo-protagonismo-gente-real",
+    "https://www.reasonwhy.es/actualidad/ayuntamiento-barcelona-campana-obras-municipales-aspiracion",
     "https://www.reasonwhy.es/actualidad/marcas-celebran-espana-gana-mundial-futbol-2026",
+    "https://www.reasonwhy.es/actualidad/pikolin-apaga-pantallas-callao-reivindicar-desconexion-digital-intimidad-experiencia-urbana",
     "https://www.record.com.mx/historia/club-corona-reune-a-figuras-de-la-liga-mx-para-llevar-serenata-a-los-aficionados-2026100103575110414",
+    "https://www.retaildetail.eu/news/food/carrefour-wants-to-make-the-hypermarket-hip-again-with-a-sleepover-party/",
+    "https://www.stb.gov.sg/about-stb/media-publications/media-centre/from-landmark-to-leading-role---scoot-and-singapore-tourism-board-recast-the-merlion-as-a-protagonist-in-singapore-superfans-2026-campaign/",
+    "https://www.theatdb.com/news/att-tips-off-its-march-madness-campaign-about-staying-connected",
+    "https://www.theatdb.com/news/mother-new-york-trains-men-to-help-nyc-moms-lift-strollers-up-subway-steps",
     "https://www.theatdb.com/news/the-premier-league-looks-to-score-world-cup-audiences-with-us-campaign",
     "https://www.thedrum.com/news/the-nbpa-s-new-commercial-brand-wants-to-end-the-era-of-rented-player-ip",
     "https://www.thestable.com.au/4creative-channel-4-how-would-people-cope-after-the-apocalypse-humanity-may-well-be-doomed/",
@@ -1146,6 +1331,233 @@
       "id": "UCh1je9vLMOdBdinnSPMYkCQ",
       "canal": "mischiefusa",
       "handle": "mischiefusa"
+    },
+    "LePub": null,
+    "Rethink": {
+      "id": "UCnXH7p9THHINfKLwjScSm2A",
+      "canal": "Rethink Ideas",
+      "handle": "rethinkideas"
+    },
+    "Isle of Any": null,
+    "TBWA\\Media Arts Lab": null,
+    "DAVID": {
+      "id": "UCef2-FpG5novSnkcejhBZcA",
+      "canal": "David The Agency",
+      "handle": "davidtheagency"
+    },
+    "Motion Sickness": {
+      "id": "UCoRk2j-a0UOnVGEO14mMJDg",
+      "canal": "motionsickness",
+      "handle": "motionsickness"
+    },
+    "Fallon": {
+      "id": "UCWEHtUZ9_rUklGeiMfB1UvA",
+      "canal": "Fallon",
+      "handle": "fallon"
+    },
+    "Publicis Conseil": null,
+    "Special": {
+      "id": "UCUD7RGNfzCA2VESPlsRUN-w",
+      "canal": "specialus",
+      "handle": "specialus"
+    },
+    "WESAYHI": {
+      "id": "UCnTTZ43TKRoaZ8CkcDZ9UGQ",
+      "canal": "Wesayhi0911",
+      "handle": "wesayhi"
+    },
+    "Klick Health": {
+      "id": "UC5sMyjtxZKSwvd2fZpSLtFQ",
+      "canal": "Klick",
+      "handle": "klickhealth"
+    },
+    "DDB": null,
+    "FCB": {
+      "id": "UC3FSlCnYYYFlTT2Nq5Z8swQ",
+      "canal": "FCB Global",
+      "handle": "fcbglobal"
+    },
+    "Serviceplan": {
+      "id": "UCixiGXHR1cN4WDXW6isJIWA",
+      "canal": "Serviceplan Group",
+      "handle": "serviceplan"
+    },
+    "Bear Meets Eagle On Fire": null,
+    "DM9": {
+      "id": "UCptd1XZhFTsRDJZW5_YpqBw",
+      "canal": "DM9",
+      "handle": "dm9oficial"
+    },
+    "BigTime Creative Shop": {
+      "id": "UCPFGLiA0b-AXP4bS-GmqtAg",
+      "canal": "BigTime Creative Shop",
+      "handle": "bigtimecreativeshop"
+    },
+    "L&C": null,
+    "Dentsu Creative": {
+      "id": "UCWwG3hI6AW43wcqImoIQcNw",
+      "canal": "dentsucreative",
+      "handle": "dentsucreative"
+    },
+    "GUT Buenos Aires": null,
+    "VCCP": null,
+    "Known": null,
+    "Mirimar": {
+      "id": "UCvkzbKhQMy2Y-Pa9-DhcKGA",
+      "canal": "MiriMar La",
+      "handle": "mirimarla"
+    },
+    "IW Group": {
+      "id": "UCvpwbs8dAepMicgnyRDa9FQ",
+      "canal": "iwgroup",
+      "handle": "iwgroup"
+    },
+    "Billion Dollar Boy": {
+      "id": "UC9A1KVeuyKnr8sYKec4ozaQ",
+      "canal": "Billion Dollar Boy UK",
+      "handle": "billiondollarboy"
+    },
+    "Code and Theory": null,
+    "McCann": null,
+    "ACC": null,
+    "MSQ Partners": null,
+    "ATTN:": null,
+    "Courage": null,
+    "Sounds Fun": null,
+    "SuperBloom House": {
+      "id": "UCh19nD8XLNeKagLt-ITQVJg",
+      "canal": "SuperBloom House",
+      "handle": "superbloomhouse"
+    },
+    "JOAN Creative": {
+      "id": "UCV0GyOvq30GA7VIIm-Z-R_w",
+      "canal": "JOAN Creative",
+      "handle": "joancreative"
+    },
+    "LOLA MullenLowe": null,
+    "Colle McVoy": {
+      "id": "UCM0si-z2S6Hp3sBUJItq33A",
+      "canal": "collemcvoy",
+      "handle": "collemcvoy"
+    },
+    "Crispin": null,
+    "alma": null,
+    "the community": {
+      "id": "UCGwZxdftdoYXHN1VuGxsqlA",
+      "canal": "the community",
+      "handle": "thecommunityagency"
+    },
+    "Giant Spoon": null,
+    "Digitas": {
+      "id": "UCy7V66OFT5BdWYfDFWPvzsQ",
+      "canal": "Digitas",
+      "handle": "digitas"
+    },
+    "FIG": {
+      "id": "UCh1CJd0s3xHPLZwKB0sgfaQ",
+      "canal": "FIG Agency",
+      "handle": "figagency"
+    },
+    "Silverside": {
+      "id": "UCzymVcPb40TWIwMizTkttEQ",
+      "canal": "SilversideAI",
+      "handle": "silversideai"
+    },
+    "Zulu Alpha Kilo": {
+      "id": "UClkAeCyPIQlA87DUUUGxJDA",
+      "canal": "Zulu Alpha Kilo",
+      "handle": "zulualphakilo"
+    },
+    "Brains": {
+      "id": "UCcuPnnxQGgnt1SKnRXTO1Eg",
+      "canal": "Brains",
+      "handle": "brainsagency"
+    },
+    "DNA&STONE": null,
+    "Loop": {
+      "id": "UCqQ-rRf8fqY5H0xfN9-oGSA",
+      "canal": "loop - Automotive PR and Communications Agency",
+      "handle": "loopagency"
+    },
+    "PREACHER": {
+      "id": "UChUqOeXeokTFJQqkSxnYjKA",
+      "canal": "preacher",
+      "handle": "preacher"
+    },
+    "VaynerMedia": {
+      "id": "UCctXZhXmG-kf3tlIXgVZUlw",
+      "canal": "VaynerMedia",
+      "handle": "vaynermedia"
+    },
+    "Whalar": {
+      "id": "UCjwQElQXWapXMekWqIfJ4ew",
+      "canal": "Whalar",
+      "handle": "whalar"
+    },
+    "72andSunny": {
+      "id": "UChy4-mFHgXAJFRxitCztVyw",
+      "canal": "72andSunny",
+      "handle": "72andsunny"
+    },
+    "Goodby Silverstein & Partners": {
+      "id": "UC2ZoIWPQgNmzRUdp9gMBouQ",
+      "canal": "Goodby Silverstein",
+      "handle": "goodbysilverstein"
+    },
+    "Anomaly": {
+      "id": "UCqck1kDsBbrlKWHGRsk7dbQ",
+      "canal": "Anomaly",
+      "handle": "anomaly"
+    },
+    "Deutsch": {
+      "id": "UCJ8nEVd9VU3exWsFtrKLVOg",
+      "canal": "deutschny",
+      "handle": "deutschny"
+    },
+    "McKinney": {
+      "id": "UCZewCYSWJM0T8mlkQc1sXwg",
+      "canal": "McKinney",
+      "handle": "mckinney"
+    },
+    "BarkleyOKRP": {
+      "id": "UCUtfQMnnMvbXySqdu73dK4g",
+      "canal": "BarkleyOKRP",
+      "handle": "barkleyokrp"
+    },
+    "Callen": null,
+    "Alto": {
+      "id": "UCiY4f5r2HhuUGNtFyfc5gDQ",
+      "canal": "Alto Agency",
+      "handle": "altoagency"
+    },
+    "Conscious Minds": null,
+    "Iverson": null,
+    "Laughlin Constable": {
+      "id": "UCa6fDgWaDrYN5BUvnV1kVwQ",
+      "canal": "Laughlin Constable",
+      "handle": "laughlinconstable"
+    },
+    "Cape": null,
+    "Corner Table Creative": {
+      "id": "UCFgeiwMXqf9W5-2lnCDgdJg",
+      "canal": "The Corner Table",
+      "handle": "cornertable"
+    },
+    "Flower Shop": null,
+    "Collectively": null,
+    "Influential": null,
+    "We Are Social": {
+      "id": "UCJHXUY0HXmXVC-4Ffm6ehWA",
+      "canal": "We Are Social",
+      "handle": "wearesocial"
+    },
+    "Dept": null,
+    "Gale": null,
+    "R/GA": null,
+    "BBDO": {
+      "id": "UCH5o3Ru05IjEEYCPb1jigag",
+      "canal": "bbdoworldwide",
+      "handle": "bbdoworldwide"
     }
   }
 }
