@@ -860,6 +860,710 @@
       ],
       "regiao": "EUA",
       "cc": "US"
+    },
+    {
+      "nome": "LePub",
+      "youtube": [
+        "lepub",
+        "LePubMilan",
+        "lepubworldwide"
+      ],
+      "regiao": "Itália",
+      "cc": "IT",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Rethink",
+      "youtube": [
+        "rethinkideas",
+        "rethink",
+        "rethinkcanada"
+      ],
+      "regiao": "Canadá",
+      "cc": "CA",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Isle of Any",
+      "youtube": [
+        "isleofany"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "TBWA\\Media Arts Lab",
+      "youtube": [
+        "mediaartslab",
+        "tbwamal"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "DAVID",
+      "youtube": [
+        "davidtheagency",
+        "DAVIDagency",
+        "davidmiami"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Motion Sickness",
+      "youtube": [
+        "motionsickness",
+        "motionsicknessnz"
+      ],
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Fallon",
+      "youtube": [
+        "fallonworldwide",
+        "fallon"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Publicis Conseil",
+      "youtube": [
+        "publicisconseil"
+      ],
+      "regiao": "França",
+      "cc": "FR",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Special",
+      "youtube": [
+        "specialgroup",
+        "specialgroupnz",
+        "specialus"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "WESAYHI",
+      "youtube": [
+        "wesayhi"
+      ],
+      "regiao": "Malta",
+      "cc": "MT",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Klick Health",
+      "youtube": [
+        "klickhealth",
+        "klick"
+      ],
+      "regiao": "Canadá",
+      "cc": "CA",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "DDB",
+      "youtube": [
+        "ddbworldwide",
+        "DDB",
+        "ddb"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "FCB",
+      "youtube": [
+        "fcbglobal",
+        "fcbchicago",
+        "fcb"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Serviceplan",
+      "youtube": [
+        "serviceplan",
+        "serviceplangroup"
+      ],
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Bear Meets Eagle On Fire",
+      "youtube": [
+        "bearmeetseagleonfire",
+        "bmeof"
+      ],
+      "regiao": "Austrália",
+      "cc": "AU",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "DM9",
+      "youtube": [
+        "dm9",
+        "dm9oficial"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "BigTime Creative Shop",
+      "youtube": [
+        "bigtimecreativeshop",
+        "bigtime"
+      ],
+      "regiao": "Arábia Saudita",
+      "cc": "SA",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "L&C",
+      "youtube": [
+        "landc",
+        "lcnyc"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Dentsu Creative",
+      "youtube": [
+        "dentsucreative",
+        "dentsucreativeindia"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "GUT Buenos Aires",
+      "youtube": [
+        "gutbuenosaires",
+        "gutagency"
+      ],
+      "regiao": "Argentina",
+      "cc": "AR",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "VCCP",
+      "youtube": [
+        "vccp",
+        "vccplondon"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Known",
+      "youtube": [
+        "known",
+        "knownhq"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Mirimar",
+      "youtube": [
+        "mirimar",
+        "mirimarla"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "IW Group",
+      "youtube": [
+        "iwgroup",
+        "iwgroupinc"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Billion Dollar Boy",
+      "youtube": [
+        "billiondollarboy"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Code and Theory",
+      "youtube": [
+        "codeandtheory"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "McCann",
+      "youtube": [
+        "mccannworldgroup",
+        "mccann",
+        "mccannny"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "ACC",
+      "youtube": [
+        "acc",
+        "accagencia"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "MSQ Partners",
+      "youtube": [
+        "msqpartners",
+        "msq"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "ATTN:",
+      "youtube": [
+        "attn"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Courage",
+      "youtube": [
+        "courageagency",
+        "courage"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Sounds Fun",
+      "youtube": [
+        "soundsfun",
+        "soundsfunagency"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "SuperBloom House",
+      "youtube": [
+        "superbloomhouse"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "JOAN Creative",
+      "youtube": [
+        "joancreative",
+        "joan"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "LOLA MullenLowe",
+      "youtube": [
+        "lolamullenlowe",
+        "lola"
+      ],
+      "regiao": "Espanha",
+      "cc": "ES",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Colle McVoy",
+      "youtube": [
+        "collemcvoy"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Crispin",
+      "youtube": [
+        "crispin",
+        "crispinporterbogusky",
+        "cpbgroup"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "alma",
+      "youtube": [
+        "almaadv",
+        "alma"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "the community",
+      "youtube": [
+        "thecommunityagency",
+        "thecommunity"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Giant Spoon",
+      "youtube": [
+        "giantspoon"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Digitas",
+      "youtube": [
+        "digitas"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "FIG",
+      "youtube": [
+        "figagency",
+        "fig"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Silverside",
+      "youtube": [
+        "silverside",
+        "silversideai"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Zulu Alpha Kilo",
+      "youtube": [
+        "zulualphakilo",
+        "zak"
+      ],
+      "regiao": "Canadá",
+      "cc": "CA",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Brains",
+      "youtube": [
+        "brainsagency",
+        "brains"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "DNA&STONE",
+      "youtube": [
+        "dnaandstone",
+        "dnastone"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Loop",
+      "youtube": [
+        "loopagency",
+        "loop"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "PREACHER",
+      "youtube": [
+        "preacher",
+        "preachercollective"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "VaynerMedia",
+      "youtube": [
+        "vaynermedia"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Whalar",
+      "youtube": [
+        "whalar"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "72andSunny",
+      "youtube": [
+        "72andsunny"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Goodby Silverstein & Partners",
+      "youtube": [
+        "goodbysilverstein",
+        "gsandp",
+        "gsp"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Anomaly",
+      "youtube": [
+        "anomaly",
+        "anomalyinc"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Deutsch",
+      "youtube": [
+        "deutsch",
+        "deutschla",
+        "deutschny"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "McKinney",
+      "youtube": [
+        "mckinney"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "BarkleyOKRP",
+      "youtube": [
+        "barkleyokrp",
+        "barkley"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Callen",
+      "youtube": [
+        "callen",
+        "callenagency"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Alto",
+      "youtube": [
+        "altoagency",
+        "alto"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Conscious Minds",
+      "youtube": [
+        "consciousminds"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Iverson",
+      "youtube": [
+        "iverson",
+        "iversonagency"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Laughlin Constable",
+      "youtube": [
+        "laughlinconstable"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Cape",
+      "youtube": [
+        "capeagency",
+        "cape"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Corner Table Creative",
+      "youtube": [
+        "cornertable",
+        "cornertablecreative"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Flower Shop",
+      "youtube": [
+        "flowershop",
+        "flowershopagency"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Collectively",
+      "youtube": [
+        "collectively",
+        "collectivelyinc"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Influential",
+      "youtube": [
+        "influential"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "We Are Social",
+      "youtube": [
+        "wearesocial",
+        "wearesocialus"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Dept",
+      "youtube": [
+        "deptagency",
+        "dept"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "Gale",
+      "youtube": [
+        "galepartners",
+        "gale"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "R/GA",
+      "youtube": [
+        "rga",
+        "RGA"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "lista": "Cannes Lions / Adweek 2022–2026"
+    },
+    {
+      "nome": "BBDO",
+      "youtube": [
+        "bbdo",
+        "bbdoworldwide",
+        "bbdony"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "lista": "Cannes Lions / Adweek 2022–2026"
     }
   ]
 }

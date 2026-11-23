@@ -575,7 +575,12 @@ def canal_id(ag, estado):
         m = re.search(r'"(?:channelId|externalId)"\s*:\s*"(UC[\w-]{22})"', pag) or re.search(r"/channel/(UC[\w-]{22})", pag)
         t = re.search(r'<meta property="og:title" content="([^"]+)"', pag)
         nome = html.unescape(t.group(1)) if t else ""
-        if m and chave_ag[:5] in chave(nome):
+        d = re.search(r'<meta property="og:description" content="([^"]*)"', pag)
+        desc = html.unescape(d.group(1)) if d else ""
+        # nomes curtos/genéricos (Loop, Known, Cape...) precisam parecer agência de verdade
+        generico = len(chave_ag) <= 6
+        parece_agencia = re.search(r"agen|advertis|creative|criativ|publicid|marketing|brand|studio|comunica|network|ideas", nome + " " + desc, re.I)
+        if m and chave_ag[:5] in chave(nome) and (not generico or parece_agencia):
             cache[ag["nome"]] = {"id": m.group(1), "canal": nome, "handle": h}
             log("  canal encontrado:", ag["nome"], "→", nome, m.group(1))
             return cache[ag["nome"]]
