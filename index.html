@@ -3,58 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0b0b0f">
+<meta name="theme-color" content="#000000">
 <title>AD Drop · campanhas que estrearam hoje no mundo</title>
-<meta name="description" content="As campanhas publicitárias que estrearam hoje e nos últimos dias, no mundo inteiro, com modo teatro para assistir os filmes em sequência.">
+<meta name="description" content="Timeline das campanhas publicitárias que estrearam no mundo inteiro, com os filmes tocando enquanto você rola.">
 <meta property="og:title" content="AD Drop">
-<meta property="og:description" content="As campanhas publicitárias que estrearam hoje e nos últimos dias, no mundo inteiro, com modo teatro para assistir os filmes em sequência.">
+<meta property="og:description" content="Timeline das campanhas publicitárias que estrearam no mundo inteiro, com os filmes tocando enquanto você rola.">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://i.ytimg.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Public+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="style.css?v=13">
-<link rel="stylesheet" href="home.css?v=2">
+<link rel="preconnect" href="https://www.youtube-nocookie.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Public+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css?v=20">
 </head>
-<body class="ad">
-<header class="ad-nav" id="nav">
-  <div class="ad-nav-row">
-    <a href="./" class="ad-logo" id="logo" aria-label="AD Drop, início">AD<span>Drop</span></a>
-    <div class="ad-search">
-      <span aria-hidden="true">⌕</span>
-      <input id="q" type="search" placeholder="Marca, agência, campanha…" aria-label="Buscar campanhas" autocomplete="off">
-    </div>
-    <div class="ad-nav-acts">
-      <div class="ad-calwrap">
-        <button type="button" class="ad-icon-btn" id="open-cal" aria-expanded="false" aria-controls="calpop">📅 <span>Por dia</span></button>
-        <div class="ad-calpop" id="calpop" hidden>
-          <div class="ad-cal-head">
-            <button type="button" class="ad-nav-btn" id="prev" aria-label="Mês anterior">‹</button>
-            <strong id="cal-title"></strong>
-            <button type="button" class="ad-nav-btn" id="next" aria-label="Próximo mês">›</button>
-          </div>
-          <div class="ad-cal" id="cal"></div>
-          <p class="ad-cal-legend"><i></i> dia com campanhas</p>
-        </div>
-      </div>
-      <button type="button" class="ad-icon-btn ad-theater-btn" id="open-theater">▶ <span>Modo teatro</span></button>
-    </div>
+<body>
+<header class="bar-top">
+  <div class="bar-in">
+    <a href="./" class="logo" id="top" aria-label="AD Drop, voltar ao topo">AD<span>Drop</span></a>
+    <span class="upd" id="updated"></span>
+    <button type="button" class="sound-btn" id="sound" aria-pressed="false" aria-label="Som dos filmes"></button>
   </div>
-  <nav class="ad-chips" id="chips" aria-label="Filtros"></nav>
+  <nav class="chips" id="chips" aria-label="Filtros"></nav>
 </header>
-
-<section class="ad-hero" id="hero" aria-label="Destaques" hidden></section>
-
-<main class="ad-main">
-  <p class="ad-status" id="status" role="status">Carregando campanhas…</p>
+<main class="timeline">
+  <p class="status" id="status" role="status">Carregando campanhas…</p>
   <div id="feed"></div>
 </main>
-
-<footer class="ad-foot">
-  <p><strong>AD Drop</strong> · campanhas publicadas por agências, veículos e páginas de publicidade no mundo inteiro. <span id="updated"></span></p>
-  <p>Atualizado automaticamente cinco vezes por dia. Imagens e filmes pertencem às marcas e aos veículos citados.</p>
-</footer>
-<script src="app.js?v=14"></script>
+<script src="app.js?v=20"></script>
 </body>
 </html>
