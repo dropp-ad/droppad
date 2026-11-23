@@ -297,7 +297,7 @@
     var calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!MOBILE.matches && !calm) {
       hero.preview = setTimeout(function () {
-        if (th || fd || document.hidden) return;
+        if (th || fd || cn || document.hidden) return;
         var f = el("iframe", "ad-hero-video");
         var id = c.yt[0];
         f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&mute=1&controls=0&loop=1&playlist=" + id + "&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1";
@@ -309,7 +309,7 @@
       }, 2500);
     }
     hero.timer = setTimeout(function () {
-      if (th || fd || document.hidden || !isHome()) return;
+      if (th || fd || cn || document.hidden || !isHome()) return;
       hero.i = (hero.i + 1) % hero.list.length;
       renderHero();
     }, 16000);
@@ -714,6 +714,7 @@
   }
 
   function openTheater(startId) {
+    if (openCinema(startId)) return;
     if (MOBILE.matches) { openFeed(startId); return; }
     if (th) closeTheater();
     var entries = entriesFor(viewItems());
@@ -1233,6 +1234,330 @@
     if (opener && opener.focus) opener.focus();
   }
 
+  /* ---------- Cinema: modo teatro em tela cheia, 16:9, abre junto com o site ---------- */
+  var cn = null;
+  function cinemaEntries() {
+    return entriesFor(viewItems()).filter(function (e) { return e.kind !== "card"; });
+  }
+  function openCinema(startId) {
+    if (cn) closeCinema(true);
+    closeInfo();
+    var entries = cinemaEntries();
+    if (!entries.length) return false;
+    var start = 0;
+    if (startId) entries.forEach(function (e, i) { if (e.c.id === startId && !start && e.part === 1) start = i; });
+
+    var root = el("div", "cn");
+    root.setAttribute("role", "dialog");
+    root.setAttribute("aria-modal", "true");
+    root.setAttribute("aria-label", "Modo teatro");
+
+    var bg = el("div", "cn-bg");
+    var stage = el("div", "cn-stage");
+    var frame = el("div", "cn-frame");
+    var host = el("div", "cn-host");
+    frame.appendChild(host);
+    var poster = el("div", "cn-poster");
+    frame.appendChild(poster);
+    var spin = el("div", "cn-spin");
+    frame.appendChild(spin);
+    var hit = el("button", "cn-hit");
+    hit.type = "button";
+    hit.setAttribute("aria-label", "Pausar ou continuar");
+    frame.appendChild(hit);
+    var paused = el("div", "cn-paused", "❚❚");
+    frame.appendChild(paused);
+    stage.appendChild(frame);
+
+    var shade = el("div", "cn-shade");
+
+    var top = el("div", "cn-top");
+    var logo = el("span", "ad-logo cn-logo");
+    logo.innerHTML = "AD<span>Drop</span>";
+    top.appendChild(logo);
+    var where = el("span", "cn-where");
+    top.appendChild(where);
+    var acts = el("div", "cn-top-acts");
+    var sound = el("button", "cn-btn cn-sound", "🔇 Ativar som");
+    sound.type = "button";
+    var exit = el("button", "cn-btn cn-exit");
+    exit.type = "button";
+    exit.appendChild(document.createTextNode("Ver tudo "));
+    exit.appendChild(el("kbd", null, "Esc"));
+    acts.appendChild(sound); acts.appendChild(exit);
+    top.appendChild(acts);
+
+    var info = el("div", "cn-info");
+    var bottom = el("div", "cn-bottom");
+    var prog = el("div", "cn-prog");
+    prog.appendChild(el("i"));
+    var ctrl = el("div", "cn-ctrl");
+    var prev = el("button", "cn-round", "⏮");
+    var play = el("button", "cn-round cn-play", "❚❚");
+    var next = el("button", "cn-round", "⏭");
+    [prev, play, next].forEach(function (b) { b.type = "button"; ctrl.appendChild(b); });
+    prev.setAttribute("aria-label", "Filme anterior");
+    play.setAttribute("aria-label", "Pausar ou continuar");
+    next.setAttribute("aria-label", "Próximo filme");
+    var count = el("span", "cn-count");
+    ctrl.appendChild(count);
+    var upLabel = el("span", "cn-up-label", "A seguir");
+    ctrl.appendChild(upLabel);
+    var strip = el("div", "cn-strip");
+    bottom.appendChild(prog); bottom.appendChild(ctrl); bottom.appendChild(strip);
+
+    root.appendChild(bg); root.appendChild(stage); root.appendChild(shade);
+    root.appendChild(top); root.appendChild(info); root.appendChild(bottom);
+    document.body.appendChild(root);
+
+    cn = { root: root, entries: entries, i: start, bg: bg, host: host, poster: poster, spin: spin, info: info, strip: strip,
+           prog: prog, where: where, count: count, sound: sound, playBtn: play, paused: paused,
+           muted: true, player: null, kind: "", token: 0, timer: null, idle: null,
+           overflow: document.body.style.overflow };
+    document.body.style.overflow = "hidden";
+    clearTimeout(hero.preview);
+    var oldVideo = document.querySelector(".ad-hero-video");
+    if (oldVideo) oldVideo.remove();
+
+    exit.addEventListener("click", function () { closeCinema(); });
+    sound.addEventListener("click", function () { setCinemaSound(cn.muted); });
+    prev.addEventListener("click", function () { cinemaGo(cn.i - 1); });
+    next.addEventListener("click", function () { cinemaGo(cn.i + 1); });
+    play.addEventListener("click", cinemaToggle);
+    hit.addEventListener("click", function () {
+      // o primeiro toque liga o som (navegadores só deixam com um gesto da pessoa)
+      if (cn.muted) setCinemaSound(true); else cinemaToggle();
+    });
+    document.addEventListener("keydown", onCinemaKey);
+    root.addEventListener("mousemove", wake);
+    root.addEventListener("touchstart", wake, { passive: true });
+    wake();
+    cinemaShow(start);
+    requestAnimationFrame(function () { root.classList.add("cn-open"); });
+    return true;
+  }
+
+  function wake() {
+    if (!cn) return;
+    cn.root.classList.remove("cn-idle");
+    clearTimeout(cn.idle);
+    cn.idle = setTimeout(function () { if (cn && !cn.root.classList.contains("cn-is-paused")) cn.root.classList.add("cn-idle"); }, 3500);
+  }
+
+  function onCinemaKey(e) {
+    if (!cn || info) return;
+    if (e.key === "Escape") { e.preventDefault(); closeCinema(); }
+    else if (e.key === "ArrowRight") { cinemaGo(cn.i + 1); wake(); }
+    else if (e.key === "ArrowLeft") { cinemaGo(cn.i - 1); wake(); }
+    else if (e.key === " " || e.key === "k") { e.preventDefault(); cinemaToggle(); wake(); }
+    else if (e.key === "m") setCinemaSound(cn.muted);
+  }
+
+  function cinemaGo(i) {
+    if (!cn) return;
+    if (i < 0) i = 0;
+    if (i >= cn.entries.length) i = 0; // fim da fila: recomeça
+    cinemaShow(i);
+  }
+
+  function cinemaInfo(e) {
+    var c = e.c, box = cn.info;
+    box.textContent = "";
+    var eye = el("p", "ad-hero-eye");
+    eye.appendChild(el("span", "ad-pill", c.date === state.today ? "Estreou hoje" : relDay(c.date)));
+    eye.appendChild(document.createTextNode(flagOf(c.cc) + " " + (c.region || "") + (e.parts > 1 ? " · filme " + e.part + " de " + e.parts : "")));
+    box.appendChild(eye);
+    var h = el("h2", "ad-hero-brand cn-brand", c.brand || c.title);
+    var n = (c.brand || c.title).length;
+    h.style.setProperty("--k", (n <= 6 ? 9 : n <= 10 ? 7 : n <= 16 ? 5.5 : 4.2) + "vw");
+    h.style.setProperty("--max", (n <= 6 ? 130 : n <= 10 ? 104 : n <= 16 ? 80 : 62) + "px");
+    box.appendChild(h);
+    if (c.brand) box.appendChild(el("p", "ad-hero-title", c.title));
+    var meta = [c.agency && "Agência " + c.agency, c.source].filter(Boolean).join(" · ");
+    if (meta) box.appendChild(el("p", "ad-hero-meta", meta));
+    if (c.summary) box.appendChild(el("p", "ad-hero-sum cn-sum", c.summary));
+    var row = el("div", "cn-info-acts");
+    var more = el("button", "cn-btn", "ⓘ Mais informações");
+    more.type = "button";
+    more.addEventListener("click", function () { cinemaPause(); openInfo(c, more); });
+    row.appendChild(more);
+    if (c.url) row.appendChild(link("cn-btn", "Ler em " + (c.source || "fonte") + " ↗", c.url));
+    var pop = el("span", "cn-pop");
+    row.appendChild(pop);
+    if (e.kind === "yt") popOf(e.id).then(function (v) { if (cn && cn.entries[cn.i] === e) pop.textContent = popText(v, c.date); });
+    box.appendChild(row);
+    box.classList.remove("cn-in");
+    void box.offsetWidth;
+    box.classList.add("cn-in");
+  }
+
+  function cinemaStrip() {
+    var s = cn.strip;
+    s.textContent = "";
+    var total = cn.entries.length;
+    for (var k = 1; k <= Math.min(14, total - 1); k++) {
+      (function (idx) {
+        var e = cn.entries[idx];
+        var b = el("button", "cn-thumb");
+        b.type = "button";
+        b.setAttribute("aria-label", "Assistir " + (e.c.brand || e.c.title));
+        var img = el("img");
+        img.alt = ""; img.loading = "lazy"; img.referrerPolicy = "no-referrer";
+        img.src = e.kind === "yt" ? ytThumb(e.id, false) : thumbOf(e.c, false);
+        img.addEventListener("error", function () { img.remove(); });
+        b.appendChild(img);
+        var cap = el("span", "cn-thumb-cap");
+        cap.appendChild(el("b", null, e.c.brand || e.c.title));
+        cap.appendChild(el("span", null, e.c.title));
+        b.appendChild(cap);
+        b.addEventListener("click", function () { cinemaShow(idx); });
+        s.appendChild(b);
+      })((cn.i + k) % total);
+    }
+    s.scrollLeft = 0;
+  }
+
+  function cinemaShow(i) {
+    var e = cn.entries[i];
+    cn.i = i;
+    cn.token++;
+    var token = cn.token;
+    clearInterval(cn.timer);
+    cn.prog.firstChild.style.width = "0%";
+    cn.root.classList.remove("cn-is-paused", "cn-err");
+    cn.root.classList.add("cn-loading");
+    cn.playBtn.textContent = "❚❚";
+    cn.where.textContent = "Modo teatro · " + heading();
+    cn.count.textContent = (i + 1) + " de " + cn.entries.length;
+    var thumb = e.kind === "yt" ? ytThumb(e.id, true) : thumbOf(e.c, true);
+    cn.bg.style.backgroundImage = thumb ? "url(\"" + thumb + "\")" : "";
+    cn.poster.style.backgroundImage = thumb ? "url(\"" + thumb + "\")" : "";
+    cn.poster.classList.remove("cn-gone");
+    cinemaInfo(e);
+    cinemaStrip();
+    function ok() { return cn && cn.token === token; }
+    function ended() { if (ok()) cinemaGo(cn.i + 1); }
+    function failed() {
+      if (!ok()) return;
+      cinemaSkip();
+    }
+    function playing() {
+      if (!ok()) return;
+      cn.root.classList.remove("cn-loading", "cn-is-paused");
+      cn.poster.classList.add("cn-gone");
+      cn.playBtn.textContent = "❚❚";
+    }
+    if (e.kind === "yt") {
+      if (cn.kind === "yt" && cn.player && cn.player.loadVideoById) {
+        cn.player.loadVideoById(e.id);
+        if (cn.muted) cn.player.mute(); else cn.player.unMute();
+      } else {
+        stopCinemaPlayer();
+        var div = el("div");
+        cn.host.appendChild(div);
+        loadYouTube().then(function (YT) {
+          if (!ok()) return;
+          cn.kind = "yt";
+          cn.player = new YT.Player(div, {
+            videoId: e.id,
+            host: "https://www.youtube-nocookie.com",
+            playerVars: { autoplay: 1, mute: 1, controls: 0, rel: 0, playsinline: 1, modestbranding: 1, iv_load_policy: 3, disablekb: 1, fs: 0 },
+            events: {
+              onReady: function (ev) { if (!cn) return; if (!cn.muted) ev.target.unMute(); else ev.target.mute(); ev.target.playVideo(); },
+              onStateChange: function (ev) {
+                if (!cn) return;
+                if (ev.data === 0) cinemaGo(cn.i + 1);
+                else if (ev.data === 1) { cn.fails = 0; cn.root.classList.remove("cn-loading", "cn-is-paused"); cn.poster.classList.add("cn-gone"); cn.playBtn.textContent = "❚❚"; }
+                else if (ev.data === 2) { cn.root.classList.add("cn-is-paused"); cn.playBtn.textContent = "▶"; }
+              },
+              onError: function () { if (cn) cinemaSkip(); }
+            }
+          });
+        }).catch(failed);
+      }
+      cn.timer = setInterval(function () {
+        if (!ok() || !cn.player || !cn.player.getDuration) return;
+        try {
+          var d = cn.player.getDuration(), t = cn.player.getCurrentTime();
+          if (d) cn.prog.firstChild.style.width = Math.min(100, t / d * 100) + "%";
+        } catch (err) { /* carregando */ }
+      }, 250);
+      return;
+    }
+    // Vimeo
+    stopCinemaPlayer();
+    loadVimeo().then(function (Vimeo) {
+      if (!ok()) return;
+      cn.kind = "vimeo";
+      var p = new Vimeo.Player(cn.host, { url: e.url, autoplay: true, muted: cn.muted, playsinline: true, controls: false, dnt: true, responsive: true });
+      cn.player = p;
+      p.on("play", playing);
+      p.on("pause", function () { if (ok()) { cn.root.classList.add("cn-is-paused"); cn.playBtn.textContent = "▶"; } });
+      p.on("ended", ended);
+      p.on("timeupdate", function (d) { if (ok()) cn.prog.firstChild.style.width = (d.percent * 100) + "%"; });
+      p.ready().catch(failed);
+    }).catch(failed);
+  }
+
+  // Filme que não toca: pula para o próximo (e para de tentar se nada estiver tocando).
+  function cinemaSkip() {
+    cn.fails = (cn.fails || 0) + 1;
+    cn.root.classList.add("cn-err");
+    if (cn.fails >= 6) { cn.root.classList.add("cn-dead"); cn.root.classList.remove("cn-loading"); return; }
+    var t = cn.token;
+    setTimeout(function () { if (cn && cn.token === t) cinemaGo(cn.i + 1); }, 1600);
+  }
+
+  function stopCinemaPlayer() {
+    if (!cn) return;
+    try {
+      if (cn.player && cn.kind === "yt" && cn.player.destroy) cn.player.destroy();
+      else if (cn.player && cn.kind === "vimeo") cn.player.destroy();
+    } catch (err) { /* já destruído */ }
+    cn.player = null;
+    cn.kind = "";
+    cn.host.textContent = "";
+  }
+
+  function cinemaPause() {
+    if (!cn || !cn.player) return;
+    try { if (cn.kind === "yt") cn.player.pauseVideo(); else cn.player.pause(); } catch (err) { /* nada */ }
+  }
+  function cinemaToggle() {
+    if (!cn || !cn.player) return;
+    if (cn.kind === "yt") {
+      if (cn.player.getPlayerState && cn.player.getPlayerState() === 1) cn.player.pauseVideo(); else cn.player.playVideo();
+    } else {
+      cn.player.getPaused().then(function (p) { if (p) cn.player.play(); else cn.player.pause(); });
+    }
+  }
+  function setCinemaSound(on) {
+    if (!cn) return;
+    cn.muted = !on;
+    cn.sound.textContent = on ? "🔊 Som ligado" : "🔇 Ativar som";
+    cn.root.classList.toggle("cn-muted", !on);
+    if (!cn.player) return;
+    try {
+      if (cn.kind === "yt") { if (on) cn.player.unMute(); else cn.player.mute(); cn.player.playVideo(); }
+      else cn.player.setMuted(!on).catch(function () {});
+    } catch (err) { /* player carregando */ }
+  }
+
+  function closeCinema(silent) {
+    if (!cn) return;
+    clearInterval(cn.timer);
+    clearTimeout(cn.idle);
+    stopCinemaPlayer();
+    document.removeEventListener("keydown", onCinemaKey);
+    document.body.style.overflow = cn.overflow;
+    var root = cn.root;
+    cn = null;
+    root.classList.remove("cn-open");
+    root.classList.add("cn-closing");
+    setTimeout(function () { root.remove(); }, 350);
+    if (!silent && isHome()) renderHero();
+  }
+
   /* ---------- Início ---------- */
   fromHash();
   fetch("campaigns.json", { cache: "no-store" })
@@ -1247,6 +1572,8 @@
       s.hidden = state.items.length > 0;
       s.textContent = "Ainda não há campanhas registradas.";
       render();
+      // O site abre direto no modo teatro; Esc leva para a vitrine com tudo.
+      if (state.items.length && location.hash !== "#inicio") openCinema(null);
     })
     .catch(function () {
       $("status").textContent = "Não foi possível carregar as campanhas. Recarregue a página em alguns minutos.";
