@@ -29,7 +29,7 @@
       "falhas": 0
     },
     "Janela Publicitária": {
-      "falhas": 3
+      "falhas": 4
     },
     "Creativosbr": {
       "url": "https://creativosbr.com.br/feed/",
@@ -52,34 +52,34 @@
       "falhas": 0
     },
     "Adlatina": {
-      "falhas": 3
+      "falhas": 4
     },
     "Merca2.0": {
       "url": "https://www.merca20.com/feed/",
       "falhas": 0
     },
     "Revista Mercado": {
-      "falhas": 3
+      "falhas": 4
     },
     "Latinspots": {
-      "falhas": 3
+      "falhas": 4
     },
     "InformaBTL": {
       "url": "https://www.informabtl.com/feed/",
       "falhas": 0
     },
     "Reason Why": {
-      "falhas": 3
+      "falhas": 4
     },
     "Marketing Directo": {
       "url": "https://www.marketingdirecto.com/feed/",
       "falhas": 0
     },
     "PuroMarketing": {
-      "falhas": 3
+      "falhas": 4
     },
     "Control Publicidad": {
-      "falhas": 3
+      "falhas": 4
     },
     "El Publicista": {
       "url": "https://www.elpublicista.es/rss",
@@ -94,37 +94,37 @@
       "falhas": 0
     },
     "Ads of the World": {
-      "falhas": 3
+      "falhas": 4
     },
     "DesignRush News": {
-      "falhas": 3
+      "falhas": 4
     },
     "Ads of Brands": {
-      "falhas": 3
+      "falhas": 4
     },
     "ContentGrip": {
       "url": "https://www.contentgrip.com/feed/",
       "falhas": 0
     },
     "LBB Online": {
-      "falhas": 3
+      "falhas": 4
     },
     "Adworld.ie": {
       "url": "https://www.adworld.ie/feed/",
       "falhas": 0
     },
     "Creative Salon": {
-      "falhas": 3
+      "falhas": 4
     },
     "Creative Review": {
-      "falhas": 3
+      "falhas": 4
     },
     "Decision Marketing": {
       "url": "https://www.decisionmarketing.co.uk/feed/",
       "falhas": 0
     },
     "Retail Gazette": {
-      "falhas": 3
+      "falhas": 4
     },
     "Marketing Beat": {
       "url": "https://www.marketing-beat.co.uk/feed/",
@@ -135,7 +135,7 @@
       "falhas": 0
     },
     "The Drum": {
-      "falhas": 3
+      "falhas": 4
     },
     "J'ai un pote dans la com": {
       "url": "https://www.jai-un-pote-dans-la.com/feed/",
@@ -174,17 +174,17 @@
       "falhas": 0
     },
     "Marketech APAC": {
-      "falhas": 3
+      "falhas": 4
     },
     "Marketing-Interactive": {
-      "falhas": 3
+      "falhas": 4
     },
     "MediaNews4U": {
       "url": "https://www.medianews4u.com/feed/",
       "falhas": 0
     },
     "Manifest Media": {
-      "falhas": 3
+      "falhas": 4
     },
     "afaqs": {
       "url": "https://www.afaqs.com/rss",
@@ -208,14 +208,14 @@
     "20min.ch": "sem-feed",
     "lanouvellerepublique.fr": "sem-feed",
     "meinbezirk.at": "sem-feed",
-    "welt.de": "pendente",
-    "osthessen-news.de": "pendente",
-    "spox.com": "pendente",
-    "mediakey.it": "pendente",
-    "lagazzettadelpubblicitario.it": "pendente",
-    "engage.it": "pendente",
-    "newsdellavalle.com": "pendente",
-    "mbnews.it": "pendente",
+    "welt.de": "sem-feed",
+    "osthessen-news.de": "sem-feed",
+    "spox.com": "sem-feed",
+    "mediakey.it": "sem-feed",
+    "lagazzettadelpubblicitario.it": "sem-feed",
+    "engage.it": "sem-feed",
+    "newsdellavalle.com": "sem-feed",
+    "mbnews.it": "sem-feed",
     "marsicalive.it": "pendente",
     "radioroma.it": "pendente",
     "iodonna.it": "pendente",
@@ -252,7 +252,15 @@
     "mpce.mp.br": "pendente",
     "conexaoto.com.br": "pendente",
     "romanews.com.br": "pendente",
-    "jwave.com.br": "pendente"
+    "jwave.com.br": "pendente",
+    "usatoday.com": "pendente",
+    "pmq.com": "pendente",
+    "finance.yahoo.com": "pendente",
+    "note.com": "pendente",
+    "citybiz.co": "pendente",
+    "timesunion.com": "pendente",
+    "news.sky.com": "pendente",
+    "dailymail.com": "pendente"
   },
   "bloqueados_yt": [
     "A4c6TvOxSko",
@@ -261,15 +269,15 @@
   ],
   "arquivo": {
     "Meio & Mensagem": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Propmark": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Grandes Nomes da Propaganda": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Marcas pelo Mundo": {
@@ -281,11 +289,11 @@
       "fim": true
     },
     "Nosso Meio": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "ABC da Comunicação": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Janela Publicitária": {
@@ -293,23 +301,23 @@
       "fim": false
     },
     "Creativosbr": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "B9": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Exame": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Roastbrief": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Insider Latam": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Adlatina": {
@@ -317,7 +325,7 @@
       "fim": false
     },
     "Merca2.0": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Revista Mercado": {
@@ -329,7 +337,7 @@
       "fim": false
     },
     "InformaBTL": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Reason Why": {
@@ -349,15 +357,15 @@
       "fim": false
     },
     "El Publicista": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Marketing Dive": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Muse by Clios": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Ads of the World": {
@@ -373,7 +381,7 @@
       "fim": false
     },
     "ContentGrip": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "LBB Online": {
@@ -381,7 +389,7 @@
       "fim": false
     },
     "Adworld.ie": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Creative Salon": {
@@ -393,7 +401,7 @@
       "fim": false
     },
     "Decision Marketing": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Retail Gazette": {
@@ -401,11 +409,11 @@
       "fim": false
     },
     "Marketing Beat": {
-      "pagina": 5,
-      "fim": false
+      "pagina": 7,
+      "fim": true
     },
     "Creative Boom": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "The Drum": {
@@ -413,39 +421,39 @@
       "fim": false
     },
     "J'ai un pote dans la com": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "CB News": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "B&T": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Mediaweek": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Mumbrella": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "The Stable": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Campaign Brief": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Campaign Brief NZ": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Campaign Brief Asia": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Marketech APAC": {
@@ -457,7 +465,7 @@
       "fim": false
     },
     "MediaNews4U": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     },
     "Manifest Media": {
@@ -465,26 +473,57 @@
       "fim": false
     },
     "afaqs": {
-      "pagina": 5,
+      "pagina": 7,
       "fim": false
     }
   },
-  "proxima_busca": 18,
-  "ultima_execucao": "2026-11-23T15:35:57.762523+00:00",
-  "ultimas_novas": 40,
+  "proxima_busca": 8,
+  "ultima_execucao": "2026-11-23T15:39:14.019074+00:00",
+  "ultimas_novas": 27,
   "sem_imagem": [
+    "https://bookingagentinfo.com/news/coco-gauff-partners-with-mercedes-benz-on-new-u-s-open-campaign/",
     "https://clubedecriacao.com.br/ultimas-noticias/",
+    "https://creativosbr.com.br/cruz-vermelha-lanca-campanha-desejos-de-natal-para-combater-a-inseguranca-alimentar/?utm_source=rss&utm_medium=rss&utm_campaign=cruz-vermelha-lanca-campanha-desejos-de-natal-para-combater-a-inseguranca-alimentar",
+    "https://creativosbr.com.br/lacta-convida-ivete-sangalo-para-campanha-de-natal/?utm_source=rss&utm_medium=rss&utm_campaign=lacta-convida-ivete-sangalo-para-campanha-de-natal",
+    "https://exame.com/marketing/5-campanhas-da-semana-para-conferir-especial-dia-das-criancas/",
+    "https://grandesnomesdapropaganda.com.br/anunciantes/ary-fontoura-estrela-nova-campanha-da-acuidar/",
+    "https://grandesnomesdapropaganda.com.br/anunciantes/black-feirao-webmotors-lanca-campanha-com-santander/",
     "https://grandesnomesdapropaganda.com.br/lancamentos-de-mercado/china-in-box-lanca-campanha-inspirada-na-culinaria-oriental/",
+    "https://grandesnomesdapropaganda.com.br/mercado-digital/leve-saude-celebra-seis-anos/",
+    "https://grandesnomesdapropaganda.com.br/veiculos/tv-tem-lanca-campanha-para-o-mes-da-consciencia-negra/",
+    "https://lbbonline.com/news/Chrysler-Turns-Parents-Favourite-Four-Letter-Acronyms-Into-Minivan-Campaign",
+    "https://lbbonline.com/news/Co-op-Takes-On-the-Big-Shop-Faff",
+    "https://lbbonline.com/news/Riksbyggen-BBDO-Nordics-Swedens-Smallest-Homes-Housing-Crisis",
+    "https://news.designrush.com/audi-e-tron-after-dark-bbh-london-silverstone",
     "https://news.designrush.com/essentia-water-rookie-workout-experience-i-play-rocky-campaign",
+    "https://news.designrush.com/garage-beer-terrors-of-the-tailgate-jason-kelce",
     "https://news.designrush.com/kalshi-martha-stewart-insider-trading-ad-es-muy-good",
     "https://news.designrush.com/shopify-mother-la-just-an-idea-campaign-sidekick-ai-entrepreneurs",
+    "https://p2pi.com/dawn-cascade-campaign-offers-tips-game-day-cleanup",
+    "https://p2pi.com/snapple-stage-comedy-event-ferry-new-york",
+    "https://retailtimes.co.uk/morrisons-christmas-ad-unveiled-a-festive-fairytale-thats-just-right/",
+    "https://shots.net/news/view/primark-changes-the-game",
     "https://voenews.com.br/gollog-lanca-campanha-com-foco-no-segmento-b2b-inteligencia-na-entrega-faz-o-seu-negocio-voar/",
+    "https://www.abcdacomunicacao.com.br/dabelle-beauty-apresenta-campanha-o-matte-que-da-match-para-lancamento-do-lip-combo-boca-perfeita-matte/",
     "https://www.abcdacomunicacao.com.br/melody-estrela-campanha-da-uber-para-o-lancamento-do-elas-indicam-moto/",
     "https://www.abcdacomunicacao.com.br/predictus-lanca-novo-posicionamento-de-marca-com-campanha-sobre-os-movimentos-que-antecedem-uma-decisao/",
+    "https://www.adnews.com.au/campaigns/gravox-for-creatures-of-comfort-via-tbwa-melbourne",
+    "https://www.adworld.ie/2026/10/09/boysgirls-rolls-out-namaste-in-latest-jacobs-campaign/",
+    "https://www.adworld.ie/2026/10/23/edelman-rolls-out-new-irish-brand-campaign-for-knorr/",
+    "https://www.adworld.ie/2026/10/23/publicis-dublin-taps-into-parent-reflexes-for-new-laya-healthcare-campaign/",
+    "https://www.adworld.ie/2026/11/06/john-oshea-delivers-for-dhl-in-new-invention-campaign/",
     "https://www.adworld.ie/2026/11/13/acne-dublin-uses-generative-ai-to-create-new-cpl-brand-campaign/",
     "https://www.adworld.ie/2026/11/13/citroen-ireland-launches-le-comfort-campaign-with-bloom/",
     "https://www.adworld.ie/2026/11/13/kfc-ireland-becomes-kentucky-fried-parrott-in-campaign-starring-troy-parrott-and-emma-doran/",
     "https://www.adworld.ie/2026/11/13/re-turn-and-boys-girls-turn-a-discarded-can-into-a-crisis-of-conscience/",
-    "https://www.adworld.ie/2026/11/20/bullfinch-brings-jedward-back-to-the-audition-room-for-dominos-campaign/"
+    "https://www.adworld.ie/2026/11/20/bullfinch-brings-jedward-back-to-the-audition-room-for-dominos-campaign/",
+    "https://www.creativereview.co.uk/mcdonalds-side-missions-xbox-campaign/",
+    "https://www.grocerygazette.co.uk/2026/09/01/hovis-launches-4m-nationwide-campaign/",
+    "https://www.marketingdive.com/news/anthropologies-holiday-marketing-seeks-to-balance-emotion-business-impact/833172/",
+    "https://www.marketingdive.com/news/brand-new-bag-chipotle-unreal-snacks-reach-for-fashion-relevancy/832488/",
+    "https://www.marketingdive.com/news/espolon-tequila-combats-surge-pricing-with-ride-hailing-refund-program/832452/",
+    "https://www.marketingdive.com/news/patron-embraces-dia-de-muertos-for-one-night-only-comedy-show/872814/",
+    "https://www.marketingdive.com/news/target-unwraps-high-concept-holiday-ads-focused-on-gift-giving-academy/833583/",
+    "https://www.tyrepress.com/2026/10/kwik-fit-initiates-kwik-chat-encourages-customers-to-use-mot-time-to-check-in-on-loved-ones/"
   ]
 }
