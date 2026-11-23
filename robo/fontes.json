@@ -623,5 +623,15 @@
     "brand film campaign",
     "anuncio nueva campaña marca"
   ],
-  "descobertas": []
+  "descobertas": [],
+  "portfolios": [
+    {
+      "nome": "Mother London",
+      "pagina": "https://www.motherlondon.com/work",
+      "padrao": "/work/",
+      "agencia": "Mother",
+      "regiao": "Reino Unido",
+      "cc": "GB"
+    }
+  ]
 }

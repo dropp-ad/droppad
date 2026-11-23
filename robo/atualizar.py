@@ -365,6 +365,10 @@ def filmes_de(pagina):
         video = "https://vimeo.com/%s/%s" % (vid, h) if h else "https://vimeo.com/%s" % vid
         break
     if not video:
+        m = re.search(r"vumbnail\.com(?:/|%2F)(\d{6,})", pagina)
+        if m:
+            video = "https://vimeo.com/" + m.group(1)
+    if not video:
         m = INSTA.search(pagina)
         if m:
             video = "https://www.instagram.com/%s/%s/" % ("reel" if m.group(1).startswith("reel") else m.group(1), m.group(2))
@@ -435,6 +439,8 @@ def fotos_de(pagina, base, limite=8):
     miolo = corpo_da_materia(pagina)
     for m in re.finditer(r"<img\b[^>]*>", miolo, re.I):
         t = m.group(0)
+        if re.search(r'alt=["\'][^"\']*(background|logo|avatar|icon)', t, re.I):
+            continue
         srcset = re.search(r'(?:data-srcset|srcset)=["\']([^"\']+)', t)
         if srcset:
             cands = [x.strip().split(" ") for x in srcset.group(1).split(",") if x.strip()]
@@ -540,6 +546,73 @@ def completar_imagens(camp, estado, limite=150):
                 tentadas.add(c["url"])
     estado["sem_imagem"] = sorted(tentadas)
     return n
+
+
+# ---------------------------------------------------------------- portfólios de agências
+def ler_portfolios(fontes, estado, camp, max_por_site=10, dias=60):
+    """Lê a página de trabalhos de cada agência (fontes.json → "portfolios") e transforma cada
+    trabalho novo em campanha: marca, data de publicação no site, filme (Vimeo/YouTube) e fotos."""
+    out = []
+    vistos_all = estado.setdefault("portfolio", {})
+    limite = (HOJE - dt.timedelta(days=dias)).isoformat()
+    for pf in fontes.get("portfolios", []):
+        vistos = set(vistos_all.get(pf["nome"], []))
+        try:
+            idx = baixar(pf["pagina"])
+        except Exception as e:  # noqa: BLE001
+            log("  portfólio falhou:", pf["nome"], e)
+            continue
+        links = []
+        for m in re.finditer(r'href=["\']([^"\'#?]+)["\']', idx):
+            u = urllib.parse.urljoin(pf["pagina"], html.unescape(m.group(1)))
+            if pf["padrao"] in u and u.rstrip("/") != pf["pagina"].rstrip("/") and u not in links:
+                links.append(u)
+        log("  portfólio:", pf["nome"], len(links), "trabalhos na página")
+        for u in [x for x in links if x not in vistos][:max_por_site]:
+            vistos.add(u)
+            try:
+                pag = baixar(u)
+            except Exception:  # noqa: BLE001
+                continue
+            m = re.search(r'"(?:publishedAt|_createdAt|datePublished)"\s*:\s*"(\d{4}-\d{2}-\d{2}T[^"]+)"', pag)
+            data = data_de(m.group(1)) if m else None
+            if not data or data < limite or data > HOJE.isoformat():
+                continue
+            og = re.search(r'property=["\']og:title["\'][^>]*content=["\']([^"\']+)', pag)
+            marca = limpar(og.group(1)) if og else ""
+            marca = re.split(r"\s+[|–—-]\s+", marca)[0].strip() if marca else ""
+            slug_t = urllib.parse.unquote(u.rstrip("/").rsplit("/", 1)[-1]).replace("_", "-")
+            palavras = [w for w in re.split(r"[-\s]+", slug_t) if w]
+            if marca and palavras and chave(palavras[0]) in chave(marca):
+                palavras = palavras[1:] if len(palavras) > 1 else palavras
+            titulo = " ".join(palavras).strip().capitalize() or marca
+            if not marca:
+                marca = palavras[0].capitalize() if palavras else pf["nome"]
+            yts, video = filmes_de(pag)
+            fotos = fotos_de(pag, u)
+            desc = re.search(r'property=["\']og:description["\'][^>]*content=["\']([^"\']+)', pag)
+            desc = limpar(desc.group(1)) if desc else ""
+            if re.search(r"all you need to know|founded in|independent creative", desc, re.I):
+                desc = ""
+            c = {"id": "%s-%s-%s" % (data, slug(marca, 20), slug(titulo, 36)), "date": data, "brand": marca, "title": titulo,
+                 "agency": pf.get("agencia", pf["nome"]), "source": pf["nome"], "url": u,
+                 "region": pf.get("regiao", "Global"), "cc": pf.get("cc", "")}
+            if yts:
+                c["yt"] = yts
+            elif video:
+                c["video"] = video
+            if fotos:
+                c["image"] = fotos[0]
+                if not yts and not video:
+                    c["images"] = fotos
+            hist = historia_de(pag) if not yts and not video else []
+            if hist:
+                c["story"] = hist
+            c["summary"] = traduzir(desc) if desc else ""
+            c["addedAt"] = AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")
+            out.append(c)
+        vistos_all[pf["nome"]] = sorted(vistos)
+    return out
 
 
 # ---------------------------------------------------------------- tradução (opcional)
@@ -763,6 +836,18 @@ def main():
         chaves.add(k)
         yts_usados.update(yts)
         marca_dia.add((chave(marca), it["data"]))
+
+    # 6b) sites das próprias agências (portfólio): cada trabalho novo vira uma campanha
+    for c in ler_portfolios(fontes, estado, camp):
+        if (chave(c["brand"]), c["date"]) in marca_dia or c["id"] in ids:
+            continue
+        if c.get("yt") and all(y in yts_usados for y in c["yt"]):
+            continue
+        novas.append(c)
+        ids.add(c["id"])
+        marca_dia.add((chave(c["brand"]), c["date"]))
+        yts_usados.update(c.get("yt", []))
+        log("  + portfólio:", c["source"], "|", c["brand"], "|", c["title"])
 
     # 7) capas das campanhas antigas sem filme
     capas = 0 if SIMULAR else completar_imagens(camp, estado)
