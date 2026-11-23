@@ -400,6 +400,7 @@ def main():
     chaves = {(chave(c.get("brand", "")), chave(c.get("title", ""))) for c in camp}
     titulos = {chave(c.get("title", "")) for c in camp if len(chave(c.get("title", ""))) > 12}
     yts_usados = {y for c in camp for y in c.get("yt", [])}
+    marca_dia = {(chave(c.get("brand", "")), c.get("date")) for c in camp}
     bloqueados = set(estado["bloqueados_yt"])
     inicio_normal = (HOJE - dt.timedelta(days=JANELA_DIAS)).isoformat()
 
@@ -556,6 +557,8 @@ def main():
         k = (chave(marca), chave(titulo))
         if k in chaves:
             continue
+        if (chave(marca), it["data"]) in marca_dia:
+            continue  # mesma marca no mesmo dia: quase sempre a mesma campanha em outro veículo
         regiao, cc = pais_por_texto(f"{titulo} {resumo_txt}", (f["regiao"], f["cc"]))
         nid = "%s-%s-%s" % (it["data"], slug(marca, 20), slug(titulo, 36))
         while nid in ids:
@@ -572,6 +575,7 @@ def main():
         ids.add(nid)
         chaves.add(k)
         yts_usados.update(yts)
+        marca_dia.add((chave(marca), it["data"]))
 
     # 7) salva
     if SIMULAR:
