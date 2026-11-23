@@ -1,0 +1,639 @@
+{
+  "feeds": [
+    {
+      "nome": "Meio & Mensagem",
+      "urls": [
+        "https://www.meioemensagem.com.br/feed/",
+        "https://www.meioemensagem.com.br/rss",
+        "https://www.meioemensagem.com.br/rss.xml",
+        "https://www.meioemensagem.com.br/feed"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Propmark",
+      "urls": [
+        "https://propmark.com.br/feed/",
+        "https://propmark.com.br/rss",
+        "https://propmark.com.br/rss.xml",
+        "https://propmark.com.br/feed"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Grandes Nomes da Propaganda",
+      "urls": [
+        "https://grandesnomesdapropaganda.com.br/feed/",
+        "https://grandesnomesdapropaganda.com.br/rss",
+        "https://grandesnomesdapropaganda.com.br/rss.xml",
+        "https://grandesnomesdapropaganda.com.br/feed"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Marcas pelo Mundo",
+      "urls": [
+        "https://marcaspelomundo.com.br/feed/",
+        "https://marcaspelomundo.com.br/rss",
+        "https://marcaspelomundo.com.br/rss.xml",
+        "https://marcaspelomundo.com.br/feed"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Clube de Criação",
+      "urls": [
+        "https://clubedecriacao.com.br/feed/",
+        "https://clubedecriacao.com.br/rss",
+        "https://clubedecriacao.com.br/rss.xml",
+        "https://clubedecriacao.com.br/feed"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Nosso Meio",
+      "urls": [
+        "https://www.nossomeio.com.br/feed/",
+        "https://www.nossomeio.com.br/rss",
+        "https://www.nossomeio.com.br/rss.xml",
+        "https://www.nossomeio.com.br/feed"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "ABC da Comunicação",
+      "urls": [
+        "https://www.abcdacomunicacao.com.br/feed/",
+        "https://www.abcdacomunicacao.com.br/rss",
+        "https://www.abcdacomunicacao.com.br/rss.xml",
+        "https://www.abcdacomunicacao.com.br/feed"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Janela Publicitária",
+      "urls": [
+        "https://www.janela.com.br/feed/",
+        "https://www.janela.com.br/rss",
+        "https://www.janela.com.br/rss.xml",
+        "https://www.janela.com.br/feed"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Creativosbr",
+      "urls": [
+        "https://creativosbr.com.br/feed/",
+        "https://creativosbr.com.br/rss",
+        "https://creativosbr.com.br/rss.xml",
+        "https://creativosbr.com.br/feed"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "B9",
+      "urls": [
+        "https://www.b9.com.br/feed/",
+        "https://www.b9.com.br/rss",
+        "https://www.b9.com.br/rss.xml",
+        "https://www.b9.com.br/feed"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Exame",
+      "urls": [
+        "https://exame.com/marketing/feed/",
+        "https://exame.com/feed/"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Roastbrief",
+      "urls": [
+        "https://roastbrief.com.mx/feed/",
+        "https://roastbrief.com.mx/rss",
+        "https://roastbrief.com.mx/rss.xml",
+        "https://roastbrief.com.mx/feed"
+      ],
+      "regiao": "México",
+      "cc": "MX",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Insider Latam",
+      "urls": [
+        "https://insiderlatam.com/feed/",
+        "https://insiderlatam.com/rss",
+        "https://insiderlatam.com/rss.xml",
+        "https://insiderlatam.com/feed"
+      ],
+      "regiao": "Argentina",
+      "cc": "AR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Adlatina",
+      "urls": [
+        "https://www.adlatina.com/feed/",
+        "https://www.adlatina.com/rss",
+        "https://www.adlatina.com/rss.xml",
+        "https://www.adlatina.com/feed"
+      ],
+      "regiao": "Argentina",
+      "cc": "AR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Merca2.0",
+      "urls": [
+        "https://www.merca20.com/feed/",
+        "https://www.merca20.com/rss",
+        "https://www.merca20.com/rss.xml",
+        "https://www.merca20.com/feed"
+      ],
+      "regiao": "México",
+      "cc": "MX",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Revista Mercado",
+      "urls": [
+        "https://mercado.com.ar/feed/",
+        "https://mercado.com.ar/rss",
+        "https://mercado.com.ar/rss.xml",
+        "https://mercado.com.ar/feed"
+      ],
+      "regiao": "Argentina",
+      "cc": "AR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Latinspots",
+      "urls": [
+        "https://www.latinspots.com/feed/",
+        "https://www.latinspots.com/rss",
+        "https://www.latinspots.com/rss.xml",
+        "https://www.latinspots.com/feed"
+      ],
+      "regiao": "Argentina",
+      "cc": "AR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "InformaBTL",
+      "urls": [
+        "https://www.informabtl.com/feed/",
+        "https://www.informabtl.com/rss",
+        "https://www.informabtl.com/rss.xml",
+        "https://www.informabtl.com/feed"
+      ],
+      "regiao": "México",
+      "cc": "MX",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Reason Why",
+      "urls": [
+        "https://www.reasonwhy.es/feed/",
+        "https://www.reasonwhy.es/rss",
+        "https://www.reasonwhy.es/rss.xml",
+        "https://www.reasonwhy.es/feed"
+      ],
+      "regiao": "Espanha",
+      "cc": "ES",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Marketing Directo",
+      "urls": [
+        "https://www.marketingdirecto.com/feed/",
+        "https://www.marketingdirecto.com/rss",
+        "https://www.marketingdirecto.com/rss.xml",
+        "https://www.marketingdirecto.com/feed"
+      ],
+      "regiao": "Espanha",
+      "cc": "ES",
+      "so_campanhas": false
+    },
+    {
+      "nome": "PuroMarketing",
+      "urls": [
+        "https://www.puromarketing.com/feed/",
+        "https://www.puromarketing.com/rss",
+        "https://www.puromarketing.com/rss.xml",
+        "https://www.puromarketing.com/feed"
+      ],
+      "regiao": "Espanha",
+      "cc": "ES",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Control Publicidad",
+      "urls": [
+        "https://controlpublicidad.com/feed/",
+        "https://controlpublicidad.com/rss",
+        "https://controlpublicidad.com/rss.xml",
+        "https://controlpublicidad.com/feed"
+      ],
+      "regiao": "Espanha",
+      "cc": "ES",
+      "so_campanhas": false
+    },
+    {
+      "nome": "El Publicista",
+      "urls": [
+        "https://www.elpublicista.es/feed/",
+        "https://www.elpublicista.es/rss",
+        "https://www.elpublicista.es/rss.xml",
+        "https://www.elpublicista.es/feed"
+      ],
+      "regiao": "Espanha",
+      "cc": "ES",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Marketing Dive",
+      "urls": [
+        "https://www.marketingdive.com/feeds/news/"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Muse by Clios",
+      "urls": [
+        "https://musebyclios.com/feed/",
+        "https://musebyclios.com/rss",
+        "https://musebyclios.com/rss.xml",
+        "https://musebyclios.com/feed"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Ads of the World",
+      "urls": [
+        "https://www.adsoftheworld.com/feed/",
+        "https://www.adsoftheworld.com/rss",
+        "https://www.adsoftheworld.com/rss.xml",
+        "https://www.adsoftheworld.com/feed"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "so_campanhas": true
+    },
+    {
+      "nome": "DesignRush News",
+      "urls": [
+        "https://news.designrush.com/feed/",
+        "https://news.designrush.com/rss",
+        "https://news.designrush.com/rss.xml",
+        "https://news.designrush.com/feed"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Ads of Brands",
+      "urls": [
+        "https://adsofbrands.net/feed/",
+        "https://adsofbrands.net/rss",
+        "https://adsofbrands.net/rss.xml",
+        "https://adsofbrands.net/feed"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "so_campanhas": true
+    },
+    {
+      "nome": "ContentGrip",
+      "urls": [
+        "https://www.contentgrip.com/feed/",
+        "https://www.contentgrip.com/rss",
+        "https://www.contentgrip.com/rss.xml",
+        "https://www.contentgrip.com/feed"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "so_campanhas": false
+    },
+    {
+      "nome": "LBB Online",
+      "urls": [
+        "https://lbbonline.com/rss",
+        "https://lbbonline.com/feed",
+        "https://lbbonline.com/news/rss"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Adworld.ie",
+      "urls": [
+        "https://www.adworld.ie/feed/",
+        "https://www.adworld.ie/rss",
+        "https://www.adworld.ie/rss.xml",
+        "https://www.adworld.ie/feed"
+      ],
+      "regiao": "Irlanda",
+      "cc": "IE",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Creative Salon",
+      "urls": [
+        "https://creative.salon/feed/",
+        "https://creative.salon/rss",
+        "https://creative.salon/rss.xml",
+        "https://creative.salon/feed"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Creative Review",
+      "urls": [
+        "https://www.creativereview.co.uk/feed/",
+        "https://www.creativereview.co.uk/rss",
+        "https://www.creativereview.co.uk/rss.xml",
+        "https://www.creativereview.co.uk/feed"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Decision Marketing",
+      "urls": [
+        "https://www.decisionmarketing.co.uk/feed/",
+        "https://www.decisionmarketing.co.uk/rss",
+        "https://www.decisionmarketing.co.uk/rss.xml",
+        "https://www.decisionmarketing.co.uk/feed"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Retail Gazette",
+      "urls": [
+        "https://www.retailgazette.co.uk/feed/",
+        "https://www.retailgazette.co.uk/rss",
+        "https://www.retailgazette.co.uk/rss.xml",
+        "https://www.retailgazette.co.uk/feed"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Marketing Beat",
+      "urls": [
+        "https://www.marketing-beat.co.uk/feed/",
+        "https://www.marketing-beat.co.uk/rss",
+        "https://www.marketing-beat.co.uk/rss.xml",
+        "https://www.marketing-beat.co.uk/feed"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Creative Boom",
+      "urls": [
+        "https://www.creativeboom.com/feed/",
+        "https://www.creativeboom.com/rss",
+        "https://www.creativeboom.com/rss.xml",
+        "https://www.creativeboom.com/feed"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "so_campanhas": false
+    },
+    {
+      "nome": "The Drum",
+      "urls": [
+        "https://www.thedrum.com/rss",
+        "https://www.thedrum.com/feed"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "so_campanhas": false
+    },
+    {
+      "nome": "J'ai un pote dans la com",
+      "urls": [
+        "https://www.jai-un-pote-dans-la.com/feed/",
+        "https://www.jai-un-pote-dans-la.com/rss",
+        "https://www.jai-un-pote-dans-la.com/rss.xml",
+        "https://www.jai-un-pote-dans-la.com/feed"
+      ],
+      "regiao": "França",
+      "cc": "FR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "CB News",
+      "urls": [
+        "https://www.cbnews.fr/feed/",
+        "https://www.cbnews.fr/rss",
+        "https://www.cbnews.fr/rss.xml",
+        "https://www.cbnews.fr/feed"
+      ],
+      "regiao": "França",
+      "cc": "FR",
+      "so_campanhas": false
+    },
+    {
+      "nome": "B&T",
+      "urls": [
+        "https://www.bandt.com.au/feed/",
+        "https://www.bandt.com.au/rss",
+        "https://www.bandt.com.au/rss.xml",
+        "https://www.bandt.com.au/feed"
+      ],
+      "regiao": "Austrália",
+      "cc": "AU",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Mediaweek",
+      "urls": [
+        "https://www.mediaweek.com.au/feed/",
+        "https://www.mediaweek.com.au/rss",
+        "https://www.mediaweek.com.au/rss.xml",
+        "https://www.mediaweek.com.au/feed"
+      ],
+      "regiao": "Austrália",
+      "cc": "AU",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Mumbrella",
+      "urls": [
+        "https://mumbrella.com.au/feed/",
+        "https://mumbrella.com.au/rss",
+        "https://mumbrella.com.au/rss.xml",
+        "https://mumbrella.com.au/feed"
+      ],
+      "regiao": "Austrália",
+      "cc": "AU",
+      "so_campanhas": false
+    },
+    {
+      "nome": "The Stable",
+      "urls": [
+        "https://thestable.com.au/feed/",
+        "https://thestable.com.au/rss",
+        "https://thestable.com.au/rss.xml",
+        "https://thestable.com.au/feed"
+      ],
+      "regiao": "Austrália",
+      "cc": "AU",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Campaign Brief",
+      "urls": [
+        "https://campaignbrief.com/feed/",
+        "https://campaignbrief.com/rss",
+        "https://campaignbrief.com/rss.xml",
+        "https://campaignbrief.com/feed"
+      ],
+      "regiao": "Austrália",
+      "cc": "AU",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Campaign Brief NZ",
+      "urls": [
+        "https://campaignbrief.co.nz/feed/",
+        "https://campaignbrief.co.nz/rss",
+        "https://campaignbrief.co.nz/rss.xml",
+        "https://campaignbrief.co.nz/feed"
+      ],
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Campaign Brief Asia",
+      "urls": [
+        "https://campaignbriefasia.com/feed/",
+        "https://campaignbriefasia.com/rss",
+        "https://campaignbriefasia.com/rss.xml",
+        "https://campaignbriefasia.com/feed"
+      ],
+      "regiao": "Singapura",
+      "cc": "SG",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Marketech APAC",
+      "urls": [
+        "https://marketech-apac.com/feed/",
+        "https://marketech-apac.com/rss",
+        "https://marketech-apac.com/rss.xml",
+        "https://marketech-apac.com/feed"
+      ],
+      "regiao": "Singapura",
+      "cc": "SG",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Marketing-Interactive",
+      "urls": [
+        "https://www.marketing-interactive.com/feed/",
+        "https://www.marketing-interactive.com/rss",
+        "https://www.marketing-interactive.com/rss.xml",
+        "https://www.marketing-interactive.com/feed"
+      ],
+      "regiao": "Singapura",
+      "cc": "SG",
+      "so_campanhas": false
+    },
+    {
+      "nome": "MediaNews4U",
+      "urls": [
+        "https://www.medianews4u.com/feed/",
+        "https://www.medianews4u.com/rss",
+        "https://www.medianews4u.com/rss.xml",
+        "https://www.medianews4u.com/feed"
+      ],
+      "regiao": "Índia",
+      "cc": "IN",
+      "so_campanhas": false
+    },
+    {
+      "nome": "Manifest Media",
+      "urls": [
+        "https://manifest-media.in/feed/",
+        "https://manifest-media.in/rss",
+        "https://manifest-media.in/rss.xml",
+        "https://manifest-media.in/feed"
+      ],
+      "regiao": "Índia",
+      "cc": "IN",
+      "so_campanhas": false
+    },
+    {
+      "nome": "afaqs",
+      "urls": [
+        "https://www.afaqs.com/feed/",
+        "https://www.afaqs.com/rss",
+        "https://www.afaqs.com/rss.xml",
+        "https://www.afaqs.com/feed"
+      ],
+      "regiao": "Índia",
+      "cc": "IN",
+      "so_campanhas": false
+    }
+  ],
+  "buscas": [
+    "nova campanha publicitária",
+    "campanha agência filme lança",
+    "new ad campaign launches",
+    "new campaign agency spot",
+    "nueva campaña publicitaria",
+    "campaña agencia lanza spot",
+    "Christmas ad campaign",
+    "campanha de Natal",
+    "campaña navidad publicidad",
+    "nouvelle campagne publicitaire",
+    "neue Werbekampagne",
+    "nuova campagna pubblicitaria",
+    "new TVC campaign",
+    "Black Friday campanha",
+    "brand film campaign",
+    "anuncio nueva campaña marca"
+  ],
+  "descobertas": []
+}

@@ -1,0 +1,52 @@
+name: Atualizar AD Drop
+
+# Roda sozinho, sem Claude. Horários em UTC (Brasília = UTC-3):
+# 13h07 = 10h07 · 16h07 = 13h07 · 17h07 = 14h07 · 22h07 = 19h07 · 01h07 = 22h07
+on:
+  schedule:
+    - cron: "7 13,16,17,22 * * *"
+    - cron: "7 1 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: atualizar-ad-drop
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Buscar campanhas e publicar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "AD Drop robô"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for tentativa in 1 2 3; do
+            python robo/atualizar.py
+            git add campaigns.json robo/estado.json robo/fontes.json
+            if git diff --cached --quiet; then
+              echo "Nada novo."
+              exit 0
+            fi
+            git commit -q -m "Atualiza campanhas de $(TZ=America/Sao_Paulo date +%F) (robô)"
+            if git push origin HEAD:main; then
+              gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null 2>&1 || true
+              exit 0
+            fi
+            echo "Push recusado; pegando a versão nova e refazendo ($tentativa/3)."
+            git fetch -q origin main
+            git reset -q --hard origin/main
+          done
+          exit 1

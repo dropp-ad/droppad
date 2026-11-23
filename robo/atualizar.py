@@ -1,0 +1,563 @@
+#!/usr/bin/env python3
+"""Robô do AD Drop: atualiza campaigns.json sozinho, sem IA.
+
+Roda no GitHub Actions. A cada execução:
+  1. Lê os feeds RSS das fontes (robo/fontes.json) e as notícias do Bing News
+     para buscas em vários idiomas (é assim que acha lugares novos).
+  2. Fica só com o que parece campanha (filtro por palavras) e descarta prêmios,
+     contratações, contas etc.
+  3. Abre cada matéria e pega os filmes (YouTube / Vimeo) que estão na página.
+  4. Acrescenta as novas em campaigns.json, sem apagar nada.
+  5. Testa os sites novos que apareceram nas buscas; se tiverem feed, passam a
+     ser fontes fixas (lista "descobertas" em fontes.json).
+  6. Arquivo histórico: em cada execução volta algumas páginas nos feeds, até
+     ARQUIVO_INICIO, para preencher os dias antigos.
+
+Só usa a biblioteca padrão do Python.
+"""
+import concurrent.futures as cf
+import datetime as dt
+import email.utils
+import html
+import json
+import os
+import re
+import sys
+import unicodedata
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+from zoneinfo import ZoneInfo
+
+RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CAMP = os.path.join(RAIZ, "campaigns.json")
+FONTES = os.path.join(RAIZ, "robo", "fontes.json")
+ESTADO = os.path.join(RAIZ, "robo", "estado.json")
+TZ = ZoneInfo("America/Sao_Paulo")
+ARQUIVO_INICIO = "2025-11-17"
+JANELA_DIAS = 10          # no modo normal, aceita campanhas de até 10 dias atrás
+MAX_MATERIAS = 160        # matérias abertas por execução (para achar filmes)
+MAX_NOVAS = 150           # campanhas novas por execução
+PAGINAS_ARQUIVO = 2       # páginas antigas por feed em cada execução
+BUSCAS_POR_RODADA = 6
+TESTES_DESCOBERTA = 8     # sites novos testados por rodada
+UA = "Mozilla/5.0 (compatible; ADDropBot/1.0; +https://github.com/pedrorosas/estreou-hoje)"
+
+AGORA = dt.datetime.now(dt.timezone.utc)
+HOJE = AGORA.astimezone(TZ).date()
+LOG = []
+
+
+def log(*a):
+    s = " ".join(str(x) for x in a)
+    LOG.append(s)
+    print(s, flush=True)
+
+
+def baixar(url, timeout=20, limite=3_000_000):
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*", "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8,es;q=0.7"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        dados = r.read(limite)
+        cs = r.headers.get_content_charset() or "utf-8"
+    try:
+        return dados.decode(cs, "replace")
+    except LookupError:
+        return dados.decode("utf-8", "replace")
+
+
+def ler_json(p, padrao):
+    try:
+        with open(p, encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return padrao
+
+
+def salvar_json(p, obj):
+    with open(p, "w", encoding="utf-8") as f:
+        json.dump(obj, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+
+
+# ---------------------------------------------------------------- texto
+def limpar(s):
+    s = re.sub(r"<[^>]+>", " ", s or "")
+    s = html.unescape(html.unescape(s))
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def sem_acento(s):
+    return "".join(c for c in unicodedata.normalize("NFKD", s) if not unicodedata.combining(c))
+
+
+def slug(s, n=40):
+    s = re.sub(r"[^a-z0-9]+", "-", sem_acento(s).lower()).strip("-")
+    return s[:n].strip("-") or "campanha"
+
+
+def chave(s):
+    return re.sub(r"[^a-z0-9]", "", sem_acento(s).lower())
+
+
+def primeira_frase(s, n=240):
+    s = limpar(s)
+    s = re.sub(r"(The post|O post|La entrada|L'article) .* (appeared first on|apareceu primeiro em|aparece primero en).*$", "", s).strip()
+    m = re.match(r"(.{40,}?[.!?])(\s|$)", s)
+    s = m.group(1) if m else s
+    return s if len(s) <= n else s[: n - 1].rsplit(" ", 1)[0] + "…"
+
+
+# ---------------------------------------------------------------- filtro
+INCLUI = re.compile(r"""\b(campaign|campaigns|campanha|campanhas|campaña|campañas|campagne|kampagne|campagna|
+    ad|ads|advert|spot|spots|tvc|commercial|comercial|filme|film|anúncio|anuncio|anuncia|
+    launch(es|ed)?|unveil(s|ed)?|debut(s|ed)?|lança|lançou|lanza|lanzó|estreia|estrena|presenta|apresenta|
+    rolls?\s+out|stars?|protagoniza|estrelad[ao]|activation|ativação|activación|stunt|ooh|outdoor|
+    christmas|natal|navidad|noël|weihnacht|black\s+friday|super\s+bowl)\b""", re.I | re.X)
+EXCLUI = re.compile(r"""\b(award|awards|winners?|shortlist|jury|júri|jurado|prêmio|premio|premiação|premiados|
+    cannes\s+lions\s+(winners|shortlist)|effie|appoint(s|ed|ment)?|hires?|hired|promot(es|ed|ion)|joins|named|
+    contrata|contratação|nomeia|nomeado|assume|deixa\s+a|ficha|nombra|nombramiento|
+    wins?\s+(the\s+)?account|pitch|conquista\s+(a\s+)?conta|gana\s+la\s+cuenta|account\s+move|review|licitação|
+    study|survey|report|research|estudo|pesquisa|relatório|estudio|encuesta|informe|
+    podcast|webinar|interview|entrevista|opinion|opinião|opinión|column|coluna|obituary|layoffs?|demissões|
+    revenue|earnings|lucro|faturamento|acquires|acquisition|aquisição|adquiere|merger|fusão|
+    event\s+recap|conference|evento|festival\s+line-?up|ranking|top\s+\d+|lista\s+de|list\s+of)\b""", re.I | re.X)
+
+
+def parece_campanha(titulo, resumo, so_campanhas=False):
+    t = f"{titulo} {resumo}"
+    if EXCLUI.search(titulo):
+        return False
+    if so_campanhas:
+        return True
+    return bool(INCLUI.search(t))
+
+
+# ---------------------------------------------------------------- marca / agência / país
+VERBOS = r"(?:launch(?:es|ed)?|unveil(?:s|ed)?|debut(?:s|ed)?|rolls? out|introduces?|releases?|drops?|celebrates?|returns?|teams up|taps|turns|brings|goes|gets|makes|asks|wants|lança|lançou|apresenta|estreia|celebra|aposta|traz|convida|faz|ganha|lanza|presenta|estrena|apuesta|celebra|invita|lance|dévoile|présente|startet|zeigt)"
+
+
+def marca_de(titulo):
+    t = titulo.strip(" \"'“”‘’")
+    m = re.match(r"^([^:|–—]{2,40})\s*[:|–—]\s+", t)
+    if m and len(m.group(1).split()) <= 5:
+        return m.group(1).strip(" \"'“”")
+    m = re.match(r"^([A-Z0-9À-Ý][\w&'’.\-À-ÿ]*(?:\s+(?:[A-Z0-9À-Ý&][\w&'’.\-À-ÿ]*|de|do|da|of|the|y|e|&)){0,4}?)(?:'s|’s)?\s+(?:new\s+|nova\s+|novo\s+|nueva\s+|nuevo\s+)?" + VERBOS + r"\b", t)
+    if m:
+        return m.group(1).strip()
+    m = re.search(r"\b(?:for|para|de|da|do|pour|für)\s+([A-Z][\w&'’.\-À-ÿ]*(?:\s+[A-Z][\w&'’.\-À-ÿ]*){0,2})", t)
+    if m:
+        return m.group(1).strip()
+    return ""
+
+
+AGENCIA_RE = [
+    r"\b(?:via|by|from|thanks to|assinad[ao] pela?|criad[ao] pela?|desenvolvid[ao] pela?|produzid[ao] pela?|da agência|pela agência|de la agencia|por la agencia|firmad[ao] por|creada por|signée|par l'agence)\s+([A-Z][\w&'’.+\-À-ÿ]*(?:\s+(?:[A-Z&][\w&'’.+\-À-ÿ]*|de|do|da|and|y|e|&)){0,4})",
+]
+
+
+def agencia_de(texto):
+    for r in AGENCIA_RE:
+        m = re.search(r, texto)
+        if m:
+            a = m.group(1).strip(" .,;")
+            if 1 < len(a) <= 50:
+                return a
+    return ""
+
+
+PAISES = [  # (padrão, nome em pt, ISO)
+    (r"brasil|brazil", "Brasil", "BR"), (r"méxico|mexico|mexican[ao]?", "México", "MX"),
+    (r"argentina", "Argentina", "AR"), (r"colombia|colômbia", "Colômbia", "CO"), (r"chile", "Chile", "CL"),
+    (r"per[uú]", "Peru", "PE"), (r"ecuador|equador", "Equador", "EC"), (r"uruguai|uruguay", "Uruguai", "UY"),
+    (r"espa[ñn]a|spain|espanha", "Espanha", "ES"), (r"portugal", "Portugal", "PT"),
+    (r"\buk\b|united kingdom|britain|british|reino unido|london|londres", "Reino Unido", "GB"),
+    (r"ireland|irlanda|irish", "Irlanda", "IE"), (r"fran[cç]e?a?|french|paris", "França", "FR"),
+    (r"germany|alemanha|alemania|german|deutschland", "Alemanha", "DE"), (r"ital[yi]a?|italian", "Itália", "IT"),
+    (r"netherlands|holanda|dutch|países baixos", "Países Baixos", "NL"), (r"sweden|suécia|swedish", "Suécia", "SE"),
+    (r"norway|noruega|norwegian", "Noruega", "NO"), (r"denmark|dinamarca|danish", "Dinamarca", "DK"),
+    (r"poland|polônia|polish", "Polônia", "PL"), (r"belgi", "Bélgica", "BE"),
+    (r"canad", "Canadá", "CA"), (r"\bus\b|\busa\b|u\.s\.|united states|estados unidos|eua|eeuu|american", "EUA", "US"),
+    (r"australia|austrália|aussie", "Austrália", "AU"), (r"new zealand|nova zelândia|nueva zelanda|\bnz\b|kiwi", "Nova Zelândia", "NZ"),
+    (r"india|índia|indian", "Índia", "IN"), (r"singapore|singapura", "Singapura", "SG"), (r"japan|japão|japón|japanese", "Japão", "JP"),
+    (r"korea|coreia|corea", "Coreia do Sul", "KR"), (r"china|chinese", "China", "CN"), (r"hong kong", "Hong Kong", "HK"),
+    (r"thailand|tailândia|thai", "Tailândia", "TH"), (r"malaysia|malásia", "Malásia", "MY"), (r"indonesia", "Indonésia", "ID"),
+    (r"philippines|filipinas", "Filipinas", "PH"), (r"vietnam|vietnã", "Vietnã", "VN"),
+    (r"\buae\b|dubai|emirates|emirados", "Emirados Árabes", "AE"), (r"saudi|saudita", "Arábia Saudita", "SA"),
+    (r"south africa|áfrica do sul|sudáfrica", "África do Sul", "ZA"), (r"nigeria", "Nigéria", "NG"), (r"kenya|quênia", "Quênia", "KE"),
+]
+
+TLD = {"br": ("Brasil", "BR"), "mx": ("México", "MX"), "ar": ("Argentina", "AR"), "co": ("Colômbia", "CO"), "cl": ("Chile", "CL"),
+       "pe": ("Peru", "PE"), "es": ("Espanha", "ES"), "pt": ("Portugal", "PT"), "uk": ("Reino Unido", "GB"), "ie": ("Irlanda", "IE"),
+       "fr": ("França", "FR"), "de": ("Alemanha", "DE"), "it": ("Itália", "IT"), "nl": ("Países Baixos", "NL"), "se": ("Suécia", "SE"),
+       "au": ("Austrália", "AU"), "nz": ("Nova Zelândia", "NZ"), "in": ("Índia", "IN"), "sg": ("Singapura", "SG"), "jp": ("Japão", "JP"),
+       "kr": ("Coreia do Sul", "KR"), "za": ("África do Sul", "ZA"), "ae": ("Emirados Árabes", "AE"), "ca": ("Canadá", "CA"),
+       "ch": ("Suíça", "CH"), "at": ("Áustria", "AT"), "be": ("Bélgica", "BE"), "dk": ("Dinamarca", "DK"), "no": ("Noruega", "NO"),
+       "pl": ("Polônia", "PL"), "uy": ("Uruguai", "UY"), "ec": ("Equador", "EC"), "my": ("Malásia", "MY"), "ph": ("Filipinas", "PH"),
+       "th": ("Tailândia", "TH"), "id": ("Indonésia", "ID"), "hk": ("Hong Kong", "HK"), "tr": ("Turquia", "TR")}
+
+
+def pais_por_dominio(dom):
+    fim = dom.rsplit(".", 1)[-1]
+    return TLD.get(fim, ("Global", ""))
+
+
+def pais_por_texto(texto, padrao):
+    for pad, nome, cc in PAISES:
+        if re.search(r"(?<![\w])(?:" + pad + r")", texto, re.I):
+            if nome == "EUA" and padrao[1] not in ("", "US", "GB"):
+                continue  # "american" aparece demais em texto estrangeiro
+            return nome, cc
+    return padrao
+
+
+# ---------------------------------------------------------------- feeds
+def tag(e):
+    return e.tag.rsplit("}", 1)[-1]
+
+
+def filho(e, *nomes):
+    for c in e:
+        if tag(c) in nomes:
+            return c
+    return None
+
+
+def texto_de(e, *nomes):
+    c = filho(e, *nomes)
+    return (c.text or "").strip() if c is not None and c.text else ""
+
+
+def data_de(s):
+    s = (s or "").strip()
+    if not s:
+        return None
+    try:
+        d = email.utils.parsedate_to_datetime(s)
+    except (TypeError, ValueError):
+        try:
+            d = dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
+        except ValueError:
+            return None
+    if d.tzinfo is None:
+        d = d.replace(tzinfo=dt.timezone.utc)
+    return d.astimezone(TZ).date().isoformat()
+
+
+def ler_feed(xml):
+    xml = re.sub(r"^[^<]+", "", xml)
+    raiz = ET.fromstring(xml.encode("utf-8"))
+    itens = []
+    for e in raiz.iter():
+        if tag(e) not in ("item", "entry"):
+            continue
+        titulo = limpar(texto_de(e, "title"))
+        link = texto_de(e, "link")
+        if not link:
+            l = filho(e, "link")
+            if l is not None:
+                link = l.get("href", "")
+        corpo = ""
+        for c in e:
+            if tag(c) == "encoded" and c.text:
+                corpo = c.text
+        resumo = texto_de(e, "description", "summary", "content")
+        data = data_de(texto_de(e, "pubDate", "published", "updated", "date"))
+        if titulo and link.startswith("http") and data:
+            itens.append({"titulo": titulo, "link": link.strip(), "resumo": resumo, "corpo": corpo, "data": data})
+    return itens
+
+
+def parece_feed(txt):
+    return bool(re.search(r"<(rss|feed|rdf:RDF)[\s>]", txt[:2000]))
+
+
+def pegar_feed(fonte, estado, pagina=1):
+    """Tenta as URLs da fonte (lembra a que funcionou) e devolve os itens."""
+    st = estado["feeds"].setdefault(fonte["nome"], {})
+    urls = ([st["url"]] if st.get("url") else []) + [u for u in fonte["urls"] if u != st.get("url")]
+    for u in urls:
+        alvo = u
+        if pagina > 1:
+            alvo = u + ("&" if "?" in u else "?") + "paged=%d" % pagina
+        try:
+            txt = baixar(alvo)
+            if not parece_feed(txt):
+                continue
+            itens = ler_feed(txt)
+            if pagina == 1:
+                st["url"], st["falhas"] = u, 0
+            return itens
+        except Exception:  # noqa: BLE001
+            continue
+    if pagina == 1:
+        st["falhas"] = st.get("falhas", 0) + 1
+    return None
+
+
+def buscar_bing(q):
+    url = "https://www.bing.com/news/search?" + urllib.parse.urlencode({"q": q, "format": "rss", "setlang": "pt-br", "qft": 'interval="7"'})
+    itens = []
+    for it in ler_feed(baixar(url)):
+        link = it["link"]
+        qs = urllib.parse.parse_qs(urllib.parse.urlparse(link).query)
+        if "url" in qs:
+            link = qs["url"][0]
+        it["link"] = link
+        itens.append(it)
+    return itens
+
+
+# ---------------------------------------------------------------- filmes
+YT = re.compile(r"(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=|shorts/|v/)|youtu\.be/)([\w-]{11})")
+VIMEO = re.compile(r"player\.vimeo\.com/video/(\d+)(?:\?h=([0-9a-f]+))?|vimeo\.com/(\d{6,})(?:/([0-9a-f]{6,}))?")
+
+
+def filmes_de(pagina):
+    yts = []
+    for m in YT.finditer(pagina):
+        if m.group(1) not in yts:
+            yts.append(m.group(1))
+    vimeo = ""
+    for m in VIMEO.finditer(pagina):
+        vid, h = (m.group(1), m.group(2)) if m.group(1) else (m.group(3), m.group(4))
+        vimeo = "https://vimeo.com/%s/%s" % (vid, h) if h else "https://vimeo.com/%s" % vid
+        break
+    return yts[:4], vimeo
+
+
+def corpo_da_materia(pagina):
+    """Pega só o miolo da matéria (para não pegar vídeo da barra lateral)."""
+    for pad in (r"<article\b.*?</article>", r'<div[^>]+class="[^"]*(?:entry-content|post-content|article-body|article__body|single-content|td-post-content)[^"]*".*?</div>\s*</div>'):
+        m = re.search(pad, pagina, re.S | re.I)
+        if m and len(m.group(0)) > 500:
+            return m.group(0)
+    return pagina
+
+
+# ---------------------------------------------------------------- tradução (opcional)
+def traduzir(s):
+    if not s or os.environ.get("SEM_TRADUCAO"):
+        return s
+    try:
+        url = "https://translate.googleapis.com/translate_a/single?" + urllib.parse.urlencode({"client": "gtx", "sl": "auto", "tl": "pt", "dt": "t", "q": s})
+        dados = json.loads(baixar(url, timeout=10))
+        if dados and dados[2] == "pt":
+            return s
+        out = "".join(p[0] for p in dados[0] if p and p[0])
+        return out.strip() or s
+    except Exception:  # noqa: BLE001
+        return s
+
+
+# ---------------------------------------------------------------- principal
+def main():
+    fontes = ler_json(FONTES, {"feeds": [], "buscas": [], "descobertas": []})
+    estado = ler_json(ESTADO, {})
+    estado.setdefault("feeds", {})
+    estado.setdefault("testados", {})
+    estado.setdefault("bloqueados_yt", [])
+    estado.setdefault("arquivo", {})
+    camp = ler_json(CAMP, [])
+    log("Hoje (São Paulo):", HOJE, "| campanhas no site:", len(camp))
+
+    urls = {c.get("url", "").split("?")[0].rstrip("/") for c in camp}
+    ids = {c.get("id") for c in camp}
+    chaves = {(chave(c.get("brand", "")), chave(c.get("title", ""))) for c in camp}
+    titulos = {chave(c.get("title", "")) for c in camp if len(chave(c.get("title", ""))) > 12}
+    yts_usados = {y for c in camp for y in c.get("yt", [])}
+    bloqueados = set(estado["bloqueados_yt"])
+    inicio_normal = (HOJE - dt.timedelta(days=JANELA_DIAS)).isoformat()
+
+    todas_fontes = fontes["feeds"] + fontes.get("descobertas", [])
+    candidatos = []  # (item, fonte)
+
+    def considerar(it, fonte, minimo):
+        if not (minimo <= it["data"] <= HOJE.isoformat()):
+            return
+        u = it["link"].split("?")[0].rstrip("/")
+        if u in urls:
+            return
+        if not parece_campanha(it["titulo"], limpar(it["resumo"])[:400], fonte.get("so_campanhas")):
+            return
+        candidatos.append((it, fonte))
+
+    # 1) feeds, página 1
+    def job_feed(f):
+        return f, pegar_feed(f, estado)
+    with cf.ThreadPoolExecutor(12) as ex:
+        for f, itens in ex.map(job_feed, todas_fontes):
+            if itens is None:
+                log("  feed falhou:", f["nome"])
+                continue
+            log("  feed ok:", f["nome"], len(itens), "itens")
+            for it in itens:
+                considerar(it, f, inicio_normal)
+
+    # 2) arquivo histórico: volta páginas nos feeds até ARQUIVO_INICIO
+    def job_arquivo(f):
+        st = estado["arquivo"].setdefault(f["nome"], {"pagina": 1, "fim": False})
+        if st.get("fim") or not estado["feeds"].get(f["nome"], {}).get("url"):
+            return f, []
+        achados = []
+        for _ in range(PAGINAS_ARQUIVO):
+            p = st["pagina"] + 1
+            itens = pegar_feed(f, estado, p)
+            if not itens:
+                st["fim"] = True
+                break
+            st["pagina"] = p
+            achados += itens
+            if min(i["data"] for i in itens) < ARQUIVO_INICIO:
+                st["fim"] = True
+                break
+        return f, achados
+    with cf.ThreadPoolExecutor(12) as ex:
+        for f, itens in ex.map(job_arquivo, todas_fontes):
+            for it in itens:
+                considerar(it, f, ARQUIVO_INICIO)
+
+    # 3) buscas no Bing News (acha sites novos)
+    buscas = fontes.get("buscas", [])
+    if buscas:
+        k = estado.get("proxima_busca", 0) % len(buscas)
+        rodada = (buscas + buscas)[k:k + BUSCAS_POR_RODADA]
+        estado["proxima_busca"] = k + BUSCAS_POR_RODADA
+        conhecidos = {urllib.parse.urlparse(u).netloc.replace("www.", "") for f in todas_fontes for u in f["urls"]}
+        for q in rodada:
+            try:
+                itens = buscar_bing(q)
+            except Exception as e:  # noqa: BLE001
+                log("  busca falhou:", q, e)
+                continue
+            log("  busca:", q, len(itens), "resultados")
+            for it in itens:
+                dom = urllib.parse.urlparse(it["link"]).netloc.replace("www.", "")
+                if not dom:
+                    continue
+                nome, cc = pais_por_dominio(dom)
+                fonte = {"nome": dom, "urls": [], "regiao": nome, "cc": cc, "so_campanhas": False}
+                considerar(it, fonte, inicio_normal)
+                if dom not in conhecidos and dom not in estado["testados"]:
+                    estado["testados"][dom] = "pendente"
+
+    # 4) testa sites novos: se tiverem feed com campanhas, viram fontes fixas
+    pend = [d for d, v in estado["testados"].items() if v == "pendente"][:TESTES_DESCOBERTA]
+    for dom in pend:
+        achou = None
+        for u in ("https://%s/feed/" % dom, "https://%s/rss" % dom, "https://%s/feed" % dom, "https://%s/rss.xml" % dom):
+            try:
+                txt = baixar(u, timeout=12)
+                if parece_feed(txt):
+                    itens = ler_feed(txt)
+                    bons = [i for i in itens if parece_campanha(i["titulo"], limpar(i["resumo"]))]
+                    if len(itens) >= 3 and len(bons) >= 2:
+                        achou = u
+                        break
+            except Exception:  # noqa: BLE001
+                continue
+        estado["testados"][dom] = "fonte" if achou else "sem-feed"
+        if achou:
+            nome, cc = pais_por_dominio(dom)
+            fontes.setdefault("descobertas", []).append({"nome": dom, "urls": [achou], "regiao": nome, "cc": cc,
+                                                        "so_campanhas": False, "adicionadaEm": HOJE.isoformat()})
+            log("  FONTE NOVA:", dom, achou)
+
+    # 5) tira repetidos entre os candidatos e ordena (mais recentes primeiro)
+    vistos, fila = set(), []
+    for it, f in sorted(candidatos, key=lambda x: x[0]["data"], reverse=True):
+        u = it["link"].split("?")[0].rstrip("/")
+        k = chave(it["titulo"])
+        if u in vistos or k in vistos or (len(k) > 12 and k in titulos):
+            continue
+        vistos.update({u, k})
+        fila.append((it, f))
+    log("Candidatos a campanha:", len(fila))
+    fila = fila[:MAX_MATERIAS]
+
+    # 6) abre as matérias para pegar filmes
+    def job_materia(par):
+        it, f = par
+        try:
+            pag = baixar(it["link"], timeout=20)
+        except Exception:  # noqa: BLE001
+            return par, [], "", ""
+        miolo = corpo_da_materia(pag)
+        yts, vimeo = filmes_de(miolo)
+        if not yts and not vimeo and miolo is not pag:
+            yts, vimeo = filmes_de(re.sub(r"<(aside|footer|nav)\b.*?</\1>", "", pag, flags=re.S | re.I))
+        desc = ""
+        m = re.search(r'<meta[^>]+(?:property="og:description"|name="description")[^>]+content="([^"]+)"', pag)
+        if m:
+            desc = m.group(1)
+        return par, yts, vimeo, desc
+    with cf.ThreadPoolExecutor(10) as ex:
+        resultados = list(ex.map(job_materia, fila))
+
+    # vídeo que aparece em várias matérias do mesmo site é da página, não da campanha
+    por_dom = {}
+    for (it, f), yts, _, _ in resultados:
+        dom = urllib.parse.urlparse(it["link"]).netloc
+        for y in yts:
+            por_dom.setdefault((dom, y), 0)
+            por_dom[(dom, y)] += 1
+    for (dom, y), n in por_dom.items():
+        if n > 1:
+            bloqueados.add(y)
+
+    novas = []
+    for (it, f), yts, vimeo, desc in resultados:
+        if len(novas) >= MAX_NOVAS:
+            break
+        yts = [y for y in yts if y not in bloqueados]
+        if yts and all(y in yts_usados for y in yts):
+            continue  # o mesmo filme já está no site (mesma campanha, outra fonte)
+        titulo = it["titulo"]
+        resumo_txt = limpar(it["resumo"]) or limpar(desc) or limpar(it["corpo"])
+        texto = f"{titulo} {resumo_txt} {limpar(it['corpo'])[:1500]}"
+        marca = marca_de(titulo)
+        if not marca:
+            continue  # sem marca identificável, provavelmente não é campanha
+        k = (chave(marca), chave(titulo))
+        if k in chaves:
+            continue
+        regiao, cc = pais_por_texto(f"{titulo} {resumo_txt}", (f["regiao"], f["cc"]))
+        nid = "%s-%s-%s" % (it["data"], slug(marca, 20), slug(titulo, 36))
+        while nid in ids:
+            nid += "-2"
+        c = {"id": nid, "date": it["data"], "brand": marca, "title": titulo, "agency": agencia_de(texto),
+             "source": f["nome"], "url": it["link"], "region": regiao, "cc": cc}
+        if yts:
+            c["yt"] = yts
+        elif vimeo:
+            c["video"] = vimeo
+        c["summary"] = traduzir(primeira_frase(resumo_txt)) if resumo_txt else ""
+        c["addedAt"] = AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")
+        novas.append(c)
+        ids.add(nid)
+        chaves.add(k)
+        yts_usados.update(yts)
+
+    # 7) salva
+    estado["bloqueados_yt"] = sorted(bloqueados)
+    estado["ultima_execucao"] = AGORA.isoformat()
+    estado["ultimas_novas"] = len(novas)
+    salvar_json(ESTADO, estado)
+    salvar_json(FONTES, fontes)
+    if novas:
+        camp += novas
+        camp.sort(key=lambda c: (c.get("date", ""), c.get("addedAt", "")), reverse=True)
+        assert len({c["id"] for c in camp}) == len(camp)
+        assert all(re.match(r"^\d{4}-\d{2}-\d{2}$", c["date"]) for c in camp)
+        salvar_json(CAMP, camp)
+    com_filme = sum(1 for c in novas if c.get("yt") or c.get("video"))
+    log("Novas campanhas: %d (%d com filme, %d como card)" % (len(novas), com_filme, len(novas) - com_filme))
+    for c in novas[:40]:
+        log("  +", c["date"], c["source"], "|", c["brand"], "|", c["title"][:80])
+    if os.environ.get("GITHUB_STEP_SUMMARY"):
+        with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as s:
+            s.write("```\n" + "\n".join(LOG[-120:]) + "\n```\n")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
