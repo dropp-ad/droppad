@@ -635,5 +635,36 @@
     "brand film campaign",
     "anuncio nueva campaña marca"
   ],
-  "descobertas": []
+  "descobertas": [
+    {
+      "nome": "poltronanerd.com.br",
+      "urls": [
+        "https://poltronanerd.com.br/feed/"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "so_campanhas": false,
+      "adicionadaEm": "2026-11-23"
+    },
+    {
+      "nome": "d7.dnoticias.pt",
+      "urls": [
+        "https://d7.dnoticias.pt/rss.xml"
+      ],
+      "regiao": "Portugal",
+      "cc": "PT",
+      "so_campanhas": false,
+      "adicionadaEm": "2026-11-23"
+    },
+    {
+      "nome": "ibahia.com",
+      "urls": [
+        "https://ibahia.com/feed/"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "so_campanhas": false,
+      "adicionadaEm": "2026-11-23"
+    }
+  ]
 }
