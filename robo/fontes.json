@@ -623,7 +623,18 @@
     "brand film campaign",
     "anuncio nueva campaña marca"
   ],
-  "descobertas": [],
+  "descobertas": [
+    {
+      "nome": "marketinginsiderreview.com",
+      "urls": [
+        "https://marketinginsiderreview.com/feed/"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "so_campanhas": false,
+      "adicionadaEm": "2026-11-23"
+    }
+  ],
   "portfolios": [
     {
       "nome": "Mother London",
