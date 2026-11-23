@@ -384,6 +384,90 @@ def imagem_de(pagina, base):
     return ""
 
 
+RUIM_IMG = re.compile(r"logo|default|placeholder|favicon|avatar|gravatar|icon|emoji|sprite|banner-ad|/ads?/|pixel|spacer|blank|loading|"
+                      r"\b(?:\d{2,3})x(?:\d{2,3})\.|share|button|badge|author|profile|newsletter|\.svg|\.gif", re.I)
+
+
+def fotos_de(pagina, base, limite=8):
+    """Imagens da matéria (capa + fotos do miolo), para o carrossel das campanhas sem filme."""
+    out = []
+
+    def add(u):
+        u = urllib.parse.urljoin(base, html.unescape(u.strip()))
+        if not u.startswith("https://") or RUIM_IMG.search(u) or not re.search(r"\.(jpe?g|png|webp)(\?|$)|/image|/img|wp-content/uploads", u, re.I):
+            return
+        k = re.sub(r"-\d{2,4}x\d{2,4}(?=\.\w+$)", "", u.split("?")[0])
+        if k not in [re.sub(r"-\d{2,4}x\d{2,4}(?=\.\w+$)", "", x.split("?")[0]) for x in out]:
+            out.append(u)
+    capa = imagem_de(pagina, base)
+    if capa:
+        add(capa)
+    miolo = corpo_da_materia(pagina)
+    for m in re.finditer(r"<img\b[^>]*>", miolo, re.I):
+        t = m.group(0)
+        srcset = re.search(r'(?:data-srcset|srcset)=["\']([^"\']+)', t)
+        if srcset:
+            cands = [x.strip().split(" ") for x in srcset.group(1).split(",") if x.strip()]
+            cands = [(int(re.sub(r"\D", "", c[1]) or 0) if len(c) > 1 else 0, c[0]) for c in cands]
+            if cands:
+                add(max(cands)[1])
+                continue
+        s = re.search(r'(?:data-lazy-src|data-src|data-original|src)=["\']([^"\']+)', t)
+        w = re.search(r'width=["\']?(\d+)', t)
+        if s and not (w and int(w.group(1)) < 300):
+            add(s.group(1))
+        if len(out) >= limite:
+            break
+    return out[:limite]
+
+
+def historia_de(pagina, limite=4):
+    """Primeiras frases dos parágrafos da matéria, traduzidas, para contar a ideia no carrossel."""
+    miolo = corpo_da_materia(pagina)
+    frases = []
+    for m in re.finditer(r"<p\b[^>]*>(.*?)</p>", miolo, re.S | re.I):
+        t = limpar(m.group(1))
+        if not (70 <= len(t) <= 700) or re.search(r"cookie|newsletter|subscribe|assine|inscreva|suscr|©|all rights|credits?:|^(client|agency|cliente|agência|agencia|director|diretor)\b", t, re.I):
+            continue
+        f = primeira_frase(t, 200)
+        if f and f not in frases:
+            frases.append(f)
+        if len(frases) >= limite:
+            break
+    if not frases:
+        return []
+    junto = traduzir("\n".join(frases))
+    partes = [x.strip() for x in junto.split("\n") if x.strip()]
+    return partes if len(partes) == len(frases) else frases
+
+
+def completar_fotos(camp, estado, limite=120):
+    """Campanhas sem filme ganham fotos e frases da matéria para o carrossel."""
+    tentadas = set(estado.setdefault("sem_fotos", []))
+    alvo = [c for c in camp if not c.get("yt") and not c.get("video") and "images" not in c
+            and c.get("url") and c["url"] not in tentadas][:limite]
+
+    def job(c):
+        try:
+            pag = baixar(c["url"], timeout=15)
+            return c, fotos_de(pag, c["url"]), historia_de(pag)
+        except Exception:  # noqa: BLE001
+            return c, [], []
+    n = 0
+    with cf.ThreadPoolExecutor(8) as ex:
+        for c, fotos, hist in ex.map(job, alvo):
+            if fotos:
+                c["images"] = fotos
+                c.setdefault("image", fotos[0])
+                n += 1
+            else:
+                tentadas.add(c["url"])
+            if hist:
+                c["story"] = hist
+    estado["sem_fotos"] = sorted(tentadas)
+    return n
+
+
 def completar_imagens(camp, estado, limite=150):
     """Busca a imagem de capa (og:image) das campanhas antigas que não têm filme nem imagem."""
     tentadas = set(estado.setdefault("sem_imagem", []))
@@ -554,23 +638,25 @@ def main():
         try:
             pag = baixar(it["link"], timeout=20)
         except Exception:  # noqa: BLE001
-            return par, [], "", "", ""
+            return par, [], "", "", "", [], []
         miolo = corpo_da_materia(pag)
         yts, vimeo = filmes_de(miolo)
         if not yts and not vimeo and miolo is not pag:
             yts, vimeo = filmes_de(re.sub(r"<(aside|footer|nav)\b.*?</\1>", "", pag, flags=re.S | re.I))
         img = imagem_de(pag, it["link"])
+        fotos = fotos_de(pag, it["link"]) if not yts and not vimeo else []
+        hist = historia_de(pag) if not yts and not vimeo else []
         desc = ""
         m = re.search(r'<meta[^>]+(?:property="og:description"|name="description")[^>]+content="([^"]+)"', pag)
         if m:
             desc = m.group(1)
-        return par, yts, vimeo, desc, img
+        return par, yts, vimeo, desc, img, fotos, hist
     with cf.ThreadPoolExecutor(10) as ex:
         resultados = list(ex.map(job_materia, fila))
 
     # vídeo que aparece em várias matérias do mesmo site é da página, não da campanha
     por_dom = {}
-    for (it, f), yts, _, _, _ in resultados:
+    for (it, f), yts, _, _, _, _, _ in resultados:
         dom = urllib.parse.urlparse(it["link"]).netloc
         for y in yts:
             por_dom.setdefault((dom, y), 0)
@@ -580,7 +666,7 @@ def main():
             bloqueados.add(y)
 
     novas = []
-    for (it, f), yts, vimeo, desc, img in resultados:
+    for (it, f), yts, vimeo, desc, img, fotos, hist in resultados:
         if len(novas) >= MAX_NOVAS:
             break
         yts = [y for y in yts if y not in bloqueados]
@@ -609,6 +695,10 @@ def main():
             c["video"] = vimeo
         if img and not yts:
             c["image"] = img
+        if fotos:
+            c["images"] = fotos
+        if hist:
+            c["story"] = hist
         c["summary"] = traduzir(primeira_frase(resumo_txt)) if resumo_txt else ""
         c["addedAt"] = AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")
         novas.append(c)
@@ -620,6 +710,9 @@ def main():
     # 7) capas das campanhas antigas sem filme
     capas = 0 if SIMULAR else completar_imagens(camp, estado)
     log("Capas novas em campanhas antigas:", capas)
+    fts = 0 if SIMULAR else completar_fotos(camp, estado)
+    log("Carrosséis novos em campanhas antigas:", fts)
+    capas += fts
 
     # 8) salva
     if SIMULAR:

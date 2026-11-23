@@ -1,22 +1,24 @@
-/* AD Drop: timeline vertical de campanhas, estilo feed de rede social, mas para filmes.
-   Cada post tem o filme em 16:9; o que está na tela toca sozinho (mudo até a pessoa
-   ligar o som). Os dados vêm de campaigns.json, atualizado pelo robô do repositório. */
+/* AD Drop: timeline de campanhas, uma por vez na tela (rolagem que para em cada uma).
+   O quadro 16:9 fica no centro; com filme, toca sozinho e o texto aparece ao passar o
+   mouse; sem filme, vira um carrossel com as fotos da matéria contando a ideia.
+   Os dados vêm de campaigns.json, atualizado pelo robô do repositório. */
 (function () {
   "use strict";
 
   var $ = function (id) { return document.getElementById(id); };
   var TZ = "America/Sao_Paulo";
-  var LOTE = 12;
+  var LOTE = 10;
+  var SLIDE_MS = 4800;
 
   /* ---------- Dados ---------- */
   function str(v) { return typeof v === "string" ? v.trim() : ""; }
   function safeUrl(u) { return /^https?:\/\//i.test(u) ? u : ""; }
   function isDay(s) { return /^\d{4}-\d{2}-\d{2}$/.test(s); }
+  function arr(v, f) { return Array.isArray(v) ? v.map(str).filter(f) : []; }
   function vimeoOf(u) {
     var m = (u || "").match(/vimeo\.com\/(?:video\/)?(\d+)(?:\/([0-9a-f]+))?/i);
-    return m ? { id: m[1], hash: m[2] || "", url: u } : null;
+    return m ? { id: m[1], hash: m[2] || "" } : null;
   }
-  // Lista de filmes tocáveis de uma campanha.
   function films(c) {
     var out = c.yt.map(function (id) { return { kind: "yt", id: id }; });
     if (!out.length) { var v = vimeoOf(c.video); if (v) out.push({ kind: "vimeo", id: v.id, hash: v.hash }); }
@@ -25,18 +27,21 @@
   function normalize(raw) {
     if (!Array.isArray(raw)) return [];
     return raw.map(function (x) {
-      return {
+      var c = {
         id: str(x.id), date: str(x.date), brand: str(x.brand), title: str(x.title),
         agency: str(x.agency), source: str(x.source), url: safeUrl(str(x.url)),
         region: str(x.region), cc: str(x.cc).toUpperCase(), summary: str(x.summary),
-        yt: Array.isArray(x.yt) ? x.yt.map(str).filter(function (s) { return /^[\w-]{11}$/.test(s); }) : [],
-        video: safeUrl(str(x.video)), image: safeUrl(str(x.image)), addedAt: str(x.addedAt)
+        yt: arr(x.yt, function (s) { return /^[\w-]{11}$/.test(s); }),
+        video: safeUrl(str(x.video)), image: safeUrl(str(x.image)),
+        images: arr(x.images, function (s) { return !!safeUrl(s); }),
+        story: arr(x.story, Boolean), addedAt: str(x.addedAt)
       };
+      c.fl = films(c);
+      return c;
     }).filter(function (c) { return isDay(c.date) && c.title; })
       .sort(function (a, b) {
         if (a.date !== b.date) return a.date < b.date ? 1 : -1;
-        var pa = films(a).length ? 1 : 0, pb = films(b).length ? 1 : 0;
-        if (pa !== pb) return pb - pa; // no mesmo dia, quem tem filme vem primeiro
+        if (!!a.fl.length !== !!b.fl.length) return a.fl.length ? -1 : 1; // no mesmo dia, filmes primeiro
         return a.addedAt < b.addedAt ? 1 : a.addedAt > b.addedAt ? -1 : 0;
       });
   }
@@ -48,20 +53,14 @@
   function toDate(s) { var p = s.split("-").map(Number); return new Date(Date.UTC(p[0], p[1] - 1, p[2])); }
   function shift(s, n) { var p = s.split("-").map(Number); return new Date(Date.UTC(p[0], p[1] - 1, p[2] + n)).toISOString().slice(0, 10); }
   var fmtLong = new Intl.DateTimeFormat("pt-BR", { timeZone: "UTC", weekday: "long", day: "numeric", month: "long" });
-  var fmtShort = new Intl.DateTimeFormat("pt-BR", { timeZone: "UTC", day: "numeric", month: "short" });
-  var fmtStamp = new Intl.DateTimeFormat("pt-BR", { timeZone: TZ, day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
   var TODAY = todayYmd();
-  function dayTitle(d) {
+  function dayName(d) {
     if (d === TODAY) return "Hoje";
     if (d === shift(TODAY, -1)) return "Ontem";
-    var s = fmtLong.format(toDate(d));
+    var s = fmtLong.format(toDate(d)).split(",")[0];
     return s.charAt(0).toUpperCase() + s.slice(1);
   }
-  function dayShort(d) {
-    if (d === TODAY) return "hoje";
-    if (d === shift(TODAY, -1)) return "ontem";
-    return fmtShort.format(toDate(d)).replace(".", "");
-  }
+  function dayDate(d) { return fmtLong.format(toDate(d)).split(", ").slice(1).join(", ") || fmtLong.format(toDate(d)); }
 
   /* ---------- Utilidades ---------- */
   function el(tag, cls, text) {
@@ -73,6 +72,7 @@
   function link(cls, text, href) {
     var a = el("a", cls, text);
     a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer";
+    a.addEventListener("click", function (e) { e.stopPropagation(); });
     return a;
   }
   function flagOf(cc) {
@@ -86,15 +86,33 @@
     if (n >= 1e3) return (n / 1e3).toFixed(n >= 1e4 ? 0 : 1).replace(".", ",") + " mil";
     return String(n);
   }
+  function img(src, onfail) {
+    var i = el("img");
+    i.alt = "";
+    i.loading = "lazy";
+    i.decoding = "async";
+    i.referrerPolicy = "no-referrer";
+    i.src = src;
+    i.addEventListener("error", function () { i.remove(); if (onfail) onfail(); });
+    return i;
+  }
+  function poster(c) {
+    var p = el("div", "poster");
+    var h = hue(c.brand || c.title);
+    p.style.background = "radial-gradient(120% 90% at 0% 0%, hsl(" + h + " 70% 42%), transparent 60%), " +
+      "radial-gradient(120% 120% at 100% 100%, hsl(" + ((h + 55) % 360) + " 65% 32%), transparent 60%), #111116";
+    p.appendChild(el("span", null, c.brand || c.title));
+    return p;
+  }
 
   /* ---------- Regiões (filtro) ---------- */
   var REGIOES = [
-    { nome: "Brasil", ico: "🇧🇷", cc: ["BR"] },
-    { nome: "América Latina", ico: "🌎", cc: ["MX", "AR", "CO", "CL", "PE", "EC", "UY", "PY", "BO", "VE", "CR", "PA", "GT", "DO", "PR", "SV", "HN", "NI", "CU"] },
-    { nome: "EUA e Canadá", ico: "🇺🇸", cc: ["US", "CA"] },
-    { nome: "Europa", ico: "🇪🇺", cc: ["GB", "IE", "FR", "DE", "ES", "PT", "IT", "NL", "SE", "NO", "DK", "FI", "PL", "BE", "CH", "AT", "CZ", "GR", "HU", "RO", "TR", "UA"], extra: ["Europa"] },
-    { nome: "Ásia-Pacífico", ico: "🌏", cc: ["AU", "NZ", "IN", "SG", "JP", "KR", "CN", "HK", "TW", "TH", "MY", "ID", "PH", "VN", "PK", "BD", "LK"] },
-    { nome: "Global", ico: "🌐", cc: [] }
+    { nome: "Brasil", cc: ["BR"] },
+    { nome: "América Latina", cc: ["MX", "AR", "CO", "CL", "PE", "EC", "UY", "PY", "BO", "VE", "CR", "PA", "GT", "DO", "PR", "SV", "HN", "NI", "CU"] },
+    { nome: "EUA e Canadá", cc: ["US", "CA"] },
+    { nome: "Europa", cc: ["GB", "IE", "FR", "DE", "ES", "PT", "IT", "NL", "SE", "NO", "DK", "FI", "PL", "BE", "CH", "AT", "CZ", "GR", "HU", "RO", "TR", "UA"], extra: ["Europa"] },
+    { nome: "Ásia-Pacífico", cc: ["AU", "NZ", "IN", "SG", "JP", "KR", "CN", "HK", "TW", "TH", "MY", "ID", "PH", "VN", "PK", "BD", "LK"] },
+    { nome: "Global", cc: [] }
   ];
   function regiaoDe(c) {
     for (var i = 0; i < REGIOES.length - 1; i++) {
@@ -105,79 +123,46 @@
   }
 
   /* ---------- Estado ---------- */
-  var state = { items: [], list: [], shown: 0, lastDay: "", region: "", onlyFilms: false };
+  var state = { items: [], list: [], shown: 0, region: "", onlyFilms: false, perDay: {} };
   var sound = false;
 
-  /* ---------- Popularidade no YouTube ---------- */
   var popCache = {};
   function popOf(id) {
     if (!popCache[id]) {
       popCache[id] = fetch("https://returnyoutubedislikeapi.com/votes?videoId=" + encodeURIComponent(id))
         .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-        .then(function (j) { return { views: +j.viewCount || 0, likes: +j.likes || 0 }; })
-        .catch(function () { return { views: 0, likes: 0 }; });
+        .then(function (j) { return { views: +j.viewCount || 0 }; })
+        .catch(function () { return { views: 0 }; });
     }
     return popCache[id];
   }
 
-  /* ---------- Post ---------- */
-  function avatar(c) {
-    var a = el("span", "av");
-    var h = hue(c.brand || c.title);
-    a.style.background = "linear-gradient(135deg, hsl(" + h + " 85% 58%), hsl(" + ((h + 60) % 360) + " 80% 45%))";
-    a.textContent = ((c.brand || c.title).replace(/[^0-9A-Za-zÀ-ÿ]/g, "").charAt(0) || "•").toUpperCase();
-    return a;
-  }
-  function poster(c) {
-    var p = el("div", "poster");
-    var h = hue(c.brand || c.title);
-    p.style.background = "radial-gradient(120% 90% at 0% 0%, hsl(" + h + " 80% 50%), transparent 60%), " +
-      "radial-gradient(120% 120% at 100% 100%, hsl(" + ((h + 55) % 360) + " 75% 40%), transparent 60%), #15151c";
-    p.appendChild(el("span", null, c.brand || c.title));
-    return p;
-  }
-
-  function post(c) {
-    var fl = films(c);
-    var art = el("article", "post");
+  /* ---------- Post: uma tela por campanha ---------- */
+  function post(c, idxInDay) {
+    var art = el("section", "post");
     art._c = c;
+    art.setAttribute("aria-label", (c.brand ? c.brand + ": " : "") + c.title);
 
-    // texto à esquerda, no fundo preto
-    var info = el("div", "info");
-    info.appendChild(el("h3", "brand", c.brand || c.source || "Campanha"));
-    var meta = el("p", "meta");
-    meta.textContent = [flagOf(c.cc) + " " + (c.region || "Global"), c.agency].filter(Boolean).join("  ·  ");
-    info.appendChild(meta);
-    info.appendChild(el("p", "title", c.title));
-    if (c.summary) info.appendChild(el("p", "sum", c.summary));
-    var foot = el("p", "foot");
-    if (c.url) foot.appendChild(link("src", (c.source || "Fonte") + " ↗", c.url));
-    var pop = el("span", "pop");
-    foot.appendChild(pop);
-    if (c.yt.length) popOf(c.yt[0]).then(function (v) { if (v.views) pop.textContent = fmtNum(v.views) + " views"; });
-    info.appendChild(foot);
-    art.appendChild(info);
+    // linha de cima: o dia (divisão por dias) e quem é
+    var top = el("div", "post-top");
+    var day = el("span", "day");
+    day.appendChild(el("b", null, dayName(c.date)));
+    day.appendChild(el("span", null, dayDate(c.date)));
+    top.appendChild(day);
+    var tot = state.perDay[c.date] || 0;
+    top.appendChild(el("span", "pos", (idxInDay + 1) + " de " + tot));
+    art.appendChild(top);
 
-    // quadro do filme
+    var frame = el("div", "frame");
     var media = el("div", "media");
-    var cover = el("div", "cover");
-    var src = fl.length ? (fl[0].kind === "yt" ? ytThumb(fl[0].id) : "https://vumbnail.com/" + fl[0].id + "_large.jpg") : c.image;
-    if (src) {
-      var img = el("img");
-      img.alt = "";
-      img.loading = "lazy";
-      img.decoding = "async";
-      img.referrerPolicy = "no-referrer";
-      img.src = src;
-      img.addEventListener("error", function () { img.remove(); cover.appendChild(poster(c)); });
-      cover.appendChild(img);
-    } else {
-      cover.appendChild(poster(c));
-    }
-    media.appendChild(cover);
+    frame.appendChild(media);
 
-    if (fl.length) {
-      art.classList.add("has-film");
+    if (c.fl.length) {
+      art.classList.add("is-film");
+      var cover = el("div", "cover");
+      var f0 = c.fl[0];
+      cover.appendChild(img(f0.kind === "yt" ? ytThumb(f0.id) : "https://vumbnail.com/" + f0.id + "_large.jpg", function () { cover.appendChild(poster(c)); }));
+      media.appendChild(cover);
       media.appendChild(el("div", "host"));
       media.appendChild(el("span", "bigplay"));
       media.appendChild(el("span", "fail", "Este filme só toca no YouTube ↗"));
@@ -188,12 +173,12 @@
       var bar = el("div", "bar");
       bar.appendChild(el("i"));
       media.appendChild(bar);
-      if (fl.length > 1) {
+      if (c.fl.length > 1) {
         var dots = el("div", "dots");
-        fl.forEach(function (f, i) {
+        c.fl.forEach(function (f, i) {
           var d = el("button", i === 0 ? "dot on" : "dot");
           d.type = "button";
-          d.setAttribute("aria-label", "Filme " + (i + 1) + " de " + fl.length);
+          d.setAttribute("aria-label", "Filme " + (i + 1) + " de " + c.fl.length);
           d.addEventListener("click", function (e) { e.stopPropagation(); art.dataset.part = i; activate(art, true); });
           dots.appendChild(d);
         });
@@ -201,22 +186,85 @@
       }
       media.addEventListener("click", function (e) {
         if (e.target === mute) { setSound(!sound); if (!(active && active.art === art)) activate(art, true); return; }
-        if (art.classList.contains("failed")) { window.open("https://www.youtube.com/watch?v=" + fl[+art.dataset.part || 0].id, "_blank", "noopener"); return; }
-        if (active && active.art === art) {
-          if (!sound) setSound(true); else togglePause();
-        } else {
-          activate(art, true);
-        }
+        if (art.classList.contains("failed")) { window.open("https://www.youtube.com/watch?v=" + c.fl[+art.dataset.part || 0].id, "_blank", "noopener"); return; }
+        if (active && active.art === art) { if (!sound) setSound(true); else togglePause(); }
+        else activate(art, true);
       });
-    } else if (c.url) {
-      media.appendChild(link("readover", "Ler a matéria ↗", c.url));
+    } else {
+      art.classList.add("is-story");
+      buildStory(art, media, c);
     }
-    art.appendChild(media);
+
+    // texto: aparece ao passar o mouse sobre o quadro (no celular, fica embaixo)
+    var ov = el("div", "ov");
+    ov.appendChild(el("h3", "brand", c.brand || c.source || "Campanha"));
+    ov.appendChild(el("p", "meta", [flagOf(c.cc) + " " + (c.region || "Global"), c.agency].filter(Boolean).join("  ·  ")));
+    ov.appendChild(el("p", "title", c.title));
+    if (c.summary && c.fl.length) ov.appendChild(el("p", "sum", c.summary));
+    var foot = el("p", "foot");
+    if (c.url) foot.appendChild(link("src", "Ler em " + (c.source || "fonte") + " ↗", c.url));
+    var pop = el("span", "pop");
+    foot.appendChild(pop);
+    if (c.yt.length) popOf(c.yt[0]).then(function (v) { if (v.views) pop.textContent = fmtNum(v.views) + " views"; });
+    ov.appendChild(foot);
+    frame.appendChild(ov);
+    art.appendChild(frame);
 
     media._art = art;
     art._media = media;
-    if (fl.length && io) io.observe(media);
+    if (io) io.observe(media);
     return art;
+  }
+
+  /* ---------- Carrossel: campanha sem filme, contada com as fotos ---------- */
+  function buildStory(art, media, c) {
+    var pics = c.images.length ? c.images : c.image ? [c.image] : [];
+    var lines = [c.title].concat(c.story.length ? c.story : c.summary ? [c.summary] : []);
+    var n = Math.min(6, Math.max(pics.length, lines.length, 1));
+    var bars = el("div", "segs");
+    var slides = [];
+    for (var k = 0; k < n; k++) {
+      var s = el("div", "slide" + (k === 0 ? " on" : ""));
+      if (pics.length) {
+        var pic = pics[k % pics.length];
+        var im = img(pic, (function (sl) { return function () { sl.insertBefore(poster(c), sl.firstChild); }; })(s));
+        if (k >= pics.length) im.style.objectPosition = ["center", "left center", "right center", "center top", "center bottom"][k % 5];
+        s.appendChild(im);
+      } else {
+        s.appendChild(poster(c));
+      }
+      var line = lines[k] || "";
+      if (line) {
+        var cap = el("div", "cap" + (k === 0 ? " cap-first" : ""));
+        if (k === 0) cap.appendChild(el("span", "cap-brand", c.brand || ""));
+        cap.appendChild(el("p", null, line));
+        s.appendChild(cap);
+      }
+      media.appendChild(s);
+      slides.push(s);
+      var seg = el("span", "seg");
+      seg.appendChild(el("i"));
+      bars.appendChild(seg);
+    }
+    if (n > 1) media.appendChild(bars);
+    art._story = { slides: slides, segs: bars.children, i: 0, t: 0 };
+    media.addEventListener("click", function (e) {
+      var st = art._story;
+      if (!(active && active.art === art)) { activate(art, true); return; }
+      var r = media.getBoundingClientRect();
+      storyGo(art, e.clientX - r.left < r.width / 3 ? st.i - 1 : st.i + 1);
+    });
+  }
+  function storyGo(art, i) {
+    var st = art._story, n = st.slides.length;
+    i = (i + n) % n;
+    st.slides.forEach(function (s, k) { s.classList.toggle("on", k === i); });
+    Array.prototype.forEach.call(st.segs, function (g, k) {
+      g.classList.toggle("done", k < i);
+      g.firstChild.style.width = k < i ? "100%" : "0%";
+    });
+    st.i = i;
+    st.t = 0;
   }
 
   /* ---------- Tocar sozinho o que está na tela ---------- */
@@ -248,24 +296,19 @@
   var active = null; // { art, player, kind, timer }
   var ratios = new Map();
   var io = null, pickTimer = null;
-
   function setupIO() {
     if (!("IntersectionObserver" in window)) return;
     io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { ratios.set(e.target, e.isIntersecting ? e.intersectionRatio : 0); });
       clearTimeout(pickTimer);
-      pickTimer = setTimeout(pick, 150);
-    }, { threshold: [0, .2, .4, .5, .6, .7, .8, .9, 1], rootMargin: "-120px 0px 0px 0px" });
+      pickTimer = setTimeout(pick, 120);
+    }, { threshold: [0, .25, .5, .6, .75, .9, 1] });
   }
-  // Toca o post com filme mais visível na tela; para o que saiu.
   function pick() {
     var best = null, br = 0;
     ratios.forEach(function (r, m) { if (r > br) { br = r; best = m._art; } });
-    if (best && br >= 0.55) {
-      if (!active || active.art !== best) activate(best, false);
-    } else if (active && (ratios.get(active.art._media) || 0) < 0.3) {
-      deactivate();
-    }
+    if (best && br >= 0.6) { if (!active || active.art !== best) activate(best, false); }
+    else if (active && (ratios.get(active.art._media) || 0) < 0.3) deactivate();
   }
 
   function deactivate() {
@@ -274,7 +317,7 @@
     active = null;
     clearInterval(a.timer);
     try { if (a.player) a.player.destroy(); } catch (e) { /* já destruído */ }
-    a.art.classList.remove("playing", "paused", "loading");
+    a.art.classList.remove("playing", "paused", "loading", "live");
     var host = a.art.querySelector(".host");
     if (host) host.textContent = "";
     var bar = a.art.querySelector(".bar i");
@@ -284,23 +327,36 @@
   function activate(art, byUser) {
     if (active && active.art === art && !byUser) return;
     deactivate();
-    var fl = films(art._c);
-    var part = Math.min(+art.dataset.part || 0, fl.length - 1);
-    var f = fl[part];
+    var c = art._c;
+    var me = { art: art, player: null, kind: "", timer: null };
+    active = me;
+    art.classList.add("live");
+    function alive() { return active === me; }
+
+    if (!c.fl.length) { // carrossel
+      me.kind = "story";
+      var st = art._story;
+      if (byUser && st.t === 0 && st.i === 0) storyGo(art, 0);
+      me.timer = setInterval(function () {
+        if (!alive() || document.hidden || art.matches(":hover")) return;
+        st.t += 100;
+        if (st.segs[st.i]) st.segs[st.i].firstChild.style.width = Math.min(100, st.t / SLIDE_MS * 100) + "%";
+        if (st.t >= SLIDE_MS && st.slides.length > 1) storyGo(art, st.i + 1);
+      }, 100);
+      return;
+    }
+
+    var part = Math.min(+art.dataset.part || 0, c.fl.length - 1);
+    var f = c.fl[part];
+    me.kind = f.kind;
     art.querySelectorAll(".dot").forEach(function (d, i) { d.classList.toggle("on", i === part); });
-    var cnt = art.querySelector(".count");
-    if (cnt) cnt.textContent = (part + 1) + "/" + fl.length;
     art.classList.remove("failed");
     var slot = el("div");
     art.querySelector(".host").appendChild(slot);
-    var me = { art: art, player: null, kind: f.kind, timer: null };
-    active = me;
     art.classList.add("loading");
-    function alive() { return active === me; }
     function ended() {
-      // terminou: passa para o próximo filme da campanha ou repete
       if (!alive()) return;
-      if (fl.length > 1) { art.dataset.part = (part + 1) % fl.length; activate(art, true); }
+      if (c.fl.length > 1) { art.dataset.part = (part + 1) % c.fl.length; activate(art, true); }
       else if (me.kind === "yt") { me.player.seekTo(0); me.player.playVideo(); }
     }
     function playing() { if (alive()) { art.classList.remove("loading", "paused"); art.classList.add("playing"); } }
@@ -316,11 +372,7 @@
           playerVars: { autoplay: 1, mute: 1, controls: 0, rel: 0, playsinline: 1, modestbranding: 1, iv_load_policy: 3, disablekb: 1, fs: 0 },
           events: {
             onReady: function (e) { if (!alive()) return; if (sound) e.target.unMute(); else e.target.mute(); e.target.playVideo(); },
-            onStateChange: function (e) {
-              if (e.data === 1) playing();
-              else if (e.data === 2) paused();
-              else if (e.data === 0) ended();
-            },
+            onStateChange: function (e) { if (e.data === 1) playing(); else if (e.data === 2) paused(); else if (e.data === 0) ended(); },
             onError: failed
           }
         });
@@ -337,7 +389,7 @@
         if (!alive()) return;
         var p = new Vimeo.Player(slot, {
           url: "https://vimeo.com/" + f.id + (f.hash ? "/" + f.hash : ""),
-          autoplay: true, muted: !sound, loop: fl.length === 1, playsinline: true, controls: false, dnt: true, responsive: true
+          autoplay: true, muted: !sound, loop: c.fl.length === 1, playsinline: true, controls: false, dnt: true, responsive: true
         });
         me.player = p;
         p.on("play", playing);
@@ -352,13 +404,9 @@
   function togglePause() {
     if (!active || !active.player) return;
     var p = active.player;
-    if (active.kind === "yt") {
-      if (p.getPlayerState && p.getPlayerState() === 1) p.pauseVideo(); else p.playVideo();
-    } else {
-      p.getPaused().then(function (x) { if (x) p.play(); else p.pause(); });
-    }
+    if (active.kind === "yt") { if (p.getPlayerState && p.getPlayerState() === 1) p.pauseVideo(); else p.playVideo(); }
+    else p.getPaused().then(function (x) { if (x) p.play(); else p.pause(); });
   }
-
   function setSound(on) {
     sound = on;
     document.body.classList.toggle("sound-on", on);
@@ -366,31 +414,18 @@
     if (!active || !active.player) return;
     try {
       if (active.kind === "yt") { if (on) active.player.unMute(); else active.player.mute(); active.player.playVideo(); }
-      else active.player.setMuted(!on).catch(function () {});
+      else if (active.kind === "vimeo") active.player.setMuted(!on).catch(function () {});
     } catch (e) { /* carregando */ }
   }
 
-  /* ---------- Timeline (rolagem infinita) ---------- */
-  var moreIO = null;
+  /* ---------- Timeline (uma tela por campanha, rolagem infinita) ---------- */
+  var moreIO = null, dayIdx = {};
   function renderMore() {
     var feed = $("feed");
     var slice = state.list.slice(state.shown, state.shown + LOTE);
     slice.forEach(function (c) {
-      if (c.date !== state.lastDay || !state.section) {
-        state.lastDay = c.date;
-        // um bloco por dia, com o título do dia preso no topo enquanto o dia rola
-        var sec = el("section", "day");
-        var h = el("h2", "day-h");
-        h.appendChild(el("span", "day-name", dayTitle(c.date)));
-        var n = state.list.filter(function (x) { return x.date === c.date; });
-        var nf = n.filter(function (x) { return films(x).length; }).length;
-        h.appendChild(el("span", "day-date", (dayTitle(c.date) === "Hoje" || dayTitle(c.date) === "Ontem" ? fmtLong.format(toDate(c.date)) + "  ·  " : "") +
-          n.length + (n.length === 1 ? " campanha" : " campanhas") + (nf ? "  ·  " + nf + (nf === 1 ? " filme" : " filmes") : "")));
-        sec.appendChild(h);
-        feed.appendChild(sec);
-        state.section = sec;
-      }
-      state.section.appendChild(post(c));
+      dayIdx[c.date] = (dayIdx[c.date] || 0);
+      feed.appendChild(post(c, dayIdx[c.date]++));
     });
     state.shown += slice.length;
     var old = $("more");
@@ -399,41 +434,32 @@
     if (state.shown < state.list.length) {
       var s = el("div", "more");
       s.id = "more";
-      s.appendChild(el("span", "spin"));
       feed.appendChild(s);
       if ("IntersectionObserver" in window) {
-        moreIO = new IntersectionObserver(function (es) {
-          if (es[0].isIntersecting) renderMore();
-        }, { rootMargin: "1600px 0px" });
+        moreIO = new IntersectionObserver(function (es) { if (es[0].isIntersecting) renderMore(); }, { rootMargin: "300% 0px" });
         moreIO.observe(s);
-      } else {
-        var b = el("button", "chip", "Carregar mais");
-        b.type = "button";
-        b.addEventListener("click", renderMore);
-        s.appendChild(b);
       }
     } else {
       feed.appendChild(el("p", "end", state.list.length ? "Você chegou ao início do arquivo." : "Nenhuma campanha com esse filtro."));
     }
   }
-
   function renderAll() {
     deactivate();
     ratios.clear();
     if (io) io.disconnect();
     $("feed").textContent = "";
     state.shown = 0;
-    state.lastDay = "";
-    state.section = null;
+    dayIdx = {};
     state.list = state.items.filter(function (c) {
-      if (state.onlyFilms && !films(c).length) return false;
+      if (state.onlyFilms && !c.fl.length) return false;
       if (state.region && regiaoDe(c) !== state.region) return false;
       return true;
     });
+    state.perDay = {};
+    state.list.forEach(function (c) { state.perDay[c.date] = (state.perDay[c.date] || 0) + 1; });
     renderChips();
     renderMore();
   }
-
   function renderChips() {
     var box = $("chips");
     box.textContent = "";
@@ -451,15 +477,29 @@
     });
   }
 
+  /* ---------- Teclado: setas pulam de campanha em campanha ---------- */
+  document.addEventListener("keydown", function (e) {
+    if (e.target && /INPUT|TEXTAREA/.test(e.target.tagName)) return;
+    var posts = Array.prototype.slice.call(document.querySelectorAll(".post"));
+    if (!posts.length) return;
+    var cur = active ? posts.indexOf(active.art) : 0;
+    if (e.key === "ArrowDown" || e.key === "j") { e.preventDefault(); if (posts[cur + 1]) posts[cur + 1].scrollIntoView({ behavior: "smooth" }); }
+    else if (e.key === "ArrowUp" || e.key === "k") { e.preventDefault(); if (posts[cur - 1]) posts[cur - 1].scrollIntoView({ behavior: "smooth" }); }
+    else if (e.key === " ") { e.preventDefault(); if (active && active.kind === "story") storyGo(active.art, active.art._story.i + 1); else togglePause(); }
+    else if (e.key === "m") setSound(!sound);
+    else if (e.key === "ArrowRight" && active && active.kind === "story") storyGo(active.art, active.art._story.i + 1);
+    else if (e.key === "ArrowLeft" && active && active.kind === "story") storyGo(active.art, active.art._story.i - 1);
+  });
+
   /* ---------- Início ---------- */
   $("sound").addEventListener("click", function () { setSound(!sound); });
   $("top").addEventListener("click", function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
   document.addEventListener("visibilitychange", function () {
-    if (document.hidden && active && active.player) {
-      try { if (active.kind === "yt") active.player.pauseVideo(); else active.player.pause(); } catch (e) { /* nada */ }
-    } else if (!document.hidden && active && active.player) {
-      try { if (active.kind === "yt") active.player.playVideo(); else active.player.play(); } catch (e) { /* nada */ }
-    }
+    if (!active || !active.player) return;
+    try {
+      if (document.hidden) { if (active.kind === "yt") active.player.pauseVideo(); else active.player.pause(); }
+      else { if (active.kind === "yt") active.player.playVideo(); else active.player.play(); }
+    } catch (e) { /* nada */ }
   });
   function measure() { document.documentElement.style.setProperty("--hh", document.querySelector(".bar-top").offsetHeight + "px"); }
   measure();
@@ -469,8 +509,6 @@
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (raw) {
       state.items = normalize(raw);
-      var last = state.items.reduce(function (m, c) { return c.addedAt > m ? c.addedAt : m; }, "");
-      var t = last ? new Date(last) : null;
       $("status").hidden = true;
       renderAll();
     })
