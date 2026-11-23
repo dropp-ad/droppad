@@ -30,6 +30,17 @@ for url in sys.argv[1:]:
     print("-- img tags", len(imgs))
     for t in imgs[:40]:
         print("   ", t[:260])
+    links = []
+    for m in re.finditer(r'href=["\']([^"\'#]+)["\']', pag):
+        u = m.group(1)
+        if re.search(r"/(work|projects?|case|news|cases|trabalhos|portfolio)/", u) and u not in links:
+            links.append(u)
+    print("-- links de trabalhos", len(links))
+    for u in links[:60]:
+        print("   ", u)
+    for pad in [r'<meta[^>]+property="og:[^"]+"[^>]*>', r'<meta[^>]+name="(?:description|date|article:published_time)"[^>]*>', r'"datePublished"\s*:\s*"[^"]+"', r"<title>[^<]+</title>"]:
+        for m in re.finditer(pad, pag, re.I):
+            print("   META", m.group(0)[:250])
     miolo = A.corpo_da_materia(pag)
     print("-- miolo tamanho", len(miolo), "é a página inteira?", miolo is pag)
     print("-- filmes_de(miolo)", A.filmes_de(miolo))
