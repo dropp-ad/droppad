@@ -16,15 +16,15 @@
       "mod": "Tue, 24 Nov 2026 20:07:27 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Tue, 24 Nov 2026 19:25:43 GMT"
+      "mod": "Tue, 24 Nov 2026 21:18:56 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"5245320cd9f170dd1cdbc2ba1790b47e\"",
       "mod": "Tue, 24 Nov 2026 19:31:37 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"af53631080d286168e92d6f18f9ca016\"",
-      "mod": "Tue, 24 Nov 2026 21:17:33 GMT"
+      "etag": "\"a3693abf120de2f2081655c3547e74af\"",
+      "mod": "Tue, 24 Nov 2026 21:20:17 GMT"
     },
     "https://www.marketingdirecto.com/rss": {
       "mod": "Tue, 24 Nov 2026 16:23:42 GMT"
@@ -52,7 +52,7 @@
       "mod": "Tue, 24 Nov 2026 21:08:43 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 21:17:36 GMT"
+      "mod": "Tue, 24 Nov 2026 21:20:58 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"bd6f5fdf7d69a0282368f1f8bde58564\"",
@@ -82,7 +82,7 @@
       "mod": "Tue, 24 Nov 2026 04:25:53 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Tue, 24 Nov 2026 12:39:39 GMT"
+      "mod": "Tue, 24 Nov 2026 13:36:08 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"1c22ee1640453bf464a005173a5aee85\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 21:17:24 GMT"
+      "mod": "Tue, 24 Nov 2026 21:20:59 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -131,8 +131,8 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://thestable.com.au/feed/": {
-      "etag": "\"e13e7f5a3444c3d11522008c684461ca\"",
-      "mod": "Tue, 24 Nov 2026 06:00:22 GMT"
+      "etag": "\"c7944b785b128569a0bb789bcfa77123\"",
+      "mod": "Tue, 24 Nov 2026 21:18:53 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
       "mod": "Tue, 24 Nov 2026 20:56:53 GMT"
@@ -150,7 +150,7 @@
       "mod": "Tue, 24 Nov 2026 17:43:47 GMT"
     }
   },
-  "yt_pos": 57,
+  "yt_pos": 84,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -314,7 +314,8 @@
       "Leavingstone": "",
       "Sancho BBDO": "",
       "Fahrenheit DDB": "fahrenheitddb",
-      "Special Group": ""
+      "Special Group": "",
+      "The Monkeys": ""
     },
     "tentadas": {},
     "pos": 201,
@@ -371,7 +372,7 @@
       "Sancho BBDO",
       "Special Group"
     ],
-    "rodadas": 274,
+    "rodadas": 277,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -625,7 +626,8 @@
       "SOKO": [],
       "Sancho BBDO": [],
       "Fahrenheit DDB": [],
-      "Special Group": []
+      "Special Group": [],
+      "The Monkeys": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -715,8 +717,9 @@
     "https://musebyclios.com/advertising/taco-bell-claims-christmas-bells-have-been-its-advertising-all-along",
     "https://creativosbr.com.br/havaianas-celebra-os-pares-originais-do-brasil-em-sua-nova-campanha-de-verao",
     "https://grandesnomesdapropaganda.com.br/anunciantes/sadia-apresenta-lanca-para-destacar-presenca-dos-frios-na-rotina-dos-consumidores",
-    "https://propmark.com.br/agencias/africa-creative-assina-campanha-da-sadia-para-linha-de-frios"
+    "https://propmark.com.br/agencias/africa-creative-assina-campanha-da-sadia-para-linha-de-frios",
+    "https://propmark.com.br/anunciantes/pilao-lanca-linha-de-cappuccinos-e-apresenta-campanha-criada-pela-betc-havas"
   ],
-  "ultima_rodada": "2026-11-24T21:17:43.976744+00:00",
-  "ultima_novidade": "2026-11-24T20:35:43.337653+00:00"
+  "ultima_rodada": "2026-11-24T21:20:55.077716+00:00",
+  "ultima_novidade": "2026-11-24T21:20:55.077716+00:00"
 }
