@@ -4,16 +4,16 @@
       "etag": "W/\"5d2f-o2znJvubyBKV5heDNvTUFqHaMa8\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"e4ffda3c28c9e52c892861e0a33edaeb\"",
-      "mod": "Tue, 24 Nov 2026 18:05:04 GMT"
+      "etag": "\"7ffd3787923e1c2f84498d181b6a7c78\"",
+      "mod": "Tue, 24 Nov 2026 19:51:31 GMT"
     },
     "https://creativosbr.com.br/feed/": {
-      "etag": "W/\"ac16b82deb3016e64abaf19e37026b20\"",
-      "mod": "Tue, 24 Nov 2026 19:32:00 GMT"
+      "etag": "W/\"7571944330072fda4028cad0d4a81b09\"",
+      "mod": "Tue, 24 Nov 2026 19:58:42 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
-      "etag": "\"f58b61c78e77ecec67d3a00bf801f2c7\"",
-      "mod": "Tue, 24 Nov 2026 19:14:00 GMT"
+      "etag": "\"b73e6a232bc3b828752c06b6939467fd\"",
+      "mod": "Tue, 24 Nov 2026 20:07:27 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
       "mod": "Tue, 24 Nov 2026 19:25:43 GMT"
@@ -33,15 +33,15 @@
       "mod": "Tue, 24 Nov 2026 14:06:00 GMT"
     },
     "https://musebyclios.com/feed/": {
-      "etag": "W/\"bf032c2d4b57ccfd45d0459972559317\"",
-      "mod": "Tue, 24 Nov 2026 18:23:07 GMT"
+      "etag": "W/\"e90197546d4b5163bf805a83c39b6f36\"",
+      "mod": "Tue, 24 Nov 2026 19:50:40 GMT"
     },
     "https://www.contentgrip.com/feed/": {
       "etag": "W/\"2a882-FVLh2wELuFV5JZuXSKkh9Jadqg4\""
     },
     "https://www.nossomeio.com.br/feed/": {
-      "etag": "\"5526e93fb2454edd08ff61212674d1f3\"",
-      "mod": "Tue, 24 Nov 2026 19:36:01 GMT"
+      "etag": "\"d2739fb7b30c4246ac9348810d59b00f\"",
+      "mod": "Tue, 24 Nov 2026 19:56:11 GMT"
     },
     "https://www.adworld.ie/feed/": {
       "etag": "\"b778f8e5ac045bc29a7be1e54d179c8b\"",
@@ -52,7 +52,7 @@
       "mod": "Tue, 24 Nov 2026 19:30:50 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 19:37:46 GMT"
+      "mod": "Tue, 24 Nov 2026 20:07:47 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"65a314dc9998c319c0a90751ae90e97b\"",
@@ -89,8 +89,8 @@
       "mod": "Tue, 24 Nov 2026 04:20:02 GMT"
     },
     "https://www.adweek.com/feed/": {
-      "etag": "W/\"6567de7da721767be7ebd396cd0576e7\"",
-      "mod": "Tue, 24 Nov 2026 18:36:51 GMT"
+      "etag": "W/\"24792d14846fffd09b956111e897635e\"",
+      "mod": "Tue, 24 Nov 2026 19:50:08 GMT"
     },
     "https://www.bandt.com.au/feed/": {
       "mod": "Tue, 24 Nov 2026 05:51:14 GMT"
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 19:37:47 GMT"
+      "mod": "Tue, 24 Nov 2026 20:07:47 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -135,22 +135,22 @@
       "mod": "Tue, 24 Nov 2026 06:00:22 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Tue, 24 Nov 2026 18:58:35 GMT"
+      "mod": "Tue, 24 Nov 2026 20:02:10 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"fc116bded8fbc36b69abc5cba6644857\"",
       "mod": "Tue, 24 Nov 2026 14:42:27 GMT"
     },
     "https://roastbrief.com.mx/rss": {
-      "etag": "\"8ca8ebed7dcf02c7a97588a273b9cd17\"",
-      "mod": "Tue, 24 Nov 2026 19:28:54 GMT"
+      "etag": "\"42bce60966ab269628e91f2f7ce0cb15\"",
+      "mod": "Tue, 24 Nov 2026 20:06:46 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
       "etag": "\"f3f16e4c53a0fab71753bd675db6b23c\"",
       "mod": "Tue, 24 Nov 2026 17:43:47 GMT"
     }
   },
-  "yt_pos": 81,
+  "yt_pos": 36,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -265,10 +265,29 @@
       "DUDE": "dude_frames",
       "PS21": "",
       "We Are Social Italy": "wearesocialit",
-      "TBWA\\Italia": "tbwa_italia"
+      "TBWA\\Italia": "tbwa_italia",
+      "FunnyHow": "funnyhowagency",
+      "Uzina": "",
+      "Coming Soon": "comingsoonagency",
+      "180 Amsterdam": "tbwaneboko",
+      "N=5": "",
+      "BBDO Belgium": "bbdobelgium",
+      "Mortierbrigade": "agency_brigada",
+      "Happiness Brussels": "happinessbrussels",
+      "Boys + Girls": "boysandgirlsltd",
+      "JAM": "jamagency",
+      "The Public House": "",
+      "Forsman & Bodenfors": "forsmanbodenfors",
+      "Åkestam Holst": "akestamholst",
+      "Stendahls": "stendahls",
+      "Uncle Grey": "unclegreyagency",
+      "&Co.": "andcoagency",
+      "Robert/Boisen & Like-minded": "robertboisenlikeminded",
+      "POL": "",
+      "TRY": ""
     },
     "tentadas": {},
-    "pos": 158,
+    "pos": 173,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -305,9 +324,13 @@
       "Fred & Farid",
       "HeimatTBWA",
       "China",
-      "PS21"
+      "PS21",
+      "Uzina",
+      "N=5",
+      "The Public House",
+      "TRY"
     ],
-    "rodadas": 174,
+    "rodadas": 204,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -463,7 +486,44 @@
       ],
       "TBWA\\Italia": [
         "tbwa_italia"
-      ]
+      ],
+      "Uzina": [],
+      "FunnyHow": [],
+      "Coming Soon": [],
+      "N=5": [],
+      "180 Amsterdam": [
+        "tbwaneboko"
+      ],
+      "BBDO Belgium": [
+        "bbdobelgium"
+      ],
+      "Mortierbrigade": [
+        "agency_brigada"
+      ],
+      "Happiness Brussels": [
+        "happinessbrussels"
+      ],
+      "The Public House": [],
+      "Boys + Girls": [
+        "boysandgirlsltd"
+      ],
+      "JAM": [],
+      "Forsman & Bodenfors": [
+        "forsmanbodenfors"
+      ],
+      "Åkestam Holst": [
+        "akestamholst"
+      ],
+      "Stendahls": [
+        "stendahls"
+      ],
+      "&Co.": [],
+      "Uncle Grey": [
+        "unclegreyagency"
+      ],
+      "Robert/Boisen & Like-minded": [],
+      "TRY": [],
+      "POL": []
     }
   },
   "vistos": [
@@ -541,8 +601,10 @@
     "https://nossomeio.com.br/maria-quiteria-filmes-ppa-globo-feminicidio",
     "https://nossomeio.com.br/jcdecaux-reforca-time-comercial-com-isabella-pizzato-e-o-retorno-de-kevin-kim",
     "https://creativosbr.com.br/hering-transforma-situacoes-de-amigo-secreto-em-campanha-de-natal",
-    "https://www.meioemensagem.com.br/midia/havan-lidera-os-comerciais-da-black-friday-2026-na-tv"
+    "https://www.meioemensagem.com.br/midia/havan-lidera-os-comerciais-da-black-friday-2026-na-tv",
+    "https://musebyclios.com/advertising/taco-bells-claims-christmas-bells-have-been-its-advertising-all-along",
+    "https://musebyclios.com/advertising/taco-bell-claims-christmas-bells-have-been-its-advertising-all-along"
   ],
-  "ultima_rodada": "2026-11-24T19:37:43.666575+00:00",
+  "ultima_rodada": "2026-11-24T20:07:43.975682+00:00",
   "ultima_novidade": "2026-11-24T18:04:42.842235+00:00"
 }
