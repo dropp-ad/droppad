@@ -23,8 +23,8 @@
       "mod": "Tue, 24 Nov 2026 19:31:37 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"7bb976e453ee19284a8953112e29529e\"",
-      "mod": "Tue, 24 Nov 2026 20:42:41 GMT"
+      "etag": "\"af53631080d286168e92d6f18f9ca016\"",
+      "mod": "Tue, 24 Nov 2026 21:17:33 GMT"
     },
     "https://www.marketingdirecto.com/rss": {
       "mod": "Tue, 24 Nov 2026 16:23:42 GMT"
@@ -48,15 +48,15 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"444c9d9921e758f1f415cd80be465d2c\"",
-      "mod": "Tue, 24 Nov 2026 21:04:28 GMT"
+      "etag": "W/\"15f42a621e6c3b4625056917bcae3cc6\"",
+      "mod": "Tue, 24 Nov 2026 21:08:43 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 21:07:45 GMT"
+      "mod": "Tue, 24 Nov 2026 21:17:36 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"845c9fecfae31b2094facf1b8510387f\"",
-      "mod": "Tue, 24 Nov 2026 20:09:12 GMT"
+      "etag": "\"bd6f5fdf7d69a0282368f1f8bde58564\"",
+      "mod": "Tue, 24 Nov 2026 21:07:54 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795545017-gzip\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 21:07:46 GMT"
+      "mod": "Tue, 24 Nov 2026 21:17:24 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -150,7 +150,7 @@
       "mod": "Tue, 24 Nov 2026 17:43:47 GMT"
     }
   },
-  "yt_pos": 72,
+  "yt_pos": 57,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -312,7 +312,9 @@
       "Íslenska": "islenskaauglysingastofan",
       "SOKO": "sokoagency",
       "Leavingstone": "",
-      "Sancho BBDO": ""
+      "Sancho BBDO": "",
+      "Fahrenheit DDB": "fahrenheitddb",
+      "Special Group": ""
     },
     "tentadas": {},
     "pos": 201,
@@ -365,9 +367,11 @@
       "GMP+WEBSE",
       "New!",
       "The Newtons Laboratory",
-      "Leavingstone"
+      "Leavingstone",
+      "Sancho BBDO",
+      "Special Group"
     ],
-    "rodadas": 264,
+    "rodadas": 274,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -619,7 +623,9 @@
       ],
       "Leavingstone": [],
       "SOKO": [],
-      "Sancho BBDO": []
+      "Sancho BBDO": [],
+      "Fahrenheit DDB": [],
+      "Special Group": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -708,8 +714,9 @@
     "https://musebyclios.com/advertising/taco-bells-claims-christmas-bells-have-been-its-advertising-all-along",
     "https://musebyclios.com/advertising/taco-bell-claims-christmas-bells-have-been-its-advertising-all-along",
     "https://creativosbr.com.br/havaianas-celebra-os-pares-originais-do-brasil-em-sua-nova-campanha-de-verao",
-    "https://grandesnomesdapropaganda.com.br/anunciantes/sadia-apresenta-lanca-para-destacar-presenca-dos-frios-na-rotina-dos-consumidores"
+    "https://grandesnomesdapropaganda.com.br/anunciantes/sadia-apresenta-lanca-para-destacar-presenca-dos-frios-na-rotina-dos-consumidores",
+    "https://propmark.com.br/agencias/africa-creative-assina-campanha-da-sadia-para-linha-de-frios"
   ],
-  "ultima_rodada": "2026-11-24T21:07:43.255712+00:00",
+  "ultima_rodada": "2026-11-24T21:17:43.976744+00:00",
   "ultima_novidade": "2026-11-24T20:35:43.337653+00:00"
 }
