@@ -52,7 +52,7 @@
       "mod": "Tue, 24 Nov 2026 20:13:22 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 20:34:59 GMT"
+      "mod": "Tue, 24 Nov 2026 20:37:46 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"845c9fecfae31b2094facf1b8510387f\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 20:35:47 GMT"
+      "mod": "Tue, 24 Nov 2026 20:37:47 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -150,7 +150,7 @@
       "mod": "Tue, 24 Nov 2026 17:43:47 GMT"
     }
   },
-  "yt_pos": 57,
+  "yt_pos": 54,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -295,15 +295,16 @@
       "THIS IS LOCCO": "this_is_locco",
       "Mito": "hellowearemito",
       "MUW Saatchi & Saatchi": "",
-      "Cohn & Jansen": "cohnandjansen"
+      "Cohn & Jansen": "cohnandjansen",
+      "Artificial Group": ""
     },
     "tentadas": {
-      "Artificial Group": [
-        "artificialgroup",
-        "artificialgroupagency"
+      "GMP+WEBSE": [
+        "gmp",
+        "gmpwebse"
       ]
     },
-    "pos": 187,
+    "pos": 188,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -351,7 +352,7 @@
       "MUW Saatchi & Saatchi",
       "Artificial Group"
     ],
-    "rodadas": 232,
+    "rodadas": 234,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -570,7 +571,8 @@
       "Artificial Group": [],
       "Cohn & Jansen": [
         "cohnandjansen"
-      ]
+      ],
+      "GMP+WEBSE": []
     }
   },
   "vistos": [
@@ -654,6 +656,6 @@
     "https://creativosbr.com.br/havaianas-celebra-os-pares-originais-do-brasil-em-sua-nova-campanha-de-verao",
     "https://grandesnomesdapropaganda.com.br/anunciantes/sadia-apresenta-lanca-para-destacar-presenca-dos-frios-na-rotina-dos-consumidores"
   ],
-  "ultima_rodada": "2026-11-24T20:35:43.337653+00:00",
+  "ultima_rodada": "2026-11-24T20:37:43.401566+00:00",
   "ultima_novidade": "2026-11-24T20:35:43.337653+00:00"
 }
