@@ -8,8 +8,8 @@
       "mod": "Tue, 24 Nov 2026 20:34:58 GMT"
     },
     "https://creativosbr.com.br/feed/": {
-      "etag": "W/\"4f89dee4574fdd214f0fa9ac4f1484fa\"",
-      "mod": "Tue, 24 Nov 2026 20:29:40 GMT"
+      "etag": "W/\"2ddba2092895866ddb0a35d2a323eb92\"",
+      "mod": "Tue, 24 Nov 2026 20:54:39 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
       "etag": "\"b73e6a232bc3b828752c06b6939467fd\"",
@@ -23,8 +23,8 @@
       "mod": "Tue, 24 Nov 2026 19:31:37 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"df3fb66a473d2d0ca8566ad212087134\"",
-      "mod": "Tue, 24 Nov 2026 18:49:20 GMT"
+      "etag": "\"7bb976e453ee19284a8953112e29529e\"",
+      "mod": "Tue, 24 Nov 2026 20:42:41 GMT"
     },
     "https://www.marketingdirecto.com/rss": {
       "mod": "Tue, 24 Nov 2026 16:23:42 GMT"
@@ -33,26 +33,26 @@
       "mod": "Tue, 24 Nov 2026 14:06:00 GMT"
     },
     "https://musebyclios.com/feed/": {
-      "etag": "W/\"e90197546d4b5163bf805a83c39b6f36\"",
-      "mod": "Tue, 24 Nov 2026 19:50:40 GMT"
+      "etag": "W/\"be71567a4f676ceaa89119fd33fb28ab\"",
+      "mod": "Tue, 24 Nov 2026 21:00:17 GMT"
     },
     "https://www.contentgrip.com/feed/": {
       "etag": "W/\"2a882-FVLh2wELuFV5JZuXSKkh9Jadqg4\""
     },
     "https://www.nossomeio.com.br/feed/": {
-      "etag": "\"effde458ae2e7cc4c892621d3ff8df7b\"",
-      "mod": "Tue, 24 Nov 2026 20:15:22 GMT"
+      "etag": "\"ca13a04b7a22295cc11721ad4c597bd9\"",
+      "mod": "Tue, 24 Nov 2026 20:48:20 GMT"
     },
     "https://www.adworld.ie/feed/": {
       "etag": "\"b778f8e5ac045bc29a7be1e54d179c8b\"",
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"f6ce0e3fddccf7b4f79fe19b0eb1dadf\"",
-      "mod": "Tue, 24 Nov 2026 20:13:22 GMT"
+      "etag": "W/\"444c9d9921e758f1f415cd80be465d2c\"",
+      "mod": "Tue, 24 Nov 2026 21:04:28 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 20:37:46 GMT"
+      "mod": "Tue, 24 Nov 2026 21:07:45 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"845c9fecfae31b2094facf1b8510387f\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 20:37:47 GMT"
+      "mod": "Tue, 24 Nov 2026 21:07:46 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -135,7 +135,7 @@
       "mod": "Tue, 24 Nov 2026 06:00:22 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Tue, 24 Nov 2026 20:35:30 GMT"
+      "mod": "Tue, 24 Nov 2026 20:56:53 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"fc116bded8fbc36b69abc5cba6644857\"",
@@ -150,7 +150,7 @@
       "mod": "Tue, 24 Nov 2026 17:43:47 GMT"
     }
   },
-  "yt_pos": 54,
+  "yt_pos": 72,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -296,15 +296,26 @@
       "Mito": "hellowearemito",
       "MUW Saatchi & Saatchi": "",
       "Cohn & Jansen": "cohnandjansen",
-      "Artificial Group": ""
+      "Artificial Group": "",
+      "banda": "banda",
+      "Milk": "vilvi.vilkyskiu",
+      "GMP+WEBSE": "",
+      "Tabasco": "tabasco.theagency",
+      "age": "age.creative",
+      "New!": "",
+      "Bruketa&Žinić&Grey": "bruketa_and",
+      "Imago Ogilvy": "imago.ogilvy",
+      "Communis": "communis_agency",
+      "The Newtons Laboratory": "",
+      "proof.": "proof.agency",
+      "Noble Graphics": "noblegraphics_",
+      "Íslenska": "islenskaauglysingastofan",
+      "SOKO": "sokoagency",
+      "Leavingstone": "",
+      "Sancho BBDO": ""
     },
-    "tentadas": {
-      "GMP+WEBSE": [
-        "gmp",
-        "gmpwebse"
-      ]
-    },
-    "pos": 188,
+    "tentadas": {},
+    "pos": 201,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -350,9 +361,13 @@
       "SMFB",
       "Wirz",
       "MUW Saatchi & Saatchi",
-      "Artificial Group"
+      "Artificial Group",
+      "GMP+WEBSE",
+      "New!",
+      "The Newtons Laboratory",
+      "Leavingstone"
     ],
-    "rodadas": 234,
+    "rodadas": 264,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -572,7 +587,46 @@
       "Cohn & Jansen": [
         "cohnandjansen"
       ],
-      "GMP+WEBSE": []
+      "GMP+WEBSE": [],
+      "banda": [],
+      "Milk": [
+        "vilvi.vilkyskiu",
+        "vilkyskiu_pienine_vilvi"
+      ],
+      "New!": [],
+      "Tabasco": [
+        "tabasco.theagency"
+      ],
+      "age": [
+        "age.creative"
+      ],
+      "The Newtons Laboratory": [],
+      "Bruketa&Žinić&Grey": [
+        "bruketa_and"
+      ],
+      "Imago Ogilvy": [
+        "imago.ogilvy"
+      ],
+      "Communis": [
+        "communis_agency"
+      ],
+      "proof.": [
+        "proof.agency"
+      ],
+      "Noble Graphics": [],
+      "Íslenska": [
+        "islenskaauglysingastofan"
+      ],
+      "Leavingstone": [],
+      "SOKO": [],
+      "Sancho BBDO": []
+    },
+    "mortas": {
+      "havasmedia": "2026-11-24T20:47:43.944196+00:00",
+      "groupm": "2026-11-24T20:49:43.526539+00:00",
+      "omnicomgroup": "2026-11-24T20:51:43.354371+00:00",
+      "stagwellgroup": "2026-11-24T20:57:43.431131+00:00",
+      "billiondollarboy": "2026-11-24T21:01:44.051060+00:00"
     }
   },
   "vistos": [
@@ -656,6 +710,6 @@
     "https://creativosbr.com.br/havaianas-celebra-os-pares-originais-do-brasil-em-sua-nova-campanha-de-verao",
     "https://grandesnomesdapropaganda.com.br/anunciantes/sadia-apresenta-lanca-para-destacar-presenca-dos-frios-na-rotina-dos-consumidores"
   ],
-  "ultima_rodada": "2026-11-24T20:37:43.401566+00:00",
+  "ultima_rodada": "2026-11-24T21:07:43.255712+00:00",
   "ultima_novidade": "2026-11-24T20:35:43.337653+00:00"
 }
