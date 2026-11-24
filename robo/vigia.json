@@ -48,15 +48,15 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"a86cfe80ec9ac77bf1254e775febea78\"",
-      "mod": "Tue, 24 Nov 2026 23:32:04 GMT"
+      "etag": "W/\"b8c47db8dc08b03004e7b359edaac7e3\"",
+      "mod": "Tue, 24 Nov 2026 23:50:07 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 23:46:59 GMT"
+      "mod": "Tue, 24 Nov 2026 23:56:59 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"d96d4ee66a53de50162b7c41bbc143f6\"",
-      "mod": "Tue, 24 Nov 2026 23:31:10 GMT"
+      "etag": "\"fdb6e495761162e64eb617ff7f058825\"",
+      "mod": "Tue, 24 Nov 2026 23:57:58 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795545017-gzip\"",
@@ -74,15 +74,15 @@
       "mod": "Tue, 24 Nov 2026 18:12:27 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"26c795d20245e1fad7a1568bb1a5d85c\"",
-      "mod": "Tue, 24 Nov 2026 23:40:21 GMT"
+      "etag": "\"f28f2bdfb1058f515144d27110c2ed4a\"",
+      "mod": "Tue, 24 Nov 2026 23:48:33 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
       "etag": "\"fba985558d1510f2c5aa4c38d74020af\"",
       "mod": "Tue, 24 Nov 2026 23:28:00 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Tue, 24 Nov 2026 23:41:00 GMT"
+      "mod": "Tue, 24 Nov 2026 23:50:59 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"2f7c8aab282d47bacfef1af7f6ab078a\"",
@@ -93,7 +93,7 @@
       "mod": "Tue, 24 Nov 2026 23:42:55 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 23:44:53 GMT"
+      "mod": "Tue, 24 Nov 2026 23:57:51 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
       "etag": "\"01865794e34ab23b0cd5491d7a065892\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 23:47:59 GMT"
+      "mod": "Tue, 24 Nov 2026 23:58:00 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -189,7 +189,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 87,
+  "yt_pos": 95,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -379,15 +379,21 @@
       "BETC Havas": "",
       "MullenLowe Brasil": "omnicom",
       "SunsetDDB": "",
-      "Tech and Soul": "agenciatechandsoul",
-      "David São Paulo": ""
+      "Tech and Soul": "agenciatechandsoul"
     },
     "tentadas": {
       "Zambezi": [
         "zmbz"
+      ],
+      "David São Paulo": [
+        "davidtheagency",
+        "david.saopaulo",
+        "davidsaopaulo",
+        "davidsopaulo",
+        "davidsopauloagency"
       ]
     },
-    "pos": 253,
+    "pos": 258,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -448,9 +454,10 @@
       "TBWA\\Chiat\\Day",
       "VML Brasil",
       "BETC Havas",
-      "SunsetDDB"
+      "SunsetDDB",
+      "David São Paulo"
     ],
-    "rodadas": 424,
+    "rodadas": 434,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -930,7 +937,8 @@
       "razorfishuk": "2026-11-24T23:35:55.518808+00:00",
       "caratuk": "2026-11-24T23:39:55.417279+00:00",
       "phduk": "2026-11-24T23:41:55.997023+00:00",
-      "zenithuk": "2026-11-24T23:45:55.748930+00:00"
+      "zenithuk": "2026-11-24T23:45:55.748930+00:00",
+      "interpublicgroup": "2026-11-24T23:53:56.012486+00:00"
     }
   },
   "vistos": [
@@ -1053,8 +1061,10 @@
     "https://campaignbriefasia.com/2026/11/23/bankwest-explores-the-risks-you-could-take-now-your-actual-card-details-are-protected-in-new-campaign-via-bear-meets-eagle-on-fire",
     "https://campaignbriefasia.com/2026/11/19/glenn-mcgrath-leads-the-sachin-sachin-chant-in-new-dr-agarwals-eye-hospital-spot",
     "https://campaignbriefasia.com/2026/11/18/kfc-india-serves-up-sauce-and-family-drama-in-new-drip-happens-film-via-mad-about-digital",
-    "https://campaignbrief.com/pn-banks-the-big-bank-boss-returns-for-new-home-loans-campaign-via-chapter"
+    "https://campaignbrief.com/pn-banks-the-big-bank-boss-returns-for-new-home-loans-campaign-via-chapter",
+    "https://campaignbrief.com/white-claw-dials-up-spontaneity-this-summer-in-answer-the-claw-campaign-via-today-the-brave",
+    "https://mumbrella.com.au/clearads-launches-trust-mark-verification-badge-for-advertisers-945980"
   ],
-  "ultima_rodada": "2026-11-24T23:47:55.429009+00:00",
-  "ultima_novidade": "2026-11-24T22:35:55.867298+00:00"
+  "ultima_rodada": "2026-11-24T23:57:55.373681+00:00",
+  "ultima_novidade": "2026-11-24T23:57:55.373681+00:00"
 }
