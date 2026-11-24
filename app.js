@@ -387,32 +387,143 @@
     menu.style.left = Math.max(12, Math.min(window.innerWidth - w - 12, r.right - w)) + "px";
   }
 
-  /* ---------- Comentários ----------
-     Com CUSDIS_APP_ID preenchido: Cusdis (só nome + comentário, sem login; você aprova no painel do cusdis.com).
-     Vazio: utterances (cada campanha vira uma issue no GitHub; exige login no GitHub). */
-  var CUSDIS_APP_ID = "";
-  var COMMENTS_REPO = "pedrorosas/estreou-hoje";
-  var cusdisJs = null;
-  function loadCusdis() {
-    if (cusdisJs) return cusdisJs;
-    window.CUSDIS_PREVENT_INITIAL_RENDER = true;
-    window.CUSDIS_LOCALE = {
-      powered_by: "Comentários por Cusdis", post_comment: "Comentar", loading: "Carregando",
-      email: "E-mail (opcional, não aparece)", nickname: "Seu nome", reply_placeholder: "Escreva seu comentário…",
-      reply_btn: "Responder", sending: "enviando…", mod_badge: "MOD",
-      content_is_required: "Escreva o comentário", nickname_is_required: "Coloque seu nome",
-      comment_has_been_sent: "Comentário enviado! Ele aparece aqui assim que for aprovado."
-    };
-    cusdisJs = new Promise(function (ok, fail) {
+  /* ---------- Comentários (sistema próprio, no Supabase) ----------
+     Login com Google (e Apple, quando APPLE_LOGIN = true). Os comentários ficam na tabela
+     "comments" do seu projeto Supabase; o SQL está em supabase/comentarios.sql.
+     Para esconder um comentário: Supabase → Table Editor → comments → marque "hidden".
+     A chave abaixo é a pública ("anon"/"publishable"); ela pode ficar no site. */
+  var SUPABASE_URL = "";
+  var SUPABASE_KEY = "";
+  var APPLE_LOGIN = false;
+  var sbReady = null, sb = null, me = null;
+  function loadSb() {
+    if (sbReady) return sbReady;
+    sbReady = new Promise(function (ok, fail) {
       var sc = document.createElement("script");
-      sc.src = "https://cusdis.com/js/cusdis.es.js";
-      sc.async = true; sc.defer = true;
-      sc.onload = function () { window.CUSDIS && window.CUSDIS.renderTo ? ok() : fail(); };
-      sc.onerror = function () { cusdisJs = null; fail(); };
+      sc.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js";
+      sc.async = true;
+      sc.onload = function () {
+        try {
+          sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, { auth: { flowType: "pkce", persistSession: true, detectSessionInUrl: true } });
+          sb.auth.onAuthStateChange(function (_ev, s) { me = s ? s.user : null; refreshForm(); });
+          sb.auth.getSession().then(function (r) { me = r.data.session ? r.data.session.user : null; ok(sb); }, function () { ok(sb); });
+        } catch (e) { sbReady = null; fail(e); }
+      };
+      sc.onerror = function () { sbReady = null; fail(); };
       document.head.appendChild(sc);
     });
-    return cusdisJs;
+    return sbReady;
   }
+  function nameOf(u) {
+    var m = (u && u.user_metadata) || {};
+    return m.full_name || m.name || "Você";
+  }
+  var fmtAgo = new Intl.RelativeTimeFormat("pt-BR", { numeric: "auto" });
+  function ago(iso) {
+    var s = (new Date(iso).getTime() - Date.now()) / 1000;
+    var steps = [[60, "second"], [60, "minute"], [24, "hour"], [7, "day"], [4.35, "week"], [12, "month"], [Infinity, "year"]];
+    for (var i = 0; i < steps.length; i++) {
+      if (Math.abs(s) < steps[i][0]) return fmtAgo.format(Math.round(s), steps[i][1]);
+      s /= steps[i][0];
+    }
+    return "";
+  }
+  function cmtItem(k) {
+    var li = el("li", "cmt-i");
+    var av = el("span", "cmt-av");
+    if (safeUrl(k.author_avatar || "")) {
+      var img = document.createElement("img");
+      img.src = k.author_avatar; img.alt = ""; img.referrerPolicy = "no-referrer"; img.loading = "lazy";
+      img.onerror = function () { img.remove(); av.textContent = (k.author_name || "?").charAt(0).toUpperCase(); };
+      av.appendChild(img);
+    } else av.textContent = (k.author_name || "?").charAt(0).toUpperCase();
+    li.appendChild(av);
+    var box = el("div", "cmt-b");
+    var hd = el("div", "cmt-h");
+    hd.appendChild(el("b", null, k.author_name || "Leitor"));
+    hd.appendChild(el("span", null, ago(k.created_at)));
+    if (me && k.user_id === me.id) {
+      var del = el("button", "cmt-del", "apagar"); del.type = "button";
+      del.addEventListener("click", function () {
+        del.disabled = true;
+        sb.from("comments").delete().eq("id", k.id).then(function (r) {
+          if (r.error) { del.disabled = false; toast("Não deu para apagar agora."); } else li.remove();
+        });
+      });
+      hd.appendChild(del);
+    }
+    box.appendChild(hd);
+    box.appendChild(el("p", "cmt-t", k.body));
+    li.appendChild(box);
+    return li;
+  }
+  var cur = null; // campanha aberta na gaveta
+  function loadList(c, body) {
+    var list = body.querySelector(".cmt-list");
+    sb.from("comments").select("id,user_id,author_name,author_avatar,body,created_at")
+      .eq("campaign_id", c.id).order("created_at", { ascending: true }).limit(300)
+      .then(function (r) {
+        if (cur !== c) return;
+        list.textContent = "";
+        if (r.error) { list.appendChild(el("li", "drawer-note", "Não foi possível carregar os comentários agora.")); return; }
+        if (!r.data.length) list.appendChild(el("li", "drawer-note cmt-empty", "Ninguém comentou ainda. Comece a conversa."));
+        r.data.forEach(function (k) { list.appendChild(cmtItem(k)); });
+      });
+  }
+  function refreshForm() {
+    if (!drawer || !cur) return;
+    var f = drawer.querySelector(".cmt-form");
+    if (!f) return;
+    f.textContent = "";
+    if (!me) {
+      f.appendChild(el("p", "cmt-ask", "Entre para comentar:"));
+      var row = el("div", "cmt-logins");
+      function loginBtn(prov, label, icon) {
+        var b = el("button", "cmt-login " + prov); b.type = "button";
+        b.innerHTML = icon; b.appendChild(el("span", null, label));
+        b.addEventListener("click", function () {
+          try { sessionStorage.setItem("adCmt", cur.id); } catch (e) { /* nada */ }
+          sb.auth.signInWithOAuth({ provider: prov, options: { redirectTo: linkOf(cur) } });
+        });
+        row.appendChild(b);
+      }
+      loginBtn("google", "Google", '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="#4285F4" d="M22.6 12.3c0-.8-.1-1.6-.2-2.3H12v4.3h5.9a5 5 0 0 1-2.2 3.3v2.8h3.6c2.1-1.9 3.3-4.8 3.3-8.1z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.2 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.9A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7H2.1a11 11 0 0 0 0 10z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2A11 11 0 0 0 2.1 7l3.7 2.9C6.7 7.3 9.1 5.4 12 5.4z"/></svg>');
+      if (APPLE_LOGIN) loginBtn("apple", "Apple", '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.8 2.6 3.2 2.5 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4zM13.9 5c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.3 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg>');
+      f.appendChild(row);
+      return;
+    }
+    var ta = el("textarea", "cmt-in");
+    ta.maxLength = 1000; ta.rows = 3; ta.placeholder = "Escreva seu comentário…";
+    ta.setAttribute("aria-label", "Seu comentário");
+    var bar = el("div", "cmt-bar");
+    var who = el("span", "cmt-me", "Comentando como " + nameOf(me) + " · ");
+    var out = el("button", "cmt-out", "sair"); out.type = "button";
+    out.addEventListener("click", function () { sb.auth.signOut(); });
+    who.appendChild(out);
+    var send = el("button", "cmt-send", "Comentar"); send.type = "button";
+    function post() {
+      var txt = ta.value.trim();
+      if (!txt || send.disabled) return;
+      send.disabled = true;
+      var c = cur;
+      sb.from("comments").insert({ campaign_id: c.id, body: txt }).select("id,user_id,author_name,author_avatar,body,created_at").single()
+        .then(function (r) {
+          send.disabled = false;
+          if (r.error) { toast(/rapido|devagar/i.test(r.error.message) ? "Calma: espere um pouco antes de comentar de novo." : "Não deu para enviar. Tente de novo."); return; }
+          ta.value = "";
+          if (cur !== c) return;
+          var list = drawer.querySelector(".cmt-list");
+          var empty = list.querySelector(".cmt-empty"); if (empty) empty.remove();
+          list.appendChild(cmtItem(r.data));
+          list.lastChild.scrollIntoView({ block: "nearest", behavior: "smooth" });
+        });
+    }
+    send.addEventListener("click", post);
+    ta.addEventListener("keydown", function (e) { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) post(); });
+    bar.appendChild(who); bar.appendChild(send);
+    f.appendChild(ta); f.appendChild(bar);
+  }
+
   var drawer = null;
   function closeComments() {
     if (!drawer) return;
@@ -431,6 +542,7 @@
       head.appendChild(x);
       drawer.appendChild(head);
       drawer.appendChild(el("div", "drawer-body"));
+      drawer.appendChild(el("div", "cmt-form"));
       var veil = el("div", "veil"); veil.addEventListener("click", closeComments);
       document.body.appendChild(veil);
       document.body.appendChild(drawer);
@@ -440,40 +552,31 @@
     t.appendChild(el("b", null, c.brand || "Campanha"));
     t.appendChild(el("span", null, c.title));
     var body = drawer.querySelector(".drawer-body");
-    if (body._id !== c.id) {
-      body._id = c.id;
-      body.textContent = "";
-      body.appendChild(el("p", "drawer-note", "Carregando comentários…"));
-      if (CUSDIS_APP_ID) {
-        var box = el("div", "cusdis");
-        box.dataset.host = "https://cusdis.com";
-        box.dataset.appId = CUSDIS_APP_ID;
-        box.dataset.pageId = c.id;
-        box.dataset.pageUrl = linkOf(c);
-        box.dataset.pageTitle = (c.brand ? c.brand + ": " : "") + c.title;
-        box.dataset.theme = "light";
-        loadCusdis().then(function () {
-          if (body._id !== c.id) return;
-          body.textContent = "";
-          body.appendChild(box);
-          window.CUSDIS.renderTo(box);
-        }, function () { body.textContent = ""; body.appendChild(el("p", "drawer-note", "Não foi possível carregar os comentários agora.")); });
-        requestAnimationFrame(function () { drawer.classList.add("on"); document.body.classList.add("drawer-on"); });
-        return;
-      }
-      var sc = document.createElement("script");
-      sc.src = "https://utteranc.es/client.js";
-      sc.async = true;
-      sc.crossOrigin = "anonymous";
-      sc.setAttribute("repo", COMMENTS_REPO);
-      sc.setAttribute("issue-term", "Comentários: " + c.id);
-      sc.setAttribute("label", "comentários");
-      sc.setAttribute("theme", "github-light");
-      sc.onload = function () { var n = body.querySelector(".drawer-note"); if (n) n.remove(); };
-      sc.onerror = function () { body.textContent = ""; body.appendChild(el("p", "drawer-note", "Não foi possível carregar os comentários agora.")); };
-      body.appendChild(sc);
+    var form = drawer.querySelector(".cmt-form");
+    cur = c;
+    body.textContent = "";
+    form.textContent = "";
+    if (!SUPABASE_URL || !SUPABASE_KEY) {
+      body.appendChild(el("p", "drawer-note", "Comentários chegando em breve."));
+    } else {
+      var list = el("ul", "cmt-list");
+      list.appendChild(el("li", "drawer-note", "Carregando comentários…"));
+      body.appendChild(list);
+      loadSb().then(function () { if (cur !== c) return; loadList(c, body); refreshForm(); },
+        function () { body.textContent = ""; body.appendChild(el("p", "drawer-note", "Não foi possível carregar os comentários agora.")); });
     }
     requestAnimationFrame(function () { drawer.classList.add("on"); document.body.classList.add("drawer-on"); });
+  }
+  // volta do login: conclui a entrada e reabre a gaveta da campanha
+  function resumeLogin() {
+    if (!SUPABASE_URL || !/[?&]code=/.test(location.search)) return;
+    var id = ""; try { id = sessionStorage.getItem("adCmt") || ""; sessionStorage.removeItem("adCmt"); } catch (e) { /* nada */ }
+    loadSb().then(function () {
+      var u = location.pathname + location.search.replace(/[?&](code|state)=[^&]*/g, "").replace(/^&/, "?") + location.hash;
+      history.replaceState(null, "", u);
+      var c = state.items.filter(function (k) { return k.id === id; })[0];
+      if (c) openComments(c);
+    }, function () { /* nada */ });
   }
 
   /* ---------- Card do fim do filme: a ideia e os créditos ---------- */
@@ -1017,6 +1120,7 @@
         $("status").hidden = true;
         renderAll();
         goTo(sharedId());
+        resumeLogin();
       });
     })
     .catch(function (err) {

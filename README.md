@@ -28,3 +28,11 @@ Usa a conta @addrop.feed (Business, ligada à Página "AD Drop") pela Graph API,
 - Contas extras (marcas, veículos) podem ser postas à mão em `robo/fontes.json` → `"instagram": [{"usuario": "@conta", "nome": "Nome", "regiao": "Brasil", "cc": "BR"}]`.
 - A Meta permite ~200 chamadas por hora; o vigia gasta 2 por minuto e pausa sozinho se a Meta avisar uso alto.
 - Se o token vencer ou for recusado, o log do vigia mostra "INSTAGRAM: token recusado" e o resto do robô continua funcionando. Basta gerar um token novo e trocar o secret `IG_TOKEN`.
+
+## Comentários (`supabase/comentarios.sql`)
+
+Sistema próprio: os comentários ficam numa tabela do Supabase, e quem comenta entra com Google (Apple quando `APPLE_LOGIN = true` em `app.js`).
+
+- Configuração em `app.js`: `SUPABASE_URL` e `SUPABASE_KEY` (a chave pública, que pode ficar no site). Vazios = a gaveta mostra "Comentários chegando em breve".
+- O nome e a foto vêm da conta Google/Apple; cada pessoa pode comentar no máximo 5 vezes por minuto e apagar só os próprios comentários.
+- Para esconder um comentário: Supabase → Table Editor → `comments` → marque `hidden`.
