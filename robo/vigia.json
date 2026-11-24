@@ -1,0 +1,231 @@
+{
+  "cond": {
+    "https://www.b9.com.br/feed/": {
+      "etag": "W/\"5d2f-+0NwAdC23BRCv91OQ8kZi9uK8WQ\""
+    },
+    "https://grandesnomesdapropaganda.com.br/feed/": {
+      "etag": "\"13b9df4cd44203e340d7cfa88d39f1fd\"",
+      "mod": "Tue, 24 Nov 2026 15:36:09 GMT"
+    },
+    "https://creativosbr.com.br/feed/": {
+      "etag": "W/\"1ea63a919a6188ae0053b2e9727d3ca9\"",
+      "mod": "Tue, 24 Nov 2026 15:52:00 GMT"
+    },
+    "https://clubedecriacao.com.br/feed/": {
+      "etag": "\"22593ec6f167787d0d1fdc4fe545aa30\"",
+      "mod": "Tue, 24 Nov 2026 15:54:26 GMT"
+    },
+    "https://marcaspelomundo.com.br/feed/": {
+      "mod": "Tue, 24 Nov 2026 14:41:37 GMT"
+    },
+    "https://www.informabtl.com/feed/": {
+      "etag": "W/\"83a2f848f8db69f2c9f42d69f28e8334\"",
+      "mod": "Tue, 24 Nov 2026 10:00:27 GMT"
+    },
+    "https://propmark.com.br/feed/": {
+      "etag": "\"77105b47477c77e04c7a06432e117d0d\"",
+      "mod": "Tue, 24 Nov 2026 15:55:36 GMT"
+    },
+    "https://www.marketingdirecto.com/rss": {
+      "mod": "Tue, 24 Nov 2026 14:55:27 GMT"
+    },
+    "https://www.marketingdive.com/feeds/news/": {
+      "mod": "Tue, 24 Nov 2026 14:06:00 GMT"
+    },
+    "https://musebyclios.com/feed/": {
+      "etag": "W/\"f7dfb848cf619a4089445c080ad6a341\"",
+      "mod": "Tue, 24 Nov 2026 15:46:11 GMT"
+    },
+    "https://www.contentgrip.com/feed/": {
+      "etag": "W/\"2a882-FVLh2wELuFV5JZuXSKkh9Jadqg4\""
+    },
+    "https://www.nossomeio.com.br/feed/": {
+      "etag": "\"5fd278f1c1cef980a4b743e5bde69de1\"",
+      "mod": "Tue, 24 Nov 2026 14:30:11 GMT"
+    },
+    "https://www.adworld.ie/feed/": {
+      "etag": "\"5f6dae78867c4fa973730624aec7dce1\"",
+      "mod": "Fri, 20 Nov 2026 14:40:39 GMT"
+    },
+    "https://www.merca20.com/feed/": {
+      "etag": "W/\"45e78b05f4d0df6e7a1fee3d986a6890\"",
+      "mod": "Tue, 24 Nov 2026 15:47:33 GMT"
+    },
+    "https://www.mediaweek.com.au/feed/": {
+      "mod": "Tue, 24 Nov 2026 15:55:45 GMT"
+    },
+    "https://mumbrella.com.au/feed/": {
+      "etag": "\"65a314dc9998c319c0a90751ae90e97b\"",
+      "mod": "Tue, 24 Nov 2026 09:24:54 GMT"
+    },
+    "https://www.cbnews.fr/rss.xml": {
+      "etag": "W/\"1795535653-gzip\"",
+      "mod": "Tue, 24 Nov 2026 15:54:13 GMT"
+    },
+    "https://www.marketing-beat.co.uk/feed/": {
+      "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
+      "mod": "Thu, 07 May 2026 12:47:56 GMT"
+    },
+    "https://www.decisionmarketing.co.uk/feed/": {
+      "mod": "Tue, 24 Nov 2026 11:22:01 GMT"
+    },
+    "https://www.jai-un-pote-dans-la.com/feed/": {
+      "etag": "\"01927c04d6b03f919ac3acd740fb8810\"",
+      "mod": "Tue, 24 Nov 2026 14:57:37 GMT"
+    },
+    "https://campaignbrief.com/feed/": {
+      "etag": "\"bc7f6af9a5403b336aae8c03b28d2981\"",
+      "mod": "Tue, 24 Nov 2026 08:00:22 GMT"
+    },
+    "https://campaignbrief.co.nz/feed/": {
+      "etag": "\"aa58c14885c9625f9ad052b912882153\"",
+      "mod": "Tue, 24 Nov 2026 04:25:53 GMT"
+    },
+    "https://www.afaqs.com/rss": {
+      "mod": "Tue, 24 Nov 2026 12:36:12 GMT"
+    },
+    "https://campaignbriefasia.com/feed/": {
+      "etag": "\"1c22ee1640453bf464a005173a5aee85\"",
+      "mod": "Tue, 24 Nov 2026 04:20:02 GMT"
+    },
+    "https://www.adweek.com/feed/": {
+      "etag": "W/\"06330a7c627ac44a14b52cd8d351d7d8\"",
+      "mod": "Tue, 24 Nov 2026 15:06:56 GMT"
+    },
+    "https://www.bandt.com.au/feed/": {
+      "mod": "Tue, 24 Nov 2026 05:51:14 GMT"
+    },
+    "https://marketinginsiderreview.com/feed/": {
+      "etag": "\"01865794e34ab23b0cd5491d7a065892\"",
+      "mod": "Tue, 24 Nov 2026 14:18:22 GMT"
+    },
+    "https://bbdo.com/feed/": {
+      "etag": "W/\"d19e6feb3b8183716af7e9ecf21ae2f1\"",
+      "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
+    },
+    "https://clios.com/rss.xml": {
+      "mod": "Tue, 24 Nov 2026 15:55:47 GMT"
+    },
+    "https://www.medianews4u.com/feed/": {
+      "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
+      "mod": "Tue, 24 Nov 2026 11:05:05 GMT"
+    },
+    "https://www.mccann.com/feed/": {
+      "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
+      "mod": "Mon, 02 Nov 2026 20:47:42 GMT"
+    },
+    "https://wearesocial.com/us/feed/": {
+      "etag": "W/\"a46be542618b9446bcb4af2e5dae6393\"",
+      "mod": "Tue, 24 Nov 2026 10:46:44 GMT"
+    },
+    "https://luckygenerals.com/feed/": {
+      "etag": "W/\"afe59d1849730f2e182355504e013e9e\"",
+      "mod": "Mon, 16 Nov 2026 13:54:54 GMT"
+    },
+    "https://www.adamandeveddb.com/feed/": {
+      "etag": "W/\"a3390015971cb372e8839f0c06aa6277\"",
+      "mod": "Thu, 29 Oct 2026 01:10:25 GMT"
+    },
+    "https://tmwunlimited.com/feed/": {
+      "etag": "W/\"534566bd22f177b3249723a0fcfd2e1d\"",
+      "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
+    },
+    "https://thestable.com.au/feed/": {
+      "etag": "\"e13e7f5a3444c3d11522008c684461ca\"",
+      "mod": "Tue, 24 Nov 2026 06:00:22 GMT"
+    },
+    "https://www.meioemensagem.com.br/feed/": {
+      "mod": "Tue, 24 Nov 2026 15:41:39 GMT"
+    },
+    "https://www.abcdacomunicacao.com.br/feed": {
+      "etag": "\"fc116bded8fbc36b69abc5cba6644857\"",
+      "mod": "Tue, 24 Nov 2026 14:42:27 GMT"
+    },
+    "https://roastbrief.com.mx/rss": {
+      "etag": "\"71065bae1927b1a731b3f714561e68a5\"",
+      "mod": "Tue, 24 Nov 2026 15:53:07 GMT"
+    },
+    "https://www.retailgazette.co.uk/feed/": {
+      "etag": "\"1b57134d0657f6f0c35ee53388f303a8\"",
+      "mod": "Tue, 24 Nov 2026 13:11:00 GMT"
+    }
+  },
+  "yt_pos": 36,
+  "ig": {
+    "contas": {
+      "Mother": "motherlondon",
+      "AlmapBBDO": "almapbbdo",
+      "Africa Creative": "africacreative",
+      "DPZ": "",
+      "GUT": "gutagency",
+      "Artplan": "artplan",
+      "WMcCann": "wmccannbr",
+      "Ogilvy": "ogilvy",
+      "Wieden+Kennedy": "",
+      "Droga5": "droga5",
+      "BBH": "",
+      "adam&eveDDB": "",
+      "Uncommon": "uncommoncreativestudio"
+    },
+    "tentadas": {},
+    "pos": 23
+  },
+  "vistos": [
+    "https://www.meioemensagem.com.br/midia/folha-torna-anuncios-do-impresso-clicaveis-no-digital",
+    "https://www.meioemensagem.com.br/midia/focus-media-as-pretensoes-da-gigante-chinesa-do-ooh",
+    "https://roastbrief.com.mx/2026/11/publicis-la-estrategia-detras-de-su-transformacion-y-el-futuro-del-negocio-publicitario",
+    "https://www.merca20.com/mientras-en-alemania-los-mercaditos-navidenos-tienen-siglos-de-historia-el-palacio-de-hierro-convierte-esta-tradicion-europea-en-una-estrategia-comercial-para-mexico",
+    "https://www.merca20.com/megaspeed-lista-negra-eeuu-nvidia-jensen-huang",
+    "https://www.merca20.com/netflix-ya-tiene-250-millones-de-usuarios-con-anuncios-y-abre-una-nueva-batalla-por-la-publicidad",
+    "https://www.marketingdive.com/news/super-bowl-61-tracking-every-ad/873626",
+    "https://www.decisionmarketing.co.uk/top-story/ipa-theres-no-cop-out-for-sustainability-in-advertising",
+    "https://www.thestable.com.au/the-martin-agency-geico-packs-all-its-mascots-into-its-first-huge-holiday-season-ad-extravaganza",
+    "https://www.medianews4u.com/jimmy-choos-pleasure-joy-campaign-captures-the-playful-side-of-holiday-glamour",
+    "https://www.medianews4u.com/hdfc-mutual-fund-highlights-collective-support-in-cancer-patients-journey-through-new-campaign-film",
+    "https://www.horizont.net/marketing/nachrichten/september-ausgruendung-eve-ai-marktforscher-prognostizieren-gefuehle-in-werbung-236645",
+    "https://www.meioemensagem.com.br/midia/com-microsoft-pinterest-quer-mais-publicidade-em-buscas",
+    "https://propmark.com.br/digital/publicidade-digital-baseada-em-ethereum-busca-resolver-problemas-cronicos-do-segmento-de-midia",
+    "https://roastbrief.com.mx/2026/11/el-verdadero-exito-de-una-activacion-empieza-cuando-termina",
+    "https://roastbrief.com.mx/2026/11/didier-deschamps-deja-la-banca-francesa-para-dirigir-la-cocina-de-burger-king-en-su-nuevo-spot",
+    "https://roastbrief.com.mx/2026/11/meta-confronta-la-adiccion-al-smartphone-en-su-campana-navidena",
+    "https://www.merca20.com/ganem-mexico-y-miami-ad-school-se-unen-para-impulsar-a-la-proxima-generacion-de-talento-creativo",
+    "https://www.merca20.com/meta-presenta-sus-gafas-inteligentes-como-aliadas-de-la-crianza-en-su-anuncio-navideno",
+    "https://www.merca20.com/coca-cola-deja-fuera-la-ia-de-su-anuncio-navideno-de-2026-asi-luce-su-nueva-campana",
+    "https://www.merca20.com/campanas-salud-mental-creatividad-ayuda-concreta",
+    "https://www.merca20.com/campana-publicitaria-mcdonalds-bolsa-babero-mcrib",
+    "https://www.marketingdirecto.com/creacion/campanas-de-marketing/la-sirena-manifiesto-reivindican-placer-comer-protocolos-campana-navidad",
+    "https://www.decisionmarketing.co.uk/news/brothers-reunited-by-tech-in-samsung-festive-spot",
+    "https://www.decisionmarketing.co.uk/news/new-deal-offers-id-less-audio-behavioural-ad-targeting",
+    "https://www.creativeboom.com/insight/this-years-holiday-ads-have-one-thing-in-common-and-its-good-news-for-creatives",
+    "https://www.cbnews.fr/marques/bonus-reparation-repart-campagne-avec-dagobert",
+    "https://www.bandt.com.au/maa-bans-misleading-ai-in-ads-tightens-rules-around-violence-tanning-in-new-code-of-ethics",
+    "https://www.mediaweek.com.au/marketing/maa-updates-code-of-ethics-to-cover-ai-generated-ads-violence-tanning-and-body-image",
+    "https://mumbrella.com.au/heartfelt-tribute-to-gps-in-new-campaign-from-bastion-945695",
+    "https://mumbrella.com.au/cancer-council-reminds-aussies-that-every-bottle-does-more-in-new-campaign-via-trp-945663",
+    "https://www.thestable.com.au/natalia-zapata-a-gen-z-view-of-millennial-optimism-the-next-advertising-wave",
+    "https://campaignbrief.com/maas-new-code-of-ethics-targets-ai-deepfakes-unsafe-tanning-and-toxic-body-standards-in-ads",
+    "https://campaignbrief.co.nz/2026/11/24/countdown-to-free-entry-to-campaign-brief-new-zealand-agency-of-the-year-hot-list-2027-deadline-friday-4-december",
+    "https://campaignbriefasia.com/2026/11/24/shopeepay-swaps-white-receipts-for-orange-rewards-in-new-film-via-dentsu-creative-thailand",
+    "https://www.afaqs.com/news/media/xtendr-partners-with-jiostar-for-xr-based-fan-engagement-campaign-12834600",
+    "https://www.afaqs.com/news/advertising/ageasy-spotlights-active-ageing-in-new-campaign-with-anupam-kher-12834157",
+    "https://www.afaqs.com/news/advertising/blissclub-challenges-dress-codes-with-the-wrong-outfit-campaign-12834138",
+    "https://www.afaqs.com/news/advertising/gap-launches-give-your-gift-campaign-for-holiday-season-12833585",
+    "https://www.afaqs.com/people-spotting/dhruv-dhawan-to-join-amazon-ads-12833000",
+    "https://www.horizont.net/marketing/nachrichten/eigener-christmas-song-und-pos-aktionen-mit-dieser-kampagne-stimmt-kaufland-die-deutschen-auf-weihnachten-ein-236694",
+    "https://www.horizont.net/agenturen/nachrichten/ooh-kampagne-von-gud-berlin-netflix-kaempft-im-meme-stil-gegen-den-winter-blues-236690",
+    "https://www.horizont.net/marketing/nachrichten/fernverkehr-diese-bahn-kampagne-fuer-den-sprinter-ist-komplett-ki-generiert-236689",
+    "https://www.retailgazette.co.uk/blog/2026/11/unilever-slashes-uk-tv-ad-spend-by-more-than-half-in-major-influencer-marketing-shift",
+    "https://musebyclios.com/musings/japanese-advertising-doesnt-need-explaining-it-needs-understanding",
+    "https://musebyclios.com/advertising/hell-be-back-for-christmas-arnold-schwarzenegger-lifts-amazon-as-the-weeks-best-campaign",
+    "https://www.merca20.com/10-lessons-from-the-2026-national-digital-marketing-congress-on-when-to-adjust-a-campaign-and-what-keeps-people-coming-back",
+    "https://www.merca20.com/10-aprendizajes-del-congreso-nacional-de-marketing-digital-2026-sobre-cuando-corregir-una-campana-y-que-hace-que-el-publico-vuelva",
+    "https://www.merca20.com/miq-es-partner-oficial-del-programa-youtube-activation-partners-en-latinoamerica",
+    "https://www.merca20.com/anuncios-en-twitch-amazon-cobro-atencion-compras",
+    "https://www.merca20.com/luis-chaparro-se-puso-un-corse-prestado-para-mostrar-que-pasa-cuando-una-campana-no-encaja-con-un-creador-de-contenido-en-el-congreso-nacional-de-marketing-digital-2026",
+    "https://www.merca20.com/cnmd-2026-samsung-ads-big-bola-casinos-multimedios-y-monotype-revelan-cuales-son-las-metricas-que-realmente-mueven-un-negocio",
+    "https://www.merca20.com/long-repetitive-ads-are-losing-their-effectiveness-among-gen-z-heres-how-the-rules-are-changing-for-brands",
+    "https://www.merca20.com/campana-publicitaria-contra-nazismo-irmela"
+  ],
+  "ultima_rodada": "2026-11-24T15:55:42.676260+00:00",
+  "ultima_novidade": "2026-11-24T15:55:42.676260+00:00"
+}
