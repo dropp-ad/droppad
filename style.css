@@ -120,6 +120,7 @@ a { color: inherit; }
 .end-cred dd { margin: 0; font-weight: 700; }
 .end-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
 .end-btn { padding: 8px 14px; border-radius: 999px; background: #fff; color: #111; font-size: 13px; font-weight: 800; text-decoration: none; }
+.end-btn.share-end { display: inline-flex; align-items: center; gap: 6px; }
 .end-btn.ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .45); }
 .toast { position: fixed; left: 50%; bottom: 28px; z-index: 50; transform: translate(-50%, 12px); padding: 9px 16px; border-radius: 999px;
   background: var(--ink); color: var(--bg); font-size: 13px; font-weight: 700; opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; }

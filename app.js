@@ -382,7 +382,8 @@
     if (navigator.share) item("Mais opções…", function () { navigator.share({ title: title, text: txt, url: url }).catch(function () {}); closeMenu(); });
     document.body.appendChild(menu);
     var r = btn.getBoundingClientRect(), w = menu.offsetWidth;
-    menu.style.top = (r.bottom + 8) + "px";
+    var hgt = menu.offsetHeight;
+    menu.style.top = (r.bottom + 8 + hgt > window.innerHeight - 8 && r.top - 8 - hgt > 8 ? r.top - 8 - hgt : r.bottom + 8) + "px";
     menu.style.left = Math.max(12, Math.min(window.innerWidth - w - 12, r.right - w)) + "px";
   }
 
@@ -457,6 +458,11 @@
     var next = el("button", "end-btn", "Próxima ↓"); next.type = "button";
     next.addEventListener("click", function (e) { e.stopPropagation(); var n = art.nextElementSibling; if (n && n.classList.contains("post")) n.scrollIntoView({ behavior: "smooth" }); });
     acts.appendChild(next);
+    var shr = el("button", "end-btn share-end"); shr.type = "button";
+    shr.setAttribute("aria-label", "Compartilhar esta campanha");
+    shr.innerHTML = ICON_SHARE + "<span>Compartilhar</span>";
+    shr.addEventListener("click", function (e) { e.stopPropagation(); share(c, shr); });
+    acts.appendChild(shr);
     if (c.url) acts.appendChild(link("end-btn ghost", "Ler em " + (c.source || "fonte") + " ↗", c.url));
     inner.appendChild(acts);
     card.appendChild(inner);
