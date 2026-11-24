@@ -474,8 +474,9 @@
     function find() { for (var i = 0; i < state.list.length; i++) if (state.list[i].id === id) return i; return -1; }
     var idx = find();
     if (idx < 0) {
-      if (!state.items.some(function (c) { return c.id === id; })) return false;
-      state.region = ""; state.onlyFilms = false;
+      var alvo = state.items.filter(function (c) { return c.id === id; })[0];
+      if (!alvo) return false;
+      state.region = homeMatch(alvo) ? "home" : ""; state.onlyFilms = false;
       idx = -1;
     }
     renderAll(true);
@@ -828,7 +829,8 @@
     state.list = state.items.filter(function (c) {
       if (state.onlyFilms && !c.fl.length) return false;
       if (state.region === "home") { if (!homeMatch(c)) return false; }
-      else if (state.region && regiaoDe(c) !== state.region) return false;
+      else if (!state.region) { if (homeMatch(c)) return false; } // Mundo = tudo menos o país de quem entra
+      else if (regiaoDe(c) !== state.region) return false;
       return true;
     });
     state.perDay = {};
