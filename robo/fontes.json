@@ -1564,11 +1564,7 @@
     },
     {
       "nome": "Accenture Song",
-      "youtube": [
-        "accenture",
-        "accenturesong",
-        "accenturesongagency"
-      ],
+      "youtube": [],
       "regiao": "Global",
       "cc": "",
       "site": "https://www.accenture.com/",
@@ -2023,11 +2019,7 @@
     },
     {
       "nome": "&Co.",
-      "youtube": [
-        "andco",
-        "co",
-        "coagency"
-      ],
+      "youtube": [],
       "regiao": "Dinamarca",
       "cc": "DK",
       "site": "https://andco.dk/",
