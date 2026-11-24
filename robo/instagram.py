@@ -182,12 +182,24 @@ def rodada(fontes, vigia, agora, log, chave):
     limite_morta = (agora - dt.timedelta(days=30)).isoformat()
     for u in [u for u, quando in mortas.items() if quando < limite_morta]:
         mortas.pop(u)
+    try:  # as que o retroativo já viu que não existem contam como mortas também
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "ig_retro.json"), encoding="utf-8") as f:
+            for u, v in json.load(f).get("feitas", {}).items():
+                if v == "sem conta":
+                    mortas.setdefault(u, agora.isoformat())
+    except (OSError, ValueError):
+        pass
     for c in fontes.get("instagram", []):
         if c["usuario"].lstrip("@").lower() in mortas:
             continue
         leitura.append({"usuario": c["usuario"].lstrip("@").lower(), "nome": c.get("nome", c["usuario"]),
                         "regiao": c.get("regiao", "Global"), "cc": c.get("cc", ""), "agencia": c.get("agencia", "")})
     por_nome = {a["nome"]: a for a in fontes.get("agencias", [])}
+    # contas da lista fixa cujo @ não existe: o robô procura o @ certo pelo nome da agência
+    for c in fontes.get("instagram", []):
+        if c["usuario"].lstrip("@").lower() in mortas and c.get("nome") and c["nome"] not in por_nome:
+            por_nome[c["nome"]] = {"nome": c["nome"], "youtube": [], "regiao": c.get("regiao", "Global"),
+                                   "cc": c.get("cc", ""), "estrito": True, "auto": True}
     for nome, usuario in contas.items():
         if usuario and nome in por_nome:
             a = por_nome[nome]
@@ -195,7 +207,7 @@ def rodada(fontes, vigia, agora, log, chave):
                             "agencia": nome})
     # agências sem conta + (uma vez) as que não foram achadas antes desta busca pelo site
     revistas = st.setdefault("revistas", [])
-    pendentes = [a for a in fontes.get("agencias", [])
+    pendentes = [a for a in por_nome.values()
                  if a["nome"] not in contas or (contas[a["nome"]] == "" and a["nome"] not in revistas)]
     st["rodadas"] = st.get("rodadas", 0) + 1
 
@@ -212,7 +224,7 @@ def rodada(fontes, vigia, agora, log, chave):
         while gastas < por_rodada:
             # uma descoberta por rodada enquanto houver agência sem conta; o resto lê posts
             # enquanto houver agência a procurar: 1ª chamada sempre, 2ª em rodadas alternadas
-            if pendentes and (gastas == 0 or not leitura or st["rodadas"] % 2):
+            if pendentes and (not leitura or st["rodadas"] % 2 or (gastas == 0 and por_rodada > 1)):
                 ag = pendentes.pop(0)
                 if contas.get(ag["nome"]) == "":
                     revistas.append(ag["nome"])

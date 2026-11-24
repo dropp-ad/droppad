@@ -34,6 +34,9 @@ def contas(fontes, vigia):
             lista.append({"usuario": u, "nome": c.get("nome", u), "regiao": c.get("regiao", "Global"),
                           "cc": c.get("cc", ""), "agencia": c.get("agencia", "")})
     por_nome = {a["nome"]: a for a in fontes.get("agencias", [])}
+    for c in fontes.get("instagram", []):  # @ achados pelo nome quando o da lista não existia
+        por_nome.setdefault(c.get("nome", ""), {"nome": c.get("nome", ""), "regiao": c.get("regiao", "Global"),
+                                                "cc": c.get("cc", "")})
     for nome, u in (vigia.get("ig", {}).get("contas") or {}).items():
         if u and u not in vistos and nome in por_nome:
             vistos.add(u)
