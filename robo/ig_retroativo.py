@@ -18,9 +18,9 @@ import atualizar as A  # noqa: E402
 import instagram  # noqa: E402
 
 DIAS = 90
-CHAMADAS = int(os.environ.get("CHAMADAS", "60"))
+CHAMADAS = int(os.environ.get("CHAMADAS", "100"))
 POSTS = 60          # posts pedidos por conta (cobre ~3 meses da maioria das agências)
-PARA_SE_USO = 70    # % de uso da Meta em que a rodada para
+PARA_SE_USO = 82    # % de uso da Meta em que a rodada para
 PROGRESSO = os.path.join(A.RAIZ, "robo", "ig_retro.json")
 NOVAS = "/tmp/ig_novas.json"
 

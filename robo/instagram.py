@@ -27,7 +27,7 @@ IG_LINK = re.compile(r"instagram\.com/(?:_u/)?([A-Za-z0-9._]{2,30})", re.I)
 IG_NAO = {"p", "reel", "reels", "tv", "explore", "accounts", "stories", "instagram", "sharer", "share",
           "about", "developer", "legal", "direct", "web", "embed.js", "static", "privacy", "help"}
 POSTS_POR_CONTA = 8
-PAUSA_SE_USO = 75             # % de uso informado pela Meta que faz o robô pausar o Instagram
+PAUSA_SE_USO = 85             # % de uso informado pela Meta que faz o robô pausar o Instagram
 PAUSA_MIN = 20
 PAUSA_ERRO_TOKEN_MIN = 30
 
@@ -199,9 +199,17 @@ def rodada(fontes, vigia, agora, log, chave):
                  if a["nome"] not in contas or (contas[a["nome"]] == "" and a["nome"] not in revistas)]
     st["rodadas"] = st.get("rodadas", 0) + 1
 
+    # enquanto o retroativo de 3 meses (ig_retroativo.py) não termina, o vigia usa metade das chamadas
+    por_rodada = CHAMADAS_POR_RODADA
+    try:
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "ig_retro.json"), encoding="utf-8") as f:
+            if json.load(f).get("restam", 1) > 0:
+                por_rodada = 1
+    except (OSError, ValueError):
+        pass
     saida, gastas = [], 0
     try:
-        while gastas < CHAMADAS_POR_RODADA:
+        while gastas < por_rodada:
             # uma descoberta por rodada enquanto houver agência sem conta; o resto lê posts
             # enquanto houver agência a procurar: 1ª chamada sempre, 2ª em rodadas alternadas
             if pendentes and (gastas == 0 or not leitura or st["rodadas"] % 2):

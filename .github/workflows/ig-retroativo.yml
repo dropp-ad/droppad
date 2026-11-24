@@ -1,7 +1,7 @@
 name: Instagram retroativo (3 meses)
 
 # Puxa o que cada conta de Instagram monitorada postou nos últimos 90 dias.
-# 60 contas por hora (o vigia usa outras 120; a Meta permite ~200). Quando todas as
+# Até 100 contas por hora; enquanto isso o vigia cai para 60 chamadas/hora (a Meta permite ~200). Quando todas as
 # contas tiverem passado uma vez, não faz mais nada (pode desligar o workflow).
 on:
   schedule:
