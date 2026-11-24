@@ -1,0 +1,49 @@
+name: Testar Instagram
+
+# Botão para conferir se o token do Instagram (secret IG_TOKEN) ainda funciona.
+# Actions → "Testar Instagram" → Run workflow. Não publica nada.
+on:
+  workflow_dispatch:
+    inputs:
+      conta:
+        description: "Conta para ler (sem @)"
+        type: string
+        default: "almapbbdo"
+
+permissions:
+  contents: read
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Ler uma conta pelo Instagram
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          CONTA: ${{ inputs.conta }}
+        run: |
+          python - <<'EOF'
+          import os, sys
+          sys.path.insert(0, "robo")
+          import instagram as ig
+          if not ig.configurado():
+              sys.exit("Faltam os secrets IG_TOKEN e/ou IG_USER_ID.")
+          try:
+              perfil, uso = ig.descobrir(os.environ["CONTA"])
+              posts, uso2 = ig.posts(os.environ["CONTA"])
+          except ig.ErroToken as e:
+              sys.exit("TOKEN RECUSADO PELA META: %s" % e)
+          print("Perfil:", perfil)
+          print("Posts lidos:", len(posts), "| uso da API: %d%%" % max(uso, uso2))
+          for p in posts[:3]:
+              print(" -", p.get("timestamp"), p.get("permalink"), (p.get("caption") or "")[:80].replace("\n", " "))
+          if not perfil:
+              sys.exit("A Meta não devolveu o perfil (a conta existe e é profissional?).")
+          print("OK: o token funciona.")
+          EOF
