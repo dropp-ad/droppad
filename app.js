@@ -997,7 +997,7 @@
       if (state.upTo && c.date > state.upTo) return false;
       if (state.region === "hot") { /* 🔥: o mundo inteiro, mais vistas primeiro */ }
       else if (state.region === "home") { if (!homeMatch(c)) return false; }
-      else if (!state.region) { if (homeMatch(c)) return false; } // Mundo = tudo menos o país de quem entra
+      else if (!state.region) { /* Mundo = tudo, inclusive o país de quem entra */ }
       else if (regiaoDe(c) !== state.region) return false;
       return true;
     });
