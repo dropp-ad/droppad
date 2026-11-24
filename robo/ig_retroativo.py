@@ -48,8 +48,11 @@ def ler_posts(usuario):
               "{id,caption,media_type,media_product_type,permalink,timestamp}}") % (usuario, POSTS)
     dados, uso = instagram._chamar(campos)  # noqa: SLF001
     if "erro" in dados:
-        return None, uso
+        return dados["erro"], uso
     return ((dados.get("business_discovery") or {}).get("media") or {}).get("data", []), uso
+
+
+TEMPORARIO = {1, 2, 4, 17, 32, 341, 613, 80001, 80002}  # limite de uso / instabilidade da Meta
 
 
 def ler():
@@ -76,8 +79,12 @@ def ler():
             print("Token recusado pela Meta:", e)
             break
         gastas += 1
-        if itens is None:
+        if isinstance(itens, dict):  # erro da Meta
+            if itens.get("code") in TEMPORARIO:
+                print("Meta pediu pausa (%s); continuo na próxima hora." % itens.get("message", "")[:120])
+                break
             feitas[conta["usuario"]] = "sem conta"
+            prog.setdefault("erros", {})[conta["usuario"]] = "%s: %s" % (itens.get("code"), itens.get("message", "")[:100])
         else:
             achadas = [c for c in (A.post_para_campanha(p, conta, limite) for p in itens) if c]
             novas += achadas
