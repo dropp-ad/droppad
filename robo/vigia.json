@@ -8,19 +8,19 @@
       "mod": "Tue, 24 Nov 2026 18:05:04 GMT"
     },
     "https://creativosbr.com.br/feed/": {
-      "etag": "W/\"e6633af7f0b8a0fa132f9671c1fadec2\"",
-      "mod": "Tue, 24 Nov 2026 19:03:26 GMT"
+      "etag": "W/\"ac16b82deb3016e64abaf19e37026b20\"",
+      "mod": "Tue, 24 Nov 2026 19:32:00 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
-      "etag": "\"47363c60975173c968c40d6a6cdf921d\"",
-      "mod": "Tue, 24 Nov 2026 19:01:02 GMT"
+      "etag": "\"f58b61c78e77ecec67d3a00bf801f2c7\"",
+      "mod": "Tue, 24 Nov 2026 19:14:00 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Tue, 24 Nov 2026 19:05:44 GMT"
+      "mod": "Tue, 24 Nov 2026 19:25:43 GMT"
     },
     "https://www.informabtl.com/feed/": {
-      "etag": "W/\"4e7919c7280de96dbf80170fd73dcbca\"",
-      "mod": "Tue, 24 Nov 2026 18:57:32 GMT"
+      "etag": "W/\"5245320cd9f170dd1cdbc2ba1790b47e\"",
+      "mod": "Tue, 24 Nov 2026 19:31:37 GMT"
     },
     "https://propmark.com.br/feed/": {
       "etag": "\"df3fb66a473d2d0ca8566ad212087134\"",
@@ -40,19 +40,19 @@
       "etag": "W/\"2a882-FVLh2wELuFV5JZuXSKkh9Jadqg4\""
     },
     "https://www.nossomeio.com.br/feed/": {
-      "etag": "\"ce0baaa2ff882836bd98da25f2677cf7\"",
-      "mod": "Tue, 24 Nov 2026 18:39:50 GMT"
+      "etag": "\"5526e93fb2454edd08ff61212674d1f3\"",
+      "mod": "Tue, 24 Nov 2026 19:36:01 GMT"
     },
     "https://www.adworld.ie/feed/": {
       "etag": "\"b778f8e5ac045bc29a7be1e54d179c8b\"",
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"a6800d233c96db0afa44143b5bee879e\"",
-      "mod": "Tue, 24 Nov 2026 18:53:20 GMT"
+      "etag": "W/\"2d318be3dc707f09ecde76ae3109aff9\"",
+      "mod": "Tue, 24 Nov 2026 19:30:50 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 19:07:45 GMT"
+      "mod": "Tue, 24 Nov 2026 19:37:46 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"65a314dc9998c319c0a90751ae90e97b\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 19:07:47 GMT"
+      "mod": "Tue, 24 Nov 2026 19:37:47 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -142,15 +142,15 @@
       "mod": "Tue, 24 Nov 2026 14:42:27 GMT"
     },
     "https://roastbrief.com.mx/rss": {
-      "etag": "\"890f1a1bcd26d79965dad77618604aa4\"",
-      "mod": "Tue, 24 Nov 2026 19:05:05 GMT"
+      "etag": "\"8ca8ebed7dcf02c7a97588a273b9cd17\"",
+      "mod": "Tue, 24 Nov 2026 19:28:54 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
       "etag": "\"f3f16e4c53a0fab71753bd675db6b23c\"",
       "mod": "Tue, 24 Nov 2026 17:43:47 GMT"
     }
   },
-  "yt_pos": 63,
+  "yt_pos": 81,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -251,15 +251,24 @@
       "TMW": "tmwagency",
       "BETC": "betcparis",
       "Lucky Generals": "",
-      "Marcel": "marcelagency"
+      "Marcel": "marcelagency",
+      "Rosa Paris": "rosaparis_agency",
+      "Buzzman": "",
+      "Jung von Matt": "jungvonmatt",
+      "antoni": "antoniberlin",
+      "Scholz & Friends": "scholzandfriends",
+      "Fred & Farid": "",
+      "HeimatTBWA": "",
+      "&Rosàs": "rosasagency",
+      "Sra. Rushmore": "srarushmore",
+      "China": "",
+      "DUDE": "dude_frames",
+      "PS21": "",
+      "We Are Social Italy": "wearesocialit",
+      "TBWA\\Italia": "tbwa_italia"
     },
-    "tentadas": {
-      "Buzzman": [
-        "buzzman",
-        "buzzmanagency"
-      ]
-    },
-    "pos": 143,
+    "tentadas": {},
+    "pos": 158,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -291,9 +300,14 @@
       "Corner Table Creative",
       "Flower Shop",
       "Influential",
-      "Lucky Generals"
+      "Lucky Generals",
+      "Buzzman",
+      "Fred & Farid",
+      "HeimatTBWA",
+      "China",
+      "PS21"
     ],
-    "rodadas": 144,
+    "rodadas": 174,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -419,7 +433,37 @@
       "Marcel": [
         "marcelagency"
       ],
-      "Buzzman": []
+      "Buzzman": [],
+      "Rosa Paris": [
+        "rosaparis_agency"
+      ],
+      "Fred & Farid": [],
+      "Jung von Matt": [
+        "jungvonmatt"
+      ],
+      "antoni": [
+        "antoniberlin"
+      ],
+      "Scholz & Friends": [
+        "scholzandfriends"
+      ],
+      "HeimatTBWA": [],
+      "&Rosàs": [],
+      "Sra. Rushmore": [
+        "srarushmore"
+      ],
+      "China": [],
+      "PS21": [],
+      "DUDE": [
+        "dude_frames"
+      ],
+      "We Are Social Italy": [
+        "wearesocialit",
+        "en_us"
+      ],
+      "TBWA\\Italia": [
+        "tbwa_italia"
+      ]
     }
   },
   "vistos": [
@@ -499,6 +543,6 @@
     "https://creativosbr.com.br/hering-transforma-situacoes-de-amigo-secreto-em-campanha-de-natal",
     "https://www.meioemensagem.com.br/midia/havan-lidera-os-comerciais-da-black-friday-2026-na-tv"
   ],
-  "ultima_rodada": "2026-11-24T19:07:43.151250+00:00",
+  "ultima_rodada": "2026-11-24T19:37:43.666575+00:00",
   "ultima_novidade": "2026-11-24T18:04:42.842235+00:00"
 }
