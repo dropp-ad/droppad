@@ -387,8 +387,32 @@
     menu.style.left = Math.max(12, Math.min(window.innerWidth - w - 12, r.right - w)) + "px";
   }
 
-  /* ---------- Comentários (utterances: cada campanha vira uma issue no GitHub) ---------- */
+  /* ---------- Comentários ----------
+     Com CUSDIS_APP_ID preenchido: Cusdis (só nome + comentário, sem login; você aprova no painel do cusdis.com).
+     Vazio: utterances (cada campanha vira uma issue no GitHub; exige login no GitHub). */
+  var CUSDIS_APP_ID = "";
   var COMMENTS_REPO = "pedrorosas/estreou-hoje";
+  var cusdisJs = null;
+  function loadCusdis() {
+    if (cusdisJs) return cusdisJs;
+    window.CUSDIS_PREVENT_INITIAL_RENDER = true;
+    window.CUSDIS_LOCALE = {
+      powered_by: "Comentários por Cusdis", post_comment: "Comentar", loading: "Carregando",
+      email: "E-mail (opcional, não aparece)", nickname: "Seu nome", reply_placeholder: "Escreva seu comentário…",
+      reply_btn: "Responder", sending: "enviando…", mod_badge: "MOD",
+      content_is_required: "Escreva o comentário", nickname_is_required: "Coloque seu nome",
+      comment_has_been_sent: "Comentário enviado! Ele aparece aqui assim que for aprovado."
+    };
+    cusdisJs = new Promise(function (ok, fail) {
+      var sc = document.createElement("script");
+      sc.src = "https://cusdis.com/js/cusdis.es.js";
+      sc.async = true; sc.defer = true;
+      sc.onload = function () { window.CUSDIS && window.CUSDIS.renderTo ? ok() : fail(); };
+      sc.onerror = function () { cusdisJs = null; fail(); };
+      document.head.appendChild(sc);
+    });
+    return cusdisJs;
+  }
   var drawer = null;
   function closeComments() {
     if (!drawer) return;
@@ -420,6 +444,23 @@
       body._id = c.id;
       body.textContent = "";
       body.appendChild(el("p", "drawer-note", "Carregando comentários…"));
+      if (CUSDIS_APP_ID) {
+        var box = el("div", "cusdis");
+        box.dataset.host = "https://cusdis.com";
+        box.dataset.appId = CUSDIS_APP_ID;
+        box.dataset.pageId = c.id;
+        box.dataset.pageUrl = linkOf(c);
+        box.dataset.pageTitle = (c.brand ? c.brand + ": " : "") + c.title;
+        box.dataset.theme = "light";
+        loadCusdis().then(function () {
+          if (body._id !== c.id) return;
+          body.textContent = "";
+          body.appendChild(box);
+          window.CUSDIS.renderTo(box);
+        }, function () { body.textContent = ""; body.appendChild(el("p", "drawer-note", "Não foi possível carregar os comentários agora.")); });
+        requestAnimationFrame(function () { drawer.classList.add("on"); document.body.classList.add("drawer-on"); });
+        return;
+      }
       var sc = document.createElement("script");
       sc.src = "https://utteranc.es/client.js";
       sc.async = true;
