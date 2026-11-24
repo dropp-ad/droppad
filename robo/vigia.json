@@ -4,12 +4,12 @@
       "etag": "W/\"5d2f-+0NwAdC23BRCv91OQ8kZi9uK8WQ\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"13b9df4cd44203e340d7cfa88d39f1fd\"",
-      "mod": "Tue, 24 Nov 2026 15:36:09 GMT"
+      "etag": "\"fc6be27b5cf28603c0dec74684e6f7d2\"",
+      "mod": "Tue, 24 Nov 2026 16:29:55 GMT"
     },
     "https://creativosbr.com.br/feed/": {
-      "etag": "W/\"1ea63a919a6188ae0053b2e9727d3ca9\"",
-      "mod": "Tue, 24 Nov 2026 15:52:00 GMT"
+      "etag": "W/\"c3bd8ebe6c3739cbbbabce0b1bc69afe\"",
+      "mod": "Tue, 24 Nov 2026 16:33:00 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
       "etag": "\"22593ec6f167787d0d1fdc4fe545aa30\"",
@@ -27,14 +27,14 @@
       "mod": "Tue, 24 Nov 2026 16:00:10 GMT"
     },
     "https://www.marketingdirecto.com/rss": {
-      "mod": "Tue, 24 Nov 2026 14:55:27 GMT"
+      "mod": "Tue, 24 Nov 2026 16:23:42 GMT"
     },
     "https://www.marketingdive.com/feeds/news/": {
       "mod": "Tue, 24 Nov 2026 14:06:00 GMT"
     },
     "https://musebyclios.com/feed/": {
-      "etag": "W/\"f7dfb848cf619a4089445c080ad6a341\"",
-      "mod": "Tue, 24 Nov 2026 15:46:11 GMT"
+      "etag": "W/\"f0cdc890c9261a4ebe8f6107df394063\"",
+      "mod": "Tue, 24 Nov 2026 16:33:19 GMT"
     },
     "https://www.contentgrip.com/feed/": {
       "etag": "W/\"2a882-FVLh2wELuFV5JZuXSKkh9Jadqg4\""
@@ -48,19 +48,19 @@
       "mod": "Fri, 20 Nov 2026 14:40:39 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"6a084133fd36ae09b0a1cf4fcf3e106e\"",
-      "mod": "Tue, 24 Nov 2026 16:05:45 GMT"
+      "etag": "W/\"b4e1cdcdac00e4014418029e642d6759\"",
+      "mod": "Tue, 24 Nov 2026 16:28:42 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 16:07:44 GMT"
+      "mod": "Tue, 24 Nov 2026 16:33:45 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"65a314dc9998c319c0a90751ae90e97b\"",
       "mod": "Tue, 24 Nov 2026 09:24:54 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795536373-gzip\"",
-      "mod": "Tue, 24 Nov 2026 16:06:13 GMT"
+      "etag": "W/\"1795537562-gzip\"",
+      "mod": "Tue, 24 Nov 2026 16:26:02 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -89,8 +89,8 @@
       "mod": "Tue, 24 Nov 2026 04:20:02 GMT"
     },
     "https://www.adweek.com/feed/": {
-      "etag": "W/\"06330a7c627ac44a14b52cd8d351d7d8\"",
-      "mod": "Tue, 24 Nov 2026 15:06:56 GMT"
+      "etag": "W/\"7e873051a3d52f428197dd2a4dc9d6c5\"",
+      "mod": "Tue, 24 Nov 2026 16:15:29 GMT"
     },
     "https://www.bandt.com.au/feed/": {
       "mod": "Tue, 24 Nov 2026 05:51:14 GMT"
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 16:07:46 GMT"
+      "mod": "Tue, 24 Nov 2026 16:33:46 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -142,15 +142,15 @@
       "mod": "Tue, 24 Nov 2026 14:42:27 GMT"
     },
     "https://roastbrief.com.mx/rss": {
-      "etag": "\"71065bae1927b1a731b3f714561e68a5\"",
-      "mod": "Tue, 24 Nov 2026 15:53:07 GMT"
+      "etag": "\"4240f3d40a49f2969de886da000381f0\"",
+      "mod": "Tue, 24 Nov 2026 16:33:35 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
       "etag": "\"1b57134d0657f6f0c35ee53388f303a8\"",
       "mod": "Tue, 24 Nov 2026 13:11:00 GMT"
     }
   },
-  "yt_pos": 81,
+  "yt_pos": 42,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -172,10 +172,29 @@
       "TBWA": "tbwa",
       "Saatchi & Saatchi": "saatchiandsaatchi",
       "Johannes Leonardo": "johannesleonardo",
-      "Mischief": "mischiefusa"
+      "Mischief": "mischiefusa",
+      "LePub": "",
+      "Rethink": "rethinkideas",
+      "Isle of Any": "isleofany",
+      "TBWA\\Media Arts Lab": "tbwamal",
+      "DAVID": "",
+      "Motion Sickness": "",
+      "Fallon": "fallon",
+      "Publicis Conseil": "publicisconseil",
+      "Special": "",
+      "WESAYHI": "wesayhi",
+      "Klick Health": "",
+      "DDB": "ddbworldwide",
+      "FCB": "fcbglobal",
+      "Serviceplan": "serviceplan",
+      "Bear Meets Eagle On Fire": "bearmeetseagleonfire"
     },
-    "tentadas": {},
-    "pos": 35
+    "tentadas": {
+      "DM9": [
+        "dm9"
+      ]
+    },
+    "pos": 61
   },
   "vistos": [
     "https://www.meioemensagem.com.br/midia/folha-torna-anuncios-do-impresso-clicaveis-no-digital",
@@ -231,8 +250,16 @@
     "https://www.merca20.com/luis-chaparro-se-puso-un-corse-prestado-para-mostrar-que-pasa-cuando-una-campana-no-encaja-con-un-creador-de-contenido-en-el-congreso-nacional-de-marketing-digital-2026",
     "https://www.merca20.com/cnmd-2026-samsung-ads-big-bola-casinos-multimedios-y-monotype-revelan-cuales-son-las-metricas-que-realmente-mueven-un-negocio",
     "https://www.merca20.com/long-repetitive-ads-are-losing-their-effectiveness-among-gen-z-heres-how-the-rules-are-changing-for-brands",
-    "https://www.merca20.com/campana-publicitaria-contra-nazismo-irmela"
+    "https://www.merca20.com/campana-publicitaria-contra-nazismo-irmela",
+    "https://grandesnomesdapropaganda.com.br/mercado-digital/santa-clara-desenvolve-campanha-institucional-para-a-true",
+    "https://www.merca20.com/asi-fud-se-encuentra-con-el-fenomeno-dr-simi-y-desata-un-crossover-publicitario",
+    "https://www.marketingdirecto.com/creacion/campanas-de-marketing/comica-campana-indaga-intrahistoria-algunos-gatos-famosos-internet",
+    "https://www.marketingdirecto.com/campanas-navidenas/coca-cola-aleja-ia-paladear-tradiciones-clasicas-campana-navidena",
+    "https://www.marketingdirecto.com/creacion/santander-publicis-flame-invitan-dejar-elegir-nueva-campana-iphone-18-pro",
+    "https://www.marketingdirecto.com/anunciantes-general/gta-vi-prodigio-publicitario-anuncios-estan-paradojicamente-vetados-videojuego",
+    "https://www.marketingdirecto.com/digital-general/digital/microsoft-advertising-renueva-pujas-automatizadas-mejoras-conversiones",
+    "https://www.marketingdirecto.com/campanas-navidenas/tenemos-mucho-que-dar-amor-torrons-vicens-navidad"
   ],
-  "ultima_rodada": "2026-11-24T16:07:42.295230+00:00",
-  "ultima_novidade": "2026-11-24T15:55:42.676260+00:00"
+  "ultima_rodada": "2026-11-24T16:33:42.640549+00:00",
+  "ultima_novidade": "2026-11-24T16:33:42.640549+00:00"
 }
