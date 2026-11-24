@@ -655,7 +655,8 @@
         "mother"
       ],
       "regiao": "Reino Unido",
-      "cc": "GB"
+      "cc": "GB",
+      "site": "https://www.motherlondon.com/"
     },
     {
       "nome": "AlmapBBDO",
@@ -664,7 +665,8 @@
         "AlmapBBDO"
       ],
       "regiao": "Brasil",
-      "cc": "BR"
+      "cc": "BR",
+      "site": "https://www.almapbbdo.com.br/"
     },
     {
       "nome": "Africa Creative",
@@ -675,7 +677,8 @@
         "africa"
       ],
       "regiao": "Brasil",
-      "cc": "BR"
+      "cc": "BR",
+      "site": "https://www.africacreative.com.br/"
     },
     {
       "nome": "DPZ",
@@ -688,7 +691,12 @@
         "DPZagencia"
       ],
       "regiao": "Brasil",
-      "cc": "BR"
+      "cc": "BR",
+      "site": "https://www.dpz.com.br/",
+      "instagram_candidatos": [
+        "dpz",
+        "dpzcomunicacao"
+      ]
     },
     {
       "nome": "GUT",
@@ -698,7 +706,8 @@
         "gut"
       ],
       "regiao": "Brasil",
-      "cc": "BR"
+      "cc": "BR",
+      "site": "https://www.gut.agency/"
     },
     {
       "nome": "Artplan",
@@ -707,7 +716,8 @@
         "ArtplanBrasil"
       ],
       "regiao": "Brasil",
-      "cc": "BR"
+      "cc": "BR",
+      "site": "https://www.artplan.com.br/"
     },
     {
       "nome": "WMcCann",
@@ -719,7 +729,8 @@
         "WMcCannOficial"
       ],
       "regiao": "Brasil",
-      "cc": "BR"
+      "cc": "BR",
+      "site": "https://www.wmccann.com/"
     },
     {
       "nome": "Ogilvy",
@@ -729,7 +740,8 @@
         "OgilvyBrasil"
       ],
       "regiao": "Global",
-      "cc": ""
+      "cc": "",
+      "site": "https://www.ogilvy.com/"
     },
     {
       "nome": "Wieden+Kennedy",
@@ -740,7 +752,13 @@
         "wk"
       ],
       "regiao": "EUA",
-      "cc": "US"
+      "cc": "US",
+      "site": "https://www.wk.com/",
+      "instagram_candidatos": [
+        "wiedenkennedy",
+        "wkportland",
+        "wklondon"
+      ]
     },
     {
       "nome": "Droga5",
@@ -751,7 +769,8 @@
         "droga5newyork"
       ],
       "regiao": "EUA",
-      "cc": "US"
+      "cc": "US",
+      "site": "https://droga5.com/"
     },
     {
       "nome": "BBH",
@@ -761,7 +780,12 @@
         "bbh"
       ],
       "regiao": "Reino Unido",
-      "cc": "GB"
+      "cc": "GB",
+      "site": "https://www.bartleboglehegarty.com/",
+      "instagram_candidatos": [
+        "bbhlondon",
+        "bbh_london"
+      ]
     },
     {
       "nome": "adam&eveDDB",
@@ -772,7 +796,12 @@
         "adamandeve"
       ],
       "regiao": "Reino Unido",
-      "cc": "GB"
+      "cc": "GB",
+      "site": "https://www.adamandeveddb.com/",
+      "instagram_candidatos": [
+        "adamandeveddb",
+        "adameveddb"
+      ]
     },
     {
       "nome": "Uncommon",
@@ -795,7 +824,12 @@
         "VMLYR"
       ],
       "regiao": "Global",
-      "cc": ""
+      "cc": "",
+      "site": "https://www.vml.com/",
+      "instagram_candidatos": [
+        "vml",
+        "vmlbrasil"
+      ]
     },
     {
       "nome": "Publicis",
@@ -826,7 +860,8 @@
         "tbwa"
       ],
       "regiao": "Global",
-      "cc": ""
+      "cc": "",
+      "site": "https://tbwa.com/"
     },
     {
       "nome": "Saatchi & Saatchi",
@@ -838,7 +873,8 @@
         "saatchi"
       ],
       "regiao": "Global",
-      "cc": ""
+      "cc": "",
+      "site": "https://saatchi.com/"
     },
     {
       "nome": "Johannes Leonardo",
@@ -850,7 +886,8 @@
         "johannesleonardoagency"
       ],
       "regiao": "EUA",
-      "cc": "US"
+      "cc": "US",
+      "site": "https://johannesleonardo.com/"
     },
     {
       "nome": "Mischief",
@@ -881,7 +918,8 @@
       ],
       "regiao": "Canadá",
       "cc": "CA",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://rethinkideas.com/"
     },
     {
       "nome": "Isle of Any",
@@ -911,7 +949,8 @@
       ],
       "regiao": "EUA",
       "cc": "US",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.davidtheagency.com/"
     },
     {
       "nome": "Motion Sickness",
@@ -970,7 +1009,8 @@
       ],
       "regiao": "Canadá",
       "cc": "CA",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.klick.com/"
     },
     {
       "nome": "DDB",
@@ -981,7 +1021,8 @@
       ],
       "regiao": "Global",
       "cc": "",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.ddb.com/"
     },
     {
       "nome": "FCB",
@@ -992,7 +1033,8 @@
       ],
       "regiao": "Global",
       "cc": "",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.fcb.com/"
     },
     {
       "nome": "Serviceplan",
@@ -1002,7 +1044,8 @@
       ],
       "regiao": "Alemanha",
       "cc": "DE",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.serviceplan.com/"
     },
     {
       "nome": "Bear Meets Eagle On Fire",
@@ -1052,7 +1095,8 @@
       ],
       "regiao": "Global",
       "cc": "",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.dentsucreative.com/"
     },
     {
       "nome": "GUT Buenos Aires",
@@ -1072,7 +1116,8 @@
       ],
       "regiao": "Reino Unido",
       "cc": "GB",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.vccp.com/"
     },
     {
       "nome": "Known",
@@ -1111,7 +1156,8 @@
       ],
       "regiao": "Reino Unido",
       "cc": "GB",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.billiondollarboy.com/"
     },
     {
       "nome": "Code and Theory",
@@ -1120,7 +1166,8 @@
       ],
       "regiao": "EUA",
       "cc": "US",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.codeandtheory.com/"
     },
     {
       "nome": "McCann",
@@ -1131,7 +1178,8 @@
       ],
       "regiao": "Global",
       "cc": "",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.mccann.com/"
     },
     {
       "nome": "ACC",
@@ -1209,7 +1257,8 @@
       ],
       "regiao": "EUA",
       "cc": "US",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.collemcvoy.com/"
     },
     {
       "nome": "Crispin",
@@ -1249,7 +1298,8 @@
       ],
       "regiao": "EUA",
       "cc": "US",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.giantspoon.com/"
     },
     {
       "nome": "FIG",
@@ -1279,7 +1329,8 @@
       ],
       "regiao": "Canadá",
       "cc": "CA",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://zulualphakilo.com/"
     },
     {
       "nome": "Brains",
@@ -1328,7 +1379,8 @@
       ],
       "regiao": "Reino Unido",
       "cc": "GB",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.whalar.com/"
     },
     {
       "nome": "72andSunny",
@@ -1337,7 +1389,8 @@
       ],
       "regiao": "EUA",
       "cc": "US",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.72andsunny.com/"
     },
     {
       "nome": "Goodby Silverstein & Partners",
@@ -1348,7 +1401,8 @@
       ],
       "regiao": "EUA",
       "cc": "US",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://goodbysilverstein.com/"
     },
     {
       "nome": "Anomaly",
@@ -1358,7 +1412,8 @@
       ],
       "regiao": "EUA",
       "cc": "US",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://anomaly.com/"
     },
     {
       "nome": "Deutsch",
@@ -1369,7 +1424,8 @@
       ],
       "regiao": "EUA",
       "cc": "US",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.deutsch.com/"
     },
     {
       "nome": "McKinney",
@@ -1378,7 +1434,8 @@
       ],
       "regiao": "EUA",
       "cc": "US",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://mckinney.com/"
     },
     {
       "nome": "BarkleyOKRP",
@@ -1495,7 +1552,8 @@
       ],
       "regiao": "Global",
       "cc": "",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://wearesocial.com/"
     },
     {
       "nome": "Dept",
@@ -1505,7 +1563,8 @@
       ],
       "regiao": "Global",
       "cc": "",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.deptagency.com/"
     },
     {
       "nome": "Gale",
@@ -1525,7 +1584,8 @@
       ],
       "regiao": "EUA",
       "cc": "US",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.rga.com/"
     },
     {
       "nome": "BBDO",
@@ -1536,7 +1596,8 @@
       ],
       "regiao": "Global",
       "cc": "",
-      "lista": "Cannes Lions / Adweek 2022–2026"
+      "lista": "Cannes Lions / Adweek 2022–2026",
+      "site": "https://www.bbdo.com/"
     },
     {
       "nome": "Grey",

@@ -2,7 +2,8 @@
 
 Usa a conta @addrop.feed (Business, ligada à Página "AD Drop") para ler os posts
 públicos de outras contas profissionais pelo "business_discovery":
-  - contas das agências (descobertas sozinhas a partir de robo/fontes.json → agencias);
+  - contas das agências (descobertas sozinhas a partir de robo/fontes.json → agencias: primeiro
+    o @ que aparece no próprio site da agência, depois os @ do YouTube, o nome e variações);
   - contas extras listadas à mão em robo/fontes.json → instagram.
 
 Precisa dos secrets IG_TOKEN e IG_USER_ID no GitHub. Sem eles, não faz nada.
@@ -20,7 +21,11 @@ import urllib.request
 
 GRAPH = "https://graph.facebook.com/v23.0"
 CHAMADAS_POR_RODADA = 2       # 2 por minuto = 120 por hora (limite da Meta: ~200)
-TENTATIVAS_POR_AGENCIA = 3    # @ candidatos testados para achar a conta de cada agência
+TENTATIVAS_POR_AGENCIA = 6    # @ candidatos testados para achar a conta de cada agência
+UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
+IG_LINK = re.compile(r"instagram\.com/(?:_u/)?([A-Za-z0-9._]{2,30})", re.I)
+IG_NAO = {"p", "reel", "reels", "tv", "explore", "accounts", "stories", "instagram", "sharer", "share",
+          "about", "developer", "legal", "direct", "web", "embed.js", "static", "privacy", "help"}
 POSTS_POR_CONTA = 8
 PAUSA_SE_USO = 75             # % de uso informado pela Meta que faz o robô pausar o Instagram
 PAUSA_MIN = 20
@@ -93,16 +98,50 @@ def posts(usuario):
     return (bd.get("media") or {}).get("data", []), uso
 
 
-def _candidatos(ag, chave):
+def do_site(ag, st):
+    """@ de Instagram linkados no site da agência (rodapé/cabeçalho), do mais citado ao menos.
+    Não gasta chamada da Meta; guarda o resultado para não baixar o site de novo."""
+    cache = st.setdefault("site_ig", {})
+    if ag["nome"] in cache:
+        return cache[ag["nome"]]
+    achados = []
+    if ag.get("site"):
+        try:
+            req = urllib.request.Request(ag["site"], headers={"User-Agent": UA, "Accept-Language": "en,pt;q=0.8"})
+            with urllib.request.urlopen(req, timeout=15) as r:
+                pag = r.read(1_500_000).decode("utf-8", "ignore")
+            cont = {}
+            for h in IG_LINK.findall(pag):
+                h = h.rstrip(".").lower()
+                if h not in IG_NAO:
+                    cont[h] = cont.get(h, 0) + 1
+            achados = sorted(cont, key=lambda k: -cont[k])[:3]
+        except Exception:  # noqa: BLE001
+            achados = []
+    cache[ag["nome"]] = achados
+    return achados
+
+
+def _variacoes(nome):
+    base = nome.lower().replace("&", "and").replace("+", "")
+    base = re.sub(r"[^a-z0-9]", "", base)
+    return [base, base + "agency", base + "_"] if base else []
+
+
+def _candidatos(ag, chave, st=None):
     cands = []
-    for h in ag.get("instagram_candidatos", []) + ag.get("youtube", []) + [ag["nome"]]:
+    site = do_site(ag, st) if st is not None else []
+    for h in site + ag.get("instagram_candidatos", []) + ag.get("youtube", []) + [ag["nome"]] + _variacoes(ag["nome"]):
         h = re.sub(r"[^a-z0-9._]", "", h.lstrip("@").lower())
         if 2 < len(h) <= 30 and h not in cands:
             cands.append(h)
     return cands[:TENTATIVAS_POR_AGENCIA]
 
 
-def _parece_da_agencia(ag, perfil, chave):
+def _parece_da_agencia(ag, perfil, chave, st=None):
+    usuario = (perfil.get("username") or "").lower()
+    if st is not None and usuario in st.get("site_ig", {}).get(ag["nome"], []):
+        return True  # o próprio site da agência aponta para essa conta
     nome = (perfil.get("name") or "") + " " + (perfil.get("username") or "")
     alvo = chave(ag.get("confere", ag["nome"]))
     if not alvo or alvo[:5] not in chave(nome):
@@ -140,28 +179,37 @@ def rodada(fontes, vigia, agora, log, chave):
             a = por_nome[nome]
             leitura.append({"usuario": usuario, "nome": nome, "regiao": a.get("regiao", "Global"), "cc": a.get("cc", ""),
                             "agencia": nome})
-    pendentes = [a for a in fontes.get("agencias", []) if a["nome"] not in contas]
+    # agências sem conta + (uma vez) as que não foram achadas antes desta busca pelo site
+    revistas = st.setdefault("revistas", [])
+    pendentes = [a for a in fontes.get("agencias", [])
+                 if a["nome"] not in contas or (contas[a["nome"]] == "" and a["nome"] not in revistas)]
+    st["rodadas"] = st.get("rodadas", 0) + 1
 
     saida, gastas = [], 0
     try:
         while gastas < CHAMADAS_POR_RODADA:
             # uma descoberta por rodada enquanto houver agência sem conta; o resto lê posts
-            if pendentes and (gastas == 0 or not leitura):
+            # enquanto houver agência a procurar: 1ª chamada sempre, 2ª em rodadas alternadas
+            if pendentes and (gastas == 0 or not leitura or st["rodadas"] % 2):
                 ag = pendentes.pop(0)
+                if contas.get(ag["nome"]) == "":
+                    revistas.append(ag["nome"])
+                    contas.pop(ag["nome"], None)
                 tentadas = st.setdefault("tentadas", {}).setdefault(ag["nome"], [])
-                cands = [c for c in _candidatos(ag, chave) if c not in tentadas]
+                cands = [c for c in _candidatos(ag, chave, st) if c not in tentadas]
                 if not cands:
                     contas[ag["nome"]] = ""
+                    st["tentadas"].pop(ag["nome"], None)
                     continue
                 u = cands[0]
                 tentadas.append(u)
                 perfil, uso = descobrir(u)
                 gastas += 1
-                if perfil and _parece_da_agencia(ag, perfil, chave):
+                if perfil and _parece_da_agencia(ag, perfil, chave, st):
                     contas[ag["nome"]] = perfil["username"].lower()
                     st["tentadas"].pop(ag["nome"], None)
                     log("  instagram encontrado:", ag["nome"], "→ @" + perfil["username"])
-                elif len(tentadas) >= len(_candidatos(ag, chave)):
+                elif len(tentadas) >= len(_candidatos(ag, chave, st)):
                     contas[ag["nome"]] = ""
                     st["tentadas"].pop(ag["nome"], None)
             elif leitura:
