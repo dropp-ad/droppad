@@ -1,0 +1,58 @@
+name: Instagram retroativo (3 meses)
+
+# Puxa o que cada conta de Instagram monitorada postou nos últimos 90 dias.
+# 60 contas por hora (o vigia usa outras 120; a Meta permite ~200). Quando todas as
+# contas tiverem passado uma vez, não faz mais nada (pode desligar o workflow).
+on:
+  schedule:
+    - cron: "53 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: ig-retroativo
+  cancel-in-progress: false
+
+jobs:
+  retroativo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Ler contas e publicar
+        env:
+          GH_TOKEN: ${{ github.token }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: |
+          git config user.name "AD Drop robô"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python robo/ig_retroativo.py
+          cp robo/ig_retro.json /tmp/ig_retro.json
+          for tentativa in 1 2 3 4 5 6; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            cp /tmp/ig_retro.json robo/ig_retro.json
+            python robo/ig_retroativo.py --mesclar
+            git add campaigns.json novidades.json robo/ig_retro.json
+            if git diff --cached --quiet; then
+              echo "Nada novo."
+              exit 0
+            fi
+            git commit -q -m "Instagram retroativo $(TZ=America/Sao_Paulo date '+%F %H:%M') (robô)"
+            if git push -q origin HEAD:main; then
+              gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null 2>&1 || true
+              exit 0
+            fi
+            echo "Push recusado; tentando de novo ($tentativa/6)."
+            sleep 7
+          done
+          exit 1

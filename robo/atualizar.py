@@ -794,36 +794,43 @@ def ler_instagram(fontes, vigia, dias=JANELA_DIAS):
     out = []
     limite = (HOJE - dt.timedelta(days=dias)).isoformat()
     for p, conta in instagram.rodada(fontes, vigia, AGORA, log, chave):
-        legenda = p.get("caption") or ""
-        link = p.get("permalink") or ""
-        data = data_de(p.get("timestamp", ""))
-        if not link or not data or data < limite or data > HOJE.isoformat():
-            continue
-        linhas = [limpar(x) for x in legenda.splitlines() if limpar(HASHTAG.sub(" ", x)).strip(" .·-—|")]
-        titulo = HASHTAG.sub(" ", linhas[0]).strip(" .·-—|") if linhas else ""
-        titulo = re.sub(r"\s+", " ", titulo)
-        if len(titulo) > 140:
-            titulo = titulo[:139].rsplit(" ", 1)[0] + "…"
-        texto = limpar(HASHTAG.sub(" ", legenda))
-        if not titulo or EXCLUI.search(titulo) or PERGUNTA.search(titulo) or ENTREVISTA.search(texto[:400]):
-            continue
-        if not FORTE.search(texto[:600]) and p.get("media_type") != "VIDEO":
-            continue  # foto sem cara de campanha (bastidores, vagas, cultura da agência...)
-        marca = marca_de(titulo) or marca_de(texto[:300])
-        if not marca:
-            m = re.search(r"(?:for|para|pour|für|with|com|con|x)\s+@([\w.]{2,30})", texto, re.I)
-            marca = marca_ok(m.group(1).replace(".", " ").replace("_", " ").title()) if m else ""
-        if not marca or chave(marca) == chave(conta["nome"]):
-            continue
-        tipo = "reel" if "/reel/" in link else "p"
-        cod = link.rstrip("/").rsplit("/", 1)[-1]
-        out.append({"id": "%s-%s-%s" % (data, slug(marca, 20), slug(titulo, 36)), "date": data, "brand": marca,
-                    "title": titulo, "agency": conta.get("agencia") or "", "source": "Instagram · @" + conta["usuario"],
-                    "url": link, "region": conta.get("regiao", "Global"), "cc": conta.get("cc", ""),
-                    "video": "https://www.instagram.com/%s/%s/" % (tipo, cod),
-                    "summary": primeira_frase(texto) if len(texto) > len(titulo) + 20 else "",
-                    "addedAt": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")})
+        c = post_para_campanha(p, conta, limite)
+        if c:
+            out.append(c)
     return out
+
+
+def post_para_campanha(p, conta, limite):
+    """Um post de Instagram vira campanha, ou None se não tiver cara de campanha."""
+    legenda = p.get("caption") or ""
+    link = p.get("permalink") or ""
+    data = data_de(p.get("timestamp", ""))
+    if not link or not data or data < limite or data > HOJE.isoformat():
+        return None
+    linhas = [limpar(x) for x in legenda.splitlines() if limpar(HASHTAG.sub(" ", x)).strip(" .·-—|")]
+    titulo = HASHTAG.sub(" ", linhas[0]).strip(" .·-—|") if linhas else ""
+    titulo = re.sub(r"\s+", " ", titulo)
+    if len(titulo) > 140:
+        titulo = titulo[:139].rsplit(" ", 1)[0] + "…"
+    texto = limpar(HASHTAG.sub(" ", legenda))
+    if not titulo or EXCLUI.search(titulo) or PERGUNTA.search(titulo) or ENTREVISTA.search(texto[:400]):
+        return None
+    if not FORTE.search(texto[:600]) and p.get("media_type") != "VIDEO":
+        return None  # foto sem cara de campanha (bastidores, vagas, cultura da agência...)
+    marca = marca_de(titulo) or marca_de(texto[:300])
+    if not marca:
+        m = re.search(r"(?:for|para|pour|für|with|com|con|x)\s+@([\w.]{2,30})", texto, re.I)
+        marca = marca_ok(m.group(1).replace(".", " ").replace("_", " ").title()) if m else ""
+    if not marca or chave(marca) == chave(conta["nome"]):
+        return None
+    tipo = "reel" if "/reel/" in link else "p"
+    cod = link.rstrip("/").rsplit("/", 1)[-1]
+    return {"id": "%s-%s-%s" % (data, slug(marca, 20), slug(titulo, 36)), "date": data, "brand": marca,
+        "title": titulo, "agency": conta.get("agencia") or "", "source": "Instagram · @" + conta["usuario"],
+        "url": link, "region": conta.get("regiao", "Global"), "cc": conta.get("cc", ""),
+        "video": "https://www.instagram.com/%s/%s/" % (tipo, cod),
+        "summary": primeira_frase(texto) if len(texto) > len(titulo) + 20 else "",
+        "addedAt": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")}
 
 
 def ler_portfolios(fontes, estado, camp, max_por_site=10, dias=60):
