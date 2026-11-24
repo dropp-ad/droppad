@@ -23,8 +23,8 @@
       "mod": "Tue, 24 Nov 2026 10:00:27 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"b10f3810be594b490c3f45a8995dbbda\"",
-      "mod": "Tue, 24 Nov 2026 16:00:10 GMT"
+      "etag": "\"8bc9d0acd0628daf34c7cd1f84281936\"",
+      "mod": "Tue, 24 Nov 2026 16:35:27 GMT"
     },
     "https://www.marketingdirecto.com/rss": {
       "mod": "Tue, 24 Nov 2026 16:23:42 GMT"
@@ -33,8 +33,8 @@
       "mod": "Tue, 24 Nov 2026 14:06:00 GMT"
     },
     "https://musebyclios.com/feed/": {
-      "etag": "W/\"f0cdc890c9261a4ebe8f6107df394063\"",
-      "mod": "Tue, 24 Nov 2026 16:33:19 GMT"
+      "etag": "W/\"4fdba70578d4f9cdf3c484c596844ddc\"",
+      "mod": "Tue, 24 Nov 2026 16:33:59 GMT"
     },
     "https://www.contentgrip.com/feed/": {
       "etag": "W/\"2a882-FVLh2wELuFV5JZuXSKkh9Jadqg4\""
@@ -52,15 +52,15 @@
       "mod": "Tue, 24 Nov 2026 16:28:42 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 16:33:45 GMT"
+      "mod": "Tue, 24 Nov 2026 16:37:45 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"65a314dc9998c319c0a90751ae90e97b\"",
       "mod": "Tue, 24 Nov 2026 09:24:54 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795537562-gzip\"",
-      "mod": "Tue, 24 Nov 2026 16:26:02 GMT"
+      "etag": "W/\"1795538226-gzip\"",
+      "mod": "Tue, 24 Nov 2026 16:37:06 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -89,8 +89,8 @@
       "mod": "Tue, 24 Nov 2026 04:20:02 GMT"
     },
     "https://www.adweek.com/feed/": {
-      "etag": "W/\"7e873051a3d52f428197dd2a4dc9d6c5\"",
-      "mod": "Tue, 24 Nov 2026 16:15:29 GMT"
+      "etag": "W/\"88cd96d82972c936a460539afb8069ee\"",
+      "mod": "Tue, 24 Nov 2026 16:30:45 GMT"
     },
     "https://www.bandt.com.au/feed/": {
       "mod": "Tue, 24 Nov 2026 05:51:14 GMT"
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 16:33:46 GMT"
+      "mod": "Tue, 24 Nov 2026 16:37:46 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -150,7 +150,7 @@
       "mod": "Tue, 24 Nov 2026 13:11:00 GMT"
     }
   },
-  "yt_pos": 42,
+  "yt_pos": 36,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -187,14 +187,13 @@
       "DDB": "ddbworldwide",
       "FCB": "fcbglobal",
       "Serviceplan": "serviceplan",
-      "Bear Meets Eagle On Fire": "bearmeetseagleonfire"
+      "Bear Meets Eagle On Fire": "bearmeetseagleonfire",
+      "DM9": "",
+      "BigTime Creative Shop": "bigtimecreativeshop",
+      "L&C": ""
     },
-    "tentadas": {
-      "DM9": [
-        "dm9"
-      ]
-    },
-    "pos": 61
+    "tentadas": {},
+    "pos": 65
   },
   "vistos": [
     "https://www.meioemensagem.com.br/midia/folha-torna-anuncios-do-impresso-clicaveis-no-digital",
@@ -260,6 +259,6 @@
     "https://www.marketingdirecto.com/digital-general/digital/microsoft-advertising-renueva-pujas-automatizadas-mejoras-conversiones",
     "https://www.marketingdirecto.com/campanas-navidenas/tenemos-mucho-que-dar-amor-torrons-vicens-navidad"
   ],
-  "ultima_rodada": "2026-11-24T16:33:42.640549+00:00",
+  "ultima_rodada": "2026-11-24T16:37:43.058271+00:00",
   "ultima_novidade": "2026-11-24T16:33:42.640549+00:00"
 }
