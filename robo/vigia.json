@@ -4,12 +4,12 @@
       "etag": "W/\"5d2f-o2znJvubyBKV5heDNvTUFqHaMa8\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"7ffd3787923e1c2f84498d181b6a7c78\"",
-      "mod": "Tue, 24 Nov 2026 19:51:31 GMT"
+      "etag": "\"837ce693c51fa042dce7334c6d4d5080\"",
+      "mod": "Tue, 24 Nov 2026 20:34:58 GMT"
     },
     "https://creativosbr.com.br/feed/": {
-      "etag": "W/\"7571944330072fda4028cad0d4a81b09\"",
-      "mod": "Tue, 24 Nov 2026 19:58:42 GMT"
+      "etag": "W/\"4f89dee4574fdd214f0fa9ac4f1484fa\"",
+      "mod": "Tue, 24 Nov 2026 20:29:40 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
       "etag": "\"b73e6a232bc3b828752c06b6939467fd\"",
@@ -40,23 +40,23 @@
       "etag": "W/\"2a882-FVLh2wELuFV5JZuXSKkh9Jadqg4\""
     },
     "https://www.nossomeio.com.br/feed/": {
-      "etag": "\"d2739fb7b30c4246ac9348810d59b00f\"",
-      "mod": "Tue, 24 Nov 2026 19:56:11 GMT"
+      "etag": "\"effde458ae2e7cc4c892621d3ff8df7b\"",
+      "mod": "Tue, 24 Nov 2026 20:15:22 GMT"
     },
     "https://www.adworld.ie/feed/": {
       "etag": "\"b778f8e5ac045bc29a7be1e54d179c8b\"",
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"2d318be3dc707f09ecde76ae3109aff9\"",
-      "mod": "Tue, 24 Nov 2026 19:30:50 GMT"
+      "etag": "W/\"f6ce0e3fddccf7b4f79fe19b0eb1dadf\"",
+      "mod": "Tue, 24 Nov 2026 20:13:22 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 20:07:47 GMT"
+      "mod": "Tue, 24 Nov 2026 20:34:59 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"65a314dc9998c319c0a90751ae90e97b\"",
-      "mod": "Tue, 24 Nov 2026 09:24:54 GMT"
+      "etag": "\"845c9fecfae31b2094facf1b8510387f\"",
+      "mod": "Tue, 24 Nov 2026 20:09:12 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795545017-gzip\"",
@@ -89,8 +89,8 @@
       "mod": "Tue, 24 Nov 2026 04:20:02 GMT"
     },
     "https://www.adweek.com/feed/": {
-      "etag": "W/\"24792d14846fffd09b956111e897635e\"",
-      "mod": "Tue, 24 Nov 2026 19:50:08 GMT"
+      "etag": "W/\"ac4ad37f0bb2c7149d1f2d5c1043da89\"",
+      "mod": "Tue, 24 Nov 2026 20:17:08 GMT"
     },
     "https://www.bandt.com.au/feed/": {
       "mod": "Tue, 24 Nov 2026 05:51:14 GMT"
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 20:07:47 GMT"
+      "mod": "Tue, 24 Nov 2026 20:35:47 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -135,22 +135,22 @@
       "mod": "Tue, 24 Nov 2026 06:00:22 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Tue, 24 Nov 2026 20:02:10 GMT"
+      "mod": "Tue, 24 Nov 2026 20:35:30 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"fc116bded8fbc36b69abc5cba6644857\"",
       "mod": "Tue, 24 Nov 2026 14:42:27 GMT"
     },
     "https://roastbrief.com.mx/rss": {
-      "etag": "\"42bce60966ab269628e91f2f7ce0cb15\"",
-      "mod": "Tue, 24 Nov 2026 20:06:46 GMT"
+      "etag": "\"72c6ef4e0e355f82a62ad9a5a113295b\"",
+      "mod": "Tue, 24 Nov 2026 20:33:20 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
       "etag": "\"f3f16e4c53a0fab71753bd675db6b23c\"",
       "mod": "Tue, 24 Nov 2026 17:43:47 GMT"
     }
   },
-  "yt_pos": 36,
+  "yt_pos": 57,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -283,11 +283,27 @@
       "Uncle Grey": "unclegreyagency",
       "&Co.": "andcoagency",
       "Robert/Boisen & Like-minded": "robertboisenlikeminded",
+      "TRY": "",
       "POL": "",
-      "TRY": ""
+      "hasan & partners": "hasanpartners",
+      "SMFB": "",
+      "NORD DDB": "nordagencygroup",
+      "SEK": "sekagency",
+      "thjnk Zürich": "thjnk",
+      "Wirz": "",
+      "180heartbeats + JUNG v MATT": "180heartbeats_jvm",
+      "THIS IS LOCCO": "this_is_locco",
+      "Mito": "hellowearemito",
+      "MUW Saatchi & Saatchi": "",
+      "Cohn & Jansen": "cohnandjansen"
     },
-    "tentadas": {},
-    "pos": 173,
+    "tentadas": {
+      "Artificial Group": [
+        "artificialgroup",
+        "artificialgroupagency"
+      ]
+    },
+    "pos": 187,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -328,9 +344,14 @@
       "Uzina",
       "N=5",
       "The Public House",
-      "TRY"
+      "TRY",
+      "POL",
+      "SMFB",
+      "Wirz",
+      "MUW Saatchi & Saatchi",
+      "Artificial Group"
     ],
-    "rodadas": 204,
+    "rodadas": 232,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -523,7 +544,33 @@
       ],
       "Robert/Boisen & Like-minded": [],
       "TRY": [],
-      "POL": []
+      "POL": [],
+      "SMFB": [],
+      "hasan & partners": [
+        "hasanpartners"
+      ],
+      "NORD DDB": [
+        "nordagencygroup"
+      ],
+      "SEK": [],
+      "Wirz": [],
+      "thjnk Zürich": [
+        "thjnkzurich"
+      ],
+      "180heartbeats + JUNG v MATT": [
+        "180heartbeats_jvm"
+      ],
+      "MUW Saatchi & Saatchi": [],
+      "THIS IS LOCCO": [
+        "this_is_locco"
+      ],
+      "Mito": [
+        "hellowearemito"
+      ],
+      "Artificial Group": [],
+      "Cohn & Jansen": [
+        "cohnandjansen"
+      ]
     }
   },
   "vistos": [
@@ -603,8 +650,10 @@
     "https://creativosbr.com.br/hering-transforma-situacoes-de-amigo-secreto-em-campanha-de-natal",
     "https://www.meioemensagem.com.br/midia/havan-lidera-os-comerciais-da-black-friday-2026-na-tv",
     "https://musebyclios.com/advertising/taco-bells-claims-christmas-bells-have-been-its-advertising-all-along",
-    "https://musebyclios.com/advertising/taco-bell-claims-christmas-bells-have-been-its-advertising-all-along"
+    "https://musebyclios.com/advertising/taco-bell-claims-christmas-bells-have-been-its-advertising-all-along",
+    "https://creativosbr.com.br/havaianas-celebra-os-pares-originais-do-brasil-em-sua-nova-campanha-de-verao",
+    "https://grandesnomesdapropaganda.com.br/anunciantes/sadia-apresenta-lanca-para-destacar-presenca-dos-frios-na-rotina-dos-consumidores"
   ],
-  "ultima_rodada": "2026-11-24T20:07:43.975682+00:00",
-  "ultima_novidade": "2026-11-24T18:04:42.842235+00:00"
+  "ultima_rodada": "2026-11-24T20:35:43.337653+00:00",
+  "ultima_novidade": "2026-11-24T20:35:43.337653+00:00"
 }
