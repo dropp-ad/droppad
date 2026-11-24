@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel · dropp Ad</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  :root { --bg: #f3f1ec; --ink: #141414; --mut: #77746d; --line: rgba(0,0,0,.09); --card: #fff; --acc: #e4572e; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 28px 18px 80px; }
+  header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 22px; }
+  h1 { font-size: 22px; margin: 0; letter-spacing: -.01em; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--mut); margin: 30px 0 10px; font-weight: 600; }
+  a { color: inherit; }
+  .mut { color: var(--mut); }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+  .tile { background: var(--card); border-radius: 12px; padding: 14px 16px; border: 1px solid var(--line); }
+  .tile .k { font-size: 12px; color: var(--mut); }
+  .tile .v { font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; margin-top: 2px; }
+  .tile .s { font-size: 12.5px; color: var(--mut); font-variant-numeric: tabular-nums; }
+  .live .v::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: #2bb24c; margin-right: 8px; vertical-align: middle; }
+  .chart { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 12px 8px; }
+  .bars { display: flex; align-items: flex-end; gap: 3px; height: 160px; }
+  .bar { flex: 1; background: var(--ink); border-radius: 3px 3px 0 0; min-height: 2px; position: relative; opacity: .85; }
+  .bar:hover { opacity: 1; background: var(--acc); }
+  .bar:hover::after { content: attr(data-t); position: absolute; bottom: 100%; left: 50%; transform: translate(-50%, -6px); background: var(--ink); color: #fff; font-size: 11.5px; padding: 3px 7px; border-radius: 5px; white-space: nowrap; z-index: 2; }
+  .axis { display: flex; justify-content: space-between; font-size: 11px; color: var(--mut); margin-top: 6px; padding: 0 2px; }
+  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  td { padding: 9px 14px; border-top: 1px solid var(--line); vertical-align: top; }
+  tr:first-child td { border-top: 0; }
+  td.n { text-align: right; font-variant-numeric: tabular-nums; width: 90px; font-weight: 600; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+  .seg { display: inline-flex; background: rgba(0,0,0,.06); border-radius: 999px; padding: 2px; }
+  .seg button { border: 0; background: none; padding: 4px 12px; border-radius: 999px; font: inherit; font-size: 13px; cursor: pointer; color: var(--ink); }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+  .center { text-align: center; padding: 80px 0; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--card); padding: 10px 16px; border-radius: 999px; font: inherit; cursor: pointer; }
+  .small { font-size: 13px; }
+</style>
+</head>
+<body>
+<main id="app"><p class="center mut">Carregando…</p></main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+(function () {
+  "use strict";
+  var SUPABASE_URL = "https://lwbqnvmagcplfheabcqp.supabase.co";
+  var SUPABASE_KEY = "sb_publishable__1jrNtYNIVBoCi-AoZrkBQ_fiWexkIf";
+  var app = document.getElementById("app");
+  var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, { auth: { flowType: "pkce", persistSession: true, detectSessionInUrl: true } });
+  var dias = 30, titulos = {};
+  var fmt = new Intl.NumberFormat("pt-BR");
+
+  function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+  function n(x) { return fmt.format(x || 0); }
+  function msg(texto, botao) {
+    app.textContent = "";
+    var c = el("div", "center");
+    c.appendChild(el("p", null, texto));
+    if (botao) c.appendChild(botao);
+    app.appendChild(c);
+  }
+  function entrar() {
+    var b = el("button", "btn", "Entrar com Google");
+    b.addEventListener("click", function () {
+      sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: location.origin + location.pathname } });
+    });
+    msg("Painel privado do dropp Ad.", b);
+  }
+
+  // nomes das campanhas para a lista de mais acessadas
+  fetch("campaigns.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (lista) {
+    lista.forEach(function (c) { titulos[c.id] = (c.brand ? c.brand + " · " : "") + c.title; });
+  }).catch(function () {});
+
+  function tile(k, v, s, cls) {
+    var t = el("div", "tile" + (cls ? " " + cls : ""));
+    t.appendChild(el("div", "k", k)); t.appendChild(el("div", "v", v));
+    if (s) t.appendChild(el("div", "s", s));
+    return t;
+  }
+  function tabela(linhas) {
+    var tb = el("table");
+    if (!linhas.length) linhas = [["Nada ainda", ""]];
+    linhas.forEach(function (l) {
+      var tr = el("tr");
+      var a = el("td"); if (l[2]) { var lk = el("a", null, l[0]); lk.href = l[2]; lk.target = "_blank"; a.appendChild(lk); } else a.textContent = l[0];
+      tr.appendChild(a); tr.appendChild(el("td", "n", l[1] === "" ? "" : n(l[1])));
+      tb.appendChild(tr);
+    });
+    return tb;
+  }
+
+  function desenhar(d) {
+    app.textContent = "";
+    var h = el("header");
+    var t = el("div"); t.appendChild(el("h1", null, "Acessos · dropp Ad"));
+    var sub = el("div", "mut small"); sub.textContent = "Só você vê esta página. "; var sair = el("a", null, "sair"); sair.href = "#";
+    sair.addEventListener("click", function (e) { e.preventDefault(); sb.auth.signOut().then(entrar); });
+    sub.appendChild(sair); t.appendChild(sub); h.appendChild(t);
+    var seg = el("div", "seg");
+    [[7, "7 dias"], [30, "30 dias"], [90, "90 dias"]].forEach(function (o) {
+      var b = el("button", null, o[1]); b.setAttribute("aria-pressed", o[0] === dias ? "true" : "false");
+      b.addEventListener("click", function () { dias = o[0]; carregar(); });
+      seg.appendChild(b);
+    });
+    h.appendChild(seg);
+    app.appendChild(h);
+
+    var tiles = el("div", "tiles");
+    tiles.appendChild(tile("No site agora", n(d.agora), "últimos 5 minutos", "live"));
+    tiles.appendChild(tile("Hoje", n(d.hoje.pessoas) + " pessoas", n(d.hoje.acessos) + " acessos"));
+    tiles.appendChild(tile("Últimos " + dias + " dias", n(d.periodo.pessoas) + " pessoas", n(d.periodo.acessos) + " acessos"));
+    tiles.appendChild(tile("Desde o início", n(d.total.pessoas) + " pessoas", n(d.total.acessos) + " acessos"));
+    app.appendChild(tiles);
+
+    app.appendChild(el("h2", null, "Pessoas por dia"));
+    var ch = el("div", "chart"), bars = el("div", "bars");
+    var porDia = {}; d.por_dia.forEach(function (x) { porDia[x.dia] = x; });
+    var hoje = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Sao_Paulo" }));
+    var serie = [];
+    for (var i = dias - 1; i >= 0; i--) {
+      var dt = new Date(hoje); dt.setDate(hoje.getDate() - i);
+      var k = dt.getFullYear() + "-" + String(dt.getMonth() + 1).padStart(2, "0") + "-" + String(dt.getDate()).padStart(2, "0");
+      serie.push({ k: k, p: porDia[k] ? porDia[k].pessoas : 0, a: porDia[k] ? porDia[k].acessos : 0 });
+    }
+    var max = Math.max.apply(null, serie.map(function (x) { return x.p; }).concat([1]));
+    serie.forEach(function (x) {
+      var b = el("div", "bar"); b.style.height = (x.p / max * 100) + "%";
+      b.dataset.t = x.k.slice(8) + "/" + x.k.slice(5, 7) + ": " + n(x.p) + " pessoas, " + n(x.a) + " acessos";
+      bars.appendChild(b);
+    });
+    ch.appendChild(bars);
+    var ax = el("div", "axis");
+    ax.appendChild(el("span", null, serie[0].k.slice(8) + "/" + serie[0].k.slice(5, 7)));
+    ax.appendChild(el("span", null, "hoje"));
+    ch.appendChild(ax);
+    app.appendChild(ch);
+
+    var cols = el("div", "cols");
+    var c1 = el("div"); c1.appendChild(el("h2", null, "Links de campanha mais abertos"));
+    c1.appendChild(tabela(d.campanhas.map(function (c) { return [titulos[c.id] || c.id, c.acessos, "./?c=" + encodeURIComponent(c.id)]; })));
+    var c2 = el("div"); c2.appendChild(el("h2", null, "De onde vêm"));
+    c2.appendChild(tabela(d.origens.map(function (o) { return [o.ref, o.acessos]; })));
+    var dv = d.dispositivos || {};
+    c2.appendChild(el("h2", null, "Aparelho"));
+    c2.appendChild(tabela([["Celular", dv.mobile || 0], ["Computador", dv.desktop || 0]]));
+    cols.appendChild(c1); cols.appendChild(c2);
+    app.appendChild(cols);
+  }
+
+  function carregar() {
+    sb.rpc("painel_acessos", { dias: dias }).then(function (r) {
+      if (r.error) {
+        if (/restrito/.test(r.error.message)) {
+          var b = el("button", "btn", "Entrar com outra conta");
+          b.addEventListener("click", function () { sb.auth.signOut().then(entrar); });
+          msg("Esta conta não tem acesso ao painel.", b);
+        } else if (/does not exist|not find the function|schema cache/i.test(r.error.message)) {
+          msg("O contador ainda não foi ligado no Supabase (falta rodar supabase/acessos.sql).");
+        } else msg("Não deu para carregar agora: " + r.error.message);
+        return;
+      }
+      desenhar(r.data);
+    });
+  }
+
+  sb.auth.getSession().then(function (r) {
+    if (location.search.indexOf("code=") >= 0) history.replaceState(null, "", location.pathname);
+    if (r.data.session) carregar(); else entrar();
+  });
+  setInterval(function () { if (!document.hidden && document.querySelector(".tiles")) carregar(); }, 60000);
+})();
+</script>
+</body>
+</html>

@@ -411,6 +411,35 @@
   var SUPABASE_URL = "https://lwbqnvmagcplfheabcqp.supabase.co";
   var SUPABASE_KEY = "sb_publishable__1jrNtYNIVBoCi-AoZrkBQ_fiWexkIf";
   var APPLE_LOGIN = false;
+
+  /* ---------- Contador de acessos (tabela "visits"; só o painel.html lê) ---------- */
+  function registrarVisita() {
+    if (!SUPABASE_URL || !SUPABASE_KEY || /[?&]code=/.test(location.search)) return;
+    try {
+      if (sessionStorage.getItem("ddrop-visita")) return; // uma por sessão do navegador
+      sessionStorage.setItem("ddrop-visita", "1");
+    } catch (e) { /* sem storage: conta mesmo assim */ }
+    var vid = "";
+    try {
+      vid = localStorage.getItem("ddrop-vid") || "";
+      if (!/^[a-z0-9]{16}$/.test(vid)) {
+        vid = Array.from(crypto.getRandomValues(new Uint8Array(16)), function (b) { return "abcdefghijklmnopqrstuvwxyz0123456789"[b % 36]; }).join("");
+        localStorage.setItem("ddrop-vid", vid);
+      }
+    } catch (e) { vid = "s" + Math.random().toString(36).slice(2, 17); }
+    var ref = "";
+    try { var r = document.referrer && new URL(document.referrer); if (r && r.host !== location.host) ref = r.host.replace(/^www\./, ""); } catch (e) { /* nada */ }
+    var corpo = {
+      visitor: vid, path: location.pathname.slice(0, 300), ref: ref.slice(0, 300) || null,
+      campaign: (sharedId() || "").slice(0, 300) || null,
+      device: matchMedia("(max-width: 760px)").matches ? "mobile" : "desktop"
+    };
+    fetch(SUPABASE_URL + "/rest/v1/visits", {
+      method: "POST", keepalive: true,
+      headers: { apikey: SUPABASE_KEY, "Content-Type": "application/json", Prefer: "return=minimal" },
+      body: JSON.stringify(corpo)
+    }).catch(function () { /* contador nunca atrapalha o site */ });
+  }
   var sbReady = null, sb = null, me = null;
   function loadSb() {
     if (sbReady) return sbReady;
@@ -1151,6 +1180,7 @@
         renderAll();
         goTo(sharedId());
         resumeLogin();
+        registrarVisita();
       });
     })
     .catch(function (err) {
