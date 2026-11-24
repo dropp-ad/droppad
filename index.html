@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://i.ytimg.com">
 <link rel="preconnect" href="https://www.youtube-nocookie.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Public+Sans:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&display=swap">
-<link rel="stylesheet" href="style.css?v=34">
+<link rel="stylesheet" href="style.css?v=35">
 </head>
 <body>
 <header class="bar-top">
@@ -23,6 +23,14 @@
     <nav class="chips tipo" id="chips" aria-label="Região"></nav>
     <a href="./" class="logo" id="top" aria-label="dropp Ad, voltar ao topo"><video class="logo-vid" autoplay muted loop playsinline preload="auto" poster="logo.png" aria-hidden="true"><source src="logo.webm" type="video/webm"><source src="logo.mp4" type="video/mp4"></video></a>
     <div class="right">
+      <div class="cal" id="cal">
+        <label class="cal-btn" title="Escolher uma data">
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 10h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span id="cal-txt"></span>
+          <input type="date" id="cal-in" aria-label="Ver campanhas a partir de uma data">
+        </label>
+        <button type="button" class="cal-x" id="cal-x" aria-label="Voltar para hoje" hidden>✕</button>
+      </div>
       <nav class="chips tipo" id="tipo" aria-label="Tipo"></nav>
       <button type="button" class="sound-btn" id="sound" aria-pressed="false" aria-label="Som dos filmes"></button>
     </div>
@@ -32,6 +40,6 @@
   <p class="status" id="status" role="status">Carregando campanhas…</p>
   <div id="feed"></div>
 </main>
-<script src="app.js?v=34"></script>
+<script src="app.js?v=35"></script>
 </body>
 </html>

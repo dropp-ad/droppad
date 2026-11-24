@@ -482,7 +482,7 @@
     if (idx < 0) {
       var alvo = state.items.filter(function (c) { return c.id === id; })[0];
       if (!alvo) return false;
-      state.region = homeMatch(alvo) ? "home" : ""; state.onlyFilms = false;
+      state.region = homeMatch(alvo) ? "home" : ""; state.onlyFilms = false; state.upTo = "";
       idx = -1;
     }
     renderAll(true);
@@ -834,6 +834,7 @@
     dayIdx = {};
     state.list = state.items.filter(function (c) {
       if (state.onlyFilms && !c.fl.length) return false;
+      if (state.upTo && c.date > state.upTo) return false;
       if (state.region === "home") { if (!homeMatch(c)) return false; }
       else if (!state.region) { if (homeMatch(c)) return false; } // Mundo = tudo menos o país de quem entra
       else if (regiaoDe(c) !== state.region) return false;
@@ -842,6 +843,7 @@
     state.perDay = {};
     state.list.forEach(function (c) { c._k = state.perDay[c.date] || 0; state.perDay[c.date] = c._k + 1; });
     renderChips();
+    renderCal();
     if (!skipMore) renderMore();
   }
   function renderChips() {
@@ -868,6 +870,31 @@
       t.appendChild(b);
     });
   }
+
+  /* ---------- Calendário: começa a timeline no dia escolhido (e segue para trás) ---------- */
+  var fmtCal = new Intl.DateTimeFormat("pt-BR", { timeZone: "UTC", day: "numeric", month: "short" });
+  function renderCal() {
+    var inp = $("cal-in");
+    if (!inp) return;
+    var datas = state.items.map(function (c) { return c.date; }).sort();
+    if (datas.length) { inp.min = datas[0]; inp.max = datas[datas.length - 1]; }
+    inp.value = state.upTo || "";
+    $("cal-txt").textContent = state.upTo ? fmtCal.format(new Date(state.upTo + "T12:00:00Z")).replace(".", "") : "";
+    $("cal").classList.toggle("on", !!state.upTo);
+    $("cal-x").hidden = !state.upTo;
+  }
+  (function () {
+    var inp = $("cal-in");
+    if (!inp) return;
+    inp.addEventListener("click", function () { try { if (inp.showPicker) inp.showPicker(); } catch (e) { /* abre do jeito nativo */ } });
+    inp.addEventListener("change", function () {
+      if (inp.value && !/^\d{4}-\d{2}-\d{2}$/.test(inp.value)) return;
+      state.upTo = inp.value || "";
+      window.scrollTo(0, 0);
+      renderAll();
+    });
+    $("cal-x").addEventListener("click", function () { state.upTo = ""; window.scrollTo(0, 0); renderAll(); });
+  })();
 
   /* ---------- Teclado: setas pulam de campanha em campanha ---------- */
   document.addEventListener("keydown", function (e) {
