@@ -12,15 +12,15 @@
       "mod": "Tue, 24 Nov 2026 20:54:39 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
-      "etag": "\"b73e6a232bc3b828752c06b6939467fd\"",
-      "mod": "Tue, 24 Nov 2026 20:07:27 GMT"
+      "etag": "\"36e423b2f8ef119b4bef9656d57a5337\"",
+      "mod": "Tue, 24 Nov 2026 21:30:49 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Tue, 24 Nov 2026 21:18:56 GMT"
+      "mod": "Tue, 24 Nov 2026 21:46:55 GMT"
     },
     "https://www.informabtl.com/feed/": {
-      "etag": "W/\"5245320cd9f170dd1cdbc2ba1790b47e\"",
-      "mod": "Tue, 24 Nov 2026 19:31:37 GMT"
+      "etag": "W/\"29ec5625c23aca27e6351c863a7ca16a\"",
+      "mod": "Tue, 24 Nov 2026 21:44:37 GMT"
     },
     "https://propmark.com.br/feed/": {
       "etag": "\"a3693abf120de2f2081655c3547e74af\"",
@@ -48,11 +48,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"15f42a621e6c3b4625056917bcae3cc6\"",
-      "mod": "Tue, 24 Nov 2026 21:08:43 GMT"
+      "etag": "W/\"89ba0692ddbb64c09ade16649cc1f3b3\"",
+      "mod": "Tue, 24 Nov 2026 21:30:35 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 21:20:58 GMT"
+      "mod": "Tue, 24 Nov 2026 21:47:58 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"bd6f5fdf7d69a0282368f1f8bde58564\"",
@@ -89,11 +89,11 @@
       "mod": "Tue, 24 Nov 2026 04:20:02 GMT"
     },
     "https://www.adweek.com/feed/": {
-      "etag": "W/\"ac4ad37f0bb2c7149d1f2d5c1043da89\"",
-      "mod": "Tue, 24 Nov 2026 20:17:08 GMT"
+      "etag": "W/\"d0085eda0e5a1530cf08cfbc40503069\"",
+      "mod": "Tue, 24 Nov 2026 21:39:23 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 05:51:14 GMT"
+      "mod": "Tue, 24 Nov 2026 21:34:03 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
       "etag": "\"01865794e34ab23b0cd5491d7a065892\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 21:20:59 GMT"
+      "mod": "Tue, 24 Nov 2026 21:47:59 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -131,11 +131,11 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://thestable.com.au/feed/": {
-      "etag": "\"c7944b785b128569a0bb789bcfa77123\"",
-      "mod": "Tue, 24 Nov 2026 21:18:53 GMT"
+      "etag": "\"b65622a1200aaeade0eab21a8d14a35d\"",
+      "mod": "Tue, 24 Nov 2026 21:47:18 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Tue, 24 Nov 2026 20:56:53 GMT"
+      "mod": "Tue, 24 Nov 2026 21:32:49 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"fc116bded8fbc36b69abc5cba6644857\"",
@@ -150,7 +150,7 @@
       "mod": "Tue, 24 Nov 2026 17:43:47 GMT"
     }
   },
-  "yt_pos": 84,
+  "yt_pos": 75,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -315,7 +315,19 @@
       "Sancho BBDO": "",
       "Fahrenheit DDB": "fahrenheitddb",
       "Special Group": "",
-      "The Monkeys": ""
+      "The Monkeys": "",
+      "BMF": "bmf_australia",
+      "Impact BBDO": "impactbbdo",
+      "FP7 McCann": "",
+      "Joe Public": "joepublic",
+      "Mischief @ No Fixed Address": "mischiefusa",
+      "We Believers": "webelieversnow",
+      "The Martin Agency": "martinagency",
+      "Mother New York": "mothernewyork",
+      "Translation": "wearetranslation",
+      "Mojo Supermarket": "mojosupermarket",
+      "Le Truc": "",
+      "SuperHeroes": ""
     },
     "tentadas": {},
     "pos": 201,
@@ -370,9 +382,12 @@
       "The Newtons Laboratory",
       "Leavingstone",
       "Sancho BBDO",
-      "Special Group"
+      "Special Group",
+      "The Monkeys",
+      "FP7 McCann",
+      "Le Truc"
     ],
-    "rodadas": 277,
+    "rodadas": 304,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -627,7 +642,37 @@
       "Sancho BBDO": [],
       "Fahrenheit DDB": [],
       "Special Group": [],
-      "The Monkeys": []
+      "The Monkeys": [],
+      "BMF": [
+        "bmf_australia"
+      ],
+      "Impact BBDO": [
+        "impactbbdo"
+      ],
+      "FP7 McCann": [],
+      "Joe Public": [
+        "joepublic"
+      ],
+      "Mischief @ No Fixed Address": [
+        "mischiefusa"
+      ],
+      "We Believers": [
+        "webelieversnow"
+      ],
+      "The Martin Agency": [
+        "martinagency"
+      ],
+      "Mother New York": [
+        "mothernewyork"
+      ],
+      "Translation": [
+        "wearetranslation"
+      ],
+      "Mojo Supermarket": [
+        "mojosupermarket"
+      ],
+      "Le Truc": [],
+      "SuperHeroes": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -718,8 +763,33 @@
     "https://creativosbr.com.br/havaianas-celebra-os-pares-originais-do-brasil-em-sua-nova-campanha-de-verao",
     "https://grandesnomesdapropaganda.com.br/anunciantes/sadia-apresenta-lanca-para-destacar-presenca-dos-frios-na-rotina-dos-consumidores",
     "https://propmark.com.br/agencias/africa-creative-assina-campanha-da-sadia-para-linha-de-frios",
-    "https://propmark.com.br/anunciantes/pilao-lanca-linha-de-cappuccinos-e-apresenta-campanha-criada-pela-betc-havas"
+    "https://propmark.com.br/anunciantes/pilao-lanca-linha-de-cappuccinos-e-apresenta-campanha-criada-pela-betc-havas",
+    "https://www.bandt.com.au/ooh-contributes-1-5-billion-to-australian-economy",
+    "https://www.bandt.com.au/abc-doubles-sydney-morning-herald-for-audience-in-october",
+    "https://www.bandt.com.au/little-rocket-lands-naccho-youth-mental-health-campaign",
+    "https://www.bandt.com.au/bankwest-continues-brand-platform-just-enough-bank-with-risky-spots-via-bear-meets-eagle-on-fire",
+    "https://www.bandt.com.au/humain-invites-creative-industry-to-challenge-its-new-ai-manifesto",
+    "https://www.bandt.com.au/dementia-australia-puts-support-change-prevention-at-the-heart-of-first-campaign-via-ogilvy-health",
+    "https://www.bandt.com.au/coca-cola-ditches-ai-for-new-us-holiday-campaign",
+    "https://www.bandt.com.au/australian-advertisers-are-missing-valuable-audiences-because-of-their-own-brand-suitability-settings",
+    "https://www.bandt.com.au/garlic-bread-isnt-just-reserved-for-pizza-night-argues-connecting-plots-la-famiglia-in-new-campaign",
+    "https://www.bandt.com.au/cancer-council-shows-theres-more-to-every-bottle-in-new-campaign-via-trp",
+    "https://www.bandt.com.au/christmas-crackers-bt-rounds-up-2026s-best-christmas-ads",
+    "https://www.bandt.com.au/morning-fresh-refreshes-iconic-jingle-via-sickdogwolfman",
+    "https://www.bandt.com.au/mobile-billboard-truck-pulls-up-in-manly-bondi-to-recruit-working-girls",
+    "https://www.bandt.com.au/mcdonalds-recruits-kevin-mccallister-for-a-home-alone-christmas-campaign",
+    "https://www.bandt.com.au/amazon-launches-shoppable-ad-formats-on-streaming-platform-twitch",
+    "https://www.bandt.com.au/the-idea-shed-lands-national-campaign-brief-for-bowel-cancer-australia",
+    "https://www.bandt.com.au/phoenix-media-unveils-australias-first-dedicated-dooh-network-aimed-exclusively-at-the-fifo-workforce",
+    "https://www.bandt.com.au/houston-group-reveals-rebrand-for-self-storage-brand-storelocal-with-ooh-camapign",
+    "https://www.bandt.com.au/nunn-media-partners-with-amazon-ads",
+    "https://www.bandt.com.au/bioderma-preps-for-cronulla-beach-cabana-activation",
+    "https://www.bandt.com.au/commbank-commits-to-a-40-ad-spend-lift-to-aussie-publishers",
+    "https://www.bandt.com.au/parents-their-children-go-head-to-head-in-new-gwm-campaign-via-thinkerbell",
+    "https://www.bandt.com.au/oohmedia-adds-rampart-to-its-office-network-in-exclusive-content-deal",
+    "https://www.bandt.com.au/petstock-celebrates-the-realities-of-pets-in-new-healthily-ever-after-campaign-via-we-the-people",
+    "https://www.mediaweek.com.au/agencies/pearler-takes-investing-message-to-pub-toilets-lands-1m-views"
   ],
-  "ultima_rodada": "2026-11-24T21:20:55.077716+00:00",
+  "ultima_rodada": "2026-11-24T21:47:54.785858+00:00",
   "ultima_novidade": "2026-11-24T21:20:55.077716+00:00"
 }
