@@ -42,6 +42,9 @@ PAGINAS_ARQUIVO = 2       # páginas antigas por feed em cada execução
 BUSCAS_POR_RODADA = 6
 TESTES_DESCOBERTA = 8     # sites novos testados por rodada
 MAX_POR_FONTE_DIA = 5     # para nenhuma fonte dominar o dia
+SITES_POR_RODADA = 60     # sites de agências/veículos testados por rodada (procura o feed de cada um)
+NOVOS_CANAIS_POR_RODADA = 40  # canais de YouTube de agências procurados pela primeira vez por rodada
+RETESTE_DIAS = 14         # site sem feed é testado de novo depois de N dias
 SIMULAR = bool(os.environ.get("SIMULAR"))
 UA = "Mozilla/5.0 (compatible; ADDropBot/1.0; +https://github.com/pedrorosas/estreou-hoje)"
 
@@ -592,6 +595,10 @@ def canal_id(ag, estado):
     cache = estado.setdefault("canais", {})
     if ag["nome"] in cache:
         return cache[ag["nome"]]
+    if BUSCA_CANAIS["feitas"] >= NOVOS_CANAIS_POR_RODADA:
+        return None  # fica para a próxima rodada
+    BUSCA_CANAIS["feitas"] += 1
+    dom_ag = urllib.parse.urlparse(ag.get("site", "")).netloc.replace("www.", "")
     chave_ag = chave(ag.get("confere", ag["nome"]))
     for h in ag["youtube"]:
         try:
@@ -604,15 +611,74 @@ def canal_id(ag, estado):
         d = re.search(r'<meta property="og:description" content="([^"]*)"', pag)
         desc = html.unescape(d.group(1)) if d else ""
         # nomes curtos/genéricos (Loop, Known, Cape...) precisam parecer agência de verdade
-        generico = len(chave_ag) <= 6
+        generico = len(chave_ag) <= 6 or ag.get("estrito")
         parece_agencia = re.search(r"agen|advertis|creative|criativ|publicid|marketing|brand|studio|comunica|network|ideas", nome + " " + desc, re.I)
-        if m and chave_ag[:5] in chave(nome) and (not generico or parece_agencia):
+        # lista nova (estrito): o canal tem de citar o site da agência ou parecer agência de verdade
+        cita_site = bool(dom_ag) and dom_ag.lower() in pag.lower()
+        if m and chave_ag[:5] in chave(nome) and (not generico or parece_agencia or cita_site):
             cache[ag["nome"]] = {"id": m.group(1), "canal": nome, "handle": h}
             log("  canal encontrado:", ag["nome"], "→", nome, m.group(1))
             return cache[ag["nome"]]
     cache[ag["nome"]] = None
     log("  canal não encontrado:", ag["nome"])
     return None
+
+
+BUSCA_CANAIS = {"feitas": 0}
+
+
+def achar_feed(site):
+    """Procura o feed RSS/Atom de um site: primeiro o <link rel="alternate"> da home, depois os caminhos comuns."""
+    base = site.rstrip("/")
+    cands = []
+    try:
+        home = baixar(site, timeout=15)
+        for m in re.finditer(r"<link[^>]+>", home, re.I):
+            t = m.group(0)
+            if re.search(r"application/(?:rss|atom)\+xml", t, re.I) and not re.search(r"comments", t, re.I):
+                h = re.search(r'href=["\']([^"\']+)', t)
+                if h:
+                    cands.append(urllib.parse.urljoin(site, html.unescape(h.group(1))))
+    except Exception:  # noqa: BLE001
+        pass
+    for c in ("/feed/", "/rss", "/feed", "/rss.xml", "/news/feed/", "/blog/feed/", "/en/feed/", "/atom.xml"):
+        cands.append(base + c)
+    vistos = set()
+    for u in cands:
+        if u in vistos:
+            continue
+        vistos.add(u)
+        try:
+            txt = baixar(u, timeout=12)
+            if parece_feed(txt) and ler_feed(txt):
+                return u
+        except Exception:  # noqa: BLE001
+            continue
+    return ""
+
+
+def fontes_dos_sites(fontes, estado):
+    """Sites da lista "sites" (agências e veículos): descobre o feed de cada um aos poucos
+    e devolve os que têm feed no mesmo formato das fontes fixas."""
+    st = estado.setdefault("sites", {})
+    hoje = HOJE.isoformat()
+    limite = (HOJE - dt.timedelta(days=RETESTE_DIAS)).isoformat()
+    testar = [s for s in fontes.get("sites", [])
+              if s["nome"] not in st or (not st[s["nome"]].get("feed") and st[s["nome"]].get("testado", "") < limite)]
+    testar = testar[:SITES_POR_RODADA]
+    if testar:
+        with cf.ThreadPoolExecutor(12) as ex:
+            for s, feed in zip(testar, ex.map(lambda x: achar_feed(x["site"]), testar)):
+                st[s["nome"]] = {"feed": feed, "testado": hoje}
+                log("  site:", s["nome"], "→", feed or "sem feed")
+    out = []
+    for s in fontes.get("sites", []):
+        feed = st.get(s["nome"], {}).get("feed")
+        if feed:
+            out.append({"nome": s["nome"], "urls": [feed], "regiao": s.get("regiao", "Global"), "cc": s.get("cc", ""),
+                        "so_campanhas": False, "agencia": s.get("agencia", "")})
+    log("Sites com feed:", len(out), "de", len(fontes.get("sites", [])))
+    return out
 
 
 def ler_canais(fontes, estado, dias=45):
@@ -761,7 +827,7 @@ def main():
     bloqueados = set(estado["bloqueados_yt"])
     inicio_normal = (HOJE - dt.timedelta(days=JANELA_DIAS)).isoformat()
 
-    todas_fontes = fontes["feeds"] + fontes.get("descobertas", [])
+    todas_fontes = fontes["feeds"] + fontes.get("descobertas", []) + fontes_dos_sites(fontes, estado)
     candidatos = []  # (item, fonte)
 
     def considerar(it, fonte, minimo):
@@ -931,7 +997,7 @@ def main():
         nid = "%s-%s-%s" % (it["data"], slug(marca, 20), slug(titulo, 36))
         while nid in ids:
             nid += "-2"
-        c = {"id": nid, "date": it["data"], "brand": marca, "title": titulo, "agency": agencia_de(texto),
+        c = {"id": nid, "date": it["data"], "brand": marca, "title": titulo, "agency": agencia_de(texto) or f.get("agencia", ""),
              "source": f["nome"], "url": it["link"], "region": regiao, "cc": cc}
         if yts:
             c["yt"] = yts
