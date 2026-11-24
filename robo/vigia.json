@@ -4,19 +4,19 @@
       "etag": "W/\"5d2f-o2znJvubyBKV5heDNvTUFqHaMa8\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"1410dd4e4d5ad7970d64d0a7f5a63f55\"",
-      "mod": "Tue, 24 Nov 2026 18:01:45 GMT"
+      "etag": "\"e4ffda3c28c9e52c892861e0a33edaeb\"",
+      "mod": "Tue, 24 Nov 2026 18:05:04 GMT"
     },
     "https://creativosbr.com.br/feed/": {
-      "etag": "W/\"2e0c583c9e0d45fc659c9f4f48cc0d15\"",
-      "mod": "Tue, 24 Nov 2026 16:56:35 GMT"
+      "etag": "W/\"49141b0dee6b1c6899687d24ed853ea8\"",
+      "mod": "Tue, 24 Nov 2026 18:05:20 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
       "etag": "\"885b82352bcdb0a8c6f01caa1ae89681\"",
       "mod": "Tue, 24 Nov 2026 18:03:07 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Tue, 24 Nov 2026 17:47:42 GMT"
+      "mod": "Tue, 24 Nov 2026 18:05:43 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"47d7c34622a96a7cf76191dda1a04006\"",
@@ -52,15 +52,15 @@
       "mod": "Tue, 24 Nov 2026 18:00:23 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 18:04:46 GMT"
+      "mod": "Tue, 24 Nov 2026 18:07:46 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"65a314dc9998c319c0a90751ae90e97b\"",
       "mod": "Tue, 24 Nov 2026 09:24:54 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795543453-gzip\"",
-      "mod": "Tue, 24 Nov 2026 18:04:13 GMT"
+      "etag": "W/\"1795543623-gzip\"",
+      "mod": "Tue, 24 Nov 2026 18:07:03 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -70,8 +70,8 @@
       "mod": "Tue, 24 Nov 2026 11:22:01 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
-      "etag": "\"dfa7cea659007b20c940bb1a858d0085\"",
-      "mod": "Tue, 24 Nov 2026 17:10:41 GMT"
+      "etag": "\"942936c1db17eb720a155cb740ffadf6\"",
+      "mod": "Tue, 24 Nov 2026 18:05:23 GMT"
     },
     "https://campaignbrief.com/feed/": {
       "etag": "\"bc7f6af9a5403b336aae8c03b28d2981\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 18:04:47 GMT"
+      "mod": "Tue, 24 Nov 2026 18:07:46 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -135,7 +135,7 @@
       "mod": "Tue, 24 Nov 2026 06:00:22 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Tue, 24 Nov 2026 18:03:22 GMT"
+      "mod": "Tue, 24 Nov 2026 18:06:30 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"fc116bded8fbc36b69abc5cba6644857\"",
@@ -150,7 +150,7 @@
       "mod": "Tue, 24 Nov 2026 17:43:47 GMT"
     }
   },
-  "yt_pos": 63,
+  "yt_pos": 90,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -215,18 +215,12 @@
       "Silverside": "silversideai",
       "FIG": "",
       "Brains": "brainsagency",
-      "DNA&STONE": "dnaandstone"
+      "DNA&STONE": "dnaandstone",
+      "Zulu Alpha Kilo": "",
+      "Loop": ""
     },
-    "tentadas": {
-      "Zulu Alpha Kilo": [
-        "zulualphakilo",
-        "zak"
-      ],
-      "Loop": [
-        "loopagency"
-      ]
-    },
-    "pos": 111,
+    "tentadas": {},
+    "pos": 113,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -251,7 +245,7 @@
       "FIG",
       "Zulu Alpha Kilo"
     ],
-    "rodadas": 81,
+    "rodadas": 84,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -387,8 +381,9 @@
     "https://roastbrief.com.mx/2026/11/el-ebenezer-scrooge-mas-atractivo-de-la-navidad-jonathan-bailey-y-ego-nwodim-protagonizan-el-irreverente-spot-navideno-de-verizon",
     "https://nossomeio.com.br/havaianas-reune-combinacoes-da-cultura-brasileira-em-campanha-de-verao-criada-pela-galeria",
     "https://nossomeio.com.br/maria-quiteria-filmes-ppa-globo-feminicidio",
-    "https://nossomeio.com.br/jcdecaux-reforca-time-comercial-com-isabella-pizzato-e-o-retorno-de-kevin-kim"
+    "https://nossomeio.com.br/jcdecaux-reforca-time-comercial-com-isabella-pizzato-e-o-retorno-de-kevin-kim",
+    "https://creativosbr.com.br/hering-transforma-situacoes-de-amigo-secreto-em-campanha-de-natal"
   ],
-  "ultima_rodada": "2026-11-24T18:04:42.842235+00:00",
+  "ultima_rodada": "2026-11-24T18:07:42.908130+00:00",
   "ultima_novidade": "2026-11-24T18:04:42.842235+00:00"
 }
