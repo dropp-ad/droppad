@@ -29,7 +29,7 @@
       "falhas": 0
     },
     "Janela Publicitária": {
-      "falhas": 13
+      "falhas": 14
     },
     "Creativosbr": {
       "url": "https://creativosbr.com.br/feed/",
@@ -52,34 +52,34 @@
       "falhas": 0
     },
     "Adlatina": {
-      "falhas": 13
+      "falhas": 14
     },
     "Merca2.0": {
       "url": "https://www.merca20.com/feed/",
       "falhas": 0
     },
     "Revista Mercado": {
-      "falhas": 13
+      "falhas": 14
     },
     "Latinspots": {
-      "falhas": 13
+      "falhas": 14
     },
     "InformaBTL": {
       "url": "https://www.informabtl.com/feed/",
       "falhas": 0
     },
     "Reason Why": {
-      "falhas": 13
+      "falhas": 14
     },
     "Marketing Directo": {
       "url": "https://www.marketingdirecto.com/rss",
       "falhas": 0
     },
     "PuroMarketing": {
-      "falhas": 13
+      "falhas": 14
     },
     "Control Publicidad": {
-      "falhas": 13
+      "falhas": 14
     },
     "El Publicista": {
       "url": "https://www.elpublicista.es/rss",
@@ -94,37 +94,37 @@
       "falhas": 0
     },
     "Ads of the World": {
-      "falhas": 13
+      "falhas": 14
     },
     "DesignRush News": {
-      "falhas": 13
+      "falhas": 14
     },
     "Ads of Brands": {
-      "falhas": 13
+      "falhas": 14
     },
     "ContentGrip": {
       "url": "https://www.contentgrip.com/feed/",
       "falhas": 0
     },
     "LBB Online": {
-      "falhas": 13
+      "falhas": 14
     },
     "Adworld.ie": {
       "url": "https://www.adworld.ie/feed/",
       "falhas": 0
     },
     "Creative Salon": {
-      "falhas": 13
+      "falhas": 14
     },
     "Creative Review": {
-      "falhas": 13
+      "falhas": 14
     },
     "Decision Marketing": {
       "url": "https://www.decisionmarketing.co.uk/feed/",
       "falhas": 0
     },
     "Retail Gazette": {
-      "falhas": 3,
+      "falhas": 0,
       "url": "https://www.retailgazette.co.uk/feed/"
     },
     "Marketing Beat": {
@@ -136,7 +136,7 @@
       "falhas": 0
     },
     "The Drum": {
-      "falhas": 13
+      "falhas": 14
     },
     "J'ai un pote dans la com": {
       "url": "https://www.jai-un-pote-dans-la.com/feed/",
@@ -175,17 +175,17 @@
       "falhas": 0
     },
     "Marketech APAC": {
-      "falhas": 13
+      "falhas": 14
     },
     "Marketing-Interactive": {
-      "falhas": 13
+      "falhas": 14
     },
     "MediaNews4U": {
       "url": "https://www.medianews4u.com/feed/",
       "falhas": 0
     },
     "Manifest Media": {
-      "falhas": 13
+      "falhas": 14
     },
     "afaqs": {
       "url": "https://www.afaqs.com/rss",
@@ -233,6 +233,50 @@
     },
     "TMW": {
       "url": "https://tmwunlimited.com/feed/",
+      "falhas": 0
+    },
+    "We Are Social Italy": {
+      "url": "https://wearesocial.com/it/feed/",
+      "falhas": 0
+    },
+    "TBWA\\Italia": {
+      "url": "https://www.tbwa.it/feed/",
+      "falhas": 0
+    },
+    "JAM": {
+      "url": "https://jam.ie/feed",
+      "falhas": 0
+    },
+    "Forsman & Bodenfors": {
+      "url": "https://www.forsman.com/feed/",
+      "falhas": 0
+    },
+    "thjnk Zürich": {
+      "url": "https://www.thjnk.ch/blog-feed.xml",
+      "falhas": 0
+    },
+    "Mito": {
+      "url": "https://mito.hu/feed/",
+      "falhas": 0
+    },
+    "Cohn & Jansen": {
+      "url": "https://www.cohnandjansen.ro/feed/",
+      "falhas": 0
+    },
+    "Milk": {
+      "url": "https://vilvigroup.lt/feed/",
+      "falhas": 0
+    },
+    "Tabasco": {
+      "url": "https://tabasco.ee/feed/",
+      "falhas": 0
+    },
+    "Bruketa&Žinić&Grey": {
+      "url": "https://bruketa-zinic.com/feed/",
+      "falhas": 0
+    },
+    "Communis": {
+      "url": "https://communis.rs/feed/",
       "falhas": 0
     }
   },
@@ -333,14 +377,14 @@
     "briefing.pt": "sem-feed",
     "ca.news.yahoo.com": "sem-feed",
     "cnn.com": "sem-feed",
-    "marcommnews.com": "pendente",
-    "scanx.trade": "pendente",
-    "indystar.com": "pendente",
-    "entrepreneur.com": "pendente",
-    "teleprensa.com": "pendente",
-    "infomoney.com.br": "pendente",
-    "gazetadoparana.com.br": "pendente",
-    "cnnbrasil.com.br": "pendente",
+    "marcommnews.com": "sem-feed",
+    "scanx.trade": "sem-feed",
+    "indystar.com": "sem-feed",
+    "entrepreneur.com": "sem-feed",
+    "teleprensa.com": "sem-feed",
+    "infomoney.com.br": "sem-feed",
+    "gazetadoparana.com.br": "sem-feed",
+    "cnnbrasil.com.br": "sem-feed",
     "correiobraziliense.com.br": "pendente",
     "foodaffairs.it": "pendente",
     "noticiasautomotivas.com.br": "pendente",
@@ -422,7 +466,32 @@
     "enquantoissoemgoias.com": "pendente",
     "brasilturis.com.br": "pendente",
     "tiinside.com.br": "pendente",
-    "aquinoticias.com": "pendente"
+    "aquinoticias.com": "pendente",
+    "tribune.com.pk": "pendente",
+    "forbes.com": "pendente",
+    "sfweekly.com": "pendente",
+    "e-architect.com": "pendente",
+    "cadenadial.com": "pendente",
+    "hosteleriasalamanca.es": "pendente",
+    "lavozdealmeria.com": "pendente",
+    "cronicavasca.elespanol.com": "pendente",
+    "ejecentral.com.mx": "pendente",
+    "flipr.com.ar": "pendente",
+    "teratime.com.br": "pendente",
+    "portaltela.com": "pendente",
+    "boainformacao.com.br": "pendente",
+    "thmais.com.br": "pendente",
+    "conexaopop.com.br": "pendente",
+    "sulnoticias.com": "pendente",
+    "maquinadoesporte.com.br": "pendente",
+    "gazetanews.com": "pendente",
+    "lusa.pt": "pendente",
+    "bizjournals.com": "pendente",
+    "seattletimes.com": "pendente",
+    "digitaltrends.com": "pendente",
+    "farminglife.com": "pendente",
+    "freep.com": "pendente",
+    "bbc.co.uk": "pendente"
   },
   "bloqueados_yt": [
     "9RZktO7r5VY",
@@ -432,15 +501,15 @@
   ],
   "arquivo": {
     "Meio & Mensagem": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Propmark": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Grandes Nomes da Propaganda": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Marcas pelo Mundo": {
@@ -452,11 +521,11 @@
       "fim": true
     },
     "Nosso Meio": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "ABC da Comunicação": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Janela Publicitária": {
@@ -464,19 +533,19 @@
       "fim": false
     },
     "Creativosbr": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "B9": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Exame": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Roastbrief": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Insider Latam": {
@@ -500,7 +569,7 @@
       "fim": false
     },
     "InformaBTL": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Reason Why": {
@@ -520,11 +589,11 @@
       "fim": false
     },
     "El Publicista": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Marketing Dive": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Muse by Clios": {
@@ -544,7 +613,7 @@
       "fim": false
     },
     "ContentGrip": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "LBB Online": {
@@ -552,7 +621,7 @@
       "fim": false
     },
     "Adworld.ie": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Creative Salon": {
@@ -564,7 +633,7 @@
       "fim": false
     },
     "Decision Marketing": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Retail Gazette": {
@@ -576,7 +645,7 @@
       "fim": true
     },
     "Creative Boom": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "The Drum": {
@@ -584,11 +653,11 @@
       "fim": false
     },
     "J'ai un pote dans la com": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "CB News": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "B&T": {
@@ -596,27 +665,27 @@
       "fim": true
     },
     "Mediaweek": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Mumbrella": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "The Stable": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Campaign Brief": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Campaign Brief NZ": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Campaign Brief Asia": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Marketech APAC": {
@@ -628,7 +697,7 @@
       "fim": false
     },
     "MediaNews4U": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "Manifest Media": {
@@ -636,23 +705,23 @@
       "fim": false
     },
     "afaqs": {
-      "pagina": 25,
+      "pagina": 27,
       "fim": false
     },
     "marketinginsiderreview.com": {
-      "pagina": 13,
+      "pagina": 15,
       "fim": false
     },
     "Adweek": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Muse by Clio": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Clio Awards": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "Horizont": {
@@ -668,7 +737,7 @@
       "fim": true
     },
     "We Are Social": {
-      "pagina": 3,
+      "pagina": 5,
       "fim": false
     },
     "adam&eveDDB": {
@@ -682,11 +751,55 @@
     "TMW": {
       "pagina": 2,
       "fim": true
+    },
+    "We Are Social Italy": {
+      "pagina": 2,
+      "fim": true
+    },
+    "TBWA\\Italia": {
+      "pagina": 1,
+      "fim": true
+    },
+    "JAM": {
+      "pagina": 2,
+      "fim": true
+    },
+    "Forsman & Bodenfors": {
+      "pagina": 1,
+      "fim": true
+    },
+    "thjnk Zürich": {
+      "pagina": 3,
+      "fim": false
+    },
+    "Mito": {
+      "pagina": 2,
+      "fim": true
+    },
+    "Cohn & Jansen": {
+      "pagina": 2,
+      "fim": true
+    },
+    "Milk": {
+      "pagina": 2,
+      "fim": true
+    },
+    "Tabasco": {
+      "pagina": 2,
+      "fim": true
+    },
+    "Bruketa&Žinić&Grey": {
+      "pagina": 2,
+      "fim": true
+    },
+    "Communis": {
+      "pagina": 3,
+      "fim": false
     }
   },
-  "proxima_busca": 14,
-  "ultima_execucao": "2026-11-24T14:16:39.017075+00:00",
-  "ultimas_novas": 31,
+  "proxima_busca": 20,
+  "ultima_execucao": "2026-11-24T23:30:00.615352+00:00",
+  "ultimas_novas": 25,
   "sem_imagem": [
     "https://bookingagentinfo.com/news/coco-gauff-partners-with-mercedes-benz-on-new-u-s-open-campaign/",
     "https://campaignbrief.co.nz/2026/06/30/end-of-financial-year-is-today-get-a-tax-deductible-portfolio-reel-membership-with-latest-ad-agency-and-production-company-staff-lists-for-new-zealand-australia/",
@@ -706,6 +819,7 @@
     "https://expansion.mx/empresas/2025/12/23/miller-high-life-reinventa-ritual-ano-nuevo-esferas-cerveza",
     "https://expansion.mx/mercadotecnia/2025/11/22/negra-modelo-turin-cerveza-chocolate",
     "https://grandesnomesdapropaganda.com.br/?p=228677",
+    "https://grandesnomesdapropaganda.com.br/agencias/mover-lanca-campanha-criada-pela-leo/",
     "https://grandesnomesdapropaganda.com.br/anunciantes/ary-fontoura-estrela-nova-campanha-da-acuidar/",
     "https://grandesnomesdapropaganda.com.br/anunciantes/black-feirao-webmotors-lanca-campanha-com-santander/",
     "https://grandesnomesdapropaganda.com.br/anunciantes/bobs-celebra-50-anos-do-big-bob/",
@@ -847,6 +961,7 @@
     "https://www.adworld.ie/2026/07/03/irish-times-rolls-out-nationwide-summer-ooh-campaign/",
     "https://www.adworld.ie/2026/07/10/epic-explores-irish-identity-in-new-campaign-from-the-public-house/",
     "https://www.adworld.ie/2026/07/24/paddy-power-turns-dublin-wheel-clamps-into-ads-for-comedy-festival/",
+    "https://www.adworld.ie/2026/07/24/tbwaireland-says-cheese-with-new-campaign-for-kerrygold/",
     "https://www.adworld.ie/2026/08/07/ulster-museum-reclaims-familiar-put-down-in-new-bigbold-campaign/",
     "https://www.adworld.ie/2026/08/14/havas-village-partners-with-foodcloud-for-new-awareness-campaign/",
     "https://www.adworld.ie/2026/08/19/rtes-advertising-packages-for-katie-taylors-last-fight-in-croke-park-start-at-e30k/",
@@ -934,11 +1049,13 @@
       "https://www.motherlondon.com/work/chapter-zero",
       "https://www.motherlondon.com/work/claude-keep-thinking",
       "https://www.motherlondon.com/work/coinbase-%20everything-is-fine",
+      "https://www.motherlondon.com/work/figs-anatomy-champion",
       "https://www.motherlondon.com/work/figs-team-usa",
       "https://www.motherlondon.com/work/gousto-steal-the-show-period-drama",
       "https://www.motherlondon.com/work/greenpeace-dont-stop",
       "https://www.motherlondon.com/work/hey-duggee-welcome-badge",
       "https://www.motherlondon.com/work/ikea",
+      "https://www.motherlondon.com/work/ikea-big-blue-bag",
       "https://www.motherlondon.com/work/ikea-brighton",
       "https://www.motherlondon.com/work/ikea-co-worker",
       "https://www.motherlondon.com/work/ikea-dating-show",
@@ -954,6 +1071,7 @@
       "https://www.motherlondon.com/work/kfc-bbq-burger",
       "https://www.motherlondon.com/work/kfc-believe",
       "https://www.motherlondon.com/work/kfc-believe3",
+      "https://www.motherlondon.com/work/kfc-delivery",
       "https://www.motherlondon.com/work/kfc-dont-crack",
       "https://www.motherlondon.com/work/kfc-double-down",
       "https://www.motherlondon.com/work/kfc-first-bite",
@@ -961,6 +1079,7 @@
       "https://www.motherlondon.com/work/kfc-lunch-deal",
       "https://www.motherlondon.com/work/kfc-stranger-things",
       "https://www.motherlondon.com/work/kfc-tower",
+      "https://www.motherlondon.com/work/kfc-we-heard-you-xmas",
       "https://www.motherlondon.com/work/kfc-workplace-appropriate",
       "https://www.motherlondon.com/work/kfc-zinger-drip",
       "https://www.motherlondon.com/work/kfc_believe_part_2",
@@ -979,16 +1098,21 @@
       "https://www.motherlondon.com/work/ms-pump-fiction",
       "https://www.motherlondon.com/work/netflix-find-the-thing",
       "https://www.motherlondon.com/work/one-bag-ikea",
+      "https://www.motherlondon.com/work/pirate-ship-will-save-you",
       "https://www.motherlondon.com/work/reeses-peanut-butter",
+      "https://www.motherlondon.com/work/samsung-flash-sucks",
       "https://www.motherlondon.com/work/samsung-greatest-hits",
       "https://www.motherlondon.com/work/samsung-nile-rodgers",
       "https://www.motherlondon.com/work/shes-back-marks-and-spencer",
       "https://www.motherlondon.com/work/stella-artois-beer-au-naturel",
       "https://www.motherlondon.com/work/surrender-to-tender",
       "https://www.motherlondon.com/work/tiktok-do-it",
+      "https://www.motherlondon.com/work/trainline-dolphins",
       "https://www.motherlondon.com/work/trainline-great-journeys",
+      "https://www.motherlondon.com/work/trainline-i-came-by-train",
       "https://www.motherlondon.com/work/uber-eats",
       "https://www.motherlondon.com/work/uber-eats-downtime-diary",
+      "https://www.motherlondon.com/work/uber-eats-embrace-doing-less",
       "https://www.motherlondon.com/work/uber-eats-evild-enough",
       "https://www.motherlondon.com/work/uber-eats-groceries",
       "https://www.motherlondon.com/work/uber-eats-iftar-incoming",
@@ -1000,7 +1124,8 @@
       "https://www.motherlondon.com/work/uber-youre-almost-there",
       "https://www.motherlondon.com/work/uub-defiant-dancer",
       "https://www.motherlondon.com/work/who-could-cook-at-a-time-like-this",
-      "https://www.motherlondon.com/work/wsj"
+      "https://www.motherlondon.com/work/wsj",
+      "https://www.motherlondon.com/work/zalando-xmas-24"
     ]
   },
   "midia_v3": [
@@ -1882,12 +2007,97 @@
       "id": "UC7oQ3g2pAax67SsquVjwWQw",
       "canal": "Co : : Agency",
       "handle": "coagency"
-    }
+    },
+    "Uncle Grey": null,
+    "Robert/Boisen & Like-minded": null,
+    "TRY": null,
+    "POL": null,
+    "SMFB": null,
+    "hasan & partners": null,
+    "NORD DDB": null,
+    "SEK": null,
+    "Wirz": null,
+    "thjnk Zürich": null,
+    "180heartbeats + JUNG v MATT": null,
+    "MUW Saatchi & Saatchi": null,
+    "THIS IS LOCCO": {
+      "id": "UC-I2dCcyX91C2iprQQOzvvA",
+      "canal": "THIS IS LOCCO, s.r.o.",
+      "handle": "thisislocco"
+    },
+    "Mito": null,
+    "Artificial Group": null,
+    "Cohn & Jansen": {
+      "id": "UCdmOkK18WutIuEJ953BjkXA",
+      "canal": "Cohn & Jansen Creative Network",
+      "handle": "cohnandjansen"
+    },
+    "GMP+WEBSE": null,
+    "banda": {
+      "id": "UCyEBZhRqg9_6vsa6cfcEirw",
+      "canal": "Banda",
+      "handle": "bandaagency"
+    },
+    "Milk": null,
+    "New!": {
+      "id": "UClKoIfUaOMK8DqvMZ8cscHA",
+      "canal": "New Agency",
+      "handle": "newagency"
+    },
+    "Tabasco": {
+      "id": "UC_cVpYayH85TTyLnNDCjR2w",
+      "canal": "TABASCO Agency",
+      "handle": "tabascoagency"
+    },
+    "age": {
+      "id": "UC8RkD8knZHOD5tX4UJHK8mA",
+      "canal": "AGE AGENCY",
+      "handle": "ageagency"
+    },
+    "The Newtons Laboratory": null,
+    "Bruketa&Žinić&Grey": null,
+    "Imago Ogilvy": {
+      "id": "UC78kB9UCCr3fSPzWOAZF0cA",
+      "canal": "Imago Ogilvy",
+      "handle": "imagoogilvy"
+    },
+    "Communis": null,
+    "proof.": null,
+    "Noble Graphics": null,
+    "Íslenska": null,
+    "Leavingstone": null,
+    "SOKO": {
+      "id": "UChdfq_oKuC2IsX2pWz-u_Qg",
+      "canal": "SOKO Agency",
+      "handle": "sokoagency"
+    },
+    "Sancho BBDO": null,
+    "Fahrenheit DDB": {
+      "id": "UCG28SmVYRu5_klSW4IZde2w",
+      "canal": "Fahrenheit DDB",
+      "handle": "fahrenheitddb"
+    },
+    "Special Group": null,
+    "The Monkeys": null,
+    "BMF": null,
+    "Impact BBDO": null,
+    "FP7 McCann": {
+      "id": "UCvoJ_Zk601BjDd6glQheP2A",
+      "canal": "FP7 McCann",
+      "handle": "fp7mccann"
+    },
+    "Joe Public": null,
+    "Mischief @ No Fixed Address": null
   },
   "midia_v4": [
     "https://adsofbrands.net/en/news/john-lewis-and-saatchi-saatchi-offer-a-dose-of-gifting-honesty-with-daisy-may-cooper-for-mother-s-d/9587",
     "https://bmeditores.mx/avicultura/la-union-nacional-de-avicultores-presenta-el-poder-del-huevo-mexicano/",
     "https://campaignbrief.co.nz/",
+    "https://campaignbrief.co.nz/2026/05/01/serena-williams-celebrates-the-spirit-of-padel-in-new-global-heineken-0-0-campaign-via-le-pub/",
+    "https://campaignbrief.co.nz/2026/05/05/cb-exclusive-mosh-puts-family-judgement-in-the-spotlight-for-new-weight-loss-campaign/",
+    "https://campaignbrief.co.nz/2026/05/07/westpac-nz-brings-people-powered-rescue-chopper-to-life-in-first-campaign-via-goldilocks/",
+    "https://campaignbrief.co.nz/2026/05/12/latitude-homes-celebrates-the-many-ways-kiwis-live-in-new-national-campaign-via-contagion/",
+    "https://campaignbrief.co.nz/2026/05/14/world-rugby-goes-all-out-for-for-mens-rugby-world-cup-2027-in-new-campaign-via-akcelo/",
     "https://campaignbrief.co.nz/2026/05/20/new-zealand-listens-to-us-mediaworks-turns-up-the-volume-with-new-brand-campaign/",
     "https://campaignbrief.co.nz/2026/05/22/ao-studios-launches-ao-dog-show-for-nz-ad-industry-entries-close-this-friday-may-22/",
     "https://campaignbrief.co.nz/2026/05/27/thundergrid-launches-new-from-powerless-to-powerful-campaign-via-art-of-the-possible/",
@@ -1924,13 +2134,17 @@
     "https://campaignbrief.co.nz/2026/11/02/aucklands-ad-production-crowd-get-a-monthly-friday-hangout-at-the-grey-lynn-firehouse/",
     "https://campaignbrief.co.nz/2026/11/17/aa-mines-data-to-spotlight-aa-member-savings-in-new-national-campaign-via-quantum-jump/",
     "https://campaignbrief.com/99-bikes-launches-new-national-campaign-we-know-riders-via-alt-shift/",
+    "https://campaignbrief.com/amazon-ads-unveils-premium-content-streaming-partnerships-and-new-ad-formats-at-australian-upfront/",
+    "https://campaignbrief.com/aussie-expat-tim-pashen-co-writes-reject-the-rejections-campaign-for-people-like-us-tackling-ai-hiring-bias-via-worth-your-while/",
     "https://campaignbrief.com/australian-bananas-turns-a-banana-into-a-gym-pass-for-two-in-new-campaign-via-thinkerbell/",
     "https://campaignbrief.com/avid-launches-national-brand-platform-with-dual-campaigns-via-martins-brand-house/",
     "https://campaignbrief.com/bakers-delight-celebrates-the-joy-of-freshly-baked-moments-in-new-campaign-via-hero/",
     "https://campaignbrief.com/breville-finds-the-rhythm-in-food-prep-in-global-the-kitchen-sync-campaign-for-kitchen-wizz-12-and-paradice-12-launch-via-common-ventures/",
     "https://campaignbrief.com/chris-hemsworth-spins-a-tall-tale-about-whisky-to-brother-luke-in-archie-roses-new-global-campaign-directed-by-justin-mcmillan/",
     "https://campaignbrief.com/commsec-relaunches-with-seagulls-in-swan-song-campaign-for-commbank-via-mc-saatchi-directed-by-colliders-dylan-duclos/",
+    "https://campaignbrief.com/eat-the-wild-campaign-via-bonfire-goes-viral-viewers-fall-for-skull-island-prawns-hook-line-and-sinker/",
     "https://campaignbrief.com/farmers-union-brings-its-live-cultures-to-life-in-new-its-a-living-thing-campaign-via-thinkerbell/",
+    "https://campaignbrief.com/gordon-legal-gets-personal-in-new-brand-campaign-via-by-all-means/",
     "https://campaignbrief.com/gotcha4life-helps-aussies-put-their-emotions-into-words-in-new-work-via-sciencefiction-initiative/",
     "https://campaignbrief.com/kic-launches-kichydration-with-the-hard-part-vs-the-easy-part-campaign-via-willow-blake/",
     "https://campaignbrief.com/levandes-skinny-dip-campaign-sees-50-older-australians-bare-all-via-adhesive/",
@@ -1940,11 +2154,13 @@
     "https://campaignbrief.com/myer-launches-say-more-with-myer-christmas-campaign-developed-in-house/",
     "https://campaignbrief.com/nicky-buckley-makes-her-game-show-comeback-30-years-on-for-dusks-christmas-campaign/",
     "https://campaignbrief.com/project-rockit-asks-aussies-to-give-a-buck-about-bullying-in-first-campaign-via-the-royals-omd/",
+    "https://campaignbrief.com/samsung-launches-new-digital-ooh-campaign-welcome-to-foldables-in-australia/",
     "https://campaignbrief.com/selfwealth-launches-new-identity-and-campaign-via-bam/",
     "https://campaignbrief.com/specsavers-gets-fans-spinning-around-for-afl-grand-final-in-new-ooh-push-via-tbwamelbourne/",
     "https://campaignbrief.com/spotify-launches-youre-among-fans-campaign-in-oz-with-lizzo-and-jay-shetty-via-bbdo-new-york/",
     "https://campaignbrief.com/support-act-urges-aussies-to-keep-aussie-music-on-rotation-for-ausmusic-t-shirt-day-in-new-campaign-via-bring/",
     "https://campaignbrief.com/tac-turns-the-road-into-the-shredmill-to-put-motorcycle-protective-gear-to-the-test-in-new-activation-via-clemenger-bbdo/",
+    "https://campaignbrief.com/telstra-celebrates-all-types-of-internetters-in-new-work-via-bear-meets-eagle-on-fire-with-61/",
     "https://campaignbrief.com/the-contenders-unveils-new-brand-with-a-sharper-focus-on-commercial-value/",
     "https://campaignbrief.com/the-poolhouse-turns-the-backyard-pool-into-the-best-room-in-the-house-in-new-campaign-via-crave/",
     "https://campaignbrief.com/tixel-shows-how-far-a-fan-will-go-to-not-miss-a-gig-in-first-major-integrated-campaign/",
@@ -1994,6 +2210,7 @@
     "https://forbes.es/sports/997602/laliga-2026-27-campana-welcome-to-our-futbol/",
     "https://gapinc.com/en-us/articles/2026/08/gap-launches-denim-on-your-own,-a-fall-2026-campai",
     "https://grandesnomesdapropaganda.com.br/?p=228677",
+    "https://grandesnomesdapropaganda.com.br/agencias/mover-lanca-campanha-criada-pela-leo/",
     "https://grandesnomesdapropaganda.com.br/anunciantes/ary-fontoura-estrela-nova-campanha-da-acuidar/",
     "https://grandesnomesdapropaganda.com.br/anunciantes/black-feirao-webmotors-lanca-campanha-com-santander/",
     "https://grandesnomesdapropaganda.com.br/anunciantes/bobs-celebra-50-anos-do-big-bob/",
@@ -2128,9 +2345,11 @@
     "https://mumbrella.com.au/dementia-australia-launches-new-awareness-campaign-945400",
     "https://mumbrella.com.au/explora-journeys-launches-out-of-office-campaign-starring-jannik-sinner-944775",
     "https://mumbrella.com.au/get-up-partners-with-the-australia-institute-for-anti-aukus-campaign-944160",
+    "https://mumbrella.com.au/jcdecaux-and-chalkwest-launch-nurture-for-country-campaign-941308",
     "https://mumbrella.com.au/moneymes-banker-bashing-campaign-cops-two-ad-standards-breaches-941705",
     "https://mumbrella.com.au/news-australia-launches-ai-driven-black-friday-campaign-943901",
     "https://mumbrella.com.au/petstock-launches-new-campaign-showcasing-the-realities-of-pet-ownership-944650",
+    "https://mumbrella.com.au/qms-secures-contract-extension-for-essendon-airport-advertising-941062",
     "https://mumbrella.com.au/racv-launches-as-it-should-be-platform-in-first-campaign-from-special-942271",
     "https://mumbrella.com.au/reddit-introduces-new-tools-for-campaign-planning-and-optimisation-941759",
     "https://mumbrella.com.au/ssi-launches-campaign-to-recruit-foster-carers-for-children-944823",
@@ -2148,6 +2367,7 @@
     "https://musebyclios.com/advertising/harrys-says-you-dont-need-to-strike-oil-to-get-a-great-shave-and-smell-great/",
     "https://musebyclios.com/advertising/its-okay-to-be-a-hot-mess-sometimes-maruchan-says/",
     "https://musebyclios.com/advertising/kalshi-explains-itself-and-serves-the-worlds-longest-sandwich/",
+    "https://musebyclios.com/advertising/sarah-michelle-gellar-spoofs-scream-and-more-great-spooky-season-spots/?utm_source=rss&utm_medium=rss&utm_campaign=sarah-michelle-gellar-spoofs-scream-and-more-great-spooky-season-spots",
     "https://musebyclios.com/advertising/strange-brew-liquid-death-iced-tea-vs-long-island-iced-tea/",
     "https://musebyclios.com/advertising/subarus-barkley-family-chases-oscar-mayers-wienermobile/",
     "https://musebyclios.com/advertising/tax-cidents-can-happen-sometimes-theyre-costly/",
@@ -2190,6 +2410,7 @@
     "https://nossomeio.com.br/grupo-de-midia-ceara-um-ano-retomada/",
     "https://nossomeio.com.br/magalu-aposta-em-influenciadores-e-14-horas-de-lives-para-campanha-de-black-friday/",
     "https://nossomeio.com.br/marisa-une-ana-furtado-e-instituto-protea-em-campanha-do-outubro-rosa/",
+    "https://nossomeio.com.br/pinterest-apresenta-visual-search-ads-trazendo-nova-publicidade-de-performance-para-a-descoberta-visual/",
     "https://nossomeio.com.br/vera-fischer-vira-vera-friskies-em-campanha-da-friskies/",
     "https://occidente.co/colombia/el-orgullo-que-nos-conecta-procolombia-marca-pais-20-julio/",
     "https://okdiario.com/lifestyle/ouigo-reta-maldicion-oporto-invita-parejas-cambiar-destino-amor-semana-santa-16403159",
@@ -2201,7 +2422,9 @@
     "https://propmark.com.br/anunciantes/lilly-cria-banca-dos-absurdos-para-combater-desinformacao-sobre-obesidade/",
     "https://propmark.com.br/anunciantes/mbrf-pet-lanca-campanha-cat-friday-com-descontos-em-produtos-para-gatos/",
     "https://propmark.com.br/anunciantes/mercedes-benz-celebra-70-anos-no-brasil-com-campanha-institucional-da-betc-havas/",
+    "https://propmark.com.br/anunciantes/pilao-lanca-linha-de-cappuccinos-e-apresenta-campanha-criada-pela-betc-havas/",
     "https://propmark.com.br/anunciantes/unilever-convoca-jovens-para-massificar-o-uso-da-versao-liquida-do-sabonete-lux/",
+    "https://propmark.com.br/digital/adobe-lanca-campanha-no-tiktok-para-o-aplicativo-lightroom-mobile/",
     "https://propmark.com.br/mercado/iab-brasil-lanca-tres-guias-para-aprimorar-mensuracao-na-publicidade-digital/",
     "https://retailtimes.co.uk/morrisons-christmas-ad-unveiled-a-festive-fairytale-thats-just-right/",
     "https://retailtimes.co.uk/new-york-bakery-backs-boxing-day-demand-with-multi-retailer-media-activation/",
@@ -2697,6 +2920,246 @@
       "testado": "2026-11-24"
     },
     "DUDE": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "We Are Social Italy": {
+      "feed": "https://wearesocial.com/it/feed/",
+      "testado": "2026-11-24"
+    },
+    "TBWA\\Italia": {
+      "feed": "https://www.tbwa.it/feed/",
+      "testado": "2026-11-24"
+    },
+    "Uzina": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "FunnyHow": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Coming Soon": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "N=5": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "180 Amsterdam": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "BBDO Belgium": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Mortierbrigade": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Happiness Brussels": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "The Public House": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Boys + Girls": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "JAM": {
+      "feed": "https://jam.ie/feed",
+      "testado": "2026-11-24"
+    },
+    "Forsman & Bodenfors": {
+      "feed": "https://www.forsman.com/feed/",
+      "testado": "2026-11-24"
+    },
+    "Åkestam Holst": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Stendahls": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "&Co.": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Uncle Grey": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Robert/Boisen & Like-minded": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "TRY": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "POL": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "SMFB": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "hasan & partners": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "NORD DDB": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "SEK": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Wirz": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "thjnk Zürich": {
+      "feed": "https://www.thjnk.ch/blog-feed.xml",
+      "testado": "2026-11-24"
+    },
+    "180heartbeats + JUNG v MATT": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "VCCP": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "MUW Saatchi & Saatchi": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "THIS IS LOCCO": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Mito": {
+      "feed": "https://mito.hu/feed/",
+      "testado": "2026-11-24"
+    },
+    "Artificial Group": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Cohn & Jansen": {
+      "feed": "https://www.cohnandjansen.ro/feed/",
+      "testado": "2026-11-24"
+    },
+    "GMP+WEBSE": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "banda": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Milk": {
+      "feed": "https://vilvigroup.lt/feed/",
+      "testado": "2026-11-24"
+    },
+    "New!": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Tabasco": {
+      "feed": "https://tabasco.ee/feed/",
+      "testado": "2026-11-24"
+    },
+    "age": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "The Newtons Laboratory": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Bruketa&Žinić&Grey": {
+      "feed": "https://bruketa-zinic.com/feed/",
+      "testado": "2026-11-24"
+    },
+    "Imago Ogilvy": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Communis": {
+      "feed": "https://communis.rs/feed/",
+      "testado": "2026-11-24"
+    },
+    "proof.": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Noble Graphics": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Íslenska": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Leavingstone": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "AlmapBBDO": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Africa Creative": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Artplan": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "SOKO": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "DM9": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Sancho BBDO": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Fahrenheit DDB": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Special Group": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "The Monkeys": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "BMF": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "Impact BBDO": {
+      "feed": "",
+      "testado": "2026-11-24"
+    },
+    "FP7 McCann": {
       "feed": "",
       "testado": "2026-11-24"
     }
