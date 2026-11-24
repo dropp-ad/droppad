@@ -36,6 +36,20 @@
     }
     return out;
   }
+  // créditos: [{role, name}] ou {"Direção de criação": "Fulano"}; mais os campos soltos de produtora/criativos
+  function creditsOf(x) {
+    var out = [];
+    function add(role, name) {
+      role = str(role); name = Array.isArray(name) ? name.map(str).filter(Boolean).join(", ") : str(name);
+      if (role && name) out.push([role, name]);
+    }
+    if (Array.isArray(x.credits)) x.credits.forEach(function (k) { if (k && typeof k === "object") add(k.role, k.name || k.names); });
+    else if (x.credits && typeof x.credits === "object") Object.keys(x.credits).forEach(function (k) { add(k, x.credits[k]); });
+    if (x.creatives) add("Criação", x.creatives);
+    if (x.production) add("Produtora", x.production);
+    if (x.director) add("Direção", x.director);
+    return out;
+  }
   function normalize(raw) {
     if (!Array.isArray(raw)) return [];
     return raw.map(function (x) {
@@ -46,7 +60,8 @@
         yt: arr(x.yt, function (s) { return /^[\w-]{11}$/.test(s); }),
         video: safeUrl(str(x.video)), image: safeUrl(str(x.image)),
         images: arr(x.images, function (s) { return !!safeUrl(s); }),
-        story: arr(x.story, Boolean), addedAt: str(x.addedAt)
+        story: arr(x.story, Boolean), addedAt: str(x.addedAt),
+        idea: str(x.idea), credits: creditsOf(x)
       };
       c.fl = films(c);
       return c;
@@ -206,9 +221,18 @@
     var side = el("span", "side");
     var tot = state.perDay[c.date] || 0;
     side.appendChild(el("span", "pos", (idxInDay + 1) + " de " + tot));
-    var sh = el("button", "share", "Compartilhar");
+    var cm = el("button", "act cmt");
+    cm.type = "button";
+    cm.title = "Comentários";
+    cm.setAttribute("aria-label", "Comentários sobre esta campanha");
+    cm.innerHTML = ICON_CMT;
+    cm.addEventListener("click", function (e) { e.stopPropagation(); openComments(c); });
+    side.appendChild(cm);
+    var sh = el("button", "act share");
     sh.type = "button";
+    sh.title = "Compartilhar";
     sh.setAttribute("aria-label", "Compartilhar esta campanha");
+    sh.innerHTML = ICON_SHARE + "<span>Compartilhar</span>";
     sh.addEventListener("click", function (e) { e.stopPropagation(); share(c, sh); });
     side.appendChild(sh);
     top.appendChild(side);
@@ -246,6 +270,7 @@
       media.appendChild(host0);
       media.appendChild(el("span", "bigplay"));
       media.appendChild(el("span", "fail", "Este filme só toca no YouTube ↗"));
+      media.appendChild(endCard(art, c));
       var mute = el("button", "mute");
       mute.type = "button";
       mute.setAttribute("aria-label", "Ligar ou desligar o som");
@@ -267,6 +292,7 @@
       media.addEventListener("click", function (e) {
         if (e.target === mute) { mute.blur(); setSound(!sound); if (!(active && active.art === art)) activate(art, true); return; }
         if (art.classList.contains("is-vert") && active && active.art === art) return;
+        if (art.classList.contains("ended")) return;
         if (art.classList.contains("failed")) { window.open("https://www.youtube.com/watch?v=" + c.fl[+art.dataset.part || 0].id, "_blank", "noopener"); return; }
         if (active && active.art === art) { if (!sound) setSound(true); else togglePause(); }
         else activate(art, true);
@@ -297,7 +323,9 @@
   }
 
   /* ---------- Compartilhar: link que abre direto na campanha ---------- */
-  function linkOf(c) { return location.origin + location.pathname + "#c=" + encodeURIComponent(c.id); }
+  var ICON_SHARE = '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var ICON_CMT = '<svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.2 3.6c-.5.4-1.3.1-1.3-.6V16A2.5 2.5 0 0 1 4 13.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
+  function linkOf(c) { return location.origin + location.pathname + "?c=" + encodeURIComponent(c.id); }
   function toast(msg) {
     var t = $("toast");
     if (!t) { t = el("div", "toast"); t.id = "toast"; t.setAttribute("role", "status"); document.body.appendChild(t); }
@@ -306,43 +334,168 @@
     clearTimeout(t._h);
     t._h = setTimeout(function () { t.classList.remove("on"); }, 2200);
   }
+  function copy(text) {
+    function legacy() {
+      var ta = el("textarea"); ta.value = text; ta.setAttribute("readonly", "");
+      ta.style.cssText = "position:fixed;top:0;left:0;opacity:0";
+      document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, text.length);
+      var ok = false; try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+      ta.remove();
+      return ok;
+    }
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text).then(function () { return true; }, legacy);
+    return Promise.resolve(legacy());
+  }
+  var menu = null;
+  function closeMenu() { if (menu) { menu.remove(); menu = null; } }
+  document.addEventListener("click", function (e) { if (menu && !menu.contains(e.target)) closeMenu(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeMenu(); closeComments(); } });
+  window.addEventListener("scroll", closeMenu, { passive: true });
   function share(c, btn) {
+    if (menu && menu._for === btn) { closeMenu(); return; }
+    closeMenu();
     var url = linkOf(c);
     var title = (c.brand ? c.brand + ": " : "") + c.title;
-    try { history.replaceState(null, "", "#c=" + encodeURIComponent(c.id)); } catch (e) { /* nada */ }
-    if (navigator.share && matchMedia("(pointer: coarse)").matches) {
-      navigator.share({ title: title, text: title + " · dropp Ad", url: url }).catch(function () {});
-      return;
+    var txt = title + " · dropp Ad";
+    menu = el("div", "sharemenu");
+    menu._for = btn;
+    menu.setAttribute("role", "menu");
+    var field = el("input", "sharelink");
+    field.value = url; field.readOnly = true;
+    field.addEventListener("focus", function () { field.select(); });
+    menu.appendChild(field);
+    function item(label, fn) {
+      var b = el("button", "shareitem", label); b.type = "button"; b.setAttribute("role", "menuitem");
+      b.addEventListener("click", function (e) { e.stopPropagation(); fn(); });
+      menu.appendChild(b);
     }
-    function done() { toast("Link copiado"); }
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, function () { fallback(); });
-    else fallback();
-    function fallback() {
-      var ta = el("textarea"); ta.value = url; ta.style.position = "fixed"; ta.style.opacity = "0";
-      document.body.appendChild(ta); ta.select();
-      try { document.execCommand("copy"); done(); } catch (e) { window.prompt("Copie o link:", url); }
-      ta.remove();
-    }
+    function open(u) { window.open(u, "_blank", "noopener"); closeMenu(); }
+    item("Copiar link", function () {
+      copy(url).then(function (ok) {
+        if (ok) { toast("Link copiado"); closeMenu(); } else { field.focus(); field.select(); toast("Selecione e copie o link"); }
+      });
+    });
+    item("WhatsApp", function () { open("https://wa.me/?text=" + encodeURIComponent(txt + " " + url)); });
+    item("X / Twitter", function () { open("https://x.com/intent/post?text=" + encodeURIComponent(txt) + "&url=" + encodeURIComponent(url)); });
+    item("LinkedIn", function () { open("https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(url)); });
+    item("E-mail", function () { location.href = "mailto:?subject=" + encodeURIComponent(title) + "&body=" + encodeURIComponent(txt + "\n\n" + url); closeMenu(); });
+    if (navigator.share) item("Mais opções…", function () { navigator.share({ title: title, text: txt, url: url }).catch(function () {}); closeMenu(); });
+    document.body.appendChild(menu);
+    var r = btn.getBoundingClientRect(), w = menu.offsetWidth;
+    menu.style.top = (r.bottom + 8) + "px";
+    menu.style.left = Math.max(12, Math.min(window.innerWidth - w - 12, r.right - w)) + "px";
   }
+
+  /* ---------- Comentários (utterances: cada campanha vira uma issue no GitHub) ---------- */
+  var COMMENTS_REPO = "pedrorosas/estreou-hoje";
+  var drawer = null;
+  function closeComments() {
+    if (!drawer) return;
+    drawer.classList.remove("on");
+    document.body.classList.remove("drawer-on");
+  }
+  function openComments(c) {
+    closeMenu();
+    if (!drawer) {
+      drawer = el("aside", "drawer");
+      drawer.setAttribute("aria-label", "Comentários");
+      var head = el("div", "drawer-head");
+      head.appendChild(el("div", "drawer-t"));
+      var x = el("button", "drawer-x", "×"); x.type = "button"; x.setAttribute("aria-label", "Fechar comentários");
+      x.addEventListener("click", closeComments);
+      head.appendChild(x);
+      drawer.appendChild(head);
+      drawer.appendChild(el("div", "drawer-body"));
+      var veil = el("div", "veil"); veil.addEventListener("click", closeComments);
+      document.body.appendChild(veil);
+      document.body.appendChild(drawer);
+    }
+    var t = drawer.querySelector(".drawer-t");
+    t.textContent = "";
+    t.appendChild(el("b", null, c.brand || "Campanha"));
+    t.appendChild(el("span", null, c.title));
+    var body = drawer.querySelector(".drawer-body");
+    if (body._id !== c.id) {
+      body._id = c.id;
+      body.textContent = "";
+      body.appendChild(el("p", "drawer-note", "Carregando comentários…"));
+      var sc = document.createElement("script");
+      sc.src = "https://utteranc.es/client.js";
+      sc.async = true;
+      sc.crossOrigin = "anonymous";
+      sc.setAttribute("repo", COMMENTS_REPO);
+      sc.setAttribute("issue-term", "Comentários: " + c.id);
+      sc.setAttribute("label", "comentários");
+      sc.setAttribute("theme", "github-light");
+      sc.onload = function () { var n = body.querySelector(".drawer-note"); if (n) n.remove(); };
+      sc.onerror = function () { body.textContent = ""; body.appendChild(el("p", "drawer-note", "Não foi possível carregar os comentários agora.")); };
+      body.appendChild(sc);
+    }
+    requestAnimationFrame(function () { drawer.classList.add("on"); document.body.classList.add("drawer-on"); });
+  }
+
+  /* ---------- Card do fim do filme: a ideia e os créditos ---------- */
+  function endCard(art, c) {
+    var card = el("div", "endcard");
+    var inner = el("div", "end-in");
+    inner.appendChild(el("span", "end-k", "A ideia"));
+    inner.appendChild(el("h3", "end-brand", c.brand || c.title));
+    if (c.brand) inner.appendChild(el("p", "end-title", c.title));
+    var idea = c.idea || c.summary;
+    if (idea) inner.appendChild(el("p", "end-idea", idea));
+    var rows = [];
+    if (c.agency) rows.push(["Agência", c.agency]);
+    c.credits.forEach(function (k) { if (!(k[0] === "Agência" && k[1] === c.agency)) rows.push(k); });
+    rows.push(["Origem", flagOf(c.cc) + " " + (c.region || "Global")]);
+    var dl = el("dl", "end-cred");
+    rows.forEach(function (k) { dl.appendChild(el("dt", null, k[0])); dl.appendChild(el("dd", null, k[1])); });
+    inner.appendChild(dl);
+    var acts = el("div", "end-acts");
+    var again = el("button", "end-btn", "↺ Ver de novo"); again.type = "button";
+    again.addEventListener("click", function (e) { e.stopPropagation(); art.classList.remove("ended"); art.dataset.part = 0; activate(art, true); });
+    acts.appendChild(again);
+    var next = el("button", "end-btn", "Próxima ↓"); next.type = "button";
+    next.addEventListener("click", function (e) { e.stopPropagation(); var n = art.nextElementSibling; if (n && n.classList.contains("post")) n.scrollIntoView({ behavior: "smooth" }); });
+    acts.appendChild(next);
+    if (c.url) acts.appendChild(link("end-btn ghost", "Ler em " + (c.source || "fonte") + " ↗", c.url));
+    inner.appendChild(acts);
+    card.appendChild(inner);
+    card.addEventListener("click", function (e) { e.stopPropagation(); });
+    return card;
+  }
+
   function sharedId() {
-    var m = location.hash.match(/^#c=(.+)$/);
+    var m = location.search.match(/[?&]c=([^&]+)/) || location.hash.match(/^#c=(.+)$/);
     return m ? decodeURIComponent(m[1]) : "";
   }
+  // abre a timeline a partir da campanha do link (sem montar centenas de telas antes dela)
   function goTo(id) {
     if (!id) return false;
-    var idx = -1;
-    for (var i = 0; i < state.list.length; i++) if (state.list[i].id === id) { idx = i; break; }
+    function find() { for (var i = 0; i < state.list.length; i++) if (state.list[i].id === id) return i; return -1; }
+    var idx = find();
     if (idx < 0) {
       if (!state.items.some(function (c) { return c.id === id; })) return false;
-      state.region = ""; state.onlyFilms = false; renderAll(); // o filtro escondia a campanha
-      for (i = 0; i < state.list.length; i++) if (state.list[i].id === id) { idx = i; break; }
-      if (idx < 0) return false;
+      state.region = ""; state.onlyFilms = false;
+      idx = -1;
     }
-    while (state.shown <= idx) renderMore();
-    var art = document.querySelector('.post[data-id="' + (window.CSS && CSS.escape ? CSS.escape(id) : id) + '"]');
+    renderAll(true);
+    idx = find();
+    if (idx < 0) return false;
+    if (idx > 0) {
+      state.shown = idx;
+      var back = el("button", "newer", "↑ Ver as campanhas mais recentes");
+      back.type = "button";
+      back.addEventListener("click", function () {
+        try { history.replaceState(null, "", location.pathname); } catch (e) { /* nada */ }
+        renderAll(); window.scrollTo(0, 0);
+      });
+      $("feed").appendChild(back);
+    }
+    renderMore();
+    var art = $("feed").querySelector(".post");
     if (!art) return false;
     art.scrollIntoView({ block: "start" });
-    setTimeout(function () { art.scrollIntoView({ block: "start" }); }, 400); // de novo, depois das fontes/imagens
+    setTimeout(function () { art.scrollIntoView({ block: "start" }); }, 400);
     return true;
   }
   window.addEventListener("hashchange", function () { goTo(sharedId()); });
@@ -510,7 +663,7 @@
     active = null;
     clearInterval(a.timer);
     try { if (a.player) a.player.destroy(); } catch (e) { /* já destruído */ }
-    a.art.classList.remove("playing", "paused", "loading", "live");
+    a.art.classList.remove("playing", "paused", "loading", "live", "ended");
     var host = a.art.querySelector(".host");
     if (host && a.art.classList.contains("is-vert")) {
       // Instagram/TikTok não aceitam pausa de fora: recarregar o post faz o vídeo parar
@@ -546,14 +699,15 @@
     var f = c.fl[part];
     me.kind = f.kind;
     art.querySelectorAll(".dot").forEach(function (d, i) { d.classList.toggle("on", i === part); });
-    art.classList.remove("failed");
+    art.classList.remove("failed", "ended");
     var slot = el("div");
     art.querySelector(".host").appendChild(slot);
     art.classList.add("loading");
     function ended() {
       if (!alive()) return;
-      if (c.fl.length > 1) { art.dataset.part = (part + 1) % c.fl.length; activate(art, true); }
-      else if (me.kind === "yt") { me.player.seekTo(0); me.player.playVideo(); }
+      if (part < c.fl.length - 1) { art.dataset.part = part + 1; activate(art, true); return; }
+      art.classList.remove("playing", "paused", "loading");
+      art.classList.add("ended");
     }
     function playing() { if (alive()) { art.classList.remove("loading", "paused"); art.classList.add("playing"); } }
     function paused() { if (alive()) art.classList.add("paused"); }
@@ -603,7 +757,7 @@
         if (!alive()) return;
         var p = new Vimeo.Player(slot, {
           url: "https://vimeo.com/" + f.id + (f.hash ? "/" + f.hash : ""),
-          autoplay: true, muted: !sound, loop: c.fl.length === 1, playsinline: true, controls: true, dnt: true, responsive: true, texttrack: "pt"
+          autoplay: true, muted: !sound, loop: false, playsinline: true, controls: true, dnt: true, responsive: true, texttrack: "pt"
         });
         me.player = p;
         p.on("play", playing);
@@ -638,8 +792,7 @@
     var feed = $("feed");
     var slice = state.list.slice(state.shown, state.shown + LOTE);
     slice.forEach(function (c) {
-      dayIdx[c.date] = (dayIdx[c.date] || 0);
-      feed.appendChild(post(c, dayIdx[c.date]++));
+      feed.appendChild(post(c, c._k || 0));
     });
     state.shown += slice.length;
     var old = $("more");
@@ -664,7 +817,8 @@
     var reg = has ? "" : regiaoDoPais(cc);
     state.home = { cc: cc, label: has || !reg ? countryName(cc) : reg, reg: reg };
   }
-  function renderAll() {
+  function renderAll(skipMore) {
+    closeMenu();
     deactivate();
     ratios.clear();
     if (io) io.disconnect();
@@ -678,9 +832,9 @@
       return true;
     });
     state.perDay = {};
-    state.list.forEach(function (c) { state.perDay[c.date] = (state.perDay[c.date] || 0) + 1; });
+    state.list.forEach(function (c) { c._k = state.perDay[c.date] || 0; state.perDay[c.date] = c._k + 1; });
     renderChips();
-    renderMore();
+    if (!skipMore) renderMore();
   }
   function renderChips() {
     var box = $("chips");
