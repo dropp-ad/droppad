@@ -16,15 +16,15 @@
       "mod": "Tue, 24 Nov 2026 22:00:21 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Tue, 24 Nov 2026 22:17:55 GMT"
+      "mod": "Tue, 24 Nov 2026 22:35:56 GMT"
     },
     "https://www.informabtl.com/feed/": {
-      "etag": "W/\"b1869d2f9c80765e6be9d949d1bb4b18\"",
-      "mod": "Tue, 24 Nov 2026 22:01:45 GMT"
+      "etag": "W/\"a52d8b25b27de73886e7055f5ec18ef9\"",
+      "mod": "Tue, 24 Nov 2026 22:29:06 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"a3693abf120de2f2081655c3547e74af\"",
-      "mod": "Tue, 24 Nov 2026 21:20:17 GMT"
+      "etag": "\"7c6a68451af7cab22f14bc4a32eb9d36\"",
+      "mod": "Tue, 24 Nov 2026 22:22:57 GMT"
     },
     "https://www.marketingdirecto.com/rss": {
       "mod": "Tue, 24 Nov 2026 16:23:42 GMT"
@@ -48,15 +48,15 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"7cec91237266b5dab2fa18864bb2c63a\"",
-      "mod": "Tue, 24 Nov 2026 22:17:08 GMT"
+      "etag": "W/\"1407bc0a536eff3cee3de9fb3644f6df\"",
+      "mod": "Tue, 24 Nov 2026 22:30:08 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 22:17:59 GMT"
+      "mod": "Tue, 24 Nov 2026 22:35:59 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"d49ee3109eaeacbf3566cbf6268d2d8f\"",
-      "mod": "Tue, 24 Nov 2026 22:17:11 GMT"
+      "etag": "\"da304fa686ccdedc59ba188d6577ccd2\"",
+      "mod": "Tue, 24 Nov 2026 22:33:52 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795545017-gzip\"",
@@ -74,12 +74,12 @@
       "mod": "Tue, 24 Nov 2026 18:12:27 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"fa146ed6828e0015d96436bcd34bf108\"",
-      "mod": "Tue, 24 Nov 2026 22:00:41 GMT"
+      "etag": "\"25f69eef67c3de7e299eda91f56e710c\"",
+      "mod": "Tue, 24 Nov 2026 22:29:09 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
-      "etag": "\"aa58c14885c9625f9ad052b912882153\"",
-      "mod": "Tue, 24 Nov 2026 04:25:53 GMT"
+      "etag": "\"25f69eef67c3de7e299eda91f56e710c\"",
+      "mod": "Tue, 24 Nov 2026 22:29:09 GMT"
     },
     "https://www.afaqs.com/rss": {
       "mod": "Tue, 24 Nov 2026 13:36:08 GMT"
@@ -93,7 +93,7 @@
       "mod": "Tue, 24 Nov 2026 21:47:41 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 22:11:19 GMT"
+      "mod": "Tue, 24 Nov 2026 22:28:35 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
       "etag": "\"01865794e34ab23b0cd5491d7a065892\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 22:18:00 GMT"
+      "mod": "Tue, 24 Nov 2026 22:36:00 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -150,7 +150,7 @@
       "mod": "Tue, 24 Nov 2026 17:43:47 GMT"
     }
   },
-  "yt_pos": 30,
+  "yt_pos": 66,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -337,8 +337,16 @@
       "TBWA\\Chiat\\Day": "",
       "RPA": "rpa_advertising"
     },
-    "tentadas": {},
-    "pos": 208,
+    "tentadas": {
+      "Zambezi": [
+        "zmbz"
+      ],
+      "VML Brasil": [
+        "vml.brasil",
+        "vml_brasil"
+      ]
+    },
+    "pos": 217,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -396,9 +404,10 @@
       "Le Truc",
       "SuperHeroes",
       "B-Reel",
-      "TBWA\\Chiat\\Day"
+      "TBWA\\Chiat\\Day",
+      "VML Brasil"
     ],
-    "rodadas": 334,
+    "rodadas": 352,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -704,7 +713,9 @@
       "RPA": [
         "rpa_advertising",
         "rpa"
-      ]
+      ],
+      "Zambezi": [],
+      "VML Brasil": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -753,7 +764,12 @@
       "b11agency": "2026-11-24T22:04:54.662876+00:00",
       "fantasy": "2026-11-24T22:07:54.479165+00:00",
       "basicdept": "2026-11-24T22:11:54.384406+00:00",
-      "wearecollins": "2026-11-24T22:13:55.008934+00:00"
+      "wearecollins": "2026-11-24T22:13:55.008934+00:00",
+      "landor": "2026-11-24T22:19:54.564549+00:00",
+      "cghnyc": "2026-11-24T22:21:55.611265+00:00",
+      "tendrilstudio": "2026-11-24T22:27:55.703554+00:00",
+      "giantant": "2026-11-24T22:33:56.235100+00:00",
+      "oddfellows": "2026-11-24T22:35:55.867298+00:00"
     }
   },
   "vistos": [
@@ -867,8 +883,9 @@
     "https://www.bandt.com.au/ad-fraud-is-stealing-your-budget-your-dashboard-calls-it-performance",
     "https://campaignbrief.com/countdown-to-free-entry-to-campaign-brief-agency-of-the-year-cb-hot-list-2027-deadline-friday-4-december",
     "https://campaignbrief.com/neosframe-throws-down-the-gauntlet-with-1500-unlimited-advertising-rollout-and-a-return-to-real-service",
-    "https://www.bandt.com.au/optus-brx-bring-basketball-inspired-smart-play-campaign-to-black-friday"
+    "https://www.bandt.com.au/optus-brx-bring-basketball-inspired-smart-play-campaign-to-black-friday",
+    "https://www.merca20.com/meta-presenta-the-play-su-comercial-de-navidad-que-critica-la-obsesion-por-los-smartphones-video"
   ],
-  "ultima_rodada": "2026-11-24T22:17:55.245565+00:00",
-  "ultima_novidade": "2026-11-24T21:20:55.077716+00:00"
+  "ultima_rodada": "2026-11-24T22:35:55.867298+00:00",
+  "ultima_novidade": "2026-11-24T22:35:55.867298+00:00"
 }
