@@ -392,8 +392,8 @@
      "comments" do seu projeto Supabase; o SQL está em supabase/comentarios.sql.
      Para esconder um comentário: Supabase → Table Editor → comments → marque "hidden".
      A chave abaixo é a pública ("anon"/"publishable"); ela pode ficar no site. */
-  var SUPABASE_URL = "";
-  var SUPABASE_KEY = "";
+  var SUPABASE_URL = "https://lwbqnvmagcplfheabcqp.supabase.co";
+  var SUPABASE_KEY = "sb_publishable__1jrNtYNIVBoCi-AoZrkBQ_fiWexkIf";
   var APPLE_LOGIN = false;
   var sbReady = null, sb = null, me = null;
   function loadSb() {
