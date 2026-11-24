@@ -13,8 +13,12 @@
     "propeg": 0,
     "fields360": 0,
     "huia.ag": 0,
-    "sherlockcomms": 0
+    "sherlockcomms": 0,
+    "vmlbrasil": "sem conta"
   },
   "inicio": "2026-11-24",
-  "restam": 794
+  "restam": 830,
+  "erros": {
+    "vmlbrasil": "110: Invalid user id"
+  }
 }
