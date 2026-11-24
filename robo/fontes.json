@@ -7122,5 +7122,5208 @@
       "tipo": "agencia",
       "agencia": "Noble Studios"
     }
+  ],
+  "instagram": [
+    {
+      "usuario": "vmlbrasil",
+      "nome": "VML Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "VML Brasil"
+    },
+    {
+      "usuario": "gutsopaulo",
+      "nome": "GUT São Paulo",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "GUT São Paulo"
+    },
+    {
+      "usuario": "droga5sp",
+      "nome": "Droga5 São Paulo",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Droga5 São Paulo"
+    },
+    {
+      "usuario": "lewlaratbwa",
+      "nome": "Lew'Lara\\TBWA",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Lew'Lara\\TBWA"
+    },
+    {
+      "usuario": "betchavas",
+      "nome": "BETC Havas",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "BETC Havas"
+    },
+    {
+      "usuario": "ogilvybrasil",
+      "nome": "Ogilvy Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Ogilvy Brasil"
+    },
+    {
+      "usuario": "mullenlowebrasil",
+      "nome": "MullenLowe Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "MullenLowe Brasil"
+    },
+    {
+      "usuario": "wmccann_br",
+      "nome": "WMcCann",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "WMcCann"
+    },
+    {
+      "usuario": "sunsetddb",
+      "nome": "SunsetDDB",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "SunsetDDB"
+    },
+    {
+      "usuario": "techandsoulbr",
+      "nome": "Tech and Soul",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Tech and Soul"
+    },
+    {
+      "usuario": "ampfy",
+      "nome": "Ampfy",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Ampfy"
+    },
+    {
+      "usuario": "galeria.ag",
+      "nome": "Galeria",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Galeria"
+    },
+    {
+      "usuario": "soko.ag",
+      "nome": "Soko",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Soko"
+    },
+    {
+      "usuario": "david_sp",
+      "nome": "David São Paulo",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "David São Paulo"
+    },
+    {
+      "usuario": "akqacasa",
+      "nome": "AKQA Casa",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "AKQA Casa"
+    },
+    {
+      "usuario": "cpbbrasil",
+      "nome": "CP+B Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "CP+B Brasil"
+    },
+    {
+      "usuario": "jotacom",
+      "nome": "Jotacom",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Jotacom"
+    },
+    {
+      "usuario": "mynd8",
+      "nome": "Mynd",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Mynd"
+    },
+    {
+      "usuario": "squidbr",
+      "nome": "Squid",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Squid"
+    },
+    {
+      "usuario": "createsparkbr",
+      "nome": "Spark",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Spark"
+    },
+    {
+      "usuario": "wt.ag",
+      "nome": "WT.AG",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "WT.AG"
+    },
+    {
+      "usuario": "ginga.ag",
+      "nome": "Ginga",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Ginga"
+    },
+    {
+      "usuario": "fbiz",
+      "nome": "Fbiz",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Fbiz"
+    },
+    {
+      "usuario": "dpz_oficial",
+      "nome": "DPZ",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "DPZ"
+    },
+    {
+      "usuario": "sunounitedcreators",
+      "nome": "Suno United Creators",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Suno United Creators"
+    },
+    {
+      "usuario": "tatildesign",
+      "nome": "Tátil Design",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Tátil Design"
+    },
+    {
+      "usuario": "anacouto",
+      "nome": "Ana Couto",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Ana Couto"
+    },
+    {
+      "usuario": "bpartners",
+      "nome": "B&Partners",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "B&Partners"
+    },
+    {
+      "usuario": "druidcreative",
+      "nome": "Druid",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Druid"
+    },
+    {
+      "usuario": "wkbrasil",
+      "nome": "Wieden+Kennedy São Paulo",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Wieden+Kennedy São Paulo"
+    },
+    {
+      "usuario": "v4company",
+      "nome": "V4 Company",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "V4 Company"
+    },
+    {
+      "usuario": "conversionbr",
+      "nome": "Conversion",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Conversion"
+    },
+    {
+      "usuario": "npdigitalbr",
+      "nome": "NP Digital Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "NP Digital Brasil"
+    },
+    {
+      "usuario": "livead_oficial",
+      "nome": "LiveAD",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "LiveAD"
+    },
+    {
+      "usuario": "peppery.ag",
+      "nome": "Peppery",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Peppery"
+    },
+    {
+      "usuario": "mutato_sp",
+      "nome": "Mutato",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Mutato"
+    },
+    {
+      "usuario": "casarex",
+      "nome": "CasaRex",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "CasaRex"
+    },
+    {
+      "usuario": "1121design",
+      "nome": "11:21",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "11:21"
+    },
+    {
+      "usuario": "binder_ag",
+      "nome": "Binder",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Binder"
+    },
+    {
+      "usuario": "calia_y2",
+      "nome": "Calia",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Calia"
+    },
+    {
+      "usuario": "propeg",
+      "nome": "Propeg",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Propeg"
+    },
+    {
+      "usuario": "novasb",
+      "nome": "NovaSB",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "NovaSB"
+    },
+    {
+      "usuario": "fields360",
+      "nome": "Fields",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Fields"
+    },
+    {
+      "usuario": "eyxo",
+      "nome": "Eyxo",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Eyxo"
+    },
+    {
+      "usuario": "we.agencia",
+      "nome": "We",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "We"
+    },
+    {
+      "usuario": "huia.ag",
+      "nome": "Huia",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Huia"
+    },
+    {
+      "usuario": "boltbrasil",
+      "nome": "Bolt Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Bolt Brasil"
+    },
+    {
+      "usuario": "martin.luz",
+      "nome": "Martin Luz",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Martin Luz"
+    },
+    {
+      "usuario": "twistagencybr",
+      "nome": "Twist Agency Brazil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Twist Agency Brazil"
+    },
+    {
+      "usuario": "sherlockcomms",
+      "nome": "Sherlock Communications",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Sherlock Communications"
+    },
+    {
+      "usuario": "rujanbranding",
+      "nome": "Rujan",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Rujan"
+    },
+    {
+      "usuario": "webcompanydigital",
+      "nome": "Webcompany",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Webcompany"
+    },
+    {
+      "usuario": "b11agency",
+      "nome": "B11 Agency",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "B11 Agency"
+    },
+    {
+      "usuario": "barcodigital",
+      "nome": "Barco Digital Agency",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Barco Digital Agency"
+    },
+    {
+      "usuario": "mardinidigital",
+      "nome": "Mardini Agência Digital",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Mardini Agência Digital"
+    },
+    {
+      "usuario": "dgazmarketing",
+      "nome": "DGAZ Marketing",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "DGAZ Marketing"
+    },
+    {
+      "usuario": "mokekaadvertising",
+      "nome": "Mokeka Advertising",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Mokeka Advertising"
+    },
+    {
+      "usuario": "estacaoindoor",
+      "nome": "Estação Indoor",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Estação Indoor"
+    },
+    {
+      "usuario": "fischer_ag",
+      "nome": "Fischer",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Fischer"
+    },
+    {
+      "usuario": "dm9ddbsaopaulo",
+      "nome": "DM9",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "DM9"
+    },
+    {
+      "usuario": "talentmarcel",
+      "nome": "Talent Marcel",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Talent Marcel"
+    },
+    {
+      "usuario": "headspropaganda",
+      "nome": "Heads Propaganda",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Heads Propaganda"
+    },
+    {
+      "usuario": "santaclara",
+      "nome": "Santa Clara",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Santa Clara"
+    },
+    {
+      "usuario": "loducca",
+      "nome": "Loducca",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Loducca"
+    },
+    {
+      "usuario": "neogama",
+      "nome": "Neogama",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Neogama"
+    },
+    {
+      "usuario": "agenciaclick",
+      "nome": "Agênciaclick",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Agênciaclick"
+    },
+    {
+      "usuario": "zmais",
+      "nome": "Z+",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Z+"
+    },
+    {
+      "usuario": "cubo.network",
+      "nome": "Cubo",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Cubo"
+    },
+    {
+      "usuario": "haze.ag",
+      "nome": "Haze",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Haze"
+    },
+    {
+      "usuario": "wake.ag",
+      "nome": "Wake",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Wake"
+    },
+    {
+      "usuario": "kbrdigital",
+      "nome": "KBR Digital",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "KBR Digital"
+    },
+    {
+      "usuario": "agenciabananas",
+      "nome": "Bananas",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Bananas"
+    },
+    {
+      "usuario": "agenciatrato",
+      "nome": "Trato",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Trato"
+    },
+    {
+      "usuario": "agencianinho",
+      "nome": "Ninho",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Ninho"
+    },
+    {
+      "usuario": "agencialua",
+      "nome": "Lua",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Lua"
+    },
+    {
+      "usuario": "goma.ag",
+      "nome": "Goma",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Goma"
+    },
+    {
+      "usuario": "boia.ag",
+      "nome": "Bóia",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Bóia"
+    },
+    {
+      "usuario": "fbizoficial",
+      "nome": "F.biz",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "F.biz"
+    },
+    {
+      "usuario": "iprospectbrasil",
+      "nome": "iProspect Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "iProspect Brasil"
+    },
+    {
+      "usuario": "mediabrandsbrasil",
+      "nome": "Mediabrands Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Mediabrands Brasil"
+    },
+    {
+      "usuario": "essencemediacombr",
+      "nome": "EssenceMediacom Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "EssenceMediacom Brasil"
+    },
+    {
+      "usuario": "dentsubrasil",
+      "nome": "dentsu Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "dentsu Brasil"
+    },
+    {
+      "usuario": "publicisbrasil",
+      "nome": "Publicis Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Publicis Brasil"
+    },
+    {
+      "usuario": "havasbrasil",
+      "nome": "Havas Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Havas Brasil"
+    },
+    {
+      "usuario": "monksbrasil",
+      "nome": "Monks Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Monks Brasil"
+    },
+    {
+      "usuario": "accenturesongbr",
+      "nome": "Accenture Song Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Accenture Song Brasil"
+    },
+    {
+      "usuario": "jellyfishbrasil",
+      "nome": "Jellyfish Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Jellyfish Brasil"
+    },
+    {
+      "usuario": "ogilvyhealthbr",
+      "nome": "Ogilvy Health Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Ogilvy Health Brasil"
+    },
+    {
+      "usuario": "edelmanbrasil",
+      "nome": "Edelman Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Edelman Brasil"
+    },
+    {
+      "usuario": "webershandwickbr",
+      "nome": "Weber Shandwick Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Weber Shandwick Brasil"
+    },
+    {
+      "usuario": "ketchumbrasil",
+      "nome": "Ketchum Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Ketchum Brasil"
+    },
+    {
+      "usuario": "fhillardbrasil",
+      "nome": "FleishmanHillard Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "FleishmanHillard Brasil"
+    },
+    {
+      "usuario": "bursonbrasil",
+      "nome": "Burson Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Burson Brasil"
+    },
+    {
+      "usuario": "golinbrasil",
+      "nome": "Golin Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Golin Brasil"
+    },
+    {
+      "usuario": "s4capitalbrasil",
+      "nome": "S4 Capital Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "S4 Capital Brasil"
+    },
+    {
+      "usuario": "hugebrasil",
+      "nome": "Huge Brasil",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "Huge Brasil"
+    },
+    {
+      "usuario": "rgasaopaulo",
+      "nome": "R/GA São Paulo",
+      "regiao": "Brasil",
+      "cc": "BR",
+      "agencia": "R/GA São Paulo"
+    },
+    {
+      "usuario": "vaynermedia",
+      "nome": "VaynerMedia",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "VaynerMedia"
+    },
+    {
+      "usuario": "viralnation",
+      "nome": "Viral Nation",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Viral Nation"
+    },
+    {
+      "usuario": "sociallyin",
+      "nome": "Sociallyin",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Sociallyin"
+    },
+    {
+      "usuario": "disruptiveadvertising",
+      "nome": "Disruptive Advertising",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Disruptive Advertising"
+    },
+    {
+      "usuario": "72andsunny",
+      "nome": "72andSunny",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "72andSunny"
+    },
+    {
+      "usuario": "hugeinc",
+      "nome": "Huge",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Huge"
+    },
+    {
+      "usuario": "rga",
+      "nome": "R/GA",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "R/GA"
+    },
+    {
+      "usuario": "havasny",
+      "nome": "Havas New York",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Havas New York"
+    },
+    {
+      "usuario": "barkleyokrp",
+      "nome": "BarkleyOKRP",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "BarkleyOKRP"
+    },
+    {
+      "usuario": "bbdonewyork",
+      "nome": "BBDO New York",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "BBDO New York"
+    },
+    {
+      "usuario": "tbwachiatday",
+      "nome": "TBWA\\Chiat\\Day",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "TBWA\\Chiat\\Day"
+    },
+    {
+      "usuario": "mccannny",
+      "nome": "McCann New York",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "McCann New York"
+    },
+    {
+      "usuario": "leoburnett",
+      "nome": "Leo Burnett",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Leo Burnett"
+    },
+    {
+      "usuario": "greygroup",
+      "nome": "Grey Group",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Grey Group"
+    },
+    {
+      "usuario": "mothernewyork",
+      "nome": "Mother New York",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Mother New York"
+    },
+    {
+      "usuario": "mischiefnfa",
+      "nome": "Mischief @ No Fixed Address",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Mischief @ No Fixed Address"
+    },
+    {
+      "usuario": "deutschla",
+      "nome": "Deutsch LA",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Deutsch LA"
+    },
+    {
+      "usuario": "rpaadvertising",
+      "nome": "RPA Advertising",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "RPA Advertising"
+    },
+    {
+      "usuario": "mullenlowe_us",
+      "nome": "MullenLowe US",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "MullenLowe US"
+    },
+    {
+      "usuario": "gsp",
+      "nome": "Goodby, Silverstein & Partners",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Goodby, Silverstein & Partners"
+    },
+    {
+      "usuario": "venablesbell",
+      "nome": "Venables Bell & Partners",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Venables Bell & Partners"
+    },
+    {
+      "usuario": "bssp",
+      "nome": "Butler, Shine, Stern & Partners",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Butler, Shine, Stern & Partners"
+    },
+    {
+      "usuario": "cramerkrasselt",
+      "nome": "Cramer-Krasselt",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Cramer-Krasselt"
+    },
+    {
+      "usuario": "themartinagency",
+      "nome": "Martin Agency",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Martin Agency"
+    },
+    {
+      "usuario": "carmichaellynch",
+      "nome": "Carmichael Lynch",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Carmichael Lynch"
+    },
+    {
+      "usuario": "periscope_agency",
+      "nome": "Periscope",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Periscope"
+    },
+    {
+      "usuario": "barkleyus",
+      "nome": "Barkley",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Barkley"
+    },
+    {
+      "usuario": "vml",
+      "nome": "VML",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "VML"
+    },
+    {
+      "usuario": "edelmanpr",
+      "nome": "Edelman",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Edelman"
+    },
+    {
+      "usuario": "webershandwick",
+      "nome": "Weber Shandwick",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Weber Shandwick"
+    },
+    {
+      "usuario": "fleishmanhillard",
+      "nome": "FleishmanHillard",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "FleishmanHillard"
+    },
+    {
+      "usuario": "ketchumpr",
+      "nome": "Ketchum",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Ketchum"
+    },
+    {
+      "usuario": "bursonglobal",
+      "nome": "Burson",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Burson"
+    },
+    {
+      "usuario": "golin",
+      "nome": "Golin",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Golin"
+    },
+    {
+      "usuario": "mbooth",
+      "nome": "M Booth",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "M Booth"
+    },
+    {
+      "usuario": "praytellagency",
+      "nome": "Praytell",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Praytell"
+    },
+    {
+      "usuario": "tinuiti",
+      "nome": "Tinuiti",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Tinuiti"
+    },
+    {
+      "usuario": "jellyfishglobal",
+      "nome": "Jellyfish",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Jellyfish"
+    },
+    {
+      "usuario": "powerdigital",
+      "nome": "Power Digital",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Power Digital"
+    },
+    {
+      "usuario": "singlegrain",
+      "nome": "Single Grain",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Single Grain"
+    },
+    {
+      "usuario": "klientboost",
+      "nome": "KlientBoost",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "KlientBoost"
+    },
+    {
+      "usuario": "lyfemarketing",
+      "nome": "LYFE Marketing",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "LYFE Marketing"
+    },
+    {
+      "usuario": "sirclemedia",
+      "nome": "Sircle Media",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Sircle Media"
+    },
+    {
+      "usuario": "booyahadvertising",
+      "nome": "Booyah Advertising",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Booyah Advertising"
+    },
+    {
+      "usuario": "duncanchannon",
+      "nome": "Duncan Channon",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Duncan Channon"
+    },
+    {
+      "usuario": "younglaramore",
+      "nome": "Young & Laramore",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Young & Laramore"
+    },
+    {
+      "usuario": "crownsocialagency",
+      "nome": "Crown Social Agency",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Crown Social Agency"
+    },
+    {
+      "usuario": "unrulyagency",
+      "nome": "Unruly Agency",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Unruly Agency"
+    },
+    {
+      "usuario": "divisiond",
+      "nome": "Division-D",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Division-D"
+    },
+    {
+      "usuario": "nativexglobal",
+      "nome": "Nativex",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Nativex"
+    },
+    {
+      "usuario": "webtonicagency",
+      "nome": "Web Tonic",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Web Tonic"
+    },
+    {
+      "usuario": "theshelfsocial",
+      "nome": "The Shelf",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "The Shelf"
+    },
+    {
+      "usuario": "obviously",
+      "nome": "Obviously",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Obviously"
+    },
+    {
+      "usuario": "ignitesocialmedia",
+      "nome": "Ignite Social Media",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Ignite Social Media"
+    },
+    {
+      "usuario": "carusele",
+      "nome": "Carusele",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Carusele"
+    },
+    {
+      "usuario": "mutesix",
+      "nome": "MuteSix",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "MuteSix"
+    },
+    {
+      "usuario": "inbeatagency",
+      "nome": "inBeat Agency",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "inBeat Agency"
+    },
+    {
+      "usuario": "ignitevisibility",
+      "nome": "Ignite Visibility",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Ignite Visibility"
+    },
+    {
+      "usuario": "smartsites",
+      "nome": "SmartSites",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "SmartSites"
+    },
+    {
+      "usuario": "bluehatmarketing",
+      "nome": "BlueHat Marketing",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "BlueHat Marketing"
+    },
+    {
+      "usuario": "growthenginemedia",
+      "nome": "GrowthEngine Media",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "GrowthEngine Media"
+    },
+    {
+      "usuario": "soulpepperdigital",
+      "nome": "Soulpepper Digital Marketing",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Soulpepper Digital Marketing"
+    },
+    {
+      "usuario": "brandlume",
+      "nome": "BrandLume",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "BrandLume"
+    },
+    {
+      "usuario": "gutmexico",
+      "nome": "GUT México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "GUT México"
+    },
+    {
+      "usuario": "guttoronto",
+      "nome": "GUT Toronto",
+      "regiao": "Canadá",
+      "cc": "CA",
+      "agencia": "GUT Toronto"
+    },
+    {
+      "usuario": "gutmiami",
+      "nome": "GUT Miami",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "GUT Miami"
+    },
+    {
+      "usuario": "tbwamexico",
+      "nome": "TBWA\\México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "TBWA\\México"
+    },
+    {
+      "usuario": "montalvo_mx",
+      "nome": "Montalvo",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Montalvo"
+    },
+    {
+      "usuario": "slapglobal",
+      "nome": "Slap Global",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Slap Global"
+    },
+    {
+      "usuario": "archertroy",
+      "nome": "Archer Troy",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Archer Troy"
+    },
+    {
+      "usuario": "teran_tbwa",
+      "nome": "Teran\\TBWA",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Teran\\TBWA"
+    },
+    {
+      "usuario": "elefantemx",
+      "nome": "Elefante",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Elefante"
+    },
+    {
+      "usuario": "360i",
+      "nome": "360i",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "360i"
+    },
+    {
+      "usuario": "icrossing",
+      "nome": "iCrossing",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "iCrossing"
+    },
+    {
+      "usuario": "merkle",
+      "nome": "Merkle",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Merkle"
+    },
+    {
+      "usuario": "epsilonmarketing",
+      "nome": "Epsilon",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Epsilon"
+    },
+    {
+      "usuario": "digitas",
+      "nome": "Digitas",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Digitas"
+    },
+    {
+      "usuario": "razorfish",
+      "nome": "Razorfish",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Razorfish"
+    },
+    {
+      "usuario": "sapientrazorfish",
+      "nome": "SapientRazorfish",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "SapientRazorfish"
+    },
+    {
+      "usuario": "criticalmass",
+      "nome": "Critical Mass",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Critical Mass"
+    },
+    {
+      "usuario": "isobar",
+      "nome": "Isobar",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Isobar"
+    },
+    {
+      "usuario": "caratglobal",
+      "nome": "Carat",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Carat"
+    },
+    {
+      "usuario": "initiativeglobal",
+      "nome": "Initiative",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Initiative"
+    },
+    {
+      "usuario": "umworldwide",
+      "nome": "UM Worldwide",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "UM Worldwide"
+    },
+    {
+      "usuario": "mindshare",
+      "nome": "Mindshare",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Mindshare"
+    },
+    {
+      "usuario": "wavemaker",
+      "nome": "Wavemaker",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Wavemaker"
+    },
+    {
+      "usuario": "essencemediacom",
+      "nome": "EssenceMediacom",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "EssenceMediacom"
+    },
+    {
+      "usuario": "omdworldwide",
+      "nome": "OMD Worldwide",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "OMD Worldwide"
+    },
+    {
+      "usuario": "phdmedia",
+      "nome": "PHD Media",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "PHD Media"
+    },
+    {
+      "usuario": "heartsandscience",
+      "nome": "Hearts & Science",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Hearts & Science"
+    },
+    {
+      "usuario": "horizonmedia",
+      "nome": "Horizon Media",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Horizon Media"
+    },
+    {
+      "usuario": "starcom_ww",
+      "nome": "Starcom",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Starcom"
+    },
+    {
+      "usuario": "sparkfoundry",
+      "nome": "Spark Foundry",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Spark Foundry"
+    },
+    {
+      "usuario": "zenithmedia",
+      "nome": "Zenith",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Zenith"
+    },
+    {
+      "usuario": "publicismedia",
+      "nome": "Publicis Media",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Publicis Media"
+    },
+    {
+      "usuario": "havasmedia",
+      "nome": "Havas Media",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Havas Media"
+    },
+    {
+      "usuario": "dentsux",
+      "nome": "dentsu X",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "dentsu X"
+    },
+    {
+      "usuario": "groupm",
+      "nome": "GroupM",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "GroupM"
+    },
+    {
+      "usuario": "wpp",
+      "nome": "WPP",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "WPP"
+    },
+    {
+      "usuario": "omnicomgroup",
+      "nome": "Omnicom",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Omnicom"
+    },
+    {
+      "usuario": "interpublicgroup",
+      "nome": "IPG",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "IPG"
+    },
+    {
+      "usuario": "publicisgroupe",
+      "nome": "Publicis Groupe",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Publicis Groupe"
+    },
+    {
+      "usuario": "havas",
+      "nome": "Havas",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Havas"
+    },
+    {
+      "usuario": "stagwellgroup",
+      "nome": "Stagwell",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Stagwell"
+    },
+    {
+      "usuario": "s4capital",
+      "nome": "S4 Capital",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "S4 Capital"
+    },
+    {
+      "usuario": "jellysmack",
+      "nome": "Jellysmack",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Jellysmack"
+    },
+    {
+      "usuario": "billiondollarboy",
+      "nome": "Billion Dollar Boy",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Billion Dollar Boy"
+    },
+    {
+      "usuario": "tribe_group",
+      "nome": "TRIBE",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "TRIBE"
+    },
+    {
+      "usuario": "neilpateldigital",
+      "nome": "Neil Patel Digital",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Neil Patel Digital"
+    },
+    {
+      "usuario": "monks",
+      "nome": "Monks",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Monks"
+    },
+    {
+      "usuario": "iprospect",
+      "nome": "iProspect",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "iProspect"
+    },
+    {
+      "usuario": "dentsucreative",
+      "nome": "Dentsu Creative",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Dentsu Creative"
+    },
+    {
+      "usuario": "fcbny",
+      "nome": "FCB New York",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "FCB New York"
+    },
+    {
+      "usuario": "fcbchicago",
+      "nome": "FCB Chicago",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "FCB Chicago"
+    },
+    {
+      "usuario": "fcbwest",
+      "nome": "FCB West",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "FCB West"
+    },
+    {
+      "usuario": "fcbhealth",
+      "nome": "FCB Health",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "FCB Health"
+    },
+    {
+      "usuario": "saatchiny",
+      "nome": "Saatchi & Saatchi New York",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Saatchi & Saatchi New York"
+    },
+    {
+      "usuario": "bbhny",
+      "nome": "BBH New York",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "BBH New York"
+    },
+    {
+      "usuario": "bartonfgraf",
+      "nome": "Barton F. Graf",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Barton F. Graf"
+    },
+    {
+      "usuario": "pereiraodell",
+      "nome": "Pereira O'Dell",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Pereira O'Dell"
+    },
+    {
+      "usuario": "fredfarid",
+      "nome": "Fred & Farid",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Fred & Farid"
+    },
+    {
+      "usuario": "qualitymeatsnyc",
+      "nome": "Quality Meats",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Quality Meats"
+    },
+    {
+      "usuario": "special_us",
+      "nome": "Special US",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Special US"
+    },
+    {
+      "usuario": "preacher",
+      "nome": "Preacher",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Preacher"
+    },
+    {
+      "usuario": "instrument",
+      "nome": "Instrument",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Instrument"
+    },
+    {
+      "usuario": "workinprogress",
+      "nome": "WorkInProgress",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "WorkInProgress"
+    },
+    {
+      "usuario": "artsandletters",
+      "nome": "Arts & Letters Creative Co.",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Arts & Letters Creative Co."
+    },
+    {
+      "usuario": "humanventures",
+      "nome": "Human Ventures",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Human Ventures"
+    },
+    {
+      "usuario": "coegi",
+      "nome": "Coegi",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Coegi"
+    },
+    {
+      "usuario": "metrictheory",
+      "nome": "Metric Theory",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Metric Theory"
+    },
+    {
+      "usuario": "seerinteractive",
+      "nome": "Seer Interactive",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Seer Interactive"
+    },
+    {
+      "usuario": "directiveagency",
+      "nome": "Directive Consulting",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Directive Consulting"
+    },
+    {
+      "usuario": "webfx",
+      "nome": "WebFX",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "WebFX"
+    },
+    {
+      "usuario": "loungelizard",
+      "nome": "Lounge Lizard",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Lounge Lizard"
+    },
+    {
+      "usuario": "coalitiontech",
+      "nome": "Coalition Technologies",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Coalition Technologies"
+    },
+    {
+      "usuario": "thriveagency",
+      "nome": "Thrive Internet Marketing",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Thrive Internet Marketing"
+    },
+    {
+      "usuario": "victoriousseo",
+      "nome": "Victorious",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Victorious"
+    },
+    {
+      "usuario": "searchenginejournal",
+      "nome": "Search Engine Journal",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Search Engine Journal"
+    },
+    {
+      "usuario": "riseinteractive",
+      "nome": "Rise Interactive",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Rise Interactive"
+    },
+    {
+      "usuario": "tinuitidigital",
+      "nome": "Tinuiti",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Tinuiti"
+    },
+    {
+      "usuario": "wpromote",
+      "nome": "Wpromote",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Wpromote"
+    },
+    {
+      "usuario": "hawksem",
+      "nome": "HawkSEM",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "HawkSEM"
+    },
+    {
+      "usuario": "klientboosthq",
+      "nome": "KlientBoost",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "KlientBoost"
+    },
+    {
+      "usuario": "disruptivehq",
+      "nome": "Disruptive",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Disruptive"
+    },
+    {
+      "usuario": "tinuitihq",
+      "nome": "Tinuiti",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Tinuiti"
+    },
+    {
+      "usuario": "barrelny",
+      "nome": "Barrel",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Barrel"
+    },
+    {
+      "usuario": "huemor",
+      "nome": "Huemor",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Huemor"
+    },
+    {
+      "usuario": "clayglobal",
+      "nome": "Clay",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Clay"
+    },
+    {
+      "usuario": "ramotion",
+      "nome": "Ramotion",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Ramotion"
+    },
+    {
+      "usuario": "fantasy",
+      "nome": "Fantasy",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Fantasy"
+    },
+    {
+      "usuario": "ueno",
+      "nome": "Ueno",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Ueno"
+    },
+    {
+      "usuario": "workandco",
+      "nome": "Work & Co",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Work & Co"
+    },
+    {
+      "usuario": "basicdept",
+      "nome": "Basic/Dept",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Basic/Dept"
+    },
+    {
+      "usuario": "redantler",
+      "nome": "Red Antler",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Red Antler"
+    },
+    {
+      "usuario": "wearecollins",
+      "nome": "Collins",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Collins"
+    },
+    {
+      "usuario": "pentagramdesign",
+      "nome": "Pentagram",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Pentagram"
+    },
+    {
+      "usuario": "wolffolins",
+      "nome": "Wolff Olins",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Wolff Olins"
+    },
+    {
+      "usuario": "siegelgale",
+      "nome": "Siegel+Gale",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Siegel+Gale"
+    },
+    {
+      "usuario": "landor",
+      "nome": "Landor",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Landor"
+    },
+    {
+      "usuario": "lippincott",
+      "nome": "Lippincott",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Lippincott"
+    },
+    {
+      "usuario": "cghnyc",
+      "nome": "Chermayeff & Geismar & Haviv",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Chermayeff & Geismar & Haviv"
+    },
+    {
+      "usuario": "sagmeisterwalsh",
+      "nome": "Sagmeister & Walsh",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Sagmeister & Walsh"
+    },
+    {
+      "usuario": "troikadesign",
+      "nome": "Troika",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Troika"
+    },
+    {
+      "usuario": "buck_design",
+      "nome": "Buck",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Buck"
+    },
+    {
+      "usuario": "tendrilstudio",
+      "nome": "Tendril",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Tendril"
+    },
+    {
+      "usuario": "hornetinc",
+      "nome": "Hornet",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Hornet"
+    },
+    {
+      "usuario": "psyop",
+      "nome": "Psyop",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Psyop"
+    },
+    {
+      "usuario": "gentlemanscholar",
+      "nome": "Gentleman Scholar",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Gentleman Scholar"
+    },
+    {
+      "usuario": "giantant",
+      "nome": "Giant Ant",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Giant Ant"
+    },
+    {
+      "usuario": "ordinaryfolk",
+      "nome": "Ordinary Folk",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Ordinary Folk"
+    },
+    {
+      "usuario": "oddfellows",
+      "nome": "Oddfellows",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Oddfellows"
+    },
+    {
+      "usuario": "gunner",
+      "nome": "Gunner",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Gunner"
+    },
+    {
+      "usuario": "movementstrategy",
+      "nome": "Movement Strategy",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Movement Strategy"
+    },
+    {
+      "usuario": "connellypartners",
+      "nome": "Connelly Partners",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Connelly Partners"
+    },
+    {
+      "usuario": "allenandgerritsen",
+      "nome": "Allen & Gerritsen",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Allen & Gerritsen"
+    },
+    {
+      "usuario": "arnoldworldwide",
+      "nome": "Arnold Worldwide",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Arnold Worldwide"
+    },
+    {
+      "usuario": "hillholliday",
+      "nome": "Hill Holliday",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Hill Holliday"
+    },
+    {
+      "usuario": "digitasna",
+      "nome": "Digitas North America",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Digitas North America"
+    },
+    {
+      "usuario": "mediamonks",
+      "nome": "Media.Monks",
+      "regiao": "EUA",
+      "cc": "US",
+      "agencia": "Media.Monks"
+    },
+    {
+      "usuario": "ogilvycanada",
+      "nome": "Ogilvy Canada",
+      "regiao": "Canadá",
+      "cc": "CA",
+      "agencia": "Ogilvy Canada"
+    },
+    {
+      "usuario": "cossette",
+      "nome": "Cossette",
+      "regiao": "Canadá",
+      "cc": "CA",
+      "agencia": "Cossette"
+    },
+    {
+      "usuario": "zulualphakilo",
+      "nome": "Zulu Alpha Kilo",
+      "regiao": "Canadá",
+      "cc": "CA",
+      "agencia": "Zulu Alpha Kilo"
+    },
+    {
+      "usuario": "rethinkcanada",
+      "nome": "Rethink",
+      "regiao": "Canadá",
+      "cc": "CA",
+      "agencia": "Rethink"
+    },
+    {
+      "usuario": "sidlee",
+      "nome": "Sid Lee",
+      "regiao": "Canadá",
+      "cc": "CA",
+      "agencia": "Sid Lee"
+    },
+    {
+      "usuario": "lg2boutique",
+      "nome": "LG2",
+      "regiao": "Canadá",
+      "cc": "CA",
+      "agencia": "LG2"
+    },
+    {
+      "usuario": "taxiagency",
+      "nome": "Taxi",
+      "regiao": "Canadá",
+      "cc": "CA",
+      "agencia": "Taxi"
+    },
+    {
+      "usuario": "wearesocial",
+      "nome": "We Are Social",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "We Are Social"
+    },
+    {
+      "usuario": "thegoatagency",
+      "nome": "The Goat Agency",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "The Goat Agency"
+    },
+    {
+      "usuario": "deptagency",
+      "nome": "DEPT",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "DEPT"
+    },
+    {
+      "usuario": "uncommonstudio",
+      "nome": "Uncommon Creative Studio",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Uncommon Creative Studio"
+    },
+    {
+      "usuario": "adameveddb",
+      "nome": "adam&eveDDB",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "adam&eveDDB"
+    },
+    {
+      "usuario": "karmarama",
+      "nome": "Karmarama",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Karmarama"
+    },
+    {
+      "usuario": "serviceplangroup",
+      "nome": "Serviceplan",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Serviceplan"
+    },
+    {
+      "usuario": "betc_paris",
+      "nome": "BETC Paris",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "BETC Paris"
+    },
+    {
+      "usuario": "marcelparis",
+      "nome": "Marcel Paris",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "Marcel Paris"
+    },
+    {
+      "usuario": "buzzman_officiel",
+      "nome": "Buzzman",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "Buzzman"
+    },
+    {
+      "usuario": "tbwa_paris",
+      "nome": "TBWA\\Paris",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "TBWA\\Paris"
+    },
+    {
+      "usuario": "ddbparis",
+      "nome": "DDB Paris",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "DDB Paris"
+    },
+    {
+      "usuario": "heimatberlin",
+      "nome": "Heimat",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "Heimat"
+    },
+    {
+      "usuario": "ogilvy_de",
+      "nome": "Ogilvy Germany",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "Ogilvy Germany"
+    },
+    {
+      "usuario": "lolamullenlowe",
+      "nome": "LOLA MullenLowe",
+      "regiao": "Espanha",
+      "cc": "ES",
+      "agencia": "LOLA MullenLowe"
+    },
+    {
+      "usuario": "david_madrid",
+      "nome": "DAVID Madrid",
+      "regiao": "Espanha",
+      "cc": "ES",
+      "agencia": "DAVID Madrid"
+    },
+    {
+      "usuario": "monomadrid",
+      "nome": "Mono Madrid",
+      "regiao": "Espanha",
+      "cc": "ES",
+      "agencia": "Mono Madrid"
+    },
+    {
+      "usuario": "china_madrid",
+      "nome": "China",
+      "regiao": "Espanha",
+      "cc": "ES",
+      "agencia": "China"
+    },
+    {
+      "usuario": "mccannmadrid",
+      "nome": "McCann Madrid",
+      "regiao": "Espanha",
+      "cc": "ES",
+      "agencia": "McCann Madrid"
+    },
+    {
+      "usuario": "droga5london",
+      "nome": "Droga5 London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Droga5 London"
+    },
+    {
+      "usuario": "saatchilondon",
+      "nome": "Saatchi & Saatchi London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Saatchi & Saatchi London"
+    },
+    {
+      "usuario": "wklondon",
+      "nome": "Wieden+Kennedy London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Wieden+Kennedy London"
+    },
+    {
+      "usuario": "wkamsterdam",
+      "nome": "Wieden+Kennedy Amsterdam",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "Wieden+Kennedy Amsterdam"
+    },
+    {
+      "usuario": "vccp",
+      "nome": "VCCP",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "VCCP"
+    },
+    {
+      "usuario": "fold7",
+      "nome": "Fold7",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Fold7"
+    },
+    {
+      "usuario": "brave_ldn",
+      "nome": "Brave",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Brave"
+    },
+    {
+      "usuario": "newcommercialarts",
+      "nome": "New Commercial Arts",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "New Commercial Arts"
+    },
+    {
+      "usuario": "braindonors",
+      "nome": "BrainDonors",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "BrainDonors"
+    },
+    {
+      "usuario": "thesocialshepherd",
+      "nome": "The Social Shepherd",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "The Social Shepherd"
+    },
+    {
+      "usuario": "ninjapromo",
+      "nome": "NinjaPromo",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "NinjaPromo"
+    },
+    {
+      "usuario": "makeuscare",
+      "nome": "Make Us Care",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Make Us Care"
+    },
+    {
+      "usuario": "nucco",
+      "nome": "Nucco",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Nucco"
+    },
+    {
+      "usuario": "ourownbrand",
+      "nome": "OOB (Our Own Brand)",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "OOB (Our Own Brand)"
+    },
+    {
+      "usuario": "wildishandco",
+      "nome": "Wildish & Co.",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Wildish & Co."
+    },
+    {
+      "usuario": "panorama3000",
+      "nome": "PANORAMA3000",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "PANORAMA3000"
+    },
+    {
+      "usuario": "seedersnl",
+      "nome": "Seeders",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "Seeders"
+    },
+    {
+      "usuario": "elespacio",
+      "nome": "Elespacio",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Elespacio"
+    },
+    {
+      "usuario": "theseoworks",
+      "nome": "The SEO Works",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "The SEO Works"
+    },
+    {
+      "usuario": "fluroagency",
+      "nome": "Fluro",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Fluro"
+    },
+    {
+      "usuario": "youyaa",
+      "nome": "YouYaa",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "YouYaa"
+    },
+    {
+      "usuario": "houseofcommunication",
+      "nome": "House of Communication",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "House of Communication"
+    },
+    {
+      "usuario": "theframeworks",
+      "nome": "The Frameworks",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "The Frameworks"
+    },
+    {
+      "usuario": "strikedigital",
+      "nome": "Strike Digital",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Strike Digital"
+    },
+    {
+      "usuario": "vmllondon",
+      "nome": "VML London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "VML London"
+    },
+    {
+      "usuario": "mccannworldgroup",
+      "nome": "McCann Worldgroup Europe",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "McCann Worldgroup Europe"
+    },
+    {
+      "usuario": "mcgroup",
+      "nome": "mc Group",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "mc Group"
+    },
+    {
+      "usuario": "londonadvertising",
+      "nome": "London Advertising",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "London Advertising"
+    },
+    {
+      "usuario": "mojoagency",
+      "nome": "MOJO Agency",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "MOJO Agency"
+    },
+    {
+      "usuario": "audiencly",
+      "nome": "Audiencly",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Audiencly"
+    },
+    {
+      "usuario": "pulseadvertising",
+      "nome": "Pulse Advertising",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Pulse Advertising"
+    },
+    {
+      "usuario": "sociallypowerful",
+      "nome": "Socially Powerful",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Socially Powerful"
+    },
+    {
+      "usuario": "sideways8",
+      "nome": "Sideways8",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Sideways8"
+    },
+    {
+      "usuario": "northfolk",
+      "nome": "Northfolk",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Northfolk"
+    },
+    {
+      "usuario": "jumpfactor",
+      "nome": "Jumpfactor",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Jumpfactor"
+    },
+    {
+      "usuario": "mention",
+      "nome": "Mention",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Mention"
+    },
+    {
+      "usuario": "iconosquare",
+      "nome": "Iconosquare",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Iconosquare"
+    },
+    {
+      "usuario": "hypeauditor",
+      "nome": "HypeAuditor",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "HypeAuditor"
+    },
+    {
+      "usuario": "traackr",
+      "nome": "Traackr",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Traackr"
+    },
+    {
+      "usuario": "meltwater",
+      "nome": "Meltwater",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Meltwater"
+    },
+    {
+      "usuario": "brandwatch",
+      "nome": "Brandwatch",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Brandwatch"
+    },
+    {
+      "usuario": "emplifi",
+      "nome": "Emplifi",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Emplifi"
+    },
+    {
+      "usuario": "vamp_social",
+      "nome": "Vamp",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Vamp"
+    },
+    {
+      "usuario": "ogilvyuk",
+      "nome": "Ogilvy UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Ogilvy UK"
+    },
+    {
+      "usuario": "ogilvyfrance",
+      "nome": "Ogilvy France",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "Ogilvy France"
+    },
+    {
+      "usuario": "ogilvyspain",
+      "nome": "Ogilvy Spain",
+      "regiao": "Espanha",
+      "cc": "ES",
+      "agencia": "Ogilvy Spain"
+    },
+    {
+      "usuario": "ogilvyitalia",
+      "nome": "Ogilvy Italy",
+      "regiao": "Itália",
+      "cc": "IT",
+      "agencia": "Ogilvy Italy"
+    },
+    {
+      "usuario": "ogilvynl",
+      "nome": "Ogilvy Netherlands",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "Ogilvy Netherlands"
+    },
+    {
+      "usuario": "tbwalondon",
+      "nome": "TBWA\\London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "TBWA\\London"
+    },
+    {
+      "usuario": "tbwa_amsterdam",
+      "nome": "TBWA\\Amsterdam",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "TBWA\\Amsterdam"
+    },
+    {
+      "usuario": "tbwamadrid",
+      "nome": "TBWA\\Madrid",
+      "regiao": "Espanha",
+      "cc": "ES",
+      "agencia": "TBWA\\Madrid"
+    },
+    {
+      "usuario": "tbwamilano",
+      "nome": "TBWA\\Milano",
+      "regiao": "Itália",
+      "cc": "IT",
+      "agencia": "TBWA\\Milano"
+    },
+    {
+      "usuario": "tbwaberlin",
+      "nome": "TBWA\\Berlin",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "TBWA\\Berlin"
+    },
+    {
+      "usuario": "ddblondon",
+      "nome": "DDB London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "DDB London"
+    },
+    {
+      "usuario": "ddbgermany",
+      "nome": "DDB Germany",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "DDB Germany"
+    },
+    {
+      "usuario": "ddbspain",
+      "nome": "DDB Spain",
+      "regiao": "Espanha",
+      "cc": "ES",
+      "agencia": "DDB Spain"
+    },
+    {
+      "usuario": "ddbamsterdam",
+      "nome": "DDB Amsterdam",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "DDB Amsterdam"
+    },
+    {
+      "usuario": "leoburnettlondon",
+      "nome": "Leo Burnett London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Leo Burnett London"
+    },
+    {
+      "usuario": "leoburnettmilano",
+      "nome": "Leo Burnett Milan",
+      "regiao": "Itália",
+      "cc": "IT",
+      "agencia": "Leo Burnett Milan"
+    },
+    {
+      "usuario": "leoburnettmadrid",
+      "nome": "Leo Burnett Madrid",
+      "regiao": "Espanha",
+      "cc": "ES",
+      "agencia": "Leo Burnett Madrid"
+    },
+    {
+      "usuario": "havaslondon",
+      "nome": "Havas London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Havas London"
+    },
+    {
+      "usuario": "havasparis",
+      "nome": "Havas Paris",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "Havas Paris"
+    },
+    {
+      "usuario": "havasmadrid",
+      "nome": "Havas Madrid",
+      "regiao": "Espanha",
+      "cc": "ES",
+      "agencia": "Havas Madrid"
+    },
+    {
+      "usuario": "havasmilano",
+      "nome": "Havas Milan",
+      "regiao": "Itália",
+      "cc": "IT",
+      "agencia": "Havas Milan"
+    },
+    {
+      "usuario": "havasgermany",
+      "nome": "Havas Germany",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "Havas Germany"
+    },
+    {
+      "usuario": "publicislondon",
+      "nome": "Publicis London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Publicis London"
+    },
+    {
+      "usuario": "publicismilano",
+      "nome": "Publicis Milan",
+      "regiao": "Itália",
+      "cc": "IT",
+      "agencia": "Publicis Milan"
+    },
+    {
+      "usuario": "publicisspain",
+      "nome": "Publicis Spain",
+      "regiao": "Espanha",
+      "cc": "ES",
+      "agencia": "Publicis Spain"
+    },
+    {
+      "usuario": "publicisgermany",
+      "nome": "Publicis Germany",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "Publicis Germany"
+    },
+    {
+      "usuario": "akqalondon",
+      "nome": "AKQA London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "AKQA London"
+    },
+    {
+      "usuario": "akqaamsterdam",
+      "nome": "AKQA Amsterdam",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "AKQA Amsterdam"
+    },
+    {
+      "usuario": "akqaparis",
+      "nome": "AKQA Paris",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "AKQA Paris"
+    },
+    {
+      "usuario": "akqaberlin",
+      "nome": "AKQA Berlin",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "AKQA Berlin"
+    },
+    {
+      "usuario": "rgalondon",
+      "nome": "R/GA London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "R/GA London"
+    },
+    {
+      "usuario": "hugelondon",
+      "nome": "Huge London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Huge London"
+    },
+    {
+      "usuario": "vaynermediauk",
+      "nome": "VaynerMedia UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "VaynerMedia UK"
+    },
+    {
+      "usuario": "vaynermediaeurope",
+      "nome": "VaynerMedia Europe",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "VaynerMedia Europe"
+    },
+    {
+      "usuario": "monkslondon",
+      "nome": "Monks London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Monks London"
+    },
+    {
+      "usuario": "monksamsterdam",
+      "nome": "Monks Amsterdam",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "Monks Amsterdam"
+    },
+    {
+      "usuario": "accenturesonguk",
+      "nome": "Accenture Song UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Accenture Song UK"
+    },
+    {
+      "usuario": "jellyfishlondon",
+      "nome": "Jellyfish London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Jellyfish London"
+    },
+    {
+      "usuario": "jellyfishparis",
+      "nome": "Jellyfish Paris",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "Jellyfish Paris"
+    },
+    {
+      "usuario": "jellyfishgermany",
+      "nome": "Jellyfish Germany",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "Jellyfish Germany"
+    },
+    {
+      "usuario": "edelmanuk",
+      "nome": "Edelman UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Edelman UK"
+    },
+    {
+      "usuario": "edelmanfrance",
+      "nome": "Edelman France",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "Edelman France"
+    },
+    {
+      "usuario": "edelmangermany",
+      "nome": "Edelman Germany",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "Edelman Germany"
+    },
+    {
+      "usuario": "webershandwickuk",
+      "nome": "Weber Shandwick UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Weber Shandwick UK"
+    },
+    {
+      "usuario": "ketchumlondon",
+      "nome": "Ketchum London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Ketchum London"
+    },
+    {
+      "usuario": "fhillarduk",
+      "nome": "FleishmanHillard UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "FleishmanHillard UK"
+    },
+    {
+      "usuario": "bursonuk",
+      "nome": "Burson UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Burson UK"
+    },
+    {
+      "usuario": "golinlondon",
+      "nome": "Golin London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Golin London"
+    },
+    {
+      "usuario": "72andsunnyams",
+      "nome": "72andSunny Amsterdam",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "72andSunny Amsterdam"
+    },
+    {
+      "usuario": "speciallondon",
+      "nome": "Special London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Special London"
+    },
+    {
+      "usuario": "luckygenerals",
+      "nome": "Lucky Generals",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Lucky Generals"
+    },
+    {
+      "usuario": "creaturelondon",
+      "nome": "Creature London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Creature London"
+    },
+    {
+      "usuario": "stlukeslondon",
+      "nome": "St. Luke's",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "St. Luke's"
+    },
+    {
+      "usuario": "pablolondon",
+      "nome": "Pablo London",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Pablo London"
+    },
+    {
+      "usuario": "neverlandlondon",
+      "nome": "Neverland",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Neverland"
+    },
+    {
+      "usuario": "jointlondon",
+      "nome": "joint",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "joint"
+    },
+    {
+      "usuario": "isobaruk",
+      "nome": "Isobar UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Isobar UK"
+    },
+    {
+      "usuario": "digitasuk",
+      "nome": "Digitas UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Digitas UK"
+    },
+    {
+      "usuario": "razorfishuk",
+      "nome": "Razorfish UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Razorfish UK"
+    },
+    {
+      "usuario": "mindshareuk",
+      "nome": "Mindshare UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Mindshare UK"
+    },
+    {
+      "usuario": "wavemakeruk",
+      "nome": "Wavemaker UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Wavemaker UK"
+    },
+    {
+      "usuario": "caratuk",
+      "nome": "Carat UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Carat UK"
+    },
+    {
+      "usuario": "omduk",
+      "nome": "OMD UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "OMD UK"
+    },
+    {
+      "usuario": "phduk",
+      "nome": "PHD UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "PHD UK"
+    },
+    {
+      "usuario": "initiativeuk",
+      "nome": "Initiative UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Initiative UK"
+    },
+    {
+      "usuario": "starcomuk",
+      "nome": "Starcom UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Starcom UK"
+    },
+    {
+      "usuario": "zenithuk",
+      "nome": "Zenith UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Zenith UK"
+    },
+    {
+      "usuario": "essencemediacomuk",
+      "nome": "EssenceMediacom UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "EssenceMediacom UK"
+    },
+    {
+      "usuario": "dentsuuk",
+      "nome": "dentsu UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "dentsu UK"
+    },
+    {
+      "usuario": "iprospectuk",
+      "nome": "iProspect UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "iProspect UK"
+    },
+    {
+      "usuario": "merkleuk",
+      "nome": "Merkle UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "Merkle UK"
+    },
+    {
+      "usuario": "wearesocialuk",
+      "nome": "We Are Social UK",
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "agencia": "We Are Social UK"
+    },
+    {
+      "usuario": "wearesocialfr",
+      "nome": "We Are Social France",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "We Are Social France"
+    },
+    {
+      "usuario": "wearesocialde",
+      "nome": "We Are Social Germany",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "We Are Social Germany"
+    },
+    {
+      "usuario": "wearesociales",
+      "nome": "We Are Social Spain",
+      "regiao": "Espanha",
+      "cc": "ES",
+      "agencia": "We Are Social Spain"
+    },
+    {
+      "usuario": "wearesocialnl",
+      "nome": "We Are Social Netherlands",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "We Are Social Netherlands"
+    },
+    {
+      "usuario": "wearesocialbe",
+      "nome": "We Are Social Belgium",
+      "regiao": "Bélgica",
+      "cc": "BE",
+      "agencia": "We Are Social Belgium"
+    },
+    {
+      "usuario": "wearesocialse",
+      "nome": "We Are Social Sweden",
+      "regiao": "Suécia",
+      "cc": "SE",
+      "agencia": "We Are Social Sweden"
+    },
+    {
+      "usuario": "wearesocialdk",
+      "nome": "We Are Social Denmark",
+      "regiao": "Dinamarca",
+      "cc": "DK",
+      "agencia": "We Are Social Denmark"
+    },
+    {
+      "usuario": "wearesocialno",
+      "nome": "We Are Social Norway",
+      "regiao": "Noruega",
+      "cc": "NO",
+      "agencia": "We Are Social Norway"
+    },
+    {
+      "usuario": "wearesocialpt",
+      "nome": "We Are Social Portugal",
+      "regiao": "Portugal",
+      "cc": "PT",
+      "agencia": "We Are Social Portugal"
+    },
+    {
+      "usuario": "wearesocialpl",
+      "nome": "We Are Social Poland",
+      "regiao": "Polônia",
+      "cc": "PL",
+      "agencia": "We Are Social Poland"
+    },
+    {
+      "usuario": "wearesocialie",
+      "nome": "We Are Social Ireland",
+      "regiao": "Irlanda",
+      "cc": "IE",
+      "agencia": "We Are Social Ireland"
+    },
+    {
+      "usuario": "wearesocialch",
+      "nome": "We Are Social Switzerland",
+      "regiao": "Suíça",
+      "cc": "CH",
+      "agencia": "We Are Social Switzerland"
+    },
+    {
+      "usuario": "wearesocialat",
+      "nome": "We Are Social Austria",
+      "regiao": "Áustria",
+      "cc": "AT",
+      "agencia": "We Are Social Austria"
+    },
+    {
+      "usuario": "wearesocialfi",
+      "nome": "We Are Social Finland",
+      "regiao": "Finlândia",
+      "cc": "FI",
+      "agencia": "We Are Social Finland"
+    },
+    {
+      "usuario": "wearesocialgr",
+      "nome": "We Are Social Greece",
+      "regiao": "Grécia",
+      "cc": "GR",
+      "agencia": "We Are Social Greece"
+    },
+    {
+      "usuario": "wearesocialro",
+      "nome": "We Are Social Romania",
+      "regiao": "Romênia",
+      "cc": "RO",
+      "agencia": "We Are Social Romania"
+    },
+    {
+      "usuario": "wearesocialcz",
+      "nome": "We Are Social Czechia",
+      "regiao": "Tchéquia",
+      "cc": "CZ",
+      "agencia": "We Are Social Czechia"
+    },
+    {
+      "usuario": "wearesocialhu",
+      "nome": "We Are Social Hungary",
+      "regiao": "Hungria",
+      "cc": "HU",
+      "agencia": "We Are Social Hungary"
+    },
+    {
+      "usuario": "wearesocialhr",
+      "nome": "We Are Social Croatia",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "We Are Social Croatia"
+    },
+    {
+      "usuario": "wearesocialua",
+      "nome": "We Are Social Ukraine",
+      "regiao": "Ucrânia",
+      "cc": "UA",
+      "agencia": "We Are Social Ukraine"
+    },
+    {
+      "usuario": "wearesocialtr",
+      "nome": "We Are Social Turkey",
+      "regiao": "Turquia",
+      "cc": "TR",
+      "agencia": "We Are Social Turkey"
+    },
+    {
+      "usuario": "wearesocialbaltic",
+      "nome": "We Are Social Baltic",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "We Are Social Baltic"
+    },
+    {
+      "usuario": "k2agency",
+      "nome": "K2",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "K2"
+    },
+    {
+      "usuario": "nowhere_agency",
+      "nome": "Nowhere",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Nowhere"
+    },
+    {
+      "usuario": "andco_cph",
+      "nome": "&Co.",
+      "regiao": "Dinamarca",
+      "cc": "DK",
+      "agencia": "&Co."
+    },
+    {
+      "usuario": "menschundmaschine",
+      "nome": "Mensch und Maschine",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "Mensch und Maschine"
+    },
+    {
+      "usuario": "pilot_agenturgruppe",
+      "nome": "Pilot",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "Pilot"
+    },
+    {
+      "usuario": "fischerappelt",
+      "nome": "fischerAppelt",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "fischerAppelt"
+    },
+    {
+      "usuario": "saintelmos",
+      "nome": "Saint Elmo's",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "Saint Elmo's"
+    },
+    {
+      "usuario": "antoni_agency",
+      "nome": "Antoni",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "Antoni"
+    },
+    {
+      "usuario": "kollerebbe",
+      "nome": "Kolle Rebbe",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "Kolle Rebbe"
+    },
+    {
+      "usuario": "thjnk_ag",
+      "nome": "Thjnk",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "Thjnk"
+    },
+    {
+      "usuario": "llr_berlin",
+      "nome": "Lukas Lindemann Rosinski",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "Lukas Lindemann Rosinski"
+    },
+    {
+      "usuario": "grabarzpartner",
+      "nome": "Grabarz & Partner",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "Grabarz & Partner"
+    },
+    {
+      "usuario": "ddbhamburg",
+      "nome": "DDB Hamburg",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "DDB Hamburg"
+    },
+    {
+      "usuario": "bbdogermany",
+      "nome": "BBDO Germany",
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "agencia": "BBDO Germany"
+    },
+    {
+      "usuario": "ogilvyamsterdam",
+      "nome": "Ogilvy Amsterdam",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "Ogilvy Amsterdam"
+    },
+    {
+      "usuario": "kesselskramer",
+      "nome": "KesselsKramer",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "KesselsKramer"
+    },
+    {
+      "usuario": "hammer_amsterdam",
+      "nome": "Hammer",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "Hammer"
+    },
+    {
+      "usuario": "dawn_amsterdam",
+      "nome": "Dawn",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "Dawn"
+    },
+    {
+      "usuario": "hotellamour_ams",
+      "nome": "Hotel L'Amour",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "Hotel L'Amour"
+    },
+    {
+      "usuario": "superheroes_ams",
+      "nome": "Superheroes",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "Superheroes"
+    },
+    {
+      "usuario": "fitzroyams",
+      "nome": "Fitzroy Amsterdam",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "Fitzroy Amsterdam"
+    },
+    {
+      "usuario": "theambition_ams",
+      "nome": "The Ambition",
+      "regiao": "Países Baixos",
+      "cc": "NL",
+      "agencia": "The Ambition"
+    },
+    {
+      "usuario": "hulanicki",
+      "nome": "Hulanicki",
+      "regiao": "Europa",
+      "cc": "",
+      "agencia": "Hulanicki"
+    },
+    {
+      "usuario": "monsieurguillaume",
+      "nome": "Monsieur Guillaume",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "Monsieur Guillaume"
+    },
+    {
+      "usuario": "rosaparis",
+      "nome": "Rosa Paris",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "Rosa Paris"
+    },
+    {
+      "usuario": "icibarbes",
+      "nome": "Ici Barbès",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "Ici Barbès"
+    },
+    {
+      "usuario": "steve_paris",
+      "nome": "Steve",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "Steve"
+    },
+    {
+      "usuario": "mcsaatchiparis",
+      "nome": "M&C Saatchi Paris",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "M&C Saatchi Paris"
+    },
+    {
+      "usuario": "ogilvyparis",
+      "nome": "Ogilvy Paris",
+      "regiao": "França",
+      "cc": "FR",
+      "agencia": "Ogilvy Paris"
+    },
+    {
+      "usuario": "tbwabrussels",
+      "nome": "TBWA\\Brussels",
+      "regiao": "Bélgica",
+      "cc": "BE",
+      "agencia": "TBWA\\Brussels"
+    },
+    {
+      "usuario": "boondoggle_be",
+      "nome": "Boondoggle",
+      "regiao": "Bélgica",
+      "cc": "BE",
+      "agencia": "Boondoggle"
+    },
+    {
+      "usuario": "rocketagencyau",
+      "nome": "Rocket Agency",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Rocket Agency"
+    },
+    {
+      "usuario": "eightclients",
+      "nome": "Eight Clients",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Eight Clients"
+    },
+    {
+      "usuario": "metriclabsau",
+      "nome": "Metric Labs",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Metric Labs"
+    },
+    {
+      "usuario": "firstpageaustralia",
+      "nome": "First Page Australia",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "First Page Australia"
+    },
+    {
+      "usuario": "thecreativecollectiveau",
+      "nome": "The Creative Collective",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "The Creative Collective"
+    },
+    {
+      "usuario": "soupagency",
+      "nome": "SOUP Agency",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "SOUP Agency"
+    },
+    {
+      "usuario": "yoghurtdigital",
+      "nome": "Yoghurt Digital",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Yoghurt Digital"
+    },
+    {
+      "usuario": "clixpert",
+      "nome": "Clixpert",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Clixpert"
+    },
+    {
+      "usuario": "intrepiddigitalau",
+      "nome": "Intrepid Digital",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Intrepid Digital"
+    },
+    {
+      "usuario": "thrivedigitalau",
+      "nome": "Thrive Digital",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Thrive Digital"
+    },
+    {
+      "usuario": "uprisedigitalau",
+      "nome": "Uprise Digital",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Uprise Digital"
+    },
+    {
+      "usuario": "smithbrothersmedia",
+      "nome": "Smith Brothers Media",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Smith Brothers Media"
+    },
+    {
+      "usuario": "8020digitalau",
+      "nome": "80/20 Digital",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "80/20 Digital"
+    },
+    {
+      "usuario": "meaningfulsocialclub",
+      "nome": "The Meaningful Social Club",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "The Meaningful Social Club"
+    },
+    {
+      "usuario": "melbournesocialco",
+      "nome": "Melbourne Social Co.",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Melbourne Social Co."
+    },
+    {
+      "usuario": "bornsocialau",
+      "nome": "Born Social",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Born Social"
+    },
+    {
+      "usuario": "rarapr",
+      "nome": "raraPR",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "raraPR"
+    },
+    {
+      "usuario": "yoursocialpartner",
+      "nome": "Your Social Partner",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Your Social Partner"
+    },
+    {
+      "usuario": "mergemarketingau",
+      "nome": "Merge Marketing",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Merge Marketing"
+    },
+    {
+      "usuario": "blendcommerce",
+      "nome": "Blend Commerce",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Blend Commerce"
+    },
+    {
+      "usuario": "bmfsydney",
+      "nome": "BMF Sydney",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "BMF Sydney"
+    },
+    {
+      "usuario": "themonkeys_syd",
+      "nome": "The Monkeys",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "The Monkeys"
+    },
+    {
+      "usuario": "specialgroup",
+      "nome": "Special Group",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Special Group"
+    },
+    {
+      "usuario": "clemengerbbdo",
+      "nome": "Clemenger BBDO",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Clemenger BBDO"
+    },
+    {
+      "usuario": "howatsoncompany",
+      "nome": "Howatson+Company",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Howatson+Company"
+    },
+    {
+      "usuario": "terrieragencynz",
+      "nome": "Terrier Agency",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "Terrier Agency"
+    },
+    {
+      "usuario": "humandigitalnz",
+      "nome": "Human Digital",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "Human Digital"
+    },
+    {
+      "usuario": "authenticdigitalnz",
+      "nome": "authentic digital",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "authentic digital"
+    },
+    {
+      "usuario": "digitalstreamnz",
+      "nome": "Digital Stream Ltd",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "Digital Stream Ltd"
+    },
+    {
+      "usuario": "localiqanz",
+      "nome": "LocaliQ ANZ",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "LocaliQ ANZ"
+    },
+    {
+      "usuario": "digitellamarketing",
+      "nome": "Digitella Marketing",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Digitella Marketing"
+    },
+    {
+      "usuario": "webzilladigital",
+      "nome": "Webzilla Digital Marketing",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Webzilla Digital Marketing"
+    },
+    {
+      "usuario": "squidgroupnz",
+      "nome": "Squid Group",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "Squid Group"
+    },
+    {
+      "usuario": "rocketshpnz",
+      "nome": "ROCKETSHP",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "ROCKETSHP"
+    },
+    {
+      "usuario": "webantlernz",
+      "nome": "Web Antler",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "Web Antler"
+    },
+    {
+      "usuario": "netbrandingnz",
+      "nome": "Net Branding Limited",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "Net Branding Limited"
+    },
+    {
+      "usuario": "sprocketdigitalnz",
+      "nome": "Sprocket Digital Limited",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "Sprocket Digital Limited"
+    },
+    {
+      "usuario": "beyondtechmedia",
+      "nome": "Beyond Tech Media",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Beyond Tech Media"
+    },
+    {
+      "usuario": "nakedcreativenz",
+      "nome": "Naked Creative",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "Naked Creative"
+    },
+    {
+      "usuario": "prizmdigitalnz",
+      "nome": "PRIZM Digital Marketing Agency",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "PRIZM Digital Marketing Agency"
+    },
+    {
+      "usuario": "revolutionhubnz",
+      "nome": "Revolution Hub",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "Revolution Hub"
+    },
+    {
+      "usuario": "easysocialmedianz",
+      "nome": "Easy Social Media",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "Easy Social Media"
+    },
+    {
+      "usuario": "idigitalnz",
+      "nome": "IDigital",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "IDigital"
+    },
+    {
+      "usuario": "toogoodnz",
+      "nome": "TooGood",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "TooGood"
+    },
+    {
+      "usuario": "vdigitalnz",
+      "nome": "V Digital Marketing",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "V Digital Marketing"
+    },
+    {
+      "usuario": "digitalinfluencenz",
+      "nome": "Digital Influence",
+      "regiao": "Nova Zelândia",
+      "cc": "NZ",
+      "agencia": "Digital Influence"
+    },
+    {
+      "usuario": "founddigitalau",
+      "nome": "Found Digital",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Found Digital"
+    },
+    {
+      "usuario": "amicusdigitalau",
+      "nome": "Amicus Digital",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Amicus Digital"
+    },
+    {
+      "usuario": "roobixau",
+      "nome": "Roobix",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Roobix"
+    },
+    {
+      "usuario": "smithsocialau",
+      "nome": "Smith Social",
+      "regiao": "Austrália",
+      "cc": "AU",
+      "agencia": "Smith Social"
+    },
+    {
+      "usuario": "dentsu_inc",
+      "nome": "Dentsu",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Dentsu"
+    },
+    {
+      "usuario": "hakuhodo",
+      "nome": "Hakuhodo",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Hakuhodo"
+    },
+    {
+      "usuario": "adk_marketing",
+      "nome": "ADK Marketing Solutions",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "ADK Marketing Solutions"
+    },
+    {
+      "usuario": "cyberagent_official",
+      "nome": "CyberAgent",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "CyberAgent"
+    },
+    {
+      "usuario": "shapewin_jp",
+      "nome": "ShapeWin Co., Ltd.",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "ShapeWin Co., Ltd."
+    },
+    {
+      "usuario": "principle_jp",
+      "nome": "Principle Co, Ltd.",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Principle Co, Ltd."
+    },
+    {
+      "usuario": "mozmene_jp",
+      "nome": "Mozmene",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Mozmene"
+    },
+    {
+      "usuario": "tokyomarketing_jp",
+      "nome": "TOKYO MARKETING",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "TOKYO MARKETING"
+    },
+    {
+      "usuario": "nextleveljapan",
+      "nome": "Next Level Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Next Level Japan"
+    },
+    {
+      "usuario": "mglobaljapan",
+      "nome": "M Global Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "M Global Japan"
+    },
+    {
+      "usuario": "anyal_jp",
+      "nome": "An-yal",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "An-yal"
+    },
+    {
+      "usuario": "thedigitalx_jp",
+      "nome": "The Digital X",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "The Digital X"
+    },
+    {
+      "usuario": "hatagoconsulting",
+      "nome": "Hatago Consulting",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Hatago Consulting"
+    },
+    {
+      "usuario": "hashimedia_jp",
+      "nome": "Hashi Media",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Hashi Media"
+    },
+    {
+      "usuario": "j1_co_jp",
+      "nome": "J1 Co., Ltd.",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "J1 Co., Ltd."
+    },
+    {
+      "usuario": "infocubicjapan",
+      "nome": "Info Cubic Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Info Cubic Japan"
+    },
+    {
+      "usuario": "isea_inc",
+      "nome": "Isea inc.",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Isea inc."
+    },
+    {
+      "usuario": "geezerbuild",
+      "nome": "Geezerbuild",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Geezerbuild"
+    },
+    {
+      "usuario": "ajmarketing.io",
+      "nome": "AJ Marketing",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "AJ Marketing"
+    },
+    {
+      "usuario": "uralainternational",
+      "nome": "URALA International",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "URALA International"
+    },
+    {
+      "usuario": "beacon_tokyo",
+      "nome": "Beacon Communications",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Beacon Communications"
+    },
+    {
+      "usuario": "tbwahakuhodo",
+      "nome": "TBWA\\HAKUHODO",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "TBWA\\HAKUHODO"
+    },
+    {
+      "usuario": "ogilvyjapan",
+      "nome": "Ogilvy Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Ogilvy Japan"
+    },
+    {
+      "usuario": "mccannjapan",
+      "nome": "McCann Erickson Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "McCann Erickson Japan"
+    },
+    {
+      "usuario": "publicisjapan",
+      "nome": "Publicis Groupe Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Publicis Groupe Japan"
+    },
+    {
+      "usuario": "dentsux_jp",
+      "nome": "dentsu X Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "dentsu X Japan"
+    },
+    {
+      "usuario": "iprospect_jp",
+      "nome": "iProspect Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "iProspect Japan"
+    },
+    {
+      "usuario": "monks_japan",
+      "nome": "Monks Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Monks Japan"
+    },
+    {
+      "usuario": "accenturesong_jp",
+      "nome": "Accenture Song Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Accenture Song Japan"
+    },
+    {
+      "usuario": "wktokyo",
+      "nome": "Wieden+Kennedy Tokyo",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Wieden+Kennedy Tokyo"
+    },
+    {
+      "usuario": "droga5tokyo",
+      "nome": "Droga5 Tokyo",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Droga5 Tokyo"
+    },
+    {
+      "usuario": "akqatkyo",
+      "nome": "AKQA Tokyo",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "AKQA Tokyo"
+    },
+    {
+      "usuario": "rgatokyo",
+      "nome": "R/GA Tokyo",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "R/GA Tokyo"
+    },
+    {
+      "usuario": "havasjapan",
+      "nome": "Havas Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Havas Japan"
+    },
+    {
+      "usuario": "ddbjapan",
+      "nome": "DDB Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "DDB Japan"
+    },
+    {
+      "usuario": "leoburnetttokyo",
+      "nome": "Leo Burnett Tokyo",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Leo Burnett Tokyo"
+    },
+    {
+      "usuario": "greytokyo",
+      "nome": "Grey Tokyo",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Grey Tokyo"
+    },
+    {
+      "usuario": "cheiljapan",
+      "nome": "Cheil Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Cheil Japan"
+    },
+    {
+      "usuario": "wearesocialtokyo",
+      "nome": "We Are Social Tokyo",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "We Are Social Tokyo"
+    },
+    {
+      "usuario": "vmljapan",
+      "nome": "VML Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "VML Japan"
+    },
+    {
+      "usuario": "jellyfishjapan",
+      "nome": "Jellyfish Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Jellyfish Japan"
+    },
+    {
+      "usuario": "criteojapan",
+      "nome": "Criteo Japan",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Criteo Japan"
+    },
+    {
+      "usuario": "cartah_holdings",
+      "nome": "Cartah Holdings",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Cartah Holdings"
+    },
+    {
+      "usuario": "septeni_holdings",
+      "nome": "Septeni Holdings",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Septeni Holdings"
+    },
+    {
+      "usuario": "opt_inc_jp",
+      "nome": "Opt",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Opt"
+    },
+    {
+      "usuario": "transcosmos_jp",
+      "nome": "Transcosmos",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Transcosmos"
+    },
+    {
+      "usuario": "fullspeed_jp",
+      "nome": "FullSpeed",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "FullSpeed"
+    },
+    {
+      "usuario": "gmo_group",
+      "nome": "GMO Internet Group",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "GMO Internet Group"
+    },
+    {
+      "usuario": "recruit_official",
+      "nome": "Recruit",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Recruit"
+    },
+    {
+      "usuario": "kotozna_jp",
+      "nome": "Kotozna",
+      "regiao": "Japão",
+      "cc": "JP",
+      "agencia": "Kotozna"
+    },
+    {
+      "usuario": "elogiamexico",
+      "nome": "Elogia México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Elogia México"
+    },
+    {
+      "usuario": "subeagenciadigital",
+      "nome": "SUBE Agencia Digital",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "SUBE Agencia Digital"
+    },
+    {
+      "usuario": "abcdigitalmx",
+      "nome": "ABC Digital",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "ABC Digital"
+    },
+    {
+      "usuario": "conqrmx",
+      "nome": "Conqr",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Conqr"
+    },
+    {
+      "usuario": "posicionunomx",
+      "nome": "Posición Uno",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Posición Uno"
+    },
+    {
+      "usuario": "llycmexico",
+      "nome": "LLYC México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "LLYC México"
+    },
+    {
+      "usuario": "monksmexico",
+      "nome": "Monks México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Monks México"
+    },
+    {
+      "usuario": "alkemylatam",
+      "nome": "Alkemy LATAM",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Alkemy LATAM"
+    },
+    {
+      "usuario": "geotelecommx",
+      "nome": "Geotelecom MX",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Geotelecom MX"
+    },
+    {
+      "usuario": "goodrebelsmx",
+      "nome": "Good Rebels México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Good Rebels México"
+    },
+    {
+      "usuario": "icrossinglatam",
+      "nome": "iCrossing Latam",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "iCrossing Latam"
+    },
+    {
+      "usuario": "futuritemx",
+      "nome": "Futurité",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Futurité"
+    },
+    {
+      "usuario": "mediasourcemx",
+      "nome": "Media Source",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Media Source"
+    },
+    {
+      "usuario": "huelladigitalmx",
+      "nome": "Huella Digital",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Huella Digital"
+    },
+    {
+      "usuario": "impalamexico",
+      "nome": "Impala México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Impala México"
+    },
+    {
+      "usuario": "bindivamx",
+      "nome": "Bindiva",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Bindiva"
+    },
+    {
+      "usuario": "hashtagmediagroup",
+      "nome": "Hashtag Media Group",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Hashtag Media Group"
+    },
+    {
+      "usuario": "megridigital",
+      "nome": "Megri Digital",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Megri Digital"
+    },
+    {
+      "usuario": "alohamarketingmx",
+      "nome": "Aloha! Marketing Digital",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Aloha! Marketing Digital"
+    },
+    {
+      "usuario": "dinametramx",
+      "nome": "Dinametra",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Dinametra"
+    },
+    {
+      "usuario": "another_co",
+      "nome": "another",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "another"
+    },
+    {
+      "usuario": "vaynermediamx",
+      "nome": "VaynerMedia México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "VaynerMedia México"
+    },
+    {
+      "usuario": "thinkingsocialmx",
+      "nome": "Thinking Social",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Thinking Social"
+    },
+    {
+      "usuario": "pelmx",
+      "nome": "Pel",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Pel"
+    },
+    {
+      "usuario": "2btubemx",
+      "nome": "2btube México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "2btube México"
+    },
+    {
+      "usuario": "inpulsedigital",
+      "nome": "INPULSE Digital",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "INPULSE Digital"
+    },
+    {
+      "usuario": "sernagroupmx",
+      "nome": "Serna Group",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Serna Group"
+    },
+    {
+      "usuario": "alturainteractive",
+      "nome": "Altura Interactive",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Altura Interactive"
+    },
+    {
+      "usuario": "concepthausmx",
+      "nome": "Concept Haus",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Concept Haus"
+    },
+    {
+      "usuario": "sensomx",
+      "nome": "SENSO Mx",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "SENSO Mx"
+    },
+    {
+      "usuario": "boundifymx",
+      "nome": "Boundify",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Boundify"
+    },
+    {
+      "usuario": "mhaconsultingmx",
+      "nome": "MHA Consulting",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "MHA Consulting"
+    },
+    {
+      "usuario": "retornodigitalmx",
+      "nome": "Retorno Digital",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Retorno Digital"
+    },
+    {
+      "usuario": "grinbinmx",
+      "nome": "Grinbin",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Grinbin"
+    },
+    {
+      "usuario": "infosolmx",
+      "nome": "InfoSol",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "InfoSol"
+    },
+    {
+      "usuario": "mosaicomediamx",
+      "nome": "Mosaico Media",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Mosaico Media"
+    },
+    {
+      "usuario": "zkmarketingmx",
+      "nome": "ZK Marketing",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "ZK Marketing"
+    },
+    {
+      "usuario": "voltmediaservices",
+      "nome": "Volt Media Services",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Volt Media Services"
+    },
+    {
+      "usuario": "behavemx",
+      "nome": "Behave",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Behave"
+    },
+    {
+      "usuario": "holybrandagency",
+      "nome": "Holy Brand Agency",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Holy Brand Agency"
+    },
+    {
+      "usuario": "mambocreativeagency",
+      "nome": "Mambo Creative Agency",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Mambo Creative Agency"
+    },
+    {
+      "usuario": "cbimarketmx",
+      "nome": "CBI Market",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "CBI Market"
+    },
+    {
+      "usuario": "theramediamx",
+      "nome": "Thera Media",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Thera Media"
+    },
+    {
+      "usuario": "ivirtualmx",
+      "nome": "iVirtual",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "iVirtual"
+    },
+    {
+      "usuario": "swingmediamarketing",
+      "nome": "Swing Media Marketing",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Swing Media Marketing"
+    },
+    {
+      "usuario": "agenciaseomonterrey",
+      "nome": "Agencia SEO Monterrey",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Agencia SEO Monterrey"
+    },
+    {
+      "usuario": "orbisagenciamx",
+      "nome": "Orbis Agencia de Marketing Digital",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Orbis Agencia de Marketing Digital"
+    },
+    {
+      "usuario": "ogilvymexico",
+      "nome": "Ogilvy México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Ogilvy México"
+    },
+    {
+      "usuario": "mccannmexico",
+      "nome": "McCann México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "McCann México"
+    },
+    {
+      "usuario": "ddbmexico",
+      "nome": "DDB México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "DDB México"
+    },
+    {
+      "usuario": "leoburnettmx",
+      "nome": "Leo Burnett México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Leo Burnett México"
+    },
+    {
+      "usuario": "havasmexico",
+      "nome": "Havas México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Havas México"
+    },
+    {
+      "usuario": "publicismexico",
+      "nome": "Publicis México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Publicis México"
+    },
+    {
+      "usuario": "vmlmexico",
+      "nome": "VML México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "VML México"
+    },
+    {
+      "usuario": "dentsumexico",
+      "nome": "dentsu México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "dentsu México"
+    },
+    {
+      "usuario": "iprospectmexico",
+      "nome": "iProspect México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "iProspect México"
+    },
+    {
+      "usuario": "jellyfishmexico",
+      "nome": "Jellyfish México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Jellyfish México"
+    },
+    {
+      "usuario": "accenturesongmx",
+      "nome": "Accenture Song México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Accenture Song México"
+    },
+    {
+      "usuario": "edelmanmexico",
+      "nome": "Edelman México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Edelman México"
+    },
+    {
+      "usuario": "webershandwickmx",
+      "nome": "Weber Shandwick México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Weber Shandwick México"
+    },
+    {
+      "usuario": "ketchummexico",
+      "nome": "Ketchum México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Ketchum México"
+    },
+    {
+      "usuario": "fhillardmexico",
+      "nome": "FleishmanHillard México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "FleishmanHillard México"
+    },
+    {
+      "usuario": "bursonmexico",
+      "nome": "Burson México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Burson México"
+    },
+    {
+      "usuario": "golinmexico",
+      "nome": "Golin México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Golin México"
+    },
+    {
+      "usuario": "havasmediamexico",
+      "nome": "Havas Media México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Havas Media México"
+    },
+    {
+      "usuario": "caratmexico",
+      "nome": "Carat México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Carat México"
+    },
+    {
+      "usuario": "mindsharemexico",
+      "nome": "Mindshare México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Mindshare México"
+    },
+    {
+      "usuario": "wavemakermexico",
+      "nome": "Wavemaker México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Wavemaker México"
+    },
+    {
+      "usuario": "essencemediacommx",
+      "nome": "EssenceMediacom México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "EssenceMediacom México"
+    },
+    {
+      "usuario": "omdmexico",
+      "nome": "OMD México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "OMD México"
+    },
+    {
+      "usuario": "phdmexico",
+      "nome": "PHD México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "PHD México"
+    },
+    {
+      "usuario": "initiativemexico",
+      "nome": "Initiative México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Initiative México"
+    },
+    {
+      "usuario": "starcommexico",
+      "nome": "Starcom México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Starcom México"
+    },
+    {
+      "usuario": "sparkfoundrymx",
+      "nome": "Spark Foundry México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Spark Foundry México"
+    },
+    {
+      "usuario": "zenithmexico",
+      "nome": "Zenith México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Zenith México"
+    },
+    {
+      "usuario": "digitasmexico",
+      "nome": "Digitas México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Digitas México"
+    },
+    {
+      "usuario": "razorfishmx",
+      "nome": "Razorfish México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Razorfish México"
+    },
+    {
+      "usuario": "isobarmexico",
+      "nome": "Isobar México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Isobar México"
+    },
+    {
+      "usuario": "merklemexico",
+      "nome": "Merkle México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Merkle México"
+    },
+    {
+      "usuario": "akqamexico",
+      "nome": "AKQA México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "AKQA México"
+    },
+    {
+      "usuario": "rgamexico",
+      "nome": "R/GA México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "R/GA México"
+    },
+    {
+      "usuario": "hugemexico",
+      "nome": "Huge México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Huge México"
+    },
+    {
+      "usuario": "wkmexico",
+      "nome": "Wieden+Kennedy México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Wieden+Kennedy México"
+    },
+    {
+      "usuario": "droga5mexico",
+      "nome": "Droga5 México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Droga5 México"
+    },
+    {
+      "usuario": "fcbmexico",
+      "nome": "FCB México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "FCB México"
+    },
+    {
+      "usuario": "greymexico",
+      "nome": "Grey México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Grey México"
+    },
+    {
+      "usuario": "mullenlowemexico",
+      "nome": "MullenLowe México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "MullenLowe México"
+    },
+    {
+      "usuario": "saatchimexico",
+      "nome": "Saatchi & Saatchi México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Saatchi & Saatchi México"
+    },
+    {
+      "usuario": "bbdomexico",
+      "nome": "BBDO México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "BBDO México"
+    },
+    {
+      "usuario": "wearesocialmx",
+      "nome": "We Are Social México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "We Are Social México"
+    },
+    {
+      "usuario": "viralnationmx",
+      "nome": "Viral Nation México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Viral Nation México"
+    },
+    {
+      "usuario": "jellysmackmx",
+      "nome": "Jellysmack México",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Jellysmack México"
+    },
+    {
+      "usuario": "storytalentmx",
+      "nome": "Story Talent",
+      "regiao": "México",
+      "cc": "MX",
+      "agencia": "Story Talent"
+    },
+    {
+      "usuario": "joepublicza",
+      "nome": "Joe Public",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Joe Public"
+    },
+    {
+      "usuario": "kingjamesza",
+      "nome": "King James",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "King James"
+    },
+    {
+      "usuario": "ogilvysa",
+      "nome": "Ogilvy South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Ogilvy South Africa"
+    },
+    {
+      "usuario": "tbwahuntlascaris",
+      "nome": "TBWA\\Hunt\\Lascaris",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "TBWA\\Hunt\\Lascaris"
+    },
+    {
+      "usuario": "vmlsa",
+      "nome": "VML South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "VML South Africa"
+    },
+    {
+      "usuario": "mcsaatchiabel",
+      "nome": "M&C Saatchi Abel",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "M&C Saatchi Abel"
+    },
+    {
+      "usuario": "avataragencygroup",
+      "nome": "Avatar Agency Group",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Avatar Agency Group"
+    },
+    {
+      "usuario": "retroviral",
+      "nome": "Retroviral",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Retroviral"
+    },
+    {
+      "usuario": "rogerwilcoza",
+      "nome": "Rogerwilco",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Rogerwilco"
+    },
+    {
+      "usuario": "ivorybrands",
+      "nome": "Ivory Brands",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Ivory Brands"
+    },
+    {
+      "usuario": "hellocomputer",
+      "nome": "Hellocomputer",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Hellocomputer"
+    },
+    {
+      "usuario": "nativevml",
+      "nome": "NATIVE VML",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "NATIVE VML"
+    },
+    {
+      "usuario": "dukegroupza",
+      "nome": "Duke Group",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Duke Group"
+    },
+    {
+      "usuario": "clockworkza",
+      "nome": "Clockwork",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Clockwork"
+    },
+    {
+      "usuario": "fcbafrica",
+      "nome": "FCB Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "FCB Africa"
+    },
+    {
+      "usuario": "havasza",
+      "nome": "Havas South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Havas South Africa"
+    },
+    {
+      "usuario": "publicisafrica",
+      "nome": "Publicis Groupe Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Publicis Groupe Africa"
+    },
+    {
+      "usuario": "dentsuza",
+      "nome": "Dentsu South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Dentsu South Africa"
+    },
+    {
+      "usuario": "edelmanafrica",
+      "nome": "Edelman Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Edelman Africa"
+    },
+    {
+      "usuario": "webershandwickafrica",
+      "nome": "Weber Shandwick Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Weber Shandwick Africa"
+    },
+    {
+      "usuario": "bursonafrica",
+      "nome": "Burson Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Burson Africa"
+    },
+    {
+      "usuario": "ketchumza",
+      "nome": "Ketchum South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Ketchum South Africa"
+    },
+    {
+      "usuario": "fhillardsa",
+      "nome": "FleishmanHillard South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "FleishmanHillard South Africa"
+    },
+    {
+      "usuario": "golinza",
+      "nome": "Golin South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Golin South Africa"
+    },
+    {
+      "usuario": "iprospectza",
+      "nome": "iProspect South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "iProspect South Africa"
+    },
+    {
+      "usuario": "jellyfishza",
+      "nome": "Jellyfish South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Jellyfish South Africa"
+    },
+    {
+      "usuario": "accenturesongza",
+      "nome": "Accenture Song South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Accenture Song South Africa"
+    },
+    {
+      "usuario": "monksza",
+      "nome": "Monks South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Monks South Africa"
+    },
+    {
+      "usuario": "wppsa",
+      "nome": "WPP South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "WPP South Africa"
+    },
+    {
+      "usuario": "omnicomafrica",
+      "nome": "Omnicom Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Omnicom Africa"
+    },
+    {
+      "usuario": "mediabrandssa",
+      "nome": "IPG Mediabrands South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "IPG Mediabrands South Africa"
+    },
+    {
+      "usuario": "essencemediacomza",
+      "nome": "EssenceMediacom South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "EssenceMediacom South Africa"
+    },
+    {
+      "usuario": "mindshareza",
+      "nome": "Mindshare South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Mindshare South Africa"
+    },
+    {
+      "usuario": "wavemakerza",
+      "nome": "Wavemaker South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Wavemaker South Africa"
+    },
+    {
+      "usuario": "caratza",
+      "nome": "Carat South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Carat South Africa"
+    },
+    {
+      "usuario": "omdza",
+      "nome": "OMD South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "OMD South Africa"
+    },
+    {
+      "usuario": "phdza",
+      "nome": "PHD South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "PHD South Africa"
+    },
+    {
+      "usuario": "starcomza",
+      "nome": "Starcom South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Starcom South Africa"
+    },
+    {
+      "usuario": "zenithza",
+      "nome": "Zenith South Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Zenith South Africa"
+    },
+    {
+      "usuario": "arenaholdingsza",
+      "nome": "Arena Holdings",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Arena Holdings"
+    },
+    {
+      "usuario": "scangroupafrica",
+      "nome": "Scan Group",
+      "regiao": "Quênia",
+      "cc": "KE",
+      "agencia": "Scan Group"
+    },
+    {
+      "usuario": "squaddigitalke",
+      "nome": "Squad Digital",
+      "regiao": "Quênia",
+      "cc": "KE",
+      "agencia": "Squad Digital"
+    },
+    {
+      "usuario": "redskyke",
+      "nome": "Redsky",
+      "regiao": "Quênia",
+      "cc": "KE",
+      "agencia": "Redsky"
+    },
+    {
+      "usuario": "twigadigitalke",
+      "nome": "Twiga Digital",
+      "regiao": "Quênia",
+      "cc": "KE",
+      "agencia": "Twiga Digital"
+    },
+    {
+      "usuario": "ignitekenya",
+      "nome": "Ignite Kenya",
+      "regiao": "Quênia",
+      "cc": "KE",
+      "agencia": "Ignite Kenya"
+    },
+    {
+      "usuario": "zurisocialke",
+      "nome": "Zuri Social",
+      "regiao": "Quênia",
+      "cc": "KE",
+      "agencia": "Zuri Social"
+    },
+    {
+      "usuario": "lolaafrica",
+      "nome": "Lola Africa",
+      "regiao": "Espanha",
+      "cc": "ES",
+      "agencia": "Lola Africa"
+    },
+    {
+      "usuario": "x3mideas",
+      "nome": "X3M Ideas",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "X3M Ideas"
+    },
+    {
+      "usuario": "noahsarkng",
+      "nome": "Noah's Ark Communications",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Noah's Ark Communications"
+    },
+    {
+      "usuario": "insightredefini",
+      "nome": "Insight Redefini",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Insight Redefini"
+    },
+    {
+      "usuario": "verdantng",
+      "nome": "Verdant",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Verdant"
+    },
+    {
+      "usuario": "anakle",
+      "nome": "Anakle",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Anakle"
+    },
+    {
+      "usuario": "wildflowerpr",
+      "nome": "Wildflower PR",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Wildflower PR"
+    },
+    {
+      "usuario": "chainreactionsafrica",
+      "nome": "Chain Reactions Africa",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Chain Reactions Africa"
+    },
+    {
+      "usuario": "tertuliadigitalng",
+      "nome": "Tertulia Digital",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Tertulia Digital"
+    },
+    {
+      "usuario": "loudsilencemedia",
+      "nome": "LoudSilence Media",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "LoudSilence Media"
+    },
+    {
+      "usuario": "ckdigitalng",
+      "nome": "CKDigital",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "CKDigital"
+    },
+    {
+      "usuario": "ddblagos",
+      "nome": "DDB Lagos",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "DDB Lagos"
+    },
+    {
+      "usuario": "ogilvynigeria",
+      "nome": "Ogilvy Nigeria",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Ogilvy Nigeria"
+    },
+    {
+      "usuario": "tbwaconceptng",
+      "nome": "TBWA\\Concept",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "TBWA\\Concept"
+    },
+    {
+      "usuario": "mccannlagos",
+      "nome": "McCann Lagos",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "McCann Lagos"
+    },
+    {
+      "usuario": "leoburnettlagos",
+      "nome": "Leo Burnett Lagos",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Leo Burnett Lagos"
+    },
+    {
+      "usuario": "publiciswestafrica",
+      "nome": "Publicis West Africa",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Publicis West Africa"
+    },
+    {
+      "usuario": "havaswestafrica",
+      "nome": "Havas West Africa",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "Havas West Africa"
+    },
+    {
+      "usuario": "dentsunigeria",
+      "nome": "dentsu Nigeria",
+      "regiao": "Nigéria",
+      "cc": "NG",
+      "agencia": "dentsu Nigeria"
+    },
+    {
+      "usuario": "llycafrica",
+      "nome": "LLYC Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "LLYC Africa"
+    },
+    {
+      "usuario": "kantarafrica",
+      "nome": "Kantar Africa",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Kantar Africa"
+    },
+    {
+      "usuario": "brandleadza",
+      "nome": "BrandLead",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "BrandLead"
+    },
+    {
+      "usuario": "flowcomms",
+      "nome": "Flow Communications",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Flow Communications"
+    },
+    {
+      "usuario": "meropacomms",
+      "nome": "Meropa Communications",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Meropa Communications"
+    },
+    {
+      "usuario": "eclipsecomms",
+      "nome": "Eclipse Communications",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Eclipse Communications"
+    },
+    {
+      "usuario": "houseofbraveza",
+      "nome": "House of Brave",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "House of Brave"
+    },
+    {
+      "usuario": "tincan_za",
+      "nome": "Tin Can",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Tin Can"
+    },
+    {
+      "usuario": "gridworldwide",
+      "nome": "Grid Worldwide",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Grid Worldwide"
+    },
+    {
+      "usuario": "machine_za",
+      "nome": "Machine_",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Machine_"
+    },
+    {
+      "usuario": "foxp2za",
+      "nome": "FoxP2",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "FoxP2"
+    },
+    {
+      "usuario": "morrisonza",
+      "nome": "Morrison",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Morrison"
+    },
+    {
+      "usuario": "honeyandmoonza",
+      "nome": "Honey + Moon",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Honey + Moon"
+    },
+    {
+      "usuario": "boomtownza",
+      "nome": "Boomtown",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Boomtown"
+    },
+    {
+      "usuario": "liquoriceza",
+      "nome": "Liquorice",
+      "regiao": "África do Sul",
+      "cc": "ZA",
+      "agencia": "Liquorice"
+    }
   ]
 }

@@ -91,11 +91,18 @@ def descobrir(usuario):
 
 
 def posts(usuario):
+    """Posts recentes; devolve (posts, uso, existe). existe=False quando a Meta diz que a conta
+    não existe ou não é profissional (aí não adianta ler de novo tão cedo)."""
     campos = ("business_discovery.username(%s){username,name,media.limit(%d)"
               "{id,caption,media_type,media_product_type,permalink,timestamp}}") % (usuario, POSTS_POR_CONTA)
     dados, uso = _chamar(campos)
+    if "erro" in dados:
+        err = dados["erro"]
+        sem_conta = err.get("code") == 110 or err.get("error_subcode") == 2207013 or \
+            re.search(r"cannot be found|does not exist|invalid user|not.*business", err.get("message", ""), re.I)
+        return [], uso, not sem_conta
     bd = dados.get("business_discovery") or {}
-    return (bd.get("media") or {}).get("data", []), uso
+    return (bd.get("media") or {}).get("data", []), uso, True
 
 
 def do_site(ag, st):
@@ -170,7 +177,14 @@ def rodada(fontes, vigia, agora, log, chave):
 
     # contas para ler: as fixas de fontes.json + as das agências já descobertas
     leitura = []
+    # contas que a Meta disse não existir / não serem profissionais: tenta de novo só depois de 30 dias
+    mortas = st.setdefault("mortas", {})
+    limite_morta = (agora - dt.timedelta(days=30)).isoformat()
+    for u in [u for u, quando in mortas.items() if quando < limite_morta]:
+        mortas.pop(u)
     for c in fontes.get("instagram", []):
+        if c["usuario"].lstrip("@").lower() in mortas:
+            continue
         leitura.append({"usuario": c["usuario"].lstrip("@").lower(), "nome": c.get("nome", c["usuario"]),
                         "regiao": c.get("regiao", "Global"), "cc": c.get("cc", ""), "agencia": c.get("agencia", "")})
     por_nome = {a["nome"]: a for a in fontes.get("agencias", [])}
@@ -215,8 +229,11 @@ def rodada(fontes, vigia, agora, log, chave):
             elif leitura:
                 conta = leitura[pos % len(leitura)]
                 pos += 1
-                itens, uso = posts(conta["usuario"])
+                itens, uso, existe = posts(conta["usuario"])
                 gastas += 1
+                if not existe:
+                    mortas[conta["usuario"]] = agora.isoformat()
+                    log("  instagram: @%s não existe ou não é conta profissional; pulando por 30 dias" % conta["usuario"])
                 saida += [(p, conta) for p in itens]
             else:
                 break
