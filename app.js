@@ -875,6 +875,37 @@
     else if (e.key === "ArrowLeft" && active && active.kind === "story") storyGo(active.art, active.art._story.i - 1);
   });
 
+  /* ---------- Novidades: com a página aberta, confere campaigns.json a cada 5 minutos ---------- */
+  var lastCheck = Date.now(), pending = null;
+  function checkNew() {
+    lastCheck = Date.now();
+    fetch("campaigns.json", { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (raw) {
+        var fresh = normalize(raw);
+        var known = {};
+        state.items.forEach(function (c) { known[c.id] = 1; });
+        var n = fresh.filter(function (c) { return !known[c.id]; }).length;
+        if (!n) return;
+        pending = fresh;
+        var pill = $("newpill");
+        if (!pill) {
+          pill = el("button", "newpill"); pill.id = "newpill"; pill.type = "button";
+          pill.addEventListener("click", function () {
+            if (!pending) return;
+            state.items = pending; pending = null; pill.remove();
+            try { history.replaceState(null, "", location.pathname); } catch (e) { /* nada */ }
+            window.scrollTo(0, 0); renderAll();
+          });
+          document.body.appendChild(pill);
+        }
+        pill.textContent = "↑ " + n + (n === 1 ? " campanha nova" : " campanhas novas");
+      })
+      .catch(function () { /* tenta de novo na próxima */ });
+  }
+  setInterval(function () { if (!document.hidden) checkNew(); }, 5 * 60 * 1000);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden && Date.now() - lastCheck > 60 * 1000) checkNew(); });
+
   /* ---------- Início ---------- */
   $("sound").addEventListener("click", function () { setSound(!sound); });
   $("top").addEventListener("click", function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
