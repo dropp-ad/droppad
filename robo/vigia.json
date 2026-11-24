@@ -16,15 +16,15 @@
       "mod": "Tue, 24 Nov 2026 15:54:26 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Tue, 24 Nov 2026 14:41:37 GMT"
+      "mod": "Tue, 24 Nov 2026 16:06:43 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"83a2f848f8db69f2c9f42d69f28e8334\"",
       "mod": "Tue, 24 Nov 2026 10:00:27 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"77105b47477c77e04c7a06432e117d0d\"",
-      "mod": "Tue, 24 Nov 2026 15:55:36 GMT"
+      "etag": "\"b10f3810be594b490c3f45a8995dbbda\"",
+      "mod": "Tue, 24 Nov 2026 16:00:10 GMT"
     },
     "https://www.marketingdirecto.com/rss": {
       "mod": "Tue, 24 Nov 2026 14:55:27 GMT"
@@ -48,19 +48,19 @@
       "mod": "Fri, 20 Nov 2026 14:40:39 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"45e78b05f4d0df6e7a1fee3d986a6890\"",
-      "mod": "Tue, 24 Nov 2026 15:47:33 GMT"
+      "etag": "W/\"6a084133fd36ae09b0a1cf4fcf3e106e\"",
+      "mod": "Tue, 24 Nov 2026 16:05:45 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 15:55:45 GMT"
+      "mod": "Tue, 24 Nov 2026 16:07:44 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"65a314dc9998c319c0a90751ae90e97b\"",
       "mod": "Tue, 24 Nov 2026 09:24:54 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795535653-gzip\"",
-      "mod": "Tue, 24 Nov 2026 15:54:13 GMT"
+      "etag": "W/\"1795536373-gzip\"",
+      "mod": "Tue, 24 Nov 2026 16:06:13 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 15:55:47 GMT"
+      "mod": "Tue, 24 Nov 2026 16:07:46 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -150,7 +150,7 @@
       "mod": "Tue, 24 Nov 2026 13:11:00 GMT"
     }
   },
-  "yt_pos": 36,
+  "yt_pos": 81,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -165,10 +165,17 @@
       "Droga5": "droga5",
       "BBH": "",
       "adam&eveDDB": "",
-      "Uncommon": "uncommoncreativestudio"
+      "Uncommon": "uncommoncreativestudio",
+      "VML": "",
+      "Publicis": "publicis",
+      "Leo Burnett": "",
+      "TBWA": "tbwa",
+      "Saatchi & Saatchi": "saatchiandsaatchi",
+      "Johannes Leonardo": "johannesleonardo",
+      "Mischief": "mischiefusa"
     },
     "tentadas": {},
-    "pos": 23
+    "pos": 35
   },
   "vistos": [
     "https://www.meioemensagem.com.br/midia/folha-torna-anuncios-do-impresso-clicaveis-no-digital",
@@ -226,6 +233,6 @@
     "https://www.merca20.com/long-repetitive-ads-are-losing-their-effectiveness-among-gen-z-heres-how-the-rules-are-changing-for-brands",
     "https://www.merca20.com/campana-publicitaria-contra-nazismo-irmela"
   ],
-  "ultima_rodada": "2026-11-24T15:55:42.676260+00:00",
+  "ultima_rodada": "2026-11-24T16:07:42.295230+00:00",
   "ultima_novidade": "2026-11-24T15:55:42.676260+00:00"
 }
