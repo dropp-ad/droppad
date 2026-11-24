@@ -4,16 +4,16 @@
       "etag": "W/\"5d2f-+0NwAdC23BRCv91OQ8kZi9uK8WQ\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"fc6be27b5cf28603c0dec74684e6f7d2\"",
-      "mod": "Tue, 24 Nov 2026 16:29:55 GMT"
+      "etag": "\"47c74a1d37006098bf6934a8d6802085\"",
+      "mod": "Tue, 24 Nov 2026 17:01:36 GMT"
     },
     "https://creativosbr.com.br/feed/": {
-      "etag": "W/\"c3bd8ebe6c3739cbbbabce0b1bc69afe\"",
-      "mod": "Tue, 24 Nov 2026 16:33:00 GMT"
+      "etag": "W/\"2e0c583c9e0d45fc659c9f4f48cc0d15\"",
+      "mod": "Tue, 24 Nov 2026 16:56:35 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
-      "etag": "\"22593ec6f167787d0d1fdc4fe545aa30\"",
-      "mod": "Tue, 24 Nov 2026 15:54:26 GMT"
+      "etag": "\"6d71408db6ace86598387f9f498c5549\"",
+      "mod": "Tue, 24 Nov 2026 17:07:15 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
       "mod": "Tue, 24 Nov 2026 16:06:43 GMT"
@@ -44,23 +44,23 @@
       "mod": "Tue, 24 Nov 2026 14:30:11 GMT"
     },
     "https://www.adworld.ie/feed/": {
-      "etag": "\"5f6dae78867c4fa973730624aec7dce1\"",
-      "mod": "Fri, 20 Nov 2026 14:40:39 GMT"
+      "etag": "\"b778f8e5ac045bc29a7be1e54d179c8b\"",
+      "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"b4e1cdcdac00e4014418029e642d6759\"",
-      "mod": "Tue, 24 Nov 2026 16:28:42 GMT"
+      "etag": "W/\"e7223f57a633776a3ca86df8de9b5157\"",
+      "mod": "Tue, 24 Nov 2026 17:06:28 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 16:37:45 GMT"
+      "mod": "Tue, 24 Nov 2026 17:07:45 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"65a314dc9998c319c0a90751ae90e97b\"",
       "mod": "Tue, 24 Nov 2026 09:24:54 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795538226-gzip\"",
-      "mod": "Tue, 24 Nov 2026 16:37:06 GMT"
+      "etag": "W/\"1795539304-gzip\"",
+      "mod": "Tue, 24 Nov 2026 16:55:04 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 16:37:46 GMT"
+      "mod": "Tue, 24 Nov 2026 17:07:46 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -142,58 +142,106 @@
       "mod": "Tue, 24 Nov 2026 14:42:27 GMT"
     },
     "https://roastbrief.com.mx/rss": {
-      "etag": "\"4240f3d40a49f2969de886da000381f0\"",
-      "mod": "Tue, 24 Nov 2026 16:33:35 GMT"
+      "etag": "\"4e8811d48c1c752660063f654f07b823\"",
+      "mod": "Tue, 24 Nov 2026 16:49:31 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
       "etag": "\"1b57134d0657f6f0c35ee53388f303a8\"",
       "mod": "Tue, 24 Nov 2026 13:11:00 GMT"
     }
   },
-  "yt_pos": 36,
+  "yt_pos": 54,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
       "AlmapBBDO": "almapbbdo",
       "Africa Creative": "africacreative",
-      "DPZ": "",
       "GUT": "gutagency",
       "Artplan": "artplan",
       "WMcCann": "wmccannbr",
       "Ogilvy": "ogilvy",
-      "Wieden+Kennedy": "",
       "Droga5": "droga5",
-      "BBH": "",
-      "adam&eveDDB": "",
       "Uncommon": "uncommoncreativestudio",
-      "VML": "",
       "Publicis": "publicis",
-      "Leo Burnett": "",
       "TBWA": "tbwa",
       "Saatchi & Saatchi": "saatchiandsaatchi",
       "Johannes Leonardo": "johannesleonardo",
       "Mischief": "mischiefusa",
-      "LePub": "",
       "Rethink": "rethinkideas",
       "Isle of Any": "isleofany",
       "TBWA\\Media Arts Lab": "tbwamal",
-      "DAVID": "",
-      "Motion Sickness": "",
       "Fallon": "fallon",
       "Publicis Conseil": "publicisconseil",
-      "Special": "",
       "WESAYHI": "wesayhi",
-      "Klick Health": "",
       "DDB": "ddbworldwide",
       "FCB": "fcbglobal",
       "Serviceplan": "serviceplan",
       "Bear Meets Eagle On Fire": "bearmeetseagleonfire",
-      "DM9": "",
       "BigTime Creative Shop": "bigtimecreativeshop",
-      "L&C": ""
+      "L&C": "",
+      "Dentsu Creative": "",
+      "GUT Buenos Aires": "gutbuenosaires",
+      "VCCP": "",
+      "DPZ": "dpzoficial",
+      "Wieden+Kennedy": "wiedenkennedy",
+      "BBH": "bbhlondon",
+      "adam&eveDDB": "adamandevetbwa",
+      "VML": "",
+      "Leo Burnett": "",
+      "LePub": "",
+      "DAVID": "",
+      "Motion Sickness": "",
+      "Klick Health": "klick.health",
+      "Special": ""
     },
-    "tentadas": {},
-    "pos": 65
+    "tentadas": {
+      "Known": [
+        "known"
+      ],
+      "DM9": [
+        "dm9"
+      ]
+    },
+    "pos": 83,
+    "revistas": [
+      "DPZ",
+      "Wieden+Kennedy",
+      "BBH",
+      "adam&eveDDB",
+      "VML",
+      "Leo Burnett",
+      "LePub",
+      "DAVID",
+      "Motion Sickness",
+      "Special",
+      "Klick Health",
+      "DM9"
+    ],
+    "rodadas": 24,
+    "site_ig": {
+      "DPZ": [
+        "dpzoficial"
+      ],
+      "Wieden+Kennedy": [
+        "wiedenkennedy"
+      ],
+      "BBH": [
+        "bbhlondon"
+      ],
+      "adam&eveDDB": [
+        "adamandevetbwa"
+      ],
+      "VML": [],
+      "Leo Burnett": [],
+      "LePub": [],
+      "DAVID": [],
+      "Motion Sickness": [],
+      "Special": [],
+      "Klick Health": [
+        "klick.health"
+      ],
+      "DM9": []
+    }
   },
   "vistos": [
     "https://www.meioemensagem.com.br/midia/folha-torna-anuncios-do-impresso-clicaveis-no-digital",
@@ -257,8 +305,11 @@
     "https://www.marketingdirecto.com/creacion/santander-publicis-flame-invitan-dejar-elegir-nueva-campana-iphone-18-pro",
     "https://www.marketingdirecto.com/anunciantes-general/gta-vi-prodigio-publicitario-anuncios-estan-paradojicamente-vetados-videojuego",
     "https://www.marketingdirecto.com/digital-general/digital/microsoft-advertising-renueva-pujas-automatizadas-mejoras-conversiones",
-    "https://www.marketingdirecto.com/campanas-navidenas/tenemos-mucho-que-dar-amor-torrons-vicens-navidad"
+    "https://www.marketingdirecto.com/campanas-navidenas/tenemos-mucho-que-dar-amor-torrons-vicens-navidad",
+    "https://www.adworld.ie/2026/11/20/aer-lingus-and-uncommon-reveal-thinking-behind-sharon-horgan-campaign",
+    "https://www.adworld.ie/2026/11/20/the-public-house-launches-new-nspca-campaign-your-donation-does-more",
+    "https://www.adworld.ie/2026/11/20/tesco-ireland-rolls-out-festive-ooh-campaign-with-talon-and-phd"
   ],
-  "ultima_rodada": "2026-11-24T16:37:43.058271+00:00",
+  "ultima_rodada": "2026-11-24T17:07:42.896031+00:00",
   "ultima_novidade": "2026-11-24T16:33:42.640549+00:00"
 }
