@@ -209,6 +209,7 @@ def rodada(fontes, vigia, agora, log, chave):
     revistas = st.setdefault("revistas", [])
     pendentes = [a for a in por_nome.values()
                  if a["nome"] not in contas or (contas[a["nome"]] == "" and a["nome"] not in revistas)]
+    pendentes.sort(key=lambda a: a.get("cc") != "BR")  # brasileiras primeiro (o feed é daqui)
     st["rodadas"] = st.get("rodadas", 0) + 1
 
     # enquanto o retroativo de 3 meses (ig_retroativo.py) não termina, o vigia usa metade das chamadas
