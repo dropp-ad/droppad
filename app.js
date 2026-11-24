@@ -875,11 +875,22 @@
     else if (e.key === "ArrowLeft" && active && active.kind === "story") storyGo(active.art, active.art._story.i - 1);
   });
 
-  /* ---------- Novidades: com a página aberta, confere campaigns.json a cada 5 minutos ---------- */
-  var lastCheck = Date.now(), pending = null;
-  function checkNew() {
+  /* ---------- Novidades: com a página aberta, confere a cada minuto se o robô publicou algo ----------
+     Confere novidades.json (poucos bytes) e só baixa campaigns.json inteiro quando ele mudou. */
+  var lastCheck = Date.now(), pending = null, lastStamp = null;
+  function pollNew() {
     lastCheck = Date.now();
-    fetch("campaigns.json", { cache: "no-store" })
+    fetch("novidades.json?t=" + Date.now(), { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (n) {
+        var stamp = n.atualizado + "|" + n.total + "|" + n.ultimo;
+        if (lastStamp === null) { lastStamp = stamp; return; }
+        if (stamp !== lastStamp) { lastStamp = stamp; checkNew(); }
+      })
+      .catch(function () { /* tenta de novo no próximo minuto */ });
+  }
+  function checkNew() {
+    fetch("campaigns.json?t=" + Date.now(), { cache: "no-store" })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (raw) {
         var fresh = normalize(raw);
@@ -903,8 +914,9 @@
       })
       .catch(function () { /* tenta de novo na próxima */ });
   }
-  setInterval(function () { if (!document.hidden) checkNew(); }, 5 * 60 * 1000);
-  document.addEventListener("visibilitychange", function () { if (!document.hidden && Date.now() - lastCheck > 60 * 1000) checkNew(); });
+  pollNew();
+  setInterval(function () { if (!document.hidden) pollNew(); }, 60 * 1000);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden && Date.now() - lastCheck > 60 * 1000) pollNew(); });
 
   /* ---------- Início ---------- */
   $("sound").addEventListener("click", function () { setSound(!sound); });

@@ -24,6 +24,7 @@ import os
 import re
 import sys
 import unicodedata
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -46,6 +47,15 @@ SITES_POR_RODADA = 60     # sites de agências/veículos testados por rodada (pr
 NOVOS_CANAIS_POR_RODADA = 40  # canais de YouTube de agências procurados pela primeira vez por rodada
 RETESTE_DIAS = 14         # site sem feed é testado de novo depois de N dias
 SIMULAR = bool(os.environ.get("SIMULAR"))
+# Modo rápido (vigia que roda a cada minuto): só o que é novo nas fontes já conhecidas
+# (feeds, canais do YouTube, Instagram). O trabalho pesado (arquivo histórico, buscas,
+# descobrir sites, capas antigas) continua na execução de hora em hora.
+RAPIDO = bool(os.environ.get("RAPIDO"))
+VIGIA = os.path.join(RAIZ, "robo", "vigia.json")
+NOVIDADES = os.path.join(RAIZ, "novidades.json")
+CANAIS_POR_MINUTO = 30    # canais de YouTube lidos por rodada no modo rápido (todos a cada ~5 min)
+MATERIAS_RAPIDO = 40      # matérias abertas por rodada no modo rápido
+MAX_VISTOS = 4000
 UA = "Mozilla/5.0 (compatible; ADDropBot/1.0; +https://github.com/pedrorosas/estreou-hoje)"
 
 AGORA = dt.datetime.now(dt.timezone.utc)
@@ -59,11 +69,30 @@ def log(*a):
     print(s, flush=True)
 
 
-def baixar(url, timeout=20, limite=3_000_000):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*", "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8,es;q=0.7"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
+def baixar(url, timeout=20, limite=3_000_000, cond=None):
+    """Baixa a página. Com cond (dicionário url → {etag, mod}), pede só se mudou: devolve None se não mudou."""
+    cab = {"User-Agent": UA, "Accept": "*/*", "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8,es;q=0.7"}
+    ant = (cond or {}).get(url) or {}
+    if ant.get("etag"):
+        cab["If-None-Match"] = ant["etag"]
+    if ant.get("mod"):
+        cab["If-Modified-Since"] = ant["mod"]
+    req = urllib.request.Request(url, headers=cab)
+    try:
+        r = urllib.request.urlopen(req, timeout=timeout)
+    except urllib.error.HTTPError as e:
+        if e.code == 304 and cond is not None:
+            return None
+        raise
+    with r:
         dados = r.read(limite)
         cs = r.headers.get_content_charset() or "utf-8"
+        if cond is not None:
+            novo = {k: v for k, v in (("etag", r.headers.get("ETag")), ("mod", r.headers.get("Last-Modified"))) if v}
+            if novo:
+                cond[url] = novo
+            else:
+                cond.pop(url, None)
     try:
         return dados.decode(cs, "replace")
     except LookupError:
@@ -316,16 +345,21 @@ def parece_feed(txt):
     return bool(re.search(r"<(rss|feed|rdf:RDF)[\s>]", txt[:2000]))
 
 
-def pegar_feed(fonte, estado, pagina=1):
-    """Tenta as URLs da fonte (lembra a que funcionou) e devolve os itens."""
+def pegar_feed(fonte, estado, pagina=1, cond=None):
+    """Tenta as URLs da fonte (lembra a que funcionou) e devolve os itens.
+    Com cond (modo rápido), devolve [] quando o feed não mudou desde a última leitura."""
     st = estado["feeds"].setdefault(fonte["nome"], {})
     urls = ([st["url"]] if st.get("url") else []) + [u for u in fonte["urls"] if u != st.get("url")]
+    if cond is not None and st.get("url"):
+        urls = [st["url"]]  # no modo rápido, só a URL que já funciona (as outras ficam para a execução de hora em hora)
     for u in urls:
         alvo = u
         if pagina > 1:
             alvo = u + ("&" if "?" in u else "?") + "paged=%d" % pagina
         try:
-            txt = baixar(alvo)
+            txt = baixar(alvo, timeout=12 if cond is not None else 20, cond=cond)
+            if txt is None:
+                return []
             if not parece_feed(txt):
                 continue
             itens = ler_feed(txt)
@@ -665,7 +699,7 @@ def fontes_dos_sites(fontes, estado):
     limite = (HOJE - dt.timedelta(days=RETESTE_DIAS)).isoformat()
     testar = [s for s in fontes.get("sites", [])
               if s["nome"] not in st or (not st[s["nome"]].get("feed") and st[s["nome"]].get("testado", "") < limite)]
-    testar = testar[:SITES_POR_RODADA]
+    testar = [] if RAPIDO else testar[:SITES_POR_RODADA]
     if testar:
         with cf.ThreadPoolExecutor(12) as ex:
             for s, feed in zip(testar, ex.map(lambda x: achar_feed(x["site"]), testar)):
@@ -681,18 +715,40 @@ def fontes_dos_sites(fontes, estado):
     return out
 
 
-def ler_canais(fontes, estado, dias=45):
-    """Vídeos novos dos canais de YouTube das agências: cada vídeo vira uma campanha com filme."""
+def ler_canais(fontes, estado, dias=45, vigia=None):
+    """Vídeos novos dos canais de YouTube das agências: cada vídeo vira uma campanha com filme.
+    No modo rápido (vigia), lê só uma fatia dos canais já conhecidos por rodada, em rodízio."""
     out = []
     limite = (HOJE - dt.timedelta(days=dias)).isoformat()
-    for ag in fontes.get("agencias", []):
-        if not ag.get("youtube"):
-            continue
+    ags = [a for a in fontes.get("agencias", []) if a.get("youtube")]
+    if vigia is not None:
+        ags = [a for a in ags if (estado.get("canais") or {}).get(a["nome"])]
+        if ags:
+            k = vigia.get("yt_pos", 0) % len(ags)
+            vigia["yt_pos"] = k + CANAIS_POR_MINUTO
+            ags = (ags + ags)[k:k + min(CANAIS_POR_MINUTO, len(ags))]
+    cond = vigia.setdefault("cond", {}) if vigia is not None else None
+
+    def baixar_canal(ag):
         cid = canal_id(ag, estado)
         if not cid:
+            return ag, cid, ""
+        try:
+            return ag, cid, baixar("https://www.youtube.com/feeds/videos.xml?channel_id=" + cid["id"], cond=cond)
+        except Exception as e:  # noqa: BLE001
+            return ag, cid, e
+    if vigia is not None:
+        with cf.ThreadPoolExecutor(10) as ex:
+            lidos = list(ex.map(baixar_canal, ags))
+    else:
+        lidos = [baixar_canal(a) for a in ags]
+    for ag, cid, xml in lidos:
+        if not cid or xml is None:
+            continue
+        if isinstance(xml, Exception):
+            log("  canal falhou:", ag["nome"], xml)
             continue
         try:
-            xml = baixar("https://www.youtube.com/feeds/videos.xml?channel_id=" + cid["id"])
             raiz = ET.fromstring(xml.encode("utf-8"))
         except Exception as e:  # noqa: BLE001
             log("  canal falhou:", ag["nome"], e)
@@ -721,8 +777,52 @@ def ler_canais(fontes, estado, dias=45):
                         "title": nome_t, "agency": ag["nome"], "source": "YouTube · " + cid["canal"],
                         "url": "https://www.youtube.com/watch?v=" + vid, "region": ag.get("regiao", "Global"),
                         "cc": ag.get("cc", ""), "yt": [vid],
-                        "summary": traduzir(primeira_frase(desc)) if desc and len(desc) > 40 else "",
+                        "summary": (primeira_frase(desc) if vigia is not None else traduzir(primeira_frase(desc)))
+                        if desc and len(desc) > 40 else "",
                         "addedAt": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")})
+    return out
+
+
+# ---------------------------------------------------------------- Instagram
+HASHTAG = re.compile(r"(?:^|\s)#\w+")
+
+
+def ler_instagram(fontes, vigia, dias=JANELA_DIAS):
+    """Posts recentes das contas de Instagram (robo/instagram.py): cada post de campanha vira uma
+    campanha com o post do Instagram embutido no lugar do filme."""
+    import instagram  # noqa: PLC0415  (fica ao lado deste arquivo)
+    out = []
+    limite = (HOJE - dt.timedelta(days=dias)).isoformat()
+    for p, conta in instagram.rodada(fontes, vigia, AGORA, log, chave):
+        legenda = p.get("caption") or ""
+        link = p.get("permalink") or ""
+        data = data_de(p.get("timestamp", ""))
+        if not link or not data or data < limite or data > HOJE.isoformat():
+            continue
+        linhas = [limpar(x) for x in legenda.splitlines() if limpar(HASHTAG.sub(" ", x)).strip(" .·-—|")]
+        titulo = HASHTAG.sub(" ", linhas[0]).strip(" .·-—|") if linhas else ""
+        titulo = re.sub(r"\s+", " ", titulo)
+        if len(titulo) > 140:
+            titulo = titulo[:139].rsplit(" ", 1)[0] + "…"
+        texto = limpar(HASHTAG.sub(" ", legenda))
+        if not titulo or EXCLUI.search(titulo) or PERGUNTA.search(titulo) or ENTREVISTA.search(texto[:400]):
+            continue
+        if not FORTE.search(texto[:600]) and p.get("media_type") != "VIDEO":
+            continue  # foto sem cara de campanha (bastidores, vagas, cultura da agência...)
+        marca = marca_de(titulo) or marca_de(texto[:300])
+        if not marca:
+            m = re.search(r"(?:for|para|pour|für|with|com|con|x)\s+@([\w.]{2,30})", texto, re.I)
+            marca = marca_ok(m.group(1).replace(".", " ").replace("_", " ").title()) if m else ""
+        if not marca or chave(marca) == chave(conta["nome"]):
+            continue
+        tipo = "reel" if "/reel/" in link else "p"
+        cod = link.rstrip("/").rsplit("/", 1)[-1]
+        out.append({"id": "%s-%s-%s" % (data, slug(marca, 20), slug(titulo, 36)), "date": data, "brand": marca,
+                    "title": titulo, "agency": conta.get("agencia") or "", "source": "Instagram · @" + conta["usuario"],
+                    "url": link, "region": conta.get("regiao", "Global"), "cc": conta.get("cc", ""),
+                    "video": "https://www.instagram.com/%s/%s/" % (tipo, cod),
+                    "summary": primeira_frase(texto) if len(texto) > len(titulo) + 20 else "",
+                    "addedAt": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")})
     return out
 
 
@@ -816,7 +916,11 @@ def main():
     estado.setdefault("bloqueados_yt", [])
     estado.setdefault("arquivo", {})
     camp = ler_json(CAMP, [])
-    log("Hoje (São Paulo):", HOJE, "| campanhas no site:", len(camp))
+    vigia = ler_json(VIGIA, {}) if RAPIDO else None
+    lista_vistos = list(vigia.get("vistos", [])) if RAPIDO else []
+    vistos_vigia = set(lista_vistos)
+    cond = vigia.setdefault("cond", {}) if RAPIDO else None
+    log("Hoje (São Paulo):", HOJE, "| campanhas no site:", len(camp), "| modo rápido" if RAPIDO else "")
 
     urls = {c.get("url", "").split("?")[0].rstrip("/") for c in camp}
     ids = {c.get("id") for c in camp}
@@ -834,7 +938,7 @@ def main():
         if not (minimo <= it["data"] <= HOJE.isoformat()):
             return
         u = it["link"].split("?")[0].rstrip("/")
-        if u in urls:
+        if u in urls or u in vistos_vigia:
             return
         if not parece_campanha(it["titulo"], "", fonte.get("so_campanhas")):
             return
@@ -842,7 +946,7 @@ def main():
 
     # 1) feeds, página 1
     def job_feed(f):
-        return f, pegar_feed(f, estado)
+        return f, pegar_feed(f, estado, cond=cond)
     with cf.ThreadPoolExecutor(12) as ex:
         for f, itens in ex.map(job_feed, todas_fontes):
             if itens is None:
@@ -854,6 +958,8 @@ def main():
 
     # 2) arquivo histórico: volta páginas nos feeds até ARQUIVO_INICIO
     def job_arquivo(f):
+        if RAPIDO:
+            return f, []  # arquivo histórico fica para a execução de hora em hora
         st = estado["arquivo"].setdefault(f["nome"], {"pagina": 1, "fim": False})
         if st.get("fim") or not estado["feeds"].get(f["nome"], {}).get("url"):
             return f, []
@@ -876,7 +982,7 @@ def main():
                 considerar(it, f, ARQUIVO_INICIO)
 
     # 3) buscas no Bing News (acha sites novos)
-    buscas = fontes.get("buscas", [])
+    buscas = [] if RAPIDO else fontes.get("buscas", [])
     if buscas:
         k = estado.get("proxima_busca", 0) % len(buscas)
         rodada = (buscas + buscas)[k:k + BUSCAS_POR_RODADA]
@@ -897,7 +1003,7 @@ def main():
                     estado["testados"][dom] = "pendente"
 
     # 4) testa sites novos: se tiverem feed com campanhas, viram fontes fixas
-    pend = [d for d, v in estado["testados"].items() if v == "pendente"][:TESTES_DESCOBERTA]
+    pend = [] if RAPIDO else [d for d, v in estado["testados"].items() if v == "pendente"][:TESTES_DESCOBERTA]
     for dom in pend:
         achou = None
         for u in ("https://%s/feed/" % dom, "https://%s/rss" % dom, "https://%s/feed" % dom, "https://%s/rss.xml" % dom):
@@ -932,7 +1038,14 @@ def main():
         vistos.update({u, k})
         fila.append((it, f))
     log("Candidatos a campanha:", len(fila))
-    fila = fila[:MAX_MATERIAS]
+    fila = fila[:MATERIAS_RAPIDO if RAPIDO else MAX_MATERIAS]
+    if RAPIDO:
+        # matéria aberta uma vez não é aberta de novo a cada minuto (entrando ou não no site)
+        for it, _ in fila:
+            u = it["link"].split("?")[0].rstrip("/")
+            if u not in vistos_vigia:
+                vistos_vigia.add(u)
+                lista_vistos.append(u)
 
     # 6) abre as matérias para pegar filmes
     def job_materia(par):
@@ -1018,11 +1131,19 @@ def main():
         marca_dia.add((chave(marca), it["data"]))
 
     # 6b) sites das próprias agências (portfólio): cada trabalho novo vira uma campanha
-    for c in ler_portfolios(fontes, estado, camp) + ler_canais(fontes, estado):
+    if RAPIDO:
+        extras = ler_canais(fontes, estado, vigia=vigia) + ler_instagram(fontes, vigia)
+    else:
+        extras = ler_portfolios(fontes, estado, camp) + ler_canais(fontes, estado)
+    for c in extras:
         if (chave(c["brand"]), c["date"]) in marca_dia or c["id"] in ids:
+            continue
+        if c["url"].split("?")[0].rstrip("/") in urls or (chave(c["brand"]), chave(c["title"])) in chaves:
             continue
         if c.get("yt") and all(y in yts_usados for y in c["yt"]):
             continue
+        if RAPIDO and c.get("summary"):
+            c["summary"] = traduzir(c["summary"])
         novas.append(c)
         ids.add(c["id"])
         marca_dia.add((chave(c["brand"]), c["date"]))
@@ -1030,9 +1151,9 @@ def main():
         log("  + portfólio:", c["source"], "|", c["brand"], "|", c["title"])
 
     # 7) capas das campanhas antigas sem filme
-    capas = 0 if SIMULAR else completar_imagens(camp, estado)
+    capas = 0 if SIMULAR or RAPIDO else completar_imagens(camp, estado)
     log("Capas novas em campanhas antigas:", capas)
-    fts = 0 if SIMULAR else completar_fotos(camp, estado)
+    fts = 0 if SIMULAR or RAPIDO else completar_fotos(camp, estado)
     log("Carrosséis novos em campanhas antigas:", fts)
     capas += fts
 
@@ -1042,17 +1163,28 @@ def main():
         for c in novas:
             log("  ~", c["date"], c["source"], "|", c["brand"], "|", c["title"][:90], "|", "filme" if c.get("yt") or c.get("video") else "card", "|", c["region"])
         return 0
-    estado["bloqueados_yt"] = sorted(bloqueados)
-    estado["ultima_execucao"] = AGORA.isoformat()
-    estado["ultimas_novas"] = len(novas)
-    salvar_json(ESTADO, estado)
-    salvar_json(FONTES, fontes)
+    if RAPIDO:
+        # o vigia não mexe em estado.json/fontes.json (são da execução de hora em hora)
+        vigia["vistos"] = lista_vistos[-MAX_VISTOS:]
+        vigia["ultima_rodada"] = AGORA.isoformat()
+        if novas:
+            vigia["ultima_novidade"] = AGORA.isoformat()
+        salvar_json(VIGIA, vigia)
+    else:
+        estado["bloqueados_yt"] = sorted(bloqueados)
+        estado["ultima_execucao"] = AGORA.isoformat()
+        estado["ultimas_novas"] = len(novas)
+        salvar_json(ESTADO, estado)
+        salvar_json(FONTES, fontes)
     if novas or capas:
         camp += novas
         camp.sort(key=lambda c: (c.get("date", ""), c.get("addedAt", "")), reverse=True)
         assert len({c["id"] for c in camp}) == len(camp)
         assert all(re.match(r"^\d{4}-\d{2}-\d{2}$", c["date"]) for c in camp)
         salvar_json(CAMP, camp)
+        # arquivo pequeno que o site confere a cada minuto (para não baixar campaigns.json à toa)
+        salvar_json(NOVIDADES, {"atualizado": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ"), "total": len(camp),
+                                "ultimo": camp[0]["id"] if camp else ""})
     com_filme = sum(1 for c in novas if c.get("yt") or c.get("video"))
     log("Novas campanhas: %d (%d com filme, %d como card)" % (len(novas), com_filme, len(novas) - com_filme))
     for c in novas[:40]:

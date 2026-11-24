@@ -1,8 +1,9 @@
 name: Atualizar AD Drop
 
-# Roda sozinho, sem Claude, de hora em hora (minuto 17, fora do pico do GitHub).
-# O agendador do GitHub atrasa e às vezes pula execuções; rodando toda hora,
-# uma execução perdida não deixa o site parado. Se não houver nada novo, não publica.
+# Trabalho pesado, sem Claude, de hora em hora (minuto 17, fora do pico do GitHub):
+# arquivo histórico, buscas por sites novos, capas e carrosséis das campanhas antigas.
+# As campanhas novas do dia entram pelo vigia (vigia.yml), que varre tudo a cada minuto.
+# Se não houver nada novo, não publica.
 on:
   schedule:
     - cron: "17 * * * *"
@@ -53,7 +54,7 @@ jobs:
           for tentativa in 1 2 3; do
             python robo/atualizar.py
             if [ -n "$SIMULAR" ]; then exit 0; fi
-            git add campaigns.json robo/estado.json robo/fontes.json
+            git add campaigns.json novidades.json robo/estado.json robo/fontes.json
             if git diff --cached --quiet; then
               echo "Nada novo."
               exit 0

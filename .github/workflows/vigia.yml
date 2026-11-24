@@ -1,0 +1,47 @@
+name: Vigia AD Drop (a cada minuto)
+
+# Varre as fontes a cada minuto e publica na hora o que for novo. Roda no GitHub,
+# sem depender de Claude nem de computador ligado.
+#
+# Como fica de pé para sempre:
+#  - cada job vigia por 5h40 (o GitHub corta jobs em 6h) e, ao terminar, chama o próximo;
+#  - o agendamento abaixo é a rede de segurança: se a corrente quebrar, um novo vigia
+#    entra na fila (o GitHub atrasa e pula agendamentos, por isso ele é só reserva).
+#  - "concurrency" garante um vigia por vez; o que chega com um já rodando espera a vez.
+#
+# Para desligar: Actions → "Vigia AD Drop" → ⋯ → Disable workflow.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/20 * * * *"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: vigia-ad-drop
+  cancel-in-progress: false
+
+jobs:
+  vigiar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Varrer as fontes a cada minuto
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: bash robo/vigia.sh
+
+      - name: Chamar o próximo vigia
+        if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run vigia.yml -R "${{ github.repository }}" --ref main
