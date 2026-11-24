@@ -1,22 +1,22 @@
 {
   "cond": {
     "https://www.b9.com.br/feed/": {
-      "etag": "W/\"5d2f-+0NwAdC23BRCv91OQ8kZi9uK8WQ\""
+      "etag": "W/\"5d2f-o2znJvubyBKV5heDNvTUFqHaMa8\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"47c74a1d37006098bf6934a8d6802085\"",
-      "mod": "Tue, 24 Nov 2026 17:01:36 GMT"
+      "etag": "\"1410dd4e4d5ad7970d64d0a7f5a63f55\"",
+      "mod": "Tue, 24 Nov 2026 18:01:45 GMT"
     },
     "https://creativosbr.com.br/feed/": {
       "etag": "W/\"2e0c583c9e0d45fc659c9f4f48cc0d15\"",
       "mod": "Tue, 24 Nov 2026 16:56:35 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
-      "etag": "\"65a37e9d9833c6779266178142afe881\"",
-      "mod": "Tue, 24 Nov 2026 17:20:31 GMT"
+      "etag": "\"885b82352bcdb0a8c6f01caa1ae89681\"",
+      "mod": "Tue, 24 Nov 2026 18:03:07 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Tue, 24 Nov 2026 17:34:43 GMT"
+      "mod": "Tue, 24 Nov 2026 17:47:42 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"47d7c34622a96a7cf76191dda1a04006\"",
@@ -40,27 +40,27 @@
       "etag": "W/\"2a882-FVLh2wELuFV5JZuXSKkh9Jadqg4\""
     },
     "https://www.nossomeio.com.br/feed/": {
-      "etag": "\"5fd278f1c1cef980a4b743e5bde69de1\"",
-      "mod": "Tue, 24 Nov 2026 14:30:11 GMT"
+      "etag": "\"9662e680753671354d84f2ccc259da08\"",
+      "mod": "Tue, 24 Nov 2026 18:04:10 GMT"
     },
     "https://www.adworld.ie/feed/": {
       "etag": "\"b778f8e5ac045bc29a7be1e54d179c8b\"",
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"3f95465f4330745bb1cee44f620b832d\"",
-      "mod": "Tue, 24 Nov 2026 17:27:27 GMT"
+      "etag": "W/\"f31ff5723c214847b38d2502bebb90f9\"",
+      "mod": "Tue, 24 Nov 2026 18:00:23 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Tue, 24 Nov 2026 17:37:50 GMT"
+      "mod": "Tue, 24 Nov 2026 18:04:46 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"65a314dc9998c319c0a90751ae90e97b\"",
       "mod": "Tue, 24 Nov 2026 09:24:54 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795541525-gzip\"",
-      "mod": "Tue, 24 Nov 2026 17:32:05 GMT"
+      "etag": "W/\"1795543453-gzip\"",
+      "mod": "Tue, 24 Nov 2026 18:04:13 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Tue, 24 Nov 2026 17:37:48 GMT"
+      "mod": "Tue, 24 Nov 2026 18:04:47 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -135,22 +135,22 @@
       "mod": "Tue, 24 Nov 2026 06:00:22 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Tue, 24 Nov 2026 17:36:27 GMT"
+      "mod": "Tue, 24 Nov 2026 18:03:22 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"fc116bded8fbc36b69abc5cba6644857\"",
       "mod": "Tue, 24 Nov 2026 14:42:27 GMT"
     },
     "https://roastbrief.com.mx/rss": {
-      "etag": "\"4e8811d48c1c752660063f654f07b823\"",
-      "mod": "Tue, 24 Nov 2026 16:49:31 GMT"
+      "etag": "\"5f20f5b7202eeeee77df30c4fea6f8d9\"",
+      "mod": "Tue, 24 Nov 2026 17:58:39 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
-      "etag": "\"77dd0db1115a352f8e603a243792883e\"",
-      "mod": "Tue, 24 Nov 2026 17:14:35 GMT"
+      "etag": "\"f3f16e4c53a0fab71753bd675db6b23c\"",
+      "mod": "Tue, 24 Nov 2026 17:43:47 GMT"
     }
   },
-  "yt_pos": 72,
+  "yt_pos": 63,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -203,14 +203,30 @@
       "MSQ Partners": "msqpartners",
       "ATTN:": "attnagency",
       "McCann": "",
-      "Courage": ""
+      "Courage": "",
+      "JOAN Creative": "joancreative",
+      "Sounds Fun": "",
+      "Colle McVoy": "collemcvoy",
+      "Crispin": "crispin",
+      "LOLA MullenLowe": "",
+      "alma": "almaagency",
+      "the community": "thecommunityagency",
+      "Giant Spoon": "giant_spoon",
+      "Silverside": "silversideai",
+      "FIG": "",
+      "Brains": "brainsagency",
+      "DNA&STONE": "dnaandstone"
     },
     "tentadas": {
-      "Sounds Fun": [
-        "soundsfun"
+      "Zulu Alpha Kilo": [
+        "zulualphakilo",
+        "zak"
+      ],
+      "Loop": [
+        "loopagency"
       ]
     },
-    "pos": 98,
+    "pos": 111,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -228,9 +244,14 @@
       "Dentsu Creative",
       "VCCP",
       "Mirimar",
-      "McCann"
+      "McCann",
+      "Courage",
+      "Sounds Fun",
+      "LOLA MullenLowe",
+      "FIG",
+      "Zulu Alpha Kilo"
     ],
-    "rodadas": 54,
+    "rodadas": 81,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -273,7 +294,24 @@
       "MSQ Partners": [],
       "ATTN:": [],
       "Courage": [],
-      "Sounds Fun": []
+      "Sounds Fun": [],
+      "JOAN Creative": [],
+      "LOLA MullenLowe": [],
+      "Colle McVoy": [
+        "collemcvoy"
+      ],
+      "Crispin": [],
+      "alma": [],
+      "the community": [],
+      "Giant Spoon": [
+        "giant_spoon"
+      ],
+      "FIG": [],
+      "Silverside": [],
+      "Zulu Alpha Kilo": [],
+      "Brains": [],
+      "DNA&STONE": [],
+      "Loop": []
     }
   },
   "vistos": [
@@ -342,8 +380,15 @@
     "https://www.adworld.ie/2026/11/20/aer-lingus-and-uncommon-reveal-thinking-behind-sharon-horgan-campaign",
     "https://www.adworld.ie/2026/11/20/the-public-house-launches-new-nspca-campaign-your-donation-does-more",
     "https://www.adworld.ie/2026/11/20/tesco-ireland-rolls-out-festive-ooh-campaign-with-talon-and-phd",
-    "https://www.merca20.com/peta-conmueve-a-todos-con-un-anuncio-navideno-donde-muestra-la-soledad-de-los-animales"
+    "https://www.merca20.com/peta-conmueve-a-todos-con-un-anuncio-navideno-donde-muestra-la-soledad-de-los-animales",
+    "https://www.horizont.net/marketing/nachrichten/kopf-hoch-report-wie-fritz-kola-die-laune-um-90-grad-hebt-236715",
+    "https://www.b9.com.br/artificial-poster-erros-ia-feitos-a-mao",
+    "https://www.b9.com.br/macaulay-culkin-mcdonalds-esqueceram-de-mim-natal-2026",
+    "https://roastbrief.com.mx/2026/11/el-ebenezer-scrooge-mas-atractivo-de-la-navidad-jonathan-bailey-y-ego-nwodim-protagonizan-el-irreverente-spot-navideno-de-verizon",
+    "https://nossomeio.com.br/havaianas-reune-combinacoes-da-cultura-brasileira-em-campanha-de-verao-criada-pela-galeria",
+    "https://nossomeio.com.br/maria-quiteria-filmes-ppa-globo-feminicidio",
+    "https://nossomeio.com.br/jcdecaux-reforca-time-comercial-com-isabella-pizzato-e-o-retorno-de-kevin-kim"
   ],
-  "ultima_rodada": "2026-11-24T17:37:43.165793+00:00",
-  "ultima_novidade": "2026-11-24T16:33:42.640549+00:00"
+  "ultima_rodada": "2026-11-24T18:04:42.842235+00:00",
+  "ultima_novidade": "2026-11-24T18:04:42.842235+00:00"
 }
