@@ -19,7 +19,7 @@ import urllib.parse
 import urllib.request
 
 GRAPH = "https://graph.facebook.com/v23.0"
-CHAMADAS_POR_RODADA = 3       # 3 por minuto = 180 por hora (limite da Meta: 200)
+CHAMADAS_POR_RODADA = 2       # 2 por minuto = 120 por hora (limite da Meta: ~200)
 TENTATIVAS_POR_AGENCIA = 3    # @ candidatos testados para achar a conta de cada agência
 POSTS_POR_CONTA = 8
 PAUSA_SE_USO = 75             # % de uso informado pela Meta que faz o robô pausar o Instagram

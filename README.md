@@ -26,5 +26,5 @@ Usa a conta @addrop.feed (Business, ligada à Página "AD Drop") pela Graph API,
 
 - Acha sozinho, aos poucos, o Instagram de cada agência da lista `agencias` (testa os @ do YouTube e o nome).
 - Contas extras (marcas, veículos) podem ser postas à mão em `robo/fontes.json` → `"instagram": [{"usuario": "@conta", "nome": "Nome", "regiao": "Brasil", "cc": "BR"}]`.
-- A Meta permite ~200 chamadas por hora; o vigia gasta 3 por minuto e pausa sozinho se a Meta avisar uso alto.
+- A Meta permite ~200 chamadas por hora; o vigia gasta 2 por minuto e pausa sozinho se a Meta avisar uso alto.
 - Se o token vencer ou for recusado, o log do vigia mostra "INSTAGRAM: token recusado" e o resto do robô continua funcionando. Basta gerar um token novo e trocar o secret `IG_TOKEN`.
