@@ -1,0 +1,55 @@
+name: Visualizações (modo 🔥)
+
+# Confere as visualizações dos filmes do YouTube e grava views.json, que o site usa
+# para ordenar o modo 🔥. Roda de hora em hora; cada rodada confere até 500 filmes,
+# priorizando as campanhas recentes.
+on:
+  schedule:
+    - cron: "41 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: views-ad-drop
+  cancel-in-progress: false
+
+jobs:
+  views:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Conferir e publicar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "AD Drop robô"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python robo/views.py
+          cp views.json /tmp/views.json
+          for tentativa in 1 2 3 4 5; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            cp /tmp/views.json views.json
+            git add views.json
+            if git diff --cached --quiet; then
+              echo "Nada novo."
+              exit 0
+            fi
+            git commit -q -m "Visualizações $(TZ=America/Sao_Paulo date '+%F %H:%M') (robô)"
+            if git push origin HEAD:main; then
+              gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null 2>&1 || true
+              exit 0
+            fi
+            echo "Push recusado; tentando de novo ($tentativa/5)."
+            sleep 5
+          done
+          exit 1

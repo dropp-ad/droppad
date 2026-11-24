@@ -190,6 +190,16 @@
   var state = { items: [], list: [], shown: 0, region: "", onlyFilms: false, perDay: {}, home: { cc: "BR", label: "Brasil" } };
   var sound = false;
 
+  /* visualizações gravadas pelo robô (robo/views.py), para o modo 🔥 */
+  var VIEWS = {};
+  function viewsOf(c) { var v = VIEWS[c.id]; return v && v.v ? v.v : 0; }
+  function loadViews() {
+    return fetch("views.json?t=" + Math.floor(Date.now() / 600000), { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (j) { if (j && typeof j === "object") VIEWS = j; })
+      .catch(function () { /* sem visualizações: o 🔥 fica pela ordem normal */ });
+  }
+
   var popCache = {};
   function popOf(id) {
     if (!popCache[id]) {
@@ -219,8 +229,13 @@
     day.appendChild(who);
     top.appendChild(day);
     var side = el("span", "side");
-    var tot = state.perDay[c.date] || 0;
-    side.appendChild(el("span", "pos", (idxInDay + 1) + " de " + tot));
+    if (state.region === "hot") {
+      var vv = viewsOf(c);
+      side.appendChild(el("span", "pos hot", "#" + (idxInDay + 1) + (vv ? " · " + fmtNum(vv) + " views" : "")));
+    } else {
+      var tot = state.perDay[c.date] || 0;
+      side.appendChild(el("span", "pos", (idxInDay + 1) + " de " + tot));
+    }
     var cm = el("button", "act cmt");
     cm.type = "button";
     cm.title = "Comentários";
@@ -311,7 +326,8 @@
     if (c.url) foot.appendChild(link("src", "Ler em " + (c.source || "fonte") + " ↗", c.url));
     var pop = el("span", "pop");
     foot.appendChild(pop);
-    if (c.yt.length) popOf(c.yt[0]).then(function (v) { if (v.views) pop.textContent = fmtNum(v.views) + " views"; });
+    if (viewsOf(c)) pop.textContent = fmtNum(viewsOf(c)) + " views";
+    else if (c.yt.length) popOf(c.yt[0]).then(function (v) { if (v.views) pop.textContent = fmtNum(v.views) + " views"; });
     ov.appendChild(foot);
     frame.appendChild(ov);
     art.appendChild(frame);
@@ -979,13 +995,22 @@
     state.list = state.items.filter(function (c) {
       if (state.onlyFilms && !c.fl.length) return false;
       if (state.upTo && c.date > state.upTo) return false;
-      if (state.region === "home") { if (!homeMatch(c)) return false; }
+      if (state.region === "hot") { /* 🔥: o mundo inteiro, mais vistas primeiro */ }
+      else if (state.region === "home") { if (!homeMatch(c)) return false; }
       else if (!state.region) { if (homeMatch(c)) return false; } // Mundo = tudo menos o país de quem entra
       else if (regiaoDe(c) !== state.region) return false;
       return true;
     });
     state.perDay = {};
-    state.list.forEach(function (c) { c._k = state.perDay[c.date] || 0; state.perDay[c.date] = c._k + 1; });
+    if (state.region === "hot") {
+      state.list = state.list.slice().sort(function (a, b) {
+        var d = viewsOf(b) - viewsOf(a);
+        return d || (a.date < b.date ? 1 : a.date > b.date ? -1 : 0);
+      });
+      state.list.forEach(function (c, i) { c._k = i; });
+    } else {
+      state.list.forEach(function (c) { c._k = state.perDay[c.date] || 0; state.perDay[c.date] = c._k + 1; });
+    }
     renderChips();
     renderCal();
     if (!skipMore) renderMore();
@@ -1003,6 +1028,8 @@
     var h = state.home;
     chip(flagOf(h.cc) + " " + h.label, state.region === "home", function () { state.region = "home"; });
     chip("Mundo", !state.region, function () { state.region = ""; });
+    chip("🔥", state.region === "hot", function () { state.region = "hot"; });
+    var hb = box.lastChild; hb.title = "Mais vistas primeiro"; hb.setAttribute("aria-label", "Mais vistas primeiro");
     // tipo: só vídeos ou tudo
     var t = $("tipo");
     t.textContent = "";
@@ -1115,6 +1142,9 @@
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (raw) {
       state.items = normalize(raw);
+      return loadViews().then(function () { return raw; });
+    })
+    .then(function () {
       return detectCountry().then(function (cc) {
         setHome(cc);
         $("status").hidden = true;
