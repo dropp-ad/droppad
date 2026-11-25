@@ -16,7 +16,7 @@
       "mod": "Wed, 25 Nov 2026 19:10:19 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 18:19:34 GMT"
+      "mod": "Wed, 25 Nov 2026 18:40:39 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"1704207f0553cbc1d0df2392bdae1273\"",
@@ -37,8 +37,8 @@
       "etag": "W/\"30e0a-6AngXMIM6AU2+3tVXusXXMQoq/U\""
     },
     "https://www.nossomeio.com.br/feed/": {
-      "etag": "\"feae2d11690f73d823e4f219ca65d08c\"",
-      "mod": "Wed, 25 Nov 2026 19:44:09 GMT"
+      "etag": "\"07a665b4a38ead203a0dbe03bc072a58\"",
+      "mod": "Wed, 25 Nov 2026 20:01:35 GMT"
     },
     "https://www.adworld.ie/feed/": {
       "etag": "\"b778f8e5ac045bc29a7be1e54d179c8b\"",
@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 19:53:40 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 19:58:39 GMT"
+      "mod": "Wed, 25 Nov 2026 20:01:54 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 19:58:41 GMT"
+      "mod": "Wed, 25 Nov 2026 20:01:56 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -135,8 +135,8 @@
       "mod": "Wed, 25 Nov 2026 19:58:36 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"3e5374936cac0417574606a5b14ae1b3\"",
-      "mod": "Wed, 25 Nov 2026 19:45:00 GMT"
+      "etag": "\"66eb3ab31fae67f343ad348e1d2067bf\"",
+      "mod": "Wed, 25 Nov 2026 20:00:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"044f18e7883acea905f9e256da94fecd\"",
@@ -159,7 +159,7 @@
       "mod": "Tue, 27 Oct 2026 14:40:14 GMT"
     },
     "https://www.thjnk.ch/blog-feed.xml": {
-      "mod": "Wed, 25 Nov 2026 14:19:39 GMT"
+      "mod": "Wed, 25 Nov 2026 19:01:46 GMT"
     },
     "https://www.tbwa.it/feed/": {
       "etag": "W/\"b893c0154ed7bafaac2f0b8c9b414324\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 19:58:41 GMT"
+      "mod": "Wed, 25 Nov 2026 20:00:56 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"2751a357c40a03e272dea79e0bab7eeb\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 19:53:41 GMT"
+      "mod": "Wed, 25 Nov 2026 20:01:57 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -301,7 +301,7 @@
       "mod": "Thu, 29 Oct 2026 19:32:20 GMT"
     }
   },
-  "yt_pos": 118,
+  "yt_pos": 86,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -863,14 +863,11 @@
       "AKQA London": "",
       "AKQA Amsterdam": "",
       "AKQA Paris": "",
-      "AKQA Berlin": ""
+      "AKQA Berlin": "",
+      "R/GA London": ""
     },
-    "tentadas": {
-      "R/GA London": [
-        "rgalondon"
-      ]
-    },
-    "pos": 858,
+    "tentadas": {},
+    "pos": 859,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1124,9 +1121,10 @@
       "Publicis Germany",
       "AKQA London",
       "AKQA Amsterdam",
-      "AKQA Paris"
+      "AKQA Paris",
+      "AKQA Berlin"
     ],
-    "rodadas": 1634,
+    "rodadas": 1637,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2798,8 +2796,9 @@
     "https://www.horizont.net/marketing/diese-kaffee-spots-ueberzeugen-verbraucher-am-meisten-664961",
     "https://www.merca20.com/retromarketing-in-2008-burger-king-mexico-released-these-8-collectible-snoopy-figures-now-18-years-later-hes-back-in-a-new-campaign",
     "https://bornandraisedagency.com/news/born-and-raised-and-njm-insurance-group-bring-new-twists-to-insuranoia-with-two-spots-that-turn-everyday-worries-into-absurd-scenarios",
-    "https://theshipyard.com/the-shipyard-welcomes-gearshift-advertising-strengthening-creative-and-powersports-expertise"
+    "https://theshipyard.com/the-shipyard-welcomes-gearshift-advertising-strengthening-creative-and-powersports-expertise",
+    "https://nossomeio.com.br/subway-campanha-cle-o-pires-luisa-perisse-nepo-babies"
   ],
-  "ultima_rodada": "2026-11-25T19:58:35.328658+00:00",
-  "ultima_novidade": "2026-11-25T18:23:34.255939+00:00"
+  "ultima_rodada": "2026-11-25T20:01:50.980710+00:00",
+  "ultima_novidade": "2026-11-25T20:01:50.980710+00:00"
 }
