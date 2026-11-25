@@ -58,7 +58,7 @@
         region: str(x.region), cc: str(x.cc).toUpperCase(), summary: str(x.summary),
         yt: arr(x.yt, function (s) { return /^[\w-]{11}$/.test(s); }),
         video: safeUrl(str(x.video)), image: safeUrl(str(x.image) || (Array.isArray(x.images) ? str(x.images[0]) : "")),
-        addedAt: str(x.addedAt),
+        addedAt: str(x.addedAt), story: arr(x.story, Boolean), st: !!x.st,
         idea: str(x.idea), frase: str(x.frase), credits: creditsOf(x)
       };
       c.fl = films(c);
@@ -237,6 +237,35 @@
   }
   var ICON_DOTS = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="3" height="3"/><rect x="10.5" y="11" width="3" height="3"/><rect x="17" y="11" width="3" height="3"/></svg>';
 
+  /* campanha sem filme: a notícia contada no próprio post (título + parágrafos da matéria) */
+  function newsBlock(c) {
+    var box = el("div", "news rv");
+    box.style.setProperty("--i", 3);
+    box.appendChild(el("h3", null, c.title));
+    var body = el("div", "news-body");
+    box.appendChild(body);
+    function fill(story) {
+      var shown = fraseDe(c).slice(0, 60), total = 0;
+      body.textContent = "";
+      (story || []).some(function (t) {
+        t = str(t);
+        if (!t || t.slice(0, 60) === shown) return false;
+        body.appendChild(el("p", null, t));
+        total += t.length;
+        return body.children.length >= 4 || total > 900;
+      });
+    }
+    fill(c.story);
+    if (c.st && !body.children.length) {
+      fetch("historia/" + encodeURIComponent(c.id) + ".json")
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (j) { fill(j.story); })
+        .catch(function () { /* fica só com o título e o link */ });
+    }
+    if (c.url) box.appendChild(link("news-more", "Ler a matéria completa em " + (c.source || "fonte") + " ↗", c.url));
+    return box;
+  }
+
   function post(c, idxInDay) {
     var art = el("article", "post");
     art._c = c;
@@ -282,7 +311,7 @@
     art.appendChild(txt);
 
     // o filme
-    var media = el("div", "media");
+    var media = el("div", "media"), news = null;
     if (c.fl.length) {
       art.classList.add("is-film");
       var cover = el("div", "cover");
@@ -340,17 +369,31 @@
         else activate(art, true);
       });
     } else {
-      // sem filme: a imagem da matéria no mesmo quadro 16:9
+      // sem filme: a foto da matéria (se houver) e, embaixo, a notícia contada
       art.classList.add("is-card");
-      var pic = c.image;
-      var cv = el("div", "cover");
-      if (pic) cv.appendChild(img(pic, function () { cv.appendChild(poster(c)); }));
-      else cv.appendChild(poster(c));
-      media.appendChild(cv);
+      news = newsBlock(c);
+      if (c.image) {
+        var cv = el("div", "cover");
+        cv.appendChild(img(c.image, function () {
+          // foto quebrada: some o quadro e a notícia assume o lugar
+          if (io) io.unobserve(media);
+          if (pxIO) pxIO.unobserve(media);
+          media.remove();
+          news.insertBefore(el("span", "stamp", selo(c.date)), news.firstChild);
+          watch(news);
+        }));
+        media.appendChild(cv);
+      } else {
+        media = null;
+        news.insertBefore(el("span", "stamp", selo(c.date)), news.firstChild);
+      }
     }
-    media.appendChild(el("span", "stamp", selo(c.date)));
-    media.classList.add("rv"); media.style.setProperty("--i", 2);
-    art.appendChild(media);
+    if (media) {
+      media.appendChild(el("span", "stamp", selo(c.date)));
+      media.classList.add("rv"); media.style.setProperty("--i", 2);
+      art.appendChild(media);
+    }
+    if (news) art.appendChild(news);
 
     // comentar, compartilhar, ver matéria
     var acts = el("div", "acts");
@@ -368,15 +411,15 @@
     sh.addEventListener("click", function (e) { e.stopPropagation(); share(c, sh); });
     acts.appendChild(sh);
     if (c.url) acts.appendChild(link("link", "Ver matéria ↗", c.url));
-    acts.classList.add("rv"); acts.style.setProperty("--i", 3);
+    acts.classList.add("rv"); acts.style.setProperty("--i", news ? 4 : 3);
     art.appendChild(acts);
     paintCount(art);
 
-    media._art = art;
-    art._media = media;
-    if (io) io.observe(media);
+    // o que decide qual post está "na tela": o filme/foto, ou a notícia quando não há foto
+    function watch(n) { n._art = art; art._media = n; if (io) io.observe(n); }
+    watch(media || news);
     if (inIO) inIO.observe(art); else art.classList.add("in");
-    if (pxIO) pxIO.observe(media);
+    if (pxIO && media) pxIO.observe(media);
     return art;
   }
 

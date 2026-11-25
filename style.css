@@ -133,6 +133,14 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .fdot { width: 8px; height: 8px; background: rgba(255, 255, 255, .45); }
 .fdot.on { background: #fff; width: 20px; }
 .is-card .media { cursor: default; }
+/* a notícia, quando a campanha não tem filme */
+.news { padding: 14px 18px 4px; }
+.is-card .media + .news { padding-top: 16px; }
+.news .stamp { position: static; display: inline-block; margin: 0 0 12px; }
+.news h3 { margin: 0 0 8px; font-size: 16px; font-weight: 700; line-height: 1.35; }
+.news-body p { margin: 0 0 10px; font-size: 14.5px; line-height: 1.6; color: var(--txt-2); }
+.news-body:empty { display: none; }
+.news-more { display: inline-block; margin: 2px 0 10px; font-size: 13px; font-weight: 600; text-decoration: none; }
 
 .acts { display: flex; align-items: center; gap: 4px; padding: 6px 8px; border-top: 1px solid var(--line); }
 .act { display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 12px; font-size: 14px; font-weight: 600; transition: color var(--t-fast) var(--ease); }
@@ -141,9 +149,9 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .act .n { color: var(--muted); font-weight: 500; }
 .link { margin-left: auto; padding: 0 12px; font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; }
 /* links: sublinhado que se desenha da esquerda pra direita */
-.link, .who small a { background: linear-gradient(currentColor, currentColor) no-repeat left bottom / 0 1px; background-origin: content-box;
+.link, .who small a, .news-more { background: linear-gradient(currentColor, currentColor) no-repeat left bottom / 0 1px; background-origin: content-box;
   transition: color var(--t-fast) var(--ease), background-size var(--t-mid) var(--ease); }
-.link:hover, .who small a:hover { background-size: 100% 1px; }
+.link:hover, .who small a:hover, .news-more:hover { background-size: 100% 1px; }
 
 /* ---------- convite pra rolar ---------- */
 .more-cue { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; height: 110px; display: flex; align-items: flex-end; justify-content: center;
