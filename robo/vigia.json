@@ -16,15 +16,15 @@
       "mod": "Tue, 24 Nov 2026 22:45:02 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 02:14:58 GMT"
+      "mod": "Wed, 25 Nov 2026 02:35:57 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"735d697851667a8899f4aec0a763dfc2\"",
       "mod": "Tue, 24 Nov 2026 23:46:18 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"7c6a68451af7cab22f14bc4a32eb9d36\"",
-      "mod": "Tue, 24 Nov 2026 22:22:57 GMT"
+      "etag": "\"b037f7640f98f2caea39c03e06e7521f\"",
+      "mod": "Tue, 24 Nov 2026 22:26:40 GMT"
     },
     "https://www.marketingdirecto.com/rss": {
       "mod": "Tue, 24 Nov 2026 16:23:42 GMT"
@@ -48,15 +48,15 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"6bc09b42ed94588943390efaee00a7f7\"",
-      "mod": "Wed, 25 Nov 2026 01:04:56 GMT"
+      "etag": "W/\"8e30365a549a5f7ef0b52442e76e84e2\"",
+      "mod": "Wed, 25 Nov 2026 02:33:59 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 02:18:58 GMT"
+      "mod": "Wed, 25 Nov 2026 02:47:58 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"c5b5eced6c213b85f5ac22e6cb469905\"",
-      "mod": "Wed, 25 Nov 2026 02:05:53 GMT"
+      "etag": "\"a8196bf3e12c6b6ec8d3b704fdb9475c\"",
+      "mod": "Wed, 25 Nov 2026 02:47:54 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795569902-gzip\"",
@@ -74,8 +74,8 @@
       "mod": "Tue, 24 Nov 2026 18:12:27 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"0a7612e8f892500d7eaee727fbfde4d9\"",
-      "mod": "Wed, 25 Nov 2026 02:18:43 GMT"
+      "etag": "\"eeb521377a5d5642acab1282068838a5\"",
+      "mod": "Wed, 25 Nov 2026 02:43:15 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
       "etag": "\"f63df64606a6686f991170ed6542fd53\"",
@@ -93,7 +93,7 @@
       "mod": "Tue, 24 Nov 2026 23:42:55 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 02:13:34 GMT"
+      "mod": "Wed, 25 Nov 2026 02:47:13 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
       "etag": "\"01865794e34ab23b0cd5491d7a065892\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 02:19:00 GMT"
+      "mod": "Wed, 25 Nov 2026 02:47:59 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -131,8 +131,8 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://thestable.com.au/feed/": {
-      "etag": "\"79705c71cbabc1a9741de6024850d3a4\"",
-      "mod": "Wed, 25 Nov 2026 01:31:54 GMT"
+      "etag": "\"b0aa52e685a5e8e54c7d759cd5b0b327\"",
+      "mod": "Wed, 25 Nov 2026 02:46:38 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
       "mod": "Tue, 24 Nov 2026 22:57:55 GMT"
@@ -189,7 +189,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 91,
+  "yt_pos": 85,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -397,20 +397,20 @@
       "LiveAD": "",
       "Peppery": "pepperyagency",
       "Mutato": "mutato.oralclinic",
-      "CasaRex": "casarexdesign"
+      "CasaRex": "casarexdesign",
+      "11:21": "",
+      "Binder": "binder"
     },
     "tentadas": {
       "Zambezi": [
         "zmbz"
       ],
-      "11:21": [
-        "onzevinteum",
-        "1121.ag",
-        "1121agencia",
-        "1121"
+      "Calia": [
+        "agenciacalia",
+        "caliay2"
       ]
     },
-    "pos": 328,
+    "pos": 343,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -477,9 +477,10 @@
       "Fbiz",
       "Suno United Creators",
       "B&Partners",
-      "LiveAD"
+      "LiveAD",
+      "11:21"
     ],
-    "rodadas": 575,
+    "rodadas": 604,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -836,7 +837,11 @@
       "CasaRex": [
         "casarexdesign"
       ],
-      "11:21": []
+      "11:21": [],
+      "Binder": [],
+      "Calia": [
+        "agenciacalia"
+      ]
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -1179,7 +1184,62 @@
       "wearesocialpl": "2026-11-25T02:11:56.184526+00:00",
       "wearesocialch": "2026-11-25T02:11:56.184526+00:00",
       "joepublicza": "2026-11-25T02:11:56.184526+00:00",
-      "vmlsa": "2026-11-25T02:17:55.837377+00:00"
+      "vmlsa": "2026-11-25T02:17:55.837377+00:00",
+      "avataragencygroup": "2026-11-25T02:19:56.107162+00:00",
+      "rogerwilcoza": "2026-11-25T02:21:55.820330+00:00",
+      "hellocomputer": "2026-11-25T02:23:55.814744+00:00",
+      "dukegroupza": "2026-11-25T02:25:55.816235+00:00",
+      "wearesocialat": "2026-11-25T02:26:56.061988+00:00",
+      "wearesocialfi": "2026-11-25T02:26:56.061988+00:00",
+      "wearesocialgr": "2026-11-25T02:26:56.061988+00:00",
+      "wearesocialro": "2026-11-25T02:26:56.061988+00:00",
+      "wearesocialcz": "2026-11-25T02:26:56.061988+00:00",
+      "wearesocialhu": "2026-11-25T02:26:56.061988+00:00",
+      "wearesocialhr": "2026-11-25T02:26:56.061988+00:00",
+      "wearesocialua": "2026-11-25T02:26:56.061988+00:00",
+      "wearesocialtr": "2026-11-25T02:26:56.061988+00:00",
+      "wearesocialbaltic": "2026-11-25T02:26:56.061988+00:00",
+      "k2agency": "2026-11-25T02:26:56.061988+00:00",
+      "andco_cph": "2026-11-25T02:26:56.061988+00:00",
+      "antoni_agency": "2026-11-25T02:26:56.061988+00:00",
+      "thjnk_ag": "2026-11-25T02:26:56.061988+00:00",
+      "grabarzpartner": "2026-11-25T02:26:56.061988+00:00",
+      "bbdogermany": "2026-11-25T02:26:56.061988+00:00",
+      "mediabrandssa": "2026-11-25T02:27:55.358010+00:00",
+      "mindshareza": "2026-11-25T02:29:55.763887+00:00",
+      "caratza": "2026-11-25T02:31:55.483637+00:00",
+      "phdza": "2026-11-25T02:33:55.811098+00:00",
+      "zenithza": "2026-11-25T02:35:55.879804+00:00",
+      "scangroupafrica": "2026-11-25T02:37:56.074961+00:00",
+      "redskyke": "2026-11-25T02:39:55.904293+00:00",
+      "ignitekenya": "2026-11-25T02:41:56.294575+00:00",
+      "superheroes_ams": "2026-11-25T02:42:56.216427+00:00",
+      "theambition_ams": "2026-11-25T02:42:56.216427+00:00",
+      "rosaparis": "2026-11-25T02:42:56.216427+00:00",
+      "ogilvyparis": "2026-11-25T02:42:56.216427+00:00",
+      "tbwabrussels": "2026-11-25T02:42:56.216427+00:00",
+      "boondoggle_be": "2026-11-25T02:42:56.216427+00:00",
+      "rocketagencyau": "2026-11-25T02:42:56.216427+00:00",
+      "eightclients": "2026-11-25T02:42:56.216427+00:00",
+      "firstpageaustralia": "2026-11-25T02:42:56.216427+00:00",
+      "soupagency": "2026-11-25T02:42:56.216427+00:00",
+      "intrepiddigitalau": "2026-11-25T02:42:56.216427+00:00",
+      "thrivedigitalau": "2026-11-25T02:42:56.216427+00:00",
+      "uprisedigitalau": "2026-11-25T02:42:56.216427+00:00",
+      "8020digitalau": "2026-11-25T02:42:56.216427+00:00",
+      "blendcommerce": "2026-11-25T02:42:56.216427+00:00",
+      "themonkeys_syd": "2026-11-25T02:42:56.216427+00:00",
+      "clemengerbbdo": "2026-11-25T02:42:56.216427+00:00",
+      "howatsoncompany": "2026-11-25T02:42:56.216427+00:00",
+      "terrieragencynz": "2026-11-25T02:42:56.216427+00:00",
+      "humandigitalnz": "2026-11-25T02:42:56.216427+00:00",
+      "webantlernz": "2026-11-25T02:42:56.216427+00:00",
+      "sprocketdigitalnz": "2026-11-25T02:42:56.216427+00:00",
+      "prizmdigitalnz": "2026-11-25T02:42:56.216427+00:00",
+      "idigitalnz": "2026-11-25T02:42:56.216427+00:00",
+      "amicusdigitalau": "2026-11-25T02:42:56.216427+00:00",
+      "houseofbraveza": "2026-11-25T02:43:56.092341+00:00",
+      "machine_za": "2026-11-25T02:47:55.519919+00:00"
     }
   },
   "vistos": [
@@ -1314,8 +1374,10 @@
     "https://www.bandt.com.au/misleading-ads-are-a-cause-for-concern-clearads-launches-trust-mark-to-restore-trust-in-wave-of-ai-online-scams",
     "https://www.bandt.com.au/teads-unifies-ctv-digital-buying-in-next-generation-of-ad-manager",
     "https://campaignbrief.com/reminder-mad-hatterz-of-advertising-hat-exchange-hits-bodriggy-tomorrow-night-in-melbourne",
-    "https://campaignbrief.com/suzuki-jimny-makes-light-work-of-victorias-pothole-problem-in-new-film-via-atimeplace"
+    "https://campaignbrief.com/suzuki-jimny-makes-light-work-of-victorias-pothole-problem-in-new-film-via-atimeplace",
+    "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-part-advertising",
+    "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-past-advertising"
   ],
-  "ultima_rodada": "2026-11-25T02:18:55.629219+00:00",
+  "ultima_rodada": "2026-11-25T02:47:55.519919+00:00",
   "ultima_novidade": "2026-11-25T02:18:55.629219+00:00"
 }
