@@ -19,8 +19,8 @@
       "mod": "Wed, 25 Nov 2026 21:52:58 GMT"
     },
     "https://www.informabtl.com/feed/": {
-      "etag": "W/\"4e52a190cc8f48e5c663e673bea8188c\"",
-      "mod": "Wed, 25 Nov 2026 22:37:26 GMT"
+      "etag": "W/\"38ea21883fe328864fef26972f36f925\"",
+      "mod": "Wed, 25 Nov 2026 23:07:29 GMT"
     },
     "https://propmark.com.br/feed/": {
       "etag": "\"9ff68cc555036d03f60f45a558d072cc\"",
@@ -45,15 +45,15 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"abf21752299a665f15601e94f9eab87b\"",
-      "mod": "Wed, 25 Nov 2026 22:44:33 GMT"
+      "etag": "W/\"890af3d03c33f97ce8fd5aee6d00d237\"",
+      "mod": "Wed, 25 Nov 2026 23:19:50 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 22:52:00 GMT"
+      "mod": "Wed, 25 Nov 2026 23:21:00 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"200c5190566dc07a9f4bc2aba9bb30ff\"",
-      "mod": "Wed, 25 Nov 2026 22:47:10 GMT"
+      "etag": "\"50f429f1c26dbf0df330b6df6f003d60\"",
+      "mod": "Wed, 25 Nov 2026 23:15:03 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795639566-gzip\"",
@@ -71,15 +71,15 @@
       "mod": "Wed, 25 Nov 2026 16:15:51 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"d4862c61a02aff5f59a0a9af48698fa6\"",
-      "mod": "Wed, 25 Nov 2026 22:48:38 GMT"
+      "etag": "\"a3d6f15f25e90daef2259f2ec2d1e2ab\"",
+      "mod": "Wed, 25 Nov 2026 23:11:21 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
       "etag": "\"f63df64606a6686f991170ed6542fd53\"",
       "mod": "Wed, 25 Nov 2026 00:46:19 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Wed, 25 Nov 2026 12:17:12 GMT"
+      "mod": "Wed, 25 Nov 2026 23:21:01 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"404da0c5daf43a17d66a6e6193e5de2a\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 22:52:01 GMT"
+      "mod": "Wed, 25 Nov 2026 23:22:01 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -128,15 +128,15 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://thestable.com.au/feed/": {
-      "etag": "\"c09d4d04b0199abba2716084abf2a896\"",
-      "mod": "Wed, 25 Nov 2026 22:29:09 GMT"
+      "etag": "\"f8aff933227579a494d8cf27f21df007\"",
+      "mod": "Wed, 25 Nov 2026 23:03:07 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 22:49:19 GMT"
+      "mod": "Wed, 25 Nov 2026 23:12:26 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"5bb269a2f83f53072745d3c922f31c4f\"",
-      "mod": "Wed, 25 Nov 2026 22:45:00 GMT"
+      "etag": "\"9b648a23a0508f98af47ee75a62143e8\"",
+      "mod": "Wed, 25 Nov 2026 23:15:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"70cd0f6a2e9c06acc2d0faaf3ae2f4c8\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 22:51:12 GMT"
+      "mod": "Wed, 25 Nov 2026 23:21:58 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 22:43:03 GMT"
+      "mod": "Wed, 25 Nov 2026 23:16:03 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -301,7 +301,7 @@
       "mod": "Thu, 29 Oct 2026 19:32:20 GMT"
     }
   },
-  "yt_pos": 102,
+  "yt_pos": 148,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -900,19 +900,23 @@
       "We Are Social Norway": "",
       "We Are Social Portugal": "",
       "We Are Social Poland": "",
-      "We Are Social Ireland": ""
+      "We Are Social Ireland": "",
+      "We Are Social Switzerland": "",
+      "We Are Social Austria": "",
+      "We Are Social Finland": "",
+      "We Are Social Greece": "",
+      "We Are Social Romania": "",
+      "We Are Social Czechia": "",
+      "We Are Social Hungary": "",
+      "We Are Social Croatia": "",
+      "We Are Social Ukraine": ""
     },
     "tentadas": {
-      "We Are Social Austria": [
-        "wearesocialaustria",
-        "wearesocialaustriaagency"
-      ],
-      "We Are Social Switzerland": [
-        "wearesocialswitzerland",
-        "wearesocialswitzerlandagency"
+      "We Are Social Turkey": [
+        "wearesocialturkey"
       ]
     },
-    "pos": 935,
+    "pos": 950,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1205,9 +1209,16 @@
       "We Are Social Portugal",
       "We Are Social Poland",
       "We Are Social Ireland",
-      "We Are Social Switzerland"
+      "We Are Social Switzerland",
+      "We Are Social Austria",
+      "We Are Social Finland",
+      "We Are Social Greece",
+      "We Are Social Romania",
+      "We Are Social Czechia",
+      "We Are Social Hungary",
+      "We Are Social Croatia"
     ],
-    "rodadas": 1788,
+    "rodadas": 1818,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2190,7 +2201,15 @@
       "We Are Social Poland": [],
       "We Are Social Ireland": [],
       "We Are Social Switzerland": [],
-      "We Are Social Austria": []
+      "We Are Social Austria": [],
+      "We Are Social Finland": [],
+      "We Are Social Greece": [],
+      "We Are Social Romania": [],
+      "We Are Social Czechia": [],
+      "We Are Social Hungary": [],
+      "We Are Social Croatia": [],
+      "We Are Social Ukraine": [],
+      "We Are Social Turkey": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -2933,6 +2952,6 @@
     "https://www.mediaweek.com.au/outdoor/ooh-media-locks-in-record-advertiser-line-up-for-2027-australian-open",
     "https://roastbrief.com.mx/2026/11/vete-a-volar-la-campana-de-volaris-que-convirtio-el-desamor-en-creatividad-y-conquisto-cuatro-reconocimientos-en-el-ojo-de-iberoamerica-2026"
   ],
-  "ultima_rodada": "2026-11-25T22:51:57.417471+00:00",
+  "ultima_rodada": "2026-11-25T23:21:57.476140+00:00",
   "ultima_novidade": "2026-11-25T22:41:58.135879+00:00"
 }
