@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 03:00:12 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 04:28:11 GMT"
+      "mod": "Wed, 25 Nov 2026 04:35:11 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"1ac0030ee53b2454137893ce7855acff\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 04:28:12 GMT"
+      "mod": "Wed, 25 Nov 2026 04:36:12 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"db2aa0ef4a02960b0905176de1a72e7b-gzip\"",
-      "mod": "Wed, 25 Nov 2026 04:26:11 GMT"
+      "etag": "W/\"e07755ee5eec1fca9bef9267e6e550c2-gzip\"",
+      "mod": "Wed, 25 Nov 2026 04:35:14 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -189,7 +189,7 @@
       "mod": "Tue, 24 Nov 2026 16:23:42 GMT"
     }
   },
-  "yt_pos": 92,
+  "yt_pos": 40,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -413,12 +413,10 @@
       ],
       "Twist Agency Brazil": [
         "twistagency",
-        "twist.agency",
-        "twistbr",
-        "twistagencybrazil"
+        "twist.agency"
       ]
     },
-    "pos": 393,
+    "pos": 397,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -490,9 +488,10 @@
       "Calia",
       "Eyxo",
       "Bolt Brasil",
-      "Martin Luz"
+      "Martin Luz",
+      "Twist Agency Brazil"
     ],
-    "rodadas": 704,
+    "rodadas": 712,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1544,8 +1543,9 @@
     "https://campaignbrief.com/suzuki-jimny-makes-light-work-of-victorias-pothole-problem-in-new-film-via-atimeplace",
     "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-part-advertising",
     "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-past-advertising",
-    "https://www.medianews4u.com/giraffe-advertising-marks-21-years-expands-into-hospitality-entertainment-and-real-estate"
+    "https://www.medianews4u.com/giraffe-advertising-marks-21-years-expands-into-hospitality-entertainment-and-real-estate",
+    "https://www.medianews4u.com/openai-brings-sana-shaikh-on-board-for-global-ads-solutions-in-india"
   ],
-  "ultima_rodada": "2026-11-25T04:28:09.810236+00:00",
-  "ultima_novidade": "2026-11-25T03:32:09.515305+00:00"
+  "ultima_rodada": "2026-11-25T04:36:09.566093+00:00",
+  "ultima_novidade": "2026-11-25T04:36:09.566093+00:00"
 }
