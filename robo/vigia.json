@@ -19,8 +19,8 @@
       "mod": "Wed, 25 Nov 2026 20:32:58 GMT"
     },
     "https://www.informabtl.com/feed/": {
-      "etag": "W/\"cd95876e21dfd02c9b927a1175a6e8e3\"",
-      "mod": "Wed, 25 Nov 2026 21:12:01 GMT"
+      "etag": "W/\"3da4a1bb4e210ac62ca34d68ea4100df\"",
+      "mod": "Wed, 25 Nov 2026 21:27:25 GMT"
     },
     "https://propmark.com.br/feed/": {
       "etag": "\"e6cc771645d5cef6f73bc44d34ac1f44\"",
@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 21:18:57 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 21:21:59 GMT"
+      "mod": "Wed, 25 Nov 2026 21:30:24 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"f727b271dbf13fbe2ee852f323d4da8f\"",
@@ -86,8 +86,8 @@
       "mod": "Wed, 25 Nov 2026 08:18:47 GMT"
     },
     "https://www.adweek.com/feed/": {
-      "etag": "W/\"273f627cf49321d5f3963f41f2054c3a\"",
-      "mod": "Wed, 25 Nov 2026 19:21:00 GMT"
+      "etag": "W/\"3446304db66917ff0441756b3977d6d5\"",
+      "mod": "Wed, 25 Nov 2026 21:25:21 GMT"
     },
     "https://www.bandt.com.au/feed/": {
       "mod": "Wed, 25 Nov 2026 14:00:20 GMT"
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 21:22:01 GMT"
+      "mod": "Wed, 25 Nov 2026 21:31:01 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -135,8 +135,8 @@
       "mod": "Wed, 25 Nov 2026 20:31:22 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"8e19c8704893767ddb89f37fee1bbdc3\"",
-      "mod": "Wed, 25 Nov 2026 21:15:00 GMT"
+      "etag": "\"dcc06950269ce4256fcafa5db0b3c942\"",
+      "mod": "Wed, 25 Nov 2026 21:30:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"ee0c676de1ac03810dec80888dfdc937\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 21:22:01 GMT"
+      "mod": "Wed, 25 Nov 2026 21:30:15 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 21:17:03 GMT"
+      "mod": "Wed, 25 Nov 2026 21:28:02 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -301,7 +301,7 @@
       "mod": "Thu, 29 Oct 2026 19:32:20 GMT"
     }
   },
-  "yt_pos": 86,
+  "yt_pos": 112,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -879,14 +879,19 @@
       "Ketchum London": "",
       "FleishmanHillard UK": "",
       "Burson UK": "",
-      "Golin London": ""
+      "Golin London": "",
+      "72andSunny Amsterdam": ""
     },
     "tentadas": {
-      "72andSunny Amsterdam": [
-        "72andsunnyamsterdam"
+      "Creature London": [
+        "creaturelondon",
+        "creaturelondonagency"
+      ],
+      "Special London": [
+        "speciallondon"
       ]
     },
-    "pos": 890,
+    "pos": 894,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1156,9 +1161,12 @@
       "Edelman Germany",
       "Ketchum London",
       "FleishmanHillard UK",
-      "Burson UK"
+      "Burson UK",
+      "Golin London",
+      "72andSunny Amsterdam",
+      "Special London"
     ],
-    "rodadas": 1698,
+    "rodadas": 1707,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2119,7 +2127,9 @@
       "FleishmanHillard UK": [],
       "Burson UK": [],
       "Golin London": [],
-      "72andSunny Amsterdam": []
+      "72andSunny Amsterdam": [],
+      "Special London": [],
+      "Creature London": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -2852,8 +2862,9 @@
     "https://grandesnomesdapropaganda.com.br/anunciantes/mercatto-estreia-campanha-black-friday-para-dois-estados",
     "https://nossomeio.com.br/we-ooh-100-bancas-digitais-rio-de-janeiro",
     "https://roastbrief.com.mx/2026/11/casio-brasil-celebra-los-buenos-tiempos-en-su-campana-de-navidad-2026",
-    "https://mumbrella.com.au/ooh-media-signs-record-number-of-advertisers-for-australian-open-946120"
+    "https://mumbrella.com.au/ooh-media-signs-record-number-of-advertisers-for-australian-open-946120",
+    "https://www.abcdacomunicacao.com.br/nagumo-leva-aroma-de-flor-de-cerejeira-aos-cupons-fiscais-em-campanha-que-celebra-suas-raizes-japonesas"
   ],
-  "ultima_rodada": "2026-11-25T21:21:57.376744+00:00",
-  "ultima_novidade": "2026-11-25T20:52:57.245329+00:00"
+  "ultima_rodada": "2026-11-25T21:30:57.617161+00:00",
+  "ultima_novidade": "2026-11-25T21:30:57.617161+00:00"
 }
