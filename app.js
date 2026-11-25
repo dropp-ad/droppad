@@ -53,6 +53,17 @@
   var SO_REDE = { MY: 1, IN: 1 };
   var REDES = /\b(ogilvy|mccann|bbdo|ddb|tbwa|media arts lab|leo burnett|leo|publicis|saatchi|grey|vml|vmly&r|wunderman|jwt|walter thompson|fcb|havas|dentsu|isobar|lowe|y&r|wieden|w\+k|72andsunny|droga5|accenture song|cheil|hakuhodo|bbh|akqa|r\/ga|serviceplan|edelman|digitas|sapient|mullen|lintas|wpp|omnicom|interpublic|ipg|initiative|mindshare|wavemaker|essencemediacom|mediacom|omd|phd|starcom|zenith|spark foundry|carat|iprospect|taproot|ulka|mudra|monks|razorfish|deutsch|innocean|merkle|geometry|tribal|landor|weber shandwick|golin|burson|hill & knowlton|ketchum|fleishmanhillard)\b/i;
   function foraDaRede(c) { return !!SO_REDE[c.cc] && !REDES.test(c.agency); }
+  // post institucional da própria agência no Instagram (equipe, datas, eventos), não campanha:
+  // a "marca" saiu da própria agência (HLK → HLKers) ou o título é de agradecimento/bastidores
+  var INSTITUCIONAL = /\b(thankful|thanksgiving|grateful|gratid[aã]o|happy holidays|feliz natal|boas festas|our (team|people|office|family)|nosso time|nossa equipe|meet the (people|team)|meet our|conhe[cç]a (o )?nosso|conhe[cç]a (a )?nossa|we'?re hiring|estamos contratando|vagas|anniversary|anivers[aá]rio|birthday|tbt|throwback|reflects on|portfolio night|is a wrap|year in review|retrospectiva|first year|primeiro ano)\b/i;
+  var TEM_PECA = /\b(campaign|campanha|campaña|film|filme|spot|commercial|comercial|anúncio|ad)\b/i;
+  function soLetras(x) { return String(x || "").toLowerCase().replace(/[^a-z0-9]/g, ""); }
+  function institucional(c) {
+    if (!/^Instagram/.test(c.source)) return false;
+    var a = soLetras(c.agency), b = soLetras(c.brand);
+    if (a.length >= 3 && b.indexOf(a) === 0 && !TEM_PECA.test(c.title)) return true;
+    return INSTITUCIONAL.test(c.title);
+  }
   function normalize(raw) {
     if (!Array.isArray(raw)) return [];
     return raw.map(function (x) {
@@ -67,7 +78,7 @@
       };
       c.fl = films(c);
       return c;
-    }).filter(function (c) { return isDay(c.date) && c.title && !c.hidden && !foraDaRede(c); })
+    }).filter(function (c) { return isDay(c.date) && c.title && !c.hidden && !foraDaRede(c) && !institucional(c); })
       .sort(function (a, b) {
         if (a.date !== b.date) return a.date < b.date ? 1 : -1;
         if (!!a.fl.length !== !!b.fl.length) return a.fl.length ? -1 : 1; // no mesmo dia, filmes primeiro
