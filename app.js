@@ -1,7 +1,7 @@
 /* AD Drop: timeline de campanhas, uma por vez na tela (rolagem que para em cada uma).
    O quadro 16:9 fica no centro; com filme, toca sozinho e o texto aparece ao passar o
    mouse; sem filme, vira um carrossel com as fotos da matéria contando a ideia.
-   Os dados vêm de campaigns.json, atualizado pelo robô do repositório. */
+   Os dados vêm de feed.json: uma versão enxuta de campaigns.json, gerada na publicação (publicar.yml). */
 (function () {
   "use strict";
 
@@ -57,9 +57,8 @@
         agency: str(x.agency), source: str(x.source), url: safeUrl(str(x.url)),
         region: str(x.region), cc: str(x.cc).toUpperCase(), summary: str(x.summary),
         yt: arr(x.yt, function (s) { return /^[\w-]{11}$/.test(s); }),
-        video: safeUrl(str(x.video)), image: safeUrl(str(x.image)),
-        images: arr(x.images, function (s) { return !!safeUrl(s); }),
-        story: arr(x.story, Boolean), addedAt: str(x.addedAt),
+        video: safeUrl(str(x.video)), image: safeUrl(str(x.image) || (Array.isArray(x.images) ? str(x.images[0]) : "")),
+        addedAt: str(x.addedAt),
         idea: str(x.idea), frase: str(x.frase), credits: creditsOf(x)
       };
       c.fl = films(c);
@@ -76,17 +75,8 @@
   function todayYmd() {
     return new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
   }
-  function toDate(s) { var p = s.split("-").map(Number); return new Date(Date.UTC(p[0], p[1] - 1, p[2])); }
   function shift(s, n) { var p = s.split("-").map(Number); return new Date(Date.UTC(p[0], p[1] - 1, p[2] + n)).toISOString().slice(0, 10); }
-  var fmtLong = new Intl.DateTimeFormat("pt-BR", { timeZone: "UTC", weekday: "long", day: "numeric", month: "long" });
   var TODAY = todayYmd();
-  function dayName(d) {
-    if (d === TODAY) return "Hoje";
-    if (d === shift(TODAY, -1)) return "Ontem";
-    var s = fmtLong.format(toDate(d)).split(",")[0];
-    return s.charAt(0).toUpperCase() + s.slice(1);
-  }
-  function dayDate(d) { return fmtLong.format(toDate(d)).split(", ").slice(1).join(", ") || fmtLong.format(toDate(d)); }
 
   /* ---------- Utilidades ---------- */
   function el(tag, cls, text) {
@@ -107,11 +97,6 @@
   }
   function hue(s) { var h = 0; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) % 360; return h; }
   function ytThumb(id) { return "https://i.ytimg.com/vi/" + id + "/hqdefault.jpg"; }
-  function fmtNum(n) {
-    if (n >= 1e6) return (n / 1e6).toFixed(n >= 1e7 ? 0 : 1).replace(".", ",") + " mi";
-    if (n >= 1e3) return (n / 1e3).toFixed(n >= 1e4 ? 0 : 1).replace(".", ",") + " mil";
-    return String(n);
-  }
   function img(src, onfail) {
     var i = el("img");
     i.alt = "";
@@ -187,7 +172,7 @@
   }
 
   /* ---------- Estado ---------- */
-  var state = { items: [], list: [], shown: 0, region: "", onlyFilms: false, perDay: {}, home: { cc: "BR", label: "Brasil" } };
+  var state = { items: [], list: [], shown: 0, region: "", perDay: {}, home: { cc: "BR", label: "Brasil" } };
   // som ligado por padrão; se o navegador bloquear áudio antes do primeiro toque,
   // o filme toca mudo e o som entra no primeiro clique/toque/tecla na página
   var sound = true, blocked = false, gestureAt = 0, unblockedAt = 0;
@@ -209,30 +194,7 @@
     paintSound();
   }
 
-  /* visualizações gravadas pelo robô (robo/views.py), para o modo 🔥 */
-  var VIEWS = {};
-  function viewsOf(c) { var v = VIEWS[c.id]; return v && v.v ? v.v : 0; }
-  function loadViews() {
-    return fetch("views.json?t=" + Math.floor(Date.now() / 600000), { cache: "no-store" })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (j) { if (j && typeof j === "object") VIEWS = j; })
-      .catch(function () { /* sem visualizações: o 🔥 fica pela ordem normal */ });
-  }
-
-  var popCache = {};
-  function popOf(id) {
-    if (!popCache[id]) {
-      popCache[id] = fetch("https://returnyoutubedislikeapi.com/votes?videoId=" + encodeURIComponent(id))
-        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-        .then(function (j) { return { views: +j.viewCount || 0 }; })
-        .catch(function () { return { views: 0 }; });
-    }
-    return popCache[id];
-  }
-
   /* ---------- Post: cada campanha vira um post de rede social ---------- */
-  var fmtHora = new Intl.DateTimeFormat("pt-BR", { timeZone: TZ, hour: "2-digit", minute: "2-digit", hour12: false });
-  function horaDe(iso) { var d = new Date(iso); return isNaN(d) ? "" : fmtHora.format(d); }
   function hostOf(u) { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return ""; } }
   // nome em cima do post: a agência; se vier vazia ou estranha ("Wise’s", "Brick e e"), o veículo
   function quemPostou(c) {
@@ -325,7 +287,7 @@
       art.classList.add("is-film");
       var cover = el("div", "cover");
       var f0 = c.fl[0];
-      var csrc = f0.kind === "yt" ? ytThumb(f0.id) : f0.kind === "vimeo" ? "https://vumbnail.com/" + f0.id + "_large.jpg" : (c.image || c.images[0] || "");
+      var csrc = f0.kind === "yt" ? ytThumb(f0.id) : f0.kind === "vimeo" ? "https://vumbnail.com/" + f0.id + "_large.jpg" : c.image;
       if (csrc) cover.appendChild(img(csrc, function () { cover.appendChild(poster(c)); }));
       else cover.appendChild(poster(c));
       if (f0.kind === "ig" || f0.kind === "tt") art.classList.add("is-vert", f0.kind === "ig" ? "is-ig" : "is-tt");
@@ -380,7 +342,7 @@
     } else {
       // sem filme: a imagem da matéria no mesmo quadro 16:9
       art.classList.add("is-card");
-      var pic = c.image || c.images[0] || "";
+      var pic = c.image;
       var cv = el("div", "cover");
       if (pic) cv.appendChild(img(pic, function () { cv.appendChild(poster(c)); }));
       else cv.appendChild(poster(c));
@@ -414,6 +376,7 @@
     art._media = media;
     if (io) io.observe(media);
     if (inIO) inIO.observe(art); else art.classList.add("in");
+    if (pxIO) pxIO.observe(media);
     return art;
   }
 
@@ -422,6 +385,11 @@
   var inIO = ("IntersectionObserver" in window && !REDUCE) ? new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); inIO.unobserve(e.target); } });
   }, { threshold: 0 }) : null;
+  // parallax só nas capas que estão perto da tela (o resto não é tocado a cada rolagem)
+  var pxNear = new Set();
+  var pxIO = ("IntersectionObserver" in window && !REDUCE) ? new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) pxNear.add(e.target); else pxNear.delete(e.target); });
+  }, { rootMargin: "50px 0px" }) : null;
 
   /* contagem de comentários por campanha (Supabase), pedida em lote */
   var CMT_N = {};
@@ -789,7 +757,7 @@
     if (idx < 0) {
       var alvo = state.items.filter(function (c) { return c.id === id; })[0];
       if (!alvo) return false;
-      state.region = homeMatch(alvo) ? "home" : ""; state.onlyFilms = false; state.upTo = "";
+      state.region = homeMatch(alvo) ? "home" : ""; state.upTo = "";
       idx = -1;
     }
     renderAll(true);
@@ -999,7 +967,7 @@
   }
 
   /* ---------- Timeline (uma tela por campanha, rolagem infinita) ---------- */
-  var moreIO = null, dayIdx = {};
+  var moreIO = null;
   function renderMore() {
     var feed = $("feed");
     var slice = state.list.slice(state.shown, state.shown + LOTE);
@@ -1037,35 +1005,23 @@
     deactivate();
     ratios.clear();
     if (io) io.disconnect();
+    if (pxIO) { pxIO.disconnect(); pxNear.clear(); }
+    if (inIO) inIO.disconnect();
     var fd = $("feed");
     fd.textContent = "";
     if (!REDUCE) { fd.classList.add("swap"); requestAnimationFrame(function () { requestAnimationFrame(function () { fd.classList.remove("swap"); }); }); }
     state.shown = 0;
-    dayIdx = {};
     state.list = state.items.filter(function (c) {
-      if (state.onlyFilms && !c.fl.length) return false;
       if (state.upTo && c.date > state.upTo) return false;
-      if (state.region === "hot") { /* 🔥: o mundo inteiro, mais vistas primeiro */ }
-      else if (state.region === "home") { if (!homeMatch(c)) return false; }
-      else if (!state.region) { /* Mundo = tudo, inclusive o país de quem entra */ }
-      else if ((GRUPOS[state.region] || [state.region]).indexOf(regiaoDe(c)) < 0) return false;
-      return true;
+      // Mundo = tudo; a outra aba é o país de quem entra
+      return state.region !== "home" || homeMatch(c);
     });
     state.perDay = {};
-    if (state.region === "hot") {
-      state.list = state.list.slice().sort(function (a, b) {
-        var d = viewsOf(b) - viewsOf(a);
-        return d || (a.date < b.date ? 1 : a.date > b.date ? -1 : 0);
-      });
-      state.list.forEach(function (c, i) { c._k = i; });
-    } else {
-      state.list.forEach(function (c) { c._k = state.perDay[c.date] || 0; state.perDay[c.date] = c._k + 1; });
-    }
+    state.list.forEach(function (c) { c._k = state.perDay[c.date] || 0; state.perDay[c.date] = c._k + 1; });
     renderChips();
     renderCal();
     if (!skipMore) renderMore();
   }
-  var GRUPOS = { "Américas": ["América Latina", "EUA e Canadá"], "Europa": ["Europa"], "Ásia": ["Ásia-Pacífico"] };
   function renderChips() {
     var box = $("chips"), sel = $("reg-sel");
     box.textContent = "";
@@ -1075,14 +1031,13 @@
     var opts = [["", "Mundo"], ["home", h.label]];
     opts.forEach(function (o) {
       var on = (state.region || "") === o[0];
-      var b = el("button", null, o[0] === "hot" ? "🔥" : o[1]);
+      var b = el("button", null, o[1]);
       b.type = "button";
-      if (o[0] === "hot") { b.title = "Mais vistas primeiro"; b.setAttribute("aria-label", "Mais vistas primeiro"); }
       b.setAttribute("aria-pressed", on ? "true" : "false");
       b.addEventListener("click", function () { state.region = o[0]; window.scrollTo(0, 0); renderAll(); });
       box.appendChild(b);
       if (sel) { var op = el("option", null, o[1]); op.value = o[0]; op.selected = on; sel.appendChild(op); }
-      if (on && $("reg-txt")) $("reg-txt").textContent = o[0] === "hot" ? "🔥" : o[1];
+      if (on) $("reg-txt").textContent = o[1];
     });
   }
   (function () {
@@ -1102,12 +1057,11 @@
       void sd.offsetWidth;
       sd.classList.remove("swap");
     }
-    var hot = state.region === "hot";
-    var tot = hot ? state.list.length : state.perDay[c.date] || 0;
+    var tot = state.perDay[c.date] || 0;
     $("readbar").style.transform = "scaleX(" + (tot ? Math.min(1, ((art._k || 0) + 1) / tot) : 0) + ")";
     var left = tot - ((art._k || 0) + 1), t = "";
     var quando = c.date === TODAY ? " HOJE" : c.date === shift(TODAY, -1) ? " ONTEM" : " NESTE DIA";
-    if (left > 0 && nextPost(art)) t = hot ? "PRÓXIMA" : "MAIS " + left + (left === 1 ? " ESTREIA" : " ESTREIAS") + quando;
+    if (left > 0 && nextPost(art)) t = "MAIS " + left + (left === 1 ? " ESTREIA" : " ESTREIAS") + quando;
     $("cue-txt").textContent = t;
     $("cue").hidden = !t;
     $("cue-btn").setAttribute("aria-label", t ? "Rolar para a próxima campanha. " + t.toLowerCase() : "");
@@ -1131,9 +1085,10 @@
       else if (lastY - y > 2 || y <= 10) topbar.classList.remove("hide");
       lastY = y;
       if (REDUCE) return;
-      document.querySelectorAll(".post .cover img").forEach(function (im) {
-        var box = im.parentNode.getBoundingClientRect();
-        if (box.bottom < -50 || box.top > vh + 50) return;
+      pxNear.forEach(function (m) {
+        var im = m.querySelector(".cover img");
+        if (!im) return;
+        var box = m.getBoundingClientRect();
         var t = ((box.top + box.height / 2) - vh / 2) / vh;
         im.style.transform = "translate3d(0," + (t * -PARALLAX * box.height).toFixed(1) + "px,0)";
       });
@@ -1194,8 +1149,7 @@
       .catch(function () { /* tenta de novo no próximo minuto */ });
   }
   function checkNew() {
-    fetch("campaigns.json?t=" + Date.now(), { cache: "no-store" })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    loadData("no-store")
       .then(function (raw) {
         var fresh = normalize(raw);
         var known = {};
@@ -1222,33 +1176,20 @@
   setInterval(function () { if (!document.hidden) pollNew(); }, 60 * 1000);
   document.addEventListener("visibilitychange", function () { if (!document.hidden && Date.now() - lastCheck > 60 * 1000) pollNew(); });
 
-  /* ---------- Cursor que segue o mouse e botões magnéticos (só com mouse, sem reduced-motion) ---------- */
+  /* ---------- Botões magnéticos: puxam de leve na direção do mouse (máx. 5px; só com mouse) ---------- */
   (function () {
     if (REDUCE || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
-    var cur = $("cursor"), x = -100, y = -100, cx = -100, cy = -100, raf = 0;
-    function loop() {
-      cx += (x - cx) * 0.18; cy += (y - cy) * 0.18;
-      cur.style.transform = "translate3d(" + cx.toFixed(1) + "px," + cy.toFixed(1) + "px,0)";
-      raf = Math.abs(x - cx) + Math.abs(y - cy) > 0.3 ? requestAnimationFrame(loop) : 0;
-    }
-    document.addEventListener("mousemove", function (e) {
-      x = e.clientX; y = e.clientY;
-      if (!cur.classList.contains("on")) { cx = x; cy = y; cur.classList.add("on"); }
-      cur.classList.toggle("big", !!(e.target.closest && e.target.closest("a, button, label, select, .media")));
-      if (!raf) raf = requestAnimationFrame(loop);
-    }, { passive: true });
-    document.addEventListener("mouseleave", function () { cur.classList.remove("on"); });
-    // botões puxam de leve na direção do cursor (máx. 5px)
-    var MAG = ".tool, .seg button, .act, .more-btn, .mute, .more-cue button";
+    var MAG = ".tool, .seg button, .act, .more-btn, .mute, .more-cue button", cur = null;
+    function release() { if (cur) { cur.style.transform = ""; cur = null; } }
     document.addEventListener("mousemove", function (e) {
       var b = e.target.closest && e.target.closest(MAG);
-      document.querySelectorAll(".mag.pull").forEach(function (o) { if (o !== b) { o.classList.remove("pull"); o.style.transform = ""; } });
-      if (!b) return;
-      b.classList.add("mag", "pull");
+      if (b !== cur) { release(); if (!b) return; cur = b; b.classList.add("mag"); }
       var r = b.getBoundingClientRect();
-      var dx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2), dy = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
+      var dx = (e.clientX - r.left) / r.width * 2 - 1, dy = (e.clientY - r.top) / r.height * 2 - 1;
       b.style.transform = "translate(" + (dx * 5).toFixed(1) + "px," + (dy * 5).toFixed(1) + "px)";
     }, { passive: true });
+    document.addEventListener("mouseleave", release);
+    window.addEventListener("scroll", release, { passive: true });
   })();
 
   /* ---------- Início ---------- */
@@ -1263,21 +1204,22 @@
     } catch (e) { /* nada */ }
   });
   setupIO();
-  fetch("campaigns.json", { cache: "no-store" })
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (raw) {
-      state.items = normalize(raw);
-      return loadViews().then(function () { return raw; });
-    })
-    .then(function () {
-      return detectCountry().then(function (cc) {
-        setHome(cc);
-        $("status").hidden = true;
-        renderAll();
-        goTo(sharedId());
-        resumeLogin();
-        registrarVisita();
-      });
+  // feed.json é a versão enxuta (gerada na publicação); campaigns.json fica de reserva.
+  // "no-cache" revalida com o servidor: se nada mudou, o navegador usa a cópia que já tem.
+  function loadData(mode) {
+    function get(f) { return fetch(f, { cache: mode }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); }
+    return get("feed.json").catch(function () { return get("campaigns.json"); });
+  }
+  // dados e país de quem entra chegam ao mesmo tempo
+  Promise.all([loadData("no-cache"), detectCountry()])
+    .then(function (res) {
+      state.items = normalize(res[0]);
+      setHome(res[1]);
+      $("status").hidden = true;
+      renderAll();
+      goTo(sharedId());
+      resumeLogin();
+      registrarVisita();
     })
     .catch(function (err) {
       console.log("ERRO", err && err.stack);

@@ -42,7 +42,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .top.hide { transform: translateY(-100%); opacity: 0; }
 .drawer-on .top.hide { transform: none; opacity: 1; }
 .seg { justify-self: start; display: flex; gap: 2px; padding: 2px; border: 1px solid var(--line); }
-.seg button { padding: 6px 13px; font-size: 12px; font-weight: 600; color: #9a9a9a; white-space: nowrap; transition: color .3s var(--ease), background .3s var(--ease); }
+.seg button { padding: 6px 13px; font-size: 12px; font-weight: 600; color: #9a9a9a; white-space: nowrap; transition: color var(--t-fast) var(--ease), background var(--t-fast) var(--ease); }
 .seg button[aria-pressed="true"] { background: #fff; color: #000; font-weight: 700; }
 .seg button:not([aria-pressed="true"]):hover { color: #fff; }
 .reg-sel { display: none; }
@@ -50,7 +50,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .logo img { height: 40px; width: auto; display: block; }
 .tools { justify-self: end; display: flex; gap: 8px; }
 .cal { position: relative; display: flex; gap: 8px; }
-.tool { position: relative; display: flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border: 1px solid var(--line); font-size: 12px; font-weight: 700; white-space: nowrap; cursor: pointer; transition: border-color .3s var(--ease); }
+.tool { position: relative; display: flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border: 1px solid var(--line); font-size: 12px; font-weight: 700; white-space: nowrap; cursor: pointer; transition: border-color var(--t-fast) var(--ease); }
 .tool:hover { border-color: #555; }
 .tool.sq { width: 34px; padding: 0; justify-content: center; }
 .tool svg { width: 15px; height: 15px; flex: none; }
@@ -135,7 +135,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .is-card .media { cursor: default; }
 
 .acts { display: flex; align-items: center; gap: 4px; padding: 6px 8px; border-top: 1px solid var(--line); }
-.act { display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 12px; font-size: 14px; font-weight: 600; transition: color .3s var(--ease); }
+.act { display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 12px; font-size: 14px; font-weight: 600; transition: color var(--t-fast) var(--ease); }
 .act:hover, .act[aria-expanded="true"] { color: var(--hot); }
 .act svg { width: 20px; height: 20px; flex: none; }
 .act .n { color: var(--muted); font-weight: 500; }
@@ -171,7 +171,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .veil { position: fixed; inset: 0; z-index: 69; background: rgba(0, 0, 0, .6); opacity: 0; pointer-events: none; transition: opacity .25s; }
 .drawer-on .veil { opacity: 1; pointer-events: auto; }
 .drawer { position: fixed; top: 0; right: 0; bottom: 0; z-index: 70; width: min(440px, 100%); background: var(--post); border-left: 1px solid var(--line); display: flex; flex-direction: column;
-  transform: translateX(105%); transition: transform .4s var(--ease); }
+  transform: translateX(105%); transition: transform var(--t-fast) var(--ease); }
 .drawer.on { transform: none; }
 .drawer-head { display: flex; align-items: flex-start; gap: 12px; padding: 18px 20px 14px; border-bottom: 1px solid var(--line); }
 .drawer-t { flex: 1; min-width: 0; display: flex; flex-direction: column; }
@@ -291,12 +291,6 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 /* grão parado por cima de tudo, bem leve */
 .grain { position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: .04;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
-/* cursor: pontinho que segue o mouse com atraso e cresce em cima de links e filmes */
-.cursor { position: fixed; left: 0; top: 0; z-index: 95; width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: 50% !important; background: #fff;
-  mix-blend-mode: difference; pointer-events: none; opacity: 0; transition: width var(--t-fast) var(--ease), height var(--t-fast) var(--ease), margin var(--t-fast) var(--ease), opacity var(--t-fast) var(--ease); }
-.cursor.on { opacity: 1; }
-.cursor.big { width: 28px; height: 28px; margin: -14px 0 0 -14px; }
-@media (hover: none), (pointer: coarse) { .cursor { display: none; } }
 /* botões magnéticos: o deslocamento vem do JS (máx. 5px) */
 .mag { transition: transform var(--t-mid) var(--ease), border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), background var(--t-fast) var(--ease); }
 /* troca de filtro/data: fade curto no feed */
@@ -307,7 +301,6 @@ body { animation: pagein .35s var(--ease); }
 @media (prefers-reduced-motion: reduce) {
   .rv, .post .media.rv { opacity: 1 !important; transform: none !important; clip-path: none !important; transition: none !important; }
   .day > span > span { transform: none !important; transition: none !important; }
-  .cursor { display: none; }
   .readbar, #feed, .mag, .link, .who small a { transition: none; }
   body { animation: none; }
   @media (hover: hover) { .media:hover .cover { transform: none; } }

@@ -13,15 +13,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://i.ytimg.com">
+<link rel="preconnect" href="https://www.google.com">
 <link rel="preconnect" href="https://www.youtube-nocookie.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Public+Sans:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&display=swap">
-<link rel="stylesheet" href="style.css?v=41">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css?v=42">
 </head>
 <body>
 <header class="top" id="topbar">
   <nav class="seg" id="chips" aria-label="Região"></nav>
   <label class="reg-sel"><span id="reg-txt">Mundo</span> ▾<select id="reg-sel" aria-label="Região"></select></label>
-  <a href="./" class="logo" id="top" aria-label="dropp Ad, voltar ao topo"><img src="logo-transparente.png" alt="dropp Ad" width="328" height="120"></a>
+  <a href="./" class="logo" id="top" aria-label="dropp Ad, voltar ao topo"><img src="logo-transparente.png" alt="dropp Ad" width="328" height="120" fetchpriority="high"></a>
   <div class="tools">
     <div class="cal" id="cal">
       <label class="tool cal-btn" title="Escolher uma data">
@@ -37,12 +38,11 @@
 <div class="day" id="sidedate" aria-hidden="true"><span><span id="sd-d"></span></span><span><span id="sd-m"></span></span></div>
 <div class="readbar" id="readbar" aria-hidden="true"></div>
 <div class="grain" aria-hidden="true"></div>
-<div class="cursor" id="cursor" aria-hidden="true"></div>
 <div class="more-cue" id="cue" hidden><button type="button" id="cue-btn"><span id="cue-txt"></span><svg class="bob" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M5 12l7 7 7-7"/></svg></button></div>
 <main class="timeline">
   <p class="status" id="status" role="status">Carregando campanhas…</p>
   <div id="feed"></div>
 </main>
-<script src="app.js?v=46"></script>
+<script src="app.js?v=47" defer></script>
 </body>
 </html>
