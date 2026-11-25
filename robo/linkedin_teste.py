@@ -394,6 +394,10 @@ def _palavras(t):
             ("campanha", "campaign", "lancamento", "launch", "brasil", "agencia", "agency", "nossa", "nosso", "nova", "novo")]
 
 
+UI_YT = re.compile(r"^(adicionar à fila|add to queue|assistir mais tarde|watch later|compartilhar|share|novo|new|"
+                   r"\d+[:.]\d+|.*\bvisualiza|.*\bviews?\b|há \d+|\d+ (?:dias?|horas?|semanas?) atrás)", re.I)
+
+
 def _videos_da_busca(pag):
     """(id, título, canal) dos vídeos da página de busca do YouTube, venha ela no formato antigo ou no novo:
     pega cada videoId e os primeiros textos que vêm logo depois dele (título, canal)."""
@@ -402,18 +406,20 @@ def _videos_da_busca(pag):
         vid = m.group(1)
         if vid in vistos:
             continue
-        janela = pag[m.end():m.end() + 6000]
+        janela = pag[m.end():m.end() + 8000]
+        tm = re.search(r'"title":\{(?:"runs":\[\{)?"(?:text|content)":"((?:[^"\\]|\\.){3,200})"', janela)
+        if not tm:
+            continue
         textos = []
-        for t in re.findall(r'"(?:text|content|simpleText|label)":"((?:[^"\\]|\\.){3,200})"', janela)[:12]:
+        for t in [tm.group(1)] + re.findall(r'"(?:text|content|simpleText)":"((?:[^"\\]|\\.){3,200})"', janela)[:15]:
             try:
                 t = json.loads('"%s"' % t)
             except ValueError:
                 pass
-            if t not in textos:
+            if t not in textos and not UI_YT.search(t):
                 textos.append(t)
-        if textos:
-            vistos.add(vid)
-            out.append((vid, textos[0], " ".join(textos[1:8])))
+        vistos.add(vid)
+        out.append((vid, textos[0] if textos else "", " ".join(textos[1:8])))
     return out
 
 
@@ -448,11 +454,16 @@ def buscar_noticias(c):
     """Matérias sobre a campanha (Bing News, última semana): filme embutido e foto de capa."""
     marca, ag = A.chave(c["brand"]), A.chave(c.get("agency", ""))
     try:
-        itens = A.buscar_bing('"%s" %s' % (c["brand"], c.get("agency", ""))) or \
-            A.buscar_bing('"%s" (campanha OR campaign OR filme OR film)' % c["brand"])
+        itens = A.buscar_bing('"%s" %s' % (c["brand"], c.get("agency", "").replace("&", "and")))
     except Exception as e:  # noqa: BLE001
         log("  bing falhou:", e)
-        return [], "", ""
+        itens = []
+    if not itens:
+        try:
+            itens = A.buscar_bing('"%s" campanha' % c["brand"])
+        except Exception as e:  # noqa: BLE001
+            log("  bing falhou:", e)
+            return [], "", ""
     yts, video, img = [], "", ""
     log("  bing:", c["brand"], "|", len(itens), "matérias |", " / ".join(i.get("titulo", "")[:40] for i in itens[:3]))
     for it in itens[:5]:
