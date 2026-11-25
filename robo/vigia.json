@@ -34,7 +34,7 @@
       "mod": "Tue, 24 Nov 2026 23:19:00 GMT"
     },
     "https://www.contentgrip.com/feed/": {
-      "etag": "W/\"292e8-1CY/cd/aCN1yDPOrW8DcVGOZKfI\""
+      "etag": "W/\"25305-EQgBKoqqiqExcoyp3VX1tQ4J5Ww\""
     },
     "https://www.nossomeio.com.br/feed/": {
       "etag": "\"ca13a04b7a22295cc11721ad4c597bd9\"",
@@ -45,11 +45,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"85097c0a3990014269a1fc9e73dbfcd9\"",
-      "mod": "Wed, 25 Nov 2026 07:00:14 GMT"
+      "etag": "W/\"f6635437700535ba2424a9693c839ece\"",
+      "mod": "Wed, 25 Nov 2026 07:50:49 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 07:28:12 GMT"
+      "mod": "Wed, 25 Nov 2026 07:57:13 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
@@ -79,7 +79,7 @@
       "mod": "Wed, 25 Nov 2026 00:46:19 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Wed, 25 Nov 2026 07:24:13 GMT"
+      "mod": "Wed, 25 Nov 2026 07:49:13 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"387f5a7ab5e799a8b3d6ef3c4309e52d\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 07:28:13 GMT"
+      "mod": "Wed, 25 Nov 2026 07:58:14 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"2492c48957b585247d6e68377edbd612-gzip\"",
-      "mod": "Wed, 25 Nov 2026 07:15:37 GMT"
+      "etag": "W/\"681f51228b824be0741a0ea91b527bcd-gzip\"",
+      "mod": "Wed, 25 Nov 2026 07:56:49 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -143,8 +143,8 @@
       "mod": "Tue, 24 Nov 2026 22:12:52 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
-      "etag": "\"ac77f0012afd04530626937aecd846b0\"",
-      "mod": "Wed, 25 Nov 2026 06:14:25 GMT"
+      "etag": "\"5780b4b7953f1018de27e75e9250c2e0\"",
+      "mod": "Wed, 25 Nov 2026 07:54:55 GMT"
     },
     "https://wearesocial.com/it/feed/": {
       "etag": "W/\"142edc7baade8a4b5bd0a2a67ab57ef5\"",
@@ -186,7 +186,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 90,
+  "yt_pos": 41,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -444,15 +444,31 @@
       "Omelet": "thisisomelet",
       "Wpromote": "wpromoteofficial",
       "Cashmere": "",
-      "3rd & Army": ""
+      "3rd & Army": "",
+      "SUMMONER": "",
+      "Eleven": "eleveninc",
+      "Cutwater": "cutwateragency",
+      "Butler, Shine, Stern & Partners": "madebybssp",
+      "Argonaut": "weareargonaut",
+      "Character": "characteragency",
+      "Venables Bell & Partners": "",
+      "Duncan Channon": "duncanchannon",
+      "GSD&M": "gsdmaustin",
+      "Instrument": "instrument",
+      "Kamp Grizzly": "kampgrizzly",
+      "Thesis": "thesisagency",
+      "Swift": "",
+      "Pollinate": "pollinateagency"
     },
     "tentadas": {
-      "SUMMONER": [
-        "summoner",
-        "summoneragency"
+      "Sockeye": [
+        "sockeye"
+      ],
+      "CMD": [
+        "cmdagency"
       ]
     },
-    "pos": 483,
+    "pos": 498,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -555,9 +571,14 @@
       "R/GA São Paulo",
       "Zambezi",
       "180LA",
-      "Cashmere"
+      "Cashmere",
+      "3rd & Army",
+      "SUMMONER",
+      "Venables Bell & Partners",
+      "Swift",
+      "CMD"
     ],
-    "rodadas": 884,
+    "rodadas": 914,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -981,7 +1002,38 @@
         "wpromoteofficial"
       ],
       "3rd & Army": [],
-      "SUMMONER": []
+      "SUMMONER": [],
+      "Venables Bell & Partners": [],
+      "Eleven": [],
+      "Cutwater": [
+        "cutwateragency"
+      ],
+      "Butler, Shine, Stern & Partners": [
+        "madebybssp"
+      ],
+      "Argonaut": [
+        "weareargonaut"
+      ],
+      "Character": [],
+      "Duncan Channon": [
+        "duncanchannon"
+      ],
+      "GSD&M": [
+        "gsdmaustin"
+      ],
+      "Instrument": [
+        "instrument"
+      ],
+      "Swift": [],
+      "Kamp Grizzly": [
+        "kampgrizzly"
+      ],
+      "Thesis": [],
+      "CMD": [],
+      "Pollinate": [
+        "pollinateagency"
+      ],
+      "Sockeye": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -1668,8 +1720,9 @@
     "https://www.medianews4u.com/openai-brings-sana-shaikh-on-board-for-global-ads-solutions-in-india",
     "https://www.horizont.net/marketing/nachrichten/deutschlands-werbelieblinge-haribo-mcdonalds--co.-diese-spots-begeistern-die-deutschen-am-meisten-236702",
     "https://www.afaqs.com/news/advertising/v-guards-new-campaign-puts-household-wiring-heat-in-focus-12839667",
-    "https://www.decisionmarketing.co.uk/news/ipa-theres-no-cop-out-for-sustainability-in-advertising"
+    "https://www.decisionmarketing.co.uk/news/ipa-theres-no-cop-out-for-sustainability-in-advertising",
+    "https://www.contentgrip.com/amazon-chatgpt-black-friday-ads"
   ],
-  "ultima_rodada": "2026-11-25T07:28:10.244772+00:00",
+  "ultima_rodada": "2026-11-25T07:58:10.631149+00:00",
   "ultima_novidade": "2026-11-25T06:30:10.506856+00:00"
 }
