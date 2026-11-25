@@ -303,13 +303,13 @@
     art.setAttribute("aria-label", (c.brand ? c.brand + ": " : "") + c.title);
     var ag = agenciaDe(c), marca = c.brand || c.title;
 
-    // Agência – Cliente (sem agência conhecida, só o cliente); embaixo, o veículo
+    // "Agência para Marca" (sem agência conhecida, só a marca); embaixo, o veículo
     var head = el("div", "head");
     head.appendChild(avatar(ag || marca));
     var who = el("div", "who");
     var b = el("b", null, ag || marca);
     if (ag && marca && marca.toLowerCase() !== ag.toLowerCase()) {
-      b.appendChild(el("i", null, " – "));
+      b.appendChild(el("i", null, " para "));
       b.appendChild(document.createTextNode(marca));
     }
     who.appendChild(b);
@@ -1004,7 +1004,8 @@
         if (!alive()) return;
         var p = new Vimeo.Player(slot, {
           url: "https://vimeo.com/" + f.id + (f.hash ? "/" + f.hash : ""),
-          autoplay: true, muted: !(sound && !blocked && gestureAt), loop: false, playsinline: true, controls: true, dnt: true, responsive: true, texttrack: "pt"
+          autoplay: true, muted: !(sound && !blocked && gestureAt), loop: false, playsinline: true, controls: true, dnt: true, texttrack: "pt",
+          width: 1280, title: false, byline: false, portrait: false
         });
         me.player = p;
         p.on("play", playing);
