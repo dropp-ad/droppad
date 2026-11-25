@@ -749,7 +749,7 @@
     again.addEventListener("click", function (e) { e.stopPropagation(); art.classList.remove("ended"); art.dataset.part = 0; activate(art, true); });
     acts.appendChild(again);
     var next = el("button", "end-btn", "Próxima ↓"); next.type = "button";
-    next.addEventListener("click", function (e) { e.stopPropagation(); var n = art.nextElementSibling; if (n && n.classList.contains("post")) n.scrollIntoView({ behavior: "smooth" }); });
+    next.addEventListener("click", function (e) { e.stopPropagation(); var n = art.nextElementSibling; if (n && n.classList.contains("post")) n.scrollIntoView({ behavior: "smooth", block: "center" }); });
     acts.appendChild(next);
     var shr = el("button", "end-btn share-end"); shr.type = "button";
     shr.setAttribute("aria-label", "Compartilhar esta campanha");
@@ -794,8 +794,8 @@
     renderMore();
     var art = $("feed").querySelector(".post");
     if (!art) return false;
-    art.scrollIntoView({ block: "start" });
-    setTimeout(function () { art.scrollIntoView({ block: "start" }); }, 400);
+    art.scrollIntoView({ block: "center" });
+    setTimeout(function () { art.scrollIntoView({ block: "center" }); }, 400);
     return true;
   }
   window.addEventListener("hashchange", function () { goTo(sharedId()); });
@@ -1089,7 +1089,7 @@
   $("cue-btn").addEventListener("click", function () {
     var a = active ? active.art : document.querySelector(".post");
     var n = a && nextPost(a);
-    if (n) window.scrollTo({ top: n.getBoundingClientRect().top + window.scrollY - 20, behavior: REDUCE ? "auto" : "smooth" });
+    if (n) n.scrollIntoView({ block: "center", behavior: REDUCE ? "auto" : "smooth" });
   });
 
   /* ---------- Rolagem: topo some/volta, parallax leve (num só requestAnimationFrame) ---------- */
@@ -1147,8 +1147,8 @@
     var posts = Array.prototype.slice.call(document.querySelectorAll(".post"));
     if (!posts.length) return;
     var cur = active ? posts.indexOf(active.art) : 0;
-    if (e.key === "ArrowDown" || e.key === "j") { e.preventDefault(); if (posts[cur + 1]) posts[cur + 1].scrollIntoView({ behavior: "smooth" }); }
-    else if (e.key === "ArrowUp" || e.key === "k") { e.preventDefault(); if (posts[cur - 1]) posts[cur - 1].scrollIntoView({ behavior: "smooth" }); }
+    if (e.key === "ArrowDown" || e.key === "j") { e.preventDefault(); if (posts[cur + 1]) posts[cur + 1].scrollIntoView({ behavior: "smooth", block: "center" }); }
+    else if (e.key === "ArrowUp" || e.key === "k") { e.preventDefault(); if (posts[cur - 1]) posts[cur - 1].scrollIntoView({ behavior: "smooth", block: "center" }); }
     else if (e.key === " ") { e.preventDefault(); togglePause(); }
     else if (e.key === "m") setSound(!sound);
   });
