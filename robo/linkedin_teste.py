@@ -390,11 +390,11 @@ YT_ITEM = re.compile(r'"videoRenderer":\{"videoId":"([\w-]{11})".{0,1500}?"title
 
 
 def _palavras(t):
-    return [w for w in re.findall(r"[a-z0-9]{5,}", A.sem_acento(t).lower()) if w not in
-            ("campanha", "campaign", "lancamento", "launch", "brasil", "agencia", "agency", "nossa", "nosso", "nova", "novo")]
+    return list(dict.fromkeys(w for w in re.findall(r"[a-z0-9]{6,}", A.sem_acento(t).lower()) if w not in
+            ("campanha", "campaign", "lancamento", "launch", "brasil", "agencia", "agency", "something", "chegada")))
 
 
-UI_YT = re.compile(r"^(adicionar à fila|add to queue|assistir mais tarde|watch later|compartilhar|share|novo|new|"
+UI_YT = re.compile(r"^(adicionar à fila|add to queue|enviar feedback|send feedback|assistir mais tarde|watch later|compartilhar|share|novo|new|"
                    r"\d+[:.]\d+|.*\bvisualiza|.*\bviews?\b|há \d+|\d+ (?:dias?|horas?|semanas?) atrás)", re.I)
 
 
@@ -442,8 +442,9 @@ def buscar_youtube(c):
             tudo = A.chave(titulo + " " + resto)
             if marca not in A.chave(titulo) and marca not in A.chave(resto[:80]):
                 continue
-            sinal = (ag and ag in tudo) or any(w in A.sem_acento(titulo).lower() for w in chaves_titulo) \
-                or A.FORTE.search(titulo) or re.search(r"\b(lançamento|launch)\b", titulo, re.I)
+            # sinal forte: o nome da agência, ou duas palavras do título da campanha no título do vídeo
+            iguais = sum(1 for w in chaves_titulo if w in A.sem_acento(titulo).lower())
+            sinal = (ag and len(ag) >= 4 and ag in tudo) or iguais >= 2
             if sinal:
                 log("  + youtube:", vid, "|", titulo)
                 return [vid]
