@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: linkedin-teste
@@ -32,6 +33,7 @@ jobs:
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           CORESIGNAL_TOKEN: ${{ secrets.CORESIGNAL_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "droppad robô"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -49,6 +51,10 @@ jobs:
             fi
             git commit -q -m "Teste LinkedIn $(TZ=America/Sao_Paulo date '+%F %H:%M') (robô)"
             if git push origin HEAD:main; then
+              # push feito pelo robô não dispara a publicação sozinho: chama o "Publicar site"
+              if ! git diff --quiet HEAD~1 HEAD -- campaigns.json; then
+                gh workflow run publicar.yml -R "${{ github.repository }}" --ref main >/dev/null 2>&1 || true
+              fi
               exit 0
             fi
             echo "Push recusado; tentando de novo ($tentativa/5)."
