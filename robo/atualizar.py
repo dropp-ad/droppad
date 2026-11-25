@@ -40,6 +40,8 @@ JANELA_DIAS = 10          # no modo normal, aceita campanhas de até 10 dias atr
 MAX_MATERIAS = 300        # matérias abertas por execução (para achar filmes)
 MAX_NOVAS = 150           # campanhas novas por execução
 PAGINAS_ARQUIVO = 4       # páginas antigas por feed em cada execução
+MES_INICIO_ARQUIVO_MES = "2025-11"  # o arquivo por mês desce daqui até ARQUIVO_INICIO
+PAGINAS_POR_MES = 6       # no máximo 60 matérias por mês por fonte (as de campanha passam no filtro)
 BUSCAS_POR_RODADA = 6
 TESTES_DESCOBERTA = 8     # sites novos testados por rodada
 MAX_POR_FONTE_DIA = 5     # para nenhuma fonte dominar o dia
@@ -1054,6 +1056,46 @@ def main():
         return f, achados
     with cf.ThreadPoolExecutor(12) as ex:
         for f, itens in ex.map(job_arquivo, todas_fontes):
+            for it in itens:
+                considerar(it, f, ARQUIVO_INICIO)
+
+    # 2b) arquivo por mês: nos feeds de WordPress, "?m=AAAAMM" devolve só aquele mês. Assim o robô pula
+    # direto para os anos antigos (um mês por fonte a cada execução) em vez de descer página por página.
+    estado.setdefault("arquivo_mes", {})
+
+    def job_mes(f):
+        if RAPIDO:
+            return f, []
+        url = estado["feeds"].get(f["nome"], {}).get("url")
+        st = estado["arquivo_mes"].setdefault(f["nome"], {"mes": MES_INICIO_ARQUIVO_MES, "pagina": 0})
+        if not url or st.get("fim") or st.get("sem_wp"):
+            return f, []
+        achados = []
+        for _ in range(PAGINAS_ARQUIVO):
+            mes = st["mes"]
+            if mes < ARQUIVO_INICIO[:7]:
+                st["fim"] = True
+                break
+            p = st["pagina"] + 1
+            alvo = url + ("&" if "?" in url else "?") + "m=%s" % mes.replace("-", "") + ("&paged=%d" % p if p > 1 else "")
+            try:
+                txt = baixar(alvo, timeout=20)
+                itens = ler_feed(txt) if parece_feed(txt) else []
+            except Exception:  # noqa: BLE001
+                itens = []
+            do_mes = [i for i in itens if i["data"][:7] == mes]
+            if p == 1 and itens and not do_mes:
+                st["sem_wp"] = True  # o site ignora ?m= (não é WordPress): fica só com o arquivo por páginas
+                break
+            achados += do_mes
+            if not do_mes or len(itens) < 5 or p >= PAGINAS_POR_MES:
+                y, m = int(mes[:4]), int(mes[5:7]) - 1
+                st["mes"], st["pagina"] = ("%d-%02d" % (y - 1, 12) if m == 0 else "%d-%02d" % (y, m)), 0
+            else:
+                st["pagina"] = p
+        return f, achados
+    with cf.ThreadPoolExecutor(12) as ex:
+        for f, itens in ex.map(job_mes, todas_fontes):
             for it in itens:
                 considerar(it, f, ARQUIVO_INICIO)
 
