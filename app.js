@@ -237,6 +237,37 @@
   }
   var ICON_DOTS = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="3" height="3"/><rect x="10.5" y="11" width="3" height="3"/><rect x="17" y="11" width="3" height="3"/></svg>';
 
+  /* Instagram: o post inteiro (cabeçalho, filme e rodapé) entra reduzido no quadro 16:9, sem cortar.
+     O embed avisa a própria altura por postMessage (MEASURE); até lá, vale uma altura típica. */
+  var IG_W = 400, IG_H = 760, igRO = "ResizeObserver" in window ? new ResizeObserver(function (es) { es.forEach(function (e) { scaleIG(e.target); }); }) : null;
+  function scaleIG(media) {
+    var box = media.querySelector(".igbox");
+    if (!box) return;
+    var h = +box.dataset.h || IG_H, w = media.clientWidth, bh = media.clientHeight;
+    if (!w || !bh) return;
+    box.style.setProperty("--igh", h + "px");
+    box.style.transform = "translate(-50%,-50%) scale(" + Math.min(1, bh / h, w / IG_W).toFixed(4) + ")";
+  }
+  function fitIG(media) {
+    if (!media) return;
+    if (igRO) igRO.observe(media);
+    requestAnimationFrame(function () { scaleIG(media); });
+  }
+  window.addEventListener("message", function (e) {
+    if (!/^https:\/\/(www\.)?instagram\.com$/.test(e.origin)) return;
+    var d = e.data;
+    try { if (typeof d === "string") d = JSON.parse(d); } catch (err) { return; }
+    var h = d && d.details && +d.details.height;
+    if (!d || d.type !== "MEASURE" || !h) return;
+    document.querySelectorAll(".igbox iframe").forEach(function (fr) {
+      if (fr.contentWindow !== e.source) return;
+      var box = fr.parentNode;
+      if (+box.dataset.h === Math.round(h)) return;
+      box.dataset.h = Math.round(h);
+      scaleIG(box.closest(".media"));
+    });
+  });
+
   /* campanha sem filme: a notícia contada no próprio post (título + parágrafos da matéria) */
   function newsBlock(c) {
     var box = el("div", "news rv");
@@ -323,7 +354,7 @@
       var host0 = el("div", "host");
       if (f0.kind === "ig" || f0.kind === "tt") {
         // post do Instagram/TikTok aparece direto, sem capa antes (carrega quando chega perto da tela)
-        var box0 = el("div");
+        var box0 = el("div", f0.kind === "ig" ? "igbox" : null);
         var fr0 = el("iframe");
         fr0.src = f0.src;
         fr0.loading = "lazy";
@@ -334,6 +365,7 @@
         box0.appendChild(fr0);
         host0.appendChild(box0);
         art.classList.add("embed-on");
+        if (f0.kind === "ig") fitIG(media);
       }
       media.appendChild(cover);
       media.appendChild(host0);
@@ -931,6 +963,7 @@
       fr.setAttribute("allowfullscreen", "");
       fr.setAttribute("scrolling", "no");
       fr.title = c.brand + " no " + (f.kind === "ig" ? "Instagram" : "TikTok");
+      if (f.kind === "ig") { slot.className = "igbox"; fitIG(art._media); }
       slot.appendChild(fr);
       fr.addEventListener("load", playing);
       setTimeout(playing, 2500);

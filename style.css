@@ -38,7 +38,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 /* ---------- topo: some ao rolar pra baixo, volta ao rolar pra cima ---------- */
 .top { position: fixed; inset: 0 0 auto 0; z-index: 20; height: calc(var(--top-h) + env(safe-area-inset-top)); padding: env(safe-area-inset-top) 32px 0;
   display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px;
-  background: rgba(0, 0, 0, .92); border-bottom: 1px solid var(--line-2); transition: transform var(--t-fast) var(--ease), opacity var(--t-fast) var(--ease); }
+  background: #000; border-bottom: 1px solid var(--line-2); transition: transform var(--t-fast) var(--ease), opacity var(--t-fast) var(--ease); }
 .top.hide { transform: translateY(-100%); opacity: 0; }
 .drawer-on .top.hide { transform: none; opacity: 1; }
 .seg { justify-self: start; display: flex; gap: 2px; padding: 2px; border: 1px solid var(--line); }
@@ -46,8 +46,8 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .seg button[aria-pressed="true"] { background: #fff; color: #000; font-weight: 700; }
 .seg button:not([aria-pressed="true"]):hover { color: #fff; }
 .reg-sel { display: none; }
-.logo { justify-self: center; display: block; height: 40px; }
-.logo img { height: 40px; width: auto; display: block; }
+.logo { justify-self: center; display: block; height: 48px; }
+.logo video { height: 48px; width: auto; display: block; pointer-events: none; }
 .tools { justify-self: end; display: flex; gap: 8px; }
 .cal { position: relative; display: flex; gap: 8px; }
 .tool { position: relative; display: flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border: 1px solid var(--line); font-size: 12px; font-weight: 700; white-space: nowrap; cursor: pointer; transition: border-color var(--t-fast) var(--ease); }
@@ -240,11 +240,13 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 /* ---------- Instagram e TikTok: vídeo em pé no centro, sobre preto ---------- */
 .is-vert .media { container-type: size; }
 .is-vert .host { pointer-events: auto; }
-.is-vert .host > div { position: absolute !important; top: 0; bottom: 0; left: 50%; width: calc(100cqh * 9 / 16) !important; height: 100% !important;
+.is-vert .host > div:not(.igbox) { position: absolute !important; top: 0; bottom: 0; left: 50%; width: calc(100cqh * 9 / 16) !important; height: 100% !important;
   transform: translateX(-50%); overflow: hidden; background: #000; }
 .is-vert .host iframe { position: absolute !important; border: 0; background: #000; }
 .is-tt .host iframe { inset: 0; width: 100% !important; height: 100% !important; }
-.is-ig .host iframe { top: -54px; left: calc(100cqh * -0.11875); width: calc(100cqh * 0.8) !important; height: calc(100cqh + 54px + 420px) !important; }
+/* Instagram: o post inteiro, reduzido pra caber no quadro (a escala vem do JS) */
+.is-ig .host > .igbox { left: 50%; top: 50%; bottom: auto; right: auto; width: 400px !important; height: var(--igh, 760px) !important; transform: translate(-50%, -50%) scale(.7); transform-origin: 50% 50%; background: #fff; overflow: hidden; }
+.is-ig .host > .igbox iframe { inset: 0; width: 100% !important; height: 100% !important; background: #fff; }
 .is-vert .cover { display: none; }
 .is-vert .host { z-index: 3; }
 .is-vert .bigplay, .is-vert .ptime, .is-vert .mute, .is-vert .bar { display: none !important; }
@@ -260,7 +262,8 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
   .reg-sel { display: flex; align-items: center; gap: 4px; justify-self: start; position: relative; height: 34px; padding: 0 12px; border: 1px solid var(--line);
     font-size: 13px; font-weight: 700; white-space: nowrap; cursor: pointer; }
   .reg-sel select { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; font-size: 16px; }
-  .logo, .logo img { height: 34px; }
+  .logo, .logo video { height: 40px; }
+  .is-ig .media { aspect-ratio: 4 / 5; }
   .cal-btn { width: 34px; padding: 0; justify-content: center; }
   .cal-btn span { display: none; }
   .tools .sound-btn { display: none; }

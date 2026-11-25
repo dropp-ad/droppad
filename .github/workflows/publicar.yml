@@ -29,7 +29,7 @@ jobs:
       - name: Separar só os arquivos do site
         run: |
           mkdir _site
-          cp -r index.html app.js style.css favicon.svg logo.* logo-transparente.png painel.html privacidade.html \
+          cp -r index.html app.js style.css favicon.svg logo.* logo-transparente.png logo-loop.webm logo-loop.mp4 logo-poster.jpg painel.html privacidade.html \
                 campaigns.json novidades.json views.json arquivo.json .nojekyll _site/
           # versão enxuta das campanhas, que é o que o site carrega
           python3 tools/feed.py campaigns.json _site
