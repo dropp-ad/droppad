@@ -357,7 +357,10 @@
     ver.addEventListener("click", function (e) {
       e.stopPropagation();
       var abrir = body.classList.contains("fechado");
-      if (abrir) { body.style.maxHeight = body.scrollHeight + "px"; body.classList.remove("fechado"); }
+      if (abrir) {
+        body.style.maxHeight = body.offsetHeight + "px"; body.classList.remove("fechado");
+        void body.offsetHeight; body.style.maxHeight = body.scrollHeight + "px";
+      }
       else { body.style.maxHeight = ""; body.classList.add("fechado"); }
       ver.textContent = abrir ? "Ver menos" : "Ver mais";
       ver.setAttribute("aria-expanded", abrir ? "true" : "false");
@@ -373,7 +376,7 @@
         total += t.length;
         return body.children.length >= 6 || total > 1600;
       });
-      var longo = total > 260 || body.children.length > 1;
+      var longo = total > 70 || body.children.length > 1; // fechado mostra só 1 linha
       body.classList.toggle("fechado", longo);
       ver.hidden = !longo;
     }
@@ -552,6 +555,12 @@
           watch(news);
         }));
         media.appendChild(cv);
+        if (c.url) {
+          media.classList.add("abre");
+          media.setAttribute("role", "link");
+          media.setAttribute("aria-label", "Ler a matéria em " + (c.source || "fonte"));
+          media.addEventListener("click", function (e) { e.stopPropagation(); window.open(c.url, "_blank", "noopener"); });
+        }
       } else {
         media = null;
         news.insertBefore(el("span", "stamp", selo(c.date)), news.firstChild);
@@ -700,6 +709,62 @@
     menu.style.top = (r.bottom + 8 + hgt > window.innerHeight - 8 && r.top - 8 - hgt > 8 ? r.top - 8 - hgt : r.bottom + 8) + "px";
     menu.style.left = Math.max(12, Math.min(window.innerWidth - w - 12, r.right - w)) + "px";
   }
+
+  /* ---------- Contato: menu ao lado do calendário, na língua do país de quem entra ---------- */
+  var CONTATO_EMAIL = "contato@dropp.ad";
+  var CONTATO_TXT = {
+    pt: ["Contato", "Sugerir pauta", "Comercial", "Sugestões"],
+    en: ["Contact", "Suggest a story", "Business", "Feedback"],
+    es: ["Contacto", "Sugerir una noticia", "Comercial", "Sugerencias"],
+    fr: ["Contact", "Proposer un sujet", "Commercial", "Suggestions"],
+    de: ["Kontakt", "Thema vorschlagen", "Geschäftliches", "Vorschläge"],
+    it: ["Contatti", "Suggerisci una notizia", "Commerciale", "Suggerimenti"],
+    nl: ["Contact", "Onderwerp voorstellen", "Zakelijk", "Suggesties"],
+    ja: ["お問い合わせ", "ネタを提案する", "広告・提携", "ご意見"],
+    ko: ["문의", "기사 제보", "비즈니스 문의", "제안"],
+    zh: ["联系", "提供选题", "商务合作", "建议"]
+  };
+  var LINGUA_DO_PAIS = {
+    pt: "BR PT AO MZ CV GW ST TL", es: "ES MX AR CO CL PE VE EC GT CU BO DO HN PY SV NI CR PA UY PR GQ",
+    fr: "FR BE LU MC SN CI CM ML BF NE TG BJ GA CG CD MG HT", de: "DE AT CH LI", it: "IT SM VA", nl: "NL SR",
+    ja: "JP", ko: "KR", zh: "CN TW HK MO"
+  };
+  var paisVisita = "";
+  function linguaContato() {
+    var cc = paisVisita;
+    if (!cc) try { cc = localStorage.getItem("ddrop-cc") || ""; } catch (e) { /* sem storage */ }
+    for (var l in LINGUA_DO_PAIS) if (cc && LINGUA_DO_PAIS[l].split(" ").indexOf(cc) >= 0) return l;
+    var nav = (navigator.language || "").slice(0, 2).toLowerCase();
+    return cc ? "en" : (CONTATO_TXT[nav] ? nav : "en");
+  }
+  function pintarContato() {
+    if (!$("contato")) return; // página antiga em cache, sem o botão
+    var t = CONTATO_TXT[linguaContato()];
+    $("contato-txt").textContent = t[0];
+    $("contato").setAttribute("aria-label", t[0]);
+    $("contato").title = t[0];
+  }
+  function abrirContato(btn) {
+    if (menu && menu._for === btn) { closeMenu(); return; }
+    closeMenu();
+    var t = CONTATO_TXT[linguaContato()];
+    menu = el("div", "sharemenu contatomenu");
+    menu._for = btn;
+    menu.setAttribute("role", "menu");
+    [t[1], t[2], t[3]].forEach(function (label) {
+      var a = el("a", "shareitem", label);
+      a.setAttribute("role", "menuitem");
+      a.href = "mailto:" + CONTATO_EMAIL + "?subject=" + encodeURIComponent("droppad · " + label);
+      a.addEventListener("click", function () { setTimeout(closeMenu, 0); });
+      menu.appendChild(a);
+    });
+    document.body.appendChild(menu);
+    var r = btn.getBoundingClientRect(), w = menu.offsetWidth;
+    menu.style.top = (r.bottom + 8) + "px";
+    menu.style.left = Math.max(12, Math.min(window.innerWidth - w - 12, r.right - w)) + "px";
+  }
+  if ($("contato")) $("contato").addEventListener("click", function (e) { e.stopPropagation(); abrirContato($("contato")); });
+  pintarContato();
 
   /* ---------- Comentários (sistema próprio, no Supabase) ----------
      Login com Google (e Apple, quando APPLE_LOGIN = true). Os comentários ficam na tabela
@@ -898,6 +963,15 @@
     p.style.height = p.scrollHeight + "px";
     requestAnimationFrame(function () { p.classList.remove("on"); p.style.height = "0px"; });
     setTimeout(function () { p.remove(); }, 450);
+    snap(true);
+  }
+  // a rolagem "para em cada post" (scroll-snap); desliga enquanto os comentários estão abertos
+  function snap(on) { document.documentElement.classList.toggle("nosnap", !on); }
+  function mostrarGaveta(p) {
+    if (!p || drawer !== p) return;
+    var r = p.getBoundingClientRect(), vh = window.innerHeight;
+    var desce = Math.min(r.bottom - vh + 16, r.top - 90); // mostra a gaveta inteira, sem esconder o topo dela
+    if (desce > 0) window.scrollBy({ top: desce, behavior: REDUCE ? "auto" : "smooth" });
   }
   function openComments(c) {
     closeMenu();
@@ -905,6 +979,7 @@
     if (!art) return;
     if (drawer && drawer.parentNode === art) { closeComments(); return; } // segundo clique fecha
     closeComments();
+    snap(false);
     drawer = el("section", "cmts");
     drawer.setAttribute("aria-label", "Comentários");
     var body = el("div", "drawer-body"), form = el("div", "cmt-form");
@@ -929,7 +1004,8 @@
     requestAnimationFrame(function () {
       p.classList.add("on");
       p.style.height = p.scrollHeight + "px";
-      setTimeout(function () { if (p.classList.contains("on")) p.style.height = "auto"; }, 450);
+      setTimeout(function () { if (p.classList.contains("on")) p.style.height = "auto"; mostrarGaveta(p); }, 460);
+      setTimeout(function () { mostrarGaveta(p); }, 1300); // de novo quando a lista carrega
     });
   }
   // volta do login: conclui a entrada e reabre a gaveta da campanha
@@ -1313,6 +1389,21 @@
     if (n) n.scrollIntoView({ block: "center", behavior: REDUCE ? "auto" : "smooth" });
   });
 
+  /* ---------- Voltar ao topo: desliga o scroll-snap durante a subida (no iPhone ele travava) ---------- */
+  var topoT = 0;
+  function irAoTopo() {
+    closeComments(); closeMenu();
+    var h = document.documentElement;
+    h.classList.add("nosnap");
+    var suave = !REDUCE && !window.matchMedia("(max-width: 760px)").matches;
+    window.scrollTo({ top: 0, behavior: suave ? "smooth" : "auto" });
+    clearTimeout(topoT);
+    (function fim(t0) {
+      if (window.scrollY <= 2 || Date.now() - t0 > 2500) { topoT = setTimeout(function () { if (!drawer) h.classList.remove("nosnap"); }, 120); return; }
+      requestAnimationFrame(function () { fim(t0); });
+    })(Date.now());
+  }
+
   /* ---------- Botão de voltar ao topo: aparece depois do primeiro post ---------- */
   (function () {
     var b = el("button", "to-top");
@@ -1320,7 +1411,7 @@
     b.setAttribute("aria-label", "Voltar ao topo");
     b.title = "Voltar ao topo";
     b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5 12l7-7 7 7"/></svg>';
-    b.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: REDUCE ? "auto" : "smooth" }); });
+    b.addEventListener("click", irAoTopo);
     document.body.appendChild(b);
     var on = false;
     window.addEventListener("scroll", function () {
@@ -1453,7 +1544,7 @@
   /* ---------- Início ---------- */
   $("sound").addEventListener("click", function () { setSound(Date.now() - unblockedAt < 1000 ? true : !sound); });
   paintSound();
-  $("top").addEventListener("click", function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+  $("top").addEventListener("click", function (e) { e.preventDefault(); irAoTopo(); });
   document.addEventListener("visibilitychange", function () {
     if (!active || !active.player) return;
     try {
@@ -1473,6 +1564,7 @@
     .then(function (res) {
       state.items = normalize(res[0]);
       setHome(res[1]);
+      paisVisita = res[1] || ""; pintarContato();
       $("status").hidden = true;
       renderAll();
       goTo(sharedId());
