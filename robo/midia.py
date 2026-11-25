@@ -62,37 +62,35 @@ def _nome_entre_aspas(c):
 
 def bate_com_a_campanha(c, texto):
     """O texto (título de vídeo ou de matéria) fala desta campanha? Marca como palavra inteira E um sinal forte:
-    agência, nome da campanha entre aspas, ou duas palavras específicas do título."""
+    a agência (palavra inteira), o nome da campanha entre aspas, um nome próprio composto da campanha
+    ("Ary Fontoura", "Gloss Absolu", "Really Philly") ou duas palavras específicas do título."""
     if not _tem_marca(c["brand"], texto):
         return False
-    t = A.sem_acento(texto).lower()
-    ag = A.chave(c.get("agency", ""))
-    if len(ag) >= 4 and ag in A.chave(texto):
+    t = re.sub(r"\s+", " ", A.sem_acento(texto).lower())
+    ag = c.get("agency", "")
+    if len(A.chave(ag)) >= 5 and _tem_marca(ag, texto):
         return True
     nome = _nome_entre_aspas(c)
     if nome and A.chave(nome) in A.chave(texto):
         return True
-    iguais = sum(1 for w in _palavras(c.get("title", "") + " " + c.get("summary", ""), c["brand"]) if w in t)
-    if iguais >= 2:
+    if any(f in t for f in _nomes_compostos(c)):
         return True
-    # um nome próprio da campanha (celebridade, personagem, produto) também vale: "Ary Fontoura", "Philly"
-    return any(n in t for n in _nomes_proprios(c))
+    return sum(1 for w in _palavras(c.get("title", ""), c["brand"]) if w in t) >= 2
 
 
-def _nomes_proprios(c):
-    tirar = set(re.findall(r"[a-z0-9]+", A.sem_acento(c["brand"]).lower())) | GENERICAS
+def _nomes_compostos(c):
+    """Pares de palavras com inicial maiúscula seguidas (nomes de pessoas, produtos, personagens), sem a marca."""
+    tirar = set(re.findall(r"[a-z0-9]+", A.sem_acento(c["brand"]).lower()))
     out = []
     for txt in (c.get("title", ""), c.get("summary", "")):
-        palavras = re.findall(r"[\wÀ-ÿ’'&]+", txt)
-        for i, w in enumerate(palavras):
-            k = A.sem_acento(w).lower()
-            if i > 0 and w[:1].isupper() and len(k) >= 5 and k not in tirar and k.isalpha():
-                out.append(k)
+        palavras = re.findall(r"[\wÀ-ÿ’']+", txt)
+        for a, b in zip(palavras, palavras[1:]):
+            if a[:1].isupper() and b[:1].isupper() and len(a) + len(b) >= 8:
+                ka, kb = A.sem_acento(a).lower(), A.sem_acento(b).lower()
+                if ka not in tirar and kb not in tirar and ka not in GENERICAS and kb not in GENERICAS \
+                        and ka not in ("sao", "the", "nova", "novo", "rio"):
+                    out.append(ka + " " + kb)
     return out
-
-
-UI_YT = re.compile(r"^(adicionar à fila|add to queue|enviar feedback|send feedback|assistir mais tarde|watch later|compartilhar|share|novo|new|"
-                   r"\d+[:.]\d+|.*\bvisualiza|.*\bviews?\b|há \d+|\d+ (?:dias?|horas?|semanas?) atrás)", re.I)
 
 
 def _videos_da_busca(pag):
