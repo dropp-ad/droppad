@@ -45,11 +45,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"63013376b4de80e32c8b2eef65163fcd\"",
-      "mod": "Wed, 25 Nov 2026 06:15:33 GMT"
+      "etag": "W/\"f3c43d4f9753b2af34af48fb4f3587c1\"",
+      "mod": "Wed, 25 Nov 2026 06:25:13 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 06:27:13 GMT"
+      "mod": "Wed, 25 Nov 2026 06:30:12 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"4c6a2b8df01245e1143af65643ac6e36\"",
@@ -79,7 +79,7 @@
       "mod": "Wed, 25 Nov 2026 00:46:19 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Wed, 25 Nov 2026 06:11:11 GMT"
+      "mod": "Wed, 25 Nov 2026 06:30:13 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"387f5a7ab5e799a8b3d6ef3c4309e52d\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 06:28:14 GMT"
+      "mod": "Wed, 25 Nov 2026 06:30:13 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"2f3443856885b61eac0b9493ecc067aa-gzip\"",
-      "mod": "Wed, 25 Nov 2026 06:22:26 GMT"
+      "etag": "W/\"1ae220659a1341d38ae523b5b1f2d14e-gzip\"",
+      "mod": "Wed, 25 Nov 2026 06:29:29 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -186,7 +186,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 42,
+  "yt_pos": 102,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -424,22 +424,18 @@
       "Goma": "",
       "Bóia": "",
       "dentsu Brasil": "",
-      "Havas Brasil": ""
+      "Havas Brasil": "",
+      "Monks Brasil": ""
     },
     "tentadas": {
       "Zambezi": [
         "zmbz"
       ],
       "Accenture Song Brasil": [
-        "accenturesongbrasil",
-        "accenturesongbrasilagency"
-      ],
-      "Monks Brasil": [
-        "monksbrasil",
-        "monksbrasilagency"
+        "accenturesongbrasil"
       ]
     },
-    "pos": 453,
+    "pos": 454,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -529,9 +525,10 @@
       "Bóia",
       "dentsu Brasil",
       "Havas Brasil",
-      "Monks Brasil"
+      "Monks Brasil",
+      "Accenture Song Brasil"
     ],
-    "rodadas": 824,
+    "rodadas": 826,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1610,8 +1607,9 @@
     "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-past-advertising",
     "https://www.medianews4u.com/giraffe-advertising-marks-21-years-expands-into-hospitality-entertainment-and-real-estate",
     "https://www.medianews4u.com/openai-brings-sana-shaikh-on-board-for-global-ads-solutions-in-india",
-    "https://www.horizont.net/marketing/nachrichten/deutschlands-werbelieblinge-haribo-mcdonalds--co.-diese-spots-begeistern-die-deutschen-am-meisten-236702"
+    "https://www.horizont.net/marketing/nachrichten/deutschlands-werbelieblinge-haribo-mcdonalds--co.-diese-spots-begeistern-die-deutschen-am-meisten-236702",
+    "https://www.afaqs.com/news/advertising/v-guards-new-campaign-puts-household-wiring-heat-in-focus-12839667"
   ],
-  "ultima_rodada": "2026-11-25T06:28:11.193448+00:00",
-  "ultima_novidade": "2026-11-25T04:36:09.566093+00:00"
+  "ultima_rodada": "2026-11-25T06:30:10.506856+00:00",
+  "ultima_novidade": "2026-11-25T06:30:10.506856+00:00"
 }
