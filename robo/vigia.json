@@ -19,8 +19,8 @@
       "mod": "Wed, 25 Nov 2026 06:37:11 GMT"
     },
     "https://www.informabtl.com/feed/": {
-      "etag": "W/\"78028ddb28437de77a347c7ab5d7452e\"",
-      "mod": "Wed, 25 Nov 2026 07:00:36 GMT"
+      "etag": "W/\"7d0fb73f943bc2ff6bb3ff90e56fb7a6\"",
+      "mod": "Wed, 25 Nov 2026 08:00:49 GMT"
     },
     "https://propmark.com.br/feed/": {
       "etag": "\"b037f7640f98f2caea39c03e06e7521f\"",
@@ -34,7 +34,7 @@
       "mod": "Tue, 24 Nov 2026 23:19:00 GMT"
     },
     "https://www.contentgrip.com/feed/": {
-      "etag": "W/\"25305-EQgBKoqqiqExcoyp3VX1tQ4J5Ww\""
+      "etag": "W/\"2367c-FuYp9OjwM5mg4savqnudaPwtAEA\""
     },
     "https://www.nossomeio.com.br/feed/": {
       "etag": "\"ca13a04b7a22295cc11721ad4c597bd9\"",
@@ -45,11 +45,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"f6635437700535ba2424a9693c839ece\"",
-      "mod": "Wed, 25 Nov 2026 07:50:49 GMT"
+      "etag": "W/\"02b225c42d17acad28c0851cd4e189d6\"",
+      "mod": "Wed, 25 Nov 2026 08:00:59 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 07:57:13 GMT"
+      "mod": "Wed, 25 Nov 2026 08:26:11 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
@@ -64,11 +64,11 @@
       "mod": "Thu, 07 May 2026 12:47:56 GMT"
     },
     "https://www.decisionmarketing.co.uk/feed/": {
-      "mod": "Wed, 25 Nov 2026 07:10:38 GMT"
+      "mod": "Wed, 25 Nov 2026 08:22:57 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
-      "etag": "\"2cda654af7d83a5633d6b60869d3338e\"",
-      "mod": "Tue, 24 Nov 2026 18:12:27 GMT"
+      "etag": "\"03504786c9e5d6e6ec11d025304b67e5\"",
+      "mod": "Wed, 25 Nov 2026 08:07:41 GMT"
     },
     "https://campaignbrief.com/feed/": {
       "etag": "\"c299cfb2cbb3f343da3116d9ff159ff1\"",
@@ -79,11 +79,11 @@
       "mod": "Wed, 25 Nov 2026 00:46:19 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Wed, 25 Nov 2026 07:49:13 GMT"
+      "mod": "Wed, 25 Nov 2026 08:17:13 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
-      "etag": "\"387f5a7ab5e799a8b3d6ef3c4309e52d\"",
-      "mod": "Wed, 25 Nov 2026 00:58:13 GMT"
+      "etag": "\"404da0c5daf43a17d66a6e6193e5de2a\"",
+      "mod": "Wed, 25 Nov 2026 08:18:47 GMT"
     },
     "https://www.adweek.com/feed/": {
       "etag": "W/\"bb32ca5d6204a2778998ae62e623cd2d\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 07:58:14 GMT"
+      "mod": "Wed, 25 Nov 2026 08:26:13 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"681f51228b824be0741a0ea91b527bcd-gzip\"",
-      "mod": "Wed, 25 Nov 2026 07:56:49 GMT"
+      "etag": "W/\"f0688317a365f7bc01b9c3b5a71af128-gzip\"",
+      "mod": "Wed, 25 Nov 2026 08:25:33 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -143,8 +143,8 @@
       "mod": "Tue, 24 Nov 2026 22:12:52 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
-      "etag": "\"5780b4b7953f1018de27e75e9250c2e0\"",
-      "mod": "Wed, 25 Nov 2026 07:54:55 GMT"
+      "etag": "\"3e0fc5cd23503d60e366d4a525c5e539\"",
+      "mod": "Wed, 25 Nov 2026 08:22:04 GMT"
     },
     "https://wearesocial.com/it/feed/": {
       "etag": "W/\"142edc7baade8a4b5bd0a2a67ab57ef5\"",
@@ -186,7 +186,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 41,
+  "yt_pos": 78,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -458,17 +458,35 @@
       "Kamp Grizzly": "kampgrizzly",
       "Thesis": "thesisagency",
       "Swift": "",
-      "Pollinate": "pollinateagency"
+      "Pollinate": "pollinateagency",
+      "CMD": "",
+      "Highdive": "highdiveus",
+      "Sockeye": "",
+      "VSA Partners": "vsapartners",
+      "Schafer Condon Carter": "schafercondoncarter",
+      "Energy BBDO": "",
+      "OKRP": "barkley.okrp",
+      "Two by Four": "twoxfouragency",
+      "Cramer-Krasselt": "cramerkrasselt",
+      "Tom, Dick & Harry Creative": "tdhcreative",
+      "Upshot": "upshotagency",
+      "AbelsonTaylor": "abelsontaylorgroup",
+      "Carmichael Lynch": "carmichael_lynch",
+      "Periscope": "tenaciousbetty",
+      "Knock": "knockinc",
+      "Mono": "monoagency",
+      "Modern Climate": "modernclimate",
+      "Arnold Worldwide": "arnold_worldwide",
+      "Haberman": "",
+      "Hill Holliday": "hillholliday",
+      "MullenLowe U.S.": "omnicom",
+      "Allen & Gerritsen": "allen_gerritsen",
+      "Connelly Partners": "connellypartners",
+      "360PR+": "360prplus",
+      "Small Army": ""
     },
-    "tentadas": {
-      "Sockeye": [
-        "sockeye"
-      ],
-      "CMD": [
-        "cmdagency"
-      ]
-    },
-    "pos": 498,
+    "tentadas": {},
+    "pos": 512,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -576,9 +594,12 @@
       "SUMMONER",
       "Venables Bell & Partners",
       "Swift",
-      "CMD"
+      "CMD",
+      "Sockeye",
+      "Energy BBDO",
+      "Haberman"
     ],
-    "rodadas": 914,
+    "rodadas": 942,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1033,7 +1054,69 @@
       "Pollinate": [
         "pollinateagency"
       ],
-      "Sockeye": []
+      "Sockeye": [],
+      "Highdive": [
+        "highdiveus"
+      ],
+      "Energy BBDO": [],
+      "VSA Partners": [
+        "vsapartners"
+      ],
+      "Schafer Condon Carter": [
+        "schafercondoncarter"
+      ],
+      "OKRP": [
+        "barkley.okrp"
+      ],
+      "Two by Four": [
+        "twoxfouragency",
+        "twoxfour_insta"
+      ],
+      "Cramer-Krasselt": [
+        "cramerkrasselt"
+      ],
+      "Tom, Dick & Harry Creative": [
+        "tdhcreative"
+      ],
+      "Upshot": [],
+      "AbelsonTaylor": [
+        "abelsontaylorgroup"
+      ],
+      "Carmichael Lynch": [
+        "carmichael_lynch"
+      ],
+      "Periscope": [
+        "tenaciousbetty"
+      ],
+      "Knock": [
+        "knockinc"
+      ],
+      "Mono": [
+        "monoagency"
+      ],
+      "Haberman": [],
+      "Modern Climate": [
+        "modernclimate"
+      ],
+      "Arnold Worldwide": [
+        "arnold_worldwide"
+      ],
+      "Hill Holliday": [
+        "hillholliday"
+      ],
+      "MullenLowe U.S.": [
+        "omnicom"
+      ],
+      "Allen & Gerritsen": [
+        "allen_gerritsen"
+      ],
+      "Connelly Partners": [
+        "connellypartners"
+      ],
+      "Small Army": [],
+      "360PR+": [
+        "360prplus"
+      ]
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -1721,8 +1804,10 @@
     "https://www.horizont.net/marketing/nachrichten/deutschlands-werbelieblinge-haribo-mcdonalds--co.-diese-spots-begeistern-die-deutschen-am-meisten-236702",
     "https://www.afaqs.com/news/advertising/v-guards-new-campaign-puts-household-wiring-heat-in-focus-12839667",
     "https://www.decisionmarketing.co.uk/news/ipa-theres-no-cop-out-for-sustainability-in-advertising",
-    "https://www.contentgrip.com/amazon-chatgpt-black-friday-ads"
+    "https://www.contentgrip.com/amazon-chatgpt-black-friday-ads",
+    "https://campaignbriefasia.com/2026/11/25/the-lennon-groups-rizza-garcia-picks-her-three-favourite-campaigns-from-the-one-asia-judging",
+    "https://www.retailgazette.co.uk/blog/2026/11/black-friday-bristol-ad-ban"
   ],
-  "ultima_rodada": "2026-11-25T07:58:10.631149+00:00",
-  "ultima_novidade": "2026-11-25T06:30:10.506856+00:00"
+  "ultima_rodada": "2026-11-25T08:26:10.744017+00:00",
+  "ultima_novidade": "2026-11-25T08:26:10.744017+00:00"
 }
