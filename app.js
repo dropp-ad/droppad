@@ -49,6 +49,10 @@
     if (x.director) add("Direção", x.director);
     return out;
   }
+  // Malásia e Índia: só entram campanhas de agências dos grandes grupos internacionais
+  var SO_REDE = { MY: 1, IN: 1 };
+  var REDES = /\b(ogilvy|mccann|bbdo|ddb|tbwa|media arts lab|leo burnett|leo|publicis|saatchi|grey|vml|vmly&r|wunderman|jwt|walter thompson|fcb|havas|dentsu|isobar|lowe|y&r|wieden|w\+k|72andsunny|droga5|accenture song|cheil|hakuhodo|bbh|akqa|r\/ga|serviceplan|edelman|digitas|sapient|mullen|lintas|wpp|omnicom|interpublic|ipg|initiative|mindshare|wavemaker|essencemediacom|mediacom|omd|phd|starcom|zenith|spark foundry|carat|iprospect|taproot|ulka|mudra|monks|razorfish|deutsch|innocean|merkle|geometry|tribal|landor|weber shandwick|golin|burson|hill & knowlton|ketchum|fleishmanhillard)\b/i;
+  function foraDaRede(c) { return !!SO_REDE[c.cc] && !REDES.test(c.agency); }
   function normalize(raw) {
     if (!Array.isArray(raw)) return [];
     return raw.map(function (x) {
@@ -63,7 +67,7 @@
       };
       c.fl = films(c);
       return c;
-    }).filter(function (c) { return isDay(c.date) && c.title && !c.hidden; })
+    }).filter(function (c) { return isDay(c.date) && c.title && !c.hidden && !foraDaRede(c); })
       .sort(function (a, b) {
         if (a.date !== b.date) return a.date < b.date ? 1 : -1;
         if (!!a.fl.length !== !!b.fl.length) return a.fl.length ? -1 : 1; // no mesmo dia, filmes primeiro
@@ -311,6 +315,7 @@
 
   /* Instagram: o post inteiro (cabeçalho, filme e rodapé) entra reduzido no quadro 16:9, sem cortar.
      O embed avisa a própria altura por postMessage (MEASURE); até lá, vale uma altura típica. */
+  var CELULAR = window.matchMedia("(max-width: 760px)");
   var IG_W = 400, IG_H = 800, IG_H_REEL = 1010, igRO = "ResizeObserver" in window ? new ResizeObserver(function (es) { es.forEach(function (e) { scaleIG(e.target); }); }) : null;
   function scaleIG(media) {
     var box = media.querySelector(".igbox");
@@ -319,7 +324,13 @@
     var h = +box.dataset.h || (box.dataset.reel ? IG_H_REEL : IG_H), w = media.clientWidth, bh = media.clientHeight;
     if (!w || !bh) return;
     box.style.setProperty("--igh", h + "px");
-    box.style.transform = "translate(-50%,-50%) scale(" + Math.min(1, bh / h, w / IG_W).toFixed(4) + ")";
+    var s;
+    if (CELULAR.matches) {
+      s = Math.min(1, w / IG_W); // largura toda da tela; o quadro cresce na altura do post
+      var alt = Math.round(h * s) + "px";
+      if (media.style.height !== alt) media.style.height = alt;
+    } else s = Math.min(1, bh / h, w / IG_W);
+    box.style.transform = "translate(-50%,-50%) scale(" + s.toFixed(4) + ")";
   }
   function fitIG(media) {
     if (!media) return;
@@ -949,6 +960,20 @@
     }
     send.addEventListener("click", post);
     ta.addEventListener("keydown", function (e) { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) post(); });
+    // no celular o teclado sobe: some o que fica fixo na tela e a página mantém caixa + botão à vista
+    var raiz = document.documentElement;
+    function aVista() {
+      if (document.activeElement !== ta) return;
+      var vv = window.visualViewport, base = vv ? vv.offsetTop + vv.height : window.innerHeight;
+      var r = bar.getBoundingClientRect(), topo = ta.getBoundingClientRect().top;
+      if (r.bottom > base - 8) window.scrollBy(0, Math.min(r.bottom - base + 12, topo - 8));
+    }
+    ta.addEventListener("focus", function () {
+      raiz.classList.add("digitando");
+      setTimeout(aVista, 350); setTimeout(aVista, 700);
+    });
+    ta.addEventListener("blur", function () { setTimeout(function () { if (document.activeElement !== ta) raiz.classList.remove("digitando"); }, 150); });
+    if (window.visualViewport) window.visualViewport.addEventListener("resize", aVista);
     bar.appendChild(who); bar.appendChild(send);
     f.appendChild(ta); f.appendChild(bar);
   }
@@ -966,7 +991,12 @@
     snap(true);
   }
   // a rolagem "para em cada post" (scroll-snap); desliga enquanto os comentários estão abertos
-  function snap(on) { document.documentElement.classList.toggle("nosnap", !on); }
+  function snap(on) {
+    var h = document.documentElement;
+    h.classList.toggle("nosnap", !on);
+    h.classList.toggle("cmt-open", !on);
+    if (on) h.classList.remove("digitando");
+  }
   function mostrarGaveta(p) {
     if (!p || drawer !== p) return;
     var r = p.getBoundingClientRect(), vh = window.innerHeight;
@@ -1553,6 +1583,16 @@
     } catch (e) { /* nada */ }
   });
   setupIO();
+  // logo animado (~750 KB): só começa a baixar depois que a página e as campanhas carregaram;
+  // com "economia de dados" ou movimento reduzido, fica só a imagem parada
+  (function () {
+    var v = $("logo-vid");
+    if (!v || REDUCE || (navigator.connection && navigator.connection.saveData)) return;
+    function liga() { v.preload = "auto"; var p = v.play(); if (p && p.catch) p.catch(function () { /* fica a imagem */ }); }
+    function depois() { (window.requestIdleCallback || function (f) { setTimeout(f, 1200); })(liga, { timeout: 4000 }); }
+    if (document.readyState === "complete") setTimeout(depois, 1500);
+    else window.addEventListener("load", function () { setTimeout(depois, 1500); }, { once: true });
+  })();
   // feed.json é a versão enxuta (gerada na publicação); campaigns.json fica de reserva.
   // "no-cache" revalida com o servidor: se nada mudou, o navegador usa a cópia que já tem.
   function loadData(mode) {
