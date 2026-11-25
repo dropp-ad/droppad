@@ -36,6 +36,7 @@ jobs:
 
       - name: Varrer as fontes a cada minuto
         env:
+          GH_TOKEN: ${{ github.token }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
         run: bash robo/vigia.sh

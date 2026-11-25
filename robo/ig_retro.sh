@@ -17,7 +17,7 @@ publicar() {
     if git diff --cached --quiet; then return 0; fi
     git commit -q -m "Instagram retroativo $(TZ=America/Sao_Paulo date '+%F %H:%M') (robô)"
     if git push -q origin HEAD:main; then
-      gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" >/dev/null 2>&1 || true
+      gh workflow run publicar.yml -R "${GITHUB_REPOSITORY}" --ref main >/dev/null 2>&1 || true
       return 0
     fi
     echo "Push recusado; tentando de novo ($tentativa/6)."

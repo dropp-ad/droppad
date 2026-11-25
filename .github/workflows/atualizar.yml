@@ -21,6 +21,7 @@ on:
 permissions:
   contents: write
   pages: write
+  actions: write
 
 concurrency:
   group: atualizar-ad-drop
@@ -61,7 +62,7 @@ jobs:
             fi
             git commit -q -m "Atualiza campanhas de $(TZ=America/Sao_Paulo date +%F) (robô)"
             if git push origin HEAD:main; then
-              gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null 2>&1 || true
+              gh workflow run publicar.yml -R "${{ github.repository }}" --ref main >/dev/null 2>&1 || true
               exit 0
             fi
             echo "Push recusado; pegando a versão nova e refazendo ($tentativa/3)."

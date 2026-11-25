@@ -11,6 +11,7 @@ on:
 permissions:
   contents: write
   pages: write
+  actions: write
 
 concurrency:
   group: views-ad-drop
@@ -46,7 +47,7 @@ jobs:
             fi
             git commit -q -m "Visualizações $(TZ=America/Sao_Paulo date '+%F %H:%M') (robô)"
             if git push origin HEAD:main; then
-              gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null 2>&1 || true
+              gh workflow run publicar.yml -R "${{ github.repository }}" --ref main >/dev/null 2>&1 || true
               exit 0
             fi
             echo "Push recusado; tentando de novo ($tentativa/5)."

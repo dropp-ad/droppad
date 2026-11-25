@@ -36,6 +36,7 @@ publicar() {
     git commit -q -m "$motivo ($(TZ=America/Sao_Paulo date '+%F %H:%M'), robô)"
     if git push -q origin HEAD:main; then
       echo ">> publicado: $motivo"
+      [ "$motivo" = "Campanhas novas" ] && gh workflow run publicar.yml -R "${GITHUB_REPOSITORY}" --ref main >/dev/null 2>&1
       return 0
     fi
     echo "push recusado; pegando a versão nova e refazendo ($tentativa/3)"
