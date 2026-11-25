@@ -310,11 +310,13 @@
     mb.innerHTML = ICON_DOTS;
     mb.addEventListener("click", function (e) { e.stopPropagation(); share(c, mb); });
     head.appendChild(mb);
+    head.classList.add("rv"); head.style.setProperty("--i", 0);
     art.appendChild(head);
 
     // a frase
     var txt = el("p", "txt", fraseDe(c));
     txt.title = c.title;
+    txt.classList.add("rv"); txt.style.setProperty("--i", 1);
     art.appendChild(txt);
 
     // o filme
@@ -385,6 +387,7 @@
       media.appendChild(cv);
     }
     media.appendChild(el("span", "stamp", selo(c.date)));
+    media.classList.add("rv"); media.style.setProperty("--i", 2);
     art.appendChild(media);
 
     // comentar, compartilhar, ver matéria
@@ -403,6 +406,7 @@
     sh.addEventListener("click", function (e) { e.stopPropagation(); share(c, sh); });
     acts.appendChild(sh);
     if (c.url) acts.appendChild(link("link", "Ver matéria ↗", c.url));
+    acts.classList.add("rv"); acts.style.setProperty("--i", 3);
     art.appendChild(acts);
     paintCount(art);
 
@@ -424,7 +428,16 @@
   function paintCount(art) {
     var n = art.querySelector(".act .n");
     var v = CMT_N[art._c.id];
-    if (n) n.textContent = v == null ? "" : String(v);
+    if (!n) return;
+    if (v == null) { n.textContent = ""; return; }
+    if (!v || REDUCE) { n.textContent = String(v); return; }
+    // conta rapidinho até o valor final
+    var t0 = performance.now();
+    (function step(now) {
+      var k = Math.min(1, (now - t0) / 600), e = 1 - Math.pow(1 - k, 5);
+      n.textContent = String(Math.round(v * e));
+      if (k < 1) requestAnimationFrame(step);
+    })(t0);
   }
   function loadCounts(items) {
     if (!SUPABASE_URL || !SUPABASE_KEY) return;
@@ -1024,7 +1037,9 @@
     deactivate();
     ratios.clear();
     if (io) io.disconnect();
-    $("feed").textContent = "";
+    var fd = $("feed");
+    fd.textContent = "";
+    if (!REDUCE) { fd.classList.add("swap"); requestAnimationFrame(function () { requestAnimationFrame(function () { fd.classList.remove("swap"); }); }); }
     state.shown = 0;
     dayIdx = {};
     state.list = state.items.filter(function (c) {
@@ -1079,10 +1094,17 @@
   function nextPost(art) { var n = art.nextElementSibling; while (n && !n.classList.contains("post")) n = n.nextElementSibling; return n; }
   function paintChrome(art) {
     var c = art._c;
-    $("sd-d").textContent = c.date.slice(8, 10);
-    $("sd-m").textContent = MESES[+c.date.slice(5, 7) - 1];
+    var dd = c.date.slice(8, 10), mm = MESES[+c.date.slice(5, 7) - 1], sd = $("sidedate");
+    if ($("sd-d").textContent !== dd || $("sd-m").textContent !== mm) {
+      // a data troca linha por linha, revelada de baixo pra cima
+      sd.classList.add("swap");
+      $("sd-d").textContent = dd; $("sd-m").textContent = mm;
+      void sd.offsetWidth;
+      sd.classList.remove("swap");
+    }
     var hot = state.region === "hot";
     var tot = hot ? state.list.length : state.perDay[c.date] || 0;
+    $("readbar").style.transform = "scaleX(" + (tot ? Math.min(1, ((art._k || 0) + 1) / tot) : 0) + ")";
     var left = tot - ((art._k || 0) + 1), t = "";
     var quando = c.date === TODAY ? " HOJE" : c.date === shift(TODAY, -1) ? " ONTEM" : " NESTE DIA";
     if (left > 0 && nextPost(art)) t = hot ? "PRÓXIMA" : "MAIS " + left + (left === 1 ? " ESTREIA" : " ESTREIAS") + quando;
@@ -1098,23 +1120,23 @@
 
   /* ---------- Rolagem: topo some/volta, parallax leve (num só requestAnimationFrame) ---------- */
   (function () {
-    var topbar = $("topbar"), day = $("sidedate");
+    var topbar = $("topbar");
+    // imagens andam um pouco mais devagar que a página; no celular, metade disso
+    var PARALLAX = window.matchMedia("(pointer: coarse)").matches ? 0.03 : 0.06;
     var lastY = window.scrollY, ticking = false;
     function frame() {
       ticking = false;
       var y = window.scrollY, vh = window.innerHeight;
-      if (y > 80 && y - lastY > 4) topbar.classList.add("hide");
-      else if (lastY - y > 4 || y <= 80) topbar.classList.remove("hide");
+      if (y > 10 && y - lastY > 2) topbar.classList.add("hide");
+      else if (lastY - y > 2 || y <= 10) topbar.classList.remove("hide");
       lastY = y;
       if (REDUCE) return;
       document.querySelectorAll(".post .cover img").forEach(function (im) {
         var box = im.parentNode.getBoundingClientRect();
         if (box.bottom < -50 || box.top > vh + 50) return;
         var t = ((box.top + box.height / 2) - vh / 2) / vh;
-        im.style.transform = "translate3d(0," + (t * -0.05 * box.height).toFixed(1) + "px,0)";
+        im.style.transform = "translate3d(0," + (t * -PARALLAX * box.height).toFixed(1) + "px,0)";
       });
-      day.style.transform = "translate3d(0," + (-Math.min(y, 600) * 0.08).toFixed(1) + "px,0)";
-      day.style.opacity = String(Math.max(0.35, 1 - y / 1600));
     }
     function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -1199,6 +1221,35 @@
   pollNew();
   setInterval(function () { if (!document.hidden) pollNew(); }, 60 * 1000);
   document.addEventListener("visibilitychange", function () { if (!document.hidden && Date.now() - lastCheck > 60 * 1000) pollNew(); });
+
+  /* ---------- Cursor que segue o mouse e botões magnéticos (só com mouse, sem reduced-motion) ---------- */
+  (function () {
+    if (REDUCE || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+    var cur = $("cursor"), x = -100, y = -100, cx = -100, cy = -100, raf = 0;
+    function loop() {
+      cx += (x - cx) * 0.18; cy += (y - cy) * 0.18;
+      cur.style.transform = "translate3d(" + cx.toFixed(1) + "px," + cy.toFixed(1) + "px,0)";
+      raf = Math.abs(x - cx) + Math.abs(y - cy) > 0.3 ? requestAnimationFrame(loop) : 0;
+    }
+    document.addEventListener("mousemove", function (e) {
+      x = e.clientX; y = e.clientY;
+      if (!cur.classList.contains("on")) { cx = x; cy = y; cur.classList.add("on"); }
+      cur.classList.toggle("big", !!(e.target.closest && e.target.closest("a, button, label, select, .media")));
+      if (!raf) raf = requestAnimationFrame(loop);
+    }, { passive: true });
+    document.addEventListener("mouseleave", function () { cur.classList.remove("on"); });
+    // botões puxam de leve na direção do cursor (máx. 5px)
+    var MAG = ".tool, .seg button, .act, .more-btn, .mute, .more-cue button";
+    document.addEventListener("mousemove", function (e) {
+      var b = e.target.closest && e.target.closest(MAG);
+      document.querySelectorAll(".mag.pull").forEach(function (o) { if (o !== b) { o.classList.remove("pull"); o.style.transform = ""; } });
+      if (!b) return;
+      b.classList.add("mag", "pull");
+      var r = b.getBoundingClientRect();
+      var dx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2), dy = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
+      b.style.transform = "translate(" + (dx * 5).toFixed(1) + "px," + (dy * 5).toFixed(1) + "px)";
+    }, { passive: true });
+  })();
 
   /* ---------- Início ---------- */
   $("sound").addEventListener("click", function () { setSound(Date.now() - unblockedAt < 1000 ? true : !sound); });

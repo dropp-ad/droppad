@@ -14,7 +14,11 @@
   --top-h: 60px;
   --post-w: 960px;
   --gap: 28px;
-  --ease: cubic-bezier(.2, .7, .2, 1);
+  /* um só easing e três durações no site inteiro */
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --t-fast: .3s;
+  --t-mid: .6s;
+  --t-slow: .8s;
   --display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
   --body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: dark;
@@ -34,7 +38,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 /* ---------- topo: some ao rolar pra baixo, volta ao rolar pra cima ---------- */
 .top { position: fixed; inset: 0 0 auto 0; z-index: 20; height: calc(var(--top-h) + env(safe-area-inset-top)); padding: env(safe-area-inset-top) 32px 0;
   display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px;
-  background: rgba(0, 0, 0, .92); border-bottom: 1px solid var(--line-2); transition: transform .5s var(--ease), opacity .5s var(--ease); }
+  background: rgba(0, 0, 0, .92); border-bottom: 1px solid var(--line-2); transition: transform var(--t-fast) var(--ease), opacity var(--t-fast) var(--ease); }
 .top.hide { transform: translateY(-100%); opacity: 0; }
 .drawer-on .top.hide { transform: none; opacity: 1; }
 .seg { justify-self: start; display: flex; gap: 2px; padding: 2px; border: 1px solid var(--line); }
@@ -59,6 +63,10 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .sound-on .i-off { display: none; }
 
 /* ---------- data na lateral (parallax leve via JS) ---------- */
+.day > span { display: block; overflow: hidden; }
+.day > span > span { display: block; transform: translateY(0); transition: transform var(--t-slow) var(--ease); }
+.day > span:nth-child(2) > span { transition-delay: 70ms; }
+.day.swap > span > span { transform: translateY(105%); transition: none; }
 .day { position: fixed; left: 32px; top: 84px; z-index: 1; display: flex; flex-direction: column; pointer-events: none;
   font: 900 56px/.92 var(--display); letter-spacing: 1px; color: var(--day); text-transform: uppercase; will-change: transform; }
 @media (max-width: 1279px) { .day { display: none; } }
@@ -68,8 +76,13 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 #feed { display: flex; flex-direction: column; align-items: center; gap: var(--gap); }
 .status { color: var(--muted); padding: 24px; margin: 0; text-align: center; font-size: 13px; }
 .post { scroll-snap-align: center; scroll-snap-stop: always; width: min(var(--post-w), calc(100vw - 2 * 240px)); min-width: min(640px, calc(100vw - 2 * 24px)); background: var(--post); border: 1px solid var(--line);
-  opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
-.post.in { opacity: 1; transform: none; }
+  }
+/* entrada: as partes do post aparecem em cascata (70ms), uma vez só */
+.rv { opacity: 0; transform: translateY(20px); transition: opacity var(--t-slow) var(--ease), transform var(--t-slow) var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
+.in .rv { opacity: 1; transform: none; }
+/* a imagem revela com uma máscara abrindo de baixo pra cima */
+.post .media.rv { transform: none; opacity: 1; clip-path: inset(100% 0 0 0); transition: clip-path .9s var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
+.post.in .media.rv { clip-path: inset(0 0 0 0); }
 
 .head { display: flex; align-items: center; gap: 12px; padding: 16px 10px 12px 18px; }
 .av { width: 40px; height: 40px; flex-shrink: 0; display: grid; place-items: center; overflow: hidden; border: 1px solid var(--av-line); background: #fff; }
@@ -90,7 +103,9 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 /* quadro do filme: sempre 16:9; a capa é um pouco maior que o quadro pra o parallax ter folga */
 .media { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; overflow: hidden; cursor: pointer; color: #fff; }
 .cover, .host, .host > div, .host iframe { position: absolute; inset: 0; width: 100% !important; height: 100% !important; border: 0; }
-.cover { z-index: 2; pointer-events: none; transition: opacity .5s ease; }
+.cover { z-index: 2; pointer-events: none; transition: opacity var(--t-mid) var(--ease), transform var(--t-mid) var(--ease); }
+/* hover: zoom mínimo dentro do próprio quadro */
+@media (hover: hover) { .media:hover .cover { transform: scale(1.025); } }
 .cover img { position: absolute; left: 0; top: -6%; width: 100%; height: 112%; object-fit: cover; display: block; will-change: transform; }
 .playing .cover { opacity: 0; }
 .host { z-index: 1; pointer-events: none; }
@@ -124,7 +139,11 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .act:hover, .act[aria-expanded="true"] { color: var(--hot); }
 .act svg { width: 20px; height: 20px; flex: none; }
 .act .n { color: var(--muted); font-weight: 500; }
-.link { margin-left: auto; padding: 0 12px; font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; transition: color .3s var(--ease); }
+.link { margin-left: auto; padding: 0 12px; font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+/* links: sublinhado que se desenha da esquerda pra direita */
+.link, .who small a { background: linear-gradient(currentColor, currentColor) no-repeat left bottom / 0 1px; background-origin: content-box;
+  transition: color var(--t-fast) var(--ease), background-size var(--t-mid) var(--ease); }
+.link:hover, .who small a:hover { background-size: 100% 1px; }
 
 /* ---------- convite pra rolar ---------- */
 .more-cue { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; height: 110px; display: flex; align-items: flex-end; justify-content: center;
@@ -261,7 +280,35 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
   .end-acts { margin-top: 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .post { opacity: 1; transform: none; transition: none; }
   .bob, .loading .bigplay { animation: none; }
   .top, .cover, .bigplay { transition: none; }
+}
+
+/* ---------- microdetalhes ---------- */
+/* barra de leitura no topo: quanto do dia já foi visto */
+.readbar { position: fixed; left: 0; top: 0; z-index: 30; height: 2px; width: 100%; background: var(--hot); transform-origin: 0 50%; transform: scaleX(0);
+  transition: transform var(--t-mid) var(--ease); pointer-events: none; }
+/* grão parado por cima de tudo, bem leve */
+.grain { position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: .04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+/* cursor: pontinho que segue o mouse com atraso e cresce em cima de links e filmes */
+.cursor { position: fixed; left: 0; top: 0; z-index: 95; width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: 50% !important; background: #fff;
+  mix-blend-mode: difference; pointer-events: none; opacity: 0; transition: width var(--t-fast) var(--ease), height var(--t-fast) var(--ease), margin var(--t-fast) var(--ease), opacity var(--t-fast) var(--ease); }
+.cursor.on { opacity: 1; }
+.cursor.big { width: 28px; height: 28px; margin: -14px 0 0 -14px; }
+@media (hover: none), (pointer: coarse) { .cursor { display: none; } }
+/* botões magnéticos: o deslocamento vem do JS (máx. 5px) */
+.mag { transition: transform var(--t-mid) var(--ease), border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), background var(--t-fast) var(--ease); }
+/* troca de filtro/data: fade curto no feed */
+#feed { transition: opacity .35s var(--ease); }
+#feed.swap { opacity: 0; transition: none; }
+body { animation: pagein .35s var(--ease); }
+@keyframes pagein { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .rv, .post .media.rv { opacity: 1 !important; transform: none !important; clip-path: none !important; transition: none !important; }
+  .day > span > span { transform: none !important; transition: none !important; }
+  .cursor { display: none; }
+  .readbar, #feed, .mag, .link, .who small a { transition: none; }
+  body { animation: none; }
+  @media (hover: hover) { .media:hover .cover { transform: none; } }
 }
