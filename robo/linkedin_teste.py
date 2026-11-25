@@ -406,7 +406,10 @@ def buscar_youtube(c):
         except Exception as e:  # noqa: BLE001
             log("  youtube falhou:", e)
             return []
-        for vid, titulo, canal in YT_ITEM.findall(pag or "")[:8]:
+        achados = YT_ITEM.findall(pag or "")
+        log("  youtube:", q[:60], "| página", len(pag or ""), "| vídeos", len(achados),
+            "|", " / ".join(t[:40] for _, t, _ in achados[:4]))
+        for vid, titulo, canal in achados[:8]:
             try:
                 titulo, canal = json.loads('"%s"' % titulo), json.loads('"%s"' % canal)
             except ValueError:
@@ -430,6 +433,7 @@ def buscar_noticias(c):
         log("  bing falhou:", e)
         return [], "", ""
     yts, video, img = [], "", ""
+    log("  bing:", c["brand"], "|", len(itens), "matérias |", " / ".join(i.get("titulo", "")[:40] for i in itens[:3]))
     for it in itens[:5]:
         if marca not in A.chave(it.get("titulo", "") + " " + it.get("resumo", "")):
             continue
