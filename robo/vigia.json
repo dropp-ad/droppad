@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 03:00:12 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 03:29:12 GMT"
+      "mod": "Wed, 25 Nov 2026 03:32:11 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"f75c32e3d87e9cc4776fed7485a49173\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 03:30:12 GMT"
+      "mod": "Wed, 25 Nov 2026 03:32:12 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"cef09529ecbc2f5e63980d7e21abe9b8-gzip\"",
@@ -186,7 +186,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 31,
+  "yt_pos": 91,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -404,9 +404,12 @@
     "tentadas": {
       "Zambezi": [
         "zmbz"
+      ],
+      "We": [
+        "weagencia"
       ]
     },
-    "pos": 364,
+    "pos": 365,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -478,7 +481,7 @@
       "Calia",
       "Eyxo"
     ],
-    "rodadas": 646,
+    "rodadas": 648,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -843,7 +846,8 @@
       "NovaSB": [
         "novagencia.ag"
       ],
-      "Eyxo": []
+      "Eyxo": [],
+      "We": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -1452,6 +1456,6 @@
     "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-past-advertising",
     "https://www.medianews4u.com/giraffe-advertising-marks-21-years-expands-into-hospitality-entertainment-and-real-estate"
   ],
-  "ultima_rodada": "2026-11-25T03:30:09.342972+00:00",
-  "ultima_novidade": "2026-11-25T03:30:09.342972+00:00"
+  "ultima_rodada": "2026-11-25T03:32:09.515305+00:00",
+  "ultima_novidade": "2026-11-25T03:32:09.515305+00:00"
 }
