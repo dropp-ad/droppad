@@ -239,10 +239,23 @@
     "tinuitidigital": "sem conta",
     "wpromote": "sem conta",
     "hawksem": "sem conta",
-    "klientboosthq": "sem conta"
+    "klientboosthq": "sem conta",
+    "disruptivehq": 0,
+    "tinuitihq": "sem conta",
+    "barrelny": 0,
+    "huemor": "sem conta",
+    "clayglobal": 0,
+    "ramotion": 0,
+    "fantasy": "sem conta",
+    "ueno": "sem conta",
+    "workandco": 0,
+    "basicdept": "sem conta",
+    "redantler": 1,
+    "wearecollins": "sem conta",
+    "pentagramdesign": 0
   },
   "inicio": "2026-11-24",
-  "restam": 635,
+  "restam": 622,
   "erros": {
     "vmlbrasil": "110: Invalid user id",
     "gutsopaulo": "110: Invalid user id",
@@ -397,6 +410,9 @@
     "tinuitidigital": "110: Invalid user id",
     "wpromote": "110: Invalid user id",
     "hawksem": "110: Invalid user id",
-    "klientboosthq": "110: Invalid user id"
+    "klientboosthq": "110: Invalid user id",
+    "tinuitihq": "110: Invalid user id",
+    "huemor": "110: Invalid user id",
+    "ueno": "110: Invalid user id"
   }
 }
