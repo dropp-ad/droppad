@@ -19,8 +19,8 @@
       "mod": "Wed, 25 Nov 2026 21:52:58 GMT"
     },
     "https://www.informabtl.com/feed/": {
-      "etag": "W/\"9ae6477b652cf82f501b832ff7ca281a\"",
-      "mod": "Wed, 25 Nov 2026 22:08:50 GMT"
+      "etag": "W/\"ef5685b665c2c7d15817a80775d3564e\"",
+      "mod": "Wed, 25 Nov 2026 22:22:00 GMT"
     },
     "https://propmark.com.br/feed/": {
       "etag": "\"9ff68cc555036d03f60f45a558d072cc\"",
@@ -49,11 +49,11 @@
       "mod": "Wed, 25 Nov 2026 22:21:39 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 22:21:19 GMT"
+      "mod": "Wed, 25 Nov 2026 22:30:29 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"22da25f487e02ac33f8482be58ba9743\"",
-      "mod": "Wed, 25 Nov 2026 22:21:02 GMT"
+      "etag": "\"b668bab923a2203281a81d736c081df0\"",
+      "mod": "Wed, 25 Nov 2026 22:30:08 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795639566-gzip\"",
@@ -71,8 +71,8 @@
       "mod": "Wed, 25 Nov 2026 16:15:51 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"de0933e20f85bbda4f9c2075e43502e4\"",
-      "mod": "Wed, 25 Nov 2026 22:15:56 GMT"
+      "etag": "\"9282d8dcd75f424b392f527c139cb740\"",
+      "mod": "Wed, 25 Nov 2026 22:30:55 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
       "etag": "\"f63df64606a6686f991170ed6542fd53\"",
@@ -90,7 +90,7 @@
       "mod": "Wed, 25 Nov 2026 21:33:12 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 22:21:56 GMT"
+      "mod": "Wed, 25 Nov 2026 22:30:47 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
       "etag": "\"0ab6d16ee376eec886f1959b98a72dc3\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 22:22:01 GMT"
+      "mod": "Wed, 25 Nov 2026 22:31:01 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -128,15 +128,15 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://thestable.com.au/feed/": {
-      "etag": "\"c1344f6e3b5f8886a8e7ff2e12164051\"",
-      "mod": "Wed, 25 Nov 2026 22:20:22 GMT"
+      "etag": "\"c09d4d04b0199abba2716084abf2a896\"",
+      "mod": "Wed, 25 Nov 2026 22:29:09 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
       "mod": "Wed, 25 Nov 2026 22:14:28 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"69bae449cab6324af9f7169c8cabc5d4\"",
-      "mod": "Wed, 25 Nov 2026 22:15:00 GMT"
+      "etag": "\"43eadeaf7517c308e33c9c2a01bafb98\"",
+      "mod": "Wed, 25 Nov 2026 22:30:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"e3fa8e792b34cf43ce028430b22a3d79\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 22:21:27 GMT"
+      "mod": "Wed, 25 Nov 2026 22:30:44 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 22:12:03 GMT"
+      "mod": "Wed, 25 Nov 2026 22:23:02 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -301,7 +301,7 @@
       "mod": "Thu, 29 Oct 2026 19:32:20 GMT"
     }
   },
-  "yt_pos": 56,
+  "yt_pos": 82,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -893,14 +893,20 @@
       "Initiative UK": "",
       "Zenith UK": "",
       "EssenceMediacom UK": "",
-      "We Are Social UK": ""
+      "We Are Social UK": "",
+      "We Are Social Belgium": "",
+      "We Are Social Sweden": ""
     },
     "tentadas": {
-      "We Are Social Belgium": [
-        "wearesocialbelgium"
+      "We Are Social Denmark": [
+        "wearesocialdenmark",
+        "wearesocialdenmarkagency"
+      ],
+      "We Are Social Norway": [
+        "wearesocialnorway"
       ]
     },
-    "pos": 920,
+    "pos": 924,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1186,9 +1192,11 @@
       "Zenith UK",
       "EssenceMediacom UK",
       "We Are Social UK",
-      "We Are Social Belgium"
+      "We Are Social Belgium",
+      "We Are Social Sweden",
+      "We Are Social Denmark"
     ],
-    "rodadas": 1758,
+    "rodadas": 1767,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2163,7 +2171,10 @@
       "Zenith UK": [],
       "EssenceMediacom UK": [],
       "We Are Social UK": [],
-      "We Are Social Belgium": []
+      "We Are Social Belgium": [],
+      "We Are Social Sweden": [],
+      "We Are Social Denmark": [],
+      "We Are Social Norway": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -2899,8 +2910,10 @@
     "https://mumbrella.com.au/ooh-media-signs-record-number-of-advertisers-for-australian-open-946120",
     "https://www.abcdacomunicacao.com.br/nagumo-leva-aroma-de-flor-de-cerejeira-aos-cupons-fiscais-em-campanha-que-celebra-suas-raizes-japonesas",
     "https://campaignbrief.com/its-finito-with-ozito-diy-confidence-achieved-with-drill-rap-in-new-campaign-via-thinkerbell",
-    "https://www.bandt.com.au/bupa-aperol-more-flock-to-oohmedia-for-its-australian-open-coverage"
+    "https://www.bandt.com.au/bupa-aperol-more-flock-to-oohmedia-for-its-australian-open-coverage",
+    "https://mumbrella.com.au/health-platform-everlab-launches-first-brand-campaign-in-australia-946136",
+    "https://campaignbrief.com/everlab-asks-aussies-what-their-body-is-trying-to-tell-them-in-first-brand-campaign-via-outside-in"
   ],
-  "ultima_rodada": "2026-11-25T22:21:57.547732+00:00",
-  "ultima_novidade": "2026-11-25T21:30:57.617161+00:00"
+  "ultima_rodada": "2026-11-25T22:30:57.588080+00:00",
+  "ultima_novidade": "2026-11-25T22:30:57.588080+00:00"
 }
