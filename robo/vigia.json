@@ -48,15 +48,15 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"b464035df8972ed04cff04384257b8e6\"",
-      "mod": "Wed, 25 Nov 2026 00:03:05 GMT"
+      "etag": "W/\"6bc09b42ed94588943390efaee00a7f7\"",
+      "mod": "Wed, 25 Nov 2026 01:04:56 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 00:47:58 GMT"
+      "mod": "Wed, 25 Nov 2026 01:17:58 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"6947db803e7567c1c2df8d4d2bebdbc2\"",
-      "mod": "Wed, 25 Nov 2026 00:30:39 GMT"
+      "etag": "\"c1a9510f7797591439ee279003e80009\"",
+      "mod": "Wed, 25 Nov 2026 01:16:31 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795545017-gzip\"",
@@ -74,8 +74,8 @@
       "mod": "Tue, 24 Nov 2026 18:12:27 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"3d165beb468a8afc1faeb5abe09494be\"",
-      "mod": "Wed, 25 Nov 2026 00:30:26 GMT"
+      "etag": "\"c9336fc99c579259a806ea7d6b7a9ca0\"",
+      "mod": "Wed, 25 Nov 2026 01:06:17 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
       "etag": "\"f63df64606a6686f991170ed6542fd53\"",
@@ -85,15 +85,15 @@
       "mod": "Wed, 25 Nov 2026 00:01:01 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
-      "etag": "\"46aebfa8e836b456c30311fc33d8f619\"",
-      "mod": "Wed, 25 Nov 2026 00:29:34 GMT"
+      "etag": "\"387f5a7ab5e799a8b3d6ef3c4309e52d\"",
+      "mod": "Wed, 25 Nov 2026 00:58:13 GMT"
     },
     "https://www.adweek.com/feed/": {
       "etag": "W/\"bb32ca5d6204a2778998ae62e623cd2d\"",
       "mod": "Tue, 24 Nov 2026 23:42:55 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 00:40:15 GMT"
+      "mod": "Wed, 25 Nov 2026 01:16:53 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
       "etag": "\"01865794e34ab23b0cd5491d7a065892\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 00:48:00 GMT"
+      "mod": "Wed, 25 Nov 2026 01:18:00 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -131,8 +131,8 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://thestable.com.au/feed/": {
-      "etag": "\"0a349f38e6fe3cb837314f97fb23911c\"",
-      "mod": "Wed, 25 Nov 2026 00:28:01 GMT"
+      "etag": "\"54b699165c1aaf2ee6511162f9473643\"",
+      "mod": "Wed, 25 Nov 2026 01:14:40 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
       "mod": "Tue, 24 Nov 2026 22:57:55 GMT"
@@ -189,7 +189,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 62,
+  "yt_pos": 86,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -385,19 +385,21 @@
       "Mynd": "mynd",
       "Squid": "squid.creators",
       "Spark": "",
-      "Ginga": "agencia_ginga"
+      "Ginga": "agencia_ginga",
+      "Fbiz": "",
+      "Suno United Creators": "",
+      "Tátil Design": "tatil_design",
+      "Ana Couto": "anacouto.ag"
     },
     "tentadas": {
       "Zambezi": [
         "zmbz"
       ],
-      "Fbiz": [
-        "fbizbr",
-        "f.biz",
-        "fbiz_"
+      "B&Partners": [
+        "bandpartners.co"
       ]
     },
-    "pos": 283,
+    "pos": 298,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -461,9 +463,10 @@
       "SunsetDDB",
       "David São Paulo",
       "Spark",
-      "Fbiz"
+      "Fbiz",
+      "Suno United Creators"
     ],
-    "rodadas": 484,
+    "rodadas": 514,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -794,7 +797,15 @@
       "Ginga": [
         "agencia_ginga"
       ],
-      "Fbiz": []
+      "Fbiz": [],
+      "Suno United Creators": [],
+      "Tátil Design": [
+        "tatil_design"
+      ],
+      "Ana Couto": [
+        "anacouto.ag"
+      ],
+      "B&Partners": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -1001,7 +1012,26 @@
       "hawksem": "2026-11-25T00:39:55.903163+00:00",
       "klientboosthq": "2026-11-25T00:39:55.903163+00:00",
       "smithbrothersmedia": "2026-11-25T00:39:55.903163+00:00",
-      "bornsocialau": "2026-11-25T00:45:56.298147+00:00"
+      "bornsocialau": "2026-11-25T00:45:56.298147+00:00",
+      "mergemarketingau": "2026-11-25T00:49:55.326176+00:00",
+      "bmfsydney": "2026-11-25T00:51:55.598280+00:00",
+      "specialgroup": "2026-11-25T00:53:55.520317+00:00",
+      "tinuitihq": "2026-11-25T00:54:55.892326+00:00",
+      "huemor": "2026-11-25T00:54:55.892326+00:00",
+      "ueno": "2026-11-25T00:54:55.892326+00:00",
+      "digitalstreamnz": "2026-11-25T00:57:56.094400+00:00",
+      "webzilladigital": "2026-11-25T01:01:55.916819+00:00",
+      "rocketshpnz": "2026-11-25T01:03:55.538115+00:00",
+      "netbrandingnz": "2026-11-25T01:05:56.281087+00:00",
+      "nakedcreativenz": "2026-11-25T01:09:55.815407+00:00",
+      "lippincott": "2026-11-25T01:10:55.538097+00:00",
+      "sagmeisterwalsh": "2026-11-25T01:10:55.538097+00:00",
+      "hornetinc": "2026-11-25T01:10:55.538097+00:00",
+      "ordinaryfolk": "2026-11-25T01:10:55.538097+00:00",
+      "vdigitalnz": "2026-11-25T01:11:56.033329+00:00",
+      "founddigitalau": "2026-11-25T01:13:55.652703+00:00",
+      "roobixau": "2026-11-25T01:15:56.045908+00:00",
+      "dentsu_inc": "2026-11-25T01:17:56.271864+00:00"
     }
   },
   "vistos": [
@@ -1129,8 +1159,10 @@
     "https://mumbrella.com.au/clearads-launches-trust-mark-verification-badge-for-advertisers-945980",
     "https://mumbrella.com.au/white-claw-launches-answer-the-claw-summer-campaign-945984",
     "https://www.thestable.com.au/havas-creative-spain-el-almendros-famous-christmas-jingle-sends-a-message-about-connection",
-    "https://campaignbrief.com/victorians-for-nature-unveils-worst-hiking-trail-on-earth-on-alltrails-in-new-work-via-fireside"
+    "https://campaignbrief.com/victorians-for-nature-unveils-worst-hiking-trail-on-earth-on-alltrails-in-new-work-via-fireside",
+    "https://www.bandt.com.au/tal-sees-cost-of-chatgpt-ads-tumble-90-as-it-goes-deep-with-ads-platform",
+    "https://www.bandt.com.au/boomtown-puts-274b-regional-spending-opportunity-in-front-of-advertisers"
   ],
-  "ultima_rodada": "2026-11-25T00:47:55.928194+00:00",
+  "ultima_rodada": "2026-11-25T01:17:56.271864+00:00",
   "ultima_novidade": "2026-11-25T00:30:55.848391+00:00"
 }
