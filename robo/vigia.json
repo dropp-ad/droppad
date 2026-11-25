@@ -52,11 +52,11 @@
       "mod": "Wed, 25 Nov 2026 00:03:05 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 00:05:58 GMT"
+      "mod": "Wed, 25 Nov 2026 00:17:58 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"c5dfaf1635db88a7193b2d2e25f749dc\"",
-      "mod": "Wed, 25 Nov 2026 00:05:49 GMT"
+      "etag": "\"48e03bd31d411e93d6240399fd741a40\"",
+      "mod": "Wed, 25 Nov 2026 00:14:01 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795545017-gzip\"",
@@ -85,8 +85,8 @@
       "mod": "Wed, 25 Nov 2026 00:01:01 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
-      "etag": "\"2f7c8aab282d47bacfef1af7f6ab078a\"",
-      "mod": "Tue, 24 Nov 2026 23:26:35 GMT"
+      "etag": "\"9ce6be68a4120c910bec877c5a3f13a9\"",
+      "mod": "Wed, 25 Nov 2026 00:08:09 GMT"
     },
     "https://www.adweek.com/feed/": {
       "etag": "W/\"bb32ca5d6204a2778998ae62e623cd2d\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 00:06:00 GMT"
+      "mod": "Wed, 25 Nov 2026 00:18:00 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -131,8 +131,8 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://thestable.com.au/feed/": {
-      "etag": "\"d2b83715d7f93de38a2ea3448dfc4775\"",
-      "mod": "Tue, 24 Nov 2026 23:32:06 GMT"
+      "etag": "\"69ba8d9ace33536488635a4fabbdf617\"",
+      "mod": "Wed, 25 Nov 2026 00:12:43 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
       "mod": "Tue, 24 Nov 2026 22:57:55 GMT"
@@ -189,7 +189,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 43,
+  "yt_pos": 38,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -383,14 +383,15 @@
       "David São Paulo": "",
       "Jotacom": "jotapontoag",
       "Mynd": "mynd",
-      "Squid": "squid.creators"
+      "Squid": "squid.creators",
+      "Spark": ""
     },
     "tentadas": {
       "Zambezi": [
         "zmbz"
       ]
     },
-    "pos": 262,
+    "pos": 268,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -454,7 +455,7 @@
       "SunsetDDB",
       "David São Paulo"
     ],
-    "rodadas": 442,
+    "rodadas": 454,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -780,7 +781,8 @@
       ],
       "Squid": [
         "squid.creators"
-      ]
+      ],
+      "Spark": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -947,7 +949,27 @@
       "interpublicgroup": "2026-11-24T23:53:56.012486+00:00",
       "wearesocialbe": "2026-11-25T00:01:55.546587+00:00",
       "wearesocialdk": "2026-11-25T00:03:55.695156+00:00",
-      "wearesocialpt": "2026-11-25T00:05:55.936425+00:00"
+      "wearesocialpt": "2026-11-25T00:05:55.936425+00:00",
+      "wearesocialie": "2026-11-25T00:07:55.661072+00:00",
+      "s4capital": "2026-11-25T00:08:55.761859+00:00",
+      "tribe_group": "2026-11-25T00:08:55.761859+00:00",
+      "dentsucreative": "2026-11-25T00:08:55.761859+00:00",
+      "fcbny": "2026-11-25T00:08:55.761859+00:00",
+      "fcbchicago": "2026-11-25T00:08:55.761859+00:00",
+      "fcbwest": "2026-11-25T00:08:55.761859+00:00",
+      "fcbhealth": "2026-11-25T00:08:55.761859+00:00",
+      "saatchiny": "2026-11-25T00:08:55.761859+00:00",
+      "bbhny": "2026-11-25T00:08:55.761859+00:00",
+      "bartonfgraf": "2026-11-25T00:08:55.761859+00:00",
+      "fredfarid": "2026-11-25T00:08:55.761859+00:00",
+      "qualitymeatsnyc": "2026-11-25T00:08:55.761859+00:00",
+      "special_us": "2026-11-25T00:08:55.761859+00:00",
+      "preacher": "2026-11-25T00:08:55.761859+00:00",
+      "pilot_agenturgruppe": "2026-11-25T00:09:56.027720+00:00",
+      "saintelmos": "2026-11-25T00:11:55.737084+00:00",
+      "kollerebbe": "2026-11-25T00:13:56.109265+00:00",
+      "llr_berlin": "2026-11-25T00:15:55.421090+00:00",
+      "ddbhamburg": "2026-11-25T00:17:55.755478+00:00"
     }
   },
   "vistos": [
@@ -1073,8 +1095,9 @@
     "https://campaignbrief.com/pn-banks-the-big-bank-boss-returns-for-new-home-loans-campaign-via-chapter",
     "https://campaignbrief.com/white-claw-dials-up-spontaneity-this-summer-in-answer-the-claw-campaign-via-today-the-brave",
     "https://mumbrella.com.au/clearads-launches-trust-mark-verification-badge-for-advertisers-945980",
-    "https://mumbrella.com.au/white-claw-launches-answer-the-claw-summer-campaign-945984"
+    "https://mumbrella.com.au/white-claw-launches-answer-the-claw-summer-campaign-945984",
+    "https://www.thestable.com.au/havas-creative-spain-el-almendros-famous-christmas-jingle-sends-a-message-about-connection"
   ],
-  "ultima_rodada": "2026-11-25T00:05:55.936425+00:00",
+  "ultima_rodada": "2026-11-25T00:17:55.755478+00:00",
   "ultima_novidade": "2026-11-25T00:05:55.936425+00:00"
 }
