@@ -394,32 +394,52 @@ def _palavras(t):
             ("campanha", "campaign", "lancamento", "launch", "brasil", "agencia", "agency", "nossa", "nosso", "nova", "novo")]
 
 
+def _videos_da_busca(pag):
+    """(id, título, canal) dos vídeos da página de busca do YouTube, venha ela no formato antigo ou no novo:
+    pega cada videoId e os primeiros textos que vêm logo depois dele (título, canal)."""
+    out, vistos = [], set()
+    for m in re.finditer(r'"videoId":"([\w-]{11})"', pag or ""):
+        vid = m.group(1)
+        if vid in vistos:
+            continue
+        janela = pag[m.end():m.end() + 6000]
+        textos = []
+        for t in re.findall(r'"(?:text|content|simpleText|label)":"((?:[^"\\]|\\.){3,200})"', janela)[:12]:
+            try:
+                t = json.loads('"%s"' % t)
+            except ValueError:
+                pass
+            if t not in textos:
+                textos.append(t)
+        if textos:
+            vistos.add(vid)
+            out.append((vid, textos[0], " ".join(textos[1:8])))
+    return out
+
+
 def buscar_youtube(c):
     """Procura o filme no YouTube (busca do próprio site, vídeos do último mês). Só aceita vídeo cujo título ou
     canal tenha a marca E mais um sinal da campanha (agência, palavra do título ou canal oficial da marca)."""
     marca, ag = A.chave(c["brand"]), A.chave(c.get("agency", ""))
     chaves_titulo = _palavras(c["title"])
-    for q in ("%s %s" % (c["brand"], c["title"][:60]), "%s %s" % (c["brand"], c.get("agency", ""))):
+    for q in ("%s %s" % (c["brand"], c["title"][:60]), "%s %s" % (c["brand"], c.get("agency", "")),
+              "%s campanha" % c["brand"]):
         url = "https://www.youtube.com/results?" + urllib.parse.urlencode({"search_query": q, "sp": "EgIIBA=="})
         try:
             pag = A.baixar(url, timeout=20)
         except Exception as e:  # noqa: BLE001
             log("  youtube falhou:", e)
             return []
-        achados = YT_ITEM.findall(pag or "")
-        log("  youtube:", q[:60], "| página", len(pag or ""), "| vídeos", len(achados),
-            "|", " / ".join(t[:40] for _, t, _ in achados[:4]))
-        for vid, titulo, canal in achados[:8]:
-            try:
-                titulo, canal = json.loads('"%s"' % titulo), json.loads('"%s"' % canal)
-            except ValueError:
-                pass
-            tudo = A.chave(titulo + " " + canal)
-            if marca not in tudo:
+        achados = _videos_da_busca(pag)
+        log("  youtube:", q[:60], "| vídeos", len(achados), "|", " / ".join(t[:40] for _, t, _ in achados[:4]))
+        for vid, titulo, resto in achados[:10]:
+            tudo = A.chave(titulo + " " + resto)
+            if marca not in A.chave(titulo) and marca not in A.chave(resto[:80]):
                 continue
-            sinal = (ag and ag in tudo) or marca in A.chave(canal) or any(w in A.sem_acento(titulo).lower() for w in chaves_titulo)
+            sinal = (ag and ag in tudo) or any(w in A.sem_acento(titulo).lower() for w in chaves_titulo) \
+                or A.FORTE.search(titulo) or re.search(r"\b(lançamento|launch)\b", titulo, re.I)
             if sinal:
-                log("  + youtube:", vid, "|", titulo, "|", canal)
+                log("  + youtube:", vid, "|", titulo)
                 return [vid]
     return []
 
@@ -428,7 +448,8 @@ def buscar_noticias(c):
     """Matérias sobre a campanha (Bing News, última semana): filme embutido e foto de capa."""
     marca, ag = A.chave(c["brand"]), A.chave(c.get("agency", ""))
     try:
-        itens = A.buscar_bing('"%s" %s' % (c["brand"], c.get("agency", "")))
+        itens = A.buscar_bing('"%s" %s' % (c["brand"], c.get("agency", ""))) or \
+            A.buscar_bing('"%s" (campanha OR campaign OR filme OR film)' % c["brand"])
     except Exception as e:  # noqa: BLE001
         log("  bing falhou:", e)
         return [], "", ""
