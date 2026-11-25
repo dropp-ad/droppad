@@ -1,7 +1,7 @@
 name: LinkedIn – teste Apify x Coresignal
 
 # Fase de teste: lê posts das páginas das agências no LinkedIn pelas duas fontes pagas e grava o
-# placar em robo/linkedin_teste.json. Não publica nada no site.
+# placar em robo/linkedin_teste.json. O que passar no filtro já entra no site (campaigns.json).
 # Roda 2x por dia (e quando quiser, em "Run workflow"). Cada fonte só roda se o secret dela existir:
 #   APIFY_TOKEN e CORESIGNAL_TOKEN (Settings → Secrets and variables → Actions).
 # Para desligar o teste: Actions → este workflow → ⋯ → Disable workflow.
@@ -41,7 +41,8 @@ jobs:
             git fetch -q origin main
             git reset -q --hard origin/main
             cp /tmp/linkedin_teste.json robo/linkedin_teste.json
-            git add robo/linkedin_teste.json
+            python robo/linkedin_teste.py --publicar /tmp/linkedin_novas.json
+            git add robo/linkedin_teste.json campaigns.json novidades.json
             if git diff --cached --quiet; then
               echo "Nada novo."
               exit 0

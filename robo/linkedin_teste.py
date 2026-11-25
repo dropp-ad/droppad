@@ -1,6 +1,7 @@
 """Teste lado a lado de duas fontes pagas de posts do LinkedIn (Apify/HarvestAPI e Coresignal).
 
-Fase de teste: NÃO publica nada no site. Cobre TODAS as agências do robô (lista do Pedro +
+Fase de teste, mas o que passar no filtro já é publicado no site (campaigns.json), como card
+com o link do post no LinkedIn. Cobre TODAS as agências do robô (lista do Pedro +
 agências cadastradas, ~1.000), em rodízio: cada rodada pega uma fatia da lista e continua de onde
 parou na seguinte. Para cada agência da fatia, três buscas:
   1. posts da página da empresa no LinkedIn;
@@ -48,6 +49,8 @@ def pedir(url, dados=None, cab=None, tempo=300):
     corpo = json.dumps(dados).encode() if dados is not None else None
     req = urllib.request.Request(url, data=corpo, method="POST" if corpo else "GET")
     req.add_header("Accept", "application/json")
+    # sem isto a Cloudflare da Coresignal barra o Python (erro 1010)
+    req.add_header("User-Agent", "Mozilla/5.0 (compatible; droppad-robo/1.0; +https://dropp.ad)")
     if corpo:
         req.add_header("Content-Type", "application/json")
     for k, v in (cab or {}).items():
@@ -296,8 +299,53 @@ def vira_campanha(p):
     c = A.post_para_campanha(falso, conta, DESDE)
     if not c:
         return None
+    # LinkedIn tem muito vídeo institucional: aqui exige palavra de campanha mesmo com vídeo,
+    # e descarta "marca" que é data comemorativa (Thanksgiving, Natal...)
+    if not A.FORTE.search(p["texto"][:600]) or A.INSTITUCIONAL.search(c["brand"]):
+        return None
+    # o site não embute post do LinkedIn: entra como card, com a imagem do post e o link para ele
+    c["source"] = "LinkedIn · " + a["nome"]
+    c.pop("video", None)
+    if p["imagem"]:
+        c["image"] = p["imagem"]
     return {"marca": c["brand"], "titulo": c["title"], "agencia": a["nome"], "data": p["data"], "url": p["url"],
-            "video": bool(p["video"]), "fonte": p["fonte"], "tipo": p["tipo"]}
+            "video": bool(p["video"]), "fonte": p["fonte"], "tipo": p["tipo"], "campanha": c}
+
+
+def publicar(caminho):
+    """Junta as campanhas achadas (arquivo gerado pela rodada) em campaigns.json, sem repetir.
+    Roda depois do git reset do workflow, sobre a versão mais nova do site."""
+    try:
+        novas = json.load(open(caminho, encoding="utf-8"))
+    except (OSError, ValueError):
+        novas = []
+    camp = A.ler_json(A.CAMP, [])
+    urls = {c.get("url", "").split("?")[0].rstrip("/") for c in camp}
+    ids = {c.get("id") for c in camp}
+    chaves = {(A.chave(c.get("brand", "")), A.chave(c.get("title", ""))) for c in camp}
+    marca_dia = {(A.chave(c.get("brand", "")), c.get("date")) for c in camp}
+    entraram = []
+    for c in novas:
+        u = c["url"].split("?")[0].rstrip("/")
+        k = (A.chave(c["brand"]), A.chave(c["title"]))
+        if u in urls or k in chaves or (k[0], c["date"]) in marca_dia:
+            continue
+        while c["id"] in ids:
+            c["id"] += "-2"
+        camp.append(c)
+        entraram.append(c)
+        urls.add(u)
+        ids.add(c["id"])
+        chaves.add(k)
+        marca_dia.add((k[0], c["date"]))
+    if entraram:
+        camp.sort(key=lambda c: (c.get("date", ""), c.get("addedAt", "")), reverse=True)
+        A.salvar_json(A.CAMP, camp)
+        A.salvar_json(A.NOVIDADES, {"atualizado": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ"), "total": len(camp),
+                                    "ultimo": camp[0]["id"]})
+    for c in entraram:
+        log("  + publicada:", c["source"], "|", c["brand"], "|", c["title"][:90])
+    log("Publicadas no site:", len(entraram))
 
 
 def main():
@@ -335,7 +383,15 @@ def main():
     hist.setdefault("rodadas", []).append(rodada)
     hist["rodadas"] = hist["rodadas"][-60:]
     vistos = {(c["fonte"], c["url"]) for c in hist.get("candidatas", [])}
-    hist["candidatas"] = (hist.get("candidatas", []) + [c for c in camp if (c["fonte"], c["url"]) not in vistos])[-500:]
+    novas = [c for c in camp if (c["fonte"], c["url"]) not in vistos]
+    hist["candidatas"] = (hist.get("candidatas", []) + [{k: v for k, v in c.items() if k != "campanha"}
+                                                        for c in novas])[-500:]
+    # a mesma campanha achada pelas duas fontes entra uma vez só
+    unicas = {}
+    for c in novas:
+        unicas.setdefault((A.chave(c["agencia"]), A.chave(c["marca"])), c["campanha"])
+    json.dump(list(unicas.values()), open(os.environ.get("LINKEDIN_NOVAS", "/tmp/linkedin_novas.json"), "w",
+                                          encoding="utf-8"), ensure_ascii=False)
     hist.setdefault("linkedin", {})
     json.dump(hist, open(SAIDA, "w", encoding="utf-8"), ensure_ascii=False, indent=1, default=dict)
     resumo = {k: v for k, v in rodada.items() if k not in ("apify", "coresignal")}
@@ -345,4 +401,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) > 2 and sys.argv[1] == "--publicar":
+        publicar(sys.argv[2])
+    else:
+        main()
