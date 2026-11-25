@@ -34,7 +34,7 @@
       "mod": "Tue, 24 Nov 2026 23:19:00 GMT"
     },
     "https://www.contentgrip.com/feed/": {
-      "etag": "W/\"2b8a7-caAc8SvpPnexCX/lC7YdOlJb52A\""
+      "etag": "W/\"2a5d1-kgTtzbp3brq7f5HPTPjh6nmxZiQ\""
     },
     "https://www.nossomeio.com.br/feed/": {
       "etag": "\"ca13a04b7a22295cc11721ad4c597bd9\"",
@@ -49,11 +49,11 @@
       "mod": "Wed, 25 Nov 2026 03:00:12 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 05:27:12 GMT"
+      "mod": "Wed, 25 Nov 2026 05:58:12 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"1ac0030ee53b2454137893ce7855acff\"",
-      "mod": "Wed, 25 Nov 2026 04:20:27 GMT"
+      "etag": "\"4c6a2b8df01245e1143af65643ac6e36\"",
+      "mod": "Wed, 25 Nov 2026 05:31:15 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795581907-gzip\"",
@@ -71,8 +71,8 @@
       "mod": "Tue, 24 Nov 2026 18:12:27 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"25a86ea07ae79244555a9c3b5a741826\"",
-      "mod": "Wed, 25 Nov 2026 04:57:25 GMT"
+      "etag": "\"c299cfb2cbb3f343da3116d9ff159ff1\"",
+      "mod": "Wed, 25 Nov 2026 05:31:30 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
       "etag": "\"f63df64606a6686f991170ed6542fd53\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 05:28:13 GMT"
+      "mod": "Wed, 25 Nov 2026 05:58:13 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"888a0286141cd7bda2328a34c3305d74-gzip\"",
-      "mod": "Wed, 25 Nov 2026 05:24:30 GMT"
+      "etag": "W/\"5f87e506d734f42527edeea007feed2a-gzip\"",
+      "mod": "Wed, 25 Nov 2026 05:40:44 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -184,12 +184,9 @@
     "https://bruketa-zinic.com/feed/": {
       "etag": "\"5b10a6b158834169546a0780b1fe9526\"",
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
-    },
-    "https://www.marketingdirecto.com/rss": {
-      "mod": "Tue, 24 Nov 2026 16:23:42 GMT"
     }
   },
-  "yt_pos": 67,
+  "yt_pos": 91,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -411,14 +408,26 @@
       "Webcompany": "webcompany.ag",
       "B11 Agency": "b11.agency",
       "Mardini Agência Digital": "",
-      "DGAZ Marketing": ""
+      "DGAZ Marketing": "",
+      "Fischer": "fischer",
+      "Mokeka Advertising": "",
+      "Talent Marcel": "",
+      "Santa Clara": "",
+      "Loducca": "",
+      "Neogama": "",
+      "Z+": "",
+      "Agênciaclick": ""
     },
     "tentadas": {
       "Zambezi": [
         "zmbz"
+      ],
+      "Wake": [
+        "wake",
+        "wakeagency"
       ]
     },
-    "pos": 423,
+    "pos": 438,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -494,9 +503,16 @@
       "Twist Agency Brazil",
       "Rujan",
       "Mardini Agência Digital",
-      "DGAZ Marketing"
+      "DGAZ Marketing",
+      "Mokeka Advertising",
+      "Talent Marcel",
+      "Santa Clara",
+      "Loducca",
+      "Neogama",
+      "Agênciaclick",
+      "Z+"
     ],
-    "rodadas": 764,
+    "rodadas": 794,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -872,7 +888,16 @@
       ],
       "B11 Agency": [],
       "Mardini Agência Digital": [],
-      "DGAZ Marketing": []
+      "DGAZ Marketing": [],
+      "Mokeka Advertising": [],
+      "Fischer": [],
+      "Talent Marcel": [],
+      "Santa Clara": [],
+      "Loducca": [],
+      "Neogama": [],
+      "Agênciaclick": [],
+      "Z+": [],
+      "Wake": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -1559,6 +1584,6 @@
     "https://www.medianews4u.com/openai-brings-sana-shaikh-on-board-for-global-ads-solutions-in-india",
     "https://www.horizont.net/marketing/nachrichten/deutschlands-werbelieblinge-haribo-mcdonalds--co.-diese-spots-begeistern-die-deutschen-am-meisten-236702"
   ],
-  "ultima_rodada": "2026-11-25T05:28:10.084730+00:00",
+  "ultima_rodada": "2026-11-25T05:58:10.307132+00:00",
   "ultima_novidade": "2026-11-25T04:36:09.566093+00:00"
 }
