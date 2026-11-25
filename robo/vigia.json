@@ -49,15 +49,15 @@
       "mod": "Wed, 25 Nov 2026 03:00:12 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 04:35:11 GMT"
+      "mod": "Wed, 25 Nov 2026 04:58:11 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"1ac0030ee53b2454137893ce7855acff\"",
       "mod": "Wed, 25 Nov 2026 04:20:27 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795569902-gzip\"",
-      "mod": "Wed, 25 Nov 2026 01:25:02 GMT"
+      "etag": "W/\"1795581907-gzip\"",
+      "mod": "Wed, 25 Nov 2026 04:45:07 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -71,8 +71,8 @@
       "mod": "Tue, 24 Nov 2026 18:12:27 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"05dcc88480c3d00e685f12eea4395d6e\"",
-      "mod": "Wed, 25 Nov 2026 04:10:43 GMT"
+      "etag": "\"25a86ea07ae79244555a9c3b5a741826\"",
+      "mod": "Wed, 25 Nov 2026 04:57:25 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
       "etag": "\"f63df64606a6686f991170ed6542fd53\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 04:36:12 GMT"
+      "mod": "Wed, 25 Nov 2026 04:58:12 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"e07755ee5eec1fca9bef9267e6e550c2-gzip\"",
-      "mod": "Wed, 25 Nov 2026 04:35:14 GMT"
+      "etag": "W/\"17b0c810c42990df9047d7fcf6914b5f-gzip\"",
+      "mod": "Wed, 25 Nov 2026 04:52:59 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -128,8 +128,8 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://thestable.com.au/feed/": {
-      "etag": "\"b0aa52e685a5e8e54c7d759cd5b0b327\"",
-      "mod": "Wed, 25 Nov 2026 02:46:38 GMT"
+      "etag": "\"413a2b22d45d1b07b888a70a20091d17\"",
+      "mod": "Wed, 25 Nov 2026 04:44:32 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
       "mod": "Tue, 24 Nov 2026 22:57:55 GMT"
@@ -189,7 +189,7 @@
       "mod": "Tue, 24 Nov 2026 16:23:42 GMT"
     }
   },
-  "yt_pos": 40,
+  "yt_pos": 43,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -405,18 +405,20 @@
       "Eyxo": "",
       "We": "agenciawe",
       "Bolt Brasil": "",
-      "Martin Luz": ""
+      "Martin Luz": "",
+      "Twist Agency Brazil": ""
     },
     "tentadas": {
       "Zambezi": [
         "zmbz"
       ],
-      "Twist Agency Brazil": [
-        "twistagency",
-        "twist.agency"
+      "Rujan": [
+        "rujan",
+        "rujan.branding",
+        "rujan_"
       ]
     },
-    "pos": 397,
+    "pos": 408,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -489,9 +491,10 @@
       "Eyxo",
       "Bolt Brasil",
       "Martin Luz",
-      "Twist Agency Brazil"
+      "Twist Agency Brazil",
+      "Rujan"
     ],
-    "rodadas": 712,
+    "rodadas": 734,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -860,7 +863,8 @@
       "We": [],
       "Bolt Brasil": [],
       "Martin Luz": [],
-      "Twist Agency Brazil": []
+      "Twist Agency Brazil": [],
+      "Rujan": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -1546,6 +1550,6 @@
     "https://www.medianews4u.com/giraffe-advertising-marks-21-years-expands-into-hospitality-entertainment-and-real-estate",
     "https://www.medianews4u.com/openai-brings-sana-shaikh-on-board-for-global-ads-solutions-in-india"
   ],
-  "ultima_rodada": "2026-11-25T04:36:09.566093+00:00",
+  "ultima_rodada": "2026-11-25T04:58:09.373668+00:00",
   "ultima_novidade": "2026-11-25T04:36:09.566093+00:00"
 }
