@@ -52,11 +52,11 @@
       "mod": "Wed, 25 Nov 2026 02:33:59 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 02:47:58 GMT"
+      "mod": "Wed, 25 Nov 2026 02:57:58 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"a8196bf3e12c6b6ec8d3b704fdb9475c\"",
-      "mod": "Wed, 25 Nov 2026 02:47:54 GMT"
+      "etag": "\"c70ca7334051c0f85ce46347f017bbf3\"",
+      "mod": "Wed, 25 Nov 2026 02:50:14 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795569902-gzip\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 02:47:59 GMT"
+      "mod": "Wed, 25 Nov 2026 02:57:59 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -189,7 +189,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 85,
+  "yt_pos": 93,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -406,11 +406,10 @@
         "zmbz"
       ],
       "Calia": [
-        "agenciacalia",
-        "caliay2"
+        "agenciacalia"
       ]
     },
-    "pos": 343,
+    "pos": 348,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -478,9 +477,10 @@
       "Suno United Creators",
       "B&Partners",
       "LiveAD",
-      "11:21"
+      "11:21",
+      "Calia"
     ],
-    "rodadas": 604,
+    "rodadas": 614,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1239,7 +1239,43 @@
       "idigitalnz": "2026-11-25T02:42:56.216427+00:00",
       "amicusdigitalau": "2026-11-25T02:42:56.216427+00:00",
       "houseofbraveza": "2026-11-25T02:43:56.092341+00:00",
-      "machine_za": "2026-11-25T02:47:55.519919+00:00"
+      "machine_za": "2026-11-25T02:47:55.519919+00:00",
+      "morrisonza": "2026-11-25T02:49:55.599720+00:00",
+      "boomtownza": "2026-11-25T02:51:56.074461+00:00",
+      "smithsocialau": "2026-11-25T02:57:56.119805+00:00",
+      "hakuhodo": "2026-11-25T02:57:56.119805+00:00",
+      "tokyomarketing_jp": "2026-11-25T02:57:56.119805+00:00",
+      "nextleveljapan": "2026-11-25T02:57:56.119805+00:00",
+      "mglobaljapan": "2026-11-25T02:57:56.119805+00:00",
+      "anyal_jp": "2026-11-25T02:57:56.119805+00:00",
+      "thedigitalx_jp": "2026-11-25T02:57:56.119805+00:00",
+      "hatagoconsulting": "2026-11-25T02:57:56.119805+00:00",
+      "hashimedia_jp": "2026-11-25T02:57:56.119805+00:00",
+      "j1_co_jp": "2026-11-25T02:57:56.119805+00:00",
+      "infocubicjapan": "2026-11-25T02:57:56.119805+00:00",
+      "isea_inc": "2026-11-25T02:57:56.119805+00:00",
+      "uralainternational": "2026-11-25T02:57:56.119805+00:00",
+      "ogilvyjapan": "2026-11-25T02:57:56.119805+00:00",
+      "mccannjapan": "2026-11-25T02:57:56.119805+00:00",
+      "dentsux_jp": "2026-11-25T02:57:56.119805+00:00",
+      "iprospect_jp": "2026-11-25T02:57:56.119805+00:00",
+      "monks_japan": "2026-11-25T02:57:56.119805+00:00",
+      "accenturesong_jp": "2026-11-25T02:57:56.119805+00:00",
+      "akqatkyo": "2026-11-25T02:57:56.119805+00:00",
+      "rgatokyo": "2026-11-25T02:57:56.119805+00:00",
+      "havasjapan": "2026-11-25T02:57:56.119805+00:00",
+      "ddbjapan": "2026-11-25T02:57:56.119805+00:00",
+      "leoburnetttokyo": "2026-11-25T02:57:56.119805+00:00",
+      "greytokyo": "2026-11-25T02:57:56.119805+00:00",
+      "cheiljapan": "2026-11-25T02:57:56.119805+00:00",
+      "wearesocialtokyo": "2026-11-25T02:57:56.119805+00:00",
+      "vmljapan": "2026-11-25T02:57:56.119805+00:00",
+      "criteojapan": "2026-11-25T02:57:56.119805+00:00",
+      "septeni_holdings": "2026-11-25T02:57:56.119805+00:00",
+      "transcosmos_jp": "2026-11-25T02:57:56.119805+00:00",
+      "gmo_group": "2026-11-25T02:57:56.119805+00:00",
+      "kotozna_jp": "2026-11-25T02:57:56.119805+00:00",
+      "subeagenciadigital": "2026-11-25T02:57:56.119805+00:00"
     }
   },
   "vistos": [
@@ -1378,6 +1414,6 @@
     "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-part-advertising",
     "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-past-advertising"
   ],
-  "ultima_rodada": "2026-11-25T02:47:55.519919+00:00",
+  "ultima_rodada": "2026-11-25T02:57:56.119805+00:00",
   "ultima_novidade": "2026-11-25T02:18:55.629219+00:00"
 }
