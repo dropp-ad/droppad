@@ -93,6 +93,10 @@ def _nomes_compostos(c):
     return out
 
 
+UI_YT = re.compile(r"^(adicionar à fila|add to queue|enviar feedback|send feedback|assistir mais tarde|watch later|compartilhar|share|novo|new|"
+                   r"\d+[:.]\d+|.*\bvisualiza|.*\bviews?\b|há \d+|\d+ (?:dias?|horas?|semanas?) atrás)", re.I)
+
+
 def _videos_da_busca(pag):
     """(id, título, canal) dos vídeos da página de busca do YouTube, venha ela no formato antigo ou no novo:
     pega cada videoId e os primeiros textos que vêm logo depois dele (título, canal)."""
