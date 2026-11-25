@@ -4,8 +4,8 @@
       "etag": "W/\"5d2f-x3XcWrVr9gi9VPnYi+XDvXEHXUE\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"0fa5d54ccefa001d02c95a754b0952b9\"",
-      "mod": "Wed, 25 Nov 2026 13:55:57 GMT"
+      "etag": "\"f595681e58e950e3eeb99f7b20be1d34\"",
+      "mod": "Wed, 25 Nov 2026 14:18:03 GMT"
     },
     "https://creativosbr.com.br/feed/": {
       "etag": "W/\"2ddba2092895866ddb0a35d2a323eb92\"",
@@ -37,8 +37,8 @@
       "etag": "W/\"3086d-swuouYVwhM/jYjaCQR7zDCOrfcY\""
     },
     "https://www.nossomeio.com.br/feed/": {
-      "etag": "\"e8cfbf3c14eb5e3acb469422c302ca1f\"",
-      "mod": "Wed, 25 Nov 2026 13:48:50 GMT"
+      "etag": "\"9cecc2772987ed1466201d65e45f5cbd\"",
+      "mod": "Wed, 25 Nov 2026 14:18:09 GMT"
     },
     "https://www.adworld.ie/feed/": {
       "etag": "\"b778f8e5ac045bc29a7be1e54d179c8b\"",
@@ -49,15 +49,15 @@
       "mod": "Wed, 25 Nov 2026 13:55:14 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 14:11:23 GMT"
+      "mod": "Wed, 25 Nov 2026 14:18:25 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
       "mod": "Wed, 25 Nov 2026 06:55:22 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795615746-gzip\"",
-      "mod": "Wed, 25 Nov 2026 14:09:06 GMT"
+      "etag": "W/\"1795616054-gzip\"",
+      "mod": "Wed, 25 Nov 2026 14:14:14 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 14:11:25 GMT"
+      "mod": "Wed, 25 Nov 2026 14:18:26 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -135,8 +135,8 @@
       "mod": "Wed, 25 Nov 2026 14:09:05 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"a586bda185f737d127c5669e1400556c\"",
-      "mod": "Wed, 25 Nov 2026 13:37:51 GMT"
+      "etag": "\"4e05ee22994e9453aaf0a36aee717ca7\"",
+      "mod": "Wed, 25 Nov 2026 14:17:43 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"529df3db7f25b64048e3bfc7edad051e\"",
@@ -197,10 +197,10 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 14:11:25 GMT"
+      "mod": "Wed, 25 Nov 2026 14:18:26 GMT"
     }
   },
-  "yt_pos": 70,
+  "yt_pos": 31,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -666,18 +666,18 @@
       "BBH New York": "",
       "Barton F. Graf": "",
       "Quality Meats": "qualitymeats_",
-      "Special US": ""
+      "Special US": "",
+      "Preacher": "",
+      "Human Ventures": ""
     },
     "tentadas": {
-      "Preacher": [
-        "preacher",
-        "preacheragency"
-      ],
       "Arts & Letters Creative Co.": [
-        "artsletterscreativeco."
+        "artsletterscreativeco.",
+        "artsandletterscreativeco",
+        "artsandletterscreativecoagency"
       ]
     },
-    "pos": 684,
+    "pos": 688,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -850,9 +850,10 @@
       "BBH New York",
       "Barton F. Graf",
       "Special US",
-      "Preacher"
+      "Preacher",
+      "Arts & Letters Creative Co."
     ],
-    "rodadas": 1287,
+    "rodadas": 1294,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1702,7 +1703,8 @@
       "Quality Meats": [],
       "Special US": [],
       "Preacher": [],
-      "Arts & Letters Creative Co.": []
+      "Arts & Letters Creative Co.": [],
+      "Human Ventures": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -2410,8 +2412,9 @@
     "https://www.marketingdive.com/news/campaign-trail-tiffany-tells-human-holiday-story-with-hollywood-talent/874914",
     "https://www.marketingdive.com/news/coca-cola-pivots-from-divisive-ai-generated-ads-for-holiday-campaign/875215",
     "https://www.bandt.com.au/iab-australia-teams-up-with-brands-to-give-marketers-a-common-framework-to-measure-ads",
-    "https://marketinginsiderreview.com/canal-de-isabel-ii-presenta-campana-desechando-mitos"
+    "https://marketinginsiderreview.com/canal-de-isabel-ii-presenta-campana-desechando-mitos",
+    "https://nossomeio.com.br/deborah-secco-ticiane-pinheiro-campanha-black-friday-beach-park"
   ],
-  "ultima_rodada": "2026-11-25T14:11:20.537890+00:00",
+  "ultima_rodada": "2026-11-25T14:18:21.256426+00:00",
   "ultima_novidade": "2026-11-25T14:11:20.537890+00:00"
 }
