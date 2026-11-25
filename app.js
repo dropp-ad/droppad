@@ -244,7 +244,7 @@
     return ((w[0] || "").charAt(0) + (w[1] || "").charAt(0)).toUpperCase() || "•";
   }
   function avatar(c, nome) {
-    var box = el("span", "post-av");
+    var box = el("span", "av");
     var dom = hostOf(c.url);
     function fallback() { box.textContent = iniciais(nome); box.classList.add("ini"); }
     if (dom) {
@@ -258,8 +258,21 @@
     var f = str(c.frase) || c.summary || c.title;
     return f;
   }
-  function fmtT(t) { t = Math.max(0, Math.floor(t || 0)); var m = Math.floor(t / 60), s = t % 60; return (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s; }
-  function setTime(art, t, d) { var tg = art.querySelector(".post-time"); if (tg) tg.textContent = "▶ " + fmtT(t) + (d ? " / " + fmtT(d) : ""); }
+  function fmtT(t) { t = Math.max(0, Math.floor(t || 0)); var m = Math.floor(t / 60), s = t % 60; return m + ":" + (s < 10 ? "0" : "") + s; }
+  function setTime(art, t, d) { var tg = art.querySelector(".ptime"); if (tg && d) tg.textContent = t > 0.5 ? fmtT(t) + " / " + fmtT(d) : fmtT(d); }
+  var MESES = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+  function selo(d) { return d === TODAY ? "Estreou hoje" : d === shift(TODAY, -1) ? "Estreou ontem" : "Estreou " + (+d.slice(8, 10)) + " " + MESES[+d.slice(5, 7) - 1]; }
+  // "há 2 h" a partir da hora em que entrou no site
+  function haQuanto(iso) {
+    var t = new Date(iso).getTime();
+    if (isNaN(t)) return "";
+    var m = Math.round((Date.now() - t) / 60000);
+    if (m < 0) return "";
+    if (m < 60) return "há " + Math.max(1, m) + " min";
+    if (m < 24 * 60) return "há " + Math.round(m / 60) + " h";
+    return "";
+  }
+  var ICON_DOTS = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="3" height="3"/><rect x="10.5" y="11" width="3" height="3"/><rect x="17" y="11" width="3" height="3"/></svg>';
 
   function post(c, idxInDay) {
     var art = el("article", "post");
@@ -269,24 +282,37 @@
     art.setAttribute("aria-label", (c.brand ? c.brand + ": " : "") + c.title);
     var nome = quemPostou(c);
 
-    // quem postou
-    var head = el("header", "post-head");
+    // quem fez, para quem
+    var head = el("div", "head");
     head.appendChild(avatar(c, nome));
-    var who = el("div", "post-who");
-    who.appendChild(el("b", null, nome));
-    var via = c.url ? link("post-via", "", c.url) : el("span", "post-via");
-    via.appendChild(document.createTextNode("VIA " + (c.source || "—")));
-    if (c.region) via.appendChild(el("span", "rg", " / " + c.region));
-    var hh = horaDe(c.addedAt);
-    if (hh) via.appendChild(document.createTextNode(" / " + hh));
-    if (c.url) via.title = "Ler em " + (c.source || "fonte");
-    who.appendChild(via);
+    var who = el("div", "who");
+    var b = el("b", null, nome);
+    if (c.brand && c.brand.toLowerCase() !== nome.toLowerCase()) {
+      b.appendChild(document.createTextNode(" "));
+      b.appendChild(el("i", null, "para"));
+      b.appendChild(document.createTextNode(" " + c.brand));
+    }
+    who.appendChild(b);
+    var sm = el("small");
+    var bits = ["via " + (c.source || "—")];
+    if (c.region) bits.push(c.region);
+    var ha = haQuanto(c.addedAt);
+    if (ha) bits.push(ha);
+    if (c.url) sm.appendChild(link("", bits.join(" · "), c.url)); else sm.textContent = bits.join(" · ");
+    who.appendChild(sm);
     head.appendChild(who);
-    if (/^[A-Z]{2}$/.test(c.cc)) { var cc = el("span", "post-cc", c.cc); cc.title = c.region || c.cc; head.appendChild(cc); }
+    var pos = idxInDay + 1;
+    head.appendChild(el("span", "num", "Nº " + (pos < 10 ? "0" : "") + pos));
+    var mb = el("button", "more-btn");
+    mb.type = "button";
+    mb.setAttribute("aria-label", "Mais opções");
+    mb.innerHTML = ICON_DOTS;
+    mb.addEventListener("click", function (e) { e.stopPropagation(); share(c, mb); });
+    head.appendChild(mb);
     art.appendChild(head);
 
     // a frase
-    var txt = el("p", "post-txt", fraseDe(c));
+    var txt = el("p", "txt", fraseDe(c));
     txt.title = c.title;
     art.appendChild(txt);
 
@@ -318,7 +344,7 @@
       media.appendChild(cover);
       media.appendChild(host0);
       media.appendChild(el("span", "bigplay"));
-      media.appendChild(el("span", "post-time", "▶ ASSISTIR"));
+      media.appendChild(el("span", "ptime"));
       media.appendChild(el("span", "fail", "Este filme só toca no YouTube ↗"));
       media.appendChild(endCard(art, c));
       var mute = el("button", "mute");
@@ -330,9 +356,9 @@
       bar.appendChild(el("i"));
       media.appendChild(bar);
       if (c.fl.length > 1) {
-        var dots = el("div", "dots");
+        var dots = el("div", "fdots");
         c.fl.forEach(function (f, i) {
-          var d = el("button", i === 0 ? "dot on" : "dot");
+          var d = el("button", i === 0 ? "fdot on" : "fdot");
           d.type = "button";
           d.setAttribute("aria-label", "Filme " + (i + 1) + " de " + c.fl.length);
           d.addEventListener("click", function (e) { e.stopPropagation(); art.dataset.part = i; activate(art, true); });
@@ -356,18 +382,17 @@
       if (pic) cv.appendChild(img(pic, function () { cv.appendChild(poster(c)); }));
       else cv.appendChild(poster(c));
       media.appendChild(cv);
-      if (c.url) media.appendChild(link("card-src", "Ler em " + (c.source || "fonte") + " ↗", c.url));
     }
+    media.appendChild(el("span", "stamp", selo(c.date)));
     art.appendChild(media);
 
-    // comentar e compartilhar
-    var acts = el("footer", "post-acts");
+    // comentar, compartilhar, ver matéria
+    var acts = el("div", "acts");
     var cm = el("button", "act cmt");
     cm.type = "button";
     cm.setAttribute("aria-label", "Comentários sobre esta campanha");
     cm.innerHTML = ICON_CMT + "<span>Comentar</span>";
-    var n = el("span", "n");
-    cm.appendChild(n);
+    cm.appendChild(el("span", "n"));
     cm.addEventListener("click", function (e) { e.stopPropagation(); openComments(c); });
     acts.appendChild(cm);
     var sh = el("button", "act share");
@@ -376,21 +401,29 @@
     sh.innerHTML = ICON_SHARE + "<span>Compartilhar</span>";
     sh.addEventListener("click", function (e) { e.stopPropagation(); share(c, sh); });
     acts.appendChild(sh);
+    if (c.url) acts.appendChild(link("link", "Ver matéria ↗", c.url));
     art.appendChild(acts);
     paintCount(art);
 
     media._art = art;
     art._media = media;
     if (io) io.observe(media);
+    if (inIO) inIO.observe(art); else art.classList.add("in");
     return art;
   }
+
+  /* posts entram com fade suave quando aparecem na tela */
+  var REDUCE = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var inIO = ("IntersectionObserver" in window && !REDUCE) ? new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); inIO.unobserve(e.target); } });
+  }, { threshold: 0 }) : null;
 
   /* contagem de comentários por campanha (Supabase), pedida em lote */
   var CMT_N = {};
   function paintCount(art) {
     var n = art.querySelector(".act .n");
     var v = CMT_N[art._c.id];
-    if (n) n.textContent = v == null ? "" : "[" + v + "]";
+    if (n) n.textContent = v == null ? "" : String(v);
   }
   function loadCounts(items) {
     if (!SUPABASE_URL || !SUPABASE_KEY) return;
@@ -409,9 +442,9 @@
   }
 
   /* ---------- Compartilhar: link que abre direto na campanha ---------- */
-  var ICON_SHARE = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter"><path d="M7 17 17 7M8 7h9v9"/></svg>';
-  var ICON_CMT = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter"><path d="M3 4h18v13H9l-6 4z"/></svg>';
-  var ICON_SND = '<svg class="i-off" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><svg class="i-on" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+  var ICON_SHARE = '<svg viewBox="0 0 24 24" aria-hidden="true" stroke-linejoin="miter"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>';
+  var ICON_CMT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v13H9l-6 4z"/></svg>';
+  var ICON_SND = '<svg class="i-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><svg class="i-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
   function linkOf(c) { return location.origin + location.pathname + "?c=" + encodeURIComponent(c.id); }
   function toast(msg) {
     var t = $("toast");
@@ -826,8 +859,8 @@
     } else if (host) host.textContent = "";
     var bar = a.art.querySelector(".bar i");
     if (bar) bar.style.width = "0";
-    var tg = a.art.querySelector(".post-time");
-    if (tg) tg.textContent = "▶ ASSISTIR";
+    var tg = a.art.querySelector(".ptime");
+    if (tg) tg.textContent = "";
   }
 
   function activate(art, byUser) {
@@ -845,7 +878,7 @@
     var part = Math.min(+art.dataset.part || 0, c.fl.length - 1);
     var f = c.fl[part];
     me.kind = f.kind;
-    art.querySelectorAll(".dot").forEach(function (d, i) { d.classList.toggle("on", i === part); });
+    art.querySelectorAll(".fdot").forEach(function (d, i) { d.classList.toggle("on", i === part); });
     art.classList.remove("failed", "ended");
     var slot = el("div");
     art.querySelector(".host").appendChild(slot);
@@ -997,7 +1030,7 @@
       if (state.region === "hot") { /* 🔥: o mundo inteiro, mais vistas primeiro */ }
       else if (state.region === "home") { if (!homeMatch(c)) return false; }
       else if (!state.region) { /* Mundo = tudo, inclusive o país de quem entra */ }
-      else if (regiaoDe(c) !== state.region) return false;
+      else if ((GRUPOS[state.region] || [state.region]).indexOf(regiaoDe(c)) < 0) return false;
       return true;
     });
     state.perDay = {};
@@ -1014,15 +1047,16 @@
     renderCal();
     if (!skipMore) renderMore();
   }
+  var GRUPOS = { "Américas": ["América Latina", "EUA e Canadá"], "Europa": ["Europa"], "Ásia": ["Ásia-Pacífico"] };
   function renderChips() {
     var box = $("chips"), sel = $("reg-sel");
     box.textContent = "";
     if (sel) sel.textContent = "";
     var h = state.home;
-    var opts = [["", "Mundo"], ["home", h.label], ["hot", "🔥 Mais vistas"]];
+    var opts = [["", "Mundo"], ["home", h.label], ["Américas", "Américas"], ["Europa", "Europa"], ["Ásia", "Ásia"], ["hot", "🔥 Mais vistas"]];
     opts.forEach(function (o) {
       var on = (state.region || "") === o[0];
-      var b = el("button", "reg", o[0] === "hot" ? "🔥" : o[1]);
+      var b = el("button", null, o[0] === "hot" ? "🔥" : o[1]);
       b.type = "button";
       if (o[0] === "hot") { b.title = "Mais vistas primeiro"; b.setAttribute("aria-label", "Mais vistas primeiro"); }
       b.setAttribute("aria-pressed", on ? "true" : "false");
@@ -1037,10 +1071,7 @@
     if (sel) sel.addEventListener("change", function () { state.region = sel.value; window.scrollTo(0, 0); renderAll(); });
   })();
 
-  /* ---------- Data na lateral, faixa "ao vivo" e o convite pra rolar ---------- */
-  var MESES = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
-  function ddmm(d) { return d.slice(8, 10) + "." + d.slice(5, 7); }
-  function diaRotulo(d) { return d === TODAY ? "HOJE" : d === shift(TODAY, -1) ? "ONTEM" : "EM " + ddmm(d); }
+  /* ---------- Data na lateral e o convite pra rolar ---------- */
   function nextPost(art) { var n = art.nextElementSibling; while (n && !n.classList.contains("post")) n = n.nextElementSibling; return n; }
   function paintChrome(art) {
     var c = art._c;
@@ -1048,13 +1079,9 @@
     $("sd-m").textContent = MESES[+c.date.slice(5, 7) - 1];
     var hot = state.region === "hot";
     var tot = hot ? state.list.length : state.perDay[c.date] || 0;
-    var pos = (art._k || 0) + 1;
-    $("strip-l").textContent = hot ? "■ MAIS VISTAS" : (c.date === TODAY ? "■ AO VIVO · " : "■ ") + ddmm(c.date);
-    $("strip-r").textContent = (pos < 10 ? "0" : "") + pos + "/" + (tot < 10 ? "0" : "") + tot;
-    var nx = nextPost(art), left = tot - pos, t;
-    if (hot) t = nx ? "PRÓXIMA" : "";
-    else if (left > 0) t = "MAIS " + left + (left === 1 ? " ESTREIA " : " ESTREIAS ") + diaRotulo(c.date);
-    else t = nx && nx._c ? "VER " + (nx._c.date === shift(TODAY, -1) ? "ONTEM" : ddmm(nx._c.date)) : "";
+    var left = tot - ((art._k || 0) + 1), t = "";
+    var quando = c.date === TODAY ? " HOJE" : c.date === shift(TODAY, -1) ? " ONTEM" : " NESTE DIA";
+    if (left > 0 && nextPost(art)) t = hot ? "PRÓXIMA" : "MAIS " + left + (left === 1 ? " ESTREIA" : " ESTREIAS") + quando;
     $("cue-txt").textContent = t;
     $("cue").hidden = !t;
     $("cue-btn").setAttribute("aria-label", t ? "Rolar para a próxima campanha. " + t.toLowerCase() : "");
@@ -1062,19 +1089,42 @@
   $("cue-btn").addEventListener("click", function () {
     var a = active ? active.art : document.querySelector(".post");
     var n = a && nextPost(a);
-    if (n) n.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (n) window.scrollTo({ top: n.getBoundingClientRect().top + window.scrollY - 20, behavior: REDUCE ? "auto" : "smooth" });
   });
 
+  /* ---------- Rolagem: topo some/volta, parallax leve (num só requestAnimationFrame) ---------- */
+  (function () {
+    var topbar = $("topbar"), day = $("sidedate");
+    var lastY = window.scrollY, ticking = false;
+    function frame() {
+      ticking = false;
+      var y = window.scrollY, vh = window.innerHeight;
+      if (y > 80 && y - lastY > 4) topbar.classList.add("hide");
+      else if (lastY - y > 4 || y <= 80) topbar.classList.remove("hide");
+      lastY = y;
+      if (REDUCE) return;
+      document.querySelectorAll(".post .cover img").forEach(function (im) {
+        var box = im.parentNode.getBoundingClientRect();
+        if (box.bottom < -50 || box.top > vh + 50) return;
+        var t = ((box.top + box.height / 2) - vh / 2) / vh;
+        im.style.transform = "translate3d(0," + (t * -0.05 * box.height).toFixed(1) + "px,0)";
+      });
+      day.style.transform = "translate3d(0," + (-Math.min(y, 600) * 0.08).toFixed(1) + "px,0)";
+      day.style.opacity = String(Math.max(0.35, 1 - y / 1600));
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+  })();
+
   /* ---------- Calendário: começa a timeline no dia escolhido (e segue para trás) ---------- */
-  var SEMANA = ["DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SÁB"];
-  function fmtCal(d) { return SEMANA[toDate(d).getUTCDay()] + " " + ddmm(d) + "." + d.slice(2, 4); }
   function renderCal() {
     var inp = $("cal-in");
     if (!inp) return;
     var datas = state.items.map(function (c) { return c.date; }).sort();
     if (datas.length) { inp.min = datas[0]; inp.max = datas[datas.length - 1]; }
     inp.value = state.upTo || "";
-    $("cal-txt").textContent = fmtCal(state.upTo || TODAY);
+    $("cal-txt").textContent = state.upTo ? (+state.upTo.slice(8, 10)) + " " + MESES[+state.upTo.slice(5, 7) - 1].toLowerCase() : "Hoje";
     $("cal").classList.toggle("on", !!state.upTo);
     $("cal-x").hidden = !state.upTo;
   }
@@ -1157,9 +1207,6 @@
       else { if (active.kind === "yt") active.player.playVideo(); else active.player.play(); }
     } catch (e) { /* nada */ }
   });
-  function measure() { document.documentElement.style.setProperty("--hh", document.querySelector(".bar-top").offsetHeight + "px"); }
-  measure();
-  window.addEventListener("resize", measure);
   setupIO();
   fetch("campaigns.json", { cache: "no-store" })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })

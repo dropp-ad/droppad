@@ -14,35 +14,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://i.ytimg.com">
 <link rel="preconnect" href="https://www.youtube-nocookie.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Public+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&display=swap">
-<link rel="stylesheet" href="style.css?v=38">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Public+Sans:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&display=swap">
+<link rel="stylesheet" href="style.css?v=39">
 </head>
 <body>
-<header class="bar-top">
-  <div class="bar-in">
-    <nav class="regs" id="chips" aria-label="Região"></nav>
-    <label class="reg-sel"><span id="reg-txt">MUNDO</span> ▾<select id="reg-sel" aria-label="Região"></select></label>
-    <a href="./" class="logo" id="top" aria-label="dropp Ad, voltar ao topo"><img src="logo-transparente.png" alt="dropp Ad" width="328" height="120"></a>
-    <div class="right">
-      <div class="cal" id="cal">
-        <label class="cal-btn" title="Escolher uma data">
-          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 10h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-          <span id="cal-txt"></span>
-          <input type="date" id="cal-in" aria-label="Ver campanhas a partir de uma data">
-        </label>
-        <button type="button" class="cal-x" id="cal-x" aria-label="Voltar para hoje" hidden>✕</button>
-      </div>
-      <button type="button" class="sound-btn" id="sound" aria-pressed="true" aria-label="Som dos filmes"><svg class="i-off" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><svg class="i-on" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
+<header class="top" id="topbar">
+  <nav class="seg" id="chips" aria-label="Região"></nav>
+  <label class="reg-sel"><span id="reg-txt">Mundo</span> ▾<select id="reg-sel" aria-label="Região"></select></label>
+  <a href="./" class="logo" id="top" aria-label="dropp Ad, voltar ao topo"><img src="logo-transparente.png" alt="dropp Ad" width="328" height="120"></a>
+  <div class="tools">
+    <div class="cal" id="cal">
+      <label class="tool cal-btn" title="Escolher uma data">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+        <span id="cal-txt">Hoje</span>
+        <input type="date" id="cal-in" aria-label="Ver campanhas a partir de uma data">
+      </label>
+      <button type="button" class="tool sq cal-x" id="cal-x" aria-label="Voltar para hoje" hidden>✕</button>
     </div>
+    <button type="button" class="tool sq sound-btn" id="sound" aria-pressed="true" aria-label="Som dos filmes"><svg class="i-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><svg class="i-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
   </div>
-  <div class="strip" id="strip"><span id="strip-l"></span><span id="strip-r"></span></div>
 </header>
-<div class="sidedate" id="sidedate" aria-hidden="true"><b id="sd-d"></b><b id="sd-m"></b></div>
-<div class="cue" id="cue" hidden><button type="button" id="cue-btn"><span id="cue-txt"></span> <svg class="bob" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M12 4v15M5 12l7 7 7-7"/></svg></button></div>
+<div class="day" id="sidedate" aria-hidden="true"><span id="sd-d"></span><span id="sd-m"></span></div>
+<div class="more-cue" id="cue" hidden><button type="button" id="cue-btn"><span id="cue-txt"></span><svg class="bob" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M5 12l7 7 7-7"/></svg></button></div>
 <main class="timeline">
   <p class="status" id="status" role="status">Carregando campanhas…</p>
   <div id="feed"></div>
 </main>
-<script src="app.js?v=42"></script>
+<script src="app.js?v=43"></script>
 </body>
 </html>
