@@ -52,7 +52,7 @@
       "mod": "Wed, 25 Nov 2026 01:04:56 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 02:16:59 GMT"
+      "mod": "Wed, 25 Nov 2026 02:18:58 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"c5b5eced6c213b85f5ac22e6cb469905\"",
@@ -74,8 +74,8 @@
       "mod": "Tue, 24 Nov 2026 18:12:27 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"2b9cc2d12ac01df7b6cb90790820516b\"",
-      "mod": "Wed, 25 Nov 2026 02:14:53 GMT"
+      "etag": "\"0a7612e8f892500d7eaee727fbfde4d9\"",
+      "mod": "Wed, 25 Nov 2026 02:18:43 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
       "etag": "\"f63df64606a6686f991170ed6542fd53\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 02:17:59 GMT"
+      "mod": "Wed, 25 Nov 2026 02:19:00 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -189,7 +189,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 61,
+  "yt_pos": 91,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -406,7 +406,8 @@
       "11:21": [
         "onzevinteum",
         "1121.ag",
-        "1121agencia"
+        "1121agencia",
+        "1121"
       ]
     },
     "pos": 328,
@@ -478,7 +479,7 @@
       "B&Partners",
       "LiveAD"
     ],
-    "rodadas": 574,
+    "rodadas": 575,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1312,8 +1313,9 @@
     "https://www.bandt.com.au/white-claw-sparks-spontaneous-moments-with-travelling-phone-booth-activation-via-today-the-brave",
     "https://www.bandt.com.au/misleading-ads-are-a-cause-for-concern-clearads-launches-trust-mark-to-restore-trust-in-wave-of-ai-online-scams",
     "https://www.bandt.com.au/teads-unifies-ctv-digital-buying-in-next-generation-of-ad-manager",
-    "https://campaignbrief.com/reminder-mad-hatterz-of-advertising-hat-exchange-hits-bodriggy-tomorrow-night-in-melbourne"
+    "https://campaignbrief.com/reminder-mad-hatterz-of-advertising-hat-exchange-hits-bodriggy-tomorrow-night-in-melbourne",
+    "https://campaignbrief.com/suzuki-jimny-makes-light-work-of-victorias-pothole-problem-in-new-film-via-atimeplace"
   ],
-  "ultima_rodada": "2026-11-25T02:17:55.837377+00:00",
-  "ultima_novidade": "2026-11-25T00:30:55.848391+00:00"
+  "ultima_rodada": "2026-11-25T02:18:55.629219+00:00",
+  "ultima_novidade": "2026-11-25T02:18:55.629219+00:00"
 }
