@@ -207,6 +207,8 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .cmt-login.apple { background: #000; color: #fff; border: 1px solid var(--line); }
 .cmt-in { width: 100%; resize: vertical; min-height: 72px; padding: 10px 12px; border: 1px solid var(--line); background: #0b0b0b; color: var(--ink); font: 14.5px/1.45 var(--body); }
 .cmt-in:focus { outline: none; border-color: #555; }
+/* comentando: some o que fica fixo na tela (no celular cobria a caixa e o botão) */
+html.digitando .more-cue, html.digitando .to-top, html.digitando .newpill { display: none; }
 .cmt-bar { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
 .cmt-me { flex: 1; min-width: 0; color: var(--muted); font-size: 12.5px; }
 .cmt-out { color: var(--muted); font-size: 12.5px; text-decoration: underline; }
@@ -263,7 +265,8 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
     font-size: 13px; font-weight: 700; white-space: nowrap; cursor: pointer; }
   .reg-sel select { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; font-size: 16px; }
   .logo, .logo video { height: 40px; }
-  .is-ig .media { aspect-ratio: 9 / 16; max-height: 72svh; }
+  .is-ig .media { aspect-ratio: auto; height: 72svh; max-height: none; background: #fff; }
+  .is-ig .media > .stamp { display: none; } /* no celular o selo cobria o topo do post do Instagram */
   .cal-btn { width: 34px; padding: 0; justify-content: center; }
   .cal-btn span, .contato-btn span { display: none; }
   .contato-btn { width: 34px; padding: 0; justify-content: center; }
@@ -283,6 +286,11 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
   .act { height: 44px; padding: 0 10px; font-size: 13.5px; }
   .link { display: none; }
   .more-cue { height: 100px; }
+  html.cmt-open .more-cue { display: none; }
+  .cmt-in { font-size: 16px; } /* abaixo de 16px o iPhone dá zoom na página ao tocar na caixa */
+  .cmt-form { padding: 12px 12px calc(14px + env(safe-area-inset-bottom)); }
+  .drawer-body { max-height: 45svh; }
+  html.digitando .top { transform: translateY(-100%); opacity: 0; }
   .more-cue button { font-size: 11px; }
   .ended .media { aspect-ratio: auto; min-height: 56.25vw; }
   .ended .endcard { position: relative; inset: auto; padding: 18px 14px; }
