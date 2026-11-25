@@ -4,8 +4,8 @@
       "etag": "W/\"5ee6-klLQNjezr/3ppwUJOpbS1V1ylT8\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"09ba95eadb6dabba2cc53b6d6a6c222e\"",
-      "mod": "Wed, 25 Nov 2026 19:56:17 GMT"
+      "etag": "\"256fd546b6d6881ef5f91f9a183f397e\"",
+      "mod": "Wed, 25 Nov 2026 20:02:17 GMT"
     },
     "https://creativosbr.com.br/feed/": {
       "etag": "W/\"07e64eb9df65046af9511cebaf0c9fa8\"",
@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 19:53:40 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 20:01:54 GMT"
+      "mod": "Wed, 25 Nov 2026 20:02:55 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 20:01:56 GMT"
+      "mod": "Wed, 25 Nov 2026 20:02:56 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -132,7 +132,7 @@
       "mod": "Wed, 25 Nov 2026 04:44:32 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 19:58:36 GMT"
+      "mod": "Wed, 25 Nov 2026 20:02:36 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"66eb3ab31fae67f343ad348e1d2067bf\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 20:00:56 GMT"
+      "mod": "Wed, 25 Nov 2026 20:02:57 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"2751a357c40a03e272dea79e0bab7eeb\"",
@@ -301,7 +301,7 @@
       "mod": "Thu, 29 Oct 2026 19:32:20 GMT"
     }
   },
-  "yt_pos": 86,
+  "yt_pos": 116,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -863,11 +863,14 @@
       "AKQA London": "",
       "AKQA Amsterdam": "",
       "AKQA Paris": "",
-      "AKQA Berlin": "",
-      "R/GA London": ""
+      "AKQA Berlin": ""
     },
-    "tentadas": {},
-    "pos": 859,
+    "tentadas": {
+      "R/GA London": [
+        "rgalondon"
+      ]
+    },
+    "pos": 860,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1122,9 +1125,10 @@
       "AKQA London",
       "AKQA Amsterdam",
       "AKQA Paris",
-      "AKQA Berlin"
+      "AKQA Berlin",
+      "R/GA London"
     ],
-    "rodadas": 1637,
+    "rodadas": 1638,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2797,8 +2801,9 @@
     "https://www.merca20.com/retromarketing-in-2008-burger-king-mexico-released-these-8-collectible-snoopy-figures-now-18-years-later-hes-back-in-a-new-campaign",
     "https://bornandraisedagency.com/news/born-and-raised-and-njm-insurance-group-bring-new-twists-to-insuranoia-with-two-spots-that-turn-everyday-worries-into-absurd-scenarios",
     "https://theshipyard.com/the-shipyard-welcomes-gearshift-advertising-strengthening-creative-and-powersports-expertise",
-    "https://nossomeio.com.br/subway-campanha-cle-o-pires-luisa-perisse-nepo-babies"
+    "https://nossomeio.com.br/subway-campanha-cle-o-pires-luisa-perisse-nepo-babies",
+    "https://grandesnomesdapropaganda.com.br/anunciantes/mercatto-estreia-campanha-de-desconto-para-dois-estados"
   ],
-  "ultima_rodada": "2026-11-25T20:01:50.980710+00:00",
-  "ultima_novidade": "2026-11-25T20:01:50.980710+00:00"
+  "ultima_rodada": "2026-11-25T20:02:51.303431+00:00",
+  "ultima_novidade": "2026-11-25T20:02:51.303431+00:00"
 }
