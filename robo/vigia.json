@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 08:00:59 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 09:08:23 GMT"
+      "mod": "Wed, 25 Nov 2026 09:16:24 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
@@ -79,7 +79,7 @@
       "mod": "Wed, 25 Nov 2026 00:46:19 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Wed, 25 Nov 2026 09:05:25 GMT"
+      "mod": "Wed, 25 Nov 2026 09:10:25 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"404da0c5daf43a17d66a6e6193e5de2a\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 09:08:25 GMT"
+      "mod": "Wed, 25 Nov 2026 09:16:25 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"537f05ef8d94c21c89a5b83c9d34f285-gzip\"",
@@ -132,7 +132,7 @@
       "mod": "Wed, 25 Nov 2026 04:44:32 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 09:00:04 GMT"
+      "mod": "Wed, 25 Nov 2026 09:10:54 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"fc116bded8fbc36b69abc5cba6644857\"",
@@ -197,10 +197,10 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 09:08:25 GMT"
+      "mod": "Wed, 25 Nov 2026 09:16:25 GMT"
     }
   },
-  "yt_pos": 110,
+  "yt_pos": 101,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -531,10 +531,17 @@
       "DNA": "dnaagency",
       "PB&": "pbagency",
       "Copacino Fujikado": "copacinofujikado",
-      "WongDoody": "wongdoody"
+      "WongDoody": "wongdoody",
+      "Wexley School for Girls": "wexley.official",
+      "Creature": "creatureagency",
+      "Hey": "heyagency",
+      "Sukle": "sukle_advertising",
+      "Cactus": "cactusdenver",
+      "Vladimir Jones": "vladimir_jones",
+      "Karsh Hagan": ""
     },
     "tentadas": {},
-    "pos": 533,
+    "pos": 537,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -652,7 +659,7 @@
       "TRG",
       "Zubi"
     ],
-    "rodadas": 984,
+    "rodadas": 992,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1246,7 +1253,24 @@
       "Copacino Fujikado": [
         "copacinofujikado"
       ],
-      "WongDoody": []
+      "WongDoody": [],
+      "Creature": [],
+      "Wexley School for Girls": [
+        "wexley.official"
+      ],
+      "Hey": [],
+      "Sukle": [
+        "sukle_advertising"
+      ],
+      "Cactus": [
+        "cactusdenver"
+      ],
+      "Karsh Hagan": [
+        "karshhagan"
+      ],
+      "Vladimir Jones": [
+        "vladimir_jones"
+      ]
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -1939,8 +1963,9 @@
     "https://www.retailgazette.co.uk/blog/2026/11/black-friday-bristol-ad-ban",
     "https://www.retailgazette.co.uk/blog/2026/11/celebrity-appearances-nearly-double-as-christmas-adverts-ditch-festive-food",
     "https://www.afaqs.com/news/mktg/coca-cola-india-brings-back-iconic-gold-spot-12840166",
-    "https://www.horizont.net/marketing/haribo-mcdonalds-co.-diese-spots-begeistern-die-deutschen-am-meisten-664206"
+    "https://www.horizont.net/marketing/haribo-mcdonalds-co.-diese-spots-begeistern-die-deutschen-am-meisten-664206",
+    "https://www.meioemensagem.com.br/marketing/com-historico-de-parceria-avon-estara-no-filme-de-marta"
   ],
-  "ultima_rodada": "2026-11-25T09:08:21.176934+00:00",
-  "ultima_novidade": "2026-11-25T09:05:21.077710+00:00"
+  "ultima_rodada": "2026-11-25T09:16:21.171289+00:00",
+  "ultima_novidade": "2026-11-25T09:16:21.171289+00:00"
 }
