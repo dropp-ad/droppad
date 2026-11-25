@@ -12,8 +12,8 @@
       "mod": "Tue, 24 Nov 2026 20:54:39 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
-      "etag": "\"3f7e16d1f11ffa19aa4713c384ee2495\"",
-      "mod": "Wed, 25 Nov 2026 10:21:55 GMT"
+      "etag": "\"cef133c5c05d655d14331c0147edbe7b\"",
+      "mod": "Wed, 25 Nov 2026 11:52:46 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
       "mod": "Wed, 25 Nov 2026 11:38:21 GMT"
@@ -49,22 +49,22 @@
       "mod": "Wed, 25 Nov 2026 11:11:17 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 11:38:23 GMT"
+      "mod": "Wed, 25 Nov 2026 11:58:23 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
       "mod": "Wed, 25 Nov 2026 06:55:22 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795606389-gzip\"",
-      "mod": "Wed, 25 Nov 2026 11:33:09 GMT"
+      "etag": "W/\"1795607170-gzip\"",
+      "mod": "Wed, 25 Nov 2026 11:46:10 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
       "mod": "Thu, 07 May 2026 12:47:56 GMT"
     },
     "https://www.decisionmarketing.co.uk/feed/": {
-      "mod": "Wed, 25 Nov 2026 09:05:49 GMT"
+      "mod": "Wed, 25 Nov 2026 11:58:21 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
       "etag": "\"5a730d5ce43d554b4ab3a881067123ae\"",
@@ -79,7 +79,7 @@
       "mod": "Wed, 25 Nov 2026 00:46:19 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Wed, 25 Nov 2026 11:00:24 GMT"
+      "mod": "Wed, 25 Nov 2026 11:52:24 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"404da0c5daf43a17d66a6e6193e5de2a\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 11:38:25 GMT"
+      "mod": "Wed, 25 Nov 2026 11:58:25 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"1384d5b9d429d23019b101cefb586b71-gzip\"",
-      "mod": "Wed, 25 Nov 2026 11:31:15 GMT"
+      "etag": "W/\"e8114d62605cc088c11d447a70c1b541-gzip\"",
+      "mod": "Wed, 25 Nov 2026 11:56:32 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -197,10 +197,10 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 11:38:25 GMT"
+      "mod": "Wed, 25 Nov 2026 11:58:25 GMT"
     }
   },
-  "yt_pos": 45,
+  "yt_pos": 64,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -623,15 +623,24 @@
       "M Booth": "mboothagency",
       "Power Digital": "powerdigitalagency",
       "Tinuiti": "",
-      "Single Grain": ""
+      "Single Grain": "",
+      "Young & Laramore": "youngandlaramore",
+      "Booyah Advertising": "",
+      "Crown Social Agency": "",
+      "Division-D": "",
+      "Nativex": "",
+      "Web Tonic": "webtonic_"
     },
     "tentadas": {
-      "Booyah Advertising": [
-        "booyahadvertising",
-        "booyahadvertisingagency"
+      "The Shelf": [
+        "theshelf",
+        "theshelfagency"
+      ],
+      "inBeat Agency": [
+        "inbeatagency"
       ]
     },
-    "pos": 608,
+    "pos": 618,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -769,9 +778,13 @@
       "Burson",
       "Golin",
       "Tinuiti",
-      "Single Grain"
+      "Single Grain",
+      "Booyah Advertising",
+      "Crown Social Agency",
+      "Division-D",
+      "Nativex"
     ],
-    "rodadas": 1134,
+    "rodadas": 1154,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1577,7 +1590,14 @@
       "Tinuiti": [],
       "Power Digital": [],
       "Single Grain": [],
-      "Booyah Advertising": []
+      "Booyah Advertising": [],
+      "Young & Laramore": [],
+      "Crown Social Agency": [],
+      "Division-D": [],
+      "Nativex": [],
+      "Web Tonic": [],
+      "The Shelf": [],
+      "inBeat Agency": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -2277,8 +2297,9 @@
     "https://www.medianews4u.com/coca-cola-india-brings-back-gold-spot-in-a-can-revives-the-zing-thing",
     "https://www.medianews4u.com/coca-cola-revives-iconic-gold-spot-with-a-new-can-format-and-quick-commerce-launch",
     "https://grandesnomesdapropaganda.com.br/mercado/abap-bahia-celebra-mercado-publicitario-e-homenageia-primeira-presidente",
-    "https://grandesnomesdapropaganda.com.br/mercado-digital/subway-week-reune-cleo-pires-luisa-perisse-e-tio-do-bebe-em-campanha"
+    "https://grandesnomesdapropaganda.com.br/mercado-digital/subway-week-reune-cleo-pires-luisa-perisse-e-tio-do-bebe-em-campanha",
+    "https://www.decisionmarketing.co.uk/news/tesco-brings-festive-tv-ad-to-life-with-social-activity"
   ],
-  "ultima_rodada": "2026-11-25T11:38:20.997926+00:00",
-  "ultima_novidade": "2026-11-25T11:03:21.168796+00:00"
+  "ultima_rodada": "2026-11-25T11:58:20.857361+00:00",
+  "ultima_novidade": "2026-11-25T11:58:20.857361+00:00"
 }
