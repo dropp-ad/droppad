@@ -4,8 +4,8 @@
       "etag": "W/\"5d2f-o2znJvubyBKV5heDNvTUFqHaMa8\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"c65b5bb85a803963c97538a7c436209c\"",
-      "mod": "Wed, 25 Nov 2026 12:06:35 GMT"
+      "etag": "\"c974a769fd99304b50c6491d4a063707\"",
+      "mod": "Wed, 25 Nov 2026 12:24:06 GMT"
     },
     "https://creativosbr.com.br/feed/": {
       "etag": "W/\"2ddba2092895866ddb0a35d2a323eb92\"",
@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 12:13:42 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 12:16:24 GMT"
+      "mod": "Wed, 25 Nov 2026 12:24:23 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 12:17:24 GMT"
+      "mod": "Wed, 25 Nov 2026 12:24:24 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"f78a657831d17ead1de3948bd4eb4560-gzip\"",
-      "mod": "Wed, 25 Nov 2026 12:17:08 GMT"
+      "etag": "W/\"f63cb95d6ef72ddf277d993006d0ae6d-gzip\"",
+      "mod": "Wed, 25 Nov 2026 12:20:13 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -132,7 +132,7 @@
       "mod": "Wed, 25 Nov 2026 04:44:32 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 11:09:55 GMT"
+      "mod": "Wed, 25 Nov 2026 12:24:09 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"fc116bded8fbc36b69abc5cba6644857\"",
@@ -143,8 +143,8 @@
       "mod": "Tue, 24 Nov 2026 22:12:52 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
-      "etag": "\"d99584b771c6e59b3896d313398c6068\"",
-      "mod": "Wed, 25 Nov 2026 09:02:54 GMT"
+      "etag": "\"0c7b47606a6edd209e0bbb6b0019f6d1\"",
+      "mod": "Wed, 25 Nov 2026 11:17:52 GMT"
     },
     "https://wearesocial.com/it/feed/": {
       "etag": "W/\"142edc7baade8a4b5bd0a2a67ab57ef5\"",
@@ -197,10 +197,10 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 12:17:24 GMT"
+      "mod": "Wed, 25 Nov 2026 12:24:24 GMT"
     }
   },
-  "yt_pos": 53,
+  "yt_pos": 97,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -634,15 +634,19 @@
       "inBeat Agency": "",
       "SmartSites": "",
       "BrandLume": "",
-      "GUT México": ""
+      "GUT México": "",
+      "TBWA\\México": ""
     },
     "tentadas": {
-      "TBWA\\México": [
-        "tbwamxico",
-        "tbwamxicoagency"
+      "Montalvo": [
+        "montalvo",
+        "montalvoagency"
+      ],
+      "Slap Global": [
+        "slapglobal"
       ]
     },
-    "pos": 627,
+    "pos": 631,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -789,9 +793,11 @@
       "inBeat Agency",
       "SmartSites",
       "BrandLume",
-      "GUT México"
+      "GUT México",
+      "TBWA\\México",
+      "Montalvo"
     ],
-    "rodadas": 1173,
+    "rodadas": 1180,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1608,7 +1614,9 @@
       "SmartSites": [],
       "BrandLume": [],
       "GUT México": [],
-      "TBWA\\México": []
+      "TBWA\\México": [],
+      "Montalvo": [],
+      "Slap Global": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -2311,8 +2319,9 @@
     "https://grandesnomesdapropaganda.com.br/mercado-digital/subway-week-reune-cleo-pires-luisa-perisse-e-tio-do-bebe-em-campanha",
     "https://www.decisionmarketing.co.uk/news/tesco-brings-festive-tv-ad-to-life-with-social-activity",
     "https://www.afaqs.com/news/advertising/platinum-love-bands-new-campaign-explores-love-in-arranged-marriages-12840796",
-    "https://www.medianews4u.com/shemaroome-launches-band-baaja-binge-campaign-with-curated-gujarati-wedding-themed-content-line-up"
+    "https://www.medianews4u.com/shemaroome-launches-band-baaja-binge-campaign-with-curated-gujarati-wedding-themed-content-line-up",
+    "https://grandesnomesdapropaganda.com.br/mercado-digital/john-deere-lanca-campanha-voce-e-john-deere-uma-so-forca"
   ],
-  "ultima_rodada": "2026-11-25T12:17:20.569103+00:00",
-  "ultima_novidade": "2026-11-25T12:17:20.569103+00:00"
+  "ultima_rodada": "2026-11-25T12:24:20.327978+00:00",
+  "ultima_novidade": "2026-11-25T12:24:20.327978+00:00"
 }
