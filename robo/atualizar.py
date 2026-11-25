@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Robô do AD Drop: atualiza campaigns.json sozinho, sem IA.
+"""Robô do droppad: atualiza campaigns.json sozinho, sem IA.
 
 Roda no GitHub Actions. A cada execução:
   1. Lê os feeds RSS das fontes (robo/fontes.json) e as notícias do Bing News
@@ -56,7 +56,7 @@ NOVIDADES = os.path.join(RAIZ, "novidades.json")
 CANAIS_POR_MINUTO = 30    # canais de YouTube lidos por rodada no modo rápido (todos a cada ~5 min)
 MATERIAS_RAPIDO = 40      # matérias abertas por rodada no modo rápido
 MAX_VISTOS = 4000
-UA = "Mozilla/5.0 (compatible; ADDropBot/1.0; +https://github.com/pedrorosas/dropad)"
+UA = "Mozilla/5.0 (compatible; droppadBot/1.0; +https://dropp.ad)"
 
 AGORA = dt.datetime.now(dt.timezone.utc)
 HOJE = AGORA.astimezone(TZ).date()

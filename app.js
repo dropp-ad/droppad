@@ -1,4 +1,4 @@
-/* AD Drop: timeline de campanhas, uma por vez na tela (rolagem que para em cada uma).
+/* droppad (dropp.ad): timeline de campanhas, uma por vez na tela (rolagem que para em cada uma).
    O quadro 16:9 fica no centro; com filme, toca sozinho e o texto aparece ao passar o
    mouse; sem filme, vira um carrossel com as fotos da matéria contando a ideia.
    Os dados vêm de feed.json: uma versão enxuta de campaigns.json, gerada na publicação (publicar.yml). */
@@ -593,7 +593,7 @@
     closeMenu();
     var url = linkOf(c);
     var title = (c.brand ? c.brand + ": " : "") + c.title;
-    var txt = title + " · dropp Ad";
+    var txt = title + " · droppad";
     menu = el("div", "sharemenu");
     menu._for = btn;
     menu.setAttribute("role", "menu");

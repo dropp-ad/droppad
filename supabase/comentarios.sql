@@ -1,4 +1,4 @@
--- Comentários do dropp Ad / AD Drop.
+-- Comentários do droppad.
 -- Rode uma vez no Supabase: SQL Editor → New query → cole tudo → Run.
 
 create table if not exists public.comments (

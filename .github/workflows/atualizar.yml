@@ -1,4 +1,4 @@
-name: Atualizar AD Drop
+name: Atualizar droppad
 
 # Trabalho pesado, sem Claude, de hora em hora (minuto 17, fora do pico do GitHub):
 # arquivo histórico, buscas por sites novos, capas e carrosséis das campanhas antigas.
@@ -50,7 +50,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           SIMULAR: ${{ inputs.simular && '1' || '' }}
         run: |
-          git config user.name "AD Drop robô"
+          git config user.name "droppad robô"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for tentativa in 1 2 3; do
             python robo/atualizar.py

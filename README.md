@@ -1,14 +1,15 @@
-# AD Drop
+# droppad
 
-Feed diário das campanhas publicitárias que estrearam no mundo, com calendário, filtro por região e modo teatro (filmes do YouTube e do Vimeo tocando em sequência; campanhas sem filme aparecem como card).
+**https://dropp.ad** · feed diário das campanhas publicitárias que estrearam no mundo: cada campanha é um post, com o filme tocando enquanto você rola (YouTube, Vimeo, Instagram); campanhas sem filme contam a notícia com a foto da matéria.
 
 - `index.html`, `style.css`, `app.js`: o site, sem etapa de build.
-- `campaigns.json`: a lista de campanhas.
+- `campaigns.json`: a lista de campanhas (os robôs escrevem aqui).
+- `tools/feed.py`: na publicação, gera `feed.json` (versão enxuta que o site carrega) e `historia/` (texto das notícias).
 - `novidades.json`: arquivo pequeno que o site confere a cada minuto; só baixa `campaigns.json` de novo quando ele muda.
 
 ## Como o site se atualiza sozinho (sem Claude)
 
-- **Vigia, a cada minuto** (`.github/workflows/vigia.yml` + `robo/vigia.sh`): roda o robô em modo rápido (`RAPIDO=1`) a cada 60 segundos e publica na hora quando entra campanha nova. Lê os feeds (só baixa o que mudou), uma fatia dos canais de YouTube das agências e o Instagram. Cada job vigia por 5h40 e chama o próximo ao terminar; um agendamento a cada 20 min é a reserva caso a corrente quebre. Para desligar: Actions → "Vigia AD Drop" → Disable workflow.
+- **Vigia, a cada minuto** (`.github/workflows/vigia.yml` + `robo/vigia.sh`): roda o robô em modo rápido (`RAPIDO=1`) a cada 60 segundos e publica na hora quando entra campanha nova. Lê os feeds (só baixa o que mudou), uma fatia dos canais de YouTube das agências e o Instagram. Cada job vigia por 5h40 e chama o próximo ao terminar; um agendamento a cada 20 min é a reserva caso a corrente quebre. Para desligar: Actions → "Vigia droppad" → Disable workflow.
 - **De hora em hora** (`.github/workflows/atualizar.yml`): o trabalho pesado — arquivo histórico, buscas por sites novos, capas e carrosséis das campanhas antigas.
 
 Publicado pelo GitHub Pages a partir da branch `main`, pasta raiz.

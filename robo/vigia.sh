@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Vigia do AD Drop: roda o robô em modo rápido a cada minuto, por quase 6 horas seguidas
+# Vigia do droppad: roda o robô em modo rápido a cada minuto, por quase 6 horas seguidas
 # (o limite de um job do GitHub), e publica na hora sempre que entra campanha nova.
 # Quando acaba, o workflow chama o próximo vigia sozinho (ver .github/workflows/vigia.yml).
 set -u
@@ -10,7 +10,7 @@ INTERVALO=${INTERVALO:-60}  # segundos entre o início de uma varredura e o da s
 FIM=$((SECONDS + DURACAO))
 export RAPIDO=1
 
-git config user.name "AD Drop robô"
+git config user.name "droppad robô"
 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
 # Traz a versão mais nova da main sem perder o estado do vigia (que só existe aqui até ser publicado).

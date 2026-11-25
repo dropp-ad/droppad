@@ -1,4 +1,4 @@
--- Contador de acessos do dropp Ad (só o dono vê).
+-- Contador de acessos do droppad (só o dono vê).
 -- Rode uma vez no Supabase: SQL Editor → New query → cole tudo → Run.
 
 -- 1) cada visita ao site vira uma linha; o site só consegue gravar, nunca ler

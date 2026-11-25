@@ -3,7 +3,7 @@
 # baixar e repete, por até ~5h30. O workflow chama o próximo enquanto faltar conta.
 set -u
 inicio=$(date +%s)
-git config user.name "AD Drop robô"
+git config user.name "droppad robô"
 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
 publicar() {

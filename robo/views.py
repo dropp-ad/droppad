@@ -32,7 +32,7 @@ def ler(caminho, padrao):
 
 def visualizacoes(video_id):
     url = "https://returnyoutubedislikeapi.com/votes?videoId=" + video_id
-    req = urllib.request.Request(url, headers={"User-Agent": "dropp-ad-views/1.0"})
+    req = urllib.request.Request(url, headers={"User-Agent": "droppad-views/1.0"})
     with urllib.request.urlopen(req, timeout=15) as r:
         return int(json.load(r).get("viewCount") or 0)
 

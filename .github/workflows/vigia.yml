@@ -1,4 +1,4 @@
-name: Vigia AD Drop (a cada minuto)
+name: Vigia droppad (a cada minuto)
 
 # Varre as fontes a cada minuto e publica na hora o que for novo. Roda no GitHub,
 # sem depender de Claude nem de computador ligado.
@@ -9,7 +9,7 @@ name: Vigia AD Drop (a cada minuto)
 #    entra na fila (o GitHub atrasa e pula agendamentos, por isso ele é só reserva).
 #  - "concurrency" garante um vigia por vez; o que chega com um já rodando espera a vez.
 #
-# Para desligar: Actions → "Vigia AD Drop" → ⋯ → Disable workflow.
+# Para desligar: Actions → "Vigia droppad" → ⋯ → Disable workflow.
 on:
   workflow_dispatch:
   schedule:

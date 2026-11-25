@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Painel · dropp Ad</title>
+<title>Painel · droppad</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
   :root { --bg: #f3f1ec; --ink: #141414; --mut: #77746d; --line: rgba(0,0,0,.09); --card: #fff; --acc: #e4572e; }
@@ -69,7 +69,7 @@
     b.addEventListener("click", function () {
       sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: location.origin + location.pathname } });
     });
-    msg("Painel privado do dropp Ad.", b);
+    msg("Painel privado do droppad.", b);
   }
 
   // nomes das campanhas para a lista de mais acessadas
@@ -98,7 +98,7 @@
   function desenhar(d) {
     app.textContent = "";
     var h = el("header");
-    var t = el("div"); t.appendChild(el("h1", null, "Acessos · dropp Ad"));
+    var t = el("div"); t.appendChild(el("h1", null, "Acessos · droppad"));
     var sub = el("div", "mut small"); sub.textContent = "Só você vê esta página. "; var sair = el("a", null, "sair"); sair.href = "#";
     sair.addEventListener("click", function (e) { e.preventDefault(); sb.auth.signOut().then(entrar); });
     sub.appendChild(sair); t.appendChild(sub); h.appendChild(t);

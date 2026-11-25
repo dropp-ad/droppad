@@ -1,4 +1,4 @@
-"""Instagram no robô do AD Drop (Graph API, sem IA).
+"""Instagram no robô do droppad (Graph API, sem IA).
 
 Usa a conta @addrop.feed (Business, ligada à Página "AD Drop") para ler os posts
 públicos de outras contas profissionais pelo "business_discovery":
