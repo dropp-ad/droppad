@@ -16,18 +16,15 @@
       "mod": "Tue, 24 Nov 2026 22:45:02 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 02:35:57 GMT"
+      "mod": "Wed, 25 Nov 2026 02:36:57 GMT"
     },
     "https://www.informabtl.com/feed/": {
-      "etag": "W/\"735d697851667a8899f4aec0a763dfc2\"",
-      "mod": "Tue, 24 Nov 2026 23:46:18 GMT"
+      "etag": "W/\"ac8ffed327fc02329c83b5a438153f4e\"",
+      "mod": "Wed, 25 Nov 2026 03:05:44 GMT"
     },
     "https://propmark.com.br/feed/": {
       "etag": "\"b037f7640f98f2caea39c03e06e7521f\"",
       "mod": "Tue, 24 Nov 2026 22:26:40 GMT"
-    },
-    "https://www.marketingdirecto.com/rss": {
-      "mod": "Tue, 24 Nov 2026 16:23:42 GMT"
     },
     "https://www.marketingdive.com/feeds/news/": {
       "mod": "Tue, 24 Nov 2026 14:06:00 GMT"
@@ -37,7 +34,7 @@
       "mod": "Tue, 24 Nov 2026 23:19:00 GMT"
     },
     "https://www.contentgrip.com/feed/": {
-      "etag": "W/\"2a882-FVLh2wELuFV5JZuXSKkh9Jadqg4\""
+      "etag": "W/\"2aec4-TmRVnKJE//vDOFF48A0jUeOZi3Y\""
     },
     "https://www.nossomeio.com.br/feed/": {
       "etag": "\"ca13a04b7a22295cc11721ad4c597bd9\"",
@@ -48,15 +45,15 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"8e30365a549a5f7ef0b52442e76e84e2\"",
-      "mod": "Wed, 25 Nov 2026 02:33:59 GMT"
+      "etag": "W/\"2c157aaa163fe8c4b0c178e97c311cbe\"",
+      "mod": "Wed, 25 Nov 2026 03:00:12 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 02:57:58 GMT"
+      "mod": "Wed, 25 Nov 2026 03:28:11 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"c70ca7334051c0f85ce46347f017bbf3\"",
-      "mod": "Wed, 25 Nov 2026 02:50:14 GMT"
+      "etag": "\"f75c32e3d87e9cc4776fed7485a49173\"",
+      "mod": "Wed, 25 Nov 2026 03:06:20 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795569902-gzip\"",
@@ -82,7 +79,7 @@
       "mod": "Wed, 25 Nov 2026 00:46:19 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Wed, 25 Nov 2026 00:01:01 GMT"
+      "mod": "Wed, 25 Nov 2026 00:01:04 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"387f5a7ab5e799a8b3d6ef3c4309e52d\"",
@@ -93,7 +90,7 @@
       "mod": "Tue, 24 Nov 2026 23:42:55 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 02:47:13 GMT"
+      "mod": "Wed, 25 Nov 2026 03:24:18 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
       "etag": "\"01865794e34ab23b0cd5491d7a065892\"",
@@ -104,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 02:57:59 GMT"
+      "mod": "Wed, 25 Nov 2026 03:28:13 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
-      "mod": "Tue, 24 Nov 2026 11:05:05 GMT"
+      "etag": "W/\"cef09529ecbc2f5e63980d7e21abe9b8-gzip\"",
+      "mod": "Wed, 25 Nov 2026 03:18:01 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -189,7 +186,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 93,
+  "yt_pos": 44,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -399,17 +396,22 @@
       "Mutato": "mutato.oralclinic",
       "CasaRex": "casarexdesign",
       "11:21": "",
-      "Binder": "binder"
+      "Binder": "binder",
+      "Calia": "",
+      "NovaSB": "novagencia.ag"
     },
     "tentadas": {
       "Zambezi": [
         "zmbz"
       ],
-      "Calia": [
-        "agenciacalia"
+      "Eyxo": [
+        "eyxo.ag",
+        "eyxoagencia",
+        "eyxo_",
+        "eyxo"
       ]
     },
-    "pos": 348,
+    "pos": 363,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -478,9 +480,10 @@
       "B&Partners",
       "LiveAD",
       "11:21",
-      "Calia"
+      "Calia",
+      "Eyxo"
     ],
-    "rodadas": 614,
+    "rodadas": 644,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -841,7 +844,11 @@
       "Binder": [],
       "Calia": [
         "agenciacalia"
-      ]
+      ],
+      "NovaSB": [
+        "novagencia.ag"
+      ],
+      "Eyxo": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -1275,7 +1282,42 @@
       "transcosmos_jp": "2026-11-25T02:57:56.119805+00:00",
       "gmo_group": "2026-11-25T02:57:56.119805+00:00",
       "kotozna_jp": "2026-11-25T02:57:56.119805+00:00",
-      "subeagenciadigital": "2026-11-25T02:57:56.119805+00:00"
+      "subeagenciadigital": "2026-11-25T02:57:56.119805+00:00",
+      "conqrmx": "2026-11-25T03:13:09.341434+00:00",
+      "llycmexico": "2026-11-25T03:13:09.341434+00:00",
+      "monksmexico": "2026-11-25T03:13:09.341434+00:00",
+      "geotelecommx": "2026-11-25T03:13:09.341434+00:00",
+      "goodrebelsmx": "2026-11-25T03:13:09.341434+00:00",
+      "icrossinglatam": "2026-11-25T03:13:09.341434+00:00",
+      "futuritemx": "2026-11-25T03:13:09.341434+00:00",
+      "huelladigitalmx": "2026-11-25T03:13:09.341434+00:00",
+      "bindivamx": "2026-11-25T03:13:09.341434+00:00",
+      "hashtagmediagroup": "2026-11-25T03:13:09.341434+00:00",
+      "megridigital": "2026-11-25T03:13:09.341434+00:00",
+      "alohamarketingmx": "2026-11-25T03:13:09.341434+00:00",
+      "dinametramx": "2026-11-25T03:13:09.341434+00:00",
+      "another_co": "2026-11-25T03:13:09.341434+00:00",
+      "vaynermediamx": "2026-11-25T03:13:09.341434+00:00",
+      "2btubemx": "2026-11-25T03:13:09.341434+00:00",
+      "sernagroupmx": "2026-11-25T03:28:09.632568+00:00",
+      "sensomx": "2026-11-25T03:28:09.632568+00:00",
+      "boundifymx": "2026-11-25T03:28:09.632568+00:00",
+      "mhaconsultingmx": "2026-11-25T03:28:09.632568+00:00",
+      "grinbinmx": "2026-11-25T03:28:09.632568+00:00",
+      "infosolmx": "2026-11-25T03:28:09.632568+00:00",
+      "mosaicomediamx": "2026-11-25T03:28:09.632568+00:00",
+      "zkmarketingmx": "2026-11-25T03:28:09.632568+00:00",
+      "voltmediaservices": "2026-11-25T03:28:09.632568+00:00",
+      "behavemx": "2026-11-25T03:28:09.632568+00:00",
+      "holybrandagency": "2026-11-25T03:28:09.632568+00:00",
+      "mambocreativeagency": "2026-11-25T03:28:09.632568+00:00",
+      "cbimarketmx": "2026-11-25T03:28:09.632568+00:00",
+      "theramediamx": "2026-11-25T03:28:09.632568+00:00",
+      "ivirtualmx": "2026-11-25T03:28:09.632568+00:00",
+      "swingmediamarketing": "2026-11-25T03:28:09.632568+00:00",
+      "agenciaseomonterrey": "2026-11-25T03:28:09.632568+00:00",
+      "ogilvymexico": "2026-11-25T03:28:09.632568+00:00",
+      "vmlmexico": "2026-11-25T03:28:09.632568+00:00"
     }
   },
   "vistos": [
@@ -1412,8 +1454,9 @@
     "https://campaignbrief.com/reminder-mad-hatterz-of-advertising-hat-exchange-hits-bodriggy-tomorrow-night-in-melbourne",
     "https://campaignbrief.com/suzuki-jimny-makes-light-work-of-victorias-pothole-problem-in-new-film-via-atimeplace",
     "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-part-advertising",
-    "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-past-advertising"
+    "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-past-advertising",
+    "https://www.medianews4u.com/giraffe-advertising-marks-21-years-expands-into-hospitality-entertainment-and-real-estate"
   ],
-  "ultima_rodada": "2026-11-25T02:57:56.119805+00:00",
-  "ultima_novidade": "2026-11-25T02:18:55.629219+00:00"
+  "ultima_rodada": "2026-11-25T03:28:09.632568+00:00",
+  "ultima_novidade": "2026-11-25T03:28:09.632568+00:00"
 }
