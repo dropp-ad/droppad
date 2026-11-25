@@ -151,14 +151,167 @@
    "banda": 1,
    "Milk": 1,
    "New!": 1,
-   "age": 1
+   "age": 1,
+   "Imago Ogilvy": "ok",
+   "We Believers": "ok",
+   "Joe Public": "ok",
+   "SuperHeroes": "ok",
+   "Mekanism": "ok",
+   "RPA": "ok",
+   "Zambezi": "ok",
+   "TBWA\\Chiat\\Day": "ok",
+   "Laundry Service": "ok",
+   "Deutsch LA": "ok",
+   "Cashmere": "ok",
+   "Omelet": "ok",
+   "Wpromote": "ok",
+   "Butler, Shine, Stern & Partners": "ok",
+   "Character": "ok",
+   "Cutwater": "ok",
+   "Duncan Channon": "ok",
+   "Sockeye": "ok",
+   "Kamp Grizzly": "ok",
+   "Pollinate": "ok",
+   "Swift": "ok",
+   "Instrument": "ok",
+   "Cramer-Krasselt": "ok",
+   "Haberman": "ok",
+   "Hiebing": "ok",
+   "Slingshot": "ok",
+   "TRG": "ok",
+   "22squared": "ok",
+   "BVK": "ok",
+   "Chemistry": "ok",
+   "WongDoody": "ok",
+   "Karsh Hagan": "ok",
+   "Cactus": "ok",
+   "Doner": "ok",
+   "Lafayette American": "ok",
+   "GMMB": "ok",
+   "RP3 Agency": "ok",
+   "160over90": "ok",
+   "Yes&": "ok",
+   "BooneOakley": "ok",
+   "LaneTerralever": "ok",
+   "Mythic": "ok",
+   "Luquire": "ok",
+   "Tattoo Projects": "ok",
+   "The Newtons Laboratory": 1,
+   "Bruketa&Žinić&Grey": 1,
+   "Communis": 1,
+   "proof.": 1,
+   "Noble Graphics": 1,
+   "Íslenska": 1,
+   "Leavingstone": 1,
+   "SOKO": 1,
+   "Sancho BBDO": 1,
+   "Fahrenheit DDB": 1,
+   "Special Group": 1,
+   "The Monkeys": 1,
+   "BMF": 1,
+   "Impact BBDO": 1,
+   "FP7 McCann": 1,
+   "Mischief @ No Fixed Address": 1,
+   "The Martin Agency": 1,
+   "Mother New York": 1,
+   "Translation": 1,
+   "Mojo Supermarket": 1,
+   "Le Truc": 1,
+   "Pereira O'Dell": 1,
+   "B-Reel": 1,
+   "SMALL": 1,
+   "Sibling Rivalry": 1,
+   "David&Goliath": 1,
+   "180LA": 1,
+   "COLLINS": 1,
+   "3rd & Army": 1,
+   "SUMMONER": 1,
+   "Venables Bell & Partners": 1,
+   "Eleven": 1,
+   "Argonaut": 1,
+   "GSD&M": 1,
+   "Thesis": 1,
+   "CMD": 1,
+   "Highdive": 1,
+   "Energy BBDO": 1,
+   "VSA Partners": 1,
+   "Schafer Condon Carter": 1,
+   "OKRP": 1,
+   "Two by Four": 1,
+   "Tom, Dick & Harry Creative": 1,
+   "Upshot": 1,
+   "AbelsonTaylor": 1,
+   "Carmichael Lynch": 1,
+   "Periscope": 1,
+   "Knock": 1,
+   "Mono": 1,
+   "Modern Climate": 1,
+   "Arnold Worldwide": 1,
+   "Hill Holliday": 1,
+   "MullenLowe U.S.": 1,
+   "Allen & Gerritsen": 1,
+   "Connelly Partners": 1,
+   "Small Army": 1,
+   "360PR+": 1,
+   "Digitas": 1,
+   "AMP Agency": 1,
+   "Bakery": 1,
+   "Tilted Chair": 1,
+   "Door No. 3": 1,
+   "Arts + Labor": 1,
+   "McGarrah Jessee": 1,
+   "Mythology": 1,
+   "T3": 1,
+   "The Richards Group": 1,
+   "Dieste": 1,
+   "The Infinite Agency": 1,
+   "Agency Creative": 1,
+   "The Marketing Arm": 1,
+   "TM Advertising": 1,
+   "República Havas": 1,
+   "Zubi": 1,
+   "Zimmerman": 1,
+   "LERMA/": 1,
+   "Fitzco": 1,
+   "Moxie": 1,
+   "Dagger": 1,
+   "EP+Co": 1,
+   "Tombras": 1,
+   "DNA": 1,
+   "PB&": 1,
+   "Copacino Fujikado": 1,
+   "Creature": 1,
+   "Wexley School for Girls": 1,
+   "Hey": 1,
+   "Sukle": 1,
+   "Vladimir Jones": 1,
+   "Cultivator": 1,
+   "Fact & Fiction": 1,
+   "Commonwealth//McCann": 1,
+   "MRM": 1,
+   "Campbell Ewald": 1,
+   "Design Army": 1,
+   "MDB Communications": 1,
+   "HZ": 1,
+   "Social Driver": 1,
+   "Red Tettemer O'Connell + Partners": 1,
+   "Brownstein Group": 1,
+   "Tierney": 1,
+   "Vault Communications": 1,
+   "Bohan": 1,
+   "GS&F": 1,
+   "The Buntin Group": 1,
+   "Wray Ward": 1
   },
   "pos": {
-   "apify_empresas": 150,
-   "apify_buscas": 60,
-   "coresignal": 150
+   "apify_empresas": 300,
+   "apify_buscas": 120,
+   "coresignal": 300
   },
-  "cs_filtro": {}
+  "cs_filtro": {
+   "company_post": "company_name",
+   "employee_post": "company_name"
+  }
  },
  "rodadas": [
   {
@@ -424,6 +577,387 @@
    "so_coresignal": 0,
    "nas_duas": 0,
    "paginas_linkedin_achadas": 52
+  },
+  {
+   "quando": "2026-11-25T22:54:00Z",
+   "agencias_na_lista": 1021,
+   "apify": {
+    "empresas": {
+     "http": 201,
+     "paginas": 150,
+     "posts": 154,
+     "agencias_com_post": 44
+    },
+    "amostra": [
+     {
+      "type": "post",
+      "id": "7529219971609194496",
+      "linkedinUrl": "https://www.linkedin.com/posts/imagoogilvy_svijet-je-mo%C5%BEda-dobio-novog-james-bonda-activity-7529219971609194496-_mu7",
+      "content": "Svijet je možda dobio novog James Bonda, ali što se nas tiče - mi znamo da naš 003 već odavno ima dozvolu za ubijanje... ideja! 🔫\n\nP.S. ako su Dina, Nela i Darko 003, znači li to da je Nebojša s pete slike dr. Evil?\nP.P.S. Nebojša, mi te volimo. \n\n📸 Vana Katančić\n📆 HURA!",
+      "contentAttributes": [
+       {
+        "start": 143,
+        "length": 4,
+        "type": "PROFILE_MENTION",
+        "hyperlink": "https://www.linkedin.com/in/ACoAAAoiEskB0lpTdZAULsiQzshOT1XOGMqOcVg",
+        "textLink": null,
+        "profile": {
+         "id": "ACoAAAoiEskB0lpTdZAULsiQzshOT1XOGMqOcVg",
+         "firstName": "Dina",
+         "lastName": "Dretvic",
+         "linkedinUrl": "https://www.linkedin.com/in/ACoAAAoiEskB0lpTdZAULsiQzshOT1XOGMqOcVg",
+         "publicIdentifier": null
+        }
+       },
+       {
+        "start": 149,
+        "length": 4,
+        "type": "PROFILE_MENTION",
+        "hyperlink": "https://www.linkedin.com/in/ACoAAAyI5msBSLAzBbJVM67itMTE2PNmAfFkn50",
+        "textLink": null,
+        "profile": {
+         "id": "ACoAAAyI5msBSLAzBbJVM67itMTE2PNmAfFkn50",
+         "firstName": "Nela",
+         "lastName": null,
+         "linkedinUrl": "https://www.linkedin.com/in/ACoAAAyI5msBSLAzBbJVM67itMTE2PNmAfFkn50",
+         "publicIdentifier": null
+        }
+       },
+       {
+        "start": 156,
+        "length": 5,
+        "type": "PROFILE_MENTION",
+        "hyperlink": "https://www.linkedin.com/in/ACoAABHeDH0BHVYIgiubmIXM-MflUnU9R7JO7Xk",
+        "textLink": null,
+        "profile": {
+         "id": "ACoAABHeDH0BHVYIgiubmIXM-MflUnU9R7JO7Xk",
+         "firstName": "Darko",
+         "lastName": "Bosnar",
+         "linkedinUrl": "https://www.linkedin.com/in/ACoAABHeDH0BHVYIgiubmIXM-MflUnU9R7JO7Xk",
+         "publicIdentifier": null
+        }
+       },
+       {
+        "start": 185,
+        "length": 7,
+        "type": "PROFILE_MENTION",
+        "hyperlink": "https://www.linkedin.com/in/ACoAAAErxcIBsNKcu_frLO1XcvhmMVJGt-PAI5c",
+        "textLink": null,
+        "profile": {
+         "id": "ACoAAAErxcIBsNKcu_frLO1XcvhmMVJGt-PAI5c",
+         "firstName": "Nebojša",
+         "lastName": null,
+         "linkedinUrl": "https://www.linkedin.com/in/ACoAAAErxcIBsNKcu_frLO1XcvhmMVJGt-PAI5c",
+         "publicIdentifier": null
+        }
+       },
+       {
+        "start": 266,
+        "length": 5,
+        "type": "COMPANY_NAME",
+        "hyperlink": "https://www.linkedin.com/company/69237470/",
+        "textLink": null,
+        "company": {
+         "id": "69237470",
+         "name": "HURA!",
+         "linkedinUrl": "https://www.linkedin.com/company/69237470/"
+        }
+       }
+      ],
+      "author": {
+       "id": "12131",
+       "universalName": "imagoogilvy",
+       "publicIdentifier": null,
+       "type": "company",
+       "name": "Imago",
+       "linkedinUrl": "https://www.linkedin.com/company/imagoogilvy/posts",
+       "info": "8,166 followers",
+       "website": null,
+       "websiteLabel": null,
+       "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4E0BAQFcHXUXB_COaw/company-logo_400_400/company-logo_400_400/0/1689239949887/imagoreklamnaaencija_logo?e=1797465600&v=beta&t=ExEWsDzZ6csfDy198oPRrmtfKXjZBglcG9_sUzhkkVc",
+        "width": 400,
+        "height": 400
+       },
+       "urn": "12131",
+       "companyId": "12131"
+      },
+      "postedAt": {
+       "timestamp": 1795105927374,
+       "date": "2026-11-19T16:32:07.374Z",
+       "postedAgoShort": "6d",
+       "postedAgoText": "6 days ago • Visible to anyone on or off LinkedIn"
+      },
+      "postImages": [
+       {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQGHxYgfo4ASZw/feedshare-image-high-res/B56aH0pqZ.IoAQ-/0/1795105925081?e=1797465600&v=beta&t=Xd0dqAU_Pm3NeGrHdpMKrATUKG8CaTzFm8hkDRJip3k",
+        "width": 2048,
+        "height": 1365
+       },
+       {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQF3cP7CvngcIQ/feedshare-image-high-res/B56aH0pqRPG4AQ-/0/1795105924766?e=1797465600&v=beta&t=v_Ctb6kzXtu01uO9RjETUlPtduF36UnOJg_DO5ik8Zk",
+        "width": 2048,
+        "height": 1366
+       },
+       {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQEZh7w15SHbvA/feedshare-image-high-res/B56aH0pqYpH0AQ-/0/1795105925178?e=1797465600&v=beta&t=m9t-HtYCTVgl9e4_oUZzmGdIOUrwtDJ_CLBIN3Il6kU",
+        "width": 2048,
+        "height": 1366
+       },
+       {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQExCr1w8UN53Q/feedshare-image-high-res/B56aH0pqY_KUAY-/0/1795105925374?e=1797465600&v=beta&t=gfuo08fpV_YSs3qBWVzxUN6Vk3x9noUDav2NK5Q1hjc",
+        "width": 2048,
+        "height": 1366
+       },
+       {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQHlGtBeWm-MnQ/feedshare-image-high-res/B56aH0pqR0HgAQ-/0/1795105924583?e=1797465600&v=beta&t=iuixJs-gmXi5ve_GGlfb2e4NufR7lA4CL9Q7ysb8in4",
+        "width": 2048,
+        "height": 1366
+       },
+       {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQEZz54AZfbXUw/feedshare-image-high-res/B56aH0pqWjHMAQ-/0/1795105924865?e=1797465600&v=beta&t=4F7JHvXK5NnNEp2pxOYt2v6GgHo7V2eq7I-Krghhk8o",
+        "width": 2048,
+        "height": 1366
+       },
+       {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQEFjrEisC20dQ/feedshare-image-high-res/B56aH0pqceK4AQ-/0/1795105925248?e=1797465600&v=beta&t=9HtCapSjqWUzecJPYpJYEYepIsN9BFL2Jb0JdqH57_Y",
+        "width": 2048,
+        "height": 1365
+       },
+       {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQGMW32vmNfRKg/feedshare-image-high-res/B56aH0pqU2IAAQ-/0/1795105924994?e=1797465600&v=beta&t=I5p4WKY3djcLiLSDfCG-FjQ3nkys_LUK4TBGaLrQvYI",
+        "width": 2048,
+        "height": 1366
+       }
+      ],
+      "socialContent": {
+       "hideShareAction": true,
+       "hideSendAction": true,
+       "trustInterventionBanner": null,
+       "shareUrl": "https://www.linkedin.com/posts/imagoogilvy_svijet-je-mo%C5%BEda-dobio-novog-james-bonda-activity-7529219971609194496-_mu7?"
+      },
+      "comments": [],
+      "header": {
+       "text": null
+      },
+      "entityId": "7529219971609194496",
+      "shareUrn": "urn:li:ugcPost:7529219970384191488",
+      "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7529219970384191488",
+      "engagement": {
+       "id": "7529219970384191488",
+       "likes": 43,
+       "comments": 1,
+       "shares": 0,
+       "reactions": [
+        {
+         "type": "LIKE",
+         "count": 35
+        },
+        {
+         "type": "EMPATHY",
+         "count": 7
+        },
+        {
+         "type": "PRAISE",
+         "count": 1
+        }
+       ]
+      },
+      "reactionIds": [],
+      "commentIds": [],
+      "query": {
+       "sortBy": "date",
+       "page": "1",
+       "targetUrl": "https://www.linkedin.com/company/imago/",
+       "sessionId": "7ebe229a-aef8-4839-a1c8-045048a913df"
+      }
+     }
+    ],
+    "amostra_citacao": [],
+    "citacoes": {
+     "http": 201,
+     "buscas": 60,
+     "posts": 0
+    },
+    "status": "ok",
+    "custo_usd": 0.31,
+    "campanhas": 0,
+    "atraso_mediano_h": null
+   },
+   "coresignal": {
+    "ids": 6,
+    "agencias": 150,
+    "amostra": [
+     {
+      "id": 7529417360034713600,
+      "url": "https://es.linkedin.com/posts/emprendevalor_factoring-factoringconelestado-mype-activity-7529417360034713600-tzyw",
+      "company_id": 29769823,
+      "company_source_id": 10890281,
+      "company_name": "EMPRENDE VALOR",
+      "company_url": "https://pe.linkedin.com/company/emprendevalor",
+      "company_headline": null,
+      "company_logo_url": "https://media.licdn.com/dms/image/v2/C4E0BAQGtXy3xx2k1mA/company-logo_100_100/company-logo_100_100/0/1631358330639?e=2147483647&v=beta&t=laQ8janvx9F0EJWrKplROnfXj3anIhfP32DZhMjeexo",
+      "company_posts_count": 0,
+      "follower_count": 1839,
+      "date_published": "2026-11-24",
+      "created_at": "2026-11-24 01:38:53",
+      "deleted": 0,
+      "updated_at": "2026-11-24 01:38:53",
+      "processed_at": "2026-11-25 00:49:46",
+      "received_at": "2026-11-24 01:38:58",
+      "article_body": "¡Emprende Valor en vivo!\n\n“FACTORING CON EL ESTADO”\nEl Estado peruano es uno de los principales compradores del país, pero sus plazos de pago pueden llegar a 30, 60, 90 o incluso 120 días. Frente a esta realidad, el Ministerio de la Producción viene impulsando el factoring con entidades públicas. Pero, ¿cómo va a funcionar este financiamiento?, ¿las entidades públicas pagarán a tiempo?, ¿qué dicen las empresas de factoring?\n\nInvitados\t: Maria Luisa Mori, CEO de Credigob y Fredy Garavito, Co-Founder & COO de Credigob\nEntrevista\t: Pedro Angel Torres Guzmán, Director de EMPRENDE VALOR \nDía\t\t: Lunes 23/11/26\nHora :\n•\tLima, Perú : 7pm.\n•\tCiudad de México, México : 6pm.\n\nTRANSMISION:\n• Canal Youtube\nhttps://lnkd.in/dfSV2MnM\n• Página Facebook\nhttps://lnkd.in/eHXBM45 \n• Página de Linkedin\nhttps://lnkd.in/dESN6Xe5\t\n\n#Factoring #FactoringConElEstado #MYPE #MYPESPeru #FinanciamientoEmpresarial #LiquidezEmpresarial #CapitalDeTrabajo #ProveedoresDelEstado #ComprasPublicas #FinanzasParaEmpresas #EmprendedoresPeruanos #EmpresariosPeruanos #PRODUCE #EmprendeValor #DesarrolloEmpresarial #credigob #marialuismori #empresas #empresarios #financiamientos #peru",
+      "image_url": null,
+      "hashtags": [
+       "#Factoring",
+       "#FactoringConElEstado",
+       "#MYPE",
+       "#MYPESPeru",
+       "#FinanciamientoEmpresarial",
+       "#LiquidezEmpresarial",
+       "#CapitalDeTrabajo",
+       "#ProveedoresDelEstado",
+       "#ComprasPublicas",
+       "#FinanzasParaEmpresas",
+       "#EmprendedoresPeruanos",
+       "#EmpresariosPeruanos",
+       "#PRODUCE",
+       "#EmprendeValor",
+       "#DesarrolloEmpresarial",
+       "#credigob",
+       "#marialuismori",
+       "#empresas",
+       "#empresarios",
+       "#financiamientos",
+       "#peru"
+      ],
+      "mentions": [
+       {
+        "full_name": "Maria Luisa Mori",
+        "url": "https://pe.linkedin.com/in/marialuisamori"
+       },
+       {
+        "full_name": "Credigob",
+        "url": "https://pe.linkedin.com/company/credigob"
+       },
+       {
+        "full_name": "Fredy Garavito",
+        "url": "https://pe.linkedin.com/in/fredygaravito"
+       },
+       {
+        "full_name": "Credigob",
+        "url": "https://pe.linkedin.com/company/credigob"
+       },
+       {
+        "full_name": "Pedro Angel Torres Guzmán",
+        "url": "https://pe.linkedin.com/in/pedro-a-torres-guzm%C3%A1n"
+       },
+       {
+        "full_name": "EMPRENDE VALOR",
+        "url": "https://pe.linkedin.com/company/emprendevalor"
+       }
+      ],
+      "reaction_count": 11,
+      "comment_count": 1,
+      "comments": [
+       {
+        "full_name": "Johan García Cervantes",
+        "headline": null,
+        "profile_url": "https://pe.linkedin.com/in/jgarciacervantes",
+        "body": "Estamos ayudando a muchas MIPYMES a tener inclusión financiera a través de sus licitaciones con el estado. Este es un LIVE que todo proveedor del estado debe ver🙌",
+        "reaction_count": 1,
+        "date_published": "2026-11-23",
+        "created_at": "2026-11-24 01:38:53",
+        "updated_at": "2026-11-24 01:38:53",
+        "deleted": 0
+       }
+      ],
+      "reshared_post": null
+     },
+     {
+      "id": 7527476220599422976,
+      "url": "https://www.linkedin.com/posts/two-cops-one-donut_twocopsonedonut-therealpredhunters-onlinesafety-activity-7527476220599422976-juqP",
+      "company_id": 96258249,
+      "company_source_id": 104082419,
+      "company_name": "Two Cops One Donut",
+      "company_url": "https://www.linkedin.com/company/two-cops-one-donut",
+      "company_headline": null,
+      "company_logo_url": "https://media.licdn.com/dms/image/v2/D560BAQH6FGfbQES3pw/company-logo_100_100/B56aAglQKTH4AI-/0/1787253031828?e=2147483647&v=beta&t=omoflfiVK8NPgVsQQSJAOK4A1qkTVi5586hrzzwXl1I",
+      "company_posts_count": 0,
+      "follower_count": 8210,
+      "date_published": "2026-11-23",
+      "created_at": "2026-11-23 01:35:57",
+      "deleted": 0,
+      "updated_at": "2026-11-23 01:35:57",
+      "processed_at": "2026-11-24 00:50:57",
+      "received_at": "2026-11-23 01:37:12",
+      "article_body": "Beyond the Confrontation | Adam Spence of The Real Pred Hunters\n\nThe confrontation gets the attention. But what happens before the camera starts, and after it stops?\n\nAdam Spence from The Real Pred Hunters joins Erik Lavigne and the Two Cops One Donut crew for a conversation about online child safety, accountability, and the realities behind predator-catching videos.\n\nWe’ll talk about what brought Adam into this work, warning signs families should understand, and the challenges of turning concerning online behavior into information law enforcement can evaluate. We’ll also discuss the responsibility that comes with filming confrontations and why protecting children has to remain the priority.\n\nJoin us live and bring your questions.\n\n📅 Sunday, November 22\n🕗 8 PM Eastern / 7 PM Central\n\n#TwoCopsOneDonut #TheRealPredHunters #OnlineSafety",
+      "image_url": null,
+      "hashtags": [
+       "#TwoCopsOneDonut",
+       "#TheRealPredHunters",
+       "#OnlineSafety"
+      ],
+      "mentions": [],
+      "reaction_count": 1,
+      "comment_count": 3,
+      "comments": [
+       {
+        "full_name": "Two Cops One Donut",
+        "headline": null,
+        "profile_url": "https://www.linkedin.com/company/two-cops-one-donut",
+        "body": "harrison you are right i did, im now against qi",
+        "reaction_count": 0,
+        "date_published": "2026-11-23",
+        "created_at": "2026-11-23 01:35:57",
+        "updated_at": "2026-11-23 01:35:57",
+        "deleted": 0
+       },
+       {
+        "full_name": "Two Cops One Donut",
+        "headline": null,
+        "profile_url": "https://www.linkedin.com/company/two-cops-one-donut",
+        "body": "Rommy! my brother",
+        "reaction_count": 0,
+        "date_published": "2026-11-23",
+        "created_at": "2026-11-23 01:35:57",
+        "updated_at": "2026-11-23 01:35:57",
+        "deleted": 0
+       },
+       {
+        "full_name": "Two Cops One Donut",
+        "headline": null,
+        "profile_url": "https://www.linkedin.com/company/two-cops-one-donut",
+        "body": "good point vyyper",
+        "reaction_count": 0,
+        "date_published": "2026-11-23",
+        "created_at": "2026-11-23 01:35:57",
+        "updated_at": "2026-11-23 01:35:57",
+        "deleted": 0
+       },
+       {
+        "full_name": "Two Cops One Donut",
+        "headline": null,
+        "profile_url": "https://www.linkedin.com/company/two-cops-one-donut",
+        "body": "im not trying to pretend to be a cop that knows all policing because i dont",
+        "reaction_count": 0,
+        "date_published": "2026-11-23",
+        "created_at": "2026-11-23 01:35:57",
+        "updated_at": "2026-11-23 01:35:57",
+        "deleted": 0
+       }
+      ],
+      "reshared_post": null
+     }
+    ],
+    "status": "ok",
+    "creditos": 6,
+    "campanhas": 0,
+    "atraso_mediano_h": null
+   },
+   "so_apify": 0,
+   "so_coresignal": 0,
+   "nas_duas": 0,
+   "paginas_linkedin_achadas": 96
   }
  ],
  "candidatas": [
