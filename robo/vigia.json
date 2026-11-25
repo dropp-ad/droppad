@@ -12,15 +12,15 @@
       "mod": "Tue, 24 Nov 2026 20:54:39 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
-      "etag": "\"cfb8b2e70eaad7807f175d97bdda6aa4\"",
-      "mod": "Wed, 25 Nov 2026 13:08:32 GMT"
+      "etag": "\"4d62977ae7913f9394d2558c2eb0d667\"",
+      "mod": "Wed, 25 Nov 2026 14:08:48 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
       "mod": "Wed, 25 Nov 2026 13:36:20 GMT"
     },
     "https://www.informabtl.com/feed/": {
-      "etag": "W/\"be8d0011aa703b1d3fa81ddd877a93db\"",
-      "mod": "Wed, 25 Nov 2026 10:00:14 GMT"
+      "etag": "W/\"52e504c73db222c21ca7068aeba8965e\"",
+      "mod": "Wed, 25 Nov 2026 14:09:56 GMT"
     },
     "https://propmark.com.br/feed/": {
       "etag": "\"b037f7640f98f2caea39c03e06e7521f\"",
@@ -49,15 +49,15 @@
       "mod": "Wed, 25 Nov 2026 13:55:14 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 14:08:24 GMT"
+      "mod": "Wed, 25 Nov 2026 14:11:23 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
       "mod": "Wed, 25 Nov 2026 06:55:22 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795615648-gzip\"",
-      "mod": "Wed, 25 Nov 2026 14:07:28 GMT"
+      "etag": "W/\"1795615746-gzip\"",
+      "mod": "Wed, 25 Nov 2026 14:09:06 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -93,15 +93,15 @@
       "mod": "Wed, 25 Nov 2026 14:00:20 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
-      "etag": "\"bc400a491ad68d4c81b082e692d58d9d\"",
-      "mod": "Wed, 25 Nov 2026 14:01:34 GMT"
+      "etag": "\"0ab6d16ee376eec886f1959b98a72dc3\"",
+      "mod": "Wed, 25 Nov 2026 14:11:04 GMT"
     },
     "https://bbdo.com/feed/": {
       "etag": "W/\"d19e6feb3b8183716af7e9ecf21ae2f1\"",
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 14:08:25 GMT"
+      "mod": "Wed, 25 Nov 2026 14:11:25 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -132,7 +132,7 @@
       "mod": "Wed, 25 Nov 2026 04:44:32 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 13:53:51 GMT"
+      "mod": "Wed, 25 Nov 2026 14:09:05 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"a586bda185f737d127c5669e1400556c\"",
@@ -197,10 +197,10 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 14:08:25 GMT"
+      "mod": "Wed, 25 Nov 2026 14:11:25 GMT"
     }
   },
-  "yt_pos": 63,
+  "yt_pos": 70,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -665,19 +665,19 @@
       "Saatchi & Saatchi New York": "",
       "BBH New York": "",
       "Barton F. Graf": "",
-      "Quality Meats": "qualitymeats_"
+      "Quality Meats": "qualitymeats_",
+      "Special US": ""
     },
     "tentadas": {
       "Preacher": [
         "preacher",
         "preacheragency"
       ],
-      "Special US": [
-        "specialus",
-        "specialusagency"
+      "Arts & Letters Creative Co.": [
+        "artsletterscreativeco."
       ]
     },
-    "pos": 683,
+    "pos": 684,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -849,9 +849,10 @@
       "Saatchi & Saatchi New York",
       "BBH New York",
       "Barton F. Graf",
-      "Special US"
+      "Special US",
+      "Preacher"
     ],
-    "rodadas": 1284,
+    "rodadas": 1287,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1700,7 +1701,8 @@
       "Barton F. Graf": [],
       "Quality Meats": [],
       "Special US": [],
-      "Preacher": []
+      "Preacher": [],
+      "Arts & Letters Creative Co.": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -2407,8 +2409,9 @@
     "https://grandesnomesdapropaganda.com.br/mercado-digital/john-deere-lanca-campanha-voce-e-john-deere-uma-so-forca",
     "https://www.marketingdive.com/news/campaign-trail-tiffany-tells-human-holiday-story-with-hollywood-talent/874914",
     "https://www.marketingdive.com/news/coca-cola-pivots-from-divisive-ai-generated-ads-for-holiday-campaign/875215",
-    "https://www.bandt.com.au/iab-australia-teams-up-with-brands-to-give-marketers-a-common-framework-to-measure-ads"
+    "https://www.bandt.com.au/iab-australia-teams-up-with-brands-to-give-marketers-a-common-framework-to-measure-ads",
+    "https://marketinginsiderreview.com/canal-de-isabel-ii-presenta-campana-desechando-mitos"
   ],
-  "ultima_rodada": "2026-11-25T14:08:21.256906+00:00",
-  "ultima_novidade": "2026-11-25T12:24:20.327978+00:00"
+  "ultima_rodada": "2026-11-25T14:11:20.537890+00:00",
+  "ultima_novidade": "2026-11-25T14:11:20.537890+00:00"
 }
