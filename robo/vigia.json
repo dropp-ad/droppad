@@ -12,11 +12,11 @@
       "mod": "Tue, 24 Nov 2026 20:54:39 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
-      "etag": "\"2b8e5e77e7d2719b89dc0fad405d4554\"",
-      "mod": "Wed, 25 Nov 2026 12:17:11 GMT"
+      "etag": "\"344c088ce80953d337c3ccb952de2a38\"",
+      "mod": "Wed, 25 Nov 2026 13:08:20 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 12:34:21 GMT"
+      "mod": "Wed, 25 Nov 2026 13:08:21 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"be8d0011aa703b1d3fa81ddd877a93db\"",
@@ -27,14 +27,14 @@
       "mod": "Tue, 24 Nov 2026 22:26:40 GMT"
     },
     "https://www.marketingdive.com/feeds/news/": {
-      "mod": "Tue, 24 Nov 2026 14:06:00 GMT"
+      "mod": "Wed, 25 Nov 2026 13:00:00 GMT"
     },
     "https://musebyclios.com/feed/": {
       "etag": "W/\"92174c0074cf72c039574b74250acc01\"",
       "mod": "Wed, 25 Nov 2026 09:37:38 GMT"
     },
     "https://www.contentgrip.com/feed/": {
-      "etag": "W/\"31cc0-KBI3xnaNAe/WyTBdc22t5FjnUyY\""
+      "etag": "W/\"3086d-swuouYVwhM/jYjaCQR7zDCOrfcY\""
     },
     "https://www.nossomeio.com.br/feed/": {
       "etag": "\"c89515202bb093d409798e9d83543290\"",
@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 12:13:42 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 12:37:24 GMT"
+      "mod": "Wed, 25 Nov 2026 13:08:23 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 12:38:25 GMT"
+      "mod": "Wed, 25 Nov 2026 13:08:24 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -132,11 +132,11 @@
       "mod": "Wed, 25 Nov 2026 04:44:32 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 12:34:42 GMT"
+      "mod": "Wed, 25 Nov 2026 13:00:51 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"fc116bded8fbc36b69abc5cba6644857\"",
-      "mod": "Tue, 24 Nov 2026 14:42:27 GMT"
+      "etag": "\"7dd0a632e3d1539cc243a482060f5d58\"",
+      "mod": "Wed, 25 Nov 2026 12:53:46 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"529df3db7f25b64048e3bfc7edad051e\"",
@@ -197,10 +197,10 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 12:38:25 GMT"
+      "mod": "Wed, 25 Nov 2026 13:08:24 GMT"
     }
   },
-  "yt_pos": 102,
+  "yt_pos": 89,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -640,14 +640,26 @@
       "Slap Global": "",
       "Teran\\TBWA": "",
       "SapientRazorfish": "",
-      "Critical Mass": "criticalmassagency"
+      "Critical Mass": "criticalmassagency",
+      "Initiative": "initiativeagency",
+      "Isobar": "",
+      "Wavemaker": "",
+      "EssenceMediacom": "",
+      "OMD Worldwide": "",
+      "Horizon Media": "horizonmediaagency",
+      "PHD Media": "",
+      "Starcom": ""
     },
     "tentadas": {
-      "Isobar": [
-        "isobar"
+      "Zenith": [
+        "zenith",
+        "zenithagency"
+      ],
+      "Havas Media": [
+        "havasmedia"
       ]
     },
-    "pos": 638,
+    "pos": 653,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -799,9 +811,16 @@
       "Montalvo",
       "Slap Global",
       "Teran\\TBWA",
-      "SapientRazorfish"
+      "SapientRazorfish",
+      "Isobar",
+      "Wavemaker",
+      "EssenceMediacom",
+      "OMD Worldwide",
+      "PHD Media",
+      "Starcom",
+      "Zenith"
     ],
-    "rodadas": 1194,
+    "rodadas": 1224,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1624,7 +1643,16 @@
       "Teran\\TBWA": [],
       "SapientRazorfish": [],
       "Critical Mass": [],
-      "Isobar": []
+      "Isobar": [],
+      "Initiative": [],
+      "Wavemaker": [],
+      "EssenceMediacom": [],
+      "OMD Worldwide": [],
+      "PHD Media": [],
+      "Horizon Media": [],
+      "Starcom": [],
+      "Zenith": [],
+      "Havas Media": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -2328,8 +2356,10 @@
     "https://www.decisionmarketing.co.uk/news/tesco-brings-festive-tv-ad-to-life-with-social-activity",
     "https://www.afaqs.com/news/advertising/platinum-love-bands-new-campaign-explores-love-in-arranged-marriages-12840796",
     "https://www.medianews4u.com/shemaroome-launches-band-baaja-binge-campaign-with-curated-gujarati-wedding-themed-content-line-up",
-    "https://grandesnomesdapropaganda.com.br/mercado-digital/john-deere-lanca-campanha-voce-e-john-deere-uma-so-forca"
+    "https://grandesnomesdapropaganda.com.br/mercado-digital/john-deere-lanca-campanha-voce-e-john-deere-uma-so-forca",
+    "https://www.marketingdive.com/news/campaign-trail-tiffany-tells-human-holiday-story-with-hollywood-talent/874914",
+    "https://www.marketingdive.com/news/coca-cola-pivots-from-divisive-ai-generated-ads-for-holiday-campaign/875215"
   ],
-  "ultima_rodada": "2026-11-25T12:38:20.968019+00:00",
+  "ultima_rodada": "2026-11-25T13:08:20.762702+00:00",
   "ultima_novidade": "2026-11-25T12:24:20.327978+00:00"
 }
