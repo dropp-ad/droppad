@@ -205,7 +205,7 @@ def ler_apify(todas, estado, placar):
     ags = fatia(todas, estado, "apify_buscas", APIFY_BUSCAS)
     total = 0
     st2 = None
-    for bloco in [ags[i:i + 20] for i in range(0, len(ags), 20)]:
+    for bloco in [ags[i:i + 10] for i in range(0, len(ags), 10)]:  # o ator aceita no máximo 10 empresas
         st2, itens = apify_rodar("harvestapi~linkedin-post-search",
                                  {"searchQueries": ["campaign", "campanha"], "authorsCompanies": [a["nome"] for a in bloco],
                                   "maxPosts": APIFY_POR_BUSCA, "postedLimit": "week", "sortBy": "date"},
@@ -225,7 +225,7 @@ def ler_apify(todas, estado, placar):
             out.append(apify_item(it, "apify", "funcionario", a))
     placar["citacoes"] = {"http": st2, "buscas": len(ags), "posts": total}
     placar["status"] = "ok"
-    placar["custo_usd"] = round((placar["empresas"].get("posts", 0) + total) * 0.002, 2)
+    placar["custo_usd"] = round((placar["empresas"].get("posts", 0) + total) * 0.0028, 2)
     return out
 
 
@@ -290,6 +290,74 @@ def ler_coresignal(todas, estado, placar):
 
 
 # ---------------------------------------------------------------- filtro (o mesmo do Instagram)
+_MARCAS = None
+
+
+def marcas_conhecidas():
+    """Marcas que já estão no site (chave → nome), para reconhecer marca em hashtag ou no texto."""
+    global _MARCAS
+    if _MARCAS is None:
+        _MARCAS = {}
+        for c in A.ler_json(A.CAMP, []):
+            m = c.get("brand", "")
+            k = A.chave(m)
+            if len(k) >= 4 and A.marca_ok(m):
+                _MARCAS.setdefault(k, m)
+    return _MARCAS
+
+
+MARCA_LI = [  # "A Mercedes-Benz Trucks celebra", "lançamento de Gloss Absolu", "a campanha da Heinz"
+    re.compile(r"(?:^|(?<=\s))(?:A|O|The)\s+" + A._NOME + r"\s+(?:celebra|lança|lançou|apresenta|estreia|launches|unveils|celebrates)\b"),
+    re.compile(r"\b(?:lançamento|lancamento|launch|estreia)\s+(?:d[aoe]s?|of|for)\s+(?:nova\s+|novo\s+|linha\s+)?" + A._NOME),
+    re.compile(r"\b(?:campanha|campaign|filme|film|ação|ativação|activation)\s+(?:\S+\s+){0,6}?(?:para|pra|for|d[aoe]s?)\s+(?:a\s+|o\s+|the\s+)?" + A._NOME),
+]
+
+
+NAO_LI = re.compile(r"\b(finalista|finalist|indicad[ao]s?|nominated|vote|votar|vota[çc][ãa]o|destaque no|case study)\b", re.I)
+
+
+def campanha_por_marca(p, a, conta, falso):
+    """Segunda chance para posts do LinkedIn que falam de campanha mas não têm a marca num formato que o
+    filtro do Instagram reconhece: procura a marca nas hashtags (#Kerastase) e em frases de lançamento."""
+    texto = p["texto"]
+    inicio = A.limpar(A.HASHTAG.sub(" ", texto))[:600]
+    if not A.FORTE.search(texto[:800]) and not re.search(r"\b(lançamento|launch|estreia|instalação|installation)\b", inicio, re.I):
+        return None
+    if A.EXCLUI.search(inicio[:300]) or A.INSTITUCIONAL.search(inicio[:300]) or A.ENTREVISTA.search(inicio[:400]):
+        return None
+    if NAO_LI.search(inicio[:400]):
+        return None
+    ag = A.chave(a["nome"])
+    conhecidas = marcas_conhecidas()
+    marca = ""
+    for h in re.findall(r"#([\wÀ-ÿ]{3,40})", texto):
+        k = A.chave(h)
+        if k in conhecidas and not k.startswith(ag) and not ag.startswith(k):
+            marca = conhecidas[k]
+            break
+    if not marca:
+        for rx in MARCA_LI:
+            m = rx.search(inicio)
+            mk = A.marca_ok(m.group(1).rstrip(".,")) if m else ""
+            if mk and A.chave(mk) != ag:
+                marca = mk
+                break
+    if not marca:
+        return None
+    data = A.data_de(falso["timestamp"])
+    if not data or data < DESDE:
+        return None
+    linhas = [A.limpar(x) for x in A.HASHTAG.sub(" ", texto).splitlines() if A.limpar(x).strip(" .·-—|")]
+    titulo = (linhas[0] if linhas else marca)[:140]
+    q = re.search(r"\b(?:campanha|campaign|campaña|filme|film|projeto|project)\s+[“\"«]([^”\"»]{3,70})[”\"»]", inicio, re.I)
+    if q:
+        titulo = q.group(1).strip()  # o nome da campanha entre aspas é o melhor título
+    return {"id": "%s-%s-%s" % (data, A.slug(marca, 20), A.slug(titulo, 36)), "date": data, "brand": marca,
+            "title": titulo, "agency": a["nome"], "source": "LinkedIn · " + a["nome"], "url": p["url"],
+            "region": a["regiao"], "cc": a["cc"], "summary": A.primeira_frase(inicio),
+            "addedAt": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")}
+
+
 def vira_campanha(p):
     a = p["agencia"]
     if not a or not p["texto"] or not p["data"] or p["data"][:10] < DESDE:
@@ -298,12 +366,14 @@ def vira_campanha(p):
              "timestamp": p["data"] + ("" if p["data"].endswith("Z") else "Z"),
              "media_type": "VIDEO" if p["video"] else "IMAGE"}
     conta = {"usuario": a["slugs"][0], "nome": a["nome"], "regiao": a["regiao"], "cc": a["cc"], "agencia": a["nome"]}
-    c = A.post_para_campanha(falso, conta, DESDE)
+    c = campanha_por_marca(p, a, conta, falso) or A.post_para_campanha(falso, conta, DESDE)
     if not c:
         return None
     # LinkedIn tem muito vídeo institucional: aqui exige palavra de campanha mesmo com vídeo,
     # e descarta "marca" que é data comemorativa (Thanksgiving, Natal...)
-    if not A.FORTE.search(p["texto"][:600]) or A.INSTITUCIONAL.search(c["brand"]):
+    if not A.FORTE.search(p["texto"][:600]) and not re.search(r"\b(lançamento|launch|estreia)\b", p["texto"][:600], re.I):
+        return None
+    if A.INSTITUCIONAL.search(c["brand"]) or NAO_LI.search(p["texto"][:400]):
         return None
     # o site não embute post do LinkedIn: entra como card, com a imagem do post e o link para ele
     c["source"] = "LinkedIn · " + a["nome"]
