@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 23:40:48 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 23:51:01 GMT"
+      "mod": "Wed, 25 Nov 2026 23:51:40 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"13f6c8d59eb497e051834e97a59c54d2\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 23:51:02 GMT"
+      "mod": "Wed, 25 Nov 2026 23:52:01 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 23:50:39 GMT"
+      "mod": "Wed, 25 Nov 2026 23:51:40 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 144,
+  "yt_pos": 174,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -936,10 +936,11 @@
     },
     "tentadas": {
       "Lukas Lindemann Rosinski": [
-        "lukaslindemannrosinski"
+        "lukaslindemannrosinski",
+        "lukaslindemannrosinskiagency"
       ]
     },
-    "pos": 964,
+    "pos": 965,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1249,7 +1250,7 @@
       "Antoni",
       "Kolle Rebbe"
     ],
-    "rodadas": 1847,
+    "rodadas": 1848,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2994,6 +2995,6 @@
     "https://campaignbrief.com/james-hopkins-make-ten-great-ads",
     "https://www.afaqs.com/news/digital/linkedin-wants-to-make-ai-work-harder-for-advertisers-not-just-algorithms-12841308"
   ],
-  "ultima_rodada": "2026-11-25T23:50:58.182370+00:00",
+  "ultima_rodada": "2026-11-25T23:51:58.145689+00:00",
   "ultima_novidade": "2026-11-25T23:50:58.182370+00:00"
 }
