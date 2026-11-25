@@ -38,7 +38,7 @@ TZ = ZoneInfo("America/Sao_Paulo")
 ARQUIVO_INICIO = "2020-11-17"   # 6 anos de arquivo (era 2025-11-17; ampliado em nov/2026)
 JANELA_DIAS = 10          # no modo normal, aceita campanhas de até 10 dias atrás
 MAX_MATERIAS = 300        # matérias abertas por execução (para achar filmes)
-MAX_NOVAS = 150           # campanhas novas por execução
+MAX_NOVAS = 300           # campanhas novas por execução (= MAX_MATERIAS, para nenhuma matéria aberta ficar sem análise)
 PAGINAS_ARQUIVO = 4       # páginas antigas por feed em cada execução
 MES_INICIO_ARQUIVO_MES = "2025-11"  # o arquivo por mês desce daqui até ARQUIVO_INICIO
 PAGINAS_POR_MES = 6       # no máximo 60 matérias por mês por fonte (as de campanha passam no filtro)
@@ -1011,12 +1011,14 @@ def main():
 
     todas_fontes = fontes["feeds"] + fontes.get("descobertas", []) + fontes_dos_sites(fontes, estado)
     candidatos = []  # (item, fonte)
+    # matérias antigas (do arquivo) já abertas que não viraram campanha: não abre de novo
+    descartadas = set(estado.setdefault("descartadas", [])) if not RAPIDO else set()
 
     def considerar(it, fonte, minimo):
         if not (minimo <= it["data"] <= HOJE.isoformat()):
             return
         u = it["link"].split("?")[0].rstrip("/")
-        if u in urls or u in vistos_vigia:
+        if u in urls or u in vistos_vigia or u in descartadas:
             return
         if not parece_campanha(it["titulo"], "", fonte.get("so_campanhas")):
             return
@@ -1156,7 +1158,15 @@ def main():
         vistos.update({u, k})
         fila.append((it, f))
     log("Candidatos a campanha:", len(fila))
-    fila = fila[:MATERIAS_RAPIDO if RAPIDO else MAX_MATERIAS]
+    if RAPIDO:
+        fila = fila[:MATERIAS_RAPIDO]
+    else:
+        # as recentes primeiro, mas sempre sobra espaço para o arquivo antigo andar
+        recentes = [x for x in fila if x[0]["data"] >= inicio_normal]
+        antigas = [x for x in fila if x[0]["data"] < inicio_normal]
+        n_rec = min(len(recentes), MAX_MATERIAS - min(len(antigas), MAX_MATERIAS // 2))
+        fila = recentes[:n_rec] + antigas[:MAX_MATERIAS - n_rec]
+    abertas_antigas = [it["link"].split("?")[0].rstrip("/") for it, _ in fila if it["data"] < inicio_normal]
     if RAPIDO:
         # matéria aberta uma vez não é aberta de novo a cada minuto (entrando ou não no site)
         for it, _ in fila:
@@ -1292,6 +1302,9 @@ def main():
             vigia["ultima_novidade"] = AGORA.isoformat()
         salvar_json(VIGIA, vigia)
     else:
+        entrou = {c["url"].split("?")[0].rstrip("/") for c in novas}
+        descartadas.update(u for u in abertas_antigas if u not in entrou)
+        estado["descartadas"] = sorted(descartadas)[-30000:]
         estado["bloqueados_yt"] = sorted(bloqueados)
         estado["ultima_execucao"] = AGORA.isoformat()
         estado["ultimas_novas"] = len(novas)
