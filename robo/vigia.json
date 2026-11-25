@@ -4,27 +4,27 @@
       "etag": "W/\"5ee6-klLQNjezr/3ppwUJOpbS1V1ylT8\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"63c1465aa508758bd7c66d4d481c2aa0\"",
-      "mod": "Wed, 25 Nov 2026 18:15:40 GMT"
+      "etag": "\"66a83bb30b7162b170fda2487a4fbb29\"",
+      "mod": "Wed, 25 Nov 2026 18:20:01 GMT"
     },
     "https://creativosbr.com.br/feed/": {
-      "etag": "W/\"c813b035c614aef1f2944d35e3b8e3ce\"",
-      "mod": "Wed, 25 Nov 2026 17:55:03 GMT"
+      "etag": "W/\"269a5f48b20db806003efdb4c4997235\"",
+      "mod": "Wed, 25 Nov 2026 18:22:27 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
       "etag": "\"28c6c27c625fb20bc39246c7473b4303\"",
       "mod": "Wed, 25 Nov 2026 18:05:50 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 14:19:33 GMT"
+      "mod": "Wed, 25 Nov 2026 18:19:34 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"1704207f0553cbc1d0df2392bdae1273\"",
       "mod": "Wed, 25 Nov 2026 16:03:46 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"e516ad4102a94c9a27ca4e6bc3d7ac6d\"",
-      "mod": "Wed, 25 Nov 2026 12:21:25 GMT"
+      "etag": "\"e6cc771645d5cef6f73bc44d34ac1f44\"",
+      "mod": "Wed, 25 Nov 2026 18:21:31 GMT"
     },
     "https://www.marketingdive.com/feeds/news/": {
       "mod": "Wed, 25 Nov 2026 15:46:00 GMT"
@@ -45,19 +45,19 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"16a30595d7205887184a3041c60fc759\"",
-      "mod": "Wed, 25 Nov 2026 18:00:31 GMT"
+      "etag": "W/\"8cc36d9e36c2742b837df6f30dec20f3\"",
+      "mod": "Wed, 25 Nov 2026 18:22:33 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 18:18:36 GMT"
+      "mod": "Wed, 25 Nov 2026 18:22:49 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
       "mod": "Wed, 25 Nov 2026 06:55:22 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795630682-gzip\"",
-      "mod": "Wed, 25 Nov 2026 18:18:02 GMT"
+      "etag": "W/\"1795630733-gzip\"",
+      "mod": "Wed, 25 Nov 2026 18:18:53 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 18:18:38 GMT"
+      "mod": "Wed, 25 Nov 2026 18:23:39 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -139,8 +139,8 @@
       "mod": "Wed, 25 Nov 2026 18:15:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
-      "etag": "\"208824d69335d5a5e61cda24d9069fed\"",
-      "mod": "Wed, 25 Nov 2026 18:00:12 GMT"
+      "etag": "\"67e0a8d8860bfd25510cf11477f5bc87\"",
+      "mod": "Wed, 25 Nov 2026 18:19:23 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
       "etag": "\"92df8018d932580ddbc55b3c2916a201\"",
@@ -197,10 +197,10 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 18:18:38 GMT"
+      "mod": "Wed, 25 Nov 2026 18:23:39 GMT"
     }
   },
-  "yt_pos": 93,
+  "yt_pos": 77,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -734,18 +734,17 @@
       "mc Group": "",
       "Audiencly": "",
       "Northfolk": "northfolkagency",
-      "Sideways8": ""
+      "Sideways8": "",
+      "Jumpfactor": "",
+      "Mention": ""
     },
     "tentadas": {
-      "Mention": [
-        "mention",
-        "mentionagency"
-      ],
-      "Jumpfactor": [
-        "jumpfactor"
+      "HypeAuditor": [
+        "hypeauditor",
+        "hypeauditoragency"
       ]
     },
-    "pos": 808,
+    "pos": 810,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -975,9 +974,10 @@
       "mc Group",
       "Audiencly",
       "Sideways8",
-      "Jumpfactor"
+      "Jumpfactor",
+      "Mention"
     ],
-    "rodadas": 1534,
+    "rodadas": 1539,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1895,7 +1895,8 @@
       "Sideways8": [],
       "Northfolk": [],
       "Jumpfactor": [],
-      "Mention": []
+      "Mention": [],
+      "HypeAuditor": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -2615,8 +2616,10 @@
     "https://roastbrief.com.mx/2026/11/chatgpt-rescata-la-agenda-de-una-mama-despistada-en-el-nuevo-comercial-de-openai",
     "https://www.merca20.com/ford-lleva-sus-autos-mas-reconocidos-en-gta-vi-a-una-campana-dirigida-a-gamers",
     "https://www.merca20.com/instagram-revela-que-no-escucha-tus-conversaciones-para-mostrar-anuncios-asegura-adam-mosseri",
-    "https://nossomeio.com.br/elo-anuncia-sandy-e-junior-como-embaixadores-e-lanca-campanha-com-a-dupla"
+    "https://nossomeio.com.br/elo-anuncia-sandy-e-junior-como-embaixadores-e-lanca-campanha-com-a-dupla",
+    "https://propmark.com.br/anunciantes/campari-reune-seis-personalidades-em-campanha-criada-pela-dpz",
+    "https://propmark.com.br/anunciantes/elo-anuncia-patrocinio-da-turne-de-sandy-e-junior-em-2027-com-campanha-da-almapbbdo"
   ],
-  "ultima_rodada": "2026-11-25T18:18:33.679029+00:00",
-  "ultima_novidade": "2026-11-25T14:59:33.681365+00:00"
+  "ultima_rodada": "2026-11-25T18:23:34.255939+00:00",
+  "ultima_novidade": "2026-11-25T18:23:34.255939+00:00"
 }
