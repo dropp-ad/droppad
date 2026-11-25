@@ -56,7 +56,7 @@ NOVIDADES = os.path.join(RAIZ, "novidades.json")
 CANAIS_POR_MINUTO = 30    # canais de YouTube lidos por rodada no modo rápido (todos a cada ~5 min)
 MATERIAS_RAPIDO = 40      # matérias abertas por rodada no modo rápido
 MAX_VISTOS = 4000
-UA = "Mozilla/5.0 (compatible; ADDropBot/1.0; +https://github.com/pedrorosas/estreou-hoje)"
+UA = "Mozilla/5.0 (compatible; ADDropBot/1.0; +https://github.com/pedrorosas/dropad)"
 
 AGORA = dt.datetime.now(dt.timezone.utc)
 HOJE = AGORA.astimezone(TZ).date()
