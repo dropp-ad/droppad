@@ -7,6 +7,11 @@ name: LinkedIn – teste Apify x Coresignal
 # Para desligar o teste: Actions → este workflow → ⋯ → Disable workflow.
 on:
   workflow_dispatch:
+    inputs:
+      so_midia:
+        description: "Só procurar filme/imagem para as campanhas do LinkedIn já publicadas (não lê o LinkedIn)"
+        type: boolean
+        default: false
   schedule:
     - cron: "13 11,23 * * *"
 
@@ -34,16 +39,22 @@ jobs:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           CORESIGNAL_TOKEN: ${{ secrets.CORESIGNAL_TOKEN }}
           GH_TOKEN: ${{ github.token }}
+          SO_MIDIA: ${{ inputs.so_midia && '1' || '' }}
         run: |
           git config user.name "droppad robô"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          python robo/linkedin_teste.py
+          if [ -n "$SO_MIDIA" ]; then
+            echo "[]" > /tmp/linkedin_novas.json
+          else
+            python robo/linkedin_teste.py
+          fi
           cp robo/linkedin_teste.json /tmp/linkedin_teste.json
           for tentativa in 1 2 3 4 5; do
             git fetch -q origin main
             git reset -q --hard origin/main
             cp /tmp/linkedin_teste.json robo/linkedin_teste.json
             python robo/linkedin_teste.py --publicar /tmp/linkedin_novas.json
+            cp robo/linkedin_teste.json /tmp/linkedin_teste.json  # guarda as tentativas de mídia para a próxima volta
             git add robo/linkedin_teste.json campaigns.json novidades.json
             if git diff --cached --quiet; then
               echo "Nada novo."

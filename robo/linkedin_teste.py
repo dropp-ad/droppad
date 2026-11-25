@@ -384,6 +384,89 @@ def vira_campanha(p):
             "video": bool(p["video"]), "fonte": p["fonte"], "tipo": p["tipo"], "campanha": c}
 
 
+# ---------------------------------------------------------------- filme ou imagem em outros sites
+YT_ITEM = re.compile(r'"videoRenderer":\{"videoId":"([\w-]{11})".{0,1500}?"title":\{"runs":\[\{"text":"((?:[^"\\]|\\.)*)"'
+                     r'.{0,3000}?"ownerText":\{"runs":\[\{"text":"((?:[^"\\]|\\.)*)"', re.S)
+
+
+def _palavras(t):
+    return [w for w in re.findall(r"[a-z0-9]{5,}", A.sem_acento(t).lower()) if w not in
+            ("campanha", "campaign", "lancamento", "launch", "brasil", "agencia", "agency", "nossa", "nosso", "nova", "novo")]
+
+
+def buscar_youtube(c):
+    """Procura o filme no YouTube (busca do próprio site, vídeos do último mês). Só aceita vídeo cujo título ou
+    canal tenha a marca E mais um sinal da campanha (agência, palavra do título ou canal oficial da marca)."""
+    marca, ag = A.chave(c["brand"]), A.chave(c.get("agency", ""))
+    chaves_titulo = _palavras(c["title"])
+    for q in ("%s %s" % (c["brand"], c["title"][:60]), "%s %s" % (c["brand"], c.get("agency", ""))):
+        url = "https://www.youtube.com/results?" + urllib.parse.urlencode({"search_query": q, "sp": "EgIIBA=="})
+        try:
+            pag = A.baixar(url, timeout=20)
+        except Exception as e:  # noqa: BLE001
+            log("  youtube falhou:", e)
+            return []
+        for vid, titulo, canal in YT_ITEM.findall(pag or "")[:8]:
+            try:
+                titulo, canal = json.loads('"%s"' % titulo), json.loads('"%s"' % canal)
+            except ValueError:
+                pass
+            tudo = A.chave(titulo + " " + canal)
+            if marca not in tudo:
+                continue
+            sinal = (ag and ag in tudo) or marca in A.chave(canal) or any(w in A.sem_acento(titulo).lower() for w in chaves_titulo)
+            if sinal:
+                log("  + youtube:", vid, "|", titulo, "|", canal)
+                return [vid]
+    return []
+
+
+def buscar_noticias(c):
+    """Matérias sobre a campanha (Bing News, última semana): filme embutido e foto de capa."""
+    marca, ag = A.chave(c["brand"]), A.chave(c.get("agency", ""))
+    try:
+        itens = A.buscar_bing('"%s" %s' % (c["brand"], c.get("agency", "")))
+    except Exception as e:  # noqa: BLE001
+        log("  bing falhou:", e)
+        return [], "", ""
+    yts, video, img = [], "", ""
+    for it in itens[:5]:
+        if marca not in A.chave(it.get("titulo", "") + " " + it.get("resumo", "")):
+            continue
+        try:
+            pag = A.baixar(it["link"], timeout=20)
+        except Exception:  # noqa: BLE001
+            continue
+        if ag and ag not in A.chave(A.limpar(pag)[:60000]):
+            continue  # a matéria tem que falar da agência também (senão é outra campanha da marca)
+        miolo = A.corpo_da_materia(pag)
+        y, v = A.filmes_de(miolo)
+        img = img or A.imagem_de(pag, it["link"])
+        if y or v:
+            log("  + matéria com filme:", it["link"])
+            return y, v, img
+        yts = yts or y
+    return yts, video, img
+
+
+def completar_midia(c):
+    """Campanha vinda do LinkedIn: o post não toca no site, então procura o filme (YouTube, matérias) e uma
+    imagem melhor. Devolve True se achou algo."""
+    if c.get("yt") or c.get("video"):
+        return False
+    yts = buscar_youtube(c)
+    video, img = "", ""
+    if not yts:
+        yts, video, img = buscar_noticias(c)
+    if yts:
+        c["yt"] = yts[:2]
+    elif video:
+        c["video"] = video
+    if img and not c.get("image"):
+        c["image"] = img
+    return bool(yts or video or img)
+
+
 def publicar(caminho):
     """Junta as campanhas achadas (arquivo gerado pela rodada) em campaigns.json, sem repetir.
     Roda depois do git reset do workflow, sobre a versão mais nova do site."""
@@ -396,6 +479,21 @@ def publicar(caminho):
     ids = {c.get("id") for c in camp}
     chaves = {(A.chave(c.get("brand", "")), A.chave(c.get("title", ""))) for c in camp}
     marca_dia = {(A.chave(c.get("brand", "")), c.get("date")) for c in camp}
+    for c in novas:
+        completar_midia(c)
+    # LinkedIn já publicadas sem filme nos últimos 10 dias: tenta de novo (até 3 vezes cada)
+    hist = A.ler_json(SAIDA, {})
+    tent = hist.setdefault("estado", {}).setdefault("midia_tentativas", {})
+    limite = (AGORA - dt.timedelta(days=10)).date().isoformat()
+    mexeu = False
+    for c in camp:
+        if (c.get("source", "").startswith("LinkedIn") and c.get("date", "") >= limite and not c.get("yt")
+                and not c.get("video") and tent.get(c["id"], 0) < 3):
+            tent[c["id"]] = tent.get(c["id"], 0) + 1
+            if completar_midia(c):
+                mexeu = True
+                log("  + mídia nova para:", c["brand"], "|", c["title"][:60])
+    A.salvar_json(SAIDA, hist)
     entraram = []
     for c in novas:
         u = c["url"].split("?")[0].rstrip("/")
@@ -410,7 +508,7 @@ def publicar(caminho):
         ids.add(c["id"])
         chaves.add(k)
         marca_dia.add((k[0], c["date"]))
-    if entraram:
+    if entraram or mexeu:
         camp.sort(key=lambda c: (c.get("date", ""), c.get("addedAt", "")), reverse=True)
         A.salvar_json(A.CAMP, camp)
         A.salvar_json(A.NOVIDADES, {"atualizado": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ"), "total": len(camp),
