@@ -1388,6 +1388,11 @@
         moreIO = new IntersectionObserver(function (es) { if (es[0].isIntersecting) renderMore(); }, { rootMargin: "300% 0px" });
         moreIO.observe(s);
       }
+    } else if (antigo.anos.length) {
+      var w = el("div", "more");
+      w.id = "more";
+      feed.appendChild(w);
+      carregarProximoAno().then(function () { filtrarLista(); renderCal(); renderMore(); });
     } else {
       feed.appendChild(el("p", "end", state.list.length ? "Você chegou ao início do arquivo." :
         state.region === "home" ? "Ainda não há campanhas de " + state.home.label + " no arquivo. Veja o Mundo." : "Nenhuma campanha com esse filtro."));
@@ -1401,6 +1406,57 @@
     // a aba sempre leva o nome do país; se ainda não houver campanha de lá, mostra a região dele
     state.home = { cc: cc, label: countryName(cc), reg: reg };
   }
+  /* ---------- Arquivo antigo: anos anteriores ao feed.json, baixados sob demanda ---------- */
+  var antigo = { anos: [], min: "" }; // anos que ainda não foram baixados, do mais novo ao mais velho
+  var baixandoAno = null;
+  function carregarIndice() {
+    return fetch("antigo/indice.json", { cache: "no-cache" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) {
+        if (j && Array.isArray(j.anos)) {
+          antigo.anos = j.anos.map(str).filter(function (a) { return /^\d{4}$/.test(a); }).sort().reverse();
+          antigo.min = isDay(str(j.min)) ? str(j.min) : "";
+        }
+      })
+      .catch(function () { /* sem arquivo antigo */ });
+  }
+  function carregarProximoAno() {
+    if (baixandoAno) return baixandoAno;
+    if (!antigo.anos.length) return Promise.resolve(false);
+    var ano = antigo.anos.shift();
+    baixandoAno = fetch("antigo/" + ano + ".json")
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (raw) {
+        var ids = {};
+        state.items.forEach(function (c) { ids[c.id] = 1; });
+        state.items = state.items.concat(normalize(raw).filter(function (c) { return !ids[c.id]; }));
+        return true;
+      })
+      .catch(function () { return false; })
+      .then(function (v) { baixandoAno = null; return v; });
+    return baixandoAno;
+  }
+  function diaMaisAntigo() {
+    var m = "";
+    state.items.forEach(function (c) { if (!m || c.date < m) m = c.date; });
+    return m;
+  }
+  // baixa os anos necessários para a timeline poder começar no dia escolhido
+  function carregarAte(dia) {
+    if (!dia || !antigo.anos.length) return Promise.resolve();
+    var m = diaMaisAntigo();
+    if (m && dia >= m) return Promise.resolve();
+    return carregarProximoAno().then(function (ok) { if (ok || antigo.anos.length) return carregarAte(dia); });
+  }
+  function filtrarLista() {
+    state.list = state.items.filter(function (c) {
+      if (state.upTo && c.date > state.upTo) return false;
+      // Mundo = tudo; a outra aba é o país de quem entra
+      return state.region !== "home" || homeMatch(c);
+    });
+    state.perDay = {};
+    state.list.forEach(function (c) { c._k = state.perDay[c.date] || 0; state.perDay[c.date] = c._k + 1; });
+  }
   function renderAll(skipMore) {
     closeMenu();
     deactivate();
@@ -1412,13 +1468,7 @@
     fd.textContent = "";
     if (!REDUCE) { fd.classList.add("swap"); requestAnimationFrame(function () { requestAnimationFrame(function () { fd.classList.remove("swap"); }); }); }
     state.shown = 0;
-    state.list = state.items.filter(function (c) {
-      if (state.upTo && c.date > state.upTo) return false;
-      // Mundo = tudo; a outra aba é o país de quem entra
-      return state.region !== "home" || homeMatch(c);
-    });
-    state.perDay = {};
-    state.list.forEach(function (c) { c._k = state.perDay[c.date] || 0; state.perDay[c.date] = c._k + 1; });
+    filtrarLista();
     renderChips();
     renderCal();
     if (!skipMore) renderMore();
@@ -1535,7 +1585,7 @@
     var inp = $("cal-in");
     if (!inp) return;
     var datas = state.items.map(function (c) { return c.date; }).sort();
-    if (datas.length) { inp.min = datas[0]; inp.max = datas[datas.length - 1]; }
+    if (datas.length) { inp.min = antigo.min && antigo.min < datas[0] ? antigo.min : datas[0]; inp.max = datas[datas.length - 1]; }
     inp.value = state.upTo || "";
     $("cal-txt").textContent = state.upTo ? (+state.upTo.slice(8, 10)) + " " + MESES[+state.upTo.slice(5, 7) - 1].toLowerCase() : "Hoje";
     $("cal").classList.toggle("on", !!state.upTo);
@@ -1549,7 +1599,7 @@
       if (inp.value && !/^\d{4}-\d{2}-\d{2}$/.test(inp.value)) return;
       state.upTo = inp.value || "";
       window.scrollTo(0, 0);
-      renderAll();
+      carregarAte(state.upTo).then(function () { renderAll(); });
     });
     $("cal-x").addEventListener("click", function () { state.upTo = ""; window.scrollTo(0, 0); renderAll(); });
   })();
@@ -1654,7 +1704,7 @@
     return get("feed.json").catch(function () { return get("campaigns.json"); });
   }
   // dados e país de quem entra chegam ao mesmo tempo
-  Promise.all([loadData("no-cache"), detectCountry()])
+  Promise.all([loadData("no-cache"), detectCountry(), carregarIndice()])
     .then(function (res) {
       state.items = normalize(res[0]);
       setHome(res[1]);

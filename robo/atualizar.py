@@ -35,11 +35,11 @@ CAMP = os.path.join(RAIZ, "campaigns.json")
 FONTES = os.path.join(RAIZ, "robo", "fontes.json")
 ESTADO = os.path.join(RAIZ, "robo", "estado.json")
 TZ = ZoneInfo("America/Sao_Paulo")
-ARQUIVO_INICIO = "2025-11-17"
+ARQUIVO_INICIO = "2020-11-17"   # 6 anos de arquivo (era 2025-11-17; ampliado em nov/2026)
 JANELA_DIAS = 10          # no modo normal, aceita campanhas de até 10 dias atrás
 MAX_MATERIAS = 300        # matérias abertas por execução (para achar filmes)
 MAX_NOVAS = 150           # campanhas novas por execução
-PAGINAS_ARQUIVO = 2       # páginas antigas por feed em cada execução
+PAGINAS_ARQUIVO = 4       # páginas antigas por feed em cada execução
 BUSCAS_POR_RODADA = 6
 TESTES_DESCOBERTA = 8     # sites novos testados por rodada
 MAX_POR_FONTE_DIA = 5     # para nenhuma fonte dominar o dia
@@ -986,6 +986,11 @@ def main():
     estado.setdefault("testados", {})
     estado.setdefault("bloqueados_yt", [])
     estado.setdefault("arquivo", {})
+    if estado.get("arquivo_inicio") != ARQUIVO_INICIO:
+        # o começo do arquivo mudou: os feeds que tinham "acabado" voltam a descer páginas de onde pararam
+        for st in estado["arquivo"].values():
+            st["fim"] = False
+        estado["arquivo_inicio"] = ARQUIVO_INICIO
     camp = ler_json(CAMP, [])
     vigia = ler_json(VIGIA, {}) if RAPIDO else None
     lista_vistos = list(vigia.get("vistos", [])) if RAPIDO else []

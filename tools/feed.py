@@ -5,6 +5,7 @@
   busca só quando o post aparece (assim o feed.json continua leve).
 Uso: python tools/feed.py campaigns.json _site
 """
+import datetime as dt
 import json
 import os
 import re
@@ -17,6 +18,8 @@ LIXO = re.compile(r"apareceu primeiro em|appeared first on|se publicó primero e
 
 CAMPOS = ("id", "date", "brand", "title", "agency", "source", "url", "region", "cc", "summary",
           "frase", "yt", "video", "image", "addedAt", "idea", "credits", "creatives", "production", "director")
+
+CORTE_DIAS = 400  # o que fica no feed.json; o resto vai para antigo/
 
 
 def tem_filme(x):
@@ -45,8 +48,25 @@ def main(src, dst):
                 json.dump({"story": story[:6]}, f, ensure_ascii=False, separators=(",", ":"))
             item["st"] = 1
         feed.append(item)
+    # o site abre só com o último ano (feed.json leve); os anos anteriores ficam em antigo/AAAA.json e
+    # são baixados quando a pessoa volta no calendário ou chega ao fim da timeline
+    corte = (dt.date.today() - dt.timedelta(days=CORTE_DIAS)).isoformat()
+    recente = [x for x in feed if str(x.get("date", "")) >= corte]
+    por_ano = {}
+    for x in feed:
+        d = str(x.get("date", ""))
+        if d < corte and len(d) >= 4:
+            por_ano.setdefault(d[:4], []).append(x)
     with open(os.path.join(dst, "feed.json"), "w", encoding="utf-8") as f:
-        json.dump(feed, f, ensure_ascii=False, separators=(",", ":"))
+        json.dump(recente, f, ensure_ascii=False, separators=(",", ":"))
+    pasta_ant = os.path.join(dst, "antigo")
+    os.makedirs(pasta_ant, exist_ok=True)
+    for ano, itens in por_ano.items():
+        with open(os.path.join(pasta_ant, ano + ".json"), "w", encoding="utf-8") as f:
+            json.dump(itens, f, ensure_ascii=False, separators=(",", ":"))
+    datas = sorted(str(x.get("date", "")) for x in feed if x.get("date"))
+    with open(os.path.join(pasta_ant, "indice.json"), "w", encoding="utf-8") as f:
+        json.dump({"anos": sorted(por_ano, reverse=True), "min": datas[0] if datas else "", "corte": corte}, f)
 
 
 if __name__ == "__main__":
