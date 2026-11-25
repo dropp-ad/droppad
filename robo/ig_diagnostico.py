@@ -45,7 +45,9 @@ def motivo(p, nome):
 limite = (A.HOJE - dt.timedelta(days=DIAS)).isoformat()
 for u in CONTAS:
     itens, uso, existe = instagram.posts(u)
-    print("\n=== @%s (%s) uso %d%%" % (u, "ok" if existe else "NÃO EXISTE", uso))
+    datas = sorted((A.data_de(p.get("timestamp", "")) for p in itens), reverse=True)
+    print("\n=== @%s (%s) uso %d%% | %d posts lidos, mais recente: %s" % (u, "ok" if existe else "NÃO EXISTE", uso,
+                                                                       len(itens), datas[0] if datas else "-"))
     for p in itens:
         data = A.data_de(p.get("timestamp", ""))
         if data < limite:

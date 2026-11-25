@@ -800,6 +800,29 @@ def ler_instagram(fontes, vigia, dias=JANELA_DIAS):
     return out
 
 
+_NOME = r"([A-Z0-9À-Ý][\w&'’.\-À-ÿ]*(?:\s+(?:[A-Z0-9À-Ý&][\w&'’.\-À-ÿ]*|de|do|da|of)){0,3})"
+MARCA_IG = [
+    # "A DPZ criou para a Seguros Unimed", "criamos para Subway", "new work for Nike"
+    re.compile(r"\b(?:cri(?:ou|amos|ad[ao]s?)|fizemos|fez|desenvolve(?:u|mos)|assin(?:a|amos|ou)|produzi(?:u|mos)|"
+               r"lança(?:mos)?|lançou|created|made|crafted|launched|work|trabalho|projeto|project)\s+"
+               r"(?:para|pra|for|com|with|junto\s+(?:com|a))\s+(?:a\s+|o\s+|as\s+|os\s+|the\s+)?" + _NOME),
+    # "Na campanha da linha Honda City", "novo filme de Bauducco", "campaign for Heinz"
+    re.compile(r"\b(?:campanha|campaign|campaña|filme|film|spot|comercial|anúncio|ação|activation|ativação|case)\s+"
+               r"(?:nova\s+|novo\s+)?(?:d[aoe]s?|of|for|para|pra|del)\s+(?:linha\s+|marca\s+|nova\s+|novo\s+)?" + _NOME),
+    # "para O Boticário", "for Heinz" depois de aspas/título de trabalho
+    re.compile(r"[”\"’']\s*,?\s+(?:para|pra|for|de|da|do)\s+(?:a\s+|o\s+)?" + _NOME),
+]
+
+
+def marca_ig(texto):
+    for rx in MARCA_IG:
+        for m in rx.finditer(texto[:500]):
+            mk = marca_ok(m.group(1).rstrip(".,"))
+            if mk:
+                return mk
+    return ""
+
+
 def post_para_campanha(p, conta, limite):
     """Um post de Instagram vira campanha, ou None se não tiver cara de campanha."""
     legenda = p.get("caption") or ""
@@ -817,9 +840,9 @@ def post_para_campanha(p, conta, limite):
         return None
     if not FORTE.search(texto[:600]) and p.get("media_type") != "VIDEO":
         return None  # foto sem cara de campanha (bastidores, vagas, cultura da agência...)
-    marca = marca_de(titulo) or marca_de(texto[:300])
+    marca = marca_de(titulo) or marca_ig(texto) or marca_de(texto[:300])
     if not marca:
-        m = re.search(r"(?:for|para|pour|für|with|com|con|x)\s+@([\w.]{2,30})", texto, re.I)
+        m = re.search(r"(?:for|para|pour|für|with|com|con|x)\s+@?([a-z][\w]*\.[\w.]{2,30}|@[\w.]{2,30})", texto, re.I)
         marca = marca_ok(m.group(1).replace(".", " ").replace("_", " ").title()) if m else ""
     if not marca or chave(marca) == chave(conta["nome"]):
         return None
