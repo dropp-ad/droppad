@@ -21,7 +21,7 @@
   // Instagram e TikTok entram como filmes verticais, embutidos com o player deles.
   function socialOf(u) {
     var m = (u || "").match(/instagram\.com\/(p|reel|reels|tv)\/([\w-]+)/i);
-    if (m) return { kind: "ig", id: m[2], src: "https://www.instagram.com/" + (m[1].indexOf("reel") === 0 ? "reel" : m[1]) + "/" + m[2] + "/embed/" };
+    if (m) return { kind: "ig", id: m[2], reel: m[1].indexOf("reel") === 0, src: "https://www.instagram.com/" + (m[1].indexOf("reel") === 0 ? "reel" : m[1]) + "/" + m[2] + "/embed/?cr=1&v=14&wp=400" };
     m = (u || "").match(/tiktok\.com\/@[^/]+\/video\/(\d+)/i);
     if (m) return { kind: "tt", id: m[1], src: "https://www.tiktok.com/player/v1/" + m[1] + "?autoplay=1&muted=1&loop=1&controls=1&description=0&music_info=0" };
     return null;
@@ -235,11 +235,12 @@
 
   /* Instagram: o post inteiro (cabeçalho, filme e rodapé) entra reduzido no quadro 16:9, sem cortar.
      O embed avisa a própria altura por postMessage (MEASURE); até lá, vale uma altura típica. */
-  var IG_W = 400, IG_H = 760, igRO = "ResizeObserver" in window ? new ResizeObserver(function (es) { es.forEach(function (e) { scaleIG(e.target); }); }) : null;
+  var IG_W = 400, IG_H = 800, IG_H_REEL = 1010, igRO = "ResizeObserver" in window ? new ResizeObserver(function (es) { es.forEach(function (e) { scaleIG(e.target); }); }) : null;
   function scaleIG(media) {
     var box = media.querySelector(".igbox");
     if (!box) return;
-    var h = +box.dataset.h || IG_H, w = media.clientWidth, bh = media.clientHeight;
+    // até o Instagram avisar a altura: reel (9:16) é bem mais alto que post comum
+    var h = +box.dataset.h || (box.dataset.reel ? IG_H_REEL : IG_H), w = media.clientWidth, bh = media.clientHeight;
     if (!w || !bh) return;
     box.style.setProperty("--igh", h + "px");
     box.style.transform = "translate(-50%,-50%) scale(" + Math.min(1, bh / h, w / IG_W).toFixed(4) + ")";
@@ -273,6 +274,19 @@
     box.appendChild(el("h3", null, c.title));
     var body = el("div", "news-body");
     box.appendChild(body);
+    // começa mostrando pouco (umas 3 linhas); "Ver mais" abre o resto
+    var ver = el("button", "ver-mais", "Ver mais");
+    ver.type = "button";
+    ver.hidden = true;
+    ver.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var abrir = body.classList.contains("fechado");
+      if (abrir) { body.style.maxHeight = body.scrollHeight + "px"; body.classList.remove("fechado"); }
+      else { body.style.maxHeight = ""; body.classList.add("fechado"); }
+      ver.textContent = abrir ? "Ver menos" : "Ver mais";
+      ver.setAttribute("aria-expanded", abrir ? "true" : "false");
+    });
+    box.appendChild(ver);
     function fill(story) {
       var shown = fraseDe(c).slice(0, 60), total = 0;
       body.textContent = "";
@@ -281,8 +295,11 @@
         if (!t || t.slice(0, 60) === shown || LIXO.test(t)) return false;
         body.appendChild(el("p", null, t));
         total += t.length;
-        return body.children.length >= 4 || total > 900;
+        return body.children.length >= 6 || total > 1600;
       });
+      var longo = total > 260 || body.children.length > 1;
+      body.classList.toggle("fechado", longo);
+      ver.hidden = !longo;
     }
     fill(c.story);
     if (c.st && !body.children.length) {
@@ -397,6 +414,7 @@
       if (f0.kind === "ig" || f0.kind === "tt") {
         // post do Instagram/TikTok aparece direto, sem capa antes (carrega quando chega perto da tela)
         var box0 = el("div", f0.kind === "ig" ? "igbox" : null);
+        if (f0.reel) box0.dataset.reel = "1";
         var fr0 = el("iframe");
         fr0.src = f0.src;
         fr0.loading = "lazy";
@@ -1006,7 +1024,7 @@
       fr.setAttribute("allowfullscreen", "");
       fr.setAttribute("scrolling", "no");
       fr.title = c.brand + " no " + (f.kind === "ig" ? "Instagram" : "TikTok");
-      if (f.kind === "ig") { slot.className = "igbox"; fitIG(art._media); }
+      if (f.kind === "ig") { slot.className = "igbox"; if (f.reel) slot.dataset.reel = "1"; fitIG(art._media); }
       slot.appendChild(fr);
       fr.addEventListener("load", playing);
       setTimeout(playing, 2500);
@@ -1191,6 +1209,22 @@
     var n = a && nextPost(a);
     if (n) n.scrollIntoView({ block: "center", behavior: REDUCE ? "auto" : "smooth" });
   });
+
+  /* ---------- Botão de voltar ao topo: aparece depois do primeiro post ---------- */
+  (function () {
+    var b = el("button", "to-top");
+    b.type = "button";
+    b.setAttribute("aria-label", "Voltar ao topo");
+    b.title = "Voltar ao topo";
+    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5 12l7-7 7 7"/></svg>';
+    b.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: REDUCE ? "auto" : "smooth" }); });
+    document.body.appendChild(b);
+    var on = false;
+    window.addEventListener("scroll", function () {
+      var v = window.scrollY > window.innerHeight * 0.8;
+      if (v !== on) { on = v; b.classList.toggle("on", v); }
+    }, { passive: true });
+  })();
 
   /* ---------- Rolagem: topo some/volta, parallax leve (num só requestAnimationFrame) ---------- */
   (function () {
