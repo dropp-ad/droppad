@@ -31,15 +31,8 @@ def motivo(p, nome):
         return "parece entrevista: '%s'" % m.group(0)
     if not A.FORTE.search(texto[:600]) and p.get("media_type") != "VIDEO":
         return "foto sem palavra de campanha"
-    marca = A.marca_de(titulo) or A.marca_de(texto[:300])
-    if not marca:
-        mm = re.search(r"(?:for|para|pour|für|with|com|con|x)\s+@([\w.]{2,30})", texto, re.I)
-        marca = A.marca_ok(mm.group(1).replace(".", " ").replace("_", " ").title()) if mm else ""
-    if not marca:
-        return "não achou a marca"
-    if A.chave(marca) == A.chave(nome):
-        return "marca = a própria agência"
-    return "OK → " + marca
+    c = A.post_para_campanha(p, {"usuario": nome, "nome": nome}, "0000")
+    return ("OK → " + c["brand"]) if c else "não achou a marca (ou é a própria agência)"
 
 
 limite = (A.HOJE - dt.timedelta(days=DIAS)).isoformat()
