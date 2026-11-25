@@ -1,0 +1,442 @@
+{
+ "estado": {
+  "linkedin": {},
+  "slug": {
+   "Artplan": "ok",
+   "WMcCann": "ok",
+   "Ogilvy": "ok",
+   "AlmapBBDO": "ok",
+   "Droga5": "ok",
+   "TBWA\\Italia": "ok",
+   "Isle of Any": "ok",
+   "Special": "ok",
+   "Publicis Conseil": "ok",
+   "VML": "ok",
+   "Klick Health": "ok",
+   "FCB": "ok",
+   "Fallon": "ok",
+   "BigTime Creative Shop": "ok",
+   "VCCP": "ok",
+   "GUT Buenos Aires": "ok",
+   "Dentsu Creative": "ok",
+   "Code and Theory": "ok",
+   "ATTN:": "ok",
+   "MSQ Partners": "ok",
+   "JOAN Creative": "ok",
+   "Colle McVoy": "ok",
+   "alma": "ok",
+   "Silverside": "ok",
+   "PREACHER": "ok",
+   "72andSunny": "ok",
+   "Anomaly": "ok",
+   "Whalar": "ok",
+   "McKinney": "ok",
+   "Deutsch": "ok",
+   "Iverson": "ok",
+   "Flower Shop": "ok",
+   "Cape": "ok",
+   "Laughlin Constable": "ok",
+   "Corner Table Creative": "ok",
+   "BBDO Belgium": "ok",
+   "Accenture Song": "ok",
+   "Grey": "ok",
+   "Dept": "ok",
+   "AKQA": "ok",
+   "Buzzman": "ok",
+   "BETC": "ok",
+   "Fred & Farid": "ok",
+   "China": "ok",
+   "Uzina": "ok",
+   "N=5": "ok",
+   "Boys + Girls": "ok",
+   "Stendahls": "ok",
+   "SEK": "ok",
+   "thjnk Zürich": "ok",
+   "GMP+WEBSE": "ok",
+   "Tabasco": "ok",
+   "Mother": 1,
+   "Africa Creative": 1,
+   "DPZ": 1,
+   "GUT": 1,
+   "Wieden+Kennedy": 1,
+   "BBH": 1,
+   "adam&eveDDB": 1,
+   "Uncommon": 1,
+   "Publicis": 1,
+   "Leo Burnett": 1,
+   "TBWA": 1,
+   "Saatchi & Saatchi": 1,
+   "Johannes Leonardo": 1,
+   "Mischief": 1,
+   "LePub": 1,
+   "Rethink": 1,
+   "TBWA\\Media Arts Lab": 1,
+   "DAVID": 1,
+   "Motion Sickness": 1,
+   "WESAYHI": 1,
+   "DDB": 1,
+   "Serviceplan": 1,
+   "Bear Meets Eagle On Fire": 1,
+   "DM9": 1,
+   "L&C": 1,
+   "Known": 1,
+   "Mirimar": 1,
+   "IW Group": 1,
+   "Billion Dollar Boy": 1,
+   "McCann": 1,
+   "ACC": 1,
+   "Courage": 1,
+   "Sounds Fun": 1,
+   "LOLA MullenLowe": 1,
+   "Crispin": 1,
+   "the community": 1,
+   "Giant Spoon": 1,
+   "FIG": 1,
+   "Zulu Alpha Kilo": 1,
+   "Brains": 1,
+   "DNA&STONE": 1,
+   "Loop": 1,
+   "Goodby Silverstein & Partners": 1,
+   "BarkleyOKRP": 1,
+   "Callen": 1,
+   "Alto": 1,
+   "Conscious Minds": 1,
+   "Collectively": 1,
+   "Influential": 1,
+   "We Are Social": 1,
+   "Gale": 1,
+   "R/GA": 1,
+   "BBDO": 1,
+   "Uncommon Creative Studio": 1,
+   "Mother London": 1,
+   "BBH London": 1,
+   "Lucky Generals": 1,
+   "AMV BBDO": 1,
+   "TMW": 1,
+   "Marcel": 1,
+   "Rosa Paris": 1,
+   "Jung von Matt": 1,
+   "antoni": 1,
+   "Scholz & Friends": 1,
+   "HeimatTBWA": 1,
+   "&Rosàs": 1,
+   "Sra. Rushmore": 1,
+   "PS21": 1,
+   "DUDE": 1,
+   "We Are Social Italy": 1,
+   "FunnyHow": 1,
+   "Coming Soon": 1,
+   "180 Amsterdam": 1,
+   "Mortierbrigade": 1,
+   "Happiness Brussels": 1,
+   "The Public House": 1,
+   "JAM": 1,
+   "Forsman & Bodenfors": 1,
+   "Åkestam Holst": 1,
+   "&Co.": 1,
+   "Uncle Grey": 1,
+   "Robert/Boisen & Like-minded": 1,
+   "TRY": 1,
+   "POL": 1,
+   "SMFB": 1,
+   "hasan & partners": 1,
+   "NORD DDB": 1,
+   "Wirz": 1,
+   "180heartbeats + JUNG v MATT": 1,
+   "MUW Saatchi & Saatchi": 1,
+   "THIS IS LOCCO": 1,
+   "Mito": 1,
+   "Artificial Group": 1,
+   "Cohn & Jansen": 1,
+   "banda": 1,
+   "Milk": 1,
+   "New!": 1,
+   "age": 1
+  },
+  "pos": {
+   "apify_empresas": 150,
+   "apify_buscas": 60,
+   "coresignal": 150
+  },
+  "cs_filtro": {}
+ },
+ "rodadas": [
+  {
+   "quando": "2026-11-25T22:42:12Z",
+   "agencias_na_lista": 1021,
+   "apify": {
+    "empresas": {
+     "http": 201,
+     "paginas": 150,
+     "posts": 181,
+     "agencias_com_post": 52
+    },
+    "amostra": [
+     {
+      "type": "post",
+      "id": "7529239480923525120",
+      "linkedinUrl": "https://www.linkedin.com/posts/artplan_debora-moura-na-%C3%A9poca-neg%C3%B3cios-activity-7529239480923525120-P0WG",
+      "content": "Nossa head de Atração e D&I destaca a importância do diálogo para ampliar perspectivas e promover a equidade racial. \n \nNa entrevista à Época Negócios, ela mostra como essas conversas podem gerar impactos dentro e fora das organizações. \n \nConfira a entrevista completa: https://lnkd.in/gC9uQzEq",
+      "contentAttributes": [
+       {
+        "start": 271,
+        "length": 24,
+        "type": "TEXT_LINK",
+        "hyperlink": null,
+        "textLink": "https://lnkd.in/gC9uQzEq"
+       }
+      ],
+      "author": {
+       "id": "111024",
+       "universalName": "artplan",
+       "publicIdentifier": null,
+       "type": "company",
+       "name": "Artplan",
+       "linkedinUrl": "https://www.linkedin.com/company/artplan/posts",
+       "info": "101,966 followers",
+       "website": null,
+       "websiteLabel": null,
+       "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/C4D0BAQG0yczd4ek11Q/company-logo_400_400/company-logo_400_400/0/1635795058656/artplan_logo?e=1797465600&v=beta&t=Gth9dGvkJycdbdbmLNQnWSmSUpsmA5quRNw_EYlwJzI",
+        "width": 400,
+        "height": 400
+       },
+       "urn": "111024",
+       "companyId": "111024"
+      },
+      "postedAt": {
+       "timestamp": 1795110578757,
+       "date": "2026-11-19T17:49:38.757Z",
+       "postedAgoShort": "6d",
+       "postedAgoText": "6 days ago • Visible to anyone on or off LinkedIn"
+      },
+      "postImages": [],
+      "repostId": "7529239222675943424",
+      "socialContent": {
+       "hideShareAction": true,
+       "hideSendAction": true,
+       "trustInterventionBanner": null,
+       "shareUrl": "https://www.linkedin.com/posts/artplan_debora-moura-na-%C3%A9poca-neg%C3%B3cios-activity-7529239480923525120-P0WG?"
+      },
+      "comments": [],
+      "header": {
+       "text": null
+      },
+      "entityId": "7529239480923525120",
+      "shareUrn": "urn:li:ugcPost:7529239480252137472",
+      "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7529239480252137472",
+      "repost": {
+       "id": "7529239222675943424",
+       "linkedinUrl": "https://www.linkedin.com/posts/grupo-dreamers_debora-moura-na-%C3%A9poca-neg%C3%B3cios-activity-7529239222675943424-QgMg",
+       "content": "Nossa head de Atração e D&I, Debora Moura, é destaque na coluna Diversifique-se, da Época Negócios. \n \nNa entrevista, ela compartilha sua trajetória de quase duas décadas na Artplan e no Grupo Dreamers, o legado de seu pai, Carlos Moura, na luta pela equidade racial e como o diálogo pode abrir espaços, ampliar perspectivas e gerar transformações dentro e fora das organizações. \n \nConfira a entrevista completa: https://lnkd.in/gC9uQzEq \n \n#GrupoDreamers #DiversidadeEInclusão #ÉpocaNegócios",
+       "contentAttributes": [
+        {
+         "start": 29,
+         "length": 12,
+         "type": "PROFILE_MENTION",
+         "hyperlink": "https://www.linkedin.com/in/ACoAAB5xBosB8GBih_fuA-7Ro-381TOSs_duJMs",
+         "textLink": null,
+         "profile": {
+          "id": "ACoAAB5xBosB8GBih_fuA-7Ro-381TOSs_duJMs",
+          "firstName": "Debora",
+          "lastName": "Moura",
+          "linkedinUrl": "https://www.linkedin.com/in/ACoAAB5xBosB8GBih_fuA-7Ro-381TOSs_duJMs",
+          "publicIdentifier": null
+         }
+        },
+        {
+         "start": 174,
+         "length": 7,
+         "type": "COMPANY_NAME",
+         "hyperlink": "https://www.linkedin.com/company/111024/",
+         "textLink": null,
+         "company": {
+          "id": "111024",
+          "name": "Artplan",
+          "linkedinUrl": "https://www.linkedin.com/company/111024/"
+         }
+        },
+        {
+         "start": 414,
+         "length": 24,
+         "type": "TEXT_LINK",
+         "hyperlink": null,
+         "textLink": "https://lnkd.in/gC9uQzEq"
+        }
+       ],
+       "author": {
+        "id": "66354439",
+        "universalName": "grupo-dreamers",
+        "publicIdentifier": null,
+        "type": "company",
+        "name": "Grupo Dreamers",
+        "linkedinUrl": "https://www.linkedin.com/company/grupo-dreamers/posts",
+        "info": "36,519 followers",
+        "website": null,
+        "websiteLabel": null,
+        "avatar": {
+         "url": "https://media.licdn.com/dms/image/v2/D4D0BAQELoBlbA_m62Q/company-logo_400_400/B4DZ8VJNCWGwAU-/0/1782766162660/grupo_dreamers_logo?e=1797465600&v=beta&t=71vArzz5e8fiqNm1lP8fXOEiaacUaSkgN-ilUXieQNA",
+         "width": 400,
+         "height": 400
+        },
+        "urn": "66354439",
+        "companyId": "66354439"
+       },
+       "postedAt": {
+        "timestamp": 1795110517186,
+        "date": "2026-11-19T17:48:37.186Z",
+        "postedAgoShort": "6d",
+        "postedAgoText": "6 days ago • Visible to anyone on or off LinkedIn"
+       },
+       "postImages": [],
+       "document": {
+        "title": "Debora Moura na Época Negócios",
+        "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQG9JFbQTtimFw/feedshare-document-sanitized-pdf/B56aH06.9uIQBE-/0/1795110466380?e=1796252400&v=beta&t=qSKSYKSXnOEQb68SA65fP0bKODY8XwkSGO6BAE0L5-I",
+        "coverPages": [
+         {
+          "width": 1545,
+          "height": 1931,
+          "imageUrls": [
+           "https://media.licdn.com/dms/image/v2/D561FAQG9JFbQTtimFw/feedshare-document-cover-images_1920/B56aH06.9uIQBY-/0/1795110466482?e=1796252400&v=beta&t=1xwVOxNfHKTOmy2lk5K_pUI8CydYrlRaB-61UvBMCE0",
+           "https://media.licdn.com/dms/image/v2/D561FAQG9JFbQTtimFw/feedshare-document-cover-images_1920/B56aH06.9uIQBY-/1/1795110466482?e=1796252400&v=beta&t=O1A3YGX2REQtVMn0VE6nsm2rUbFqg7ukwBHncnO88Zo"
+          ]
+         }
+        ],
+        "totalPageCount": 2,
+        "manifestUrl": "https://media.licdn.com/dms/document/pl/v2/D561FAQG9JFbQTtimFw/feedshare-document-master-manifest/B56aH06.9uIQBg-/0/1795110466713?e=1796252400&v=beta&t=CYH64Ds1P_FXGXRgm1fLvFGzigrcTiKbO3qY2WrgDEA",
+        "manifest": {
+         "asset": "urn:li:digitalmediaAsset:D561FAQG9JFbQTtimFw",
+         "transcriptManifestUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQG9JFbQTtimFw/feedshare-document-transcript/B56aH06.9uIQA8-/0/1795110466713?e=1796256000&v=beta&t=ym8cldEutJCfie1DIxW607eK7tqP0aYgeJ5Qw1tUBeQ",
+         "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQG9JFbQTtimFw/feedshare-document-pdf-analyzed/B56aH06.9uIQAg-/0/1795110466713?e=1796256000&v=beta&t=qCfol03XswiWLF9y50Xxa83_uxpNkwLMrS2NqoyLrLU",
+         "scanRequiredForDownload": true,
+         "perResolutions": [
+          {
+           "width": 390,
+           "height": 487,
+           "imageManifestUrl": "https://media.licdn.com/dms/document/pl/v2/D561FAQG9JFbQTtimFw/feedshare-document-images_480/B56aH06.9uIQAo-/0/1795110466713?e=1796256000&v=beta&t=LccJu_iLBiDAeupergpL2X45bN8Fa399rFzYqo3Mebs"
+          },
+          {
+           "width": 1035,
+           "height": 1293,
+           "imageManifestUrl": "https://media.licdn.com/dms/document/pl/v2/D561FAQG9JFbQTtimFw/feedshare-document-images_1280/B56aH06.9uIQAY-/0/1795110466713?e=1796256000&v=beta&t=IZYsLXXILNb2jWIHLL6q57LZ0XKEOBSQe0Xl_vaI85g"
+          },
+          {
+           "width": 645,
+           "height": 806,
+           "imageManifestUrl": "https://media.licdn.com/dms/document/pl/v2/D561FAQG9JFbQTtimFw/feedshare-document-images_800/B56aH06.9uIQAs-/0/1795110466713?e=1796256000&v=beta&t=pmJaB1JK_Md29VW3rTMl3Xq5Q0xFZVy3sFkttwVH_34"
+          },
+          {
+           "width": 1545,
+           "height": 1931,
+           "imageManifestUrl": "https://media.licdn.com/dms/document/pl/v2/D561FAQG9JFbQTtimFw/feedshare-document-images_1920/B56aH06.9uIQAw-/0/1795110466713?e=1796256000&v=beta&t=AOYNTx3Qd4ln0JY7GaWe7vFUI36IiN_InQxO_0kGAvo"
+          },
+          {
+           "width": 135,
+           "height": 168,
+           "imageManifestUrl": "https://media.licdn.com/dms/document/pl/v2/D561FAQG9JFbQTtimFw/feedshare-document-images_160/B56aH06.9uIQAk-/0/1795110466713?e=1796256000&v=beta&t=Jm9u1n3VBpKOydN9NJ0Z7uf2gcOF-wTi25bIJB6Q7Yw"
+          }
+         ]
+        }
+       },
+       "socialContent": {
+        "hideShareAction": true,
+        "hideSendAction": true,
+        "trustInterventionBanner": null,
+        "shareUrl": "https://www.linkedin.com/posts/grupo-dreamers_debora-moura-na-%C3%A9poca-neg%C3%B3cios-activity-7529239222675943424-QgMg?"
+       },
+       "comments": [],
+       "header": {
+        "text": null
+       },
+       "entityId": "7529239222675943424",
+       "shareUrn": "urn:li:ugcPost:7529239221564387328",
+       "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7529239221564387328",
+       "engagement": {
+        "id": "7529239221564387328",
+        "likes": 9,
+        "comments": 1,
+        "shares": 2,
+        "reactions": [
+         {
+          "type": "LIKE",
+          "count": 5
+         },
+         {
+          "type": "PRAISE",
+          "count": 4
+         }
+        ]
+       }
+      },
+      "engagement": {
+       "id": "7529239480252137472",
+       "likes": 2,
+       "comments": 0,
+       "shares": 0,
+       "reactions": [
+        {
+         "type": "LIKE",
+         "count": 2
+        }
+       ]
+      },
+      "reactionIds": [],
+      "commentIds": [],
+      "query": {
+       "sortBy": "date",
+       "page": "1",
+       "targetUrl": "https://www.linkedin.com/company/artplan/",
+       "sessionId": "0e08aabe-c108-491e-8e39-c6d371db522c"
+      }
+     }
+    ],
+    "amostra_citacao": [],
+    "citacoes": {
+     "http": 201,
+     "buscas": 60,
+     "posts": 0
+    },
+    "status": "ok",
+    "custo_usd": 0.36,
+    "campanhas_por_tipo": {
+     "empresa": 1
+    },
+    "campanhas": 1,
+    "atraso_mediano_h": 5.7
+   },
+   "coresignal": {
+    "recusas": {
+     "company_post": {
+      "company_name": "403 {'type': 'https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/', 'title': 'Error 1010: Acces"
+     },
+     "employee_post": {
+      "company_name": "403 {'type': 'https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/', 'title': 'Error 1010: Acces"
+     }
+    },
+    "ids": 0,
+    "agencias": 150,
+    "status": "filtros recusados (ver 'recusas')",
+    "creditos": 0,
+    "campanhas": 0,
+    "atraso_mediano_h": null
+   },
+   "so_apify": 1,
+   "so_coresignal": 0,
+   "nas_duas": 0,
+   "paginas_linkedin_achadas": 52
+  }
+ ],
+ "candidatas": [
+  {
+   "marca": "Thanksgiving",
+   "titulo": "Traditional milestones like marriage and homeownership are no longer the reliable triggers once depended on. So how do you connect with a…",
+   "agencia": "Ogilvy",
+   "data": "2026-11-25T17:01:28",
+   "url": "https://www.linkedin.com/posts/ogilvy_brands-genz-activity-7531401684925992961-nJFc",
+   "video": true,
+   "fonte": "apify",
+   "tipo": "empresa"
+  }
+ ],
+ "linkedin": {}
+}
