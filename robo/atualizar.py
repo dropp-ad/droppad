@@ -815,6 +815,11 @@ def ler_canais(fontes, estado, dias=45, vigia=None):
 
 # ---------------------------------------------------------------- Instagram
 HASHTAG = re.compile(r"(?:^|\s)#\w+")
+INSTITUCIONAL = re.compile(r"\b(thankful|thanksgiving|grateful|gratid[aã]o|happy holidays|feliz natal|boas festas|our (team|people|office|family)|"
+                           r"nosso time|nossa equipe|meet the (people|team)|meet our|conhe[cç]a (o )?nosso|conhe[cç]a (a )?nossa|we'?re hiring|"
+                           r"estamos contratando|vagas|anniversary|anivers[aá]rio|birthday|tbt|throwback|reflects on|portfolio night|is a wrap|"
+                           r"year in review|retrospectiva|first year|primeiro ano)\b", re.I)
+TEM_PECA = re.compile(r"\b(campaign|campanha|campaña|film|filme|spot|commercial|comercial|anúncio|ad)\b", re.I)
 
 
 def ler_instagram(fontes, vigia, dias=JANELA_DIAS):
@@ -875,6 +880,12 @@ def post_para_campanha(p, conta, limite):
         m = re.search(r"(?:for|para|pour|für|with|com|con|x)\s+@?([a-z][\w]*\.[\w.]{2,30}|@[\w.]{2,30})", texto, re.I)
         marca = marca_ok(m.group(1).replace(".", " ").replace("_", " ").title()) if m else ""
     if not marca or chave(marca) == chave(conta["nome"]):
+        return None
+    # post da própria agência (equipe, datas, eventos), não campanha: marca que começa com o nome
+    # da agência (HLK → "HLKers") sem falar de peça, ou título de agradecimento/bastidores
+    if chave(marca).startswith(chave(conta["nome"])) and not TEM_PECA.search(titulo):
+        return None
+    if INSTITUCIONAL.search(titulo):
         return None
     tipo = "reel" if "/reel/" in link else "p"
     cod = link.rstrip("/").rsplit("/", 1)[-1]
