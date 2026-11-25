@@ -414,10 +414,24 @@
     "zenithuk": "sem conta",
     "essencemediacomuk": "sem conta",
     "dentsuuk": 1,
-    "iprospectuk": 0
+    "iprospectuk": 0,
+    "merkleuk": 0,
+    "wearesocialuk": "sem conta",
+    "wearesocialfr": 0,
+    "wearesocialde": 0,
+    "wearesociales": 1,
+    "wearesocialnl": 0,
+    "wearesocialbe": "sem conta",
+    "wearesocialse": "sem conta",
+    "wearesocialdk": "sem conta",
+    "wearesocialno": "sem conta",
+    "wearesocialpt": "sem conta",
+    "wearesocialpl": "sem conta",
+    "wearesocialie": "sem conta",
+    "wearesocialch": "sem conta"
   },
   "inicio": "2026-11-24",
-  "restam": 464,
+  "restam": 450,
   "erros": {
     "vmlbrasil": "110: Invalid user id",
     "gutsopaulo": "110: Invalid user id",
@@ -667,6 +681,11 @@
     "digitasuk": "110: Invalid user id",
     "omduk": "110: Invalid user id",
     "initiativeuk": "110: Invalid user id",
-    "essencemediacomuk": "110: Invalid user id"
+    "essencemediacomuk": "110: Invalid user id",
+    "wearesocialuk": "110: Invalid user id",
+    "wearesocialse": "110: Invalid user id",
+    "wearesocialno": "110: Invalid user id",
+    "wearesocialpl": "110: Invalid user id",
+    "wearesocialch": "110: Invalid user id"
   }
 }
