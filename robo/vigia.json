@@ -19,8 +19,8 @@
       "mod": "Wed, 25 Nov 2026 02:36:57 GMT"
     },
     "https://www.informabtl.com/feed/": {
-      "etag": "W/\"ac8ffed327fc02329c83b5a438153f4e\"",
-      "mod": "Wed, 25 Nov 2026 03:05:44 GMT"
+      "etag": "W/\"0243fb0a63dd635b1ed6aab43c633f10\"",
+      "mod": "Wed, 25 Nov 2026 03:29:28 GMT"
     },
     "https://propmark.com.br/feed/": {
       "etag": "\"b037f7640f98f2caea39c03e06e7521f\"",
@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 03:00:12 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 03:28:11 GMT"
+      "mod": "Wed, 25 Nov 2026 03:29:12 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"f75c32e3d87e9cc4776fed7485a49173\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 03:28:13 GMT"
+      "mod": "Wed, 25 Nov 2026 03:30:12 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"cef09529ecbc2f5e63980d7e21abe9b8-gzip\"",
@@ -186,7 +186,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 44,
+  "yt_pos": 31,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -398,20 +398,15 @@
       "11:21": "",
       "Binder": "binder",
       "Calia": "",
-      "NovaSB": "novagencia.ag"
+      "NovaSB": "novagencia.ag",
+      "Eyxo": ""
     },
     "tentadas": {
       "Zambezi": [
         "zmbz"
-      ],
-      "Eyxo": [
-        "eyxo.ag",
-        "eyxoagencia",
-        "eyxo_",
-        "eyxo"
       ]
     },
-    "pos": 363,
+    "pos": 364,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -483,7 +478,7 @@
       "Calia",
       "Eyxo"
     ],
-    "rodadas": 644,
+    "rodadas": 646,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1457,6 +1452,6 @@
     "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-past-advertising",
     "https://www.medianews4u.com/giraffe-advertising-marks-21-years-expands-into-hospitality-entertainment-and-real-estate"
   ],
-  "ultima_rodada": "2026-11-25T03:28:09.632568+00:00",
-  "ultima_novidade": "2026-11-25T03:28:09.632568+00:00"
+  "ultima_rodada": "2026-11-25T03:30:09.342972+00:00",
+  "ultima_novidade": "2026-11-25T03:30:09.342972+00:00"
 }
