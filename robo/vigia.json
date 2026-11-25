@@ -49,11 +49,11 @@
       "mod": "Wed, 25 Nov 2026 20:37:18 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 20:51:00 GMT"
+      "mod": "Wed, 25 Nov 2026 20:52:59 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"d46f0fb59111fb62ca05dbf94b0287c9\"",
-      "mod": "Wed, 25 Nov 2026 20:51:11 GMT"
+      "etag": "\"1850acb75cd6122313800546b62a6493\"",
+      "mod": "Wed, 25 Nov 2026 20:52:37 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795639566-gzip\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 20:52:01 GMT"
+      "mod": "Wed, 25 Nov 2026 20:53:00 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -128,8 +128,8 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://thestable.com.au/feed/": {
-      "etag": "\"413a2b22d45d1b07b888a70a20091d17\"",
-      "mod": "Wed, 25 Nov 2026 04:44:32 GMT"
+      "etag": "\"82c62393cb368b1eea8e24652d360a57\"",
+      "mod": "Wed, 25 Nov 2026 20:52:27 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
       "mod": "Wed, 25 Nov 2026 20:31:22 GMT"
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 20:51:14 GMT"
+      "mod": "Wed, 25 Nov 2026 20:52:18 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -301,7 +301,7 @@
       "mod": "Thu, 29 Oct 2026 19:32:20 GMT"
     }
   },
-  "yt_pos": 40,
+  "yt_pos": 70,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -870,18 +870,11 @@
       "VaynerMedia Europe": "",
       "Monks London": "",
       "Monks Amsterdam": "",
-      "Accenture Song UK": ""
+      "Accenture Song UK": "",
+      "Jellyfish London": "",
+      "Jellyfish Paris": ""
     },
-    "tentadas": {
-      "Jellyfish Paris": [
-        "jellyfishparis",
-        "jellyfishparisagency"
-      ],
-      "Jellyfish London": [
-        "jellyfishlondon",
-        "jellyfishlondonagency"
-      ]
-    },
+    "tentadas": {},
     "pos": 875,
     "revistas": [
       "DPZ",
@@ -1147,7 +1140,7 @@
       "Accenture Song UK",
       "Jellyfish London"
     ],
-    "rodadas": 1668,
+    "rodadas": 1669,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2832,8 +2825,9 @@
     "https://grandesnomesdapropaganda.com.br/anunciantes/mercatto-estreia-campanha-de-desconto-para-dois-estados",
     "https://grandesnomesdapropaganda.com.br/anunciantes/mercatto-estreia-campanha-black-friday-para-dois-estados",
     "https://nossomeio.com.br/we-ooh-100-bancas-digitais-rio-de-janeiro",
-    "https://roastbrief.com.mx/2026/11/casio-brasil-celebra-los-buenos-tiempos-en-su-campana-de-navidad-2026"
+    "https://roastbrief.com.mx/2026/11/casio-brasil-celebra-los-buenos-tiempos-en-su-campana-de-navidad-2026",
+    "https://mumbrella.com.au/ooh-media-signs-record-number-of-advertisers-for-australian-open-946120"
   ],
-  "ultima_rodada": "2026-11-25T20:51:57.385860+00:00",
-  "ultima_novidade": "2026-11-25T20:30:58.005818+00:00"
+  "ultima_rodada": "2026-11-25T20:52:57.245329+00:00",
+  "ultima_novidade": "2026-11-25T20:52:57.245329+00:00"
 }
