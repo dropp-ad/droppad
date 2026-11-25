@@ -33,10 +33,10 @@ import atualizar as A  # noqa: E402  (filtros e utilidades do robô principal)
 
 SAIDA = os.path.join(AQUI, "linkedin_teste.json")
 AGORA = dt.datetime.now(dt.timezone.utc)
-DESDE = (AGORA - dt.timedelta(days=2)).date().isoformat()  # janela de 2 dias
+DESDE = (AGORA - dt.timedelta(days=int(os.environ.get("JANELA_DIAS", "7")))).date().isoformat()  # janela (o site aceita até 10 dias)
 ENV = lambda k, p: int(os.environ.get(k, p))  # noqa: E731
 APIFY_EMPRESAS, APIFY_POR_EMPRESA = ENV("APIFY_EMPRESAS", "150"), ENV("APIFY_POR_EMPRESA", "3")
-APIFY_BUSCAS, APIFY_POR_BUSCA = ENV("APIFY_BUSCAS", "60"), ENV("APIFY_POR_BUSCA", "5")
+APIFY_BUSCAS, APIFY_POR_BUSCA = ENV("APIFY_BUSCAS", "60"), ENV("APIFY_POR_BUSCA", "25")
 CS_AGENCIAS, CS_COLETAS = ENV("CORESIGNAL_AGENCIAS", "150"), ENV("CORESIGNAL_COLETAS", "60")
 PALAVRAS = "(campaign OR campanha OR campaña OR campagne OR film OR filme OR spot OR commercial)"
 
@@ -201,15 +201,15 @@ def ler_apify(todas, estado, placar):
         placar["empresas"]["agencias_com_post"] = len(vieram)
     else:
         placar["empresas"]["erro"] = str(itens)[:300]
-    # 2) quem cita a agência (funcionários, clientes, imprensa) falando de campanha, últimas 24h
+    # 2) posts de quem trabalha na agência (filtro "authorsCompanies" do LinkedIn) falando de campanha
     ags = fatia(todas, estado, "apify_buscas", APIFY_BUSCAS)
     total = 0
     st2 = None
     for bloco in [ags[i:i + 20] for i in range(0, len(ags), 20)]:
-        consultas = ['"%s" %s' % (a["nome"].replace('"', ""), PALAVRAS) for a in bloco]
         st2, itens = apify_rodar("harvestapi~linkedin-post-search",
-                                 {"searchQueries": consultas, "maxPosts": APIFY_POR_BUSCA, "postedLimit": "24h"},
-                                 len(bloco) * APIFY_POR_BUSCA, tok)
+                                 {"searchQueries": ["campaign", "campanha"], "authorsCompanies": [a["nome"] for a in bloco],
+                                  "maxPosts": APIFY_POR_BUSCA, "postedLimit": "week", "sortBy": "date"},
+                                 2 * APIFY_POR_BUSCA, tok)
         if not isinstance(itens, list):
             placar["citacoes_erro"] = str(itens)[:300]
             break
@@ -218,9 +218,11 @@ def ler_apify(todas, estado, placar):
         for it in itens:
             if not isinstance(it, dict):
                 continue
-            texto = it.get("content") or ""
-            a = next((a for a in bloco if A.chave(a["nome"]) in A.chave(texto)), None)
-            out.append(apify_item(it, "apify", "citacao", a))
+            autor = it.get("author") or {}
+            onde = A.chave(" ".join(str(autor.get(k) or "") for k in ("info", "position", "headline", "name"))
+                           + " " + (it.get("content") or ""))
+            a = next((a for a in sorted(bloco, key=lambda a: -len(a["nome"])) if A.chave(a["nome"]) in onde), None)
+            out.append(apify_item(it, "apify", "funcionario", a))
     placar["citacoes"] = {"http": st2, "buscas": len(ags), "posts": total}
     placar["status"] = "ok"
     placar["custo_usd"] = round((placar["empresas"].get("posts", 0) + total) * 0.002, 2)
@@ -360,6 +362,8 @@ def main():
               "apify": {}, "coresignal": {}}
     posts = ler_apify(todas, estado, rodada["apify"]) + ler_coresignal(todas, estado, rodada["coresignal"])
     camp = [c for c in (vira_campanha(p) for p in posts) if c]
+    rodada["lidos"] = [{"fonte": p["fonte"], "tipo": p["tipo"], "agencia": (p["agencia"] or {}).get("nome", ""),
+                        "data": p["data"][:10], "url": p["url"], "texto": p["texto"][:160]} for p in posts][:400]
     chaves = collections.defaultdict(set)
     for c in camp:
         chaves[c["fonte"]].add((A.chave(c["agencia"]), A.chave(c["marca"])))
@@ -382,6 +386,8 @@ def main():
     rodada["paginas_linkedin_achadas"] = paginas_ok
     hist.setdefault("rodadas", []).append(rodada)
     hist["rodadas"] = hist["rodadas"][-60:]
+    for r in hist["rodadas"][:-3]:
+        r.pop("lidos", None)  # a amostra completa fica só nas últimas rodadas
     vistos = {(c["fonte"], c["url"]) for c in hist.get("candidatas", [])}
     novas = [c for c in camp if (c["fonte"], c["url"]) not in vistos]
     hist["candidatas"] = (hist.get("candidatas", []) + [{k: v for k, v in c.items() if k != "campanha"}
