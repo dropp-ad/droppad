@@ -601,6 +601,36 @@ def completar_fotos(camp, estado, limite=220):
     return n
 
 
+CORTADO = re.compile(r"(\.\.\.|…|\[…\]|\[\.\.\.\])\s*$")
+
+
+def completar_textos(camp, estado, limite=120):
+    """Campanhas cujo resumo vem cortado ("…"): guarda os parágrafos da matéria, que o site
+    mostra quando a pessoa clica nos três pontinhos."""
+    feitas = set(estado.setdefault("texto_v1", []))
+    alvo = [c for c in camp if c.get("url") and not c.get("story") and c["url"] not in feitas
+            and CORTADO.search(c.get("frase") or c.get("summary") or "")]
+    alvo.sort(key=lambda c: c.get("date", ""), reverse=True)
+    alvo = alvo[:limite]
+
+    def job(c):
+        try:
+            return c, historia_de(baixar(c["url"], timeout=15))
+        except Exception:  # noqa: BLE001
+            return c, None
+    n = 0
+    with cf.ThreadPoolExecutor(8) as ex:
+        for c, hist in ex.map(job, alvo):
+            if hist is None:
+                continue  # o site recusou agora: tenta de novo na próxima rodada
+            feitas.add(c["url"])
+            if hist:
+                c["story"] = hist
+                n += 1
+    estado["texto_v1"] = sorted(feitas)
+    return n
+
+
 def completar_imagens(camp, estado, limite=150):
     """Busca a imagem de capa (og:image) das campanhas antigas que não têm filme nem imagem."""
     tentadas = set(estado.setdefault("sem_imagem", []))
@@ -1186,6 +1216,9 @@ def main():
     fts = 0 if SIMULAR or RAPIDO else completar_fotos(camp, estado)
     log("Carrosséis novos em campanhas antigas:", fts)
     capas += fts
+    txs = 0 if SIMULAR or RAPIDO else completar_textos(camp, estado)
+    log("Textos completos para resumos cortados:", txs)
+    capas += txs
 
     # 8) salva
     if SIMULAR:
