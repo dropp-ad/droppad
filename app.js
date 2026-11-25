@@ -732,11 +732,32 @@
       campaign: (sharedId() || "").slice(0, 300) || null,
       device: matchMedia("(max-width: 760px)").matches ? "mobile" : "desktop"
     };
-    fetch(SUPABASE_URL + "/rest/v1/visits", {
-      method: "POST", keepalive: true,
-      headers: { apikey: SUPABASE_KEY, "Content-Type": "application/json", Prefer: "return=minimal" },
-      body: JSON.stringify(corpo)
+    // país, cidade e rede (empresa ou provedor) de quem entra; o IP em si não é guardado
+    geoVisita().then(function (g) {
+      corpo.country = g.cc || null; corpo.country_name = g.pais || null;
+      corpo.city = g.cidade || null; corpo.region = g.estado || null; corpo.org = g.org || null;
+      return fetch(SUPABASE_URL + "/rest/v1/visits", {
+        method: "POST", keepalive: true,
+        headers: { apikey: SUPABASE_KEY, "Content-Type": "application/json", Prefer: "return=minimal" },
+        body: JSON.stringify(corpo)
+      });
     }).catch(function () { /* contador nunca atrapalha o site */ });
+  }
+  function geoVisita() {
+    var ctl = window.AbortController ? new AbortController() : null;
+    var to = setTimeout(function () { if (ctl) ctl.abort(); }, 3000);
+    return fetch("https://get.geojs.io/v1/ip/geo.json", ctl ? { signal: ctl.signal } : {})
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        clearTimeout(to);
+        var cc = String(j && j.country_code || "").toUpperCase();
+        return {
+          cc: /^[A-Z]{2}$/.test(cc) ? cc : "", pais: str(j.country).slice(0, 80),
+          cidade: str(j.city).slice(0, 120), estado: str(j.region).slice(0, 120),
+          org: str(j.organization_name || j.organization).replace(/^AS\d+\s*/i, "").slice(0, 200)
+        };
+      })
+      .catch(function () { clearTimeout(to); return {}; });
   }
   var sbReady = null, sb = null, me = null;
   function loadSb() {
