@@ -4,19 +4,19 @@
       "etag": "W/\"5d2f-o2znJvubyBKV5heDNvTUFqHaMa8\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"c974a769fd99304b50c6491d4a063707\"",
-      "mod": "Wed, 25 Nov 2026 12:24:06 GMT"
+      "etag": "\"1d6cfedc8c4639151dcc178236b3a33a\"",
+      "mod": "Wed, 25 Nov 2026 13:25:03 GMT"
     },
     "https://creativosbr.com.br/feed/": {
       "etag": "W/\"2ddba2092895866ddb0a35d2a323eb92\"",
       "mod": "Tue, 24 Nov 2026 20:54:39 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
-      "etag": "\"344c088ce80953d337c3ccb952de2a38\"",
-      "mod": "Wed, 25 Nov 2026 13:08:20 GMT"
+      "etag": "\"cfb8b2e70eaad7807f175d97bdda6aa4\"",
+      "mod": "Wed, 25 Nov 2026 13:08:32 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 13:08:21 GMT"
+      "mod": "Wed, 25 Nov 2026 13:36:20 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"be8d0011aa703b1d3fa81ddd877a93db\"",
@@ -30,8 +30,8 @@
       "mod": "Wed, 25 Nov 2026 13:00:00 GMT"
     },
     "https://musebyclios.com/feed/": {
-      "etag": "W/\"92174c0074cf72c039574b74250acc01\"",
-      "mod": "Wed, 25 Nov 2026 09:37:38 GMT"
+      "etag": "W/\"5d9a248e4f05f95c8fccc74d63b2917d\"",
+      "mod": "Wed, 25 Nov 2026 13:24:42 GMT"
     },
     "https://www.contentgrip.com/feed/": {
       "etag": "W/\"3086d-swuouYVwhM/jYjaCQR7zDCOrfcY\""
@@ -45,11 +45,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"e94945ca778aa56568c98574e3739ce3\"",
-      "mod": "Wed, 25 Nov 2026 12:13:42 GMT"
+      "etag": "W/\"8d42143804e8995145ca77fbc992499a\"",
+      "mod": "Wed, 25 Nov 2026 13:05:46 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 13:08:23 GMT"
+      "mod": "Wed, 25 Nov 2026 13:38:24 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
@@ -67,8 +67,8 @@
       "mod": "Wed, 25 Nov 2026 12:33:54 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
-      "etag": "\"5a730d5ce43d554b4ab3a881067123ae\"",
-      "mod": "Wed, 25 Nov 2026 09:23:55 GMT"
+      "etag": "\"cfb8b2e70eaad7807f175d97bdda6aa4\"",
+      "mod": "Wed, 25 Nov 2026 13:08:32 GMT"
     },
     "https://campaignbrief.com/feed/": {
       "etag": "\"c299cfb2cbb3f343da3116d9ff159ff1\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 13:08:24 GMT"
+      "mod": "Wed, 25 Nov 2026 13:38:25 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -135,8 +135,8 @@
       "mod": "Wed, 25 Nov 2026 13:00:51 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"7dd0a632e3d1539cc243a482060f5d58\"",
-      "mod": "Wed, 25 Nov 2026 12:53:46 GMT"
+      "etag": "\"a586bda185f737d127c5669e1400556c\"",
+      "mod": "Wed, 25 Nov 2026 13:37:51 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"529df3db7f25b64048e3bfc7edad051e\"",
@@ -186,7 +186,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     },
     "https://www.marketingdirecto.com/feed/": {
-      "mod": "Wed, 25 Nov 2026 11:02:53 GMT"
+      "mod": "Wed, 25 Nov 2026 12:58:35 GMT"
     },
     "https://duncanchannon.com/feed/": {
       "etag": "W/\"478aa93ed5b8aeec455efd1ac2c952f4\"",
@@ -197,10 +197,10 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 13:08:24 GMT"
+      "mod": "Wed, 25 Nov 2026 13:38:26 GMT"
     }
   },
-  "yt_pos": 89,
+  "yt_pos": 76,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -648,18 +648,27 @@
       "OMD Worldwide": "",
       "Horizon Media": "horizonmediaagency",
       "PHD Media": "",
-      "Starcom": ""
+      "Starcom": "",
+      "Zenith": "",
+      "Havas Media": "",
+      "dentsu X": "",
+      "GroupM": "groupmagency",
+      "Omnicom": "omnicom",
+      "IPG": "",
+      "Stagwell": "",
+      "TRIBE": "tribe",
+      "S4 Capital": "",
+      "FCB New York": ""
     },
     "tentadas": {
-      "Zenith": [
-        "zenith",
-        "zenithagency"
+      "FCB West": [
+        "fcbwest"
       ],
-      "Havas Media": [
-        "havasmedia"
+      "FCB Chicago": [
+        "fcbchicago"
       ]
     },
-    "pos": 653,
+    "pos": 668,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -818,9 +827,16 @@
       "OMD Worldwide",
       "PHD Media",
       "Starcom",
-      "Zenith"
+      "Zenith",
+      "Havas Media",
+      "dentsu X",
+      "IPG",
+      "Stagwell",
+      "S4 Capital",
+      "FCB New York",
+      "FCB Chicago"
     ],
-    "rodadas": 1224,
+    "rodadas": 1254,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1652,7 +1668,17 @@
       "Horizon Media": [],
       "Starcom": [],
       "Zenith": [],
-      "Havas Media": []
+      "Havas Media": [],
+      "dentsu X": [],
+      "GroupM": [],
+      "Omnicom": [],
+      "IPG": [],
+      "Stagwell": [],
+      "S4 Capital": [],
+      "TRIBE": [],
+      "FCB New York": [],
+      "FCB Chicago": [],
+      "FCB West": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -2360,6 +2386,6 @@
     "https://www.marketingdive.com/news/campaign-trail-tiffany-tells-human-holiday-story-with-hollywood-talent/874914",
     "https://www.marketingdive.com/news/coca-cola-pivots-from-divisive-ai-generated-ads-for-holiday-campaign/875215"
   ],
-  "ultima_rodada": "2026-11-25T13:08:20.762702+00:00",
+  "ultima_rodada": "2026-11-25T13:38:21.147613+00:00",
   "ultima_novidade": "2026-11-25T12:24:20.327978+00:00"
 }
