@@ -93,6 +93,10 @@ def _nomes_compostos(c):
     return out
 
 
+NAO_E_FILME = re.compile(r"\b(link in bio|review|resenha|unboxing|haul|tutorial|how to|como usar|gameplay|reagindo|react|"
+                         r"podcast|entrevista|interview|ao vivo|live|cupom|achadinhos|vale a pena)\b", re.I)
+
+
 UI_YT = re.compile(r"^(adicionar à fila|add to queue|enviar feedback|send feedback|assistir mais tarde|watch later|compartilhar|share|novo|new|"
                    r"\d+[:.]\d+|.*\bvisualiza|.*\bviews?\b|há \d+|\d+ (?:dias?|horas?|semanas?) atrás)", re.I)
 
@@ -137,6 +141,10 @@ def buscar_youtube(c):
         log("  youtube:", q[:60], "| vídeos", len(achados), "|", " / ".join(t[:40] for _, t, _ in achados[:4]))
         for vid, titulo, resto in achados[:10]:
             canal = resto.split("  ")[0][:60]
+            if NAO_E_FILME.search(titulo) or len(re.findall(r"#\w", titulo)) >= 2:
+                continue  # short de produto, resenha, tutorial, influenciador
+            if re.search(r"[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]", titulo) and c.get("region") not in ("Ásia", "Asia", "APAC"):
+                continue  # filme da mesma marca em outro país (Coreia, Japão, China)
             if bate_com_a_campanha(c, titulo) or (bate_com_a_campanha(c, titulo + " " + canal) and _tem_marca(c["brand"], titulo)):
                 log("  + youtube:", vid, "|", titulo)
                 return [vid]
