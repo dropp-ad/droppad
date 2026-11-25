@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 03:00:12 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 04:58:11 GMT"
+      "mod": "Wed, 25 Nov 2026 05:27:12 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"1ac0030ee53b2454137893ce7855acff\"",
@@ -79,7 +79,7 @@
       "mod": "Wed, 25 Nov 2026 00:46:19 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Wed, 25 Nov 2026 00:01:04 GMT"
+      "mod": "Wed, 25 Nov 2026 05:21:12 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"387f5a7ab5e799a8b3d6ef3c4309e52d\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 04:58:12 GMT"
+      "mod": "Wed, 25 Nov 2026 05:28:13 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"17b0c810c42990df9047d7fcf6914b5f-gzip\"",
-      "mod": "Wed, 25 Nov 2026 04:52:59 GMT"
+      "etag": "W/\"888a0286141cd7bda2328a34c3305d74-gzip\"",
+      "mod": "Wed, 25 Nov 2026 05:24:30 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -189,7 +189,7 @@
       "mod": "Tue, 24 Nov 2026 16:23:42 GMT"
     }
   },
-  "yt_pos": 43,
+  "yt_pos": 67,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -406,19 +406,19 @@
       "We": "agenciawe",
       "Bolt Brasil": "",
       "Martin Luz": "",
-      "Twist Agency Brazil": ""
+      "Twist Agency Brazil": "",
+      "Rujan": "",
+      "Webcompany": "webcompany.ag",
+      "B11 Agency": "b11.agency",
+      "Mardini Agência Digital": "",
+      "DGAZ Marketing": ""
     },
     "tentadas": {
       "Zambezi": [
         "zmbz"
-      ],
-      "Rujan": [
-        "rujan",
-        "rujan.branding",
-        "rujan_"
       ]
     },
-    "pos": 408,
+    "pos": 423,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -492,9 +492,11 @@
       "Bolt Brasil",
       "Martin Luz",
       "Twist Agency Brazil",
-      "Rujan"
+      "Rujan",
+      "Mardini Agência Digital",
+      "DGAZ Marketing"
     ],
-    "rodadas": 734,
+    "rodadas": 764,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -864,7 +866,13 @@
       "Bolt Brasil": [],
       "Martin Luz": [],
       "Twist Agency Brazil": [],
-      "Rujan": []
+      "Rujan": [],
+      "Webcompany": [
+        "webcompany.ag"
+      ],
+      "B11 Agency": [],
+      "Mardini Agência Digital": [],
+      "DGAZ Marketing": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -1548,8 +1556,9 @@
     "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-part-advertising",
     "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-past-advertising",
     "https://www.medianews4u.com/giraffe-advertising-marks-21-years-expands-into-hospitality-entertainment-and-real-estate",
-    "https://www.medianews4u.com/openai-brings-sana-shaikh-on-board-for-global-ads-solutions-in-india"
+    "https://www.medianews4u.com/openai-brings-sana-shaikh-on-board-for-global-ads-solutions-in-india",
+    "https://www.horizont.net/marketing/nachrichten/deutschlands-werbelieblinge-haribo-mcdonalds--co.-diese-spots-begeistern-die-deutschen-am-meisten-236702"
   ],
-  "ultima_rodada": "2026-11-25T04:58:09.373668+00:00",
+  "ultima_rodada": "2026-11-25T05:28:10.084730+00:00",
   "ultima_novidade": "2026-11-25T04:36:09.566093+00:00"
 }
