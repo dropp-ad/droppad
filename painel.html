@@ -40,6 +40,8 @@
   .center { text-align: center; padding: 80px 0; }
   .btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--card); padding: 10px 16px; border-radius: 999px; font: inherit; cursor: pointer; }
   .small { font-size: 13px; }
+  .ult td { font-size: 13.5px; }
+  .ult td.q { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--mut); width: 1%; }
 </style>
 </head>
 <body>
@@ -151,7 +153,51 @@
     c2.appendChild(tabela([["Celular", dv.mobile || 0], ["Computador", dv.desktop || 0]]));
     cols.appendChild(c1); cols.appendChild(c2);
     app.appendChild(cols);
+
+    // ---- de onde as pessoas acessam: país, cidade e rede (empresa ou provedor de internet) ----
+    var geo = el("div", "cols");
+    var g1 = el("div"); g1.appendChild(el("h2", null, "Países"));
+    g1.appendChild(tabela((d.paises || []).map(function (p) { return [bandeira(p.cc) + " " + (p.nome || p.cc), p.pessoas]; })));
+    var g2 = el("div"); g2.appendChild(el("h2", null, "Cidades"));
+    g2.appendChild(tabela((d.cidades || []).map(function (c) {
+      return [bandeira(c.cc) + " " + c.cidade + (c.estado && c.estado !== c.cidade ? " · " + c.estado : ""), c.pessoas];
+    })));
+    geo.appendChild(g1); geo.appendChild(g2);
+    app.appendChild(geo);
+
+    var redes = d.redes || [];
+    var empresas = redes.filter(function (r) { return !provedor(r.org); });
+    var provs = redes.filter(function (r) { return provedor(r.org); });
+    var e1 = el("div", "cols");
+    var x1 = el("div"); x1.appendChild(el("h2", null, "Empresas"));
+    x1.appendChild(tabela(empresas.slice(0, 30).map(function (r) { return [r.org + (r.cidade ? " · " + r.cidade : ""), r.pessoas]; })));
+    var x2 = el("div"); x2.appendChild(el("h2", null, "Provedores de internet"));
+    x2.appendChild(tabela(provs.slice(0, 15).map(function (r) { return [r.org, r.pessoas]; })));
+    e1.appendChild(x1); e1.appendChild(x2);
+    app.appendChild(e1);
+    app.appendChild(el("p", "mut small", "Empresa aparece quando a pessoa acessa pela rede da própria empresa. Quem entra pelo 4G ou pela internet de casa aparece só com o provedor."));
+
+    app.appendChild(el("h2", null, "Últimas visitas"));
+    var tb = el("table", "ult");
+    if (!(d.ultimas || []).length) tb.appendChild(el("tr")).appendChild(el("td", null, "Nada ainda"));
+    (d.ultimas || []).forEach(function (v) {
+      var tr = el("tr");
+      var quando = new Date(v.at).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+      tr.appendChild(el("td", "q", quando));
+      tr.appendChild(el("td", null, [bandeira(v.country), v.city, v.region && v.region !== v.city ? v.region : ""].filter(Boolean).join(" ") || "—"));
+      tr.appendChild(el("td", null, v.org || "—"));
+      tr.appendChild(el("td", "mut", (v.device === "mobile" ? "Celular" : "Computador") + (v.ref ? " · via " + v.ref : "") + (v.campaign ? " · " + (titulos[v.campaign] || v.campaign) : "")));
+      tb.appendChild(tr);
+    });
+    app.appendChild(tb);
   }
+  function bandeira(cc) {
+    if (!/^[A-Z]{2}$/.test(cc || "")) return "";
+    return String.fromCodePoint(0x1F1E6 + cc.charCodeAt(0) - 65, 0x1F1E6 + cc.charCodeAt(1) - 65);
+  }
+  // redes de provedores de internet (casa e celular); o que sobra é rede de empresa
+  var PROV = /telef[oô]nica|vivo|claro|\btim\b|\boi\b|telemar|algar|brisanet|desktop|unifique|ligga|copel|sercomtel|vero\b|mob telecom|\bnet\b|embratel|americanet|giga|fibra|fiber|telecom|internet|provedor|comcast|verizon|at&t|charter|spectrum|cox comm|t-mobile|vodafone|orange|deutsche telekom|telekom|british telecom|\bbt\b|sky\b|virgin|movistar|telmex|telcel|totalplay|izzi|megacable|personal|telecentro|entel|liberty|cable|broadband|mobile|wireless|cellular|\bisp\b|starlink|google fiber|cloudflare|apple|icloud|private relay|amazon|aws|microsoft|azure|digitalocean|ovh|hetzner|akamai|fastly|linode|oracle cloud|google llc/i;
+  function provedor(org) { return PROV.test(org || ""); }
 
   function carregar() {
     sb.rpc("painel_acessos", { dias: dias }).then(function (r) {
