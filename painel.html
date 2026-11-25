@@ -41,6 +41,11 @@
   .btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--card); padding: 10px 16px; border-radius: 999px; font: inherit; cursor: pointer; }
   .small { font-size: 13px; }
   .ult td { font-size: 13.5px; }
+  .msgs { display: flex; flex-direction: column; gap: 8px; }
+  .msg { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+  .msg-top { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; font-size: 13px; }
+  .msg-tipo { font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: .05em; background: var(--ink); color: #fff; padding: 2px 7px; border-radius: 999px; }
+  .msg-txt { margin: 8px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
   .ult td.q { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--mut); width: 1%; }
 </style>
 </head>
@@ -120,6 +125,11 @@
     tiles.appendChild(tile("Desde o início", n(d.total.pessoas) + " pessoas", n(d.total.acessos) + " acessos"));
     app.appendChild(tiles);
 
+    // mensagens do botão Contato do site
+    var caixa = el("div");
+    app.appendChild(caixa);
+    mensagens(caixa);
+
     app.appendChild(el("h2", null, "Pessoas por dia"));
     var ch = el("div", "chart"), bars = el("div", "bars");
     var porDia = {}; d.por_dia.forEach(function (x) { porDia[x.dia] = x; });
@@ -190,6 +200,30 @@
       tb.appendChild(tr);
     });
     app.appendChild(tb);
+  }
+  var TIPO = { pauta: "Pauta", comercial: "Comercial", sugestao: "Sugestão" };
+  function mensagens(caixa) {
+    sb.rpc("painel_contatos", { lim: 100 }).then(function (r) {
+      if (r.error) return; // tabela ainda não criada: o painel segue sem a seção
+      var lista = r.data || [];
+      caixa.appendChild(el("h2", null, "Mensagens de contato" + (lista.length ? " (" + n(lista.length) + ")" : "")));
+      if (!lista.length) { caixa.appendChild(el("p", "mut small", "Nenhuma mensagem ainda.")); return; }
+      var ul = el("div", "msgs");
+      lista.forEach(function (m) {
+        var it = el("div", "msg");
+        var topo = el("div", "msg-top");
+        topo.appendChild(el("span", "msg-tipo", TIPO[m.kind] || m.kind));
+        var a = el("a", null, m.email);
+        a.href = "mailto:" + m.email + "?subject=" + encodeURIComponent("Re: droppad · " + (TIPO[m.kind] || ""));
+        topo.appendChild(a);
+        topo.appendChild(el("span", "mut", (m.country ? bandeira(m.country) + " " : "") +
+          new Date(m.at).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })));
+        it.appendChild(topo);
+        it.appendChild(el("p", "msg-txt", m.message));
+        ul.appendChild(it);
+      });
+      caixa.appendChild(ul);
+    });
   }
   function bandeira(cc) {
     if (!/^[A-Z]{2}$/.test(cc || "")) return "";
