@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 08:00:59 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 09:05:24 GMT"
+      "mod": "Wed, 25 Nov 2026 09:08:23 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
@@ -64,11 +64,11 @@
       "mod": "Thu, 07 May 2026 12:47:56 GMT"
     },
     "https://www.decisionmarketing.co.uk/feed/": {
-      "mod": "Wed, 25 Nov 2026 09:04:26 GMT"
+      "mod": "Wed, 25 Nov 2026 09:05:49 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
-      "etag": "\"d8a4f6eb406cfb050ce15f488a6ed592\"",
-      "mod": "Wed, 25 Nov 2026 08:57:53 GMT"
+      "etag": "\"8532e93b82249909d4836ef6209eccce\"",
+      "mod": "Wed, 25 Nov 2026 09:06:48 GMT"
     },
     "https://campaignbrief.com/feed/": {
       "etag": "\"c299cfb2cbb3f343da3116d9ff159ff1\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 09:05:25 GMT"
+      "mod": "Wed, 25 Nov 2026 09:08:25 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"4e8160fcc20a4252c555c8286abae1cd-gzip\"",
-      "mod": "Wed, 25 Nov 2026 08:52:08 GMT"
+      "etag": "W/\"537f05ef8d94c21c89a5b83c9d34f285-gzip\"",
+      "mod": "Wed, 25 Nov 2026 09:08:01 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -195,9 +195,12 @@
     "https://pollinate.com/feed/": {
       "etag": "\"c35f7537c5282062027c232150e72627\"",
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
+    },
+    "https://www.horizont.net/news/feed/": {
+      "mod": "Wed, 25 Nov 2026 09:08:25 GMT"
     }
   },
-  "yt_pos": 103,
+  "yt_pos": 110,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -524,17 +527,14 @@
       "Moxie": "moxieusa",
       "Dagger": "daggeragency",
       "EP+Co": "epco",
-      "Tombras": "tombras"
+      "Tombras": "tombras",
+      "DNA": "dnaagency",
+      "PB&": "pbagency",
+      "Copacino Fujikado": "copacinofujikado",
+      "WongDoody": "wongdoody"
     },
-    "tentadas": {
-      "DNA": [
-        "dna"
-      ],
-      "PB&": [
-        "pband"
-      ]
-    },
-    "pos": 531,
+    "tentadas": {},
+    "pos": 533,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -652,7 +652,7 @@
       "TRG",
       "Zubi"
     ],
-    "rodadas": 981,
+    "rodadas": 984,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1242,7 +1242,11 @@
         "tombras"
       ],
       "DNA": [],
-      "PB&": []
+      "PB&": [],
+      "Copacino Fujikado": [
+        "copacinofujikado"
+      ],
+      "WongDoody": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -1934,8 +1938,9 @@
     "https://campaignbriefasia.com/2026/11/25/the-lennon-groups-rizza-garcia-picks-her-three-favourite-campaigns-from-the-one-asia-judging",
     "https://www.retailgazette.co.uk/blog/2026/11/black-friday-bristol-ad-ban",
     "https://www.retailgazette.co.uk/blog/2026/11/celebrity-appearances-nearly-double-as-christmas-adverts-ditch-festive-food",
-    "https://www.afaqs.com/news/mktg/coca-cola-india-brings-back-iconic-gold-spot-12840166"
+    "https://www.afaqs.com/news/mktg/coca-cola-india-brings-back-iconic-gold-spot-12840166",
+    "https://www.horizont.net/marketing/haribo-mcdonalds-co.-diese-spots-begeistern-die-deutschen-am-meisten-664206"
   ],
-  "ultima_rodada": "2026-11-25T09:05:21.077710+00:00",
+  "ultima_rodada": "2026-11-25T09:08:21.176934+00:00",
   "ultima_novidade": "2026-11-25T09:05:21.077710+00:00"
 }
