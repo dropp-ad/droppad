@@ -58,7 +58,20 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .cal-btn input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; border: 0; padding: 0; color-scheme: dark; }
 .cal-btn input::-webkit-calendar-picker-indicator { position: absolute; inset: 0; width: 100%; height: 100%; cursor: pointer; }
 .cal-x { font-size: 12px; }
-.contatomenu { width: 220px; }
+/* contato: caixa com abas, e-mail e mensagem */
+.contatomenu { width: 340px; padding: 12px; gap: 10px; }
+.ct-abas { display: flex; gap: 4px; flex-wrap: wrap; }
+.ct-aba { padding: 6px 10px; border: 1px solid var(--line); font-size: 12.5px; font-weight: 700; color: var(--muted); }
+.ct-aba[aria-pressed="true"] { background: #fff; color: #000; border-color: #fff; }
+.ct-form { display: flex; flex-direction: column; gap: 8px; }
+.ct-in { width: 100%; padding: 9px 11px; border: 1px solid var(--line); background: #0b0b0b; color: var(--ink); font: 14.5px/1.45 var(--body); }
+.ct-in:focus { outline: none; border-color: #555; }
+.ct-msg { resize: vertical; min-height: 110px; }
+.ct-mel { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.ct-send { align-self: flex-end; padding: 8px 18px; background: #fff; color: #000; font-size: 13px; font-weight: 700; }
+.ct-send:disabled { opacity: .5; }
+.ct-aviso { margin: 0; font-size: 12.5px; color: var(--hot); }
+.ct-aviso:empty { display: none; }
 .i-on { display: none; }
 .sound-on .i-on { display: block; }
 .sound-on .i-off { display: none; }
@@ -247,6 +260,7 @@ html.digitando .more-cue, html.digitando .to-top, html.digitando .newpill { disp
 .is-vert .host iframe { position: absolute !important; border: 0; background: #000; }
 .is-tt .host iframe { inset: 0; width: 100% !important; height: 100% !important; }
 /* Instagram: o post inteiro, reduzido pra caber no quadro (a escala vem do JS) */
+.is-ig .media { aspect-ratio: auto; height: 80vh; background: var(--post); }
 .is-ig .host > .igbox { left: 50%; top: 50%; bottom: auto; right: auto; width: 400px !important; height: var(--igh, 760px) !important; transform: translate(-50%, -50%) scale(.7); transform-origin: 50% 50%; background: #fff; overflow: hidden; }
 .is-ig .host > .igbox iframe { inset: 0; width: 100% !important; height: 100% !important; background: #fff; }
 .is-vert .cover { display: none; }
@@ -270,6 +284,8 @@ html.digitando .more-cue, html.digitando .to-top, html.digitando .newpill { disp
   .cal-btn { width: 34px; padding: 0; justify-content: center; }
   .cal-btn span, .contato-btn span { display: none; }
   .contato-btn { width: 34px; padding: 0; justify-content: center; }
+  .contatomenu { left: 8px !important; right: 8px; width: auto; top: calc(var(--top-h) + 8px + env(safe-area-inset-top)); }
+  .ct-in { font-size: 16px; }
   .tools .sound-btn { display: none; }
   .timeline { padding-top: calc(var(--top-h) + 10px + env(safe-area-inset-top)); }
   .post { width: calc(100vw - 20px); min-width: 0; }
