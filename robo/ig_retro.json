@@ -252,10 +252,24 @@
     "basicdept": "sem conta",
     "redantler": 1,
     "wearecollins": "sem conta",
-    "pentagramdesign": 0
+    "pentagramdesign": 0,
+    "wolffolins": 0,
+    "siegelgale": 0,
+    "landor": "sem conta",
+    "lippincott": "sem conta",
+    "cghnyc": "sem conta",
+    "sagmeisterwalsh": "sem conta",
+    "troikadesign": 0,
+    "buck_design": 1,
+    "tendrilstudio": "sem conta",
+    "hornetinc": "sem conta",
+    "psyop": 2,
+    "gentlemanscholar": 0,
+    "giantant": "sem conta",
+    "ordinaryfolk": "sem conta"
   },
   "inicio": "2026-11-24",
-  "restam": 622,
+  "restam": 608,
   "erros": {
     "vmlbrasil": "110: Invalid user id",
     "gutsopaulo": "110: Invalid user id",
@@ -413,6 +427,10 @@
     "klientboosthq": "110: Invalid user id",
     "tinuitihq": "110: Invalid user id",
     "huemor": "110: Invalid user id",
-    "ueno": "110: Invalid user id"
+    "ueno": "110: Invalid user id",
+    "lippincott": "110: Invalid user id",
+    "sagmeisterwalsh": "110: Invalid user id",
+    "hornetinc": "110: Invalid user id",
+    "ordinaryfolk": "110: Invalid user id"
   }
 }
