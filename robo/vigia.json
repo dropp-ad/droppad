@@ -16,7 +16,7 @@
       "mod": "Tue, 24 Nov 2026 22:45:02 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 01:46:57 GMT"
+      "mod": "Wed, 25 Nov 2026 02:14:58 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"735d697851667a8899f4aec0a763dfc2\"",
@@ -52,11 +52,11 @@
       "mod": "Wed, 25 Nov 2026 01:04:56 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 01:47:59 GMT"
+      "mod": "Wed, 25 Nov 2026 02:16:59 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"713960d91b8ead29ea94fa3339041e69\"",
-      "mod": "Wed, 25 Nov 2026 01:43:29 GMT"
+      "etag": "\"c5b5eced6c213b85f5ac22e6cb469905\"",
+      "mod": "Wed, 25 Nov 2026 02:05:53 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795569902-gzip\"",
@@ -74,8 +74,8 @@
       "mod": "Tue, 24 Nov 2026 18:12:27 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"9955fb686a9534959a927b10fb4d5d9c\"",
-      "mod": "Wed, 25 Nov 2026 01:30:19 GMT"
+      "etag": "\"2b9cc2d12ac01df7b6cb90790820516b\"",
+      "mod": "Wed, 25 Nov 2026 02:14:53 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
       "etag": "\"f63df64606a6686f991170ed6542fd53\"",
@@ -93,7 +93,7 @@
       "mod": "Tue, 24 Nov 2026 23:42:55 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 01:47:53 GMT"
+      "mod": "Wed, 25 Nov 2026 02:13:34 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
       "etag": "\"01865794e34ab23b0cd5491d7a065892\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 01:48:00 GMT"
+      "mod": "Wed, 25 Nov 2026 02:17:59 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -189,7 +189,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 37,
+  "yt_pos": 61,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -393,17 +393,23 @@
       "B&Partners": "",
       "Druid": "druid.creative",
       "Wieden+Kennedy São Paulo": "wiedenkennedy",
-      "Conversion": "agenciaconversion"
+      "Conversion": "agenciaconversion",
+      "LiveAD": "",
+      "Peppery": "pepperyagency",
+      "Mutato": "mutato.oralclinic",
+      "CasaRex": "casarexdesign"
     },
     "tentadas": {
       "Zambezi": [
         "zmbz"
       ],
-      "LiveAD": [
-        "liveadbr"
+      "11:21": [
+        "onzevinteum",
+        "1121.ag",
+        "1121agencia"
       ]
     },
-    "pos": 313,
+    "pos": 328,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -469,9 +475,10 @@
       "Spark",
       "Fbiz",
       "Suno United Creators",
-      "B&Partners"
+      "B&Partners",
+      "LiveAD"
     ],
-    "rodadas": 544,
+    "rodadas": 574,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -818,7 +825,17 @@
       "Conversion": [
         "agenciaconversion"
       ],
-      "LiveAD": []
+      "LiveAD": [],
+      "Peppery": [
+        "pepperyagency"
+      ],
+      "Mutato": [
+        "mutato.oralclinic"
+      ],
+      "CasaRex": [
+        "casarexdesign"
+      ],
+      "11:21": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -1129,7 +1146,39 @@
       "monksamsterdam": "2026-11-25T01:40:56.036558+00:00",
       "accenturesonguk": "2026-11-25T01:40:56.036558+00:00",
       "orbisagenciamx": "2026-11-25T01:41:55.685864+00:00",
-      "leoburnettmx": "2026-11-25T01:47:55.934851+00:00"
+      "leoburnettmx": "2026-11-25T01:47:55.934851+00:00",
+      "publicismexico": "2026-11-25T01:49:55.558588+00:00",
+      "dentsumexico": "2026-11-25T01:51:56.090070+00:00",
+      "jellyfishmexico": "2026-11-25T01:53:56.092430+00:00",
+      "edelmanmexico": "2026-11-25T01:55:56.215825+00:00",
+      "jellyfishlondon": "2026-11-25T01:56:56.325588+00:00",
+      "jellyfishparis": "2026-11-25T01:56:56.325588+00:00",
+      "jellyfishgermany": "2026-11-25T01:56:56.325588+00:00",
+      "edelmanfrance": "2026-11-25T01:56:56.325588+00:00",
+      "edelmangermany": "2026-11-25T01:56:56.325588+00:00",
+      "ketchumlondon": "2026-11-25T01:56:56.325588+00:00",
+      "fhillarduk": "2026-11-25T01:56:56.325588+00:00",
+      "bursonuk": "2026-11-25T01:56:56.325588+00:00",
+      "golinlondon": "2026-11-25T01:56:56.325588+00:00",
+      "speciallondon": "2026-11-25T01:56:56.325588+00:00",
+      "creaturelondon": "2026-11-25T01:56:56.325588+00:00",
+      "digitasuk": "2026-11-25T01:56:56.325588+00:00",
+      "omduk": "2026-11-25T01:56:56.325588+00:00",
+      "initiativeuk": "2026-11-25T01:56:56.325588+00:00",
+      "essencemediacomuk": "2026-11-25T01:56:56.325588+00:00",
+      "digitasmexico": "2026-11-25T01:57:56.189320+00:00",
+      "isobarmexico": "2026-11-25T01:59:55.697114+00:00",
+      "akqamexico": "2026-11-25T02:01:55.977167+00:00",
+      "hugemexico": "2026-11-25T02:03:55.910076+00:00",
+      "droga5mexico": "2026-11-25T02:05:55.438613+00:00",
+      "mullenlowemexico": "2026-11-25T02:09:55.587164+00:00",
+      "wearesocialuk": "2026-11-25T02:11:56.184526+00:00",
+      "wearesocialse": "2026-11-25T02:11:56.184526+00:00",
+      "wearesocialno": "2026-11-25T02:11:56.184526+00:00",
+      "wearesocialpl": "2026-11-25T02:11:56.184526+00:00",
+      "wearesocialch": "2026-11-25T02:11:56.184526+00:00",
+      "joepublicza": "2026-11-25T02:11:56.184526+00:00",
+      "vmlsa": "2026-11-25T02:17:55.837377+00:00"
     }
   },
   "vistos": [
@@ -1262,8 +1311,9 @@
     "https://www.bandt.com.au/boomtown-puts-274b-regional-spending-opportunity-in-front-of-advertisers",
     "https://www.bandt.com.au/white-claw-sparks-spontaneous-moments-with-travelling-phone-booth-activation-via-today-the-brave",
     "https://www.bandt.com.au/misleading-ads-are-a-cause-for-concern-clearads-launches-trust-mark-to-restore-trust-in-wave-of-ai-online-scams",
-    "https://www.bandt.com.au/teads-unifies-ctv-digital-buying-in-next-generation-of-ad-manager"
+    "https://www.bandt.com.au/teads-unifies-ctv-digital-buying-in-next-generation-of-ad-manager",
+    "https://campaignbrief.com/reminder-mad-hatterz-of-advertising-hat-exchange-hits-bodriggy-tomorrow-night-in-melbourne"
   ],
-  "ultima_rodada": "2026-11-25T01:47:55.934851+00:00",
+  "ultima_rodada": "2026-11-25T02:17:55.837377+00:00",
   "ultima_novidade": "2026-11-25T00:30:55.848391+00:00"
 }
