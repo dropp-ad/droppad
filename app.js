@@ -23,7 +23,7 @@
     var m = (u || "").match(/instagram\.com\/(p|reel|reels|tv)\/([\w-]+)/i);
     if (m) return { kind: "ig", id: m[2], reel: m[1].indexOf("reel") === 0, src: "https://www.instagram.com/" + (m[1].indexOf("reel") === 0 ? "reel" : m[1]) + "/" + m[2] + "/embed/?cr=1&v=14&wp=400" };
     m = (u || "").match(/tiktok\.com\/@[^/]+\/video\/(\d+)/i);
-    if (m) return { kind: "tt", id: m[1], src: "https://www.tiktok.com/player/v1/" + m[1] + "?autoplay=1&muted=1&loop=1&controls=1&description=0&music_info=0" };
+    if (m) return { kind: "tt", id: m[1], src: "https://www.tiktok.com/player/v1/" + m[1] + "?autoplay=0&muted=1&loop=1&controls=1&description=0&music_info=0" };
     return null;
   }
   function films(c) {
@@ -207,10 +207,86 @@
     var w = String(t).replace(/[^0-9A-Za-zÀ-ÿ ]/g, " ").trim().split(/\s+/);
     return ((w[0] || "").charAt(0) + (w[1] || "").charAt(0)).toUpperCase() || "•";
   }
-  function avatar(nome) {
+  /* Foto de perfil do post: a da agência (perfil do Instagram ou logo do site dela) e, se não
+     houver, a do veículo de onde a campanha veio. As iniciais só ficam se nenhuma imagem carregar. */
+  var AG_SITE = {
+    almapbbdo: "almapbbdo.com.br", vccp: "vccp.com", africacreative: "africacreative.com.br", ogilvy: "ogilvy.com",
+    tbwa: "tbwa.com", bbh: "bbh.co.uk", bbhlondon: "bbh.co.uk", galeria: "galeria.ag", wmccann: "wmccann.com",
+    mother: "motherlondon.com", adameve: "adamandeveddb.com", adameveddb: "adamandeveddb.com",
+    betc: "betc.com", betchavas: "betc.com", leo: "leoburnett.com", leouk: "leoburnett.co.uk", leoburnett: "leoburnett.com",
+    dpz: "dpz.com.br", crispin: "crispin.com", droga5: "droga5.com", mila: "mila.com.br", thinkerbell: "thinkerbell.com",
+    publicis: "publicis.com", publicisconseil: "publicisconseil.fr", publicisbrasil: "publicis.com.br",
+    howatsoncompany: "howatsoncompany.com", vml: "vml.com", vmlbrasil: "vml.com", clemengerbbdo: "clemengerbbdo.com.au",
+    anomaly: "anomaly.com", lolatbwa: "lolatbwa.com", artplan: "artplan.com.br", youdare: "youdare.com.br",
+    david: "davidtheagency.com", dentsucreative: "dentsucreative.com", dentsu: "dentsu.com", mccann: "mccann.com",
+    bbdo: "bbdo.com", bbdonewyork: "bbdo.com", impactbbdo: "impactbbdo.com", wpp: "wpp.com",
+    saatchisaatchi: "saatchi.com", idtbwa: "idtbwa.com", amvbbdo: "amvbbdo.com", highdive: "highdive.com",
+    calia: "calia.com.br", grey: "grey.com", greylondon: "grey.com", we: "agenciawe.com.br", bbdobelgium: "bbdo.be",
+    bearmeetseagleonfire: "bearmeetseagleonfire.com", boysgirls: "boysandgirls.ie", "72andsunny": "72andsunny.com",
+    newcommercialarts: "newcommercialarts.com", tp: "tandp.com.au", luckygenerals: "luckygenerals.com", dept: "deptagency.com",
+    thecommunity: "thecommunityagency.com", colensobbdo: "colensobbdo.co.nz", davidgoliath: "dng.com", propeg: "propeg.com.br",
+    w3haus: "w3haus.com.br", akcelo: "akcelo.com", gut: "gut.agency", goodbysilversteinpartners: "goodbysilverstein.com",
+    techandsoul: "techandsoul.com.br", orchard: "orchard.com.au", scholzfriends: "s-f.com", ampfy: "ampfy.com",
+    archertroy: "archertroy.com", ps21: "ps21.com.br", talented: "talented.agency", lepub: "lepub.com",
+    nova: "novasb.com.br", havas: "havas.com", havaslondon: "havaslondon.com", wieden: "wk.com", wiedenkennedy: "wk.com",
+    wk: "wk.com", fcb: "fcb.com", fcbbrasil: "fcb.com", fcbnewyork: "fcb.com", dm9: "dm9.com.br", soko: "soko.com.br",
+    jwt: "wundermanthompson.com", wundermanthompson: "wundermanthompson.com", ddb: "ddb.com", africa: "africacreative.com.br",
+    serviceplan: "serviceplan.com", mckinney: "mckinney.com", fallon: "fallon.com", jungvonmatt: "jvm.com",
+    rethink: "rethinkideas.com", johannesleonardo: "johannesleonardo.com", deutsch: "deutsch.com", alma: "almaad.com",
+    cheil: "cheil.com", innocean: "innocean.com", gutsaopaulo: "gut.agency", ogilvybrasil: "ogilvy.com.br"
+  };
+  function chave(t) {
+    return String(t || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/&/g, "").replace(/[^0-9a-z]/g, "");
+  }
+  function siteDaAgencia(ag) {
+    var k = chave(ag);
+    if (!k) return "";
+    if (AG_SITE[k]) return AG_SITE[k];
+    var best = "";
+    Object.keys(AG_SITE).forEach(function (n) { if (n.length >= 3 && k.indexOf(n) === 0 && n.length > best.length) best = n; });
+    return best ? AG_SITE[best] : "";
+  }
+  var igDe = null; // agência -> @ do Instagram, aprendido das próprias campanhas que vêm do Instagram
+  function handleDaAgencia(ag) {
+    if (!igDe) {
+      igDe = {};
+      state.items.forEach(function (x) {
+        var m = (x.source || "").match(/^Instagram\s*·\s*@([\w.]+)/i);
+        if (m && x.agency) igDe[chave(x.agency)] = m[1];
+      });
+    }
+    return igDe[chave(ag)] || "";
+  }
+  function hostDe(u) { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return ""; } }
+  function logoSite(host) {
+    return "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&size=128&url=https://" + host;
+  }
+  function fotosDoPerfil(c, ag) {
+    var out = [], m = (c.source || "").match(/^Instagram\s*·\s*@([\w.]+)/i);
+    var ig = m ? m[1] : (ag ? handleDaAgencia(ag) : "");
+    if (ig) out.push("https://unavatar.io/instagram/" + ig + "?fallback=false");
+    var site = ag ? siteDaAgencia(ag) : "";
+    if (site) out.push(logoSite(site));
+    var h = hostDe(c.url);
+    if (h && !/(^|\.)(instagram\.com|tiktok\.com|youtube\.com|youtu\.be|vimeo\.com)$/.test(h)) out.push(logoSite(h));
+    return out;
+  }
+  function avatar(nome, fotos) {
     var box = el("span", "av ini");
     box.setAttribute("aria-hidden", "true");
     box.textContent = iniciais(nome);
+    var i = 0;
+    (function tenta() {
+      if (i >= (fotos || []).length) return;
+      var im = new Image();
+      im.alt = ""; im.referrerPolicy = "no-referrer"; im.decoding = "async";
+      im.onload = function () {
+        if (im.naturalWidth < 24) { i++; tenta(); return; } // ícone minúsculo fica borrado: tenta o próximo
+        box.textContent = ""; box.classList.remove("ini"); box.appendChild(im);
+      };
+      im.onerror = function () { i++; tenta(); };
+      im.src = fotos[i];
+    })();
     return box;
   }
   function fraseDe(c) {
@@ -368,7 +444,7 @@
 
     // "Agência para Marca" (sem agência conhecida, só a marca); embaixo, o veículo
     var head = el("div", "head");
-    head.appendChild(avatar(ag || marca));
+    head.appendChild(avatar(ag || marca, fotosDoPerfil(c, ag)));
     var who = el("div", "who");
     var b = el("b", null, ag || marca);
     if (ag && marca && marca.toLowerCase() !== ag.toLowerCase()) {
@@ -384,8 +460,9 @@
     if (c.url) sm.appendChild(link("", bits.join(" · "), c.url)); else sm.textContent = bits.join(" · ");
     who.appendChild(sm);
     head.appendChild(who);
-    var pos = idxInDay + 1;
-    head.appendChild(el("span", "num", "Nº " + (pos < 10 ? "0" : "") + pos));
+    // no canto, a data da campanha (o ano só aparece se não for o atual)
+    head.appendChild(el("span", "num", (+c.date.slice(8, 10)) + " " + MESES[+c.date.slice(5, 7) - 1] +
+      (c.date.slice(0, 4) !== TODAY.slice(0, 4) ? " " + c.date.slice(0, 4) : "")));
     var mb = el("button", "more-btn");
     mb.type = "button";
     mb.setAttribute("aria-label", "Mais opções");
@@ -958,7 +1035,12 @@
   function pick() {
     var best = null, br = 0;
     ratios.forEach(function (r, m) { if (r > br) { br = r; best = m._art; } });
-    if (best && br >= 0.6) { if (!active || active.art !== best) activate(best, false); }
+    if (best && br >= 0.6) {
+      if (active && active.art === best) return;
+      // filme não toca sozinho: só começa quando a pessoa clica; rolar para outro post para o que tocava
+      if (best._c.fl.length) { if (active) deactivate(); paintChrome(best); }
+      else activate(best, false);
+    }
     else if (active && (ratios.get(active.art._media) || 0) < 0.3) deactivate();
   }
 
