@@ -16,7 +16,7 @@
       "mod": "Tue, 24 Nov 2026 22:45:02 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 02:36:57 GMT"
+      "mod": "Wed, 25 Nov 2026 06:37:11 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"0243fb0a63dd635b1ed6aab43c633f10\"",
@@ -45,15 +45,15 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"f3c43d4f9753b2af34af48fb4f3587c1\"",
-      "mod": "Wed, 25 Nov 2026 06:25:13 GMT"
+      "etag": "W/\"37a1d691d9e8e7cbc881281623306e9e\"",
+      "mod": "Wed, 25 Nov 2026 06:45:28 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 06:30:12 GMT"
+      "mod": "Wed, 25 Nov 2026 06:58:07 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"4c6a2b8df01245e1143af65643ac6e36\"",
-      "mod": "Wed, 25 Nov 2026 05:31:15 GMT"
+      "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
+      "mod": "Wed, 25 Nov 2026 06:55:22 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795581907-gzip\"",
@@ -79,7 +79,7 @@
       "mod": "Wed, 25 Nov 2026 00:46:19 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Wed, 25 Nov 2026 06:30:13 GMT"
+      "mod": "Wed, 25 Nov 2026 06:45:13 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"387f5a7ab5e799a8b3d6ef3c4309e52d\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 06:30:13 GMT"
+      "mod": "Wed, 25 Nov 2026 06:58:14 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"1ae220659a1341d38ae523b5b1f2d14e-gzip\"",
@@ -186,7 +186,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 102,
+  "yt_pos": 66,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -425,17 +425,25 @@
       "Bóia": "",
       "dentsu Brasil": "",
       "Havas Brasil": "",
-      "Monks Brasil": ""
+      "Monks Brasil": "",
+      "Accenture Song Brasil": "",
+      "Jellyfish Brasil": "",
+      "Ogilvy Health Brasil": "",
+      "Edelman Brasil": "",
+      "Ketchum Brasil": "",
+      "FleishmanHillard Brasil": "",
+      "Burson Brasil": "",
+      "Golin Brasil": ""
     },
     "tentadas": {
       "Zambezi": [
         "zmbz"
       ],
-      "Accenture Song Brasil": [
-        "accenturesongbrasil"
+      "S4 Capital Brasil": [
+        "s4capitalbrasil"
       ]
     },
-    "pos": 454,
+    "pos": 468,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -526,9 +534,15 @@
       "dentsu Brasil",
       "Havas Brasil",
       "Monks Brasil",
-      "Accenture Song Brasil"
+      "Accenture Song Brasil",
+      "Jellyfish Brasil",
+      "Ogilvy Health Brasil",
+      "Edelman Brasil",
+      "Ketchum Brasil",
+      "FleishmanHillard Brasil",
+      "Burson Brasil"
     ],
-    "rodadas": 826,
+    "rodadas": 854,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -922,7 +936,15 @@
       "dentsu Brasil": [],
       "Havas Brasil": [],
       "Monks Brasil": [],
-      "Accenture Song Brasil": []
+      "Accenture Song Brasil": [],
+      "Jellyfish Brasil": [],
+      "Ogilvy Health Brasil": [],
+      "Edelman Brasil": [],
+      "Ketchum Brasil": [],
+      "FleishmanHillard Brasil": [],
+      "Burson Brasil": [],
+      "Golin Brasil": [],
+      "S4 Capital Brasil": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -1610,6 +1632,6 @@
     "https://www.horizont.net/marketing/nachrichten/deutschlands-werbelieblinge-haribo-mcdonalds--co.-diese-spots-begeistern-die-deutschen-am-meisten-236702",
     "https://www.afaqs.com/news/advertising/v-guards-new-campaign-puts-household-wiring-heat-in-focus-12839667"
   ],
-  "ultima_rodada": "2026-11-25T06:30:10.506856+00:00",
+  "ultima_rodada": "2026-11-25T06:58:11.066785+00:00",
   "ultima_novidade": "2026-11-25T06:30:10.506856+00:00"
 }
