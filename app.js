@@ -138,6 +138,7 @@
     { nome: "EUA e Canadá", cc: ["US", "CA"] },
     { nome: "Europa", cc: ["GB", "IE", "FR", "DE", "ES", "PT", "IT", "NL", "SE", "NO", "DK", "FI", "PL", "BE", "CH", "AT", "CZ", "GR", "HU", "RO", "TR", "UA"], extra: ["Europa"] },
     { nome: "Ásia-Pacífico", cc: ["AU", "NZ", "IN", "SG", "JP", "KR", "CN", "HK", "TW", "TH", "MY", "ID", "PH", "VN", "PK", "BD", "LK"] },
+    { nome: "Oriente Médio e África", cc: ["AE", "SA", "QA", "KW", "BH", "OM", "EG", "ZA", "NG", "KE", "MA", "LB", "JO", "IL", "GH", "TZ", "ET", "DZ", "TN", "CI", "SN", "UG", "IQ", "IR", "RW", "AO", "MZ"] },
     { nome: "Global", cc: [] }
   ];
   /* país de quem entra: vira o destaque ao lado de "Mundo" */
@@ -1006,7 +1007,8 @@
         moreIO.observe(s);
       }
     } else {
-      feed.appendChild(el("p", "end", state.list.length ? "Você chegou ao início do arquivo." : "Nenhuma campanha com esse filtro."));
+      feed.appendChild(el("p", "end", state.list.length ? "Você chegou ao início do arquivo." :
+        state.region === "home" ? "Ainda não há campanhas de " + state.home.label + " no arquivo. Veja o Mundo." : "Nenhuma campanha com esse filtro."));
     }
   }
   // o país do visitante; se o arquivo não tiver nada de lá, vale a região (ex.: Ásia-Pacífico)
@@ -1014,7 +1016,8 @@
   function setHome(cc) {
     var has = state.items.some(function (c) { return c.cc === cc; });
     var reg = has ? "" : regiaoDoPais(cc);
-    state.home = { cc: cc, label: has || !reg ? countryName(cc) : reg, reg: reg };
+    // a aba sempre leva o nome do país; se ainda não houver campanha de lá, mostra a região dele
+    state.home = { cc: cc, label: countryName(cc), reg: reg };
   }
   function renderAll(skipMore) {
     closeMenu();
@@ -1053,7 +1056,8 @@
     box.textContent = "";
     if (sel) sel.textContent = "";
     var h = state.home;
-    var opts = [["", "Mundo"], ["home", h.label], ["Américas", "Américas"], ["Europa", "Europa"], ["Ásia", "Ásia"], ["hot", "🔥 Mais vistas"]];
+    // só duas abas: o mundo inteiro e o país de quem entra (EUA, Brasil, Japão…)
+    var opts = [["", "Mundo"], ["home", h.label]];
     opts.forEach(function (o) {
       var on = (state.region || "") === o[0];
       var b = el("button", null, o[0] === "hot" ? "🔥" : o[1]);
