@@ -1,0 +1,56 @@
+name: LinkedIn – teste Apify x Coresignal
+
+# Fase de teste: lê posts das páginas das agências no LinkedIn pelas duas fontes pagas e grava o
+# placar em robo/linkedin_teste.json. Não publica nada no site.
+# Roda 2x por dia (e quando quiser, em "Run workflow"). Cada fonte só roda se o secret dela existir:
+#   APIFY_TOKEN e CORESIGNAL_TOKEN (Settings → Secrets and variables → Actions).
+# Para desligar o teste: Actions → este workflow → ⋯ → Disable workflow.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "13 11,23 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: linkedin-teste
+  cancel-in-progress: false
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Ler o LinkedIn pelas duas fontes e gravar o placar
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          CORESIGNAL_TOKEN: ${{ secrets.CORESIGNAL_TOKEN }}
+        run: |
+          git config user.name "droppad robô"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python robo/linkedin_teste.py
+          cp robo/linkedin_teste.json /tmp/linkedin_teste.json
+          for tentativa in 1 2 3 4 5; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            cp /tmp/linkedin_teste.json robo/linkedin_teste.json
+            git add robo/linkedin_teste.json
+            if git diff --cached --quiet; then
+              echo "Nada novo."
+              exit 0
+            fi
+            git commit -q -m "Teste LinkedIn $(TZ=America/Sao_Paulo date '+%F %H:%M') (robô)"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push recusado; tentando de novo ($tentativa/5)."
+            sleep 5
+          done
+          exit 1
