@@ -188,7 +188,26 @@
 
   /* ---------- Estado ---------- */
   var state = { items: [], list: [], shown: 0, region: "", onlyFilms: false, perDay: {}, home: { cc: "BR", label: "Brasil" } };
-  var sound = false;
+  // som ligado por padrão; se o navegador bloquear áudio antes do primeiro toque,
+  // o filme toca mudo e o som entra no primeiro clique/toque/tecla na página
+  var sound = true, blocked = false, gestureAt = 0, unblockedAt = 0;
+  function paintSound() {
+    var on = sound && !blocked;
+    document.body.classList.toggle("sound-on", on);
+    var b = document.getElementById("sound");
+    if (b) b.setAttribute("aria-pressed", on ? "true" : "false");
+  }
+  function onFirstGesture() {
+    gestureAt = Date.now();
+    ["pointerdown", "touchstart", "keydown"].forEach(function (t) { document.removeEventListener(t, onFirstGesture, true); });
+    if (sound && blocked) { unblockedAt = Date.now(); setSound(true); }
+  }
+  ["pointerdown", "touchstart", "keydown"].forEach(function (t) { document.addEventListener(t, onFirstGesture, true); });
+  function fallbackMuted(mute, play) {
+    blocked = true;
+    try { mute(); play(); } catch (e) { /* nada */ }
+    paintSound();
+  }
 
   /* visualizações gravadas pelo robô (robo/views.py), para o modo 🔥 */
   var VIEWS = {};
@@ -305,11 +324,11 @@
         media.appendChild(dots);
       }
       media.addEventListener("click", function (e) {
-        if (e.target === mute) { mute.blur(); setSound(!sound); if (!(active && active.art === art)) activate(art, true); return; }
+        if (e.target === mute) { mute.blur(); setSound(Date.now() - unblockedAt < 1000 ? true : !sound); if (!(active && active.art === art)) activate(art, true); return; }
         if (art.classList.contains("is-vert") && active && active.art === art) return;
         if (art.classList.contains("ended")) return;
         if (art.classList.contains("failed")) { window.open("https://www.youtube.com/watch?v=" + c.fl[+art.dataset.part || 0].id, "_blank", "noopener"); return; }
-        if (active && active.art === art) { if (!sound) setSound(true); else togglePause(); }
+        if (active && active.art === art) { if (!sound || Date.now() - unblockedAt < 1000) setSound(true); else togglePause(); }
         else activate(art, true);
       });
     } else {
@@ -935,7 +954,17 @@
           host: "https://www.youtube-nocookie.com",
           playerVars: { autoplay: 1, mute: 1, controls: 1, rel: 0, playsinline: 1, modestbranding: 1, iv_load_policy: 3, fs: 1, cc_lang_pref: "pt", hl: "pt-BR" },
           events: {
-            onReady: function (e) { if (!alive()) return; if (sound) e.target.unMute(); else e.target.mute(); e.target.playVideo(); },
+            onReady: function (e) {
+              if (!alive()) return;
+              var pl = e.target;
+              pl.mute(); pl.playVideo();
+              if (!sound || blocked) return;
+              pl.unMute(); pl.playVideo();
+              if (!gestureAt) setTimeout(function () {
+                if (!alive() || gestureAt) return;
+                try { if (pl.getPlayerState() !== 1 || pl.isMuted()) fallbackMuted(function () { pl.mute(); }, function () { pl.playVideo(); }); } catch (err) { /* nada */ }
+              }, 1200);
+            },
             onStateChange: function (e) { if (e.data === 1) playing(); else if (e.data === 2) paused(); else if (e.data === 0) ended(); },
             onError: failed
           }
@@ -953,14 +982,21 @@
         if (!alive()) return;
         var p = new Vimeo.Player(slot, {
           url: "https://vimeo.com/" + f.id + (f.hash ? "/" + f.hash : ""),
-          autoplay: true, muted: !sound, loop: false, playsinline: true, controls: true, dnt: true, responsive: true, texttrack: "pt"
+          autoplay: true, muted: !(sound && !blocked && gestureAt), loop: false, playsinline: true, controls: true, dnt: true, responsive: true, texttrack: "pt"
         });
         me.player = p;
         p.on("play", playing);
         p.on("pause", paused);
         p.on("ended", ended);
         p.on("timeupdate", function (d) { if (alive()) art.querySelector(".bar i").style.width = (d.percent * 100) + "%"; });
-        p.ready().catch(failed);
+        p.ready().then(function () {
+          if (!sound || blocked || gestureAt) return;
+          p.setMuted(false).then(function () { return p.play(); }).catch(function () {});
+          setTimeout(function () {
+            if (!alive() || gestureAt) return;
+            p.getPaused().then(function (x) { if (x) fallbackMuted(function () { p.setMuted(true); }, function () { p.play().catch(function () {}); }); });
+          }, 1200);
+        }).catch(failed);
       }).catch(failed);
     }
   }
@@ -973,8 +1009,8 @@
   }
   function setSound(on) {
     sound = on;
-    document.body.classList.toggle("sound-on", on);
-    $("sound").setAttribute("aria-pressed", on ? "true" : "false");
+    blocked = false;
+    paintSound();
     if (!active || !active.player) return;
     try {
       if (active.kind === "yt") { if (on) active.player.unMute(); else active.player.mute(); active.player.playVideo(); }
@@ -1154,7 +1190,8 @@
   document.addEventListener("visibilitychange", function () { if (!document.hidden && Date.now() - lastCheck > 60 * 1000) pollNew(); });
 
   /* ---------- Início ---------- */
-  $("sound").addEventListener("click", function () { setSound(!sound); });
+  $("sound").addEventListener("click", function () { setSound(Date.now() - unblockedAt < 1000 ? true : !sound); });
+  paintSound();
   $("top").addEventListener("click", function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
   document.addEventListener("visibilitychange", function () {
     if (!active || !active.player) return;
