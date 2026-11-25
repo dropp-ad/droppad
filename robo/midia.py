@@ -15,6 +15,7 @@ import os
 import re
 import sys
 import urllib.parse
+import urllib.request
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
@@ -36,9 +37,58 @@ YT_ITEM = re.compile(r'"videoRenderer":\{"videoId":"([\w-]{11})".{0,1500}?"title
                      r'.{0,3000}?"ownerText":\{"runs":\[\{"text":"((?:[^"\\]|\\.)*)"', re.S)
 
 
-def _palavras(t):
-    return list(dict.fromkeys(w for w in re.findall(r"[a-z0-9]{6,}", A.sem_acento(t).lower()) if w not in
-            ("campanha", "campaign", "lancamento", "launch", "brasil", "agencia", "agency", "something", "chegada")))
+GENERICAS = set("""campanha campaign campana lancamento launch lanza lanca estrena estreia brasil agencia agency something
+chegada anunciar anuncia apresenta present presents nueva nuevo novo nova natal christmas holiday holidays navidad black
+friday semana weeks really celebra celebrates desenvolvida criada created""".split())
+
+
+def _palavras(t, marca=""):
+    """Palavras que identificam a campanha (6+ letras), sem a marca e sem palavras genéricas."""
+    tirar = set(re.findall(r"[a-z0-9]+", A.sem_acento(marca).lower()))
+    return list(dict.fromkeys(w for w in re.findall(r"[a-z0-9]{6,}", A.sem_acento(t).lower())
+                              if w not in GENERICAS and w not in tirar))
+
+
+def _tem_marca(marca, texto):
+    """A marca como palavra inteira (Subway não casa com "Subway Surfers"... mas casa com "Subway")."""
+    m = re.escape(A.sem_acento(marca).lower()).replace(r"\ ", r"[\s\-]*")
+    return re.search(r"(?<![a-z0-9])" + m + r"(?![a-z0-9])", A.sem_acento(texto).lower()) is not None
+
+
+def _nome_entre_aspas(c):
+    q = re.search(r"[“\"«‘']([^”\"»’']{4,60})[”\"»’']", c.get("title", "") + " " + c.get("summary", ""))
+    return q.group(1) if q else ""
+
+
+def bate_com_a_campanha(c, texto):
+    """O texto (título de vídeo ou de matéria) fala desta campanha? Marca como palavra inteira E um sinal forte:
+    agência, nome da campanha entre aspas, ou duas palavras específicas do título."""
+    if not _tem_marca(c["brand"], texto):
+        return False
+    t = A.sem_acento(texto).lower()
+    ag = A.chave(c.get("agency", ""))
+    if len(ag) >= 4 and ag in A.chave(texto):
+        return True
+    nome = _nome_entre_aspas(c)
+    if nome and A.chave(nome) in A.chave(texto):
+        return True
+    iguais = sum(1 for w in _palavras(c.get("title", "") + " " + c.get("summary", ""), c["brand"]) if w in t)
+    if iguais >= 2:
+        return True
+    # um nome próprio da campanha (celebridade, personagem, produto) também vale: "Ary Fontoura", "Philly"
+    return any(n in t for n in _nomes_proprios(c))
+
+
+def _nomes_proprios(c):
+    tirar = set(re.findall(r"[a-z0-9]+", A.sem_acento(c["brand"]).lower())) | GENERICAS
+    out = []
+    for txt in (c.get("title", ""), c.get("summary", "")):
+        palavras = re.findall(r"[\wÀ-ÿ’'&]+", txt)
+        for i, w in enumerate(palavras):
+            k = A.sem_acento(w).lower()
+            if i > 0 and w[:1].isupper() and len(k) >= 5 and k not in tirar and k.isalpha():
+                out.append(k)
+    return out
 
 
 UI_YT = re.compile(r"^(adicionar à fila|add to queue|enviar feedback|send feedback|assistir mais tarde|watch later|compartilhar|share|novo|new|"
@@ -73,8 +123,6 @@ def _videos_da_busca(pag):
 def buscar_youtube(c):
     """Procura o filme no YouTube (busca do próprio site, vídeos do último mês). Só aceita vídeo cujo título ou
     canal tenha a marca E mais um sinal da campanha (agência, palavra do título ou canal oficial da marca)."""
-    marca, ag = A.chave(c["brand"]), A.chave(c.get("agency", ""))
-    chaves_titulo = _palavras(c["title"])
     for q in ("%s %s" % (c["brand"], c["title"][:60]), "%s %s" % (c["brand"], c.get("agency", "")),
               "%s campanha" % c["brand"]):
         url = "https://www.youtube.com/results?" + urllib.parse.urlencode({"search_query": q, "sp": "EgIIBA=="})
@@ -86,13 +134,8 @@ def buscar_youtube(c):
         achados = _videos_da_busca(pag)
         log("  youtube:", q[:60], "| vídeos", len(achados), "|", " / ".join(t[:40] for _, t, _ in achados[:4]))
         for vid, titulo, resto in achados[:10]:
-            tudo = A.chave(titulo + " " + resto)
-            if marca not in A.chave(titulo) and marca not in A.chave(resto[:80]):
-                continue
-            # sinal forte: o nome da agência, ou duas palavras do título da campanha no título do vídeo
-            iguais = sum(1 for w in chaves_titulo if w in A.sem_acento(titulo).lower())
-            sinal = (ag and len(ag) >= 4 and ag in tudo) or iguais >= 2
-            if sinal:
+            canal = resto.split("  ")[0][:60]
+            if bate_com_a_campanha(c, titulo) or (bate_com_a_campanha(c, titulo + " " + canal) and _tem_marca(c["brand"], titulo)):
                 log("  + youtube:", vid, "|", titulo)
                 return [vid]
     return []
@@ -100,7 +143,6 @@ def buscar_youtube(c):
 
 def buscar_noticias(c):
     """Matérias sobre a campanha (Bing News, última semana): filme embutido e foto de capa."""
-    marca, ag = A.chave(c["brand"]), A.chave(c.get("agency", ""))
     try:
         itens = A.buscar_bing('"%s" %s' % (c["brand"], c.get("agency", "").replace("&", "and")))
     except Exception as e:  # noqa: BLE001
@@ -114,23 +156,35 @@ def buscar_noticias(c):
             return [], "", ""
     yts, video, img = [], "", ""
     log("  bing:", c["brand"], "|", len(itens), "matérias |", " / ".join(i.get("titulo", "")[:40] for i in itens[:3]))
-    for it in itens[:5]:
-        if marca not in A.chave(it.get("titulo", "") + " " + it.get("resumo", "")):
+    for it in itens[:6]:
+        if not bate_com_a_campanha(c, it.get("titulo", "") + " " + it.get("resumo", "")[:300]):
             continue
         try:
-            pag = A.baixar(it["link"], timeout=20)
+            pag = baixar(it["link"])
         except Exception:  # noqa: BLE001
             continue
-        if ag and ag not in A.chave(A.limpar(pag)[:60000]):
-            continue  # a matéria tem que falar da agência também (senão é outra campanha da marca)
-        miolo = A.corpo_da_materia(pag)
-        y, v = A.filmes_de(miolo)
-        img = img or A.imagem_de(pag, it["link"])
+        y, v = A.filmes_de(A.corpo_da_materia(pag))
+        img = img or boa_imagem(A.imagem_de(pag, it["link"]))
+        log("  + matéria da campanha:", it["link"])
         if y or v:
-            log("  + matéria com filme:", it["link"])
             return y, v, img
-        yts = yts or y
     return yts, video, img
+
+
+NAVEGADOR = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+             "Chrome/131.0.0.0 Safari/537.36")
+
+
+def baixar(url):
+    """Como A.baixar, mas com cara de navegador (vários sites de notícia barram robôs com 403)."""
+    req = urllib.request.Request(url, headers={"User-Agent": NAVEGADOR, "Accept": "text/html,*/*",
+                                               "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8,es;q=0.7"})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        return r.read(3_000_000).decode(r.headers.get_content_charset() or "utf-8", "replace")
+
+
+def boa_imagem(u):
+    return "" if not u or re.search(r"empty|blank|placeholder|default|logo|no-image|sem-imagem", u, re.I) else u
 
 
 def da_materia(c):
@@ -139,12 +193,12 @@ def da_materia(c):
     if not u.startswith("http") or "linkedin.com" in u:
         return [], "", ""
     try:
-        pag = A.baixar(u, timeout=20)
+        pag = baixar(u)
     except Exception as e:  # noqa: BLE001
         log("  matéria falhou:", u, e)
         return [], "", ""
     y, v = A.filmes_de(A.corpo_da_materia(pag))
-    img = A.imagem_de(pag, u)
+    img = boa_imagem(A.imagem_de(pag, u))
     if not img:
         fotos = A.fotos_de(pag, u, 1, c.get("date"))
         img = fotos[0] if fotos else ""
