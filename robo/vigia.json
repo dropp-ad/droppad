@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 08:00:59 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 09:16:24 GMT"
+      "mod": "Wed, 25 Nov 2026 09:38:23 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
@@ -67,8 +67,8 @@
       "mod": "Wed, 25 Nov 2026 09:05:49 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
-      "etag": "\"8532e93b82249909d4836ef6209eccce\"",
-      "mod": "Wed, 25 Nov 2026 09:06:48 GMT"
+      "etag": "\"5a730d5ce43d554b4ab3a881067123ae\"",
+      "mod": "Wed, 25 Nov 2026 09:23:55 GMT"
     },
     "https://campaignbrief.com/feed/": {
       "etag": "\"c299cfb2cbb3f343da3116d9ff159ff1\"",
@@ -79,7 +79,7 @@
       "mod": "Wed, 25 Nov 2026 00:46:19 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Wed, 25 Nov 2026 09:10:25 GMT"
+      "mod": "Wed, 25 Nov 2026 09:31:25 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"404da0c5daf43a17d66a6e6193e5de2a\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 09:16:25 GMT"
+      "mod": "Wed, 25 Nov 2026 09:38:25 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"537f05ef8d94c21c89a5b83c9d34f285-gzip\"",
-      "mod": "Wed, 25 Nov 2026 09:08:01 GMT"
+      "etag": "W/\"17d7bf695fdda57e21bd193690ad7293-gzip\"",
+      "mod": "Wed, 25 Nov 2026 09:33:02 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -132,7 +132,7 @@
       "mod": "Wed, 25 Nov 2026 04:44:32 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 09:10:54 GMT"
+      "mod": "Wed, 25 Nov 2026 09:15:31 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"fc116bded8fbc36b69abc5cba6644857\"",
@@ -197,10 +197,10 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 09:16:25 GMT"
+      "mod": "Wed, 25 Nov 2026 09:38:25 GMT"
     }
   },
-  "yt_pos": 101,
+  "yt_pos": 97,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -538,10 +538,31 @@
       "Sukle": "sukle_advertising",
       "Cactus": "cactusdenver",
       "Vladimir Jones": "vladimir_jones",
-      "Karsh Hagan": ""
+      "Cultivator": "cultivatorads",
+      "Karsh Hagan": "",
+      "Fact & Fiction": "fact.and.fiction",
+      "Doner": "doner_agency",
+      "Lafayette American": "lafayetteamerican",
+      "Commonwealth//McCann": "commonwealthmccann",
+      "MRM": "global_mrm",
+      "Campbell Ewald": "campbellewald",
+      "Design Army": "designarmy",
+      "GMMB": "gmmb",
+      "HZ": "hzdg",
+      "RP3 Agency": "rp3agency",
+      "MDB Communications": "",
+      "Yes&": "yesandagency",
+      "Social Driver": "socialdriver",
+      "Red Tettemer O'Connell + Partners": "redtettemer",
+      "Brownstein Group": "brownsteingroup",
+      "Tierney": "carmichael_lynch",
+      "160over90": "160over90",
+      "Vault Communications": "vaultcomm",
+      "GS&F": "gsandf",
+      "Bohan": ""
     },
     "tentadas": {},
-    "pos": 537,
+    "pos": 548,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -657,9 +678,11 @@
       "Door No. 3",
       "T3",
       "TRG",
-      "Zubi"
+      "Zubi",
+      "Karsh Hagan",
+      "MDB Communications"
     ],
-    "rodadas": 992,
+    "rodadas": 1014,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1270,6 +1293,61 @@
       ],
       "Vladimir Jones": [
         "vladimir_jones"
+      ],
+      "Cultivator": [
+        "cultivatorads"
+      ],
+      "Fact & Fiction": [
+        "fact.and.fiction"
+      ],
+      "Doner": [
+        "doner_agency"
+      ],
+      "Commonwealth//McCann": [
+        "mccann_mw"
+      ],
+      "Lafayette American": [
+        "lafayetteamerican"
+      ],
+      "MRM": [
+        "global_mrm"
+      ],
+      "Campbell Ewald": [],
+      "Design Army": [
+        "designarmy"
+      ],
+      "GMMB": [
+        "gmmb"
+      ],
+      "MDB Communications": [],
+      "HZ": [],
+      "RP3 Agency": [
+        "rp3agency"
+      ],
+      "Yes&": [],
+      "Social Driver": [
+        "socialdriver"
+      ],
+      "Red Tettemer O'Connell + Partners": [
+        "redtettemer"
+      ],
+      "Brownstein Group": [
+        "brownsteingroup"
+      ],
+      "Tierney": [
+        "carmichael_lynch"
+      ],
+      "160over90": [
+        "160over90"
+      ],
+      "Vault Communications": [
+        "vaultcomm"
+      ],
+      "Bohan": [
+        "bohanideas"
+      ],
+      "GS&F": [
+        "gsandf"
       ]
     },
     "mortas": {
@@ -1966,6 +2044,6 @@
     "https://www.horizont.net/marketing/haribo-mcdonalds-co.-diese-spots-begeistern-die-deutschen-am-meisten-664206",
     "https://www.meioemensagem.com.br/marketing/com-historico-de-parceria-avon-estara-no-filme-de-marta"
   ],
-  "ultima_rodada": "2026-11-25T09:16:21.171289+00:00",
+  "ultima_rodada": "2026-11-25T09:38:20.876498+00:00",
   "ultima_novidade": "2026-11-25T09:16:21.171289+00:00"
 }
