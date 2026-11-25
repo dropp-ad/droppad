@@ -324,12 +324,11 @@
     var h = +box.dataset.h || (box.dataset.reel ? IG_H_REEL : IG_H), w = media.clientWidth, bh = media.clientHeight;
     if (!w || !bh) return;
     box.style.setProperty("--igh", h + "px");
-    var s;
-    if (CELULAR.matches) {
-      s = Math.min(1, w / IG_W); // largura toda da tela; o quadro cresce na altura do post
-      var alt = Math.round(h * s) + "px";
-      if (media.style.height !== alt) media.style.height = alt;
-    } else s = Math.min(1, bh / h, w / IG_W);
+    // o quadro fica da altura do post do Instagram (sem faixas em cima/embaixo e sem cortar o rodapé);
+    // no celular ocupa a largura toda, no computador cabe em 80% da altura da tela
+    var s = CELULAR.matches ? Math.min(1, w / IG_W) : Math.min(1, w / IG_W, (window.innerHeight * 0.8) / h);
+    var alt = Math.round(h * s) + "px";
+    if (media.style.height !== alt) media.style.height = alt;
     box.style.transform = "translate(-50%,-50%) scale(" + s.toFixed(4) + ")";
   }
   function fitIG(media) {
@@ -684,7 +683,7 @@
   function closeMenu() { if (menu) { menu.remove(); menu = null; } }
   document.addEventListener("click", function (e) { if (menu && !menu.contains(e.target)) closeMenu(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeMenu(); closeComments(); } });
-  window.addEventListener("scroll", closeMenu, { passive: true });
+  window.addEventListener("scroll", function () { if (menu && !menu._form) closeMenu(); }, { passive: true });
   function share(c, btn) {
     if (menu && menu._for === btn) { closeMenu(); return; }
     closeMenu();
@@ -723,17 +722,18 @@
 
   /* ---------- Contato: menu ao lado do calendário, na língua do país de quem entra ---------- */
   var CONTATO_EMAIL = "contato@dropp.ad";
+  // [botão, pauta, comercial, sugestões, seu e-mail, mensagem, enviar, enviado, erro, e-mail inválido]
   var CONTATO_TXT = {
-    pt: ["Contato", "Sugerir pauta", "Comercial", "Sugestões"],
-    en: ["Contact", "Suggest a story", "Business", "Feedback"],
-    es: ["Contacto", "Sugerir una noticia", "Comercial", "Sugerencias"],
-    fr: ["Contact", "Proposer un sujet", "Commercial", "Suggestions"],
-    de: ["Kontakt", "Thema vorschlagen", "Geschäftliches", "Vorschläge"],
-    it: ["Contatti", "Suggerisci una notizia", "Commerciale", "Suggerimenti"],
-    nl: ["Contact", "Onderwerp voorstellen", "Zakelijk", "Suggesties"],
-    ja: ["お問い合わせ", "ネタを提案する", "広告・提携", "ご意見"],
-    ko: ["문의", "기사 제보", "비즈니스 문의", "제안"],
-    zh: ["联系", "提供选题", "商务合作", "建议"]
+    pt: ["Contato", "Sugerir pauta", "Comercial", "Sugestões", "Seu e-mail", "Escreva sua mensagem…", "Enviar", "Mensagem enviada. Obrigado!", "Não deu para enviar. Tente de novo.", "Confira o seu e-mail."],
+    en: ["Contact", "Suggest a story", "Business", "Feedback", "Your email", "Write your message…", "Send", "Message sent. Thank you!", "Couldn't send it. Please try again.", "Please check your email."],
+    es: ["Contacto", "Sugerir una noticia", "Comercial", "Sugerencias", "Tu correo", "Escribe tu mensaje…", "Enviar", "Mensaje enviado. ¡Gracias!", "No se pudo enviar. Inténtalo de nuevo.", "Revisa tu correo."],
+    fr: ["Contact", "Proposer un sujet", "Commercial", "Suggestions", "Votre e-mail", "Écrivez votre message…", "Envoyer", "Message envoyé. Merci !", "Échec de l'envoi. Réessayez.", "Vérifiez votre e-mail."],
+    de: ["Kontakt", "Thema vorschlagen", "Geschäftliches", "Vorschläge", "Ihre E-Mail", "Ihre Nachricht…", "Senden", "Nachricht gesendet. Danke!", "Senden fehlgeschlagen. Bitte erneut versuchen.", "Bitte E-Mail prüfen."],
+    it: ["Contatti", "Suggerisci una notizia", "Commerciale", "Suggerimenti", "La tua e-mail", "Scrivi il tuo messaggio…", "Invia", "Messaggio inviato. Grazie!", "Invio non riuscito. Riprova.", "Controlla la tua e-mail."],
+    nl: ["Contact", "Onderwerp voorstellen", "Zakelijk", "Suggesties", "Je e-mail", "Schrijf je bericht…", "Versturen", "Bericht verstuurd. Bedankt!", "Versturen mislukt. Probeer opnieuw.", "Controleer je e-mail."],
+    ja: ["お問い合わせ", "ネタを提案する", "広告・提携", "ご意見", "メールアドレス", "メッセージを入力…", "送信", "送信しました。ありがとうございます！", "送信できませんでした。もう一度お試しください。", "メールアドレスをご確認ください。"],
+    ko: ["문의", "기사 제보", "비즈니스 문의", "제안", "이메일", "메시지를 입력하세요…", "보내기", "전송되었습니다. 감사합니다!", "전송하지 못했습니다. 다시 시도해 주세요.", "이메일을 확인해 주세요."],
+    zh: ["联系", "提供选题", "商务合作", "建议", "你的邮箱", "写下你的留言…", "发送", "已发送，谢谢！", "发送失败，请重试。", "请检查邮箱地址。"]
   };
   var LINGUA_DO_PAIS = {
     pt: "BR PT AO MZ CV GW ST TL", es: "ES MX AR CO CL PE VE EC GT CU BO DO HN PY SV NI CR PA UY PR GQ",
@@ -759,20 +759,63 @@
     if (menu && menu._for === btn) { closeMenu(); return; }
     closeMenu();
     var t = CONTATO_TXT[linguaContato()];
+    var lang = linguaContato();
     menu = el("div", "sharemenu contatomenu");
     menu._for = btn;
-    menu.setAttribute("role", "menu");
-    [t[1], t[2], t[3]].forEach(function (label) {
-      var a = el("a", "shareitem", label);
-      a.setAttribute("role", "menuitem");
-      a.href = "mailto:" + CONTATO_EMAIL + "?subject=" + encodeURIComponent("droppad · " + label);
-      a.addEventListener("click", function () { setTimeout(closeMenu, 0); });
-      menu.appendChild(a);
+    menu._form = true; // rolar a página (ex.: teclado do celular subindo) não fecha a caixa
+    menu.setAttribute("role", "dialog");
+    menu.setAttribute("aria-label", t[0]);
+    menu.addEventListener("click", function (e) { e.stopPropagation(); });
+    // abas: pauta, comercial, sugestões
+    var tipos = ["pauta", "comercial", "sugestao"], tipo = "pauta";
+    var abas = el("div", "ct-abas");
+    tipos.forEach(function (k, i) {
+      var b = el("button", "ct-aba", t[i + 1]); b.type = "button";
+      b.setAttribute("aria-pressed", k === tipo ? "true" : "false");
+      b.addEventListener("click", function () {
+        tipo = k;
+        abas.querySelectorAll(".ct-aba").forEach(function (x, j) { x.setAttribute("aria-pressed", tipos[j] === k ? "true" : "false"); });
+        msg.focus();
+      });
+      abas.appendChild(b);
     });
+    menu.appendChild(abas);
+    var form = el("form", "ct-form");
+    form.noValidate = true;
+    var mail = el("input", "ct-in");
+    mail.type = "email"; mail.placeholder = t[4]; mail.setAttribute("aria-label", t[4]);
+    mail.autocomplete = "email"; mail.maxLength = 200; mail.required = true;
+    var msg = el("textarea", "ct-in ct-msg");
+    msg.placeholder = t[5]; msg.setAttribute("aria-label", t[5]); msg.maxLength = 2000; msg.rows = 5; msg.required = true;
+    var mel = el("input", "ct-mel"); // armadilha para robôs: gente não vê nem preenche
+    mel.tabIndex = -1; mel.autocomplete = "off"; mel.setAttribute("aria-hidden", "true");
+    var env = el("button", "ct-send", t[6]); env.type = "submit";
+    var aviso = el("p", "ct-aviso"); aviso.setAttribute("role", "status");
+    form.appendChild(mail); form.appendChild(msg); form.appendChild(mel); form.appendChild(env); form.appendChild(aviso);
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var em = mail.value.trim(), tx = msg.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)) { aviso.textContent = t[9]; mail.focus(); return; }
+      if (!tx) { msg.focus(); return; }
+      if (mel.value) { closeMenu(); toast(t[7]); return; }
+      env.disabled = true; aviso.textContent = "";
+      fetch(SUPABASE_URL + "/rest/v1/contacts", {
+        method: "POST",
+        headers: { apikey: SUPABASE_KEY, "Content-Type": "application/json", Prefer: "return=minimal" },
+        body: JSON.stringify({ kind: tipo, email: em, message: tx, lang: lang, country: (paisVisita || "").slice(0, 2) || null })
+      }).then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        closeMenu(); toast(t[7]);
+      }).catch(function () { env.disabled = false; aviso.textContent = t[8]; });
+    });
+    menu.appendChild(form);
     document.body.appendChild(menu);
-    var r = btn.getBoundingClientRect(), w = menu.offsetWidth;
-    menu.style.top = (r.bottom + 8) + "px";
-    menu.style.left = Math.max(12, Math.min(window.innerWidth - w - 12, r.right - w)) + "px";
+    if (!CELULAR.matches) {
+      var r = btn.getBoundingClientRect(), w = menu.offsetWidth;
+      menu.style.top = (r.bottom + 8) + "px";
+      menu.style.left = Math.max(12, Math.min(window.innerWidth - w - 12, r.right - w)) + "px";
+    }
+    setTimeout(function () { mail.focus(); }, 50);
   }
   if ($("contato")) $("contato").addEventListener("click", function (e) { e.stopPropagation(); abrirContato($("contato")); });
   pintarContato();
