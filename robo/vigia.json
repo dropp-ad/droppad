@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 03:00:12 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 03:32:11 GMT"
+      "mod": "Wed, 25 Nov 2026 03:58:12 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"f75c32e3d87e9cc4776fed7485a49173\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 03:32:12 GMT"
+      "mod": "Wed, 25 Nov 2026 03:58:13 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"cef09529ecbc2f5e63980d7e21abe9b8-gzip\"",
-      "mod": "Wed, 25 Nov 2026 03:18:01 GMT"
+      "etag": "W/\"5c07fc44b75bb8e96c59aa68e8c9d2e7-gzip\"",
+      "mod": "Wed, 25 Nov 2026 03:51:36 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -184,9 +184,12 @@
     "https://bruketa-zinic.com/feed/": {
       "etag": "\"5b10a6b158834169546a0780b1fe9526\"",
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
+    },
+    "https://www.marketingdirecto.com/rss": {
+      "mod": "Tue, 24 Nov 2026 16:23:42 GMT"
     }
   },
-  "yt_pos": 91,
+  "yt_pos": 68,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -399,17 +402,22 @@
       "Binder": "binder",
       "Calia": "",
       "NovaSB": "novagencia.ag",
-      "Eyxo": ""
+      "Eyxo": "",
+      "We": "agenciawe"
     },
     "tentadas": {
       "Zambezi": [
         "zmbz"
       ],
-      "We": [
-        "weagencia"
+      "Bolt Brasil": [
+        "bolt.brasil",
+        "boltbr",
+        "bolt_brasil",
+        "boltbrasil",
+        "boltbrasilagency"
       ]
     },
-    "pos": 365,
+    "pos": 378,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -479,9 +487,10 @@
       "LiveAD",
       "11:21",
       "Calia",
-      "Eyxo"
+      "Eyxo",
+      "Bolt Brasil"
     ],
-    "rodadas": 648,
+    "rodadas": 674,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -847,7 +856,8 @@
         "novagencia.ag"
       ],
       "Eyxo": [],
-      "We": []
+      "We": [],
+      "Bolt Brasil": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -1316,7 +1326,40 @@
       "swingmediamarketing": "2026-11-25T03:28:09.632568+00:00",
       "agenciaseomonterrey": "2026-11-25T03:28:09.632568+00:00",
       "ogilvymexico": "2026-11-25T03:28:09.632568+00:00",
-      "vmlmexico": "2026-11-25T03:28:09.632568+00:00"
+      "vmlmexico": "2026-11-25T03:28:09.632568+00:00",
+      "iprospectmexico": "2026-11-25T03:44:09.619911+00:00",
+      "accenturesongmx": "2026-11-25T03:44:09.619911+00:00",
+      "webershandwickmx": "2026-11-25T03:44:09.619911+00:00",
+      "ketchummexico": "2026-11-25T03:44:09.619911+00:00",
+      "fhillardmexico": "2026-11-25T03:44:09.619911+00:00",
+      "bursonmexico": "2026-11-25T03:44:09.619911+00:00",
+      "golinmexico": "2026-11-25T03:44:09.619911+00:00",
+      "havasmediamexico": "2026-11-25T03:44:09.619911+00:00",
+      "caratmexico": "2026-11-25T03:44:09.619911+00:00",
+      "mindsharemexico": "2026-11-25T03:44:09.619911+00:00",
+      "wavemakermexico": "2026-11-25T03:44:09.619911+00:00",
+      "essencemediacommx": "2026-11-25T03:44:09.619911+00:00",
+      "omdmexico": "2026-11-25T03:44:09.619911+00:00",
+      "phdmexico": "2026-11-25T03:44:09.619911+00:00",
+      "initiativemexico": "2026-11-25T03:44:09.619911+00:00",
+      "starcommexico": "2026-11-25T03:44:09.619911+00:00",
+      "sparkfoundrymx": "2026-11-25T03:44:09.619911+00:00",
+      "razorfishmx": "2026-11-25T03:44:09.619911+00:00",
+      "merklemexico": "2026-11-25T03:44:09.619911+00:00",
+      "fcbmexico": "2026-11-25T03:44:09.619911+00:00",
+      "saatchimexico": "2026-11-25T03:44:09.619911+00:00",
+      "bbdomexico": "2026-11-25T03:44:09.619911+00:00",
+      "wearesocialmx": "2026-11-25T03:44:09.619911+00:00",
+      "viralnationmx": "2026-11-25T03:44:09.619911+00:00",
+      "jellysmackmx": "2026-11-25T03:44:09.619911+00:00",
+      "storytalentmx": "2026-11-25T03:44:09.619911+00:00",
+      "kingjamesza": "2026-11-25T03:44:09.619911+00:00",
+      "ivorybrands": "2026-11-25T03:44:09.619911+00:00",
+      "nativevml": "2026-11-25T03:44:09.619911+00:00",
+      "clockworkza": "2026-11-25T03:44:09.619911+00:00",
+      "fcbafrica": "2026-11-25T03:44:09.619911+00:00",
+      "havasza": "2026-11-25T03:44:09.619911+00:00",
+      "publicisafrica": "2026-11-25T03:44:09.619911+00:00"
     }
   },
   "vistos": [
@@ -1456,6 +1499,6 @@
     "https://www.thestable.com.au/pearler-realises-theres-one-place-young-people-cant-scroll-past-advertising",
     "https://www.medianews4u.com/giraffe-advertising-marks-21-years-expands-into-hospitality-entertainment-and-real-estate"
   ],
-  "ultima_rodada": "2026-11-25T03:32:09.515305+00:00",
+  "ultima_rodada": "2026-11-25T03:58:09.455188+00:00",
   "ultima_novidade": "2026-11-25T03:32:09.515305+00:00"
 }
