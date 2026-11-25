@@ -1,13 +1,20 @@
 """Teste lado a lado de duas fontes pagas de posts do LinkedIn (Apify/HarvestAPI e Coresignal).
 
-Fase de teste: NÃO publica nada no site. A cada rodada lê os posts recentes das páginas das
-agências nas duas fontes, passa pelos mesmos filtros do robô (só campanha, nada institucional)
-e grava o placar em robo/linkedin_teste.json: quantos posts cada fonte trouxe, quantos viraram
-campanha, quantas campanhas só uma delas achou, com que atraso, e quanto custou.
+Fase de teste: NÃO publica nada no site. Cobre TODAS as agências do robô (lista do Pedro +
+agências cadastradas, ~1.000), em rodízio: cada rodada pega uma fatia da lista e continua de onde
+parou na seguinte. Para cada agência da fatia, três buscas:
+  1. posts da página da empresa no LinkedIn;
+  2. posts de qualquer pessoa que cite a agência junto de palavras de campanha
+     (quem trabalha nela, clientes, imprensa);
+  3. (Coresignal) posts de funcionários da agência.
+Tudo passa pelos mesmos filtros do robô (só campanha, nada institucional) e o placar vai para
+robo/linkedin_teste.json: posts e campanhas por fonte e por tipo de busca, o que só uma das fontes
+achou, atraso e custo.
 
 Cada fonte só roda se o token dela existir (secrets APIFY_TOKEN e CORESIGNAL_TOKEN).
-Tetos de gasto por rodada: APIFY_MAX_POSTS (padrão 120 posts ≈ US$ 0,24) e
-CORESIGNAL_MAX_COLETAS (padrão 40 créditos).
+Tetos por rodada (variáveis de ambiente): APIFY_EMPRESAS (padrão 150 páginas × 3 posts),
+APIFY_BUSCAS (padrão 60 buscas × 5 posts) → no máximo ~US$ 1,50 por rodada;
+CORESIGNAL_AGENCIAS (padrão 150 buscas, que são grátis) e CORESIGNAL_COLETAS (padrão 60 créditos).
 """
 import collections
 import datetime as dt
@@ -25,20 +32,21 @@ import atualizar as A  # noqa: E402  (filtros e utilidades do robô principal)
 
 SAIDA = os.path.join(AQUI, "linkedin_teste.json")
 AGORA = dt.datetime.now(dt.timezone.utc)
-ONTEM = (AGORA - dt.timedelta(days=2)).date().isoformat()  # janela de 2 dias
-N_AGENCIAS = int(os.environ.get("LI_AGENCIAS", "40"))
-APIFY_POR_AGENCIA = int(os.environ.get("APIFY_POR_AGENCIA", "3"))
-APIFY_MAX_POSTS = int(os.environ.get("APIFY_MAX_POSTS", "120"))
-CS_MAX_COLETAS = int(os.environ.get("CORESIGNAL_MAX_COLETAS", "40"))
+DESDE = (AGORA - dt.timedelta(days=2)).date().isoformat()  # janela de 2 dias
+ENV = lambda k, p: int(os.environ.get(k, p))  # noqa: E731
+APIFY_EMPRESAS, APIFY_POR_EMPRESA = ENV("APIFY_EMPRESAS", "150"), ENV("APIFY_POR_EMPRESA", "3")
+APIFY_BUSCAS, APIFY_POR_BUSCA = ENV("APIFY_BUSCAS", "60"), ENV("APIFY_POR_BUSCA", "5")
+CS_AGENCIAS, CS_COLETAS = ENV("CORESIGNAL_AGENCIAS", "150"), ENV("CORESIGNAL_COLETAS", "60")
+PALAVRAS = "(campaign OR campanha OR campaña OR campagne OR film OR filme OR spot OR commercial)"
 
 
 def log(*a):
     print(*a, flush=True)
 
 
-def pedir(url, dados=None, cab=None, metodo=None, tempo=300):
+def pedir(url, dados=None, cab=None, tempo=300):
     corpo = json.dumps(dados).encode() if dados is not None else None
-    req = urllib.request.Request(url, data=corpo, method=metodo or ("POST" if corpo else "GET"))
+    req = urllib.request.Request(url, data=corpo, method="POST" if corpo else "GET")
     req.add_header("Accept", "application/json")
     if corpo:
         req.add_header("Content-Type", "application/json")
@@ -52,30 +60,8 @@ def pedir(url, dados=None, cab=None, metodo=None, tempo=300):
             return e.code, json.loads(e.read().decode("utf-8") or "null")
         except ValueError:
             return e.code, None
-
-
-def agencias():
-    """As agências que mais aparecem no site, com o endereço provável da página no LinkedIn
-    (o nome do site da agência: almapbbdo.com.br → linkedin.com/company/almapbbdo)."""
-    fontes = json.load(open(os.path.join(AQUI, "fontes.json"), encoding="utf-8"))
-    camp = json.load(open(os.path.join(AQUI, "..", "campaigns.json"), encoding="utf-8"))
-    freq = collections.Counter(c.get("agency") for c in camp if c.get("agency"))
-    extra = {}
-    try:
-        extra = json.load(open(SAIDA, encoding="utf-8")).get("linkedin", {})  # correções manuais: nome → slug
-    except (OSError, ValueError):
-        pass
-    out = []
-    for a in sorted(fontes.get("agencias", []), key=lambda a: -freq.get(a["nome"], 0)):
-        slug = extra.get(a["nome"])
-        if not slug and a.get("site"):
-            host = urllib.parse.urlparse(a["site"]).netloc.lower().replace("www.", "")
-            slug = host.split(".")[0]
-        if slug:
-            out.append({"nome": a["nome"], "slug": slug, "regiao": a.get("regiao", "Global"), "cc": a.get("cc", "")})
-        if len(out) >= N_AGENCIAS:
-            break
-    return out
+    except Exception as e:  # noqa: BLE001  (tempo esgotado, rede)
+        return 0, str(e)
 
 
 def g(d, *caminho):
@@ -89,108 +75,229 @@ def g(d, *caminho):
     return d
 
 
+def slugs_de(nome, site="", usuario=""):
+    """Palpites do endereço da página no LinkedIn, do mais provável ao menos."""
+    out = []
+    if site:
+        host = urllib.parse.urlparse(site if "//" in site else "https://" + site).netloc.lower().replace("www.", "")
+        if host:
+            out.append(host.split(".")[0])
+    if usuario:
+        out.append(usuario.lstrip("@").lower().replace(".", "-").replace("_", "-"))
+    base = re.sub(r"[^a-z0-9]+", "-", A.sem_acento(nome).lower()).strip("-")
+    if base:
+        out += [base, base.replace("-", "")]
+    vistos, ok = set(), []
+    for s in out:
+        if s and s not in vistos:
+            vistos.add(s)
+            ok.append(s)
+    return ok
+
+
+def agencias(estado):
+    """Todas as agências do robô (fontes.json: agências + lista do Instagram), sem repetir."""
+    fontes = json.load(open(os.path.join(AQUI, "fontes.json"), encoding="utf-8"))
+    corr = estado.get("linkedin", {})  # correções manuais: nome → slug certo
+    por = collections.OrderedDict()
+    for a in fontes.get("agencias", []):
+        por.setdefault(A.chave(a["nome"]), {"nome": a["nome"], "site": a.get("site", ""), "usuario": "",
+                                            "regiao": a.get("regiao", "Global"), "cc": a.get("cc", "")})
+    for c in fontes.get("instagram", []):
+        nome = c.get("agencia") or c.get("nome") or c["usuario"]
+        a = por.setdefault(A.chave(nome), {"nome": nome, "site": "", "usuario": "",
+                                           "regiao": c.get("regiao", "Global"), "cc": c.get("cc", "")})
+        a["usuario"] = a["usuario"] or c["usuario"]
+    out = []
+    for a in por.values():
+        a["slugs"] = [corr[a["nome"]]] if corr.get(a["nome"]) else slugs_de(a["nome"], a["site"], a["usuario"])
+        if a["slugs"] and len(A.chave(a["nome"])) >= 2:
+            out.append(a)
+    return out
+
+
+def fatia(lista, estado, chave, n):
+    """Próximos n itens da lista, em rodízio (guarda onde parou)."""
+    if not lista or n <= 0:
+        return []
+    pos = estado.setdefault("pos", {}).get(chave, 0) % len(lista)
+    sel = (lista + lista)[pos:pos + min(n, len(lista))]
+    estado["pos"][chave] = (pos + len(sel)) % len(lista)
+    return sel
+
+
+def casar(item, ags, nome_autor=""):
+    """Qual agência da fatia é esta (pelo nome no texto, no autor ou na página)."""
+    alvo = A.chave(nome_autor)
+    for a in ags:
+        if alvo and (alvo == A.chave(a["nome"]) or alvo in [s.replace("-", "") for s in a["slugs"]]):
+            return a
+    return None
+
+
+def post_norm(fonte, tipo, ag, texto, url, data, video="", img=""):
+    return {"fonte": fonte, "tipo": tipo, "agencia": ag, "texto": texto or "", "url": url or "",
+            "data": str(data or "")[:19], "video": video or "", "imagem": img or ""}
+
+
 # ---------------------------------------------------------------- Apify (HarvestAPI)
-def ler_apify(ags, placar):
+def apify_rodar(ator, entrada, maximo, tok):
+    url = ("https://api.apify.com/v2/acts/%s/run-sync-get-dataset-items?token=%s&maxItems=%d"
+           % (ator, urllib.parse.quote(tok), maximo))
+    return pedir(url, entrada, tempo=290)
+
+
+def apify_item(it, fonte, tipo, ag):
+    imgs = it.get("postImages") or []
+    img = (imgs[0].get("url") if imgs and isinstance(imgs[0], dict) else (imgs[0] if imgs else "")) or ""
+    return post_norm(fonte, tipo, ag, it.get("content") or it.get("text") or "",
+                     it.get("linkedinUrl") or it.get("url") or it.get("postUrl"),
+                     g(it, "postedAt", "date") or it.get("postedAt"),
+                     g(it, "postVideo", "videoUrl") or g(it, "postVideo", "url"), img)
+
+
+def ler_apify(todas, estado, placar):
     tok = os.environ.get("APIFY_TOKEN", "").strip()
     if not tok:
         placar["status"] = "sem token"
         return []
-    urls = ["https://www.linkedin.com/company/%s/" % a["slug"] for a in ags]
-    por_url = {u.rstrip("/").rsplit("/", 1)[-1].lower(): a for u, a in zip(urls, ags)}
-    entrada = {"targetUrls": urls, "maxPosts": APIFY_POR_AGENCIA}
-    log("apify: %d páginas, até %d posts cada" % (len(urls), APIFY_POR_AGENCIA))
-    st, itens = pedir("https://api.apify.com/v2/acts/harvestapi~linkedin-company-posts/run-sync-get-dataset-items?token="
-                      + urllib.parse.quote(tok) + "&maxItems=%d" % APIFY_MAX_POSTS, entrada, tempo=290)
-    placar["http"] = st
-    if st >= 300 or not isinstance(itens, list):
-        placar["status"] = "erro %s" % st
-        placar["erro"] = str(itens)[:300]
-        return []
-    placar["status"] = "ok"
-    placar["posts"] = len(itens)
-    placar["custo_usd"] = round(len(itens) * 0.002, 3)
-    placar["amostra"] = itens[:2]
     out = []
-    for it in itens:
-        if not isinstance(it, dict):
-            continue
-        autor = g(it, "author") or {}
-        slug = str(autor.get("universalName") or g(it, "query", "companyUniversalName") or "").lower()
-        ag = por_url.get(slug)
-        if not ag:  # tenta casar pela URL de entrada ou pelo nome
-            alvo = str(g(it, "query", "targetUrl") or it.get("inputUrl") or "").rstrip("/").rsplit("/", 1)[-1].lower()
-            ag = por_url.get(alvo) or next((a for a in ags if A.chave(a["nome"]) == A.chave(str(autor.get("name", "")))), None)
-        data = str(g(it, "postedAt", "date") or it.get("postedAt") or "")[:19]
-        video = g(it, "postVideo", "videoUrl") or g(it, "postVideo", "url") or ""
-        imgs = it.get("postImages") or []
-        img = (imgs[0].get("url") if imgs and isinstance(imgs[0], dict) else (imgs[0] if imgs else "")) or ""
-        out.append({"fonte": "apify", "agencia": ag, "texto": it.get("content") or it.get("text") or "",
-                    "url": it.get("linkedinUrl") or it.get("url") or it.get("postUrl") or "",
-                    "data": data, "video": video, "imagem": img})
+    st_li = estado.setdefault("slug", {})  # nome → índice do palpite atual; "ok" quando a página respondeu
+    # 1) páginas das empresas
+    ags = fatia(todas, estado, "apify_empresas", APIFY_EMPRESAS)
+    urls = []
+    for a in ags:
+        i = st_li.get(a["nome"], 0)
+        if i == "ok":
+            i = 0
+        if isinstance(i, int) and i < len(a["slugs"]):
+            urls.append(("https://www.linkedin.com/company/%s/" % a["slugs"][i], a))
+    st, itens = apify_rodar("harvestapi~linkedin-company-posts",
+                            {"targetUrls": [u for u, _ in urls], "maxPosts": APIFY_POR_EMPRESA},
+                            APIFY_EMPRESAS * APIFY_POR_EMPRESA, tok)
+    placar["empresas"] = {"http": st, "paginas": len(urls)}
+    vieram = set()
+    if isinstance(itens, list):
+        placar["empresas"]["posts"] = len(itens)
+        placar.setdefault("amostra", itens[:1])
+        por_slug = {u.rstrip("/").rsplit("/", 1)[-1]: a for u, a in urls}
+        for it in itens:
+            if not isinstance(it, dict):
+                continue
+            autor = it.get("author") or {}
+            slug = str(autor.get("universalName") or "").lower()
+            a = por_slug.get(slug) or casar(it, [a for _, a in urls], autor.get("name", ""))
+            if a:
+                vieram.add(a["nome"])
+                st_li[a["nome"]] = "ok"
+            out.append(apify_item(it, "apify", "empresa", a))
+        # página sem nenhum post: na próxima volta tenta o palpite seguinte de endereço
+        for _, a in urls:
+            if a["nome"] not in vieram and st_li.get(a["nome"]) != "ok":
+                st_li[a["nome"]] = (st_li.get(a["nome"], 0) or 0) + 1
+        placar["empresas"]["agencias_com_post"] = len(vieram)
+    else:
+        placar["empresas"]["erro"] = str(itens)[:300]
+    # 2) quem cita a agência (funcionários, clientes, imprensa) falando de campanha, últimas 24h
+    ags = fatia(todas, estado, "apify_buscas", APIFY_BUSCAS)
+    total = 0
+    st2 = None
+    for bloco in [ags[i:i + 20] for i in range(0, len(ags), 20)]:
+        consultas = ['"%s" %s' % (a["nome"].replace('"', ""), PALAVRAS) for a in bloco]
+        st2, itens = apify_rodar("harvestapi~linkedin-post-search",
+                                 {"searchQueries": consultas, "maxPosts": APIFY_POR_BUSCA, "postedLimit": "24h"},
+                                 len(bloco) * APIFY_POR_BUSCA, tok)
+        if not isinstance(itens, list):
+            placar["citacoes_erro"] = str(itens)[:300]
+            break
+        total += len(itens)
+        placar.setdefault("amostra_citacao", itens[:1])
+        for it in itens:
+            if not isinstance(it, dict):
+                continue
+            texto = it.get("content") or ""
+            a = next((a for a in bloco if A.chave(a["nome"]) in A.chave(texto)), None)
+            out.append(apify_item(it, "apify", "citacao", a))
+    placar["citacoes"] = {"http": st2, "buscas": len(ags), "posts": total}
+    placar["status"] = "ok"
+    placar["custo_usd"] = round((placar["empresas"].get("posts", 0) + total) * 0.002, 2)
     return out
 
 
 # ---------------------------------------------------------------- Coresignal
-def ler_coresignal(ags, placar):
+CS = "https://api.coresignal.com/cdapi/v2/"
+CS_FILTROS = {  # nomes de filtro a testar; o primeiro que a API aceitar fica guardado
+    "company_post": ["company_name", "company_shorthand_name", "author_name", "name"],
+    "employee_post": ["company_name", "experience_company_name", "description", "text", "keyword"],
+}
+
+
+def cs_buscar(rota, valor, cab, estado, placar):
+    aceito = estado.setdefault("cs_filtro", {}).get(rota)
+    if not aceito and rota in placar.get("recusas", {}) and len(placar["recusas"][rota]) >= len(CS_FILTROS[rota]):
+        return []  # nenhum filtro aceito nesta rodada: não insiste a cada agência
+    tentar = [aceito] if aceito else CS_FILTROS[rota]
+    for campo in tentar:
+        st, r = pedir(CS + rota + "/search/filter", {"date_published_gte": DESDE, campo: valor}, cab, tempo=60)
+        if st < 300 and isinstance(r, list):
+            estado["cs_filtro"][rota] = campo
+            return r
+        placar.setdefault("recusas", {}).setdefault(rota, {})[campo] = "%s %s" % (st, str(r)[:150])
+        if st in (401, 402, 403, 429):
+            break
+    return []
+
+
+def ler_coresignal(todas, estado, placar):
     tok = os.environ.get("CORESIGNAL_TOKEN", "").strip()
     if not tok:
         placar["status"] = "sem token"
         return []
     cab = {"apikey": tok}
-    base = "https://api.coresignal.com/cdapi/v2/company_post"
-    ids, buscas = [], []
-    # a busca é grátis; por agência, pelo nome da empresa e data de publicação
+    ags = fatia(todas, estado, "coresignal", CS_AGENCIAS)
+    ids, vistos = [], set()
     for a in ags:
-        filtro = {"date_published_gte": ONTEM, "company_name": a["nome"]}
-        st, r = pedir(base + "/search/filter", filtro, cab, tempo=60)
-        buscas.append({"agencia": a["nome"], "http": st, "n": len(r) if isinstance(r, list) else None,
-                       "erro": None if st < 300 else str(r)[:200]})
-        if st == 422 or st == 400:  # filtro não aceito: guarda a resposta para eu ajustar e para de tentar
-            break
-        if st < 300 and isinstance(r, list):
-            ids += [(x, a) for x in r[:5]]
-    placar["buscas"] = buscas[:60]
+        for rota, tipo in (("company_post", "empresa"), ("employee_post", "funcionario")):
+            r = cs_buscar(rota, a["nome"], cab, estado, placar)
+            ids += [(rota, tipo, x, a) for x in r[:3] if (rota, x) not in vistos]
+            vistos.update((rota, x) for x in r[:3])
     placar["ids"] = len(ids)
-    out = []
-    coletas = 0
-    for pid, a in ids:
-        if coletas >= CS_MAX_COLETAS:
+    placar["agencias"] = len(ags)
+    out, coletas = [], 0
+    for rota, tipo, pid, a in ids:
+        if coletas >= CS_COLETAS:
             break
-        st, it = pedir(base + "/collect/%s" % urllib.parse.quote(str(pid)), cab=cab, tempo=60)
+        st, it = pedir(CS + rota + "/collect/%s" % urllib.parse.quote(str(pid)), cab=cab, tempo=60)
         coletas += 1
         if st >= 300 or not isinstance(it, dict):
             continue
         if len(placar.setdefault("amostra", [])) < 2:
             placar["amostra"].append(it)
-        texto = it.get("text") or it.get("content") or it.get("description") or ""
-        data = str(it.get("date_published") or it.get("published_at") or it.get("created_at") or "")[:19]
-        url = it.get("url") or it.get("post_url") or it.get("share_url") or ""
-        video = g(it, "article_video", "url") or ""
-        img = (it.get("images") or [""])[0] if isinstance(it.get("images"), list) else ""
-        out.append({"fonte": "coresignal", "agencia": a, "texto": texto, "url": url, "data": data,
-                    "video": video, "imagem": img or g(it, "article_video", "image_url") or ""})
-    placar["status"] = "ok" if buscas and buscas[0]["http"] < 300 else "erro na busca"
+        out.append(post_norm("coresignal", tipo, a,
+                             it.get("text") or it.get("content") or it.get("description"),
+                             it.get("url") or it.get("post_url") or it.get("share_url"),
+                             it.get("date_published") or it.get("published_at") or it.get("created_at"),
+                             g(it, "article_video", "url"),
+                             g(it, "article_video", "image_url")))
+    placar["status"] = "ok" if estado.get("cs_filtro") else "filtros recusados (ver 'recusas')"
     placar["creditos"] = coletas
-    placar["posts"] = len(out)
     return out
 
 
 # ---------------------------------------------------------------- filtro (o mesmo do Instagram)
 def vira_campanha(p):
     a = p["agencia"]
-    if not a or not p["texto"] or not p["data"]:
-        return None
-    if p["data"][:10] < ONTEM:
+    if not a or not p["texto"] or not p["data"] or p["data"][:10] < DESDE:
         return None
     falso = {"caption": p["texto"], "permalink": p["url"] or "https://www.linkedin.com/",
              "timestamp": p["data"] + ("" if p["data"].endswith("Z") else "Z"),
              "media_type": "VIDEO" if p["video"] else "IMAGE"}
-    conta = {"usuario": a["slug"], "nome": a["nome"], "regiao": a["regiao"], "cc": a["cc"], "agencia": a["nome"]}
-    c = A.post_para_campanha(falso, conta, ONTEM)
+    conta = {"usuario": a["slugs"][0], "nome": a["nome"], "regiao": a["regiao"], "cc": a["cc"], "agencia": a["nome"]}
+    c = A.post_para_campanha(falso, conta, DESDE)
     if not c:
         return None
     return {"marca": c["brand"], "titulo": c["title"], "agencia": a["nome"], "data": p["data"], "url": p["url"],
-            "video": bool(p["video"]), "fonte": p["fonte"]}
+            "video": bool(p["video"]), "fonte": p["fonte"], "tipo": p["tipo"]}
 
 
 def main():
@@ -198,39 +305,43 @@ def main():
         hist = json.load(open(SAIDA, encoding="utf-8"))
     except (OSError, ValueError):
         hist = {}
-    ags = agencias()
-    rodada = {"quando": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ"), "agencias": len(ags), "apify": {}, "coresignal": {}}
-    posts = ler_apify(ags, rodada["apify"]) + ler_coresignal(ags, rodada["coresignal"])
+    estado = hist.setdefault("estado", {})
+    estado["linkedin"] = hist.get("linkedin", {}) or estado.get("linkedin", {})
+    todas = agencias(estado)
+    rodada = {"quando": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ"), "agencias_na_lista": len(todas),
+              "apify": {}, "coresignal": {}}
+    posts = ler_apify(todas, estado, rodada["apify"]) + ler_coresignal(todas, estado, rodada["coresignal"])
     camp = [c for c in (vira_campanha(p) for p in posts) if c]
-    por_fonte = collections.defaultdict(set)
+    chaves = collections.defaultdict(set)
     for c in camp:
-        por_fonte[c["fonte"]].add((A.chave(c["agencia"]), A.chave(c["marca"])))
+        chaves[c["fonte"]].add((A.chave(c["agencia"]), A.chave(c["marca"])))
+        rodada[c["fonte"]].setdefault("campanhas_por_tipo", collections.Counter())[c["tipo"]] += 1
     for f in ("apify", "coresignal"):
-        rodada[f]["campanhas"] = len(por_fonte[f])
-    rodada["so_apify"] = len(por_fonte["apify"] - por_fonte["coresignal"])
-    rodada["so_coresignal"] = len(por_fonte["coresignal"] - por_fonte["apify"])
-    rodada["nas_duas"] = len(por_fonte["apify"] & por_fonte["coresignal"])
-    # atraso: horas entre a publicação no LinkedIn e esta rodada (mediana por fonte)
-    for f in ("apify", "coresignal"):
+        rodada[f]["campanhas"] = len(chaves[f])
         hs = []
         for c in camp:
-            if c["fonte"] != f:
-                continue
-            try:
-                t = dt.datetime.fromisoformat(c["data"].replace("Z", "")).replace(tzinfo=dt.timezone.utc)
-                hs.append((AGORA - t).total_seconds() / 3600)
-            except ValueError:
-                pass
+            if c["fonte"] == f:
+                try:
+                    t = dt.datetime.fromisoformat(c["data"].replace("Z", "")).replace(tzinfo=dt.timezone.utc)
+                    hs.append((AGORA - t).total_seconds() / 3600)
+                except ValueError:
+                    pass
         rodada[f]["atraso_mediano_h"] = round(sorted(hs)[len(hs) // 2], 1) if hs else None
+    rodada["so_apify"] = len(chaves["apify"] - chaves["coresignal"])
+    rodada["so_coresignal"] = len(chaves["coresignal"] - chaves["apify"])
+    rodada["nas_duas"] = len(chaves["apify"] & chaves["coresignal"])
+    paginas_ok = sum(1 for v in estado.get("slug", {}).values() if v == "ok")
+    rodada["paginas_linkedin_achadas"] = paginas_ok
     hist.setdefault("rodadas", []).append(rodada)
     hist["rodadas"] = hist["rodadas"][-60:]
     vistos = {(c["fonte"], c["url"]) for c in hist.get("candidatas", [])}
-    hist["candidatas"] = (hist.get("candidatas", []) + [c for c in camp if (c["fonte"], c["url"]) not in vistos])[-300:]
+    hist["candidatas"] = (hist.get("candidatas", []) + [c for c in camp if (c["fonte"], c["url"]) not in vistos])[-500:]
     hist.setdefault("linkedin", {})
-    json.dump(hist, open(SAIDA, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    log(json.dumps({k: v for k, v in rodada.items() if k not in ("apify", "coresignal")}, ensure_ascii=False))
+    json.dump(hist, open(SAIDA, "w", encoding="utf-8"), ensure_ascii=False, indent=1, default=dict)
+    resumo = {k: v for k, v in rodada.items() if k not in ("apify", "coresignal")}
+    log(json.dumps(resumo, ensure_ascii=False))
     for f in ("apify", "coresignal"):
-        log(f, json.dumps({k: v for k, v in rodada[f].items() if k not in ("amostra", "buscas")}, ensure_ascii=False))
+        log(f, json.dumps({k: v for k, v in rodada[f].items() if not k.startswith("amostra")}, ensure_ascii=False, default=dict))
 
 
 if __name__ == "__main__":
