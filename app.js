@@ -8,7 +8,6 @@
   var $ = function (id) { return document.getElementById(id); };
   var TZ = "America/Sao_Paulo";
   var LOTE = 10;
-  var SLIDE_MS = 8000;
 
   /* ---------- Dados ---------- */
   function str(v) { return typeof v === "string" ? v.trim() : ""; }
@@ -61,7 +60,7 @@
         video: safeUrl(str(x.video)), image: safeUrl(str(x.image)),
         images: arr(x.images, function (s) { return !!safeUrl(s); }),
         story: arr(x.story, Boolean), addedAt: str(x.addedAt),
-        idea: str(x.idea), credits: creditsOf(x)
+        idea: str(x.idea), frase: str(x.frase), credits: creditsOf(x)
       };
       c.fl = films(c);
       return c;
@@ -230,53 +229,69 @@
     return popCache[id];
   }
 
-  /* ---------- Post: uma tela por campanha ---------- */
+  /* ---------- Post: cada campanha vira um post de rede social ---------- */
+  var fmtHora = new Intl.DateTimeFormat("pt-BR", { timeZone: TZ, hour: "2-digit", minute: "2-digit", hour12: false });
+  function horaDe(iso) { var d = new Date(iso); return isNaN(d) ? "" : fmtHora.format(d); }
+  function hostOf(u) { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return ""; } }
+  // nome em cima do post: a agência; se vier vazia ou estranha ("Wise’s", "Brick e e"), o veículo
+  function quemPostou(c) {
+    var a = c.agency;
+    if (!a || a.length < 2 || /['’]s\b/i.test(a) || /\b(\w+)\s+\1\b/i.test(a) || /\b(e|and|y)$/i.test(a)) return c.source || c.brand || "Campanha";
+    return a;
+  }
+  function iniciais(t) {
+    var w = String(t).replace(/[^0-9A-Za-zÀ-ÿ ]/g, " ").trim().split(/\s+/);
+    return ((w[0] || "").charAt(0) + (w[1] || "").charAt(0)).toUpperCase() || "•";
+  }
+  function avatar(c, nome) {
+    var box = el("span", "post-av");
+    var dom = hostOf(c.url);
+    function fallback() { box.textContent = iniciais(nome); box.classList.add("ini"); }
+    if (dom) {
+      var i = img("https://www.google.com/s2/favicons?domain=" + encodeURIComponent(dom) + "&sz=128", fallback);
+      i.alt = nome;
+      box.appendChild(i);
+    } else fallback();
+    return box;
+  }
+  function fraseDe(c) {
+    var f = str(c.frase) || c.summary || c.title;
+    return f;
+  }
+  function fmtT(t) { t = Math.max(0, Math.floor(t || 0)); var m = Math.floor(t / 60), s = t % 60; return (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s; }
+  function setTime(art, t, d) { var tg = art.querySelector(".post-time"); if (tg) tg.textContent = "▶ " + fmtT(t) + (d ? " / " + fmtT(d) : ""); }
+
   function post(c, idxInDay) {
-    var art = el("section", "post");
+    var art = el("article", "post");
     art._c = c;
-    art.setAttribute("aria-label", (c.brand ? c.brand + ": " : "") + c.title);
-
-    // linha de cima: o dia (divisão por dias) e quem é
-    var top = el("div", "post-top");
-    var day = el("span", "day");
-    day.appendChild(el("b", null, dayName(c.date)));
-    day.appendChild(el("span", null, dayDate(c.date)));
-    var who = el("span", "who");
-    if (c.brand) who.appendChild(el("b", null, c.brand));
-    if (c.agency) who.appendChild(el("span", null, c.agency));
-    who.appendChild(el("span", "ctry", flagOf(c.cc) + " " + (c.region || "Global")));
-    day.appendChild(who);
-    top.appendChild(day);
-    var side = el("span", "side");
-    if (state.region === "hot") {
-      var vv = viewsOf(c);
-      side.appendChild(el("span", "pos hot", "#" + (idxInDay + 1) + (vv ? " · " + fmtNum(vv) + " views" : "")));
-    } else {
-      var tot = state.perDay[c.date] || 0;
-      side.appendChild(el("span", "pos", (idxInDay + 1) + " de " + tot));
-    }
-    var cm = el("button", "act cmt");
-    cm.type = "button";
-    cm.title = "Comentários";
-    cm.setAttribute("aria-label", "Comentários sobre esta campanha");
-    cm.innerHTML = ICON_CMT;
-    cm.addEventListener("click", function (e) { e.stopPropagation(); openComments(c); });
-    side.appendChild(cm);
-    var sh = el("button", "act share");
-    sh.type = "button";
-    sh.title = "Compartilhar";
-    sh.setAttribute("aria-label", "Compartilhar esta campanha");
-    sh.innerHTML = ICON_SHARE + "<span>Compartilhar</span>";
-    sh.addEventListener("click", function (e) { e.stopPropagation(); share(c, sh); });
-    side.appendChild(sh);
-    top.appendChild(side);
-    art.appendChild(top);
+    art._k = idxInDay;
     art.dataset.id = c.id;
+    art.setAttribute("aria-label", (c.brand ? c.brand + ": " : "") + c.title);
+    var nome = quemPostou(c);
 
-    var frame = el("div", "frame");
+    // quem postou
+    var head = el("header", "post-head");
+    head.appendChild(avatar(c, nome));
+    var who = el("div", "post-who");
+    who.appendChild(el("b", null, nome));
+    var via = c.url ? link("post-via", "", c.url) : el("span", "post-via");
+    via.appendChild(document.createTextNode("VIA " + (c.source || "—")));
+    if (c.region) via.appendChild(el("span", "rg", " / " + c.region));
+    var hh = horaDe(c.addedAt);
+    if (hh) via.appendChild(document.createTextNode(" / " + hh));
+    if (c.url) via.title = "Ler em " + (c.source || "fonte");
+    who.appendChild(via);
+    head.appendChild(who);
+    if (/^[A-Z]{2}$/.test(c.cc)) { var cc = el("span", "post-cc", c.cc); cc.title = c.region || c.cc; head.appendChild(cc); }
+    art.appendChild(head);
+
+    // a frase
+    var txt = el("p", "post-txt", fraseDe(c));
+    txt.title = c.title;
+    art.appendChild(txt);
+
+    // o filme
     var media = el("div", "media");
-    frame.appendChild(media);
-
     if (c.fl.length) {
       art.classList.add("is-film");
       var cover = el("div", "cover");
@@ -303,11 +318,13 @@
       media.appendChild(cover);
       media.appendChild(host0);
       media.appendChild(el("span", "bigplay"));
+      media.appendChild(el("span", "post-time", "▶ ASSISTIR"));
       media.appendChild(el("span", "fail", "Este filme só toca no YouTube ↗"));
       media.appendChild(endCard(art, c));
       var mute = el("button", "mute");
       mute.type = "button";
       mute.setAttribute("aria-label", "Ligar ou desligar o som");
+      mute.innerHTML = ICON_SND;
       media.appendChild(mute);
       var bar = el("div", "bar");
       bar.appendChild(el("i"));
@@ -324,7 +341,7 @@
         media.appendChild(dots);
       }
       media.addEventListener("click", function (e) {
-        if (e.target === mute) { mute.blur(); setSound(Date.now() - unblockedAt < 1000 ? true : !sound); if (!(active && active.art === art)) activate(art, true); return; }
+        if (mute.contains(e.target)) { mute.blur(); setSound(Date.now() - unblockedAt < 1000 ? true : !sound); if (!(active && active.art === art)) activate(art, true); return; }
         if (art.classList.contains("is-vert") && active && active.art === art) return;
         if (art.classList.contains("ended")) return;
         if (art.classList.contains("failed")) { window.open("https://www.youtube.com/watch?v=" + c.fl[+art.dataset.part || 0].id, "_blank", "noopener"); return; }
@@ -332,24 +349,35 @@
         else activate(art, true);
       });
     } else {
-      art.classList.add("is-story");
-      buildStory(art, media, c);
+      // sem filme: a imagem da matéria no mesmo quadro 16:9
+      art.classList.add("is-card");
+      var pic = c.image || c.images[0] || "";
+      var cv = el("div", "cover");
+      if (pic) cv.appendChild(img(pic, function () { cv.appendChild(poster(c)); }));
+      else cv.appendChild(poster(c));
+      media.appendChild(cv);
+      if (c.url) media.appendChild(link("card-src", "Ler em " + (c.source || "fonte") + " ↗", c.url));
     }
+    art.appendChild(media);
 
-    // texto: aparece ao passar o mouse sobre o quadro (no celular, fica embaixo)
-    var ov = el("div", "ov");
-    ov.appendChild(el("h3", "brand", c.brand || c.source || "Campanha"));
-    ov.appendChild(el("p", "title", c.title));
-    if (c.summary && c.fl.length) ov.appendChild(el("p", "sum", c.summary));
-    var foot = el("p", "foot");
-    if (c.url) foot.appendChild(link("src", "Ler em " + (c.source || "fonte") + " ↗", c.url));
-    var pop = el("span", "pop");
-    foot.appendChild(pop);
-    if (viewsOf(c)) pop.textContent = fmtNum(viewsOf(c)) + " views";
-    else if (c.yt.length) popOf(c.yt[0]).then(function (v) { if (v.views) pop.textContent = fmtNum(v.views) + " views"; });
-    ov.appendChild(foot);
-    frame.appendChild(ov);
-    art.appendChild(frame);
+    // comentar e compartilhar
+    var acts = el("footer", "post-acts");
+    var cm = el("button", "act cmt");
+    cm.type = "button";
+    cm.setAttribute("aria-label", "Comentários sobre esta campanha");
+    cm.innerHTML = ICON_CMT + "<span>Comentar</span>";
+    var n = el("span", "n");
+    cm.appendChild(n);
+    cm.addEventListener("click", function (e) { e.stopPropagation(); openComments(c); });
+    acts.appendChild(cm);
+    var sh = el("button", "act share");
+    sh.type = "button";
+    sh.setAttribute("aria-label", "Compartilhar esta campanha");
+    sh.innerHTML = ICON_SHARE + "<span>Compartilhar</span>";
+    sh.addEventListener("click", function (e) { e.stopPropagation(); share(c, sh); });
+    acts.appendChild(sh);
+    art.appendChild(acts);
+    paintCount(art);
 
     media._art = art;
     art._media = media;
@@ -357,9 +385,33 @@
     return art;
   }
 
+  /* contagem de comentários por campanha (Supabase), pedida em lote */
+  var CMT_N = {};
+  function paintCount(art) {
+    var n = art.querySelector(".act .n");
+    var v = CMT_N[art._c.id];
+    if (n) n.textContent = v == null ? "" : "[" + v + "]";
+  }
+  function loadCounts(items) {
+    if (!SUPABASE_URL || !SUPABASE_KEY) return;
+    var ids = items.map(function (c) { return c.id; }).filter(function (id) { return CMT_N[id] == null; });
+    if (!ids.length) return;
+    var q = "in.(" + ids.map(function (id) { return '"' + id.replace(/"/g, "") + '"'; }).join(",") + ")";
+    fetch(SUPABASE_URL + "/rest/v1/comments?select=campaign_id&limit=5000&campaign_id=" + encodeURIComponent(q), {
+      headers: { apikey: SUPABASE_KEY, Authorization: "Bearer " + SUPABASE_KEY }
+    }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (rows) {
+        ids.forEach(function (id) { CMT_N[id] = 0; });
+        rows.forEach(function (k) { if (k && k.campaign_id in CMT_N) CMT_N[k.campaign_id]++; });
+        document.querySelectorAll(".post").forEach(function (a) { if (ids.indexOf(a._c.id) >= 0) paintCount(a); });
+      })
+      .catch(function () { /* sem contagem: o botão fica sem número */ });
+  }
+
   /* ---------- Compartilhar: link que abre direto na campanha ---------- */
-  var ICON_SHARE = '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-  var ICON_CMT = '<svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.2 3.6c-.5.4-1.3.1-1.3-.6V16A2.5 2.5 0 0 1 4 13.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
+  var ICON_SHARE = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter"><path d="M7 17 17 7M8 7h9v9"/></svg>';
+  var ICON_CMT = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter"><path d="M3 4h18v13H9l-6 4z"/></svg>';
+  var ICON_SND = '<svg class="i-off" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><svg class="i-on" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
   function linkOf(c) { return location.origin + location.pathname + "?c=" + encodeURIComponent(c.id); }
   function toast(msg) {
     var t = $("toast");
@@ -715,119 +767,6 @@
   }
   window.addEventListener("hashchange", function () { goTo(sharedId()); });
 
-  /* ---------- Carrossel: campanha sem filme, a notícia inteira contada slide a slide ----------
-     Cada foto da matéria é usada uma vez; quando as fotos acabam, o slide ganha um grafismo
-     feito aqui mesmo (número em destaque, aspas, marca, padrões), sempre no formato da referência:
-     imagem em cima, faixa preta com o texto em serifa embaixo. */
-  // Texto do slide com destaques em negrito: marca, agência, números e nomes entre aspas.
-  function rich(text, c) {
-    var p = el("p");
-    var keys = [c.brand, c.agency].filter(function (k) { return k && k.length > 1; })
-      .map(function (k) { return k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); });
-    var pat = "(" + (keys.length ? keys.join("|") + "|" : "") +
-      "[“\"‘'][^”\"’']{2,60}[”\"’']|(?:R\\$|US\\$|€|£)\\s?[\\d.,]+(?:\\s?(?:mil|milhões|milhão|bilhões|bilhão|mi|bi))?|\\b\\d[\\d.,]*\\s?(?:%|mil|milhões|milhão|bilhões|bilhão|anos|dias|cidades|países|pessoas|lojas)?\\b)";
-    var re = new RegExp(pat, "g"), last = 0, m;
-    while ((m = re.exec(text))) {
-      if (m.index > last) p.appendChild(document.createTextNode(text.slice(last, m.index)));
-      p.appendChild(el("b", null, m[0]));
-      last = m.index + m[0].length;
-      if (!m[0].length) re.lastIndex++;
-    }
-    if (last < text.length) p.appendChild(document.createTextNode(text.slice(last)));
-    return p;
-  }
-  var NUM_RE = /(?:R\$|US\$|€|£)\s?[\d.,]+(?:\s?(?:mil|milhões|milhão|bilhões|bilhão|bi|mi))?|\b\d[\d.,]*\s?(?:%|mil|milhões|milhão|bilhões|bilhão)|\b(?:19|20)\d{2}\b|\b\d{2,}[\d.,]*\b/;
-  var QUOTE_RE = /[“"]([^”"]{8,90})[”"]/;
-  function graphic(c, line, k) {
-    var g = el("div", "gfx");
-    var h = hue(c.brand || c.title);
-    g.style.setProperty("--h", h);
-    var num = line.match(NUM_RE), q = line.match(QUOTE_RE);
-    if (num && k % 2 === 1) {
-      g.classList.add("gfx-num");
-      g.appendChild(el("span", "big", num[0].replace(/\s+/g, " ")));
-    } else if (q) {
-      g.classList.add("gfx-quote");
-      g.appendChild(el("span", "qmark", "“"));
-      g.appendChild(el("span", "qtext", q[1]));
-    } else {
-      var kind = ["gfx-type", "gfx-rings", "gfx-stripes", "gfx-grid"][k % 4];
-      g.classList.add(kind);
-      var word = c.brand || c.title;
-      if (kind === "gfx-grid") {
-        var ini = word.replace(/[^0-9A-Za-zÀ-ÿ]/g, "").charAt(0).toUpperCase() || "•";
-        for (var n = 0; n < 24; n++) g.appendChild(el("span", null, ini));
-      } else {
-        g.appendChild(el("span", "big", word));
-      }
-    }
-    return g;
-  }
-  function buildStory(art, media, c) {
-    var pics = c.images.length ? c.images.slice() : c.image ? [c.image] : [];
-    var lines = [c.title];
-    if (c.summary && c.story.join(" ").indexOf(c.summary.slice(0, 40)) < 0) lines.push(c.summary);
-    lines = lines.concat(c.story).slice(0, 4); // máximo de 5 slides: 4 de texto + ficha técnica
-    var meta = [["Marca", c.brand], ["Agência", c.agency], ["Origem", c.region ? flagOf(c.cc) + " " + c.region : ""], ["Publicado em", c.source]]
-      .filter(function (x) { return x[1]; });
-    var n = lines.length + 1; // + ficha técnica
-    var slides = [];
-    var dots = el("div", "sdots");
-    for (var k = 0; k < n; k++) {
-      var sl = el("div", "slide" + (k === 0 ? " on" : ""));
-      var top = el("div", "ph");
-      if (k === n - 1) {
-        top.appendChild(graphic(c, "", 0));
-      } else if (k < pics.length) {
-        top.appendChild(img(pics[k], (function (box, line, kk) { return function () { box.appendChild(graphic(c, line, kk)); }; })(top, lines[k], k)));
-      } else {
-        top.appendChild(graphic(c, lines[k], k));
-      }
-      sl.appendChild(top);
-      sl.appendChild(el("span", "mark", "dA"));
-      var panel = el("div", "panel");
-      panel.appendChild(el("span", "kicker", "DROPP AD"));
-      if (k === n - 1) {
-        var fic = el("div", "ficha");
-        meta.forEach(function (x) {
-          var row = el("p");
-          row.appendChild(el("span", null, x[0] + " "));
-          row.appendChild(el("b", null, x[1]));
-          fic.appendChild(row);
-        });
-        panel.appendChild(fic);
-        if (c.url) panel.appendChild(link("more-link", "Ler a matéria completa ↗", c.url));
-      } else {
-        panel.appendChild(rich(lines[k], c));
-      }
-      sl.appendChild(panel);
-      media.appendChild(sl);
-      slides.push(sl);
-      dots.appendChild(el("i", k === 0 ? "on" : ""));
-    }
-    var prev = el("button", "sarrow sprev", "‹"), next = el("button", "sarrow snext", "›");
-    prev.type = next.type = "button";
-    prev.setAttribute("aria-label", "Slide anterior");
-    next.setAttribute("aria-label", "Próximo slide");
-    prev.addEventListener("click", function (e) { e.stopPropagation(); if (!(active && active.art === art)) activate(art, true); storyGo(art, art._story.i - 1); });
-    next.addEventListener("click", function (e) { e.stopPropagation(); if (!(active && active.art === art)) activate(art, true); storyGo(art, art._story.i + 1); });
-    media.appendChild(prev); media.appendChild(next); media.appendChild(dots);
-    art._story = { slides: slides, dots: dots.children, i: 0, t: 0 };
-    media.addEventListener("click", function (e) {
-      if (!(active && active.art === art)) { activate(art, true); return; }
-      var r = media.getBoundingClientRect();
-      storyGo(art, e.clientX - r.left < r.width / 3 ? art._story.i - 1 : art._story.i + 1);
-    });
-  }
-  function storyGo(art, i) {
-    var st = art._story, n = st.slides.length;
-    i = (i + n) % n;
-    st.slides.forEach(function (s, k) { s.classList.toggle("on", k === i); });
-    Array.prototype.forEach.call(st.dots, function (d, k) { d.className = k === i ? "on" : ""; });
-    st.i = i;
-    st.t = 0;
-  }
-
   /* ---------- Tocar sozinho o que está na tela ---------- */
   var ytReady = null, vimeoReady = null;
   function loadYT() {
@@ -887,6 +826,8 @@
     } else if (host) host.textContent = "";
     var bar = a.art.querySelector(".bar i");
     if (bar) bar.style.width = "0";
+    var tg = a.art.querySelector(".post-time");
+    if (tg) tg.textContent = "▶ ASSISTIR";
   }
 
   function activate(art, byUser) {
@@ -898,17 +839,8 @@
     art.classList.add("live");
     function alive() { return active === me; }
 
-    if (!c.fl.length) { // carrossel
-      me.kind = "story";
-      var st = art._story;
-      if (byUser && st.t === 0 && st.i === 0) storyGo(art, 0);
-      me.timer = setInterval(function () {
-        if (!alive() || document.hidden || art.matches(":hover")) return;
-        st.t += 100;
-        if (st.t >= SLIDE_MS && st.slides.length > 1) storyGo(art, st.i + 1);
-      }, 100);
-      return;
-    }
+    paintChrome(art);
+    if (!c.fl.length) { me.kind = "card"; return; } // sem filme: só a imagem
 
     var part = Math.min(+art.dataset.part || 0, c.fl.length - 1);
     var f = c.fl[part];
@@ -974,6 +906,7 @@
           try {
             var d = me.player.getDuration(), t = me.player.getCurrentTime();
             if (d) art.querySelector(".bar i").style.width = Math.min(100, t / d * 100) + "%";
+            setTime(art, t, d);
           } catch (err) { /* carregando */ }
         }, 300);
       }).catch(failed);
@@ -988,7 +921,7 @@
         p.on("play", playing);
         p.on("pause", paused);
         p.on("ended", ended);
-        p.on("timeupdate", function (d) { if (alive()) art.querySelector(".bar i").style.width = (d.percent * 100) + "%"; });
+        p.on("timeupdate", function (d) { if (alive()) { art.querySelector(".bar i").style.width = (d.percent * 100) + "%"; setTime(art, d.seconds, d.duration); } });
         p.ready().then(function () {
           if (!sound || blocked || gestureAt) return;
           p.setMuted(false).then(function () { return p.play(); }).catch(function () {});
@@ -1027,6 +960,7 @@
       feed.appendChild(post(c, c._k || 0));
     });
     state.shown += slice.length;
+    loadCounts(slice);
     var old = $("more");
     if (old) old.remove();
     if (moreIO) moreIO.disconnect();
@@ -1081,41 +1015,66 @@
     if (!skipMore) renderMore();
   }
   function renderChips() {
-    var box = $("chips");
+    var box = $("chips"), sel = $("reg-sel");
     box.textContent = "";
-    function chip(label, on, fn) {
-      var b = el("button", "chip", label);
-      b.type = "button";
-      b.setAttribute("aria-pressed", on ? "true" : "false");
-      b.addEventListener("click", function () { fn(); window.scrollTo(0, 0); renderAll(); });
-      box.appendChild(b);
-    }
+    if (sel) sel.textContent = "";
     var h = state.home;
-    chip(flagOf(h.cc) + " " + h.label, state.region === "home", function () { state.region = "home"; });
-    chip("Mundo", !state.region, function () { state.region = ""; });
-    chip("🔥", state.region === "hot", function () { state.region = "hot"; });
-    var hb = box.lastChild; hb.title = "Mais vistas primeiro"; hb.setAttribute("aria-label", "Mais vistas primeiro");
-    // tipo: só vídeos ou tudo
-    var t = $("tipo");
-    t.textContent = "";
-    [["VIDEOS", true], ["ALL", false]].forEach(function (x) {
-      var b = el("button", "chip", x[0]);
+    var opts = [["", "Mundo"], ["home", h.label], ["hot", "🔥 Mais vistas"]];
+    opts.forEach(function (o) {
+      var on = (state.region || "") === o[0];
+      var b = el("button", "reg", o[0] === "hot" ? "🔥" : o[1]);
       b.type = "button";
-      b.setAttribute("aria-pressed", state.onlyFilms === x[1] ? "true" : "false");
-      b.addEventListener("click", function () { state.onlyFilms = x[1]; window.scrollTo(0, 0); renderAll(); });
-      t.appendChild(b);
+      if (o[0] === "hot") { b.title = "Mais vistas primeiro"; b.setAttribute("aria-label", "Mais vistas primeiro"); }
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      b.addEventListener("click", function () { state.region = o[0]; window.scrollTo(0, 0); renderAll(); });
+      box.appendChild(b);
+      if (sel) { var op = el("option", null, o[1]); op.value = o[0]; op.selected = on; sel.appendChild(op); }
+      if (on && $("reg-txt")) $("reg-txt").textContent = o[0] === "hot" ? "🔥" : o[1];
     });
   }
+  (function () {
+    var sel = $("reg-sel");
+    if (sel) sel.addEventListener("change", function () { state.region = sel.value; window.scrollTo(0, 0); renderAll(); });
+  })();
+
+  /* ---------- Data na lateral, faixa "ao vivo" e o convite pra rolar ---------- */
+  var MESES = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+  function ddmm(d) { return d.slice(8, 10) + "." + d.slice(5, 7); }
+  function diaRotulo(d) { return d === TODAY ? "HOJE" : d === shift(TODAY, -1) ? "ONTEM" : "EM " + ddmm(d); }
+  function nextPost(art) { var n = art.nextElementSibling; while (n && !n.classList.contains("post")) n = n.nextElementSibling; return n; }
+  function paintChrome(art) {
+    var c = art._c;
+    $("sd-d").textContent = c.date.slice(8, 10);
+    $("sd-m").textContent = MESES[+c.date.slice(5, 7) - 1];
+    var hot = state.region === "hot";
+    var tot = hot ? state.list.length : state.perDay[c.date] || 0;
+    var pos = (art._k || 0) + 1;
+    $("strip-l").textContent = hot ? "■ MAIS VISTAS" : (c.date === TODAY ? "■ AO VIVO · " : "■ ") + ddmm(c.date);
+    $("strip-r").textContent = (pos < 10 ? "0" : "") + pos + "/" + (tot < 10 ? "0" : "") + tot;
+    var nx = nextPost(art), left = tot - pos, t;
+    if (hot) t = nx ? "PRÓXIMA" : "";
+    else if (left > 0) t = "MAIS " + left + (left === 1 ? " ESTREIA " : " ESTREIAS ") + diaRotulo(c.date);
+    else t = nx && nx._c ? "VER " + (nx._c.date === shift(TODAY, -1) ? "ONTEM" : ddmm(nx._c.date)) : "";
+    $("cue-txt").textContent = t;
+    $("cue").hidden = !t;
+    $("cue-btn").setAttribute("aria-label", t ? "Rolar para a próxima campanha. " + t.toLowerCase() : "");
+  }
+  $("cue-btn").addEventListener("click", function () {
+    var a = active ? active.art : document.querySelector(".post");
+    var n = a && nextPost(a);
+    if (n) n.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 
   /* ---------- Calendário: começa a timeline no dia escolhido (e segue para trás) ---------- */
-  var fmtCal = new Intl.DateTimeFormat("pt-BR", { timeZone: "UTC", day: "numeric", month: "short" });
+  var SEMANA = ["DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SÁB"];
+  function fmtCal(d) { return SEMANA[toDate(d).getUTCDay()] + " " + ddmm(d) + "." + d.slice(2, 4); }
   function renderCal() {
     var inp = $("cal-in");
     if (!inp) return;
     var datas = state.items.map(function (c) { return c.date; }).sort();
     if (datas.length) { inp.min = datas[0]; inp.max = datas[datas.length - 1]; }
     inp.value = state.upTo || "";
-    $("cal-txt").textContent = state.upTo ? fmtCal.format(new Date(state.upTo + "T12:00:00Z")).replace(".", "") : "";
+    $("cal-txt").textContent = fmtCal(state.upTo || TODAY);
     $("cal").classList.toggle("on", !!state.upTo);
     $("cal-x").hidden = !state.upTo;
   }
@@ -1140,10 +1099,8 @@
     var cur = active ? posts.indexOf(active.art) : 0;
     if (e.key === "ArrowDown" || e.key === "j") { e.preventDefault(); if (posts[cur + 1]) posts[cur + 1].scrollIntoView({ behavior: "smooth" }); }
     else if (e.key === "ArrowUp" || e.key === "k") { e.preventDefault(); if (posts[cur - 1]) posts[cur - 1].scrollIntoView({ behavior: "smooth" }); }
-    else if (e.key === " ") { e.preventDefault(); if (active && active.kind === "story") storyGo(active.art, active.art._story.i + 1); else togglePause(); }
+    else if (e.key === " ") { e.preventDefault(); togglePause(); }
     else if (e.key === "m") setSound(!sound);
-    else if (e.key === "ArrowRight" && active && active.kind === "story") storyGo(active.art, active.art._story.i + 1);
-    else if (e.key === "ArrowLeft" && active && active.kind === "story") storyGo(active.art, active.art._story.i - 1);
   });
 
   /* ---------- Novidades: com a página aberta, confere a cada minuto se o robô publicou algo ----------
