@@ -384,126 +384,6 @@ def vira_campanha(p):
             "video": bool(p["video"]), "fonte": p["fonte"], "tipo": p["tipo"], "campanha": c}
 
 
-# ---------------------------------------------------------------- filme ou imagem em outros sites
-YT_ITEM = re.compile(r'"videoRenderer":\{"videoId":"([\w-]{11})".{0,1500}?"title":\{"runs":\[\{"text":"((?:[^"\\]|\\.)*)"'
-                     r'.{0,3000}?"ownerText":\{"runs":\[\{"text":"((?:[^"\\]|\\.)*)"', re.S)
-
-
-def _palavras(t):
-    return list(dict.fromkeys(w for w in re.findall(r"[a-z0-9]{6,}", A.sem_acento(t).lower()) if w not in
-            ("campanha", "campaign", "lancamento", "launch", "brasil", "agencia", "agency", "something", "chegada")))
-
-
-UI_YT = re.compile(r"^(adicionar à fila|add to queue|enviar feedback|send feedback|assistir mais tarde|watch later|compartilhar|share|novo|new|"
-                   r"\d+[:.]\d+|.*\bvisualiza|.*\bviews?\b|há \d+|\d+ (?:dias?|horas?|semanas?) atrás)", re.I)
-
-
-def _videos_da_busca(pag):
-    """(id, título, canal) dos vídeos da página de busca do YouTube, venha ela no formato antigo ou no novo:
-    pega cada videoId e os primeiros textos que vêm logo depois dele (título, canal)."""
-    out, vistos = [], set()
-    for m in re.finditer(r'"videoId":"([\w-]{11})"', pag or ""):
-        vid = m.group(1)
-        if vid in vistos:
-            continue
-        janela = pag[m.end():m.end() + 8000]
-        tm = re.search(r'"title":\{(?:"runs":\[\{)?"(?:text|content)":"((?:[^"\\]|\\.){3,200})"', janela)
-        if not tm:
-            continue
-        textos = []
-        for t in [tm.group(1)] + re.findall(r'"(?:text|content|simpleText)":"((?:[^"\\]|\\.){3,200})"', janela)[:15]:
-            try:
-                t = json.loads('"%s"' % t)
-            except ValueError:
-                pass
-            if t not in textos and not UI_YT.search(t):
-                textos.append(t)
-        vistos.add(vid)
-        out.append((vid, textos[0] if textos else "", " ".join(textos[1:8])))
-    return out
-
-
-def buscar_youtube(c):
-    """Procura o filme no YouTube (busca do próprio site, vídeos do último mês). Só aceita vídeo cujo título ou
-    canal tenha a marca E mais um sinal da campanha (agência, palavra do título ou canal oficial da marca)."""
-    marca, ag = A.chave(c["brand"]), A.chave(c.get("agency", ""))
-    chaves_titulo = _palavras(c["title"])
-    for q in ("%s %s" % (c["brand"], c["title"][:60]), "%s %s" % (c["brand"], c.get("agency", "")),
-              "%s campanha" % c["brand"]):
-        url = "https://www.youtube.com/results?" + urllib.parse.urlencode({"search_query": q, "sp": "EgIIBA=="})
-        try:
-            pag = A.baixar(url, timeout=20)
-        except Exception as e:  # noqa: BLE001
-            log("  youtube falhou:", e)
-            return []
-        achados = _videos_da_busca(pag)
-        log("  youtube:", q[:60], "| vídeos", len(achados), "|", " / ".join(t[:40] for _, t, _ in achados[:4]))
-        for vid, titulo, resto in achados[:10]:
-            tudo = A.chave(titulo + " " + resto)
-            if marca not in A.chave(titulo) and marca not in A.chave(resto[:80]):
-                continue
-            # sinal forte: o nome da agência, ou duas palavras do título da campanha no título do vídeo
-            iguais = sum(1 for w in chaves_titulo if w in A.sem_acento(titulo).lower())
-            sinal = (ag and len(ag) >= 4 and ag in tudo) or iguais >= 2
-            if sinal:
-                log("  + youtube:", vid, "|", titulo)
-                return [vid]
-    return []
-
-
-def buscar_noticias(c):
-    """Matérias sobre a campanha (Bing News, última semana): filme embutido e foto de capa."""
-    marca, ag = A.chave(c["brand"]), A.chave(c.get("agency", ""))
-    try:
-        itens = A.buscar_bing('"%s" %s' % (c["brand"], c.get("agency", "").replace("&", "and")))
-    except Exception as e:  # noqa: BLE001
-        log("  bing falhou:", e)
-        itens = []
-    if not itens:
-        try:
-            itens = A.buscar_bing('"%s" campanha' % c["brand"])
-        except Exception as e:  # noqa: BLE001
-            log("  bing falhou:", e)
-            return [], "", ""
-    yts, video, img = [], "", ""
-    log("  bing:", c["brand"], "|", len(itens), "matérias |", " / ".join(i.get("titulo", "")[:40] for i in itens[:3]))
-    for it in itens[:5]:
-        if marca not in A.chave(it.get("titulo", "") + " " + it.get("resumo", "")):
-            continue
-        try:
-            pag = A.baixar(it["link"], timeout=20)
-        except Exception:  # noqa: BLE001
-            continue
-        if ag and ag not in A.chave(A.limpar(pag)[:60000]):
-            continue  # a matéria tem que falar da agência também (senão é outra campanha da marca)
-        miolo = A.corpo_da_materia(pag)
-        y, v = A.filmes_de(miolo)
-        img = img or A.imagem_de(pag, it["link"])
-        if y or v:
-            log("  + matéria com filme:", it["link"])
-            return y, v, img
-        yts = yts or y
-    return yts, video, img
-
-
-def completar_midia(c):
-    """Campanha vinda do LinkedIn: o post não toca no site, então procura o filme (YouTube, matérias) e uma
-    imagem melhor. Devolve True se achou algo."""
-    if c.get("yt") or c.get("video"):
-        return False
-    yts = buscar_youtube(c)
-    video, img = "", ""
-    if not yts:
-        yts, video, img = buscar_noticias(c)
-    if yts:
-        c["yt"] = yts[:2]
-    elif video:
-        c["video"] = video
-    if img and not c.get("image"):
-        c["image"] = img
-    return bool(yts or video or img)
-
-
 def publicar(caminho):
     """Junta as campanhas achadas (arquivo gerado pela rodada) em campaigns.json, sem repetir.
     Roda depois do git reset do workflow, sobre a versão mais nova do site."""
@@ -516,21 +396,10 @@ def publicar(caminho):
     ids = {c.get("id") for c in camp}
     chaves = {(A.chave(c.get("brand", "")), A.chave(c.get("title", ""))) for c in camp}
     marca_dia = {(A.chave(c.get("brand", "")), c.get("date")) for c in camp}
+    import midia  # noqa: PLC0415  (fica ao lado deste arquivo)
     for c in novas:
-        completar_midia(c)
-    # LinkedIn já publicadas sem filme nos últimos 10 dias: tenta de novo (até 3 vezes cada)
-    hist = A.ler_json(SAIDA, {})
-    tent = hist.setdefault("estado", {}).setdefault("midia_tentativas", {})
-    limite = (AGORA - dt.timedelta(days=10)).date().isoformat()
+        midia.completar(c)
     mexeu = False
-    for c in camp:
-        if (c.get("source", "").startswith("LinkedIn") and c.get("date", "") >= limite and not c.get("yt")
-                and not c.get("video") and tent.get(c["id"], 0) < 3):
-            tent[c["id"]] = tent.get(c["id"], 0) + 1
-            if completar_midia(c):
-                mexeu = True
-                log("  + mídia nova para:", c["brand"], "|", c["title"][:60])
-    A.salvar_json(SAIDA, hist)
     entraram = []
     for c in novas:
         u = c["url"].split("?")[0].rstrip("/")

@@ -1,0 +1,58 @@
+name: Filme e imagem das campanhas
+
+# Procura filme (YouTube, Vimeo, Instagram, TikTok) ou imagem para as campanhas recentes que estão
+# no site sem nenhum dos dois: na própria matéria, na busca do YouTube e em outras matérias (Bing).
+# Roda de hora em hora; cada campanha é tentada até 4 vezes nos 10 dias depois da estreia.
+on:
+  schedule:
+    - cron: "27 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: midia
+  cancel-in-progress: false
+
+jobs:
+  midia:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Procurar e publicar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "droppad robô"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python robo/midia.py
+          cp robo/midia.json /tmp/midia_estado.json
+          for tentativa in 1 2 3 4 5; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            cp /tmp/midia_estado.json robo/midia.json
+            python robo/midia.py --aplicar
+            git add robo/midia.json campaigns.json novidades.json
+            if git diff --cached --quiet; then
+              echo "Nada novo."
+              exit 0
+            fi
+            git commit -q -m "Filme e imagem das campanhas $(TZ=America/Sao_Paulo date '+%F %H:%M') (robô)"
+            if git push origin HEAD:main; then
+              if ! git diff --quiet HEAD~1 HEAD -- campaigns.json; then
+                gh workflow run publicar.yml -R "${{ github.repository }}" --ref main >/dev/null 2>&1 || true
+              fi
+              exit 0
+            fi
+            echo "Push recusado; tentando de novo ($tentativa/5)."
+            sleep 5
+          done
+          exit 1
