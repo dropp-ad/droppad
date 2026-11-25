@@ -45,11 +45,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"af50318924806a78f0cb13e2221afd27\"",
-      "mod": "Wed, 25 Nov 2026 10:11:01 GMT"
+      "etag": "W/\"81524b77ea26bae7eb9e9cfe658531b8\"",
+      "mod": "Wed, 25 Nov 2026 10:21:09 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 10:23:24 GMT"
+      "mod": "Wed, 25 Nov 2026 10:37:23 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
@@ -86,26 +86,26 @@
       "mod": "Wed, 25 Nov 2026 08:18:47 GMT"
     },
     "https://www.adweek.com/feed/": {
-      "etag": "W/\"7b59dff154d8aadd6e2c87d73f0b87a7\"",
-      "mod": "Wed, 25 Nov 2026 10:20:19 GMT"
+      "etag": "W/\"cbe2e711ad77f70d8625181c1e9576b0\"",
+      "mod": "Wed, 25 Nov 2026 10:31:48 GMT"
     },
     "https://www.bandt.com.au/feed/": {
       "mod": "Wed, 25 Nov 2026 04:25:07 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
-      "etag": "\"0a681e5671969423907b9fa89942d306\"",
-      "mod": "Wed, 25 Nov 2026 10:23:08 GMT"
+      "etag": "\"af2bec0479f5303c5458f097783dd176\"",
+      "mod": "Wed, 25 Nov 2026 10:36:52 GMT"
     },
     "https://bbdo.com/feed/": {
       "etag": "W/\"d19e6feb3b8183716af7e9ecf21ae2f1\"",
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 10:23:26 GMT"
+      "mod": "Wed, 25 Nov 2026 10:38:24 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"bd7e04415105e20f24630c4a7fdea427-gzip\"",
-      "mod": "Wed, 25 Nov 2026 10:15:01 GMT"
+      "etag": "W/\"fe0de77a3416ddacde5738c5be2f7550-gzip\"",
+      "mod": "Wed, 25 Nov 2026 10:37:45 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -197,10 +197,10 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 10:23:26 GMT"
+      "mod": "Wed, 25 Nov 2026 10:38:24 GMT"
     }
   },
-  "yt_pos": 36,
+  "yt_pos": 71,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -593,18 +593,27 @@
       "Lopez Negrete": "lopeznegretecomm",
       "BrandExtract": "brandextract",
       "Richards/Carlberg": "",
-      "The Black Sheep Agency": "shearcreativity"
+      "The Black Sheep Agency": "shearcreativity",
+      "Milkshake Media": "",
+      "Anson Stoner": "ansonstoner",
+      "&Barr": "barragency",
+      "Chatter Buzz": "chatterbuzzmedia",
+      "Bigeye": "bigeyeagency",
+      "Push": "pushhere",
+      "R&R Partners": "rrpartners",
+      "The Firm Public Relations": "thefirmpr",
+      "KPS3": "kps3marketing",
+      "SKC Group": "",
+      "Noble Studios": "noblestudios",
+      "Sociallyin": "sociallyin_"
     },
     "tentadas": {
-      "Milkshake Media": [
-        "milkshakemedia",
-        "milkshakemediaagency"
-      ],
-      "&Barr": [
-        "andbarr"
+      "Disruptive Advertising": [
+        "disruptiveadvertising",
+        "disruptiveadvertisingagency"
       ]
     },
-    "pos": 570,
+    "pos": 578,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -727,9 +736,10 @@
       "J. Rieger & Co. Creative",
       "Schupp Company",
       "Richards/Carlberg",
-      "Milkshake Media"
+      "Milkshake Media",
+      "SKC Group"
     ],
-    "rodadas": 1059,
+    "rodadas": 1074,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1490,7 +1500,34 @@
       "The Black Sheep Agency": [
         "shearcreativity"
       ],
-      "&Barr": []
+      "&Barr": [],
+      "Anson Stoner": [
+        "ansonstoner"
+      ],
+      "Chatter Buzz": [
+        "chatterbuzzmedia"
+      ],
+      "Bigeye": [
+        "bigeyeagency"
+      ],
+      "Push": [
+        "pushhere"
+      ],
+      "R&R Partners": [
+        "rrpartners"
+      ],
+      "SKC Group": [],
+      "The Firm Public Relations": [
+        "thefirmpr"
+      ],
+      "KPS3": [
+        "kps3marketing"
+      ],
+      "Noble Studios": [
+        "noblestudios"
+      ],
+      "Sociallyin": [],
+      "Disruptive Advertising": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -2186,8 +2223,10 @@
     "https://www.horizont.net/marketing/haribo-mcdonalds-co.-diese-spots-begeistern-die-deutschen-am-meisten-664206",
     "https://www.meioemensagem.com.br/marketing/com-historico-de-parceria-avon-estara-no-filme-de-marta",
     "https://www.marketingdirecto.com/campanas-navidenas/scrooge-es-apuesto-galan-rostro-jonathan-bailey-spot-navideno-verizon",
-    "https://marketinginsiderreview.com/airzone-estrena-campana-escalofrios"
+    "https://marketinginsiderreview.com/airzone-estrena-campana-escalofrios",
+    "https://www.medianews4u.com/coca-cola-india-brings-back-gold-spot-in-a-can-revives-the-zing-thing",
+    "https://www.medianews4u.com/coca-cola-revives-iconic-gold-spot-with-a-new-can-format-and-quick-commerce-launch"
   ],
-  "ultima_rodada": "2026-11-25T10:23:21.100454+00:00",
+  "ultima_rodada": "2026-11-25T10:38:20.405694+00:00",
   "ultima_novidade": "2026-11-25T10:23:21.100454+00:00"
 }
