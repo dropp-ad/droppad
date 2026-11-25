@@ -11,6 +11,8 @@ import re
 import sys
 
 # rodapé que os sites WordPress põem no feed ("O post … apareceu primeiro em …")
+# texto do post que vem cortado ("…"): o site abre o resto pelos três pontinhos
+CORTE = re.compile(r"(\.\.\.|…|\[…\]|\[\.\.\.\])\s*$")
 LIXO = re.compile(r"apareceu primeiro em|appeared first on|se publicó primero en|Gostou do conteúdo\?|Leia também|Read more:", re.I)
 
 CAMPOS = ("id", "date", "brand", "title", "agency", "source", "url", "region", "cc", "summary",
@@ -38,7 +40,7 @@ def main(src, dst):
         item = enxuta(x)
         story = [s for s in (x.get("story") or []) if isinstance(s, str) and s.strip() and not LIXO.search(s)]
         cid = str(x.get("id") or "")
-        if story and not tem_filme(x) and cid and "/" not in cid and not cid.startswith("."):
+        if story and (not tem_filme(x) or CORTE.search(x.get("frase") or x.get("summary") or "")) and cid and "/" not in cid and not cid.startswith("."):
             with open(os.path.join(pasta, cid + ".json"), "w", encoding="utf-8") as f:
                 json.dump({"story": story[:6]}, f, ensure_ascii=False, separators=(",", ":"))
             item["st"] = 1

@@ -295,6 +295,52 @@
     return box;
   }
 
+  /* texto do post; se vier cortado ("…"), os três pontinhos abrem o resto da notícia ali mesmo */
+  var CORTE = /\s*(\.\.\.|…|\[…\]|\[\.\.\.\])\s*$/;
+  function historia(c) {
+    if (c.story && c.story.length) return Promise.resolve(c.story);
+    if (!c.st) return Promise.resolve([]);
+    if (!c._hist) c._hist = fetch("historia/" + encodeURIComponent(c.id) + ".json")
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (j) { return Array.isArray(j.story) ? j.story.map(str).filter(Boolean) : []; })
+      .catch(function () { c._hist = null; return []; });
+    return c._hist;
+  }
+  function textoDoPost(c) {
+    var p = el("p", "txt"), t = fraseDe(c);
+    p.title = c.title;
+    if (!CORTE.test(t)) { p.textContent = t; return p; }
+    var inicio = t.replace(CORTE, "");
+    p.appendChild(document.createTextNode(inicio));
+    var more = el("button", "txt-more", "…");
+    more.type = "button";
+    more.setAttribute("aria-label", "Ler o resto do texto");
+    more.title = "Ler mais";
+    more.addEventListener("click", function (e) {
+      e.stopPropagation();
+      more.disabled = true;
+      historia(c).then(function (story) {
+        var chave = inicio.slice(0, 40).toLowerCase(), i = -1;
+        story.some(function (s, k) { if (s.toLowerCase().indexOf(chave) === 0) { i = k; return true; } return false; });
+        var mostrar = i >= 0 ? story.slice(i, i + 4) : story.slice(0, 3);
+        mostrar = mostrar.filter(function (s) { return !LIXO.test(s); });
+        if (!mostrar.length) { // sem o texto aqui: abre a matéria
+          more.disabled = false;
+          if (c.url) window.open(c.url, "_blank", "noopener");
+          return;
+        }
+        // nos cards a notícia já vem embaixo: aqui só completa o primeiro parágrafo
+        if (!c.fl.length) mostrar = mostrar.slice(0, 1);
+        p.textContent = "";
+        p.classList.add("open");
+        mostrar.forEach(function (s, k) { if (k) p.appendChild(el("br")), p.appendChild(el("br")); p.appendChild(document.createTextNode(s)); });
+        if (c.url) { p.appendChild(document.createTextNode(" ")); p.appendChild(link("news-more", "Ler a matéria completa ↗", c.url)); }
+      });
+    });
+    p.appendChild(more);
+    return p;
+  }
+
   function post(c, idxInDay) {
     var art = el("article", "post");
     art._c = c;
@@ -333,8 +379,7 @@
     art.appendChild(head);
 
     // a frase
-    var txt = el("p", "txt", fraseDe(c));
-    txt.title = c.title;
+    var txt = textoDoPost(c);
     txt.classList.add("rv"); txt.style.setProperty("--i", 1);
     art.appendChild(txt);
 

@@ -97,6 +97,9 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .more-btn { flex: none; width: 40px; height: 40px; color: var(--muted); display: grid; place-items: center; }
 .more-btn:hover, .more-btn[aria-expanded="true"] { color: var(--ink); }
 .more-btn svg { width: 20px; height: 20px; fill: currentColor; stroke: none; }
+.txt-more { margin-left: 2px; padding: 0 4px; font-weight: 700; color: var(--ink); background: #2a2a2a; line-height: 1.2; transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease); }
+.txt-more:hover { background: var(--ink); color: #000; }
+.txt.open { animation: pagein .5s var(--ease); }
 .txt { margin: 0; padding: 0 18px 14px; font-size: 16px; line-height: 1.5; color: var(--txt-2); }
 
 /* quadro do filme: sempre 16:9; a capa é um pouco maior que o quadro pra o parallax ter folga */
