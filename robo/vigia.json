@@ -16,7 +16,7 @@
       "mod": "Wed, 25 Nov 2026 10:21:55 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 11:03:21 GMT"
+      "mod": "Wed, 25 Nov 2026 11:08:21 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"be8d0011aa703b1d3fa81ddd877a93db\"",
@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 10:41:52 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 11:03:23 GMT"
+      "mod": "Wed, 25 Nov 2026 11:08:23 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 11:03:25 GMT"
+      "mod": "Wed, 25 Nov 2026 11:08:24 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"ab43a693299c57b7beeeb0bf7ad85e4e-gzip\"",
-      "mod": "Wed, 25 Nov 2026 10:43:15 GMT"
+      "etag": "W/\"fc1e0601f53f31ed59bf77515bf166e7-gzip\"",
+      "mod": "Wed, 25 Nov 2026 11:05:37 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -197,10 +197,10 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 11:03:25 GMT"
+      "mod": "Wed, 25 Nov 2026 11:08:24 GMT"
     }
   },
-  "yt_pos": 74,
+  "yt_pos": 58,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -612,18 +612,15 @@
       "McCann New York": "",
       "Grey Group": "",
       "MullenLowe US": "mullenloweus",
-      "RPA Advertising": ""
+      "RPA Advertising": "",
+      "Goodby, Silverstein & Partners": ""
     },
     "tentadas": {
-      "Goodby, Silverstein & Partners": [
-        "goodbysilversteinpartners",
-        "goodbysilversteinandpartners"
-      ],
       "Barkley": [
         "barkley"
       ]
     },
-    "pos": 590,
+    "pos": 593,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -753,9 +750,11 @@
       "BBDO New York",
       "McCann New York",
       "Grey Group",
-      "RPA Advertising"
+      "RPA Advertising",
+      "Goodby, Silverstein & Partners",
+      "Barkley"
     ],
-    "rodadas": 1099,
+    "rodadas": 1104,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2252,6 +2251,6 @@
     "https://www.medianews4u.com/coca-cola-revives-iconic-gold-spot-with-a-new-can-format-and-quick-commerce-launch",
     "https://grandesnomesdapropaganda.com.br/mercado/abap-bahia-celebra-mercado-publicitario-e-homenageia-primeira-presidente"
   ],
-  "ultima_rodada": "2026-11-25T11:03:21.168796+00:00",
+  "ultima_rodada": "2026-11-25T11:08:20.741018+00:00",
   "ultima_novidade": "2026-11-25T11:03:21.168796+00:00"
 }
