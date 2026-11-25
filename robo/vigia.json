@@ -19,8 +19,8 @@
       "mod": "Wed, 25 Nov 2026 08:39:22 GMT"
     },
     "https://www.informabtl.com/feed/": {
-      "etag": "W/\"e7f67ca90c666a7e9684ecdf07cb143f\"",
-      "mod": "Wed, 25 Nov 2026 09:00:49 GMT"
+      "etag": "W/\"be8d0011aa703b1d3fa81ddd877a93db\"",
+      "mod": "Wed, 25 Nov 2026 10:00:14 GMT"
     },
     "https://propmark.com.br/feed/": {
       "etag": "\"b037f7640f98f2caea39c03e06e7521f\"",
@@ -30,8 +30,8 @@
       "mod": "Tue, 24 Nov 2026 14:06:00 GMT"
     },
     "https://musebyclios.com/feed/": {
-      "etag": "W/\"425354f281fa05ee5d1445b546fe76c4\"",
-      "mod": "Tue, 24 Nov 2026 23:19:00 GMT"
+      "etag": "W/\"92174c0074cf72c039574b74250acc01\"",
+      "mod": "Wed, 25 Nov 2026 09:37:38 GMT"
     },
     "https://www.contentgrip.com/feed/": {
       "etag": "W/\"2367c-FuYp9OjwM5mg4savqnudaPwtAEA\""
@@ -45,19 +45,19 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"02b225c42d17acad28c0851cd4e189d6\"",
-      "mod": "Wed, 25 Nov 2026 08:00:59 GMT"
+      "etag": "W/\"e92126f40c0f68606a6213ce429b012c\"",
+      "mod": "Wed, 25 Nov 2026 10:01:52 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 09:38:23 GMT"
+      "mod": "Wed, 25 Nov 2026 10:08:23 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
       "mod": "Wed, 25 Nov 2026 06:55:22 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795581907-gzip\"",
-      "mod": "Wed, 25 Nov 2026 04:45:07 GMT"
+      "etag": "W/\"1795600149-gzip\"",
+      "mod": "Wed, 25 Nov 2026 09:49:09 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 09:38:25 GMT"
+      "mod": "Wed, 25 Nov 2026 10:07:25 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"17d7bf695fdda57e21bd193690ad7293-gzip\"",
-      "mod": "Wed, 25 Nov 2026 09:33:02 GMT"
+      "etag": "W/\"7ef1d34352158c7afca341650b54dcb0-gzip\"",
+      "mod": "Wed, 25 Nov 2026 10:02:43 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -143,8 +143,8 @@
       "mod": "Tue, 24 Nov 2026 22:12:52 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
-      "etag": "\"450f0bbe954a6d4a6808fff3e49c46d0\"",
-      "mod": "Wed, 25 Nov 2026 08:53:04 GMT"
+      "etag": "\"d99584b771c6e59b3896d313398c6068\"",
+      "mod": "Wed, 25 Nov 2026 09:02:54 GMT"
     },
     "https://wearesocial.com/it/feed/": {
       "etag": "W/\"142edc7baade8a4b5bd0a2a67ab57ef5\"",
@@ -197,10 +197,10 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 09:38:25 GMT"
+      "mod": "Wed, 25 Nov 2026 10:08:25 GMT"
     }
   },
-  "yt_pos": 97,
+  "yt_pos": 84,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -559,10 +559,48 @@
       "160over90": "160over90",
       "Vault Communications": "vaultcomm",
       "GS&F": "gsandf",
-      "Bohan": ""
+      "The Buntin Group": "bastionbuntin",
+      "BooneOakley": "booneoakley",
+      "Bohan": "",
+      "Luquire": "luquireagency",
+      "Mythic": "bemythic",
+      "Tattoo Projects": "tattooprojects",
+      "Wray Ward": "wray_ward",
+      "LaneTerralever": "lifeatlt",
+      "Moses Inc.": "riesteragency",
+      "OH Partners": "ohadvertising",
+      "RIESTER": "riesteragency",
+      "LAVIDGE": "lavidgeco",
+      "Vitro": "vitro.agency",
+      "BASIC/DEPT": "basicagency",
+      "Red Door Interactive": "reddoorinteractive",
+      "Mindgruve": "mindgruve",
+      "i.d.e.a.": "ideaagency",
+      "The Shipyard": "theshipyard",
+      "Fahlgren Mortine": "fahlgrenmortine",
+      "Ologie": "ologie",
+      "FrazierHeiby": "slidenineagency",
+      "Manifest": "manifest_agency",
+      "Bernstein-Rein": "bernstein_rein",
+      "MMGY Global": "mmgyglobal",
+      "HLK": "hlkagency",
+      "Rodgers Townsend": "tbwa",
+      "Atomicdust": "atmdst",
+      "Osborn Barr": "obpagency"
     },
-    "tentadas": {},
-    "pos": 548,
+    "tentadas": {
+      "J. Rieger & Co. Creative": [
+        "riegercreative",
+        "jriegercocreative",
+        "jriegercocreativeagency",
+        "j.riegerco.creative",
+        "jriegerandcocreative"
+      ],
+      "Schupp Company": [
+        "schuppcompany"
+      ]
+    },
+    "pos": 563,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -680,9 +718,11 @@
       "TRG",
       "Zubi",
       "Karsh Hagan",
-      "MDB Communications"
+      "MDB Communications",
+      "Bohan",
+      "J. Rieger & Co. Creative"
     ],
-    "rodadas": 1014,
+    "rodadas": 1044,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1348,7 +1388,89 @@
       ],
       "GS&F": [
         "gsandf"
-      ]
+      ],
+      "The Buntin Group": [
+        "bastionbuntin"
+      ],
+      "BooneOakley": [
+        "booneoakley"
+      ],
+      "Luquire": [
+        "luquireagency"
+      ],
+      "Mythic": [
+        "bemythic"
+      ],
+      "Tattoo Projects": [
+        "tattooprojects"
+      ],
+      "Wray Ward": [
+        "wray_ward"
+      ],
+      "LaneTerralever": [
+        "lifeatlt"
+      ],
+      "Moses Inc.": [
+        "riesteragency"
+      ],
+      "OH Partners": [
+        "ohadvertising"
+      ],
+      "RIESTER": [
+        "riesteragency"
+      ],
+      "LAVIDGE": [
+        "lavidgeco"
+      ],
+      "Vitro": [
+        "vitro.agency"
+      ],
+      "BASIC/DEPT": [
+        "basicagency",
+        "wilson"
+      ],
+      "Red Door Interactive": [
+        "reddoorinteractive"
+      ],
+      "i.d.e.a.": [],
+      "Mindgruve": [
+        "mindgruve"
+      ],
+      "The Shipyard": [
+        "theshipyard"
+      ],
+      "Fahlgren Mortine": [
+        "fahlgrenmortine"
+      ],
+      "Ologie": [
+        "ologie"
+      ],
+      "FrazierHeiby": [
+        "slidenineagency"
+      ],
+      "Manifest": [
+        "manifest_agency"
+      ],
+      "Bernstein-Rein": [
+        "bernstein_rein"
+      ],
+      "MMGY Global": [
+        "mmgyglobal"
+      ],
+      "J. Rieger & Co. Creative": [],
+      "HLK": [
+        "hlkagency"
+      ],
+      "Rodgers Townsend": [
+        "tbwa"
+      ],
+      "Atomicdust": [
+        "atmdst"
+      ],
+      "Osborn Barr": [
+        "obpagency"
+      ],
+      "Schupp Company": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -2044,6 +2166,6 @@
     "https://www.horizont.net/marketing/haribo-mcdonalds-co.-diese-spots-begeistern-die-deutschen-am-meisten-664206",
     "https://www.meioemensagem.com.br/marketing/com-historico-de-parceria-avon-estara-no-filme-de-marta"
   ],
-  "ultima_rodada": "2026-11-25T09:38:20.876498+00:00",
+  "ultima_rodada": "2026-11-25T10:08:20.671086+00:00",
   "ultima_novidade": "2026-11-25T09:16:21.171289+00:00"
 }
