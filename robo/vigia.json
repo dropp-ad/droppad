@@ -49,7 +49,7 @@
       "mod": "Wed, 25 Nov 2026 08:00:59 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 08:27:13 GMT"
+      "mod": "Wed, 25 Nov 2026 08:38:12 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
@@ -79,7 +79,7 @@
       "mod": "Wed, 25 Nov 2026 00:46:19 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Wed, 25 Nov 2026 08:17:13 GMT"
+      "mod": "Wed, 25 Nov 2026 08:37:13 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"404da0c5daf43a17d66a6e6193e5de2a\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 08:28:13 GMT"
+      "mod": "Wed, 25 Nov 2026 08:38:14 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"f0688317a365f7bc01b9c3b5a71af128-gzip\"",
@@ -143,8 +143,8 @@
       "mod": "Tue, 24 Nov 2026 22:12:52 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
-      "etag": "\"3e0fc5cd23503d60e366d4a525c5e539\"",
-      "mod": "Wed, 25 Nov 2026 08:22:04 GMT"
+      "etag": "\"c5a876da333275fcc724d3d4a56337d9\"",
+      "mod": "Wed, 25 Nov 2026 08:34:43 GMT"
     },
     "https://wearesocial.com/it/feed/": {
       "etag": "W/\"142edc7baade8a4b5bd0a2a67ab57ef5\"",
@@ -186,7 +186,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 65,
+  "yt_pos": 73,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -483,15 +483,21 @@
       "Allen & Gerritsen": "allen_gerritsen",
       "Connelly Partners": "connellypartners",
       "360PR+": "360prplus",
-      "Digitas": "digitas.na"
+      "Digitas": "digitas.na",
+      "Small Army": "",
+      "AMP Agency": "amp_agency",
+      "Bakery": "bakeryagency",
+      "Tilted Chair": "tiltedchair",
+      "Arts + Labor": "artsandlabor"
     },
     "tentadas": {
-      "Small Army": [
-        "smallarmy",
-        "smallarmyagency"
+      "Door No. 3": [
+        "doornumber3",
+        "doorno3",
+        "doorno3agency"
       ]
     },
-    "pos": 513,
+    "pos": 518,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -603,9 +609,10 @@
       "Sockeye",
       "Energy BBDO",
       "Haberman",
-      "Small Army"
+      "Small Army",
+      "Door No. 3"
     ],
-    "rodadas": 944,
+    "rodadas": 954,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1125,6 +1132,18 @@
       ],
       "Digitas": [
         "digitas.na"
+      ],
+      "AMP Agency": [
+        "amp_agency"
+      ],
+      "Bakery": [
+        "bakeryagency"
+      ],
+      "Tilted Chair": [],
+      "Door No. 3": [],
+      "Arts + Labor": [
+        "scottmarcbecker",
+        "t51.2885"
       ]
     },
     "mortas": {
@@ -1817,6 +1836,6 @@
     "https://campaignbriefasia.com/2026/11/25/the-lennon-groups-rizza-garcia-picks-her-three-favourite-campaigns-from-the-one-asia-judging",
     "https://www.retailgazette.co.uk/blog/2026/11/black-friday-bristol-ad-ban"
   ],
-  "ultima_rodada": "2026-11-25T08:28:10.380801+00:00",
+  "ultima_rodada": "2026-11-25T08:38:10.788240+00:00",
   "ultima_novidade": "2026-11-25T08:26:10.744017+00:00"
 }
