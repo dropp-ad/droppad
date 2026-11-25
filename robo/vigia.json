@@ -12,8 +12,8 @@
       "mod": "Wed, 25 Nov 2026 18:22:27 GMT"
     },
     "https://clubedecriacao.com.br/feed/": {
-      "etag": "\"28c6c27c625fb20bc39246c7473b4303\"",
-      "mod": "Wed, 25 Nov 2026 18:05:50 GMT"
+      "etag": "\"6176d3e85ff1c44da60bc92e402b8ea5\"",
+      "mod": "Wed, 25 Nov 2026 18:34:17 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
       "mod": "Wed, 25 Nov 2026 18:19:34 GMT"
@@ -45,19 +45,19 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"8cc36d9e36c2742b837df6f30dec20f3\"",
-      "mod": "Wed, 25 Nov 2026 18:22:33 GMT"
+      "etag": "W/\"6f79571dda1079ae751cb04b42b31581\"",
+      "mod": "Wed, 25 Nov 2026 18:48:31 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 18:22:49 GMT"
+      "mod": "Wed, 25 Nov 2026 18:47:39 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e6af6603c85ab6d2041ffecd407e673d\"",
       "mod": "Wed, 25 Nov 2026 06:55:22 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795630733-gzip\"",
-      "mod": "Wed, 25 Nov 2026 18:18:53 GMT"
+      "etag": "W/\"1795632372-gzip\"",
+      "mod": "Wed, 25 Nov 2026 18:46:12 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -86,8 +86,8 @@
       "mod": "Wed, 25 Nov 2026 08:18:47 GMT"
     },
     "https://www.adweek.com/feed/": {
-      "etag": "W/\"ba40c69826612ea8ec0ac5ecd9dc2b29\"",
-      "mod": "Wed, 25 Nov 2026 17:50:36 GMT"
+      "etag": "W/\"f53261e49a1f29b9dced557ffea7c6ed\"",
+      "mod": "Wed, 25 Nov 2026 18:42:56 GMT"
     },
     "https://www.bandt.com.au/feed/": {
       "mod": "Wed, 25 Nov 2026 14:00:20 GMT"
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 18:23:39 GMT"
+      "mod": "Wed, 25 Nov 2026 18:48:39 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -132,15 +132,15 @@
       "mod": "Wed, 25 Nov 2026 04:44:32 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 17:56:11 GMT"
+      "mod": "Wed, 25 Nov 2026 18:40:38 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"2021e483ee1aae4f96c5fe6c2730edf4\"",
-      "mod": "Wed, 25 Nov 2026 18:15:00 GMT"
+      "etag": "\"e08815d6e4a4c2c51a222fb26c08ed23\"",
+      "mod": "Wed, 25 Nov 2026 18:45:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
-      "etag": "\"67e0a8d8860bfd25510cf11477f5bc87\"",
-      "mod": "Wed, 25 Nov 2026 18:19:23 GMT"
+      "etag": "\"592c2a29becadda6a78a98fcedb46c7d\"",
+      "mod": "Wed, 25 Nov 2026 18:45:37 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
       "etag": "\"92df8018d932580ddbc55b3c2916a201\"",
@@ -197,10 +197,10 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 18:23:39 GMT"
+      "mod": "Wed, 25 Nov 2026 18:48:10 GMT"
     }
   },
-  "yt_pos": 77,
+  "yt_pos": 80,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -736,15 +736,26 @@
       "Northfolk": "northfolkagency",
       "Sideways8": "",
       "Jumpfactor": "",
-      "Mention": ""
+      "Mention": "",
+      "Vamp": "vamp",
+      "HypeAuditor": "",
+      "Ogilvy France": "",
+      "Ogilvy Italy": "ogilvyitaly",
+      "Ogilvy Spain": "",
+      "Ogilvy Netherlands": "",
+      "TBWA\\London": ""
     },
     "tentadas": {
-      "HypeAuditor": [
-        "hypeauditor",
-        "hypeauditoragency"
+      "TBWA\\Madrid": [
+        "tbwamadrid",
+        "tbwamadridagency"
+      ],
+      "TBWA\\Amsterdam": [
+        "tbwaamsterdam",
+        "tbwaamsterdamagency"
       ]
     },
-    "pos": 810,
+    "pos": 823,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -975,9 +986,15 @@
       "Audiencly",
       "Sideways8",
       "Jumpfactor",
-      "Mention"
+      "Mention",
+      "HypeAuditor",
+      "Ogilvy France",
+      "Ogilvy Spain",
+      "Ogilvy Netherlands",
+      "TBWA\\London",
+      "TBWA\\Amsterdam"
     ],
-    "rodadas": 1539,
+    "rodadas": 1564,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -1896,7 +1913,15 @@
       "Northfolk": [],
       "Jumpfactor": [],
       "Mention": [],
-      "HypeAuditor": []
+      "HypeAuditor": [],
+      "Vamp": [],
+      "Ogilvy France": [],
+      "Ogilvy Spain": [],
+      "Ogilvy Italy": [],
+      "Ogilvy Netherlands": [],
+      "TBWA\\London": [],
+      "TBWA\\Amsterdam": [],
+      "TBWA\\Madrid": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -2618,8 +2643,9 @@
     "https://www.merca20.com/instagram-revela-que-no-escucha-tus-conversaciones-para-mostrar-anuncios-asegura-adam-mosseri",
     "https://nossomeio.com.br/elo-anuncia-sandy-e-junior-como-embaixadores-e-lanca-campanha-com-a-dupla",
     "https://propmark.com.br/anunciantes/campari-reune-seis-personalidades-em-campanha-criada-pela-dpz",
-    "https://propmark.com.br/anunciantes/elo-anuncia-patrocinio-da-turne-de-sandy-e-junior-em-2027-com-campanha-da-almapbbdo"
+    "https://propmark.com.br/anunciantes/elo-anuncia-patrocinio-da-turne-de-sandy-e-junior-em-2027-com-campanha-da-almapbbdo",
+    "https://www.merca20.com/retromarketing-en-2008-burger-king-mexico-lanzo-estas-8-figuras-coleccionables-de-snoopy-18-anos-despues-el-personaje-vuelve-en-campana-de-noviembre"
   ],
-  "ultima_rodada": "2026-11-25T18:23:34.255939+00:00",
+  "ultima_rodada": "2026-11-25T18:48:34.785908+00:00",
   "ultima_novidade": "2026-11-25T18:23:34.255939+00:00"
 }
