@@ -16,7 +16,7 @@
       "mod": "Tue, 24 Nov 2026 22:45:02 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 00:26:56 GMT"
+      "mod": "Wed, 25 Nov 2026 00:45:56 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"735d697851667a8899f4aec0a763dfc2\"",
@@ -52,7 +52,7 @@
       "mod": "Wed, 25 Nov 2026 00:03:05 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 00:30:58 GMT"
+      "mod": "Wed, 25 Nov 2026 00:47:58 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"6947db803e7567c1c2df8d4d2bebdbc2\"",
@@ -78,8 +78,8 @@
       "mod": "Wed, 25 Nov 2026 00:30:26 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
-      "etag": "\"fba985558d1510f2c5aa4c38d74020af\"",
-      "mod": "Tue, 24 Nov 2026 23:28:00 GMT"
+      "etag": "\"f63df64606a6686f991170ed6542fd53\"",
+      "mod": "Wed, 25 Nov 2026 00:46:19 GMT"
     },
     "https://www.afaqs.com/rss": {
       "mod": "Wed, 25 Nov 2026 00:01:01 GMT"
@@ -93,7 +93,7 @@
       "mod": "Tue, 24 Nov 2026 23:42:55 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 00:19:27 GMT"
+      "mod": "Wed, 25 Nov 2026 00:40:15 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
       "etag": "\"01865794e34ab23b0cd5491d7a065892\"",
@@ -104,7 +104,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 00:31:00 GMT"
+      "mod": "Wed, 25 Nov 2026 00:48:00 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"666eeda9a963cd4bbf7e5249c50c7c74-gzip\"",
@@ -189,7 +189,7 @@
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     }
   },
-  "yt_pos": 63,
+  "yt_pos": 62,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -390,9 +390,14 @@
     "tentadas": {
       "Zambezi": [
         "zmbz"
+      ],
+      "Fbiz": [
+        "fbizbr",
+        "f.biz",
+        "fbiz_"
       ]
     },
-    "pos": 274,
+    "pos": 283,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -455,9 +460,10 @@
       "BETC Havas",
       "SunsetDDB",
       "David São Paulo",
-      "Spark"
+      "Spark",
+      "Fbiz"
     ],
-    "rodadas": 467,
+    "rodadas": 484,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -787,7 +793,8 @@
       "Spark": [],
       "Ginga": [
         "agencia_ginga"
-      ]
+      ],
+      "Fbiz": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -977,7 +984,24 @@
       "ddbhamburg": "2026-11-25T00:17:55.755478+00:00",
       "hammer_amsterdam": "2026-11-25T00:23:55.527174+00:00",
       "hotellamour_ams": "2026-11-25T00:25:56.032193+00:00",
-      "fitzroyams": "2026-11-25T00:27:56.155421+00:00"
+      "fitzroyams": "2026-11-25T00:27:56.155421+00:00",
+      "monsieurguillaume": "2026-11-25T00:31:56.249134+00:00",
+      "mcsaatchiparis": "2026-11-25T00:37:55.538907+00:00",
+      "artsandletters": "2026-11-25T00:39:55.903163+00:00",
+      "humanventures": "2026-11-25T00:39:55.903163+00:00",
+      "coegi": "2026-11-25T00:39:55.903163+00:00",
+      "directiveagency": "2026-11-25T00:39:55.903163+00:00",
+      "loungelizard": "2026-11-25T00:39:55.903163+00:00",
+      "thriveagency": "2026-11-25T00:39:55.903163+00:00",
+      "victoriousseo": "2026-11-25T00:39:55.903163+00:00",
+      "searchenginejournal": "2026-11-25T00:39:55.903163+00:00",
+      "riseinteractive": "2026-11-25T00:39:55.903163+00:00",
+      "tinuitidigital": "2026-11-25T00:39:55.903163+00:00",
+      "wpromote": "2026-11-25T00:39:55.903163+00:00",
+      "hawksem": "2026-11-25T00:39:55.903163+00:00",
+      "klientboosthq": "2026-11-25T00:39:55.903163+00:00",
+      "smithbrothersmedia": "2026-11-25T00:39:55.903163+00:00",
+      "bornsocialau": "2026-11-25T00:45:56.298147+00:00"
     }
   },
   "vistos": [
@@ -1107,6 +1131,6 @@
     "https://www.thestable.com.au/havas-creative-spain-el-almendros-famous-christmas-jingle-sends-a-message-about-connection",
     "https://campaignbrief.com/victorians-for-nature-unveils-worst-hiking-trail-on-earth-on-alltrails-in-new-work-via-fireside"
   ],
-  "ultima_rodada": "2026-11-25T00:30:55.848391+00:00",
+  "ultima_rodada": "2026-11-25T00:47:55.928194+00:00",
   "ultima_novidade": "2026-11-25T00:30:55.848391+00:00"
 }
