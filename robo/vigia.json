@@ -23,8 +23,8 @@
       "mod": "Wed, 25 Nov 2026 21:27:25 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"e6cc771645d5cef6f73bc44d34ac1f44\"",
-      "mod": "Wed, 25 Nov 2026 18:21:31 GMT"
+      "etag": "\"9ff68cc555036d03f60f45a558d072cc\"",
+      "mod": "Wed, 25 Nov 2026 21:24:06 GMT"
     },
     "https://www.marketingdive.com/feeds/news/": {
       "mod": "Wed, 25 Nov 2026 15:46:00 GMT"
@@ -45,11 +45,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"647e818eabd1c1f825133b46a1dc7a95\"",
-      "mod": "Wed, 25 Nov 2026 21:18:57 GMT"
+      "etag": "W/\"127351b9b713cc34add500ac673bfd2f\"",
+      "mod": "Wed, 25 Nov 2026 21:51:37 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Wed, 25 Nov 2026 21:30:24 GMT"
+      "mod": "Wed, 25 Nov 2026 21:52:00 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"f727b271dbf13fbe2ee852f323d4da8f\"",
@@ -86,8 +86,8 @@
       "mod": "Wed, 25 Nov 2026 08:18:47 GMT"
     },
     "https://www.adweek.com/feed/": {
-      "etag": "W/\"3446304db66917ff0441756b3977d6d5\"",
-      "mod": "Wed, 25 Nov 2026 21:25:21 GMT"
+      "etag": "W/\"2c79c52ab82071ec5eed331a3f3241f3\"",
+      "mod": "Wed, 25 Nov 2026 21:33:12 GMT"
     },
     "https://www.bandt.com.au/feed/": {
       "mod": "Wed, 25 Nov 2026 14:00:20 GMT"
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 21:31:01 GMT"
+      "mod": "Wed, 25 Nov 2026 21:52:01 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -132,15 +132,15 @@
       "mod": "Wed, 25 Nov 2026 21:20:54 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 20:31:22 GMT"
+      "mod": "Wed, 25 Nov 2026 21:34:08 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"dcc06950269ce4256fcafa5db0b3c942\"",
-      "mod": "Wed, 25 Nov 2026 21:30:00 GMT"
+      "etag": "\"b8579696accc4a988e587c4cb750ccd9\"",
+      "mod": "Wed, 25 Nov 2026 21:45:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
-      "etag": "\"ee0c676de1ac03810dec80888dfdc937\"",
-      "mod": "Wed, 25 Nov 2026 20:30:06 GMT"
+      "etag": "\"e3fa8e792b34cf43ce028430b22a3d79\"",
+      "mod": "Wed, 25 Nov 2026 21:36:11 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
       "etag": "\"cfc19f2c41ffbe73c18d65dfbce97dc3\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Wed, 25 Nov 2026 21:30:15 GMT"
+      "mod": "Wed, 25 Nov 2026 21:51:45 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Wed, 25 Nov 2026 21:28:02 GMT"
+      "mod": "Wed, 25 Nov 2026 21:50:03 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -301,7 +301,7 @@
       "mod": "Thu, 29 Oct 2026 19:32:20 GMT"
     }
   },
-  "yt_pos": 112,
+  "yt_pos": 132,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -880,18 +880,20 @@
       "FleishmanHillard UK": "",
       "Burson UK": "",
       "Golin London": "",
-      "72andSunny Amsterdam": ""
+      "72andSunny Amsterdam": "",
+      "Special London": "",
+      "Creature London": "",
+      "Pablo London": "",
+      "Isobar UK": "",
+      "Digitas UK": "",
+      "Razorfish UK": ""
     },
     "tentadas": {
-      "Creature London": [
-        "creaturelondon",
-        "creaturelondonagency"
-      ],
-      "Special London": [
-        "speciallondon"
+      "Carat UK": [
+        "caratuk"
       ]
     },
-    "pos": 894,
+    "pos": 905,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1164,9 +1166,14 @@
       "Burson UK",
       "Golin London",
       "72andSunny Amsterdam",
-      "Special London"
+      "Special London",
+      "Creature London",
+      "Pablo London",
+      "Isobar UK",
+      "Digitas UK",
+      "Razorfish UK"
     ],
-    "rodadas": 1707,
+    "rodadas": 1728,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2129,7 +2136,12 @@
       "Golin London": [],
       "72andSunny Amsterdam": [],
       "Special London": [],
-      "Creature London": []
+      "Creature London": [],
+      "Pablo London": [],
+      "Isobar UK": [],
+      "Digitas UK": [],
+      "Razorfish UK": [],
+      "Carat UK": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -2865,6 +2877,6 @@
     "https://mumbrella.com.au/ooh-media-signs-record-number-of-advertisers-for-australian-open-946120",
     "https://www.abcdacomunicacao.com.br/nagumo-leva-aroma-de-flor-de-cerejeira-aos-cupons-fiscais-em-campanha-que-celebra-suas-raizes-japonesas"
   ],
-  "ultima_rodada": "2026-11-25T21:30:57.617161+00:00",
+  "ultima_rodada": "2026-11-25T21:51:57.889067+00:00",
   "ultima_novidade": "2026-11-25T21:30:57.617161+00:00"
 }
