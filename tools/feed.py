@@ -7,7 +7,11 @@ Uso: python tools/feed.py campaigns.json _site
 """
 import json
 import os
+import re
 import sys
+
+# rodapé que os sites WordPress põem no feed ("O post … apareceu primeiro em …")
+LIXO = re.compile(r"apareceu primeiro em|appeared first on|se publicó primero en|Gostou do conteúdo\?|Leia também|Read more:", re.I)
 
 CAMPOS = ("id", "date", "brand", "title", "agency", "source", "url", "region", "cc", "summary",
           "frase", "yt", "video", "image", "addedAt", "idea", "credits", "creatives", "production", "director")
@@ -26,13 +30,13 @@ def enxuta(x):
 
 def main(src, dst):
     with open(src, encoding="utf-8") as f:
-        dados = [x for x in json.load(f) if isinstance(x, dict)]
+        dados = [x for x in json.load(f) if isinstance(x, dict) and not x.get("hidden")]
     pasta = os.path.join(dst, "historia")
     os.makedirs(pasta, exist_ok=True)
     feed = []
     for x in dados:
         item = enxuta(x)
-        story = [s for s in (x.get("story") or []) if isinstance(s, str) and s.strip()]
+        story = [s for s in (x.get("story") or []) if isinstance(s, str) and s.strip() and not LIXO.search(s)]
         cid = str(x.get("id") or "")
         if story and not tem_filme(x) and cid and "/" not in cid and not cid.startswith("."):
             with open(os.path.join(pasta, cid + ".json"), "w", encoding="utf-8") as f:

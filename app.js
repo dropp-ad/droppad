@@ -58,12 +58,12 @@
         region: str(x.region), cc: str(x.cc).toUpperCase(), summary: str(x.summary),
         yt: arr(x.yt, function (s) { return /^[\w-]{11}$/.test(s); }),
         video: safeUrl(str(x.video)), image: safeUrl(str(x.image) || (Array.isArray(x.images) ? str(x.images[0]) : "")),
-        addedAt: str(x.addedAt), story: arr(x.story, Boolean), st: !!x.st,
+        addedAt: str(x.addedAt), story: arr(x.story, Boolean), st: !!x.st, hidden: !!x.hidden,
         idea: str(x.idea), frase: str(x.frase), credits: creditsOf(x)
       };
       c.fl = films(c);
       return c;
-    }).filter(function (c) { return isDay(c.date) && c.title; })
+    }).filter(function (c) { return isDay(c.date) && c.title && !c.hidden; })
       .sort(function (a, b) {
         if (a.date !== b.date) return a.date < b.date ? 1 : -1;
         if (!!a.fl.length !== !!b.fl.length) return a.fl.length ? -1 : 1; // no mesmo dia, filmes primeiro
@@ -195,26 +195,22 @@
   }
 
   /* ---------- Post: cada campanha vira um post de rede social ---------- */
-  function hostOf(u) { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return ""; } }
   // nome em cima do post: a agência; se vier vazia ou estranha ("Wise’s", "Brick e e"), o veículo
-  function quemPostou(c) {
+  // a agência, quando o nome vem limpo ("Wise’s", "Brick e e" ou o próprio veículo não contam)
+  function agenciaDe(c) {
     var a = c.agency;
-    if (!a || a.length < 2 || /['’]s\b/i.test(a) || /\b(\w+)\s+\1\b/i.test(a) || /\b(e|and|y)$/i.test(a)) return c.source || c.brand || "Campanha";
+    if (!a || a.length < 2 || /['’]s\b/i.test(a) || /\b(\w+)\s+\1\b/i.test(a) || /\b(e|and|y)$/i.test(a)) return "";
+    if (c.source && a.toLowerCase() === c.source.toLowerCase()) return "";
     return a;
   }
   function iniciais(t) {
     var w = String(t).replace(/[^0-9A-Za-zÀ-ÿ ]/g, " ").trim().split(/\s+/);
     return ((w[0] || "").charAt(0) + (w[1] || "").charAt(0)).toUpperCase() || "•";
   }
-  function avatar(c, nome) {
-    var box = el("span", "av");
-    var dom = hostOf(c.url);
-    function fallback() { box.textContent = iniciais(nome); box.classList.add("ini"); }
-    if (dom) {
-      var i = img("https://www.google.com/s2/favicons?domain=" + encodeURIComponent(dom) + "&sz=128", fallback);
-      i.alt = nome;
-      box.appendChild(i);
-    } else fallback();
+  function avatar(nome) {
+    var box = el("span", "av ini");
+    box.setAttribute("aria-hidden", "true");
+    box.textContent = iniciais(nome);
     return box;
   }
   function fraseDe(c) {
@@ -269,6 +265,8 @@
   });
 
   /* campanha sem filme: a notícia contada no próprio post (título + parágrafos da matéria) */
+  // rodapé que os sites WordPress põem no feed ("O post … apareceu primeiro em …")
+  var LIXO = /apareceu primeiro em|appeared first on|se publicó primero en|Gostou do conteúdo\?|Leia também|Read more:/i;
   function newsBlock(c) {
     var box = el("div", "news rv");
     box.style.setProperty("--i", 3);
@@ -280,7 +278,7 @@
       body.textContent = "";
       (story || []).some(function (t) {
         t = str(t);
-        if (!t || t.slice(0, 60) === shown) return false;
+        if (!t || t.slice(0, 60) === shown || LIXO.test(t)) return false;
         body.appendChild(el("p", null, t));
         total += t.length;
         return body.children.length >= 4 || total > 900;
@@ -303,17 +301,16 @@
     art._k = idxInDay;
     art.dataset.id = c.id;
     art.setAttribute("aria-label", (c.brand ? c.brand + ": " : "") + c.title);
-    var nome = quemPostou(c);
+    var ag = agenciaDe(c), marca = c.brand || c.title;
 
-    // quem fez, para quem
+    // Agência – Cliente (sem agência conhecida, só o cliente); embaixo, o veículo
     var head = el("div", "head");
-    head.appendChild(avatar(c, nome));
+    head.appendChild(avatar(ag || marca));
     var who = el("div", "who");
-    var b = el("b", null, nome);
-    if (c.brand && c.brand.toLowerCase() !== nome.toLowerCase()) {
-      b.appendChild(document.createTextNode(" "));
-      b.appendChild(el("i", null, "para"));
-      b.appendChild(document.createTextNode(" " + c.brand));
+    var b = el("b", null, ag || marca);
+    if (ag && marca && marca.toLowerCase() !== ag.toLowerCase()) {
+      b.appendChild(el("i", null, " – "));
+      b.appendChild(document.createTextNode(marca));
     }
     who.appendChild(b);
     var sm = el("small");
@@ -730,38 +727,32 @@
     f.appendChild(ta); f.appendChild(bar);
   }
 
-  var drawer = null;
+  /* comentários abrem dentro do próprio post, logo abaixo dos botões */
+  var drawer = null; // painel de comentários aberto (no post da campanha "cur")
   function closeComments() {
     if (!drawer) return;
-    drawer.classList.remove("on");
-    document.body.classList.remove("drawer-on");
+    var p = drawer, btn = p.parentNode && p.parentNode.querySelector(".act.cmt");
+    drawer = null; cur = null;
+    if (btn) btn.setAttribute("aria-expanded", "false");
+    p.style.height = p.scrollHeight + "px";
+    requestAnimationFrame(function () { p.classList.remove("on"); p.style.height = "0px"; });
+    setTimeout(function () { p.remove(); }, 450);
   }
   function openComments(c) {
     closeMenu();
-    if (!drawer) {
-      drawer = el("aside", "drawer");
-      drawer.setAttribute("aria-label", "Comentários");
-      var head = el("div", "drawer-head");
-      head.appendChild(el("div", "drawer-t"));
-      var x = el("button", "drawer-x", "×"); x.type = "button"; x.setAttribute("aria-label", "Fechar comentários");
-      x.addEventListener("click", closeComments);
-      head.appendChild(x);
-      drawer.appendChild(head);
-      drawer.appendChild(el("div", "drawer-body"));
-      drawer.appendChild(el("div", "cmt-form"));
-      var veil = el("div", "veil"); veil.addEventListener("click", closeComments);
-      document.body.appendChild(veil);
-      document.body.appendChild(drawer);
-    }
-    var t = drawer.querySelector(".drawer-t");
-    t.textContent = "";
-    t.appendChild(el("b", null, c.brand || "Campanha"));
-    t.appendChild(el("span", null, c.title));
-    var body = drawer.querySelector(".drawer-body");
-    var form = drawer.querySelector(".cmt-form");
+    var art = document.querySelector('.post[data-id="' + (window.CSS && CSS.escape ? CSS.escape(c.id) : c.id) + '"]');
+    if (!art) return;
+    if (drawer && drawer.parentNode === art) { closeComments(); return; } // segundo clique fecha
+    closeComments();
+    drawer = el("section", "cmts");
+    drawer.setAttribute("aria-label", "Comentários");
+    var body = el("div", "drawer-body"), form = el("div", "cmt-form");
+    drawer.appendChild(body);
+    drawer.appendChild(form);
+    art.appendChild(drawer);
+    var btn = art.querySelector(".act.cmt");
+    if (btn) btn.setAttribute("aria-expanded", "true");
     cur = c;
-    body.textContent = "";
-    form.textContent = "";
     if (!SUPABASE_URL || !SUPABASE_KEY) {
       body.appendChild(el("p", "drawer-note", "Comentários chegando em breve."));
     } else {
@@ -771,7 +762,14 @@
       loadSb().then(function () { if (cur !== c) return; loadList(c, body); refreshForm(); },
         function () { body.textContent = ""; body.appendChild(el("p", "drawer-note", "Não foi possível carregar os comentários agora.")); });
     }
-    requestAnimationFrame(function () { drawer.classList.add("on"); document.body.classList.add("drawer-on"); });
+    // abre deslizando pra baixo; depois fica com a altura natural (cresce com a lista)
+    var p = drawer;
+    p.style.height = "0px";
+    requestAnimationFrame(function () {
+      p.classList.add("on");
+      p.style.height = p.scrollHeight + "px";
+      setTimeout(function () { if (p.classList.contains("on")) p.style.height = "auto"; }, 450);
+    });
   }
   // volta do login: conclui a entrada e reabre a gaveta da campanha
   function resumeLogin() {
@@ -1259,7 +1257,8 @@
     function release() { if (cur) { cur.style.transform = ""; cur = null; } }
     document.addEventListener("mousemove", function (e) {
       var b = e.target.closest && e.target.closest(MAG);
-      if (b !== cur) { release(); if (!b) return; cur = b; b.classList.add("mag"); }
+      if (!b) { release(); return; }
+      if (b !== cur) { release(); cur = b; b.classList.add("mag"); }
       var r = b.getBoundingClientRect();
       var dx = (e.clientX - r.left) / r.width * 2 - 1, dy = (e.clientY - r.top) / r.height * 2 - 1;
       b.style.transform = "translate(" + (dx * 5).toFixed(1) + "px," + (dy * 5).toFixed(1) + "px)";
