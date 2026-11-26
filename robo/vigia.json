@@ -23,8 +23,8 @@
       "mod": "Wed, 25 Nov 2026 23:30:14 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"cf437999b36ed554ae4d598580d56e7d\"",
-      "mod": "Thu, 26 Nov 2026 01:41:28 GMT"
+      "etag": "\"efe3b2a83362405492bc9c920bb28f04\"",
+      "mod": "Thu, 26 Nov 2026 01:42:03 GMT"
     },
     "https://www.marketingdive.com/feeds/news/": {
       "mod": "Wed, 25 Nov 2026 15:46:00 GMT"
@@ -34,7 +34,7 @@
       "mod": "Wed, 25 Nov 2026 15:06:41 GMT"
     },
     "https://www.contentgrip.com/feed/": {
-      "etag": "W/\"30e0a-6AngXMIM6AU2+3tVXusXXMQoq/U\""
+      "etag": "W/\"3117e-t4vOcxT6vA6wNRGT69gN8/d/O60\""
     },
     "https://www.nossomeio.com.br/feed/": {
       "etag": "\"22442-6612035414f07\"",
@@ -45,11 +45,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"5617129624737a89af82fda75b36bf11\"",
-      "mod": "Thu, 26 Nov 2026 01:30:19 GMT"
+      "etag": "W/\"2176d0cfee450a3d613fe2a53dfd4d2c\"",
+      "mod": "Thu, 26 Nov 2026 02:00:34 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 02:02:00 GMT"
+      "mod": "Thu, 26 Nov 2026 02:32:14 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"2af192e271387a2afc6f85376e569c01\"",
@@ -71,15 +71,15 @@
       "mod": "Wed, 25 Nov 2026 16:15:51 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"978180fabfdff4b38b9f681f26d68eea\"",
-      "mod": "Thu, 26 Nov 2026 01:58:16 GMT"
+      "etag": "\"c61daada2e332f79771430c61e445209\"",
+      "mod": "Thu, 26 Nov 2026 02:21:22 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
       "etag": "\"83195c49f324002789cbfd0c89406c7f\"",
       "mod": "Thu, 26 Nov 2026 01:19:07 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Thu, 26 Nov 2026 00:00:52 GMT"
+      "mod": "Thu, 26 Nov 2026 02:29:15 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"7cb73b213468219fa08072023013763b\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 02:02:02 GMT"
+      "mod": "Thu, 26 Nov 2026 02:32:15 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 02:02:00 GMT"
+      "mod": "Thu, 26 Nov 2026 02:31:43 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 01:57:02 GMT"
+      "mod": "Thu, 26 Nov 2026 02:28:18 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 105,
+  "yt_pos": 123,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -969,14 +969,27 @@
       "ROCKETSHP": "",
       "Web Antler": "",
       "Net Branding Limited": "",
-      "Sprocket Digital Limited": ""
+      "Sprocket Digital Limited": "",
+      "Naked Creative": "nakedcreative_",
+      "PRIZM Digital Marketing Agency": "",
+      "IDigital": "",
+      "V Digital Marketing": "",
+      "Found Digital": "",
+      "Amicus Digital": "",
+      "Roobix": "",
+      "Smith Social": "smithsocialagency"
     },
     "tentadas": {
-      "Naked Creative": [
-        "nakedcreative"
+      "Hakuhodo": [
+        "hakuhodo",
+        "hakuhodoagency"
+      ],
+      "Dentsu": [
+        "dentsu",
+        "dentsuagency"
       ]
     },
-    "pos": 1030,
+    "pos": 1045,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1314,9 +1327,16 @@
       "ROCKETSHP",
       "Web Antler",
       "Net Branding Limited",
-      "Sprocket Digital Limited"
+      "Sprocket Digital Limited",
+      "PRIZM Digital Marketing Agency",
+      "IDigital",
+      "V Digital Marketing",
+      "Found Digital",
+      "Amicus Digital",
+      "Roobix",
+      "Dentsu"
     ],
-    "rodadas": 1978,
+    "rodadas": 2008,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2352,7 +2372,16 @@
       "Web Antler": [],
       "Net Branding Limited": [],
       "Sprocket Digital Limited": [],
-      "Naked Creative": []
+      "Naked Creative": [],
+      "PRIZM Digital Marketing Agency": [],
+      "IDigital": [],
+      "V Digital Marketing": [],
+      "Found Digital": [],
+      "Amicus Digital": [],
+      "Roobix": [],
+      "Smith Social": [],
+      "Dentsu": [],
+      "Hakuhodo": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3105,6 +3134,6 @@
     "https://campaignbrief.com/nrma-insurance-celebrates-the-extraordinary-value-of-normal-in-new-work-via-accenture-song",
     "https://campaignbrief.com/droga5-anz-scores-grand-at-clio-entertainment-for-sbss-the-ad-that-can-only-be-seen-on-sbs"
   ],
-  "ultima_rodada": "2026-11-26T02:01:58.244918+00:00",
+  "ultima_rodada": "2026-11-26T02:32:11.927930+00:00",
   "ultima_novidade": "2026-11-26T01:55:57.352291+00:00"
 }
