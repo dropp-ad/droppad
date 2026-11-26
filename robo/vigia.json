@@ -34,7 +34,7 @@
       "mod": "Wed, 25 Nov 2026 15:06:41 GMT"
     },
     "https://www.contentgrip.com/feed/": {
-      "etag": "W/\"31b39-gTJcQNZ0nBHHJQqQgPi7caVv8HA\""
+      "etag": "W/\"302e8-t8CwVGMY6Vmo4eHF/LrvSD/0BmA\""
     },
     "https://www.nossomeio.com.br/feed/": {
       "etag": "\"22442-6612035414f07\"",
@@ -49,22 +49,22 @@
       "mod": "Thu, 26 Nov 2026 08:00:05 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 08:11:39 GMT"
+      "mod": "Thu, 26 Nov 2026 08:42:28 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
       "mod": "Thu, 26 Nov 2026 06:49:38 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795668609-gzip\"",
-      "mod": "Thu, 26 Nov 2026 04:50:09 GMT"
+      "etag": "W/\"1795682287-gzip\"",
+      "mod": "Thu, 26 Nov 2026 08:38:07 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
       "mod": "Thu, 07 May 2026 12:47:56 GMT"
     },
     "https://www.decisionmarketing.co.uk/feed/": {
-      "mod": "Thu, 26 Nov 2026 07:46:52 GMT"
+      "mod": "Thu, 26 Nov 2026 08:36:36 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
       "etag": "\"562aad5da05b4a7689086081226ca974\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 08:12:29 GMT"
+      "mod": "Thu, 26 Nov 2026 08:42:29 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"fa11f10b8656386fdb8b9d81fe22e581-gzip\"",
-      "mod": "Thu, 26 Nov 2026 08:09:37 GMT"
+      "etag": "W/\"b80cf4b192a3eea685f3d71e8593282b-gzip\"",
+      "mod": "Thu, 26 Nov 2026 08:13:15 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -143,8 +143,8 @@
       "mod": "Wed, 25 Nov 2026 22:41:33 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
-      "etag": "\"aff7dd9b0c8f1b036b8b47788bfd669b\"",
-      "mod": "Thu, 26 Nov 2026 07:36:38 GMT"
+      "etag": "\"44b70c2bd4b2a0414757a7642dd1d8bb\"",
+      "mod": "Thu, 26 Nov 2026 07:41:27 GMT"
     },
     "https://wearesocial.com/it/feed/": {
       "etag": "W/\"142edc7baade8a4b5bd0a2a67ab57ef5\"",
@@ -194,7 +194,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 08:12:01 GMT"
+      "mod": "Thu, 26 Nov 2026 08:41:51 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -271,7 +271,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 08:07:31 GMT"
+      "mod": "Thu, 26 Nov 2026 08:39:30 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -313,7 +313,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 63,
+  "yt_pos": 81,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1066,19 +1066,23 @@
       "Ketchum México": "",
       "FleishmanHillard México": "",
       "Burson México": "",
-      "Golin México": ""
+      "Golin México": "",
+      "Havas Media México": "",
+      "Carat México": "",
+      "Mindshare México": "",
+      "Wavemaker México": "",
+      "EssenceMediacom México": "",
+      "OMD México": "",
+      "PHD México": "",
+      "Initiative México": "",
+      "Starcom México": ""
     },
     "tentadas": {
-      "Carat México": [
-        "caratmxico",
-        "caratmxicoagency"
-      ],
-      "Havas Media México": [
-        "havasmediamxico",
-        "havasmediamxicoagency"
+      "Spark Foundry México": [
+        "sparkfoundrymxico"
       ]
     },
-    "pos": 1215,
+    "pos": 1230,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1505,9 +1509,16 @@
       "FleishmanHillard México",
       "Burson México",
       "Golin México",
-      "Havas Media México"
+      "Havas Media México",
+      "Carat México",
+      "Mindshare México",
+      "Wavemaker México",
+      "EssenceMediacom México",
+      "OMD México",
+      "PHD México",
+      "Initiative México"
     ],
-    "rodadas": 2349,
+    "rodadas": 2379,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2644,7 +2655,15 @@
       "Burson México": [],
       "Golin México": [],
       "Havas Media México": [],
-      "Carat México": []
+      "Carat México": [],
+      "Mindshare México": [],
+      "Wavemaker México": [],
+      "EssenceMediacom México": [],
+      "OMD México": [],
+      "PHD México": [],
+      "Initiative México": [],
+      "Starcom México": [],
+      "Spark Foundry México": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3411,6 +3430,6 @@
     "https://www.merca20.com/marketing-2027-como-cambiara-la-distribucion-de-los-presupuestos-publicitarios",
     "https://www.merca20.com/retromarketing-parece-una-pelicula-de-terror-pero-es-un-comercial-del-ano-2000-protagonizado-por-un-bailarin-de-ballet-de-mas-de-1-90-metros"
   ],
-  "ultima_rodada": "2026-11-26T08:12:27.099541+00:00",
+  "ultima_rodada": "2026-11-26T08:42:26.584717+00:00",
   "ultima_novidade": "2026-11-26T06:30:12.769167+00:00"
 }
