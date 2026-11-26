@@ -16,7 +16,7 @@
       "mod": "Wed, 25 Nov 2026 22:34:14 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Wed, 25 Nov 2026 23:34:57 GMT"
+      "mod": "Thu, 26 Nov 2026 03:35:11 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"b62898e61841bf427538690328682248\"",
@@ -49,7 +49,7 @@
       "mod": "Thu, 26 Nov 2026 02:30:22 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 03:32:14 GMT"
+      "mod": "Thu, 26 Nov 2026 04:01:45 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"2af192e271387a2afc6f85376e569c01\"",
@@ -79,11 +79,11 @@
       "mod": "Thu, 26 Nov 2026 01:19:07 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Thu, 26 Nov 2026 02:46:15 GMT"
+      "mod": "Thu, 26 Nov 2026 04:01:15 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
-      "etag": "\"ee992f2fed52de4c08101eb4f4e6e348\"",
-      "mod": "Thu, 26 Nov 2026 03:23:56 GMT"
+      "etag": "\"e4c8fc552c7f12b480e82bb0c059e461\"",
+      "mod": "Thu, 26 Nov 2026 03:57:42 GMT"
     },
     "https://www.adweek.com/feed/": {
       "etag": "W/\"dba2e5654c22ded2d2697063bbf9cfc0\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 03:32:15 GMT"
+      "mod": "Thu, 26 Nov 2026 04:02:15 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"1d4c430841911ee925447ee3680f6077-gzip\"",
-      "mod": "Thu, 26 Nov 2026 03:27:03 GMT"
+      "etag": "W/\"d388ef85d0b0451f762f1e18a4ddb4c1-gzip\"",
+      "mod": "Thu, 26 Nov 2026 04:01:51 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 03:32:05 GMT"
+      "mod": "Thu, 26 Nov 2026 04:01:49 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 03:21:16 GMT"
+      "mod": "Thu, 26 Nov 2026 03:54:17 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 42,
+  "yt_pos": 60,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -993,10 +993,24 @@
       "J1 Co., Ltd.": "",
       "Info Cubic Japan": "",
       "Isea inc.": "",
-      "URALA International": ""
+      "URALA International": "",
+      "Ogilvy Japan": "",
+      "McCann Erickson Japan": "",
+      "dentsu X Japan": "",
+      "iProspect Japan": "",
+      "Monks Japan": "",
+      "Accenture Song Japan": ""
     },
-    "tentadas": {},
-    "pos": 1075,
+    "tentadas": {
+      "R/GA Tokyo": [
+        "rgatokyo",
+        "rgatokyoagency"
+      ],
+      "AKQA Tokyo": [
+        "akqatokyo"
+      ]
+    },
+    "pos": 1090,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1355,9 +1369,17 @@
       "Hashi Media",
       "J1 Co., Ltd.",
       "Info Cubic Japan",
-      "Isea inc."
+      "Isea inc.",
+      "URALA International",
+      "Ogilvy Japan",
+      "McCann Erickson Japan",
+      "dentsu X Japan",
+      "iProspect Japan",
+      "Monks Japan",
+      "Accenture Song Japan",
+      "AKQA Tokyo"
     ],
-    "rodadas": 2069,
+    "rodadas": 2099,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2416,7 +2438,15 @@
       "J1 Co., Ltd.": [],
       "Info Cubic Japan": [],
       "Isea inc.": [],
-      "URALA International": []
+      "URALA International": [],
+      "Ogilvy Japan": [],
+      "McCann Erickson Japan": [],
+      "dentsu X Japan": [],
+      "iProspect Japan": [],
+      "Monks Japan": [],
+      "Accenture Song Japan": [],
+      "AKQA Tokyo": [],
+      "R/GA Tokyo": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3169,8 +3199,10 @@
     "https://campaignbrief.com/nrma-insurance-celebrates-the-extraordinary-value-of-normal-in-new-work-via-accenture-song",
     "https://campaignbrief.com/droga5-anz-scores-grand-at-clio-entertainment-for-sbss-the-ad-that-can-only-be-seen-on-sbs",
     "https://campaignbriefasia.com/2026/11/26/cafe-de-coral-launches-wholesome-all-day-campaign-for-revamped-menu-via-dentsu-hong-kong",
-    "https://www.mediaweek.com.au/brand-campaigns/suzuki-turns-victoria-s-pothole-problem-into-jimny-campaign"
+    "https://www.mediaweek.com.au/brand-campaigns/suzuki-turns-victoria-s-pothole-problem-into-jimny-campaign",
+    "https://www.medianews4u.com/milky-mists-capella-breaks-dark-chocolate-advertising-conventions-with-first-brand-film",
+    "https://www.mediaweek.com.au/radio/mediaworks-holds-new-zealand-commercial-radio-lead"
   ],
-  "ultima_rodada": "2026-11-26T03:32:12.214773+00:00",
+  "ultima_rodada": "2026-11-26T04:02:11.923699+00:00",
   "ultima_novidade": "2026-11-26T03:14:11.598222+00:00"
 }
