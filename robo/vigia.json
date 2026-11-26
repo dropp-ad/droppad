@@ -23,8 +23,8 @@
       "mod": "Wed, 25 Nov 2026 23:30:14 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"9ff68cc555036d03f60f45a558d072cc\"",
-      "mod": "Wed, 25 Nov 2026 21:24:06 GMT"
+      "etag": "\"cf437999b36ed554ae4d598580d56e7d\"",
+      "mod": "Thu, 26 Nov 2026 01:41:28 GMT"
     },
     "https://www.marketingdive.com/feeds/news/": {
       "mod": "Wed, 25 Nov 2026 15:46:00 GMT"
@@ -49,11 +49,11 @@
       "mod": "Thu, 26 Nov 2026 01:30:19 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 01:38:00 GMT"
+      "mod": "Thu, 26 Nov 2026 01:51:01 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"6636843e136b993c0b476b60e2d8f761\"",
-      "mod": "Thu, 26 Nov 2026 01:11:48 GMT"
+      "etag": "\"2af192e271387a2afc6f85376e569c01\"",
+      "mod": "Thu, 26 Nov 2026 01:46:27 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795652030-gzip\"",
@@ -90,7 +90,7 @@
       "mod": "Thu, 26 Nov 2026 00:00:09 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 01:36:11 GMT"
+      "mod": "Thu, 26 Nov 2026 01:44:57 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
       "etag": "\"0ab6d16ee376eec886f1959b98a72dc3\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 01:39:00 GMT"
+      "mod": "Thu, 26 Nov 2026 01:52:01 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 01:38:28 GMT"
+      "mod": "Thu, 26 Nov 2026 01:51:45 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 01:35:04 GMT"
+      "mod": "Thu, 26 Nov 2026 01:46:04 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 150,
+  "yt_pos": 99,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -963,18 +963,17 @@
       "Clemenger BBDO": "",
       "Howatson+Company": "",
       "Terrier Agency": "",
-      "Human Digital": "humandigitalagency"
+      "Human Digital": "humandigitalagency",
+      "Digital Stream Ltd": "",
+      "Webzilla Digital Marketing": "",
+      "ROCKETSHP": ""
     },
     "tentadas": {
-      "Digital Stream Ltd": [
-        "digitalstreamltd",
-        "digitalstreamltdagency"
-      ],
-      "Webzilla Digital Marketing": [
-        "webzilladigitalmarketing"
+      "Web Antler": [
+        "webantler"
       ]
     },
-    "pos": 1018,
+    "pos": 1025,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1306,9 +1305,13 @@
       "BMF Sydney",
       "Clemenger BBDO",
       "Howatson+Company",
-      "Terrier Agency"
+      "Terrier Agency",
+      "Digital Stream Ltd",
+      "Webzilla Digital Marketing",
+      "ROCKETSHP",
+      "Web Antler"
     ],
-    "rodadas": 1955,
+    "rodadas": 1968,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2339,7 +2342,9 @@
       "Terrier Agency": [],
       "Human Digital": [],
       "Digital Stream Ltd": [],
-      "Webzilla Digital Marketing": []
+      "Webzilla Digital Marketing": [],
+      "ROCKETSHP": [],
+      "Web Antler": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3091,6 +3096,6 @@
     "https://www.bandt.com.au/nrma-launches-new-campaign-celebrating-the-value-of-normality",
     "https://campaignbrief.com/nrma-insurance-celebrates-the-extraordinary-value-of-normal-in-new-work-via-accenture-song"
   ],
-  "ultima_rodada": "2026-11-26T01:38:57.356280+00:00",
+  "ultima_rodada": "2026-11-26T01:51:57.893945+00:00",
   "ultima_novidade": "2026-11-26T01:38:57.356280+00:00"
 }
