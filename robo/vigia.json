@@ -41,19 +41,19 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"a78acfdccc6e6b415a49184ce17f8334\"",
-      "mod": "Thu, 26 Nov 2026 10:31:52 GMT"
+      "etag": "W/\"ae03c4340c078330709689e568dcd28e\"",
+      "mod": "Thu, 26 Nov 2026 10:41:58 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 10:41:34 GMT"
+      "mod": "Thu, 26 Nov 2026 10:44:46 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
       "mod": "Thu, 26 Nov 2026 06:49:38 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795688943-gzip\"",
-      "mod": "Thu, 26 Nov 2026 10:29:03 GMT"
+      "etag": "W/\"1795689854-gzip\"",
+      "mod": "Thu, 26 Nov 2026 10:44:14 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -83,15 +83,15 @@
       "mod": "Thu, 26 Nov 2026 09:03:10 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
-      "etag": "\"56d002a8afc3d6a798cadec905466839\"",
-      "mod": "Thu, 26 Nov 2026 10:38:14 GMT"
+      "etag": "\"cd495edc50aa520b27b86c14027edff1\"",
+      "mod": "Thu, 26 Nov 2026 10:45:13 GMT"
     },
     "https://bbdo.com/feed/": {
       "etag": "W/\"d19e6feb3b8183716af7e9ecf21ae2f1\"",
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 10:42:28 GMT"
+      "mod": "Thu, 26 Nov 2026 10:45:29 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c3987b422866f6d30bbd08b386663cea-gzip\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 10:42:01 GMT"
+      "mod": "Thu, 26 Nov 2026 10:45:05 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -249,7 +249,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 10:35:30 GMT"
+      "mod": "Thu, 26 Nov 2026 10:45:31 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -287,7 +287,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 153,
+  "yt_pos": 96,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1079,17 +1079,12 @@
       "Publicis Groupe Africa": "publicisgroupeafrica",
       "Havas South Africa": "",
       "Dentsu South Africa": "",
-      "Edelman Africa": ""
+      "Edelman Africa": "",
+      "Weber Shandwick Africa": "",
+      "Burson Africa": ""
     },
-    "tentadas": {
-      "Weber Shandwick Africa": [
-        "webershandwickafrica"
-      ],
-      "Burson Africa": [
-        "bursonafrica"
-      ]
-    },
-    "pos": 1290,
+    "tentadas": {},
+    "pos": 1292,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1555,7 +1550,7 @@
       "Edelman Africa",
       "Weber Shandwick Africa"
     ],
-    "rodadas": 2499,
+    "rodadas": 2502,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3499,8 +3494,9 @@
     "https://www.merca20.com/retromarketing-parece-una-pelicula-de-terror-pero-es-un-comercial-del-ano-2000-protagonizado-por-un-bailarin-de-ballet-de-mas-de-1-90-metros",
     "https://www.medianews4u.com/sugarfit-ropes-in-sachin-tendulkar-for-sugarfitmeany-campaign-on-metabolic-health-awareness",
     "https://www.medianews4u.com/v-guard-launches-cool-wires-campaign-to-shift-consumer-focus-towards-heat-management-and-electrical-safety",
-    "https://www.contentgrip.com/bake-off-ad-break"
+    "https://www.contentgrip.com/bake-off-ad-break",
+    "https://marketinginsiderreview.com/acciona-estrena-campana-navidad-2026"
   ],
-  "ultima_rodada": "2026-11-26T10:42:26.452497+00:00",
-  "ultima_novidade": "2026-11-26T10:03:26.396408+00:00"
+  "ultima_rodada": "2026-11-26T10:45:27.136013+00:00",
+  "ultima_novidade": "2026-11-26T10:45:27.136013+00:00"
 }
