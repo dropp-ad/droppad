@@ -1344,7 +1344,35 @@
       pickTimer = setTimeout(pick, 120);
     }, { threshold: [0, .25, .5, .6, .75, .9, 1] });
   }
+  // tela cheia e giro do celular: o vídeo fica em tela cheia por cima da página, mas a página por trás
+  // muda de tamanho e o observador acha que o filme saiu da tela, e aí ele parava. Enquanto estiver em
+  // tela cheia, e por um instante depois de girar ou sair dela, ninguém troca nem para o filme.
+  var travadoAte = 0;
+  function emTelaCheia() { return !!(document.fullscreenElement || document.webkitFullscreenElement); }
+  function segurarFilme() {
+    travadoAte = Date.now() + 1800;
+    if (emTelaCheia()) return;
+    var a = active && active.art;
+    if (!a) return;
+    [250, 700, 1300].forEach(function (ms) {
+      setTimeout(function () {
+        if (active && active.art === a && !emTelaCheia()) a.scrollIntoView({ block: "center", behavior: "auto" });
+      }, ms);
+    });
+  }
+  var larguraAntes = window.innerWidth;
+  window.addEventListener("orientationchange", segurarFilme);
+  window.addEventListener("resize", function () {
+    if (window.innerWidth !== larguraAntes) { larguraAntes = window.innerWidth; segurarFilme(); }
+  });
+  document.addEventListener("fullscreenchange", segurarFilme);
+  document.addEventListener("webkitfullscreenchange", segurarFilme);
   function pick() {
+    if (emTelaCheia() || Date.now() < travadoAte) {
+      clearTimeout(pickTimer);
+      pickTimer = setTimeout(pick, 400); // decide de novo quando a tela assentar
+      return;
+    }
     var best = null, br = 0;
     ratios.forEach(function (r, m) { if (r > br) { br = r; best = m._art; } });
     if (best && br >= 0.6) {
