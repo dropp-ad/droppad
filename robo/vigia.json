@@ -45,7 +45,7 @@
       "mod": "Thu, 26 Nov 2026 16:17:54 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 16:21:40 GMT"
+      "mod": "Thu, 26 Nov 2026 16:22:46 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 16:22:40 GMT"
+      "mod": "Thu, 26 Nov 2026 16:23:41 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 16:22:40 GMT"
+      "mod": "Thu, 26 Nov 2026 16:23:41 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -249,7 +249,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 16:12:43 GMT"
+      "mod": "Thu, 26 Nov 2026 16:23:43 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -313,7 +313,7 @@
       "mod": "Thu, 30 Jul 2026 19:59:18 GMT"
     }
   },
-  "yt_pos": 93,
+  "yt_pos": 123,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1161,7 +1161,7 @@
       "Liquorice": ""
     },
     "tentadas": {},
-    "pos": 1637,
+    "pos": 1638,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1671,7 +1671,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 2840,
+    "rodadas": 2841,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3445,7 +3445,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 65,
+    "pos_quente": 66,
     "lida": {
       "droga5sp": "2026-11-26T16:12:37.122527+00:00",
       "mboothagency": "2026-11-26T15:19:36.939289+00:00",
@@ -3571,7 +3571,9 @@
       "stendahls": "2026-11-26T16:21:36.877582+00:00",
       "npdigitalbr": "2026-11-26T16:21:36.877582+00:00",
       "fahrenheitddb": "2026-11-26T16:22:36.305838+00:00",
-      "propeg": "2026-11-26T16:22:36.305838+00:00"
+      "propeg": "2026-11-26T16:22:36.305838+00:00",
+      "impactbbdo": "2026-11-26T16:23:37.178335+00:00",
+      "fields360": "2026-11-26T16:23:37.178335+00:00"
     },
     "ultimo_post": {
       "droga5sp": "2026-11-25",
@@ -3691,7 +3693,9 @@
       "v4company": "2026-11-25",
       "stendahls": "2026-11-25",
       "fahrenheitddb": "2026-11-17",
-      "propeg": "2026-11-23"
+      "propeg": "2026-11-23",
+      "impactbbdo": "2026-11-26",
+      "fields360": "2026-11-25"
     }
   },
   "vistos": [
@@ -3930,6 +3934,6 @@
     "https://www.merca20.com/mientras-los-mexicanos-se-preparan-para-el-black-friday-bbva-santander-banamex-y-hsbc-dan-este-importante-anuncio-en-el-dof",
     "https://www.merca20.com/oreo-convierte-la-navidad-en-una-dulce-venganza-contra-santa-claus-en-esta-campana"
   ],
-  "ultima_rodada": "2026-11-26T16:22:36.305838+00:00",
-  "ultima_novidade": "2026-11-26T16:16:37.224439+00:00"
+  "ultima_rodada": "2026-11-26T16:23:37.178335+00:00",
+  "ultima_novidade": "2026-11-26T16:23:37.178335+00:00"
 }
