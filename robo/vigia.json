@@ -49,7 +49,7 @@
       "mod": "Thu, 26 Nov 2026 08:00:05 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 08:42:28 GMT"
+      "mod": "Thu, 26 Nov 2026 09:12:27 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -64,7 +64,7 @@
       "mod": "Thu, 07 May 2026 12:47:56 GMT"
     },
     "https://www.decisionmarketing.co.uk/feed/": {
-      "mod": "Thu, 26 Nov 2026 08:36:36 GMT"
+      "mod": "Thu, 26 Nov 2026 09:12:12 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
       "etag": "\"562aad5da05b4a7689086081226ca974\"",
@@ -79,15 +79,15 @@
       "mod": "Thu, 26 Nov 2026 01:19:07 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Thu, 26 Nov 2026 08:02:29 GMT"
+      "mod": "Thu, 26 Nov 2026 09:03:29 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"d83ce2d22817c38e620e9ddafb0870a2\"",
       "mod": "Thu, 26 Nov 2026 04:30:43 GMT"
     },
     "https://www.adweek.com/feed/": {
-      "etag": "W/\"dba2e5654c22ded2d2697063bbf9cfc0\"",
-      "mod": "Thu, 26 Nov 2026 00:00:09 GMT"
+      "etag": "W/\"8bec0113d7d4139e73b46bca11d09e78\"",
+      "mod": "Thu, 26 Nov 2026 09:03:10 GMT"
     },
     "https://www.bandt.com.au/feed/": {
       "mod": "Thu, 26 Nov 2026 07:05:35 GMT"
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 08:42:29 GMT"
+      "mod": "Thu, 26 Nov 2026 09:10:29 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"b80cf4b192a3eea685f3d71e8593282b-gzip\"",
-      "mod": "Thu, 26 Nov 2026 08:13:15 GMT"
+      "etag": "W/\"5abec38168dfa91cc8661d91bd19dddb-gzip\"",
+      "mod": "Thu, 26 Nov 2026 09:08:01 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -194,7 +194,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 08:41:51 GMT"
+      "mod": "Thu, 26 Nov 2026 09:11:40 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -271,7 +271,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 08:39:30 GMT"
+      "mod": "Thu, 26 Nov 2026 09:11:31 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -313,7 +313,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 81,
+  "yt_pos": 99,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1075,14 +1075,25 @@
       "OMD México": "",
       "PHD México": "",
       "Initiative México": "",
-      "Starcom México": ""
+      "Starcom México": "",
+      "Spark Foundry México": "",
+      "Digitas México": "",
+      "Razorfish México": "",
+      "Isobar México": "",
+      "Merkle México": "",
+      "AKQA México": ""
     },
     "tentadas": {
-      "Spark Foundry México": [
-        "sparkfoundrymxico"
+      "Droga5 México": [
+        "droga5mxico",
+        "droga5mxicoagency"
+      ],
+      "Huge México": [
+        "hugemxico",
+        "hugemxicoagency"
       ]
     },
-    "pos": 1230,
+    "pos": 1245,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1516,9 +1527,17 @@
       "EssenceMediacom México",
       "OMD México",
       "PHD México",
-      "Initiative México"
+      "Initiative México",
+      "Starcom México",
+      "Spark Foundry México",
+      "Digitas México",
+      "Razorfish México",
+      "Isobar México",
+      "Merkle México",
+      "AKQA México",
+      "Huge México"
     ],
-    "rodadas": 2379,
+    "rodadas": 2409,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2663,7 +2682,14 @@
       "PHD México": [],
       "Initiative México": [],
       "Starcom México": [],
-      "Spark Foundry México": []
+      "Spark Foundry México": [],
+      "Digitas México": [],
+      "Razorfish México": [],
+      "Isobar México": [],
+      "Merkle México": [],
+      "AKQA México": [],
+      "Huge México": [],
+      "Droga5 México": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3430,6 +3456,6 @@
     "https://www.merca20.com/marketing-2027-como-cambiara-la-distribucion-de-los-presupuestos-publicitarios",
     "https://www.merca20.com/retromarketing-parece-una-pelicula-de-terror-pero-es-un-comercial-del-ano-2000-protagonizado-por-un-bailarin-de-ballet-de-mas-de-1-90-metros"
   ],
-  "ultima_rodada": "2026-11-26T08:42:26.584717+00:00",
+  "ultima_rodada": "2026-11-26T09:12:26.271497+00:00",
   "ultima_novidade": "2026-11-26T06:30:12.769167+00:00"
 }
