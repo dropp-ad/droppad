@@ -425,8 +425,11 @@ def campanha_de_curador(p):
     cab = linhas[0]
     if "," in cab:
         marca, titulo = [x.strip() for x in cab.split(",", 1)]
+    elif re.match(r"^(.{2,30}?)[’']s?\s", cab):
+        # "IKEA’s Black Friday Surgery Distraction": a marca é o dono do título
+        marca, titulo = re.match(r"^(.{2,30}?)[’']s?\s", cab).group(1).strip(), cab.strip()
     else:
-        marca, titulo = cab.strip(), ""
+        marca, titulo = cab.strip(), cab.strip()
     marca = re.sub(r"[’']s$", "", marca).strip()
     if not marca or len(marca) > 60:
         return None
