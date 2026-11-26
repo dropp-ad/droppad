@@ -476,7 +476,8 @@
     box.style.setProperty("--igh", h + "px");
     // o quadro fica da altura do post do Instagram (sem faixas em cima/embaixo e sem cortar o rodapé);
     // no celular ocupa a largura toda, no computador cabe em 80% da altura da tela
-    var s = CELULAR.matches ? Math.min(1, w / IG_W) : Math.min(1, w / IG_W, (window.innerHeight * 0.8) / h);
+    // o vídeo recortado ocupa a largura do quadro (no computador, sem passar de 80% da altura da tela)
+    var s = CELULAR.matches ? w / IG_W : Math.min(w / IG_W, (window.innerHeight * 0.8) / h);
     var alt = Math.round(h * s) + "px";
     if (media.style.height !== alt) media.style.height = alt;
     box.style.transform = "translate(-50%,-50%) scale(" + s.toFixed(4) + ")";
