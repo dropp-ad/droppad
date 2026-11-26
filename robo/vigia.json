@@ -23,8 +23,8 @@
       "mod": "Wed, 25 Nov 2026 23:30:14 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"efe3b2a83362405492bc9c920bb28f04\"",
-      "mod": "Thu, 26 Nov 2026 01:42:03 GMT"
+      "etag": "\"cf437999b36ed554ae4d598580d56e7d\"",
+      "mod": "Thu, 26 Nov 2026 01:41:28 GMT"
     },
     "https://www.marketingdive.com/feeds/news/": {
       "mod": "Wed, 25 Nov 2026 15:46:00 GMT"
@@ -49,7 +49,7 @@
       "mod": "Thu, 26 Nov 2026 02:30:22 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 03:02:14 GMT"
+      "mod": "Thu, 26 Nov 2026 03:14:14 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"2af192e271387a2afc6f85376e569c01\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 03:02:15 GMT"
+      "mod": "Thu, 26 Nov 2026 03:14:31 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 03:01:21 GMT"
+      "mod": "Thu, 26 Nov 2026 03:13:38 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 03:00:17 GMT"
+      "mod": "Thu, 26 Nov 2026 03:10:17 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 141,
+  "yt_pos": 90,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -985,15 +985,18 @@
       "Mozmene": "",
       "TOKYO MARKETING": "",
       "Next Level Japan": "",
-      "M Global Japan": ""
+      "M Global Japan": "",
+      "An-yal": "",
+      "The Digital X": "",
+      "Hatago Consulting": "",
+      "Hashi Media": ""
     },
     "tentadas": {
-      "An-yal": [
-        "anyal",
-        "anyalagency"
+      "J1 Co., Ltd.": [
+        "j1co.ltd."
       ]
     },
-    "pos": 1060,
+    "pos": 1066,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1345,9 +1348,12 @@
       "Mozmene",
       "TOKYO MARKETING",
       "Next Level Japan",
-      "M Global Japan"
+      "M Global Japan",
+      "An-yal",
+      "The Digital X",
+      "Hatago Consulting"
     ],
-    "rodadas": 2038,
+    "rodadas": 2051,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2399,7 +2405,11 @@
       "TOKYO MARKETING": [],
       "Next Level Japan": [],
       "M Global Japan": [],
-      "An-yal": []
+      "An-yal": [],
+      "The Digital X": [],
+      "Hatago Consulting": [],
+      "Hashi Media": [],
+      "J1 Co., Ltd.": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3151,8 +3161,9 @@
     "https://www.bandt.com.au/nrma-launches-new-campaign-celebrating-the-value-of-normality",
     "https://campaignbrief.com/nrma-insurance-celebrates-the-extraordinary-value-of-normal-in-new-work-via-accenture-song",
     "https://campaignbrief.com/droga5-anz-scores-grand-at-clio-entertainment-for-sbss-the-ad-that-can-only-be-seen-on-sbs",
-    "https://campaignbriefasia.com/2026/11/26/cafe-de-coral-launches-wholesome-all-day-campaign-for-revamped-menu-via-dentsu-hong-kong"
+    "https://campaignbriefasia.com/2026/11/26/cafe-de-coral-launches-wholesome-all-day-campaign-for-revamped-menu-via-dentsu-hong-kong",
+    "https://www.mediaweek.com.au/brand-campaigns/suzuki-turns-victoria-s-pothole-problem-into-jimny-campaign"
   ],
-  "ultima_rodada": "2026-11-26T03:02:11.956903+00:00",
-  "ultima_novidade": "2026-11-26T02:38:11.782335+00:00"
+  "ultima_rodada": "2026-11-26T03:14:27.549368+00:00",
+  "ultima_novidade": "2026-11-26T03:14:11.598222+00:00"
 }
