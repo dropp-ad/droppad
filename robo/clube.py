@@ -76,6 +76,19 @@ def filmes(conteudo):
     return yts, vimeo
 
 
+def miolo_da_pagina(url):
+    """A página do Clube (o filme do acervo fica num campo do tema, fora do texto da API)."""
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=25) as r:
+            pg = r.read(2_000_000).decode("utf-8", "replace")
+    except Exception:  # noqa: BLE001
+        return ""
+    # só a parte principal (sem a barra lateral de "últimas", que tem filmes de outras campanhas)
+    m = re.search(r"<(main|article)\b.*?</\1>", pg, re.S | re.I)
+    return m.group(0) if m else pg[:len(pg) // 2]
+
+
 def ficha_de(conteudo):
     pares = CR.creditos_de("<article><p>%s</p>%s</article>" % ("x " * 200, conteudo))
     return CR.limpar_creditos(pares)
@@ -113,11 +126,11 @@ def texto_proprio(marca, nome, agencia, ficha, pecas):
         partes.append("Nova campanha de %s, assinada pela %s." % (marca, agencia))
     else:
         partes.append("%s estreia “%s”." % (marca, nome) if nome else "Nova campanha de %s." % marca)
-    dc = pessoas(ficha, r"dire[çc][ãa]o (geral |executiva )?de cria|diretor(a|es)? (geral |executiv[oa]s? )?de cria|creative director|cco|chief creative|vp de cria")
+    dc = pessoas(ficha, r"\bdire[çc][ãa]o (geral |executiva )?de cria|\bdiretor(a|es|as)? (geral |executiv[oa]s? )?de cria|^(executive )?creative directors?\b|\bcco\b|chief creative|\bvp de cria|\becd\b")
     if dc:
         partes.append("Direção de criação de %s." % dc)
-    prod = valor(ficha, r"produtora", r"production company", r"produção de imagem", r"produção\b", r"productora")
-    dire = pessoas(ficha, r"^dire[çc][ãa]o$|^diretor(a)?$|^director$|dire[çc][ãa]o de cena|realiza")
+    prod = valor(ficha, r"produtora( de imagem| de filme)?$", r"production company", r"productora", r"casa produtora")
+    dire = pessoas(ficha, r"^dire[çc][ãa]o( de cena)?$|^diretor(a)?( de cena)?$|^director$|^film director$|^realiza")
     if prod and dire:
         partes.append("O filme tem direção de %s, pela %s." % (dire, prod))
     elif prod:
@@ -150,7 +163,11 @@ def campanha_do_acervo(x):
         agencia = "Galeria" if agencia.lower() == "galeria" else "In-house"
     conteudo = x["content"]["rendered"]
     yts, vimeo = filmes(conteudo)
+    if not (yts or vimeo):
+        yts, vimeo = filmes(miolo_da_pagina(x["link"]))  # o tema do Clube põe o filme fora do texto
     ficha = ficha_de(conteudo)
+    if not agencia:
+        agencia = valor(ficha, r"ag[êe]ncia", r"agency")
     og = ((x.get("yoast_head_json") or {}).get("og_image") or [{}])[0].get("url", "")
     if not (yts or vimeo or og):
         return None
@@ -192,22 +209,23 @@ def campanha_das_ultimas(x):
     m = re.search(r"(?:criad[ao]s? pela|assinad[ao]s? pela|desenvolvid[ao]s? pela|da agência)\s+([A-ZÀ-Ý][\w&’'.\- ]{1,40}?)(?=[,.;)]| de | em | para |$)", corpo)
     if m:
         agencia = m.group(1).strip()
-    marca = next((n for n in nomes if n != agencia and A.marca_ok(n)), "")
+    ficha = ficha_de(conteudo)
+    agencia = agencia or valor(ficha, r"ag[êe]ncia", r"agency")
+    marca = valor(ficha, r"anunciante", r"cliente", r"client", r"marca", r"brand") or \
+        next((n for n in nomes if n != agencia and A.marca_ok(n)), "")
     if not marca:
         return None
-    ficha = ficha_de(conteudo)
     data = x["date"][:10]
     regiao, cc = regiao_de(agencia, corpo[:400])
+    if regiao == "Brasil" and not re.search(r"\bbrasil|brasileir|são paulo|rio de janeiro", corpo, re.I):
+        regiao, cc = "Global", ""
     og = ((x.get("yoast_head_json") or {}).get("og_image") or [{}])[0].get("url", "")
     c = {
         "id": "%s-%s-%s" % (data, A.slug(marca, 20), A.slug(titulo, 36)),
         "date": data, "brand": marca, "title": titulo, "agency": agencia,
-        "source": "Clube de Criação", "url": x["link"], "region": regiao if regiao != "Brasil" or "Brasil" in corpo or not agencia else "Global",
-        "cc": cc, "summary": texto_proprio(marca, titulo, agencia, ficha, pecas_de(conteudo)),
+        "source": "Clube de Criação", "url": x["link"], "region": regiao, "cc": cc, "summary": texto_proprio(marca, titulo, agencia, ficha, pecas_de(conteudo)),
         "addedAt": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ"),
     }
-    if c["region"] == "Global":
-        c["cc"] = ""
     if yts:
         c["yt"] = yts[:3]
     else:
