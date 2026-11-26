@@ -49,18 +49,6 @@
       "so_campanhas": false
     },
     {
-      "nome": "Clube de Criação",
-      "urls": [
-        "https://clubedecriacao.com.br/feed/",
-        "https://clubedecriacao.com.br/rss",
-        "https://clubedecriacao.com.br/rss.xml",
-        "https://clubedecriacao.com.br/feed"
-      ],
-      "regiao": "Brasil",
-      "cc": "BR",
-      "so_campanhas": false
-    },
-    {
       "nome": "Nosso Meio",
       "urls": [
         "https://www.nossomeio.com.br/feed/",

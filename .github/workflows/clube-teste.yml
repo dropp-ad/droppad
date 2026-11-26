@@ -1,0 +1,28 @@
+name: Teste do Clube (ramo clube)
+
+on:
+  push:
+    branches: [clube]
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python robo/clube.py --testar
+      - run: |
+          python - <<'P'
+          import sys, json
+          sys.path.insert(0, "robo")
+          import clube as K
+          aid = K.assunto_campanhas()
+          print("ASSUNTO CAMPANHAS", aid)
+          if aid:
+              achou, _ = K.ler_paginas("ultima", [1], K.campanha_das_ultimas, {"assunto": aid})
+              for c in achou[:8]:
+                  print("ULTIMA", json.dumps(c, ensure_ascii=False)[:600])
+          P

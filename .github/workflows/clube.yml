@@ -1,0 +1,58 @@
+name: Clube de Criação (acervo e campanhas)
+
+# Campanhas do Clube de Criação (Acervo + Últimas do assunto Campanhas) pela API pública do site, com o
+# filme, a imagem e a ficha técnica. O texto é escrito pelo robô a partir dos dados (não usa o do Clube).
+# De hora em hora: confere as novas e desce algumas páginas do acervo antigo (até nov/2020).
+on:
+  schedule:
+    - cron: "37 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: clube
+  cancel-in-progress: false
+
+jobs:
+  clube:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Procurar e publicar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "droppad robô"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python robo/clube.py
+          cp robo/clube.json /tmp/clube_estado.json
+          for tentativa in 1 2 3 4 5; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            cp /tmp/clube_estado.json robo/clube.json
+            python robo/clube.py --aplicar
+            git add robo/clube.json campaigns.json novidades.json
+            if git diff --cached --quiet; then
+              echo "Nada novo."
+              exit 0
+            fi
+            git commit -q -m "Clube de Criação (acervo e campanhas) $(TZ=America/Sao_Paulo date '+%F %H:%M') (robô)"
+            if git push origin HEAD:main; then
+              if ! git diff --quiet HEAD~1 HEAD -- campaigns.json; then
+                gh workflow run publicar.yml -R "${{ github.repository }}" --ref main >/dev/null 2>&1 || true
+              fi
+              exit 0
+            fi
+            echo "Push recusado; tentando de novo ($tentativa/5)."
+            sleep 5
+          done
+          exit 1
