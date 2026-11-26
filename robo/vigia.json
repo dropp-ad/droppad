@@ -45,15 +45,15 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"4400cc6765c942d2eb0c135e6f631a19\"",
-      "mod": "Thu, 26 Nov 2026 00:30:38 GMT"
+      "etag": "W/\"1905e02070f7795ab5c40fec432b7acf\"",
+      "mod": "Thu, 26 Nov 2026 01:00:24 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 00:51:00 GMT"
+      "mod": "Thu, 26 Nov 2026 01:08:00 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"5d316f3e5ede888574b191e802f70725\"",
-      "mod": "Thu, 26 Nov 2026 00:50:10 GMT"
+      "etag": "\"eaed77e5af96356456542aa48afedf5f\"",
+      "mod": "Thu, 26 Nov 2026 01:05:05 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795652030-gzip\"",
@@ -71,8 +71,8 @@
       "mod": "Wed, 25 Nov 2026 16:15:51 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"a2725b9fc9e33cc1273ac7be5548d5bd\"",
-      "mod": "Thu, 26 Nov 2026 00:39:35 GMT"
+      "etag": "\"ac47464ed6685f8f22f7b577fa7927e5\"",
+      "mod": "Thu, 26 Nov 2026 01:08:56 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
       "etag": "\"505701cbe5a51fabb64ead7f5c16b23d\"",
@@ -90,7 +90,7 @@
       "mod": "Thu, 26 Nov 2026 00:00:09 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 00:45:41 GMT"
+      "mod": "Thu, 26 Nov 2026 01:08:02 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
       "etag": "\"0ab6d16ee376eec886f1959b98a72dc3\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 00:52:00 GMT"
+      "mod": "Thu, 26 Nov 2026 01:09:01 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -128,15 +128,15 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://thestable.com.au/feed/": {
-      "etag": "\"3f365522db00612df301e8b616140dde\"",
-      "mod": "Thu, 26 Nov 2026 00:44:46 GMT"
+      "etag": "\"520406d50730c46041b6b9e7eef2fed8\"",
+      "mod": "Thu, 26 Nov 2026 00:59:44 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
       "mod": "Thu, 26 Nov 2026 00:34:32 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"b6edfbd205fc42f320f355a5fdc99b93\"",
-      "mod": "Thu, 26 Nov 2026 00:45:00 GMT"
+      "etag": "\"3da0bb303040f8da260b69b43e200b26\"",
+      "mod": "Thu, 26 Nov 2026 01:00:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"70cd0f6a2e9c06acc2d0faaf3ae2f4c8\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 00:51:17 GMT"
+      "mod": "Thu, 26 Nov 2026 01:08:44 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 00:42:03 GMT"
+      "mod": "Thu, 26 Nov 2026 01:03:03 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 63,
+  "yt_pos": 132,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -948,14 +948,21 @@
       "TBWA\\Brussels": "",
       "Boondoggle": "boondoggleagency",
       "Rocket Agency": "",
-      "Eight Clients": ""
+      "Eight Clients": "",
+      "First Page Australia": "",
+      "SOUP Agency": "",
+      "Thrive Digital": "thrivedigitalagency",
+      "Intrepid Digital": "",
+      "Uprise Digital": "uprisedigitalagency",
+      "Smith Brothers Media": ""
     },
     "tentadas": {
-      "First Page Australia": [
-        "firstpageaustralia"
+      "80/20 Digital": [
+        "8020digital",
+        "8020digitalagency"
       ]
     },
-    "pos": 995,
+    "pos": 1003,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1277,9 +1284,12 @@
       "Ogilvy Paris",
       "TBWA\\Brussels",
       "Rocket Agency",
-      "Eight Clients"
+      "Eight Clients",
+      "First Page Australia",
+      "SOUP Agency",
+      "Intrepid Digital"
     ],
-    "rodadas": 1908,
+    "rodadas": 1925,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2294,7 +2304,13 @@
       "Boondoggle": [],
       "Rocket Agency": [],
       "Eight Clients": [],
-      "First Page Australia": []
+      "First Page Australia": [],
+      "SOUP Agency": [],
+      "Intrepid Digital": [],
+      "Thrive Digital": [],
+      "Uprise Digital": [],
+      "Smith Brothers Media": [],
+      "80/20 Digital": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3041,8 +3057,9 @@
     "https://www.afaqs.com/news/digital/linkedin-wants-to-make-ai-work-harder-for-advertisers-not-just-algorithms-12841308",
     "https://campaignbrief.co.nz/2026/11/26/james-hopkins-make-ten-great-ads",
     "https://campaignbriefasia.com/2026/11/26/james-hopkins-make-ten-great-ads",
-    "https://campaignbrief.co.nz/2026/11/25/countdown-to-free-entry-to-campaign-brief-new-zealand-agency-of-the-year-hot-list-2027-deadline-friday-4-december"
+    "https://campaignbrief.co.nz/2026/11/25/countdown-to-free-entry-to-campaign-brief-new-zealand-agency-of-the-year-hot-list-2027-deadline-friday-4-december",
+    "https://campaignbrief.com/golden-crumpets-brings-mr-golden-to-social-for-the-first-time-in-new-campaign-via-of-a-feather"
   ],
-  "ultima_rodada": "2026-11-26T00:51:57.600049+00:00",
-  "ultima_novidade": "2026-11-25T23:50:58.182370+00:00"
+  "ultima_rodada": "2026-11-26T01:08:57.502122+00:00",
+  "ultima_novidade": "2026-11-26T01:08:57.502122+00:00"
 }
