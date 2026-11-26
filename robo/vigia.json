@@ -1,7 +1,7 @@
 {
   "cond": {
     "https://www.b9.com.br/feed/": {
-      "etag": "W/\"5df2-aXJNawOfEkeLQYVc2fQqqqRbVOA\""
+      "etag": "W/\"5df2-3ccPOjzE9jG+WFQ7l57N3Yckvzg\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
       "etag": "\"d088b02cd28e1c94bb9c1892ef9af3f8\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 15:21:55 GMT"
+      "mod": "Thu, 26 Nov 2026 15:22:39 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 15:21:40 GMT"
+      "mod": "Thu, 26 Nov 2026 15:22:40 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -313,7 +313,7 @@
       "mod": "Thu, 30 Jul 2026 19:59:18 GMT"
     }
   },
-  "yt_pos": 174,
+  "yt_pos": 57,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1161,7 +1161,7 @@
       "Liquorice": ""
     },
     "tentadas": {},
-    "pos": 1576,
+    "pos": 1577,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1671,7 +1671,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 2779,
+    "rodadas": 2780,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3445,7 +3445,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 4,
+    "pos_quente": 5,
     "lida": {
       "droga5sp": "2026-11-26T15:19:36.939289+00:00",
       "mboothagency": "2026-11-26T15:19:36.939289+00:00",
@@ -3454,7 +3454,9 @@
       "galeria.ag": "2026-11-26T15:21:36.772831+00:00",
       "youngandlaramore": "2026-11-26T15:21:36.772831+00:00",
       "wt.ag": "2026-11-26T15:21:52.349939+00:00",
-      "webtonic_": "2026-11-26T15:21:52.349939+00:00"
+      "webtonic_": "2026-11-26T15:21:52.349939+00:00",
+      "publicisbrasil": "2026-11-26T15:22:36.473252+00:00",
+      "criticalmassagency": "2026-11-26T15:22:36.473252+00:00"
     },
     "ultimo_post": {
       "droga5sp": "2026-11-25",
@@ -3463,7 +3465,9 @@
       "galeria.ag": "2026-11-25",
       "youngandlaramore": "2026-11-20",
       "wt.ag": "2026-11-25",
-      "webtonic_": "2025-12-28"
+      "webtonic_": "2025-12-28",
+      "publicisbrasil": "2026-11-26",
+      "criticalmassagency": "2026-11-20"
     }
   },
   "vistos": [
@@ -3700,6 +3704,6 @@
     "https://grandesnomesdapropaganda.com.br/anunciantes/gallo-apresenta-sua-nova-campanha-global-sabor-do-comeco-ao-fim",
     "https://roastbrief.com.mx/2026/11/la-temporada-alta-impulsa-el-uso-de-inteligencia-artificial-en-whatsapp-para-optimizar-la-atencion-comercial"
   ],
-  "ultima_rodada": "2026-11-26T15:21:52.349939+00:00",
+  "ultima_rodada": "2026-11-26T15:22:36.473252+00:00",
   "ultima_novidade": "2026-11-26T15:21:36.772831+00:00"
 }
