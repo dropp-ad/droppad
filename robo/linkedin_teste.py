@@ -448,6 +448,7 @@ def campanha_de_curador(p):
             break
     nome = titulo or marca
     dc = ", ".join(k["name"] for k in ficha if re.search(r"chief creative|executive creative|^creative director", k["role"], re.I))[:120]
+    dc = re.sub(r",?\s+and\s+", " e ", dc)
     prod = next((k["name"] for k in ficha if re.match(r"production compan", k["role"], re.I)), "")
     resumo = "%s lança “%s”, campanha da %s%s." % (marca, nome, agencia, (" (" + partes[1].strip() + ")") if len(partes) >= 3 else "")
     if dc:

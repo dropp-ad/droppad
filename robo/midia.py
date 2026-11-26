@@ -129,8 +129,9 @@ def _videos_da_busca(pag):
 def buscar_youtube(c):
     """Procura o filme no YouTube (busca do próprio site, vídeos do último mês). Só aceita vídeo cujo título ou
     canal tenha a marca E mais um sinal da campanha (agência, palavra do título ou canal oficial da marca)."""
-    for q in ("%s %s" % (c["brand"], c["title"][:60]), "%s %s" % (c["brand"], c.get("agency", "")),
-              "%s campanha" % c["brand"]):
+    consultas = ['"%s"' % c["title"][:80], "%s %s" % (c["brand"], c["title"][:60]), "%s %s" % (c["brand"], c.get("agency", "")),
+                 "%s campanha" % c["brand"]]
+    for q in list(dict.fromkeys(consultas)):
         url = "https://www.youtube.com/results?" + urllib.parse.urlencode({"search_query": q, "sp": "EgIIBA=="})
         try:
             pag = A.baixar(url, timeout=20)
@@ -241,9 +242,11 @@ def main():
     tent = estado.setdefault("tentativas", {})
     limite = (AGORA - dt.timedelta(days=DIAS)).date().isoformat()
     camp = A.ler_json(A.CAMP, [])
+    # sem filme e sem imagem; e as do LinkedIn mesmo com imagem: o vídeo do post não toca no site, então
+    # procura o filme (YouTube, matérias) pelo título — o link do post continua sendo o do LinkedIn
     alvo = [c for c in camp if c.get("date", "") >= limite and not c.get("yt") and not c.get("video")
-            and not c.get("image") and not c.get("images") and not c.get("hidden")
-            and tent.get(c["id"], 0) < MAX_TENTATIVAS]
+            and (not (c.get("image") or c.get("images")) or str(c.get("source", "")).startswith("LinkedIn"))
+            and not c.get("hidden") and tent.get(c["id"], 0) < MAX_TENTATIVAS]
     alvo.sort(key=lambda c: (tent.get(c["id"], 0), c.get("date", "")), reverse=False)
     alvo = sorted(alvo[:POR_RODADA], key=lambda c: c.get("date", ""), reverse=True)
     log("Campanhas recentes sem filme nem imagem:", len(alvo))
