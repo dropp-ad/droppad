@@ -821,6 +821,13 @@ INSTITUCIONAL = re.compile(r"\b(thankful|thanksgiving|grateful|gratid[aã]o|happ
                            r"nosso time|nossa equipe|meet the (people|team)|meet our|conhe[cç]a (o )?nosso|conhe[cç]a (a )?nossa|we'?re hiring|"
                            r"estamos contratando|vagas|anniversary|anivers[aá]rio|birthday|tbt|throwback|reflects on|portfolio night|is a wrap|"
                            r"year in review|retrospectiva|first year|primeiro ano)\b", re.I)
+# post de comemoração da agência (novos clientes, crescimento, foto do time): vale para a legenda toda
+COMEMORACAO = re.compile(r"\b("
+                           r"nov[oa]s\s+clientes|nuev[oa]s\s+clientes|new\s+clients?|new\s+business|"
+                           r"nov[oa]s\s+l[ií]deres|nuev[oa]s\s+l[ií]deres|new\s+leaders|"
+                           r"crescimento\s+d[eoa]\s+(?:pessoal|time|equipe)|crecimiento\s+de(?:l)?\s+(?:personal|equipo)|team\s+growth|"
+                           r"nosso\s+time|nuestro\s+equipo|nuestra\s+gente|our\s+crew|team\s+photo|foto\s+d[eo]\s+(?:time|equipe|equipo)|"
+                           r"legi[aã]o|legi[oó]n|family\s+photo|la\s+familia)\b", re.I)
 TEM_PECA = re.compile(r"\b(campaign|campanha|campaña|film|filme|spot|commercial|comercial|anúncio|ad)\b", re.I)
 
 
@@ -964,6 +971,9 @@ def post_para_campanha(p, conta, limite):
     if chave(marca).startswith(chave(conta["nome"])) and not TEM_PECA.search(titulo):
         return None
     if INSTITUCIONAL.search(titulo):
+        return None
+    # comemoração da agência no começo da legenda (sem falar de peça no título): não é campanha
+    if COMEMORACAO.search(texto[:300]) and not TEM_PECA.search(titulo):
         return None
     tipo = "reel" if "/reel/" in link else "p"
     cod = link.rstrip("/").rsplit("/", 1)[-1]
