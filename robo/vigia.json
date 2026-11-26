@@ -49,7 +49,7 @@
       "mod": "Thu, 26 Nov 2026 05:07:22 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 05:19:15 GMT"
+      "mod": "Thu, 26 Nov 2026 05:28:15 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e8b2f5a4e29d7631e5285f108810ce0a\"",
@@ -79,7 +79,7 @@
       "mod": "Thu, 26 Nov 2026 01:19:07 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Thu, 26 Nov 2026 04:47:06 GMT"
+      "mod": "Thu, 26 Nov 2026 05:26:16 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"d83ce2d22817c38e620e9ddafb0870a2\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 05:20:16 GMT"
+      "mod": "Thu, 26 Nov 2026 05:28:16 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"81bd872eee588ba1dbd557c7d920707d-gzip\"",
-      "mod": "Thu, 26 Nov 2026 04:57:58 GMT"
+      "etag": "W/\"af5eb50bdfc70b4b49ff3ea43dc43961-gzip\"",
+      "mod": "Thu, 26 Nov 2026 05:27:53 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 05:19:39 GMT"
+      "mod": "Thu, 26 Nov 2026 05:27:50 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 05:17:18 GMT"
+      "mod": "Thu, 26 Nov 2026 05:28:18 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 48,
+  "yt_pos": 141,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1020,15 +1020,19 @@
       "Recruit": "",
       "Kotozna": "",
       "Elogia México": "",
-      "ABC Digital": "abcdigitalagency"
+      "ABC Digital": "abcdigitalagency",
+      "SUBE Agencia Digital": "",
+      "Conqr": ""
     },
     "tentadas": {
-      "SUBE Agencia Digital": [
-        "subeagenciadigital",
-        "subeagenciadigitalagency"
+      "LLYC México": [
+        "llycmxico"
+      ],
+      "Monks México": [
+        "monksmxico"
       ]
     },
-    "pos": 1129,
+    "pos": 1133,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1414,9 +1418,11 @@
       "Recruit",
       "Kotozna",
       "Elogia México",
-      "SUBE Agencia Digital"
+      "SUBE Agencia Digital",
+      "Conqr",
+      "LLYC México"
     ],
-    "rodadas": 2177,
+    "rodadas": 2185,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2503,7 +2509,10 @@
       "Kotozna": [],
       "Elogia México": [],
       "SUBE Agencia Digital": [],
-      "ABC Digital": []
+      "ABC Digital": [],
+      "Conqr": [],
+      "LLYC México": [],
+      "Monks México": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3261,8 +3270,9 @@
     "https://www.mediaweek.com.au/radio/mediaworks-holds-new-zealand-commercial-radio-lead",
     "https://www.mediaweek.com.au/marketing/nrma-insurance-evolves-a-help-company-platform-with-accenture-song-campaign",
     "https://www.mediaweek.com.au/technology/adform-to-offer-chatgpt-ads-to-apac-advertisers",
-    "https://www.retailgazette.co.uk/blog/2026/11/co-op-wholesale-launches-extended-christmas-campaign-to-boost-festive-sales"
+    "https://www.retailgazette.co.uk/blog/2026/11/co-op-wholesale-launches-extended-christmas-campaign-to-boost-festive-sales",
+    "https://www.medianews4u.com/nmc-revises-ethical-advertising-guidelines-what-it-means-for-healthcare-marketers"
   ],
-  "ultima_rodada": "2026-11-26T05:20:12.724988+00:00",
-  "ultima_novidade": "2026-11-26T05:20:12.724988+00:00"
+  "ultima_rodada": "2026-11-26T05:28:12.484927+00:00",
+  "ultima_novidade": "2026-11-26T05:28:12.484927+00:00"
 }
