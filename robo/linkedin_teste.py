@@ -37,6 +37,11 @@ DESDE = (AGORA - dt.timedelta(days=int(os.environ.get("JANELA_DIAS", "7")))).dat
 ENV = lambda k, p: int(os.environ.get(k, p))  # noqa: E731
 APIFY_EMPRESAS, APIFY_POR_EMPRESA = ENV("APIFY_EMPRESAS", "150"), ENV("APIFY_POR_EMPRESA", "3")
 APIFY_BUSCAS, APIFY_POR_BUSCA = ENV("APIFY_BUSCAS", "60"), ENV("APIFY_POR_BUSCA", "25")
+# perfis de pessoas que postam campanhas de várias agências (curadores): os posts novos de cada um
+PERFIS = [
+    {"nome": "Rian Swart", "url": "https://www.linkedin.com/in/rian-swart-425570143/"},
+]
+APIFY_POR_PERFIL = ENV("APIFY_POR_PERFIL", "15")
 CS_AGENCIAS, CS_COLETAS = ENV("CORESIGNAL_AGENCIAS", "150"), ENV("CORESIGNAL_COLETAS", "60")
 PALAVRAS = "(campaign OR campanha OR campaña OR campagne OR film OR filme OR spot OR commercial)"
 
@@ -224,6 +229,31 @@ def ler_apify(todas, estado, placar):
             a = next((a for a in sorted(bloco, key=lambda a: -len(a["nome"])) if A.chave(a["nome"]) in onde), None)
             out.append(apify_item(it, "apify", "funcionario", a))
     placar["citacoes"] = {"http": st2, "buscas": len(ags), "posts": total}
+    # 3) perfis de curadores: a agência vem do próprio texto (uma das agências da lista, ou "by/por X")
+    st3, itens = apify_rodar("harvestapi~linkedin-profile-posts",
+                             {"targetUrls": [p["url"] for p in PERFIS], "maxPosts": APIFY_POR_PERFIL},
+                             len(PERFIS) * APIFY_POR_PERFIL, tok)
+    n3 = 0
+    if isinstance(itens, list):
+        por_nome = sorted(todas, key=lambda a: -len(a["nome"]))
+        for it in itens:
+            if not isinstance(it, dict):
+                continue
+            texto = it.get("content") or it.get("text") or ""
+            autor = (it.get("author") or {}).get("name") or ""
+            perfil = next((p["nome"] for p in PERFIS if A.chave(p["nome"]) in A.chave(autor)), PERFIS[0]["nome"])
+            k = A.chave(texto)
+            a = next((a for a in por_nome if len(A.chave(a["nome"])) >= 4 and A.chave(a["nome"]) in k), None)
+            if not a:
+                m = re.search(r"\b(?:by|por|agency:?|agência:?|agencia:?|created by|criad[ao] pela)\s+@?([A-Z][\w&.’'\-]+(?: [A-Z][\w&.’'\-]+){0,3})", texto)
+                a = {"nome": m.group(1).strip() if m else "", "slugs": [""], "regiao": "Global", "cc": ""}
+            a = dict(a, curador=perfil)
+            out.append(apify_item(it, "apify", "curador", a))
+            n3 += 1
+    else:
+        placar["perfis_erro"] = str(itens)[:300]
+    placar["perfis"] = {"http": st3, "posts": n3}
+    total += n3
     placar["status"] = "ok"
     placar["custo_usd"] = round((placar["empresas"].get("posts", 0) + total) * 0.0028, 2)
     return out
@@ -332,7 +362,7 @@ def campanha_por_marca(p, a, conta, falso):
     marca = ""
     for h in re.findall(r"#([\wÀ-ÿ]{3,40})", texto):
         k = A.chave(h)
-        if k in conhecidas and not k.startswith(ag) and not ag.startswith(k):
+        if k in conhecidas and not (ag and (k.startswith(ag) or ag.startswith(k))):
             marca = conhecidas[k]
             break
     if not marca:
@@ -349,16 +379,98 @@ def campanha_por_marca(p, a, conta, falso):
         return None
     linhas = [A.limpar(x) for x in A.HASHTAG.sub(" ", texto).splitlines() if A.limpar(x).strip(" .·-—|")]
     titulo = (linhas[0] if linhas else marca)[:140]
-    q = re.search(r"\b(?:campanha|campaign|campaña|filme|film|projeto|project)\s+[“\"«]([^”\"»]{3,70})[”\"»]", inicio, re.I)
+    q = re.search(r"\b(?:campanha|campaign|campaña|filme|film|projeto|project)\s*:?\s*[“\"«]([^”\"»]{3,70})[”\"»]", inicio, re.I)
     if q:
         titulo = q.group(1).strip()  # o nome da campanha entre aspas é o melhor título
     return {"id": "%s-%s-%s" % (data, A.slug(marca, 20), A.slug(titulo, 36)), "date": data, "brand": marca,
-            "title": titulo, "agency": a["nome"], "source": "LinkedIn · " + a["nome"], "url": p["url"],
+            "title": titulo, "agency": a["nome"], "source": "LinkedIn · " + (a.get("curador") or a["nome"]), "url": p["url"],
             "region": a["regiao"], "cc": a["cc"], "summary": A.primeira_frase(inicio),
             "addedAt": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")}
 
 
+PAIS_REGIAO = {  # último pedaço de "Advertising Agency: X, Cidade, País" → região e código do site
+    "usa": ("EUA", "US"), "united states": ("EUA", "US"), "canada": ("EUA e Canadá", "CA"), "uk": ("Reino Unido", "GB"),
+    "united kingdom": ("Reino Unido", "GB"), "england": ("Reino Unido", "GB"), "scotland": ("Reino Unido", "GB"),
+    "brazil": ("Brasil", "BR"), "brasil": ("Brasil", "BR"), "mexico": ("América Latina", "MX"), "argentina": ("América Latina", "AR"),
+    "chile": ("América Latina", "CL"), "colombia": ("América Latina", "CO"), "peru": ("América Latina", "PE"),
+    "ecuador": ("América Latina", "EC"), "uruguay": ("América Latina", "UY"), "france": ("Europa", "FR"), "germany": ("Europa", "DE"),
+    "italy": ("Europa", "IT"), "spain": ("Europa", "ES"), "portugal": ("Europa", "PT"), "netherlands": ("Europa", "NL"),
+    "belgium": ("Europa", "BE"), "sweden": ("Europa", "SE"), "denmark": ("Europa", "DK"), "norway": ("Europa", "NO"),
+    "finland": ("Europa", "FI"), "ireland": ("Europa", "IE"), "greece": ("Europa", "GR"), "poland": ("Europa", "PL"),
+    "switzerland": ("Europa", "CH"), "austria": ("Europa", "AT"), "turkey": ("Europa", "TR"), "romania": ("Europa", "RO"),
+    "czech republic": ("Europa", "CZ"), "hungary": ("Europa", "HU"), "japan": ("Ásia-Pacífico", "JP"), "china": ("Ásia-Pacífico", "CN"),
+    "hong kong": ("Ásia-Pacífico", "HK"), "singapore": ("Ásia-Pacífico", "SG"), "india": ("Ásia-Pacífico", "IN"),
+    "australia": ("Ásia-Pacífico", "AU"), "new zealand": ("Ásia-Pacífico", "NZ"), "south korea": ("Ásia-Pacífico", "KR"),
+    "korea": ("Ásia-Pacífico", "KR"), "thailand": ("Ásia-Pacífico", "TH"), "vietnam": ("Ásia-Pacífico", "VN"),
+    "indonesia": ("Ásia-Pacífico", "ID"), "philippines": ("Ásia-Pacífico", "PH"), "malaysia": ("Ásia-Pacífico", "MY"),
+    "taiwan": ("Ásia-Pacífico", "TW"), "uae": ("Oriente Médio e África", "AE"), "united arab emirates": ("Oriente Médio e África", "AE"),
+    "saudi arabia": ("Oriente Médio e África", "SA"), "south africa": ("Oriente Médio e África", "ZA"),
+    "israel": ("Oriente Médio e África", "IL"), "egypt": ("Oriente Médio e África", "EG"), "lebanon": ("Oriente Médio e África", "LB"),
+    "nigeria": ("Oriente Médio e África", "NG"), "kenya": ("Oriente Médio e África", "KE"),
+}
+
+
+def campanha_de_curador(p):
+    """Posts no formato do Ads of the World (o que curadores como Rian Swart publicam):
+        Marca Produto, Título da Campanha
+        Advertising Agency: Agência, Cidade, País
+        Chief Creative Officer: Fulano …
+    Vira campanha direto, com a ficha técnica; o texto do site é escrito pelo robô a partir dos dados."""
+    linhas = [l.strip() for l in (p["texto"] or "").splitlines() if l.strip()]
+    if len(linhas) < 2 or not p["data"] or p["data"][:10] < DESDE:
+        return None
+    ag_i = next((i for i, l in enumerate(linhas[:6]) if re.match(r"(advertising |creative |digital |media )?agenc(y|ies)\s*:", l, re.I)), None)
+    if ag_i is None:
+        return None
+    cab = linhas[0]
+    if "," in cab:
+        marca, titulo = [x.strip() for x in cab.split(",", 1)]
+    elif re.match(r"^(.{2,30}?)[’']s?\s", cab):
+        # "IKEA’s Black Friday Surgery Distraction": a marca é o dono do título
+        marca, titulo = re.match(r"^(.{2,30}?)[’']s?\s", cab).group(1).strip(), cab.strip()
+    else:
+        marca, titulo = cab.strip(), cab.strip()
+    marca = re.sub(r"[’']s$", "", marca).strip()
+    if not marca or len(marca) > 60:
+        return None
+    ag_txt = linhas[ag_i].split(":", 1)[1].strip()
+    primeira = re.split(r",\s*and\s+|\s+and\s+(?=[A-Z])", ag_txt)[0]
+    partes = [x.strip() for x in primeira.split(",")]
+    agencia = partes[0]
+    pais = partes[-1].lower().strip(" .") if len(partes) >= 2 else ""
+    regiao, cc = PAIS_REGIAO.get(pais, ("Global", ""))
+    ficha = []
+    for l in linhas[ag_i + 1:]:
+        m = re.match(r"^([^:]{2,60}?)\s*:\s*(.{2,300})$", l)
+        if m:
+            ficha.append({"role": m.group(1).strip(), "name": m.group(2).strip(" .")})
+        elif ficha and len(l) > 140:
+            break
+    nome = titulo or marca
+    dc = ", ".join(k["name"] for k in ficha if re.search(r"chief creative|executive creative|^creative director", k["role"], re.I))[:120]
+    prod = next((k["name"] for k in ficha if re.match(r"production compan", k["role"], re.I)), "")
+    resumo = "%s lança “%s”, campanha da %s%s." % (marca, nome, agencia, (" (" + partes[1].strip() + ")") if len(partes) >= 3 else "")
+    if dc:
+        resumo += " Criação liderada por %s." % dc
+    if prod:
+        resumo += " Produção: %s." % prod.split(",")[0]
+    data = p["data"][:10]
+    c = {"id": "%s-%s-%s" % (data, A.slug(marca, 20), A.slug(nome, 36)), "date": data, "brand": marca, "title": nome,
+         "agency": agencia, "source": "LinkedIn · " + (p["agencia"] or {}).get("curador", "LinkedIn"), "url": p["url"],
+         "region": regiao, "cc": cc, "summary": resumo, "addedAt": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")}
+    if p["imagem"]:
+        c["image"] = p["imagem"]
+    if ficha:
+        c["ficha"] = ficha[:40]
+    return {"marca": marca, "titulo": nome, "agencia": agencia, "data": p["data"], "url": p["url"],
+            "video": bool(p["video"]), "fonte": p["fonte"], "tipo": p["tipo"], "campanha": c}
+
+
 def vira_campanha(p):
+    if p.get("tipo") == "curador":
+        c = campanha_de_curador(p)
+        if c:
+            return c
     a = p["agencia"]
     if not a or not p["texto"] or not p["data"] or p["data"][:10] < DESDE:
         return None
@@ -376,7 +488,7 @@ def vira_campanha(p):
     if A.INSTITUCIONAL.search(c["brand"]) or NAO_LI.search(p["texto"][:400]):
         return None
     # o site não embute post do LinkedIn: entra como card, com a imagem do post e o link para ele
-    c["source"] = "LinkedIn · " + a["nome"]
+    c["source"] = "LinkedIn · " + (a.get("curador") or a["nome"])
     c.pop("video", None)
     if p["imagem"]:
         c["image"] = p["imagem"]
