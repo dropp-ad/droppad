@@ -45,7 +45,7 @@
       "mod": "Thu, 26 Nov 2026 12:20:16 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 12:30:29 GMT"
+      "mod": "Thu, 26 Nov 2026 12:42:28 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 12:30:29 GMT"
+      "mod": "Thu, 26 Nov 2026 12:42:29 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"4af1fa53bd12edbfb003ecc206428c3e-gzip\"",
@@ -118,7 +118,7 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Thu, 26 Nov 2026 12:30:14 GMT"
+      "mod": "Thu, 26 Nov 2026 12:35:40 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"0d812e91592c76b5245d6ac75e93815d\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 12:30:11 GMT"
+      "mod": "Thu, 26 Nov 2026 12:41:30 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -249,7 +249,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 12:30:31 GMT"
+      "mod": "Thu, 26 Nov 2026 12:41:30 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -290,7 +290,7 @@
       "mod": "Thu, 26 Nov 2026 10:59:03 GMT"
     }
   },
-  "yt_pos": 159,
+  "yt_pos": 78,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1113,15 +1113,18 @@
       "X3M Ideas": "",
       "Noah's Ark Communications": "",
       "Insight Redefini": "",
-      "Verdant": ""
+      "Verdant": "",
+      "Anakle": "",
+      "Tertulia Digital": "",
+      "CKDigital": "ckdigital",
+      "LoudSilence Media": ""
     },
     "tentadas": {
-      "Anakle": [
-        "anakle",
-        "anakleagency"
+      "Ogilvy Nigeria": [
+        "ogilvynigeria"
       ]
     },
-    "pos": 1344,
+    "pos": 1350,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1612,9 +1615,12 @@
       "X3M Ideas",
       "Noah's Ark Communications",
       "Insight Redefini",
-      "Verdant"
+      "Verdant",
+      "Anakle",
+      "Tertulia Digital",
+      "LoudSilence Media"
     ],
-    "rodadas": 2607,
+    "rodadas": 2619,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2820,7 +2826,11 @@
       "Noah's Ark Communications": [],
       "Insight Redefini": [],
       "Verdant": [],
-      "Anakle": []
+      "Anakle": [],
+      "Tertulia Digital": [],
+      "LoudSilence Media": [],
+      "CKDigital": [],
+      "Ogilvy Nigeria": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3596,6 +3606,6 @@
     "https://www.afaqs.com/news/advertising/licious-puts-choosy-meat-buyers-at-the-centre-of-new-campaign-12843545",
     "https://www.abcdacomunicacao.com.br/grupo-trimais-aposta-na-relacao-com-os-clientes-em-nova-campanha-de-marketing"
   ],
-  "ultima_rodada": "2026-11-26T12:30:26.938854+00:00",
+  "ultima_rodada": "2026-11-26T12:42:26.845000+00:00",
   "ultima_novidade": "2026-11-26T12:30:26.938854+00:00"
 }
