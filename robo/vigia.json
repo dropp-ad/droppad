@@ -12,7 +12,7 @@
       "mod": "Thu, 26 Nov 2026 14:26:38 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Thu, 26 Nov 2026 15:44:36 GMT"
+      "mod": "Thu, 26 Nov 2026 15:50:37 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"1a8dc41302f50ff8578e040070482232\"",
@@ -45,7 +45,7 @@
       "mod": "Thu, 26 Nov 2026 15:43:33 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 15:47:39 GMT"
+      "mod": "Thu, 26 Nov 2026 15:49:40 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 15:47:40 GMT"
+      "mod": "Thu, 26 Nov 2026 15:50:40 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -118,7 +118,7 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Thu, 26 Nov 2026 15:42:34 GMT"
+      "mod": "Thu, 26 Nov 2026 15:49:08 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"333c318a3bd3654218a2104e3dd93a84\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 15:47:41 GMT"
+      "mod": "Thu, 26 Nov 2026 15:50:40 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -311,9 +311,12 @@
     "https://ansonstoner.com/feed/": {
       "etag": "\"3d1dfd4ec40c364ee8f3707791fc87dc\"",
       "mod": "Thu, 30 Jul 2026 19:59:18 GMT"
+    },
+    "https://www.marketingdirecto.com/feed/": {
+      "mod": "Thu, 26 Nov 2026 13:22:15 GMT"
     }
   },
-  "yt_pos": 72,
+  "yt_pos": 162,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1161,7 +1164,7 @@
       "Liquorice": ""
     },
     "tentadas": {},
-    "pos": 1602,
+    "pos": 1605,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1671,7 +1674,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 2805,
+    "rodadas": 2808,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3445,7 +3448,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 30,
+    "pos_quente": 33,
     "lida": {
       "droga5sp": "2026-11-26T15:19:36.939289+00:00",
       "mboothagency": "2026-11-26T15:19:36.939289+00:00",
@@ -3506,7 +3509,13 @@
       "greymexico": "2026-11-26T15:46:36.723078+00:00",
       "uprisedigitalagency": "2026-11-26T15:46:36.723078+00:00",
       "almapbbdo": "2026-11-26T15:47:37.149175+00:00",
-      "bornsocialagency": "2026-11-26T15:47:37.149175+00:00"
+      "bornsocialagency": "2026-11-26T15:47:37.149175+00:00",
+      "artplan": "2026-11-26T15:48:36.669267+00:00",
+      "mergemarketing": "2026-11-26T15:48:36.669267+00:00",
+      "wmccannbr": "2026-11-26T15:49:37.289124+00:00",
+      "humandigitalagency": "2026-11-26T15:49:37.289124+00:00",
+      "ogilvy": "2026-11-26T15:50:36.856899+00:00",
+      "nakedcreative_": "2026-11-26T15:50:36.856899+00:00"
     },
     "ultimo_post": {
       "droga5sp": "2026-11-25",
@@ -3564,7 +3573,11 @@
       "thrivedigitalagency": "2023-03-13",
       "greymexico": "2026-11-20",
       "uprisedigitalagency": "2022-12-02",
-      "almapbbdo": "2026-11-26"
+      "almapbbdo": "2026-11-26",
+      "artplan": "2026-11-25",
+      "wmccannbr": "2026-11-25",
+      "humandigitalagency": "2021-08-16",
+      "ogilvy": "2026-11-25"
     }
   },
   "vistos": [
@@ -3802,6 +3815,6 @@
     "https://roastbrief.com.mx/2026/11/la-temporada-alta-impulsa-el-uso-de-inteligencia-artificial-en-whatsapp-para-optimizar-la-atencion-comercial",
     "https://www.merca20.com/mientras-los-mexicanos-se-preparan-para-el-black-friday-bbva-santander-banamex-y-hsbc-dan-este-importante-anuncio-en-el-dof"
   ],
-  "ultima_rodada": "2026-11-26T15:47:37.149175+00:00",
-  "ultima_novidade": "2026-11-26T15:47:37.149175+00:00"
+  "ultima_rodada": "2026-11-26T15:50:36.856899+00:00",
+  "ultima_novidade": "2026-11-26T15:50:36.856899+00:00"
 }
