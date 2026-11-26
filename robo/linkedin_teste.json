@@ -751,12 +751,162 @@
    "Ici Barbès": 1,
    "Steve": 1,
    "M&C Saatchi Paris": 1,
-   "TBWA\\Brussels": 1
+   "TBWA\\Brussels": 1,
+   "Yoghurt Digital": "ok",
+   "raraPR": "ok",
+   "SOUP Agency": "ok",
+   "authentic digital": "ok",
+   "M Global Japan": "ok",
+   "Conqr": "ok",
+   "SUBE Agencia Digital": "ok",
+   "ABC Digital": "ok",
+   "Media Source": "ok",
+   "Huella Digital": "ok",
+   "Ogilvy México": "ok",
+   "Boondoggle": 1,
+   "Rocket Agency": 1,
+   "Eight Clients": 1,
+   "Metric Labs": 1,
+   "First Page Australia": 1,
+   "The Creative Collective": 1,
+   "Clixpert": 1,
+   "Intrepid Digital": 1,
+   "Thrive Digital": 1,
+   "Uprise Digital": 1,
+   "Smith Brothers Media": 1,
+   "80/20 Digital": 1,
+   "The Meaningful Social Club": 1,
+   "Melbourne Social Co.": 1,
+   "Born Social": 1,
+   "Your Social Partner": 1,
+   "Merge Marketing": 1,
+   "Blend Commerce": 1,
+   "BMF Sydney": 1,
+   "Clemenger BBDO": 1,
+   "Howatson+Company": 1,
+   "Terrier Agency": 1,
+   "Human Digital": 1,
+   "Digital Stream Ltd": 1,
+   "LocaliQ ANZ": 1,
+   "Digitella Marketing": 1,
+   "Webzilla Digital Marketing": 1,
+   "Squid Group": 1,
+   "ROCKETSHP": 1,
+   "Web Antler": 1,
+   "Net Branding Limited": 1,
+   "Sprocket Digital Limited": 1,
+   "Beyond Tech Media": 1,
+   "Naked Creative": 1,
+   "PRIZM Digital Marketing Agency": 1,
+   "Revolution Hub": 1,
+   "Easy Social Media": 1,
+   "IDigital": 1,
+   "TooGood": 1,
+   "V Digital Marketing": 1,
+   "Digital Influence": 1,
+   "Found Digital": 1,
+   "Amicus Digital": 1,
+   "Roobix": 1,
+   "Smith Social": 1,
+   "Dentsu": 1,
+   "Hakuhodo": 1,
+   "ADK Marketing Solutions": 1,
+   "CyberAgent": 1,
+   "ShapeWin Co., Ltd.": 1,
+   "Principle Co, Ltd.": 1,
+   "Mozmene": 1,
+   "TOKYO MARKETING": 1,
+   "Next Level Japan": 1,
+   "An-yal": 1,
+   "The Digital X": 1,
+   "Hatago Consulting": 1,
+   "Hashi Media": 1,
+   "J1 Co., Ltd.": 1,
+   "Info Cubic Japan": 1,
+   "Isea inc.": 1,
+   "Geezerbuild": 1,
+   "AJ Marketing": 1,
+   "URALA International": 1,
+   "Beacon Communications": 1,
+   "TBWA\\HAKUHODO": 1,
+   "Ogilvy Japan": 1,
+   "McCann Erickson Japan": 1,
+   "Publicis Groupe Japan": 1,
+   "dentsu X Japan": 1,
+   "iProspect Japan": 1,
+   "Monks Japan": 1,
+   "Accenture Song Japan": 1,
+   "Wieden+Kennedy Tokyo": 1,
+   "Droga5 Tokyo": 1,
+   "AKQA Tokyo": 1,
+   "R/GA Tokyo": 1,
+   "Havas Japan": 1,
+   "DDB Japan": 1,
+   "Leo Burnett Tokyo": 1,
+   "Grey Tokyo": 1,
+   "Cheil Japan": 1,
+   "We Are Social Tokyo": 1,
+   "VML Japan": 1,
+   "Jellyfish Japan": 1,
+   "Criteo Japan": 1,
+   "Cartah Holdings": 1,
+   "Septeni Holdings": 1,
+   "Opt": 1,
+   "Transcosmos": 1,
+   "FullSpeed": 1,
+   "GMO Internet Group": 1,
+   "Recruit": 1,
+   "Kotozna": 1,
+   "Elogia México": 1,
+   "Posición Uno": 1,
+   "LLYC México": 1,
+   "Monks México": 1,
+   "Alkemy LATAM": 1,
+   "Geotelecom MX": 1,
+   "Good Rebels México": 1,
+   "iCrossing Latam": 1,
+   "Futurité": 1,
+   "Impala México": 1,
+   "Bindiva": 1,
+   "Hashtag Media Group": 1,
+   "Megri Digital": 1,
+   "Aloha! Marketing Digital": 1,
+   "Dinametra": 1,
+   "another": 1,
+   "VaynerMedia México": 1,
+   "Thinking Social": 1,
+   "Pel": 1,
+   "2btube México": 1,
+   "INPULSE Digital": 1,
+   "Serna Group": 1,
+   "Altura Interactive": 1,
+   "Concept Haus": 1,
+   "SENSO Mx": 1,
+   "Boundify": 1,
+   "MHA Consulting": 1,
+   "Retorno Digital": 1,
+   "Grinbin": 1,
+   "InfoSol": 1,
+   "Mosaico Media": 1,
+   "ZK Marketing": 1,
+   "Volt Media Services": 1,
+   "Behave": 1,
+   "Holy Brand Agency": 1,
+   "Mambo Creative Agency": 1,
+   "CBI Market": 1,
+   "Thera Media": 1,
+   "iVirtual": 1,
+   "Swing Media Marketing": 1,
+   "Agencia SEO Monterrey": 1,
+   "Orbis Agencia de Marketing Digital": 1,
+   "McCann México": 1,
+   "DDB México": 1,
+   "Leo Burnett México": 1
   },
   "pos": {
-   "apify_empresas": 750,
-   "apify_buscas": 300,
-   "coresignal": 750
+   "apify_empresas": 900,
+   "apify_buscas": 360,
+   "coresignal": 900
   },
   "cs_filtro": {
    "company_post": "company_name",
@@ -1711,1160 +1861,6 @@
     "campanhas": 0,
     "atraso_mediano_h": null
    },
-   "lidos": [
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Mindgruve",
-     "data": "2026-11-23",
-     "url": "https://www.linkedin.com/posts/mindgruve-_mindgruve-is-pleased-to-announce-steve-terjeson-activity-7530757242778894338-nfxr",
-     "texto": "Mindgruve is pleased to announce Steve Terjeson as our new Vice President of Technology.\n\nSteve joins us from WPP’s Choreograph, where he served as Vice Preside"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Mindgruve",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/mindgruve-_big-news-for-our-team-mindgruve-is-a-finalist-activity-7531449883522748416--y3G",
-     "texto": "Big news for our team. Mindgruve is a finalist in the Digiday Work/Life Awards.\n\nThis one belongs to our people. Across our global offices, they show up for eac"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Mindgruve",
-     "data": "2026-11-17",
-     "url": "https://www.linkedin.com/posts/mindgruve-_an-evening-of-shared-perspectives-activity-7528557208255774720-lujQ",
-     "texto": "Mindgruve recently brought clients, partners, and industry friends together with Amazon Brazil for an evening of shared perspectives around the table.\n\nAn olive"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "RIESTER",
-     "data": "2026-11-11",
-     "url": "https://www.linkedin.com/posts/riester_happy-veterans-day-today-we-honor-and-recognize-activity-7526282605424480257--PBb",
-     "texto": "Happy Veterans Day! Today, we honor and recognize all who have served our country.\n\nWe’re proud to share (T)HANKS, a campaign launching today that we created in"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "RIESTER",
-     "data": "2026-10-30",
-     "url": "https://www.linkedin.com/posts/riester_riester-helped-el-segundo-win-the-world-cup-activity-7522055266914406401-hQ96",
-     "texto": "Riester helped El Segundo win the World Cup!\n\nBy tapping into the region's biggest moments—from the World Cup to the 2027 Super Bowl and 2028 Summer Olympics—we"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "RIESTER",
-     "data": "2026-10-10",
-     "url": "https://www.linkedin.com/posts/riester_riester-produced-29-debates-for-the-citizens-activity-7514502927730941952-mLp-",
-     "texto": "Riester produced 29 debates for the Citizens Clean Elections Commission during the 2026 election cycle!\n\nEducating Arizona voters takes a team effort. We’re gra"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Ologie",
-     "data": "2026-11-23",
-     "url": "https://www.linkedin.com/posts/ologie_butler-university-activity-7530690535917887489-gvR2",
-     "texto": "A few Butler photos from our camera roll. (The bulldog statue gets the cover, obvi. 💙)\n\nAs part of Butler University’s brand refresh, we worked together to buil"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-20",
-     "url": "https://www.linkedin.com/posts/nerdeljac_amahighered-ugcPost-7529517027997298688-EyQ0",
-     "texto": "I’ve finally unpacked my bag and thoughts from last week’s AMA. \n\nThis was my second time at the conference, and I continue to be blown away by the vulnerabilit"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Ologie",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/ologie_please-enjoy-this-42-second-home-movie-from-activity-7531078836931825664-Rh2W",
-     "texto": "Please enjoy this 42-second home movie from that one time we opened a New York bodega with Fordham University. 📹"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "The Company",
-     "data": "2026-11-18",
-     "url": "https://www.linkedin.com/posts/thecompany_cannescorporate-videoprodukce-activity-7528842297564688384-IowK",
-     "texto": "Rok 2020, Cannes, Silver Dolphin. Na ten moment nezapomeneme. 🐬\n\nLetos chceme zabojovat znovu. Natočili jsme tři lékařské medailonky laureátů Dr. Bares Award, v"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "The Company",
-     "data": "2026-11-06",
-     "url": "https://www.linkedin.com/posts/thecompany_sponzorskyvzkaz-tvspot-stardance-activity-7524457037741871104-Hh1Z",
-     "texto": "💃 Sponzorský vzkaz dm k StarDance 2026 na ČT: 10s cutdown z hlavního 40s TV spotu na hudebně-taneční téma pořadu. 🎶\n\n✂️ Vznikly 3 varianty a každá s úplně jiným"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-16",
-     "url": "https://www.linkedin.com/posts/slidenineagency_what-the-post-election-realignment-means-activity-7528232689724899328-Kxbz",
-     "texto": "American voters have spoken. Political shifts bring new priorities, new scrutiny and new considerations for businesses. Is your communications strategy ready fo"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-19",
-     "url": "https://www.linkedin.com/posts/cpiedmo_what-the-post-election-realignment-means-activity-7529219007963455490-43Q5",
-     "texto": "Post-election shifts don’t just change policy — they change which messages land and which ones trigger backlash overnight.\n\nA playbook or social post that worke"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-06",
-     "url": "https://www.linkedin.com/posts/slidenineagency_were-excited-to-celebrate-vice-president-activity-7524576350133764096-Aujs",
-     "texto": "We’re excited to celebrate Vice President Chris Piedmont and Account Executive Nigel Becker on their new leadership roles as chair of the Department of Communic"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "BrandExtract",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/brandextract_aisearch-seo-brandstrategy-activity-7531046513540640768-BJrF",
-     "texto": "If your traffic is dropping, publishing more won't fix it.\n\nClicks have declined 30 percent, and some brands are seeing click-through rates fall by as much as 5"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "BrandExtract",
-     "data": "2026-11-20",
-     "url": "https://www.linkedin.com/posts/brandextract_hbma-lanternawards-branding-activity-7529657380976967681-PG1U",
-     "texto": "Nine entries. Nine awards.\n\nAt last night’s HBMA - Houston Business Marketing Alliance Lantern Awards, BrandExtract brought home six Lanterns and three Awards o"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "BrandExtract",
-     "data": "2026-11-19",
-     "url": "https://www.linkedin.com/posts/brandextract_rebrand-brandstrategy-b2bmarketing-activity-7529314846350147584-LEj5",
-     "texto": "Most rebrand decisions start with a feeling, not a finding.\n\nThe website looks dated. A competitor launched a sharp new identity. Leadership is tired of the log"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-02-09",
-     "url": "https://www.linkedin.com/posts/carlberg_were-hiring-again-if-you-know-a-smart-writer-activity-7426755503868895232-6y7y",
-     "texto": "We're hiring again! If you know a smart writer and/or account person with 3-5 years of experience, we'd love to meet them. They'll be working on a range of exci"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-08-14",
-     "url": "https://www.linkedin.com/posts/carlberg_are-you-a-houston-based-rising-star-media-activity-7494076221010505728-hmVv",
-     "texto": "Are you a Houston-based, rising star media planner/buyer? Is your idea of a good time geeking out over audience data and crafting perfectly optimized buys? Want"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2025-12-01",
-     "url": "https://www.linkedin.com/posts/carlberg_dontmesswithtexas-activity-7401351996521566208-c2ZH",
-     "texto": "We're all so excited to be working with TxDOT on their iconic Don’t mess with Texas and Adopt A Highway campaigns. It’s been a lifelong dream over here. We can'"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-10-13",
-     "url": "https://www.linkedin.com/posts/web-excellence-awards_weawards-webexcellenceawards-construction-activity-7515312855857029120-TyBT",
-     "texto": "Congratulations to the whole team at Atomicdust ✨\n\nFour Atomicdust projects won in Season 19, and look at who they were for. Flintco has 118 years of history. M"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Atomicdust",
-     "data": "2026-10-21",
-     "url": "https://www.linkedin.com/posts/atomicdust_our-latest-case-study-clay-scope-one-activity-7518673281596440576-Lfd4",
-     "texto": "Our latest case study? Clay.\n\nScope: one mug. \nTimeline: one morning. \nRevisions: not possible because we already fired it.\n\nThanks to South Broadway Art Projec"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Atomicdust",
-     "data": "2026-10-26",
-     "url": "https://www.linkedin.com/posts/atomicdust_wwjdd-activity-7520476947823493122-vp_H",
-     "texto": "A few hours outside, gorgeous views, and ribeyes with Kerrygold and rosemary. Exactly what our friend James Dixson would do.\n\n#wwjdd"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "&Barr",
-     "data": "2026-11-04",
-     "url": "https://www.linkedin.com/posts/andbarr_barr-day-in-the-life-of-an-hr-manager-activity-7523782301411897344-vXXC",
-     "texto": "From benefits and PTO to all things &Barr culture, Bridget Higgins is our go-to for helping keep the team supported and connected! 💛\n\nAs our HR Manager, she pla"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "&Barr",
-     "data": "2026-11-02",
-     "url": "https://www.linkedin.com/posts/andbarr_andbarr-orlandobusinessjournal-leadership-activity-7523036596552515584-6VWR",
-     "texto": "We’re excited to share that our President and CEO, Pete Barr, Jr., recently joined Orlando Business Journal Editor-in-Chief Richard B. on Florida Business Minds"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "&Barr",
-     "data": "2026-10-30",
-     "url": "https://www.linkedin.com/posts/andbarr_dominique-is-our-associate-director-of-social-activity-7521960464331767808-hgPi",
-     "texto": "Dominique is our Associate Director of Social Media and someone who brings color, creativity and a whole lot of nostalgia to everything she does. 🎃 With her bir"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Bigeye",
-     "data": "2026-11-17",
-     "url": "https://www.linkedin.com/posts/bigeyeagency_marketinganalytics-customerretention-retailmarketing-activity-7528443867541512192-CUiM",
-     "texto": "\"If you're paying a premium to get someone to buy something on Black Friday at a discount, you're going into debt on that first purchase.\"\nTim Shea, founder and"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Bigeye",
-     "data": "2026-11-19",
-     "url": "https://www.linkedin.com/posts/bigeyeagency_foodandbeverage-cpgmarketing-functionalbeverages-activity-7529168255593242625-Wknk",
-     "texto": "Prebiotic sodas cost about 3.4 times as much per fluid ounce as the other drinks in Amazon's top 50 soft drinks. Nine of the 50 are prebiotic or fiber sodas, at"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Bigeye",
-     "data": "2026-11-23",
-     "url": "https://www.linkedin.com/posts/bigeyeagency_retailmedia-cpgmarketing-instoremedia-activity-7530689222878404608-g6Sa",
-     "texto": "\"I think the more powerful thing that CPG brands should look for is closed-loop attribution.\"\nMiya Knights, author of \"The Future of Shopping,\" on IN CLEAR FOCU"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "BETC Havas",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/betchavas_voteerh-caboraez2026-betchavas-activity-7531385722554191873-xTx3",
-     "texto": "A coruja já tentou de tudo, até admitir que não é loira. 🦉\n\nAgora só falta você fazer a sua parte: vote na TIM no Caboré 2026, na categoria Anunciante do Ano. 💙"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "BETC Havas",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/betchavas_betchavas-mercedesbenzcaminhoes-amarcadaconfianca-activity-7531099363515920384-YknX",
-     "texto": "70 anos de história, confiança e parceria. ⭐\n\nA Mercedes-Benz Trucks celebra sete décadas de trajetória no Brasil com a campanha “A Marca da Confiança”, desenvo"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "BETC Havas",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/betchavas_betchavas-melhoresdopropmark-propmark2026-activity-7531033441040162816-uvow",
-     "texto": "Com mais de 25 anos de carreira, Andre Gomes, Chief Business Officer da BETC HAVAS, vem ajudando a construir marcas e campanhas de sucesso para os maiores anunc"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "The Black Sheep Agency",
-     "data": "2026-11-09",
-     "url": "https://www.linkedin.com/posts/theblacksheepagency_fundraising-nonprofitcommunications-activity-7525606191033532417-OP7N",
-     "texto": "Only about 1 in 9 people who gave to a nonprofit for the first time last year gave again by midyear, according to the Association of Fundraising Professionals ("
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-09",
-     "url": "https://www.linkedin.com/posts/unitedwayhouston_great-missions-are-powered-by-great-people-activity-7523127172694204416--qOg",
-     "texto": "Great missions are powered by great people.\n\nJoin fellow nonprofit professionals from across Greater Houston at the Power Tools for Nonprofits Conference. Conne"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "The Black Sheep Agency",
-     "data": "2026-11-05",
-     "url": "https://www.linkedin.com/posts/theblacksheepagency_accesstojustice-civictech-nonprofits-activity-7524201507815268353-8Dt2",
-     "texto": "This was such a meaningful collaboration. The Beacon of Downtown Houston brought the deep community and legal expertise, January Advisors brought the digital, d"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "David São Paulo",
-     "data": "2026-11-18",
-     "url": "https://www.linkedin.com/posts/wearedavidsp_kraft-heinz-activity-7528839412680421378-uHnN",
-     "texto": "🍅+🌶️=❗️\n\nKraft Heinz"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "David São Paulo",
-     "data": "2026-09-10",
-     "url": "https://www.linkedin.com/posts/wearedavidsp_aten%C3%A7%C3%A3o-essa-%C3%A9-uma-convoca%C3%A7%C3%A3o-a-todos-os-activity-7503886301583208448-cP3A",
-     "texto": "Atenção: essa é uma convocação a todos os quarterbacks de ketchup Heinz. 🏈🍅 Se você tira até a última gota do squeeze, dá o play.\n\nEntre na End Zone e conheça o"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "David São Paulo",
-     "data": "2026-08-27",
-     "url": "https://www.linkedin.com/posts/wearedavidsp_rog%C3%A9rio-chaves-fabr%C3%ADcio-pretto-ccos-david-activity-7498720079254056961-km0v",
-     "texto": "A new chapter for DAVID São Paulo. \n\nOur new CCOs, Rogério Chaves and Fabrício Pretto, sat down with the media to talk about their return to the agency, their c"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "VML Brasil",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/vml_10-years-of-trust-120-years-of-fearless-activity-7531417211421360128-2FC2",
-     "texto": "10 years of trust, 120 years of fearless independence, and a future where moving fast isn’t the goal. Being joyful, distinctive, and deeply human is. 👟\n\nVML Chi"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "VML Brasil",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/vml_brands-are-being-chosen-by-more-deciders-activity-7531069195514740736-iSAC",
-     "texto": "Brands are being chosen by more deciders, in more places, than they were built for.\n \nOur Future Shopper research shows how much is changing at once. Budgets ar"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "VML Brasil",
-     "data": "2026-11-23",
-     "url": "https://www.linkedin.com/posts/vml_hearts-full-vml-strong-2026-global-activity-7530721936000253952-eZQI",
-     "texto": "Hearts = full. \nVML = strong. \n2026 Global Annual Meeting = success. 😎"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Tech and Soul",
-     "data": "2026-11-17",
-     "url": "https://www.linkedin.com/posts/techandsoul_o-futuro-da-criatividade-a-ia-vai-substituir-activity-7528491332483358721-0y3a",
-     "texto": "Nosso CCO e co fundador, Flavio Waiteman no Podcast da Human Academy, falando sobre criatividade, IA, critério, repertório e formação educacional.\n\"Num mundo de"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-16",
-     "url": "https://www.linkedin.com/posts/ituranbrasil_ituranbrasil-conectandonegocios-instintoituran-ugcPost-7528066719827980289-udnK",
-     "texto": "Uma grande ideia vai muito além da inspiração! 💡\n\nNo Conectando Negócios, Alexandre Carrizo e Tobias Zamignan Manica recebem Claudio Kalim e Flavio Waiteman, da"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Tech and Soul",
-     "data": "2026-11-04",
-     "url": "https://www.linkedin.com/posts/techandsoul_tem-filme-novo-no-ar-da-techsoul-para-o-activity-7523855015388708864-Oa_j",
-     "texto": "Tem filme novo no ar da Tech&Soul para o C6 Bank. Uma parceria que faz a gente se sentir em casa mesmo quando o desafio é abrir oportunidades de investimentos p"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "KPS3",
-     "data": "2026-11-20",
-     "url": "https://www.linkedin.com/posts/kps3_hiring-accountmanagement-marketingcareers-activity-7529615763629019137-5_se",
-     "texto": "Open task: Apply to be KPS3's next Account Manager.\nAssignee: You?\n\nWe're a 45-person, employee-owned, B Corp agency in Reno, and we're looking for someone to l"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "KPS3",
-     "data": "2026-11-03",
-     "url": "https://www.linkedin.com/posts/kps3_we-got-to-celebrate-with-liberty-dogs-at-activity-7523177754692042752-_8v7",
-     "texto": "We got to celebrate with Liberty Dogs™ at their inaugural graduation ceremony, where their first class of U.S. Veterans and Liberty Service Dogs graduated toget"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "KPS3",
-     "data": "2026-11-11",
-     "url": "https://www.linkedin.com/posts/kps3_happyveteransday-redwhiteandflight-america250-activity-7526337351397240835-2SwV",
-     "texto": "12,000 people. One night. Zero fireworks. 🇺🇸\n\nRed, White and Flight brought a free drone show and Reno Phil concert to Mackay Stadium for America’s 250th, and o"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-16",
-     "url": "https://www.linkedin.com/posts/jotaag_no-timing-da-cultura-e-na-estante-da-jota-activity-7528208513123323906-2sEO",
-     "texto": "No timing da cultura, e na estante da Jota 😎\n\nNo último dia 10, no Auditório Ibirapuera, o case “Gerente do Sicredi: do hit à educação financeira” levou bronze "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-11",
-     "url": "https://www.linkedin.com/posts/mtrindade_votar-em-mim-para-dirigente-da-ind%C3%BAstria-ugcPost-7524925407884812291-zqN-",
-     "texto": "Votar em mim para Dirigente da Indústria da Comunicação no Caboré é votar no Marcio Oliveira, co-CEO da Jotacom - The Cross Performance Agency, agência da FSB H"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-16",
-     "url": "https://www.linkedin.com/posts/jotaag_start2027-programadeestaergio-estaergiofsb-activity-7528188390886764545-Lw5k",
-     "texto": "🚀 Seu próximo passo profissional começa aqui!\nEstão abertas as inscrições para o Start 2027, Programa de Estágio da FSB Holding.\n\nSão 12 meses de experiência, a"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Fbiz",
-     "data": "2026-11-10",
-     "url": "https://www.linkedin.com/posts/fbiz_fbiz-activity-7526012099282563072-lIvQ",
-     "texto": "Há anos, Snickers combate a confusão causada pela fome. Mas dessa vez resolveu acabar com a confusão de uma cidade inteira.\n\nA escolhida foi Lagoa da Confusão, "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Fbiz",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/fbiz_leandro-louren%C3%A7%C3%A3o-%C3%A9-nosso-novo-diretor-executivo-activity-7531108345030729728-r4hU",
-     "texto": "Leandro Lourenção é nosso novo Diretor-Executivo de Criação. Conhecido como Lêndia, ele chega com a experiência de mais de duas décadas para reforçar a Fbiz e a"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Fbiz",
-     "data": "2026-11-11",
-     "url": "https://www.linkedin.com/posts/fbiz_fbiz-vansbrasil-effieawards-activity-7526328919638220800-RCgo",
-     "texto": "É oficial: o pódio do Effie Awards Brasil 2026 foi tomado por esquisitos.\n\nO case “Vans & Felca: Convocando os Esquisitos” foi premiado com ouro e bronze nas ca"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Conversion",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/conversion_najgorsze-co-mo%C5%BCe-wydarzy%C4%87-si%C4%99-przed-black-activity-7531328252397641729-z476",
-     "texto": "Najgorsze co może wydarzyć się przed Black Friday to...? 👀"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Conversion",
-     "data": "2026-11-19",
-     "url": "https://www.linkedin.com/posts/conversion_200-roi-w-3-miesi%C4%85ce-najpierw-sprawd%C5%BA-activity-7529170461386252288-Y-9V",
-     "texto": "🎬 200% ROI w 3 miesiące? Najpierw sprawdź, czy Twoje dane mówią prawdę\n\n200% ROI, automatyzacja i dane zmieniające sposób działania marketingu i sprzedaży — jak"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Conversion",
-     "data": "2026-11-18",
-     "url": "https://www.linkedin.com/posts/conversion_zobacz-jak-datamate-poradzi%C5%82-sobie-z-pytaniem-activity-7528790145723133952-y4gA",
-     "texto": "Zobacz jak datamate poradził sobie z pytaniem o generowanie sprzedaży przez kanały marketingowe. Ciąg dalszy w komentarzu 👀 \n🔸 Masz pytanie? Wejdź na https://da"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Mutato",
-     "data": "2026-11-13",
-     "url": "https://www.linkedin.com/posts/mutato_hist%C3%B3rias-que-movem-o-brasil-merecem-ser-activity-7526981124267470849-ETAG",
-     "texto": "Histórias que movem o Brasil merecem ser contadas.\n\nÉ a partir dessa ideia que nasce Gigantes pela Natureza, projeto especial de conteúdo desenvolvido para Toyo"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Mutato",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/mutato_mutato-kerastase-loreal-activity-7531056706248871936-IDwj",
-     "texto": "Levar Kérastase para a rua pede mais do que visibilidade, pede presença.\n\nPara o lançamento de Gloss Absolu, a estratégia da Mutato foi ocupar o coração da Fari"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Mutato",
-     "data": "2026-10-28",
-     "url": "https://www.linkedin.com/posts/mutato_ao-lado-de-toyota-do-brasil-ipiranga-e-jack-activity-7521326738530791425-rkwf",
-     "texto": "Ao lado de Toyota do Brasil, Ipiranga e Jack Daniel’s (Brown-Forman), a gente pensa e cria para aproximar as marcas da cultura brasileira. São parcerias com mui"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Druid",
-     "data": "2026-09-23",
-     "url": "https://www.linkedin.com/posts/druid_sportsbusiness-sportsmarketing-fandata-activity-7508469281978744832-HBnT",
-     "texto": "GRACIAS POR DESCUBRIRNOS EL TICKETING 🤣 \n\nFlipamos cuando todavía hay quien cree que un segmento es:\n“Fans que han comprado una entrada.”\nEnhorabuena. Has descu"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Druid",
-     "data": "2026-06-25",
-     "url": "https://www.linkedin.com/posts/druid_sin-relaci%C3%B3n-no-hay-transacci%C3%B3n-cuando-el-activity-7475852346267320320-hiak",
-     "texto": "⚡ ⚡ 𝗡𝗢 𝗠𝗜𝗗𝗔𝗦 𝗔 𝗧𝗨𝗦 𝗙𝗔𝗡𝗦 𝗦𝗢𝗟𝗢 𝗣𝗢𝗥 𝗟𝗔𝗦 𝗖𝗢𝗠𝗣𝗥𝗔𝗦 ⚡ ⚡ \n\nToda la entrevista de 2Playbook a nuestro CEO Pedro Parellada Olarte y a Rubén Recio Nogales VP Business Deve"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Druid",
-     "data": "2026-06-18",
-     "url": "https://www.linkedin.com/posts/druid_sportssummitmadrid-fanengagement-sportsbusiness-activity-7473285624985378822-h5gq",
-     "texto": "Nos vemos hoy en Sports Summit Madrid con Rubén Recio Nogales de Como® (acquired by Global Payments GPN:NYSE) y 2Playbook.\n\nHablaremos solo de una cosa, hablare"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Tátil Design",
-     "data": "2026-11-16",
-     "url": "https://www.linkedin.com/posts/tatil_runners-life-photographer-on-instagram-activity-7528147363027357696-Vwfo",
-     "texto": "From the first stride to the finish line, the energy was unmatched! 🏃🏽‍♂️🏃🏽‍♀️💙\nTake in the sights from above and relive the energy of the TATIL Run DATT 5K. Th"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Tátil Design",
-     "data": "2026-11-16",
-     "url": "https://www.linkedin.com/posts/tatil_cnc3-television-trinidad-and-tobago-activity-7528134465890689024-60Tn",
-     "texto": "What an incredible day for fitness, community, and healthy living! Congratulations to Tafari Waldron and Nyla Kerr for leading the field at the TATIL Run DATT 5"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Tátil Design",
-     "data": "2026-10-16",
-     "url": "https://www.linkedin.com/posts/tatil_tatil-tatillife-financialsecurity-activity-7516858795172450307-dXdp",
-     "texto": "TATIL Life proudly celebrated the opening of its newest agency, Black Tree Investments, with a ribbon-cutting ceremony in Chaguanas on September 18.\n\nThe new ag"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-18",
-     "url": "https://www.linkedin.com/posts/fabiorios_briviagroup-salesforce-worldtoursp-activity-7528827762619420672-mubh",
-     "texto": "Estamos no AIforce World Tour São Paulo.\n\nTem AIforce, Agentforce, Customer 360, Data 360 e muito caso real de IA em produção. É o tipo de conversa que a gente "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-03",
-     "url": "https://www.linkedin.com/posts/filipe-faro-0428a886_mat%C3%A9ria-especialistas-alertam-dado-sem-activity-7523452262690799616-UlBB",
-     "texto": "Algumas conversas não terminam quando o evento acaba. \n\nEm agosto, no NM2Business, em Fortaleza, dividi o palco com o Matheus Auharek, da MRV&CO, para falar sob"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Binder",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/binder_bindercomunicaaexaeto-ppa2026-profissionaisdoano-activity-7531419907750699009-Sk3v",
-     "texto": "Nossa campanha “Tá Pago, Tá em Dia”, criada para a Prefeitura de São José dos Campos em parceria com a Maori Filmes, foi destaque no Link Vanguarda como finalis"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Binder",
-     "data": "2026-11-13",
-     "url": "https://www.linkedin.com/posts/binder_o-nome-de-uma-marca-pode-nascer-de-uma-assinatura-activity-7527075091852189697-rfKg",
-     "texto": "O nome de uma marca pode nascer de uma assinatura pessoal, mas sua consolidação acontece na relação diária com o mercado, os clientes e as pessoas.\n\nA Binder na"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-09-18",
-     "url": "https://www.linkedin.com/posts/briviagroup_dreamforce-salesforce-ai-activity-7506758585109073920-QY6F",
-     "texto": "Direto do Dreamforce 2026, mais uma reflexão de Filipe Faro.\n\nE se o futuro da experiência digital tiver menos interfaces, e não mais?\nEntre os anúncios do Drea"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Binder",
-     "data": "2026-11-10",
-     "url": "https://www.linkedin.com/posts/binder_grandes-hist%C3%B3rias-raramente-come%C3%A7am-em-salas-activity-7525955560459083778-Ep9G",
-     "texto": "Grandes histórias raramente começam em salas de reunião convencionais. A trajetória da Binder começou na sala de um posto de combustíveis entre o Flamengo e o C"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Ampfy",
-     "data": "2026-05-25",
-     "url": "https://www.linkedin.com/posts/ampfy_a-luciana-b%C3%BClau-chega-%C3%A0-ampfy-como-nossa-activity-7464702993557491713-XrlB",
-     "texto": "A Luciana Bülau chega à AMPFY como nossa CSO para liderar o time de estratégia e planejamento. São mais de 20 anos em posições executivas de marca e negócio, pa"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-11",
-     "url": "https://www.linkedin.com/posts/meioemensagem_profissionais-makerting-publicidadeepropaganda-activity-7520947427378348032-kljE",
-     "texto": "A AMPFY anuncia que Fred Siqueira, cofundador da agência, reassume como chief creative officer (CCO).\n\nJá Eduardo Battiston, Aline Botelho e Duda Hernández assu"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Ampfy",
-     "data": "2026-06-11",
-     "url": "https://www.linkedin.com/posts/ampfy_temos-novidade-no-time-%C3%A9-com-muita-alegria-activity-7470944710489198594-10IX",
-     "texto": "Temos novidade no time! 💛\n\nÉ com muita alegria que anunciamos o retorno de Denise Vieira à AMPFY, agora como head de negócios e diretora executiva.\n\nDenise assu"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/crispinbr_raquel-mattar-e-bruno-pirim-rodrigues-chegam-activity-7531416576059904000-lU2e",
-     "texto": "Raquel Mattar e Bruno Pirim Rodrigues chegam à Crispin para liderar a estratégia da operação da 99!\n\nCom trajetórias em grandes agências e marcas, os dois refor"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/crispinbr_que-a-r%C3%AA-faz-diferen%C3%A7a-numa-campanha-a-gente-activity-7531350853279019008-Rp-a",
-     "texto": "Que a Rê faz diferença numa campanha, a gente já sabe. Vem ver a diferença que ela faz na vida de quem trabalha com ela.\n\nNossa VP de Estratégia e Dados, Renata"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/crispinbr_clioentertainment-awards-botaetoguaranaer-activity-7530981856142368768-GrM0",
-     "texto": "É com muito orgulho que começamos a semana anunciando mais uma grande conquista: ganhamos uma PRATA no Clio Entertainment, The Clios! 🥈🏆\n\nFomos reconhecidos com"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Webcompany",
-     "data": "2026-11-02",
-     "url": "https://www.linkedin.com/posts/webcompany_a-meta-anunciou-em-outubro-um-conjunto-de-activity-7522990983752376320-YiI0",
-     "texto": "A Meta anunciou em outubro um conjunto de novidades para anunciantes de marca. A que chamou mais atenção foi a venda do primeiro anúncio do feed do Facebook par"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Webcompany",
-     "data": "2026-10-19",
-     "url": "https://www.linkedin.com/posts/webcompany_o-que-muda-na-verba-de-publicidade-para-2027-activity-7517918413508235264-xFcW",
-     "texto": "O orçamento de publicidade de 2027 deve ser muito parecido com o de 2026.\n\nA edição mais recente do relatório Global Ad Spend Forecast, da WARC Media, projeta a"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Webcompany",
-     "data": "2026-06-03",
-     "url": "https://www.linkedin.com/posts/webcompany_a-publicidade-digital-acaba-de-atingir-um-activity-7467908158250848257-v875",
-     "texto": "A publicidade digital acaba de atingir um novo marco histórico.\n\nEm 2025, o setor movimentou quase US$ 300 bilhões, segundo o relatório mais recente da IAB. Um "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Droga5 São Paulo",
-     "data": "2026-11-17",
-     "url": "https://www.linkedin.com/posts/droga5sp_uma-guiding-star-que-a-gente-j%C3%A1-conhece-bem-activity-7528567692270735360-ZjJw",
-     "texto": "Uma Guiding Star que a gente já conhece bem por aqui. ⭐💙\n \nLuiza Vidal, da Droga5, está concorrendo a Designer do Ano, entre jovens talentos que estão movimenta"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Droga5 São Paulo",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/droga5sp_na-previs%C3%A3o-do-tempo-de-hoje-vem-se-aproximando-activity-7531455517924388864-josG",
-     "texto": "Na previsão do tempo de hoje: vem se aproximando uma Brisa no Caboré.\n \nA Brisa Vicente, nossa Co-CEO, está indicada na categoria de Profissional de Atendimento"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Droga5 São Paulo",
-     "data": "2026-11-18",
-     "url": "https://www.linkedin.com/posts/droga5sp_omo-lavou-a-roupa-da-odete-roitman-e-ainda-activity-7528931307020513280-Iozw",
-     "texto": "OMO lavou a roupa da Odete Roitman e ainda levou o PPA. 💙\n \nUma ideia que entrou em uma das conversas mais brasileiras do ano, no timing e do jeito certo. “Quem"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-17",
-     "url": "https://www.linkedin.com/posts/programareclame_semtempoparafazdeconta-fazacontecerfazanhanguera-ugcPost-7527019128566476800-S02e",
-     "texto": "E se a melhor maneira de falar de educação fosse começar falando de cultura?\n\nConfira como a Cogna Educação e a Ogilvy exploraram a música e a cultura pop para "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Ogilvy Brasil",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/ogilvybrasil_ogilvy-effiebrasil-effectivecreativity-activity-7531061070904512516-F_rU",
-     "texto": "Criatividade que gera resultados. E faz história. ❤️\nA Ogilvy está entre as três agências mais premiadas da história do Effie Awards Brasil!\nCom 580 pontos acum"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Ogilvy Brasil",
-     "data": "2026-11-18",
-     "url": "https://www.linkedin.com/posts/ogilvybrasil_antes-da-chegada-de-uma-nova-ambienta%C3%A7%C3%A3o-activity-7528897156125171712-9dJ7",
-     "texto": "Antes da chegada de uma nova ambientação inspirada em Miami, a comunidade gamer quer fazer uma última volta por LS (Los Santos), cidade virtual de inspiração ca"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Fields",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/fields360_estamos-contratando-activity-7531000356898500608-rOM0",
-     "texto": ""
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Fields",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/fields360_estamos-contratando-activity-7531000170004750337-cURy",
-     "texto": ""
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Fields",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/fields360_estamos-contratando-activity-7531000017055207424-VqIk",
-     "texto": ""
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "WT.AG",
-     "data": "2026-05-20",
-     "url": "https://www.linkedin.com/posts/wt-ag_vbet-wtag-socialfirst-activity-7462940029112352769-zepq",
-     "texto": "A VBET agora é social first na WT.AG e isso muda o jogo.\nÉ sobre criar conversa, construir desejo e transformar cada interação em decisão.\nVamos unir cultura, e"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "WT.AG",
-     "data": "2026-05-24",
-     "url": "https://www.linkedin.com/posts/wt-ag_novo-projeto-de-conte%C3%BAdo-saindo-do-forno-activity-7464412207028690944-XpjU",
-     "texto": "Novo projeto de conteúdo saindo do forno para Keeta entregadores. Uma ação que entende a correria de quem faz o corre das ruas representado pelo freestyle Victo"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "WT.AG",
-     "data": "2026-04-02",
-     "url": "https://www.linkedin.com/posts/wt-ag_keeta-socialfirst-lusofonos-activity-7445594614939648000-PNCI",
-     "texto": "WT.AG TÁ KEE TA! 🏆✨\n\nEstreamos com 6 troféus este ano no Prêmio Lusófonos da Criatividade com @entregadoreskeeta!\nForam 3 Grand Prix, 1 Ouro e 2 Bronzes que pro"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Propeg",
-     "data": "2026-11-23",
-     "url": "https://www.linkedin.com/posts/propeg_renato-duo-%C3%A9-o-novo-diretor-de-planejamento-activity-7530621770454753281-Pkvz",
-     "texto": "Renato Duo é o novo diretor de Planejamento da Propeg!\n\nSua chegada faz parte do movimento de fortalecimento da área, liderado pelo CSO,  Fernand Alphen, que de"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Propeg",
-     "data": "2026-11-19",
-     "url": "https://www.linkedin.com/posts/propeg_boas-parcerias-come%C3%A7am-com-boas-pr%C3%A1ticas-activity-7529259257930653696-ePnl",
-     "texto": "Boas parcerias começam com boas práticas. A Propeg acredita nisso e criou uma HQ para contar essa história. Para conhecer nosso Programa de Integridade, é só vi"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Propeg",
-     "data": "2026-11-18",
-     "url": "https://www.linkedin.com/posts/propeg_ontem-%C3%A0-noite-conquistamos-nosso-primeiro-activity-7528833276950495232-2VCt",
-     "texto": "Ontem à noite conquistamos nosso primeiro troféu na região Sudeste – Capitais do PPA! Agora, devidamente lustrado, ele vai ficar ao lado de tantos outros que re"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Estação Indoor",
-     "data": "2026-11-17",
-     "url": "https://www.linkedin.com/posts/estacaoindoor_futebol-paulistao-marketingesportivo-activity-7528563000165777409-Cy4c",
-     "texto": "A FPF aumentou o intervalo do Paulistão 2027 de 15 para 18 minutos, mas a mudança vai muito além do descanso dos atletas.\n\nEsses três minutos extras representam"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Estação Indoor",
-     "data": "2026-11-04",
-     "url": "https://www.linkedin.com/posts/estacaoindoor_seo-aeo-marketingdeconteudo-activity-7523852081724751873-uQFp",
-     "texto": "Estar no topo do Google já não garante que seu cliente vai te encontrar.\n\nCom a ascensão dos motores de resposta por inteligência artificial, a dinâmica da busc"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Estação Indoor",
-     "data": "2026-11-11",
-     "url": "https://www.linkedin.com/posts/estacaoindoor_inteligenciaartificial-estrategiadenegocios-activity-7526389074274697216-U3C8",
-     "texto": "Seu próximo cliente pode ser um algoritmo programado para comprar sem emoção.\n\nA inteligência artificial deixou de ser pauta de inovação distante para virar int"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/agenciatalent_o-jornal-propmark-destacou-os-15-profissionais-activity-7531027559342366720-YZn7",
-     "texto": "O jornal Propmark destacou os 15 profissionais mais influentes do marketing brasileiro, responsáveis por estratégias que influenciam a confiança dos consumidore"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-16",
-     "url": "https://www.linkedin.com/posts/agenciatalent_do-p%C3%A3o-franc%C3%AAs-ao-p%C3%A3o-de-queijo-mineiro-activity-7528137477627342848-ix1-",
-     "texto": "Do pão francês ao pão de queijo mineiro, passando pelo pão delícia baiano e pela broa de milho, um hábito de consumo tão presente na rotina dos brasileiros foi "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-19",
-     "url": "https://www.linkedin.com/posts/agenciatalent_no-novo-epis%C3%B3dio-do-podcast-a-ideia-do-meio-activity-7529257475703775232-VK7_",
-     "texto": "No novo episódio do podcast A Ideia, do Meio & Mensagem, Lica Bueno, presidente da Talent, conversa com a jornalista Isabella Lessa sobre a trajetória que a tro"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Cubo",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/cubo-network_ainwater-capta-us-13-milh%C3%A3o-e-mira-expans%C3%A3o-activity-7531384734229258240-WfAu",
-     "texto": "A AInwater, startup do Cubo Itaú especializada em IA para monitorar, controlar e otimizar operações de tratamento de água e fluidos industriais, captou US$ 1,3 "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-20",
-     "url": "https://www.linkedin.com/posts/activity-7529565651699601408-Gcvu",
-     "texto": "Ouça o que o CEO do Cubo Itaú, Paulo Costa, tem a dizer sobre a importância de levar ao mercado estudos e iniciativas como o nosso observatório de comportamento"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Cubo",
-     "data": "2026-11-19",
-     "url": "https://www.linkedin.com/posts/cubo-network_conex%C3%B5es-dentro-do-cubo-activity-7529299318814433280-8bJL",
-     "texto": "Qual conexão dentro do Cubo Itaú mais destravou algo para a sua empresa? \n\nFizemos essa pergunta aos AI Native Founders, founders que constroem startups baseada"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-12",
-     "url": "https://www.linkedin.com/posts/bold-brasil_bold-diadaqualidade-qualidade-activity-7526618294766931968-aHbk",
-     "texto": "Qualidade se comprova. Nos testes, nos detalhes e em cada entrega. 💙\n\nDesde o início da nossa história, ela faz parte da essência BOLD. E neste 12 de novembro, "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-13",
-     "url": "https://www.linkedin.com/posts/bold-brasil_bold-bold25anos-nossahistaejria-activity-7526965387070947328-gJ4v",
-     "texto": "Era só ajustar a luz, mas o chat levou o “volta pro início” a sério. 😂💙\n\nE foi nesse começo simples, no fundo da casa dos nossos fundadores, que nasceu uma hist"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-11",
-     "url": "https://www.linkedin.com/posts/bold-brasil_bold-ipiranga-qualidade-activity-7526325304093515776-BJxj",
-     "texto": "Ontem (10/11), recebemos a equipe do Ipiranga em nossa matriz, em Jaraguá do Sul (SC), para conhecer de perto os padrões e processos que garantem a qualidade do"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "EssenceMediacom Brasil",
-     "data": "2025-12-09",
-     "url": "https://www.linkedin.com/posts/essencemediacombr_vem-a%C3%AD-a-primeira-edi%C3%A7%C3%A3o-do-nosso-programa-activity-7404221806187999232-LJ4o",
-     "texto": "Vem aí a primeira edição do nosso Programa de Estágio 2026, exclusivo para pessoas pretas e pardas, criado para desenvolver novos talentos e incentivar o aprend"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-10-05",
-     "url": "https://www.linkedin.com/posts/daniela-pinto-p%C3%A9rez-37454752_va-y-viene-activity-7512867991030779905-vXaW",
-     "texto": "Hace unos días cumplimos un mes al aire con Va y Viene en el canal de Youtube EnlaKsa 🤩\n\nEl punto de partida fue un archivo enorme: más de mil clips de Daniel F"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-08-14",
-     "url": "https://www.linkedin.com/posts/daniela-pinto-p%C3%A9rez-37454752_marketingestrataezgico-gestiaejndemarcas-ugcPost-7494028617383866368-UChX",
-     "texto": "Alineamos la estrategia con las ganas de resolver un problema y pasó algo irresistible. \n\nHace un tiempo noté un detalle recurrente en el podcast Algo Va a Sali"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Lua",
-     "data": "2026-07-22",
-     "url": "https://www.linkedin.com/posts/agencialua_estrategiadecomunicacion-marketingdigital-activity-7485781907369005056-6hga",
-     "texto": "El primer capítulo de Algo va a Salir fue un éxito en reproducciones y en Lua Marketing digital estuvimos a cargo de la gestión de prensa. Tenemos que confesar "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-10-05",
-     "url": "https://www.linkedin.com/posts/grupo-in-press_publicaffairs-leituraderisco-eleiaexaeles2026-activity-7512862219685191680-i-Rk",
-     "texto": "O Brasil que sai das urnas já aponta os primeiros sinais do próximo ciclo político. 🗳️\n\nPara direcionar empresas na leitura desse contexto, os especialistas da "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-10-05",
-     "url": "https://www.linkedin.com/posts/grupo-in-press_publicaffairs-leituraderisco-eleiaexaeles2026-activity-7512862219685191680-i-Rk",
-     "texto": "O Brasil que sai das urnas já aponta os primeiros sinais do próximo ciclo político. 🗳️\n\nPara direcionar empresas na leitura desse contexto, os especialistas da "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-09-14",
-     "url": "https://www.linkedin.com/posts/golinketchumbrasil_activity-7505281030338011136-qYM9",
-     "texto": ""
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "VaynerMedia",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/vaynermedia_sending-strength-to-all-my-fellow-smms-who-activity-7531461745857581056-hVCd",
-     "texto": "Sending strength to all my fellow SMM’s who have to explain their job for the 30th time. 💪😉"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "VaynerMedia",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/vaynermedia_before-you-log-off-for-the-holiday-activity-7531451814202748946-nwUE",
-     "texto": "Before you log off for the holiday...👀🦃"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "VaynerMedia",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/vaynermedia_before-you-log-off-to-eat-turkey-watch-activity-7531445256056131584-vS2N",
-     "texto": "Before you log off to eat turkey & watch the parade…🦃👇\n\nMake sure you know everything that happened in the marketing world during this short but jam-packed week"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Sociallyin",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/sociallyin_instagram-instagramtv-videomarketing-activity-7531002331988099072-6dPc",
-     "texto": "Instagram is testing 90-minute videos and a TV app, after Adam Mosseri said for a long time he was against long-form. Keith's take: long form is growing, but sh"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Sociallyin",
-     "data": "2026-11-23",
-     "url": "https://www.linkedin.com/posts/sociallyin_aimarketing-cocacola-holidayads-activity-7530626665903730689-TNzP",
-     "texto": "People used to be mad about Coca-Cola's AI Christmas ad. Now they're waiting for it. 🎄 Keith thinks that in two years most people won't be able to tell AI from "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Huge",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/hugeinc_every-app-you-add-to-your-shopify-store-extends-activity-7531022376386613248-PvIR",
-     "texto": "Every app you add to your Shopify store extends your circle of trust to its developer. With over 30,000 apps in the App Store, the question isn’t whether to use"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Sociallyin",
-     "data": "2026-11-22",
-     "url": "https://www.linkedin.com/posts/sociallyin_seriously-social-podcast-human-made-activity-7530336126067191809--R-H",
-     "texto": "Hot take: the brands that win won't be the ones using the most AI. They'll be the ones that can prove a human made it.\n\nOur CEO Keith Kakadia is the biggest AI "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Huge",
-     "data": "2026-11-20",
-     "url": "https://www.linkedin.com/posts/hugeinc_were-back-london-last-night-we-brought-activity-7529569298147655681-oF4b",
-     "texto": "We're back, London. \n\nLast night we brought clients and partners together at our Shoreditch office for a conversation about what it really takes to build brands"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/mfunk1000_adobe-partner-huge-named-a-semrush-enterprise-activity-7530652050867712000-lDDs",
-     "texto": "The question, “Where do we rank?” is so 2023.\nThe new question today is, “What do the robots say about us?”\nAgents now shape how people discover brands, content"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Martin Agency",
-     "data": "2026-11-04",
-     "url": "https://www.linkedin.com/posts/themartinagency_every-year-finding-a-meaningful-gift-feels-activity-7523757140046495744-OzLY",
-     "texto": "Every year, finding a meaningful gift feels like an epic quest. So, we made one. Complete with treacherous terrain, questionable gifts, a mythical creature, and"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "",
-     "data": "2026-10-06",
-     "url": "https://www.linkedin.com/posts/decision-marketing-magazine_agency-strategists-move-up-food-chain-to-activity-7513175141913243648-_QxT",
-     "texto": "WARC Lena Roland Stacy Taffet Nikita W. Elizabeth Paul\n\nhttps://lnkd.in/eZbW-nZK"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Martin Agency",
-     "data": "2026-10-16",
-     "url": "https://www.linkedin.com/posts/themartinagency_newfest-has-always-been-about-joyful-rebellion-activity-7516928588097622017-NXDU",
-     "texto": "NewFest has always been about joyful rebellion, because queer films do more than entertain us. They make us feel something, and then they make us do something. "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "FleishmanHillard",
-     "data": "2026-11-23",
-     "url": "https://www.linkedin.com/posts/fleishmanhillard_thecioroom-thecioroomnewyork-visionawards-activity-7530623989166223360-sIvl",
-     "texto": "👏👏👏 EJ Kim"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "FleishmanHillard",
-     "data": "2026-11-19",
-     "url": "https://www.linkedin.com/posts/fleishmanhillard_whats-prs-role-in-ai-powered-search-activity-7529259650475589633-xfKr",
-     "texto": "“Owned amplified by earned is a signal machines can’t ignore.”\n\nAI-powered search is changing how people encounter brand information and earned media gives owne"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "FleishmanHillard",
-     "data": "2026-11-19",
-     "url": "https://www.linkedin.com/posts/fleishmanhillard_prweek-healthinfluencer30-activity-7529172047655030784-OaOe",
-     "texto": "👏 👏 👏"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Golin",
-     "data": "2026-06-10",
-     "url": "https://www.linkedin.com/posts/golin_a-new-agency-for-a-new-era-golin-is-now-activity-7470482426063138819-zirs",
-     "texto": "A new agency for a new era. Golin is now Golin Ketchum, and our new channel is where the best is yet to come.  \n \nAfter years of incredible work, stories, and m"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Golin",
-     "data": "2026-06-11",
-     "url": "https://www.linkedin.com/posts/golin_a-new-agency-for-a-new-era-golin-is-now-activity-7470482426063138819-zirs",
-     "texto": "A new agency for a new era. Golin is now Golin Ketchum, and our new channel is where the best is yet to come.  \n \nAfter years of incredible work, stories, and m"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Golin",
-     "data": "2026-06-03",
-     "url": "https://www.linkedin.com/posts/golin_this-summer-theres-one-moment-that-is-bringing-activity-7467954834575466496-REj2",
-     "texto": "This summer, there’s one moment that is bringing consumers, brands, and the world together. Soccer is on everyone’s mind. And the brands that will win aren't go"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Jellyfish",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/jellyfishglobal_black-friday-week-is-here-and-there-is-activity-7531375208168095744-FIN0",
-     "texto": "Black Friday week is here – and there is no denying that the way consumers discover and research products has changed significantly since last year.\n\nGenerative"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Jellyfish",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/jellyfishglobal_what-does-it-take-to-make-your-brand-the-activity-7531004386966335489-Dc2S",
-     "texto": "What does it take to make your brand the answer AI recommends, not just another search result?  🛒 Drawing from 138,000+ citations in our latest Retail AI Citati"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Tinuiti",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/tinuiti_we-just-gave-it-a-name-weve-been-doing-activity-7531035959711166464-SMYF",
-     "texto": "We just gave it a name. We've been doing it for years.\n\nAdaptive Commerce is using what people actually buy to make all of marketing smarter, then using the res"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Jellyfish",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/jellyfishglobal_kimerajellyfishxnetlfixawardwins-activity-7531280813838241792-Cm00",
-     "texto": "Another huge awards run for Jellyfish and Netflix!\n\nWe’ve picked up a staggering 12 wins across The Clios and the Festival Internacional El Ojo de Iberoamérica "
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Tinuiti",
-     "data": "2026-11-25",
-     "url": "https://www.linkedin.com/posts/tinuiti_at-the-end-of-the-day-most-of-us-do-what-activity-7531401521452941312-Pjzy",
-     "texto": "At the end of the day, most of us do what we do because of the people we get to do it with. 🧡\n\nAnd we're pretty thankful for ours.\n\nFrom partnering with Love Fo"
-    },
-    {
-     "fonte": "apify",
-     "tipo": "empresa",
-     "agencia": "Tinuiti",
-     "data": "2026-11-23",
-     "url": "https://www.linkedin.com/posts/tinuiti_39-of-shoppers-have-used-or-are-interested-activity-7530662276790464512-v1-T",
-     "texto": "39% of shoppers have used or are interested in using GLP-1 medications, and it's impacting how food and beverage products are being consumed.\n\nAcross GLP-1 user"
-    },
-    {
-     "fonte": "coresignal",
-     "tipo": "empresa",
-     "agencia": "Moses Inc.",
-     "data": "2026-11-24",
-     "url": "https://es.linkedin.com/posts/emprendevalor_factoring-factoringconelestado-mype-activity-7529417360034713600-tzyw",
-     "texto": ""
-    },
-    {
-     "fonte": "coresignal",
-     "tipo": "empresa",
-     "agencia": "Moses Inc.",
-     "data": "2026-11-23",
-     "url": "https://www.linkedin.com/posts/two-cops-one-donut_twocopsonedonut-therealpredhunters-onlinesafety-activity-7527476220599422976-juqP",
-     "texto": ""
-    },
-    {
-     "fonte": "coresignal",
-     "tipo": "empresa",
-     "agencia": "Moses Inc.",
-     "data": "2026-11-23",
-     "url": "https://www.linkedin.com/posts/avnation-tv_ucweeklynews-activity-7529492571924877312-qqRk",
-     "texto": ""
-    },
-    {
-     "fonte": "coresignal",
-     "tipo": "funcionario",
-     "agencia": "Moses Inc.",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/jerryvasilatos_tune-in-live-as-chicago-corner-streams-northside-activity-7527500409603665920-t_gA",
-     "texto": ""
-    },
-    {
-     "fonte": "coresignal",
-     "tipo": "funcionario",
-     "agencia": "Moses Inc.",
-     "data": "2026-11-24",
-     "url": "https://www.linkedin.com/posts/fowlerinternational_ecommerce-gamification-kauche-activity-7529741014824013824-ngF7",
-     "texto": ""
-    },
-    {
-     "fonte": "coresignal",
-     "tipo": "funcionario",
-     "agencia": "Moses Inc.",
-     "data": "2026-11-24",
-     "url": "https://vn.linkedin.com/posts/kieuthangdigital_kh%C6%A1i-th%C3%B4ng-%C4%91i%E1%BB%83m-ngh%E1%BA%BDn-t%C4%83ng-tr%C6%B0%E1%BB%9Fng-e-commerce-activity-7530784835280404481-dgyw",
-     "texto": ""
-    }
-   ],
    "so_apify": 1,
    "so_coresignal": 0,
    "nas_duas": 0,
@@ -5536,6 +4532,1114 @@
    "so_coresignal": 0,
    "nas_duas": 0,
    "paginas_linkedin_achadas": 183
+  },
+  {
+   "quando": "2026-11-26T14:05:17Z",
+   "agencias_na_lista": 1021,
+   "apify": {
+    "empresas": {
+     "http": 201,
+     "paginas": 150,
+     "posts": 31,
+     "agencias_com_post": 11
+    },
+    "amostra": [
+     {
+      "type": "post",
+      "id": "7455405649200459776",
+      "linkedinUrl": "https://www.linkedin.com/posts/yoghurtdigital_ecommerce-paidmedia-attribution-activity-7455405649200459776-99TZ",
+      "content": "Some of our team were at the Pinterest x Triple Whale Advertiser Summit last week - and a few things stuck.\n\nPeople make 35,000 decisions a day. We're not competing for attention. We're competing inside an already-overwhelmed decision-making process.\n\nThat reframe matters for how we think about channels like Pinterest. It's a platform where users come to actively discover, save, and form intent - not passively consume. If you're only measuring who clicked last, you're crediting the closer and ignoring everyone who warmed the room.\n\nThe Triple Whale session reinforced something we believe deeply: better measurement isn't a reporting upgrade. It's a budget confidence tool. When you can see the full journey, you make better calls about where to spend.\n\nFew things we're taking away:\n- Creative is performance. Stopping the scroll is now a media metric.\n- Last-click attribution actively misrepresents upper-funnel contribution\n- Measurement clarity = scale confidence\n\nThanks to Julia Dolgodvorova, Bill Ready, Jeroen De Koninck, Natasa Tintor, Adam Saunders, Steven DSouza, Katie Lin, Patrick Falson and the broader Pinterest and Triple Whale teams for a genuinely useful session. Both partners doing strong work on closing the attribution gap for eCommerce 🙌 \n\n#ecommerce #paidmedia #attribution",
+      "contentAttributes": [
+       {
+        "start": 29,
+        "length": 9,
+        "type": "COMPANY_NAME",
+        "hyperlink": "https://www.linkedin.com/company/1124131/",
+        "textLink": null,
+        "company": {
+         "id": "1124131",
+         "name": "Pinterest",
+         "linkedinUrl": "https://www.linkedin.com/company/1124131/"
+        }
+       },
+       {
+        "start": 41,
+        "length": 12,
+        "type": "COMPANY_NAME",
+        "hyperlink": "https://www.linkedin.com/company/74944364/",
+        "textLink": null,
+        "company": {
+         "id": "74944364",
+         "name": "Triple Whale",
+         "linkedinUrl": "https://www.linkedin.com/company/74944364/"
+        }
+       },
+       {
+        "start": 986,
+        "length": 18,
+        "type": "PROFILE_MENTION",
+        "hyperlink": "https://www.linkedin.com/in/ACoAAAhkgBkB627vYfVL5_a6jwfGj9Szdvjf3sU",
+        "textLink": null,
+        "profile": {
+         "id": "ACoAAAhkgBkB627vYfVL5_a6jwfGj9Szdvjf3sU",
+         "firstName": "Julia",
+         "lastName": "Dolgodvorova",
+         "linkedinUrl": "https://www.linkedin.com/in/ACoAAAhkgBkB627vYfVL5_a6jwfGj9Szdvjf3sU",
+         "publicIdentifier": null
+        }
+       },
+       {
+        "start": 1006,
+        "length": 10,
+        "type": "PROFILE_MENTION",
+        "hyperlink": "https://www.linkedin.com/in/ACoAAAH83VUB66PKgWvNVtlH04wyCE7PfLjmOBs",
+        "textLink": null,
+        "profile": {
+         "id": "ACoAAAH83VUB66PKgWvNVtlH04wyCE7PfLjmOBs",
+         "firstName": "Bill",
+         "lastName": "Ready",
+         "linkedinUrl": "https://www.linkedin.com/in/ACoAAAH83VUB66PKgWvNVtlH04wyCE7PfLjmOBs",
+         "publicIdentifier": null
+        }
+       },
+       {
+        "start": 1018,
+        "length": 17,
+        "type": "PROFILE_MENTION",
+        "hyperlink": "https://www.linkedin.com/in/ACoAAA5axOwBTtNOV7-zlFt5bZ2lqyIgfXgqQGM",
+        "textLink": null,
+        "profile": {
+         "id": "ACoAAA5axOwBTtNOV7-zlFt5bZ2lqyIgfXgqQGM",
+         "firstName": "Jeroen",
+         "lastName": "De Koninck",
+         "linkedinUrl": "https://www.linkedin.com/in/ACoAAA5axOwBTtNOV7-zlFt5bZ2lqyIgfXgqQGM",
+         "publicIdentifier": null
+        }
+       },
+       {
+        "start": 1037,
+        "length": 13,
+        "type": "PROFILE_MENTION",
+        "hyperlink": "https://www.linkedin.com/in/ACoAAAiPCaABg7PQ-961fEsbF6GxEWEVO9Mm6fY",
+        "textLink": null,
+        "profile": {
+         "id": "ACoAAAiPCaABg7PQ-961fEsbF6GxEWEVO9Mm6fY",
+         "firstName": "Natasa",
+         "lastName": "Tintor",
+         "linkedinUrl": "https://www.linkedin.com/in/ACoAAAiPCaABg7PQ-961fEsbF6GxEWEVO9Mm6fY",
+         "publicIdentifier": null
+        }
+       },
+       {
+        "start": 1052,
+        "length": 13,
+        "type": "PROFILE_MENTION",
+        "hyperlink": "https://www.linkedin.com/in/ACoAAAiiupIB1dgi5RHsYEvjqIhSOghXqyprdgY",
+        "textLink": null,
+        "profile": {
+         "id": "ACoAAAiiupIB1dgi5RHsYEvjqIhSOghXqyprdgY",
+         "firstName": "Adam",
+         "lastName": "Saunders",
+         "linkedinUrl": "https://www.linkedin.com/in/ACoAAAiiupIB1dgi5RHsYEvjqIhSOghXqyprdgY",
+         "publicIdentifier": null
+        }
+       },
+       {
+        "start": 1067,
+        "length": 13,
+        "type": "PROFILE_MENTION",
+        "hyperlink": "https://www.linkedin.com/in/ACoAAAGPdMkBD17v7opHqpqwth-rrSr6ujvqjzY",
+        "textLink": null,
+        "profile": {
+         "id": "ACoAAAGPdMkBD17v7opHqpqwth-rrSr6ujvqjzY",
+         "firstName": "Steven",
+         "lastName": "DSouza",
+         "linkedinUrl": "https://www.linkedin.com/in/ACoAAAGPdMkBD17v7opHqpqwth-rrSr6ujvqjzY",
+         "publicIdentifier": null
+        }
+       },
+       {
+        "start": 1082,
+        "length": 9,
+        "type": "PROFILE_MENTION",
+        "hyperlink": "https://www.linkedin.com/in/ACoAABdpT9EBYsBC8YuHRdBP-oFjIJIXIzX7-0U",
+        "textLink": null,
+        "profile": {
+         "id": "ACoAABdpT9EBYsBC8YuHRdBP-oFjIJIXIzX7-0U",
+         "firstName": "Katie",
+         "lastName": "Lin",
+         "linkedinUrl": "https://www.linkedin.com/in/ACoAABdpT9EBYsBC8YuHRdBP-oFjIJIXIzX7-0U",
+         "publicIdentifier": null
+        }
+       },
+       {
+        "start": 1093,
+        "length": 14,
+        "type": "PROFILE_MENTION",
+        "hyperlink": "https://www.linkedin.com/in/ACoAABEqbvYBHI-27xyVkKyVMPGou8S6bX4Zzzc",
+        "textLink": null,
+        "profile": {
+         "id": "ACoAABEqbvYBHI-27xyVkKyVMPGou8S6bX4Zzzc",
+         "firstName": "Patrick",
+         "lastName": "Falson",
+         "linkedinUrl": "https://www.linkedin.com/in/ACoAABEqbvYBHI-27xyVkKyVMPGou8S6bX4Zzzc",
+         "publicIdentifier": null
+        }
+       }
+      ],
+      "author": {
+       "id": "3995805",
+       "universalName": "yoghurtdigital",
+       "publicIdentifier": null,
+       "type": "company",
+       "name": "Yoghurt Digital",
+       "linkedinUrl": "https://www.linkedin.com/company/yoghurtdigital/posts",
+       "info": "5,250 followers",
+       "website": "https://www.yoghurtdigital.com.au/contact",
+       "websiteLabel": "Contact us",
+       "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/C560BAQHu2tPrcmmVbw/company-logo_400_400/company-logo_400_400/0/1631392093451?e=1797465600&v=beta&t=q1702Mv3sqFaS3NBC7ughkhMWjdPeBpPN9kNqyLgR1k",
+        "width": 400,
+        "height": 400
+       },
+       "urn": "3995805",
+       "companyId": "3995805"
+      },
+      "postedAt": {
+       "timestamp": 1777507221508,
+       "date": "2026-04-30T00:00:21.508Z",
+       "postedAgoShort": "6mo",
+       "postedAgoText": "6 months ago • Visible to anyone on or off LinkedIn"
+      },
+      "postImages": [
+       {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQFegm-O7mRTTA/feedshare-shrink_1280/B56Z3br6Z_KUAM-/0/1777507216872?e=1797465600&v=beta&t=W_uuOoqO6_6dZVw4uyMLnRB-Byoxre6zJMiCD0wwEA8",
+        "width": 1280,
+        "height": 1706
+       },
+       {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQHdkl2iHKMLYw/feedshare-shrink_1280/B56Z3br0omKIAM-/0/1777507191880?e=1797465600&v=beta&t=cVCI7cnxN3d1-8MCpNjUBDVNHPEjFi2hd1AhXMVxUy8",
+        "width": 1280,
+        "height": 1706
+       },
+       {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQH8c510lGInxw/feedshare-shrink_1280/B56Z3br67LKYAM-/0/1777507219103?e=1797465600&v=beta&t=0adT6H74Tga9pq5KqiQEobHWwOuWXONmZOSnT_dksTg",
+        "width": 1280,
+        "height": 1706
+       },
+       {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQEYYEs2X8j22w/feedshare-shrink_1280/B56Z3br5NmGoAM-/0/1777507211761?e=1797465600&v=beta&t=6OQfJkbcSPJezLYOcVk9fjIuIs4Bgg2hpYOuP-D0oN0",
+        "width": 1280,
+        "height": 2630
+       },
+       {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQGa_-XJE2WXbw/feedshare-shrink_1280/B56Z3br69oGoAM-/0/1777507219424?e=1797465600&v=beta&t=1UWACTS3sThi2XcElczK4OhwshmvukjXB4k0KFGXWn4",
+        "width": 1280,
+        "height": 1706
+       }
+      ],
+      "socialContent": {
+       "hideShareAction": true,
+       "hideSendAction": true,
+       "trustInterventionBanner": null,
+       "shareUrl": "https://www.linkedin.com/posts/yoghurtdigital_ecommerce-paidmedia-attribution-activity-7455405649200459776-99TZ?"
+      },
+      "comments": [],
+      "header": {
+       "text": null
+      },
+      "entityId": "7455405649200459776",
+      "shareUrn": "urn:li:ugcPost:7455405645811556352",
+      "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7455405645811556352",
+      "engagement": {
+       "id": "7455405645811556352",
+       "likes": 25,
+       "comments": 7,
+       "shares": 2,
+       "reactions": [
+        {
+         "type": "LIKE",
+         "count": 19
+        },
+        {
+         "type": "EMPATHY",
+         "count": 4
+        },
+        {
+         "type": "PRAISE",
+         "count": 2
+        }
+       ]
+      },
+      "reactionIds": [],
+      "commentIds": [],
+      "query": {
+       "sortBy": "date",
+       "page": "1",
+       "targetUrl": "https://www.linkedin.com/company/yoghurtdigital/",
+       "sessionId": "568160ea-f1b8-494d-aa09-f5aa6fb2352e"
+      }
+     }
+    ],
+    "amostra_citacao": [
+     {
+      "type": "post",
+      "id": "7529187525886918659",
+      "linkedinUrl": "https://www.linkedin.com/posts/jacquelinebarreiro_retailmedia-commercemedia-vagas-activity-7529187525886918659-F5GY",
+      "content": "Estamos contratando! 🚀\n\nTenho uma vaga aberta para Especialista de Retail Media no meu time de Commerce Media na Mindgruve.\n\nProcuro alguém que goste de colocar a mão na massa, que entenda de mídia em marketplaces e retail media (Amazon Ads, Mercado Livre, Shopee e afins) e que curta transformar dados em decisões que movem vendas de verdade.\n\nNo dia a dia, você vai cuidar de uma carteira de clientes, planejar e otimizar campanhas, acompanhar performance de perto.\n\nO que pesa para mim:\n- Experiência com campanhas de retail media\n- Olhar analítico e conforto com números\n- Autonomia para tocar suas contas\n- Vontade de aprender e crescer junto com o time\n\nDo meu lado, prometo um time muito bom 👊 ❤️ , clientes relevantes e espaço real para desenvolvimento.\n\nSe fizer sentido para você, se candidata pelo link abaixo. E se conhecer alguém com esse perfil, marca aqui nos comentários ou compartilha. Ajuda muito!\n\n#RetailMedia #CommerceMedia #Vagas #Mindgruve #Marketplace",
+      "contentAttributes": [],
+      "author": {
+       "id": "ACoAAAGvX4MBPEJ4v3mFgGKJHms0l79WAbT0dAI",
+       "universalName": null,
+       "publicIdentifier": "jacquelinebarreiro",
+       "type": "profile",
+       "name": "Jacqueline Barreiro",
+       "linkedinUrl": "https://www.linkedin.com/in/jacquelinebarreiro?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAAAGvX4MBPEJ4v3mFgGKJHms0l79WAbT0dAI",
+       "info": "CMO & CRO | Marketing | E-commerce",
+       "website": null,
+       "websiteLabel": null,
+       "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQH8CK5PHtbGkQ/profile-displayphoto-crop_800_800/B4DaCHv7C8GYAI-/0/1788983884883?e=1797465600&v=beta&t=X0xU94Rj6-7KdBtS0TrybtRshPW3SfVXfZb51bG6uUc",
+        "width": 800,
+        "height": 800
+       },
+       "urn": "28270467",
+       "profileId": "ACoAAAGvX4MBPEJ4v3mFgGKJHms0l79WAbT0dAI"
+      },
+      "postedAt": {
+       "timestamp": 1795098191711,
+       "date": "2026-11-19T14:23:11.711Z",
+       "postedAgoShort": "6d",
+       "postedAgoText": "6 days ago • Visible to anyone on or off LinkedIn"
+      },
+      "postImages": [],
+      "job": {
+       "title": "Media Specialist - Retail Media  ",
+       "linkedinUrl": "https://www.linkedin.com/jobs/view/4476398579/?refId=1CLxQtBWTym7ARSZPN12rg%3D%3D&trackingId=1CLxQtBWTym7ARSZPN12rg%3D%3D",
+       "location": "São Paulo, São Paulo, Brazil",
+       "subtitle": "Job by Mindgruve",
+       "logoUrl": "https://media.licdn.com/dms/image/v2/D560BAQGubZfpY8t8CA/company-logo_400_400/B56Zcz8D7UGQBo-/0/1748923072445/mindgruvemacarta_logo?e=1797465600&v=beta&t=jeyTbZRddIjx3WEcvCLRRhrTvy0ScWrY956AU2VXOMA",
+       "buttonText": "View job",
+       "buttonTip": "View job"
+      },
+      "socialContent": {
+       "trustInterventionBanner": null,
+       "shareUrl": "https://www.linkedin.com/posts/jacquelinebarreiro_retailmedia-commercemedia-vagas-activity-7529187525886918659-F5GY?"
+      },
+      "comments": [],
+      "header": {
+       "text": null
+      },
+      "entityId": "7529187525886918659",
+      "shareUrn": "urn:li:share:7529187525270208512",
+      "shareLinkedinUrl": "https://www.linkedin.com/feed/update/urn:li:share:7529187525270208512",
+      "engagement": {
+       "id": "7529187525886918659",
+       "likes": 7,
+       "comments": 0,
+       "shares": 0,
+       "reactions": [
+        {
+         "type": "LIKE",
+         "count": 6
+        },
+        {
+         "type": "APPRECIATION",
+         "count": 1
+        }
+       ]
+      },
+      "reactions": [],
+      "reactionIds": [],
+      "commentIds": [],
+      "query": {
+       "sortBy": "date",
+       "page": 1,
+       "search": "campanha",
+       "postedLimit": "week",
+       "authorsCompany": [
+        "Moses Inc.",
+        "OH Partners",
+        "RIESTER",
+        "LAVIDGE",
+        "Vitro",
+        "BASIC/DEPT",
+        "Red Door Interactive",
+        "i.d.e.a.",
+        "Mindgruve",
+        "The Shipyard"
+       ]
+      }
+     }
+    ],
+    "citacoes": {
+     "http": 201,
+     "buscas": 60,
+     "posts": 26
+    },
+    "perfis": {
+     "http": 201,
+     "posts": 15
+    },
+    "status": "ok",
+    "custo_usd": 0.2,
+    "campanhas_por_tipo": {
+     "funcionario": 1
+    },
+    "campanhas": 1,
+    "atraso_mediano_h": 42.7
+   },
+   "coresignal": {
+    "ids": 6,
+    "agencias": 150,
+    "amostra": [
+     {
+      "id": 7529417360034713600,
+      "url": "https://es.linkedin.com/posts/emprendevalor_factoring-factoringconelestado-mype-activity-7529417360034713600-tzyw",
+      "company_id": 29769823,
+      "company_source_id": 10890281,
+      "company_name": "EMPRENDE VALOR",
+      "company_url": "https://pe.linkedin.com/company/emprendevalor",
+      "company_headline": null,
+      "company_logo_url": "https://media.licdn.com/dms/image/v2/C4E0BAQGtXy3xx2k1mA/company-logo_100_100/company-logo_100_100/0/1631358330639?e=2147483647&v=beta&t=laQ8janvx9F0EJWrKplROnfXj3anIhfP32DZhMjeexo",
+      "company_posts_count": 0,
+      "follower_count": 1839,
+      "date_published": "2026-11-24",
+      "created_at": "2026-11-24 01:38:53",
+      "deleted": 0,
+      "updated_at": "2026-11-24 01:38:53",
+      "processed_at": "2026-11-25 00:49:46",
+      "received_at": "2026-11-24 01:38:58",
+      "article_body": "¡Emprende Valor en vivo!\n\n“FACTORING CON EL ESTADO”\nEl Estado peruano es uno de los principales compradores del país, pero sus plazos de pago pueden llegar a 30, 60, 90 o incluso 120 días. Frente a esta realidad, el Ministerio de la Producción viene impulsando el factoring con entidades públicas. Pero, ¿cómo va a funcionar este financiamiento?, ¿las entidades públicas pagarán a tiempo?, ¿qué dicen las empresas de factoring?\n\nInvitados\t: Maria Luisa Mori, CEO de Credigob y Fredy Garavito, Co-Founder & COO de Credigob\nEntrevista\t: Pedro Angel Torres Guzmán, Director de EMPRENDE VALOR \nDía\t\t: Lunes 23/11/26\nHora :\n•\tLima, Perú : 7pm.\n•\tCiudad de México, México : 6pm.\n\nTRANSMISION:\n• Canal Youtube\nhttps://lnkd.in/dfSV2MnM\n• Página Facebook\nhttps://lnkd.in/eHXBM45 \n• Página de Linkedin\nhttps://lnkd.in/dESN6Xe5\t\n\n#Factoring #FactoringConElEstado #MYPE #MYPESPeru #FinanciamientoEmpresarial #LiquidezEmpresarial #CapitalDeTrabajo #ProveedoresDelEstado #ComprasPublicas #FinanzasParaEmpresas #EmprendedoresPeruanos #EmpresariosPeruanos #PRODUCE #EmprendeValor #DesarrolloEmpresarial #credigob #marialuismori #empresas #empresarios #financiamientos #peru",
+      "image_url": null,
+      "hashtags": [
+       "#Factoring",
+       "#FactoringConElEstado",
+       "#MYPE",
+       "#MYPESPeru",
+       "#FinanciamientoEmpresarial",
+       "#LiquidezEmpresarial",
+       "#CapitalDeTrabajo",
+       "#ProveedoresDelEstado",
+       "#ComprasPublicas",
+       "#FinanzasParaEmpresas",
+       "#EmprendedoresPeruanos",
+       "#EmpresariosPeruanos",
+       "#PRODUCE",
+       "#EmprendeValor",
+       "#DesarrolloEmpresarial",
+       "#credigob",
+       "#marialuismori",
+       "#empresas",
+       "#empresarios",
+       "#financiamientos",
+       "#peru"
+      ],
+      "mentions": [
+       {
+        "full_name": "Maria Luisa Mori",
+        "url": "https://pe.linkedin.com/in/marialuisamori"
+       },
+       {
+        "full_name": "Credigob",
+        "url": "https://pe.linkedin.com/company/credigob"
+       },
+       {
+        "full_name": "Fredy Garavito",
+        "url": "https://pe.linkedin.com/in/fredygaravito"
+       },
+       {
+        "full_name": "Credigob",
+        "url": "https://pe.linkedin.com/company/credigob"
+       },
+       {
+        "full_name": "Pedro Angel Torres Guzmán",
+        "url": "https://pe.linkedin.com/in/pedro-a-torres-guzm%C3%A1n"
+       },
+       {
+        "full_name": "EMPRENDE VALOR",
+        "url": "https://pe.linkedin.com/company/emprendevalor"
+       }
+      ],
+      "reaction_count": 11,
+      "comment_count": 1,
+      "comments": [
+       {
+        "full_name": "Johan García Cervantes",
+        "headline": null,
+        "profile_url": "https://pe.linkedin.com/in/jgarciacervantes",
+        "body": "Estamos ayudando a muchas MIPYMES a tener inclusión financiera a través de sus licitaciones con el estado. Este es un LIVE que todo proveedor del estado debe ver🙌",
+        "reaction_count": 1,
+        "date_published": "2026-11-23",
+        "created_at": "2026-11-24 01:38:53",
+        "updated_at": "2026-11-24 01:38:53",
+        "deleted": 0
+       }
+      ],
+      "reshared_post": null
+     },
+     {
+      "id": 7530782244416786432,
+      "url": "https://www.linkedin.com/posts/sor-inc_add-continuous-level-to-your-magnetic-activity-7530782244416786432-9Ib-",
+      "company_id": 4695335,
+      "company_source_id": 130005,
+      "company_name": "SOR Controls Group",
+      "company_url": "https://www.linkedin.com/company/sor-inc",
+      "company_headline": null,
+      "company_logo_url": "https://media.licdn.com/dms/image/v2/D560BAQGxTMCp4HBM3w/company-logo_100_100/B56aDuHWTyHQAI-/0/1790701299158/sor_inc_logo?e=2147483647&v=beta&t=6cezsGdtKW7bPtajZhuELezPUhi8a645DVRRGwWXuSc",
+      "company_posts_count": 0,
+      "follower_count": 4073,
+      "date_published": "2026-11-24",
+      "created_at": "2026-11-25 01:47:42",
+      "deleted": 0,
+      "updated_at": "2026-11-25 01:47:42",
+      "processed_at": "2026-11-26 00:48:54",
+      "received_at": "2026-11-25 01:47:42",
+      "article_body": "📏 Add continuous level to your magnetic level indicator without shutting down the process.\n\nIn sugarcane processing, the steam boiler sits at the heart of the facility. It drives the cane mills, the evaporators, the clarifiers and sometimes electrical generators. Some of these mills date back 100 years or more, and level control in the boiler is critical for safety, efficiency and profitability.\n\nA sugar mill controlled water level in its steam drum with three differential pressure transmitters in two of three voting logic. The team wanted a second continuous level technology to serve as a redundancy to the DP cells, one they could integrate into the control system. The mill already had an SOR 1100 Series Magnetic Level Indicator installed as a redundant visual indicator to the sight glass required by boiler code.\n\nSOR proposed the new SOR Measurement and Control 1310 Magnetostrictive Level Transmitter. The SOR 1310 uses the magnetic field from the float already inside the MLI to determine process level and outputs a 4-20 mA signal.\n\nInstallation took two people.\n\n🔩 Mount the transmitter flush to the side of the MLI with two stainless steel hose clamps\n🧱 Add an insulation pad to protect the transmitter from the 210°F process temperature\n🔌 Make a two-wire hookup to the dual compartment housing on the transmitter head\n🚫 Close no valves and shut down no process\n\nThe SOR 1310 started reading level as soon as it was wired. The control room set up the signal for operations to display. SOR asked the mill to trend the SOR 1310 against its DP cells. Over one week, both trend lines coincided, which showed the transmitter tracked boiler level correctly.\n\nWhat the SOR 1310 brings to your level loop:\n🎯 ±0.032 inch (±0.813 mm) accuracy, with measurement ranges up to 20 feet (6.1 m)\n🔀 Top level and interface level measurement\n📡 4-20 mA analog output with HART digital output\n🔧 Quick-Cal function for simple recalibration\n🖥️ Local LCD display\n🧰 Non-ferrous mounts for easy installation or removal on an MLI, with direct insertion available for various tank applications\n🛡️ Two year warranty\n\nThink about the vessel where one level reading is not enough. A second continuous technology, installed without a shutdown, gives you a cross-check against your current loop.\n\nRead the application note:\nhttps://hubs.la/Q04G49mg0\n\nSee the 1310 specifications: https://hubs.la/Q04G49p-0\nRequest a quote for your application: https://hubs.la/Q04G49p_0",
+      "image_url": "https://media.licdn.com/dms/image/v2/D5610AQEhJ6W3TE5WeA/image-shrink_1280/B56aIK2i1TIAAY-/0/1795478400653?e=2147483647&v=beta&t=he7K5sh6yXQeaPwIpsFPQMJyCWdzFKA3jQDxG5kqwQ4",
+      "hashtags": [],
+      "mentions": [],
+      "reaction_count": 8,
+      "comment_count": 0,
+      "comments": [],
+      "reshared_post": null
+     }
+    ],
+    "status": "ok",
+    "creditos": 6,
+    "campanhas": 0,
+    "atraso_mediano_h": null
+   },
+   "lidos": [
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "Yoghurt Digital",
+     "data": "2026-04-30",
+     "url": "https://www.linkedin.com/posts/yoghurtdigital_ecommerce-paidmedia-attribution-activity-7455405649200459776-99TZ",
+     "texto": "Some of our team were at the Pinterest x Triple Whale Advertiser Summit last week - and a few things stuck.\n\nPeople make 35,000 decisions a day. We're not compe"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "Yoghurt Digital",
+     "data": "2026-05-04",
+     "url": "https://www.linkedin.com/posts/yoghurtdigital_shoutout-to-our-friends-at-omnisend-for-stopping-activity-7456891767528017920-qVJo",
+     "texto": "Shoutout to our friends at Omnisend for stopping by the office this morning - and for not coming empty handed 😃 \n\nGreat chat with Vai and Josh, and the team had"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "Yoghurt Digital",
+     "data": "2026-02-05",
+     "url": "https://www.linkedin.com/posts/yoghurtdigital_how-digital-advertising-drives-instore-traffic-activity-7425311286634377216-U5ty",
+     "texto": "Digital advertising actually drives people into stores 🛍️\n\nRetailers are asking a familiar question right now:\n\n 👉 How do we turn online interest into real-worl"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "raraPR",
+     "data": "2025-12-30",
+     "url": "https://www.linkedin.com/posts/rarapr_january-has-a-way-of-surfacing-the-truth-activity-7411867719400267776-zywm",
+     "texto": "January has a way of surfacing the truth.\n\nWhat felt exciting at the start of the year either settled into something solid\nor quietly revealed itself as noise.\n"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "raraPR",
+     "data": "2026-01-03",
+     "url": "https://www.linkedin.com/posts/rarapr_if-youve-been-holding-everything-together-activity-7413166774340206592-jQwO",
+     "texto": "If you’ve been holding everything together with instinct and effort, this is your reminder.\n\nYou don’t need to overhaul your business.\nYou don’t need a rebrand "
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "raraPR",
+     "data": "2025-12-27",
+     "url": "https://www.linkedin.com/posts/rarapr_if-marketing-feels-harder-than-it-should-activity-7410779055710609409-JSTY",
+     "texto": "If marketing feels harder than it should, it’s not because you’re doing it wrong.\n\nIt’s because most advice isn’t built for creative founders who are juggling r"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "SOUP Agency",
+     "data": "2026-11-16",
+     "url": "https://www.linkedin.com/posts/soupagency_weve-been-made-aware-of-a-scam-targeting-activity-7527889829301452800-1oz0",
+     "texto": "We’ve been made aware of a scam targeting people in the US with fake job opportunities claiming to be from our company. These offers are fraudulent and are not "
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "SOUP Agency",
+     "data": "2026-11-12",
+     "url": "https://www.linkedin.com/posts/soupagency_soup-agency-november-blog-how-to-get-chatgpt-activity-7526528064265080832-ZfJz",
+     "texto": "Can ChatGPT find your brand, and would it recommend you? \n\nOur Founder & CEO, Katya Vakulenko , joined Norobots to talk about how brands get recommended in AI s"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "SOUP Agency",
+     "data": "2026-11-12",
+     "url": "https://www.linkedin.com/posts/soupagency_digitalmarketing-growthpartner-performancemarketing-activity-7526758311673651200-9Pv2",
+     "texto": "What happens after the click? That’s the focus of this month’s Monthly Read.\n\n🔹 Google ads are coming to AI Mode in Australia.\n People describe what they need i"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "authentic digital",
+     "data": "2026-11-22",
+     "url": "https://www.linkedin.com/posts/authenticdigitalnz_youve-just-had-an-ad-deliver-great-results-activity-7530363209975803904-0MQU",
+     "texto": "You've just had an ad deliver great results. Naturally, you want to build on that success.\n\nBut before you start creating more of the same, do you know what act"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "authentic digital",
+     "data": "2026-11-13",
+     "url": "https://www.linkedin.com/posts/authenticdigitalnz_how-much-variety-is-there-really-in-your-activity-7526865538803748865-P8EX",
+     "texto": "How much variety is there really in your Meta ads?\n\nMeta uses signals from your creative, including visuals, copy and messaging, to help determine who might be "
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "authentic digital",
+     "data": "2026-11-19",
+     "url": "https://www.linkedin.com/posts/authenticdigitalnz_when-ad-performance-starts-dropping-the-activity-7529022784954404864-flmX",
+     "texto": "When ad performance starts dropping, the first instinct is usually to refresh the visuals and hope for better results. But the design isn't always what's causin"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "M Global Japan",
+     "data": "2026-04-01",
+     "url": "https://www.linkedin.com/posts/mglobaljapan_%E6%9D%B1%E4%BA%AC%E3%81%AB%E5%88%B0%E7%9D%80%E3%81%97%E3%81%9F%E7%9E%AC%E9%96%93%E3%81%99%E3%81%A7%E3%81%AB%E3%81%9D%E3%81%AE%E6%97%85%E3%81%AF%E5%A7%8B%E3%81%BE%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B-%E4%BB%8A%E5%9B%9E%E6%9D%B1%E4%BA%AC%E3%83%A2%E3%83%8E%E3%83%AC%E3%83%BC%E3%83%AB%E6%A7%98%E3%81%AE%E6%B5%B7%E5%A4%96%E5%90%91%E3%81%91-activity-7445000535092604928-_Xxu",
+     "texto": "東京に到着した瞬間、すでにその旅は始まっている。\n今回、東京モノレール様の海外向けプロモーション映像を制作しました。\n\n単なる“移動手段”ではなく、\n車窓から広がる景色、文化、空気感すべてをひとつの体験として捉え、「東京という物語の序章」をどう表現するか。\n\nその問いから、このプロジェクトはスタートしています。\n本プロ"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "Conqr",
+     "data": "2026-11-13",
+     "url": "https://www.linkedin.com/posts/conqrmx_conqr-bullmedia-adweek-activity-7527103120418578432-iNSP",
+     "texto": "Beyond the conversations, it’s the spaces that make them possible.\n\nAt Advertising Week LATAM, Bullmedia’s stand became a meeting point for ideas, people, and n"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "Conqr",
+     "data": "2026-11-20",
+     "url": "https://www.linkedin.com/posts/conqrmx_conqr-carrerapaeztalo-brandexperience-activity-7529586067667181568-vqrQ",
+     "texto": "Some experiences are better shared.\n\nThe 3rd edition of Carrera Pétalo brought together a community connected by movement and their love for their four-legged c"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "Conqr",
+     "data": "2026-11-02",
+     "url": "https://www.linkedin.com/posts/conqrmx_10years-activity-7523068193393807361-arrZ",
+     "texto": "Evolution goes beyond what you see. It lives in the way we think, the way we connect and the spaces where ideas come to life.\n\nAs part of this new chapter, we’v"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "SUBE Agencia Digital",
+     "data": "2026-11-20",
+     "url": "https://www.linkedin.com/posts/subeagenciadigital_culturasube-crecimientoprofesional-vidadeagencia-activity-7529574755834941440-oZZ7",
+     "texto": "En una agencia, crecer no siempre significa cambiar de puesto. También es resolver en una hora lo que antes tomaba un día, o animarse a proponer en la junta.\nLe"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "SUBE Agencia Digital",
+     "data": "2026-11-24",
+     "url": "https://www.linkedin.com/posts/subeagenciadigital_seo-y-geo-activity-7531054283925008384-C_y8",
+     "texto": "A nuestro propio sitio ya llegan visitas y formularios desde ChatGPT. Todavía son pocos, pero muestran que la búsqueda está cambiando: cada vez más personas le "
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "SUBE Agencia Digital",
+     "data": "2026-11-18",
+     "url": "https://www.linkedin.com/posts/subeagenciadigital_subeagenciadigital-cnmd2026-merca20-activity-7528968753355784192-aIID",
+     "texto": "Nuestro CEO, Santiago Rubio, subió al escenario del Congreso Nacional de Marketing Digital de Merca 2.0 con la charla “Del hype al evergreen: cómo Paloma y Nach"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "ABC Digital",
+     "data": "2026-11-19",
+     "url": "https://www.linkedin.com/posts/abcdigitalmx_marketinginterno-employeeengagement-marketingcreativo-activity-7529229705095393281-WjyQ",
+     "texto": "Cuando las personas se convierten en parte de la historia de una marca, las ideas llegan más lejos. 🚀\n\nCon Creadores KOF, Coca-Cola FEMSA abrió un espacio para "
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "ABC Digital",
+     "data": "2026-11-23",
+     "url": "https://www.linkedin.com/posts/abcdigitalmx_abcw-philips-creativeproduction-activity-7530677856205520896-wnmc",
+     "texto": "Creamos una experiencia audiovisual para Philips que une tecnología, diseño y momentos cotidianos. 📺✨\n\nUna muestra de cómo el contenido puede acercar una marca "
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "ABC Digital",
+     "data": "2026-11-20",
+     "url": "https://www.linkedin.com/posts/abcdigitalmx_abcw-ubereats-creativecontent-activity-7529607379223740417-q1zq",
+     "texto": "Hay momentos que se disfrutan más cuando tienes justo lo que se te antoja. 🍟💚\n\nPara Uber Eats, creamos contenido que transforma situaciones del día a día en opo"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "Media Source",
+     "data": "2026-11-25",
+     "url": "https://www.linkedin.com/posts/mediasourcemx_seo-marketingdecontenidos-contentmarketing-activity-7531403193818210304-mVur",
+     "texto": "Publicar más no siempre suma. A veces resta.\n\nCuando dos o más páginas de tu sitio responden la misma intención de búsqueda, Google no sabe cuál mostrar y ningu"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "Media Source",
+     "data": "2026-11-25",
+     "url": "https://www.linkedin.com/posts/mediasourcemx_tu-landing-page-puede-tener-tr%C3%A1fico-y-aun-activity-7531371323655106560-OEcK",
+     "texto": "Tu landing page puede tener tráfico y aun así no generar leads. 😬\nY no necesariamente significa que tu oferta sea mala.\n\nA veces el problema está en la página: "
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "Media Source",
+     "data": "2026-11-24",
+     "url": "https://www.linkedin.com/posts/mediasourcemx_seo-agenciaseo-marketingb2b-activity-7531041738849951744-sq8e",
+     "texto": "¿Cómo elijo una agencia SEO sin que me vendan humo?\n\nPide que te expliquen qué van a medir y contra qué.\n\nUna propuesta seria de SEO cubre cuatro frentes:\n\n-Inv"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "Huella Digital",
+     "data": "2026-10-09",
+     "url": "https://www.linkedin.com/posts/huelladigitalmx_huelladigital-marketingdigital-branding-activity-7514203375463366656-rOzq",
+     "texto": "¡Una nueva imagen, la misma pasión por el marketing digital! 🚀\n\nEn Huella Digital creemos que evolucionar es parte de crecer. Hoy presentamos nuestra nueva iden"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "Huella Digital",
+     "data": "2026-11-17",
+     "url": "https://www.linkedin.com/posts/huelladigitalmx_huelladigital-marketingdigital-transformaciondigital-activity-7528588348962017280-RzZi",
+     "texto": "Las marcas que evolucionan no esperan a quedarse atrás.\n\nEn un entorno digital cada vez más competitivo, actualizar una marca no es simplemente una cuestión est"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "Huella Digital",
+     "data": "2026-09-11",
+     "url": "https://www.linkedin.com/posts/huelladigitalmx_huelladigital-desarrolloweb-seo-activity-7504198449064607744-Aa2j",
+     "texto": "Un proyecto que va mucho más allá de desarrollar un sitio web. 👨‍💻\n\n𝗣𝗥𝗢𝗬𝗘𝗖𝗧𝗢:\nVIVA MÉXICO INMOBILIARIA\nViva México Inmobiliaria es una agencia especializada en "
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "Ogilvy México",
+     "data": "2026-11-16",
+     "url": "https://www.linkedin.com/posts/ogilvymexico_vidadeagencia-ogilvygroup-humor-activity-7528200247219568640-2baX",
+     "texto": "En agencia no tenemos llamadas. Tenemos experiencias inmersivas. 😂\n#VidaDeAgencia #OgilvyGroup #humor"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "",
+     "data": "2026-11-26",
+     "url": "https://www.linkedin.com/posts/ogilvy-latina_ogilvy-ogilvylatina-ogilvygroup-activity-7531397336342720513-Qhr6",
+     "texto": "LATAM creativity. Made to be immortal. 🏆🔥\n\nMexican Dream, SOS POS, Bullet Machine and UVA UVA\nFour ideas from our region are winners at The Immortal Awards LATA"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "empresa",
+     "agencia": "Ogilvy México",
+     "data": "2026-11-18",
+     "url": "https://www.linkedin.com/posts/ogilvymexico_marketing-redessociales-agencia-activity-7528925019834347520-pyQD",
+     "texto": "Si trabajas en marketing, sabes que la búsqueda de ideas de contenido siempre termina con un tutorial de cómo hacen canicas de vidrio en la India.\n #marketing #"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "Mindgruve",
+     "data": "2026-11-19",
+     "url": "https://www.linkedin.com/posts/jacquelinebarreiro_retailmedia-commercemedia-vagas-activity-7529187525886918659-F5GY",
+     "texto": "Estamos contratando! 🚀\n\nTenho uma vaga aberta para Especialista de Retail Media no meu time de Commerce Media na Mindgruve.\n\nProcuro alguém que goste de colocar"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "i.d.e.a.",
+     "data": "2026-11-24",
+     "url": "https://www.linkedin.com/posts/nonishaney_google-pixel-is-the-cure-for-phonehead-syndrome-activity-7531075533707755520-RI7A",
+     "texto": "Google’s holiday ad prescribes a phone for too much phone. Alex Cooper plays a couples therapist in “Phonehead Therapy,” where a man is so attached to his scree"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "i.d.e.a.",
+     "data": "2026-11-20",
+     "url": "https://www.linkedin.com/posts/nonishaney_the-super-bowl-checklist-for-marketers-activity-7529653715058925568-c-jt",
+     "texto": "It's that time again - let's talk Superb Owl and marketing. \n\n\nA Super Bowl ad can make your brand famous for 30 seconds. But what happens in the 31st?\n\nEvery y"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "RIESTER",
+     "data": "2026-11-19",
+     "url": "https://www.linkedin.com/posts/nonishaney_creative-operations-manager-activity-7529221294425485313-4JaD",
+     "texto": "*Now hiring alert*\n\nAre you the person who hears “Can we get this out by Friday?” and already knows what needs to happen by Tuesday?\n\nWe’re hiring a Creative Op"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-25",
+     "url": "https://www.linkedin.com/posts/nonishaney_holiday-alert-faulty-emails-can-lead-to-activity-7531479058304434176-LmvN",
+     "texto": "Your holiday email campaign could cost more than it earns.\nAnd I'm not talking about poor conversion rates.\n\nA recent MediaPost article raises an important issu"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-25",
+     "url": "https://www.linkedin.com/posts/fred-woodward-gentle-65b752110_im-thrilled-to-share-that-our-alice-and-activity-7531377218732597248-EM5S",
+     "texto": "I’m thrilled to share that our Alice and Steve apology cards just won Gold for Best Use of Illustration at the GEMA Awards (Global Entertainment Marketing Acade"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-22",
+     "url": "https://www.linkedin.com/posts/shannon-ryan-b215027_what-an-awesome-night-at-the-clios-huge-activity-7530081964498878464-1cU7",
+     "texto": "What an awesome night at The Clios 🏆 Huge congrats to our talented teams for earning 55 Clios, including Disney Entertainment Television which was named Enterta"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-23",
+     "url": "https://www.linkedin.com/posts/vallabasse_proud-to-share-that-call-of-duty-black-ops-activity-7530702941826035712-nQOn",
+     "texto": "Proud to share that Call of Duty: Black Ops 7 – The Guild has won a Silver Clio Entertainment Award for Games: Integrated Campaign! 🏆\n\nIncredibly grateful to ha"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-22",
+     "url": "https://www.linkedin.com/posts/workingmahi_takesbymahi-entertainment-media-activity-7530329230895788032-eIsc",
+     "texto": "GTA VI’s launch demonstrates the commercial power of anticipation, and highlights Netflix’s missed opportunities, to build demand before release.\n\n## Here are t"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-19",
+     "url": "https://www.linkedin.com/posts/activity-7529318381288849408-zIUs",
+     "texto": "When does influencer marketing lose its authenticity? 📱\n\nRecently, I had the opportunity to collaborate with my classmates at California State University, Fulle"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-24",
+     "url": "https://www.linkedin.com/posts/abtaheeislam_onlymurdersinthebuilding-onlymurdersinlondon-activity-7530927124572975104-zx5x",
+     "texto": "What a privilege to attend the world premiere for the new season of Only Murders in the Building - Only Murders in London 🇬🇧\n\nI'm a huge fan of the series, and "
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-20",
+     "url": "https://www.linkedin.com/posts/deannabaisden_a-million-girls-would-kill-for-this-job-activity-7529589893488951296-jCma",
+     "texto": "A million girls would kill for this job (and clio). \n\na year ago we embarked on a journey through the offices of runway, curated by leading fashion-forward indu"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-25",
+     "url": "https://www.linkedin.com/posts/celine-economides_prada-and-dior-both-released-hand-drawn-holiday-activity-7531373267522252800-OB7W",
+     "texto": "Prada and Dior both released hand-drawn holiday campaigns.\nBoth got attention.\nOnly one felt inevitable.\n\nPrada chose creative restraint.\nDior made an ambitious"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-23",
+     "url": "https://www.linkedin.com/posts/emily-sarah-brooke_csr-disneyfuturegenerations-activity-7530638954811920387-b42c",
+     "texto": "A lovely one to finally share! ⚽✨\n\nI’ve really enjoyed working on Disney Inspired Shooting Stars x Mundo Pixar campaign with Emily Ford, and seeing the worlds o"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-23",
+     "url": "https://www.linkedin.com/posts/jipa_avengersdoomsday-activity-7530697008479670273-QJxp",
+     "texto": "As anticipation builds for #AvengersDoomsday, we’re excited to unveil a new collaboration with HONOR that is about to be seen nationwide!\n\nThe campaign brings t"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-19",
+     "url": "https://www.linkedin.com/posts/anabella-maupin_marketingoperations-projectmanagement-campaignplanning-activity-7529215876491849729-W4oA",
+     "texto": "A marketing team often works on many projects at once. That makes organization an important part of getting good work done.\n\nAs vice president of the Service Cl"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-24",
+     "url": "https://www.linkedin.com/posts/celine-economides_creative-brief-translation-guide-6-client-activity-7530973535075377152-zaC5",
+     "texto": "pov: You just heard “make it pop” in a kickoff call and felt your soul leave your body.\n\nSix things clients say when they mean something else:\n\n“We want somethi"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-21",
+     "url": "https://www.linkedin.com/posts/lylle-breier-8369823_details-activity-7529792333576515584-lMeB",
+     "texto": "Excellence is always in fashion!  👠  🏆 \n\nCongratulations to the best team in the business - Gold Clio Winner for our GOUNDBREAKING The Devil Wears Prada 2 Partn"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-25",
+     "url": "https://www.linkedin.com/posts/kate-murphy-bb2904aa_come-join-our-team-were-looking-for-activity-7531152205660442624-xfJZ",
+     "texto": "Come join our team! 🚨 \nWe’re looking for an exceptional Client Solutions Executive to help bring advertising partnerships and campaigns to life across Disney+ a"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-24",
+     "url": "https://www.linkedin.com/posts/hollypriestdesign_disneys-q4-fy26-earnings-results-webcast-activity-7531006793133490176-Vkak",
+     "texto": "POV: The (agentic) product you design gets a shoutout on the Q4 earnings call 🥹\n\nLast week, our fearless leader and CEO Josh D'Amaro called out our agentic ad s"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "&Barr",
+     "data": "2026-11-25",
+     "url": "https://www.linkedin.com/posts/activity-7531300320111427584-jLPo",
+     "texto": "Disney x Next Christmas 2026 is live 🎄✨\n\nReally proud to see our latest campaign come to life, with a bespoke studio shoot spanning Disney, Pixar and MARVEL wit"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-20",
+     "url": "https://www.linkedin.com/posts/jordan-rogalski-bleibtreu-40386753_it-was-an-honor-to-celebrate-our-partnership-activity-7529623308472889344-O4Mc",
+     "texto": "It was an honor to celebrate our partnership campaign on The Devil Wears Prada 2 winning Gold last night at the Clio Awards. It is such a privilege to work with"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-25",
+     "url": "https://www.linkedin.com/posts/activity-7531214640568205313-idLG",
+     "texto": "Excited to share that I have officially completed Stukent’s Social Media Simternship®! 🎉\n\nThroughout this simulation, I took on the role of a social media marke"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-20",
+     "url": "https://www.linkedin.com/posts/christopher-follmer_im-happy-to-share-that-ive-obtained-a-new-activity-7529659363486273537-8CQf",
+     "texto": "I’m happy to share that I’ve obtained a new certification: Scale Creative Campaigns from Canva!"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-19",
+     "url": "https://www.linkedin.com/posts/somentebella_b2c-growth-branding-activity-7529208390447943680-rPP6",
+     "texto": "Essa foto é de terça, dia 17. Eu ainda não sabia, mas aquele ia ser um dos dias mais intensos desses meus 6 meses de casa.\n\nEra a abertura do carrinho da Laje W"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "funcionario",
+     "agencia": "",
+     "data": "2026-11-25",
+     "url": "https://www.linkedin.com/posts/benjamin-yung-junior-18139099_tem-casamentos-que-n%C3%A3o-d%C3%A3o-certo-mesmo-quando-activity-7531440382702948352-rB-F",
+     "texto": "Tem casamentos que não dão certo.\nMesmo quando existe respeito e admiração mútua.\nMomentos diferentes, transformações internas, objetivos que mudam… \nFaz parte "
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "The Newtons Laboratory",
+     "data": "2026-11-26",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_ikeas-black-friday-interrogation-intervention-activity-7531646333405962240-_Mpq",
+     "texto": "IKEA’s Black Friday Interrogation Intervention\n\nAdvertising Agency: The Newtons Laboratory, Chalandri, Athens, Greece\n\nCreative Directors: Giannis Sorotos, and "
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "Santa Clara",
+     "data": "2026-11-21",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_apple-iphone-the-day-the-world-danced-advertising-activity-7529792740763725824-5dxg",
+     "texto": "Apple iPhone, The Day The World Danced\n\nAdvertising Agency: Apple Marcom, Cupertino, California, USA\n\nProduction Companies: HPLA, Los Angeles, California, USA, "
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "Goodby Silverstein & Partners",
+     "data": "2026-11-22",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_pepsico-lays-potato-chips-lifes-simple-activity-7530325245535326208-akwk",
+     "texto": "PepsiCo Lay’s Potato Chips, Life's Simple Joys\n\nAdvertising Agency: Goodby Silverstein & Partners, San Francisco, California, USA\n\nAssociate Creative Director: "
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "Initiative",
+     "data": "2026-11-17",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_nestl%C3%A9-kitkat-kitcode-advertising-agency-activity-7528414435028410368-_woH",
+     "texto": "Nestlé KitKat, Kit=Code\n\nAdvertising Agency: Leo, Ho Chi Minh City, Vietnam\n\nChief Creative Officer: Paolo Garcia\nExecutive Creative Director: Thiti \"Moss\" Bunk"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "Special",
+     "data": "2026-11-18",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_uber-eats-mild-salsa-advertising-agency-activity-7528792246138347521-an5D",
+     "texto": "Uber Eats, Mild Salsa\n\nAdvertising Agency: Special, Los Angeles, California, USA\n\nChief Creative Officers: Matthew Woodhams-Roberts, and David Horton\nCreative D"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "Mother London",
+     "data": "2026-11-24",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_netflix-entertainment-love-is-blind-at-dawn-activity-7530989677437227009-ViPO",
+     "texto": "Netflix Entertainment, Love Is Blind At Dawn\n\nAdvertising Agencies: Mother London, UK, and Netflix Brand Creative Studio, Los Angeles, California, USA\n\nMother E"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "The Newtons Laboratory",
+     "data": "2026-11-26",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_ikeas-black-friday-surgery-distraction-activity-7531624695578828802-tOWh",
+     "texto": "IKEA’s Black Friday Surgery Distraction\n\nAdvertising Agency: The Newtons Laboratory, Chalandri, Athens, Greece\n\nCreative Directors: Giannis Sorotos, and Dimitra"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "",
+     "data": "2026-11-19",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_gatorade-youve-got-to-lose-to-win-advertising-activity-7529181861617754112-ydjT",
+     "texto": "Gatorade, You’ve Got To Lose To Win\n\nAdvertising Agency: Delta Flint, Quito, Ecuador\n\nChief Creative Officer: Marco Tapia\nExecutive Creative Director: José Lizá"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "Creature",
+     "data": "2026-11-20",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_bigfoot-coffee-montanas-well-caffeinated-activity-7529614885077487617-_KO-",
+     "texto": "Bigfoot Coffee, Montana’s Well Caffeinated Folklore\n\nAdvertising Agency: Ocean Effect, Boston, Massachusetts, USA\n\nChief Creative Officer: Nick Bontaites\nArt Di"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "Initiative",
+     "data": "2026-11-25",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_climate-change-is-sexist-advertising-agency-activity-7531274701785186305-IYhD",
+     "texto": "Climate Change is Sexist\n\nAdvertising Agency: Belle, Paris, France\n\nCo-Founders: Solène Madec, and Nathalie Alves\nCreative Director: Jean-François Goize\nCopywri"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "Special",
+     "data": "2026-11-17",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_uber-eats-pirates-booty-advertising-agency-activity-7528565064409341952-cs0Z",
+     "texto": "Uber Eats, Pirate’s Booty\n\nAdvertising Agency: Special, Los Angeles, California, USA\n\nChief Creative Officers: Matthew Woodhams-Roberts, and David Horton\nCreati"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "The Newtons Laboratory",
+     "data": "2026-11-21",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_were-going-to-ikea-advertising-agency-activity-7529833318419210240-Rn-0",
+     "texto": "We’re going to IKEA \n\nAdvertising Agency: The Newtons Laboratory, Chalandri, Athens, Greece\n\nCreative Director: Giannis Sorotos\nAssociate Creative Director: Dio"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "Cape",
+     "data": "2026-11-18",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_the-hermitage-palace-run-j%C3%A6gersborg-deer-activity-7528752290392936448-_0ew",
+     "texto": "The Hermitage Palace Run, Jægersborg Deer Park Denmark\n\nAdvertising Agency: Ocean Effect, Boston, Massachusetts, USA\n\nChief Creative Officer: Nick Bontaites\nArt"
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "Character",
+     "data": "2026-11-20",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_rockstar-games-grand-theft-auto-vi-trailer-activity-7529480534943592448-v8Tp",
+     "texto": "Rockstar Games, Grand Theft Auto VI Trailer\n\nAfter a 13-year wait, American video game publisher, Rockstar Games Incorporated, based in New York City, launched "
+    },
+    {
+     "fonte": "apify",
+     "tipo": "curador",
+     "agencia": "Trato",
+     "data": "2026-11-25",
+     "url": "https://www.linkedin.com/posts/rian-swart-425570143_cesrams-mare-monstrum-advertising-agency-activity-7531316872215093249-8ZLE",
+     "texto": "CESRAMs' Mare Monstrum\n\nAdvertising Agency : Different, Milan, Italy\n\nChief Creative Officer: Francesco Epifani\nExecutive Creative Director: Massimo Del Monaco\n"
+    },
+    {
+     "fonte": "coresignal",
+     "tipo": "empresa",
+     "agencia": "Boondoggle",
+     "data": "2026-11-24",
+     "url": "https://es.linkedin.com/posts/emprendevalor_factoring-factoringconelestado-mype-activity-7529417360034713600-tzyw",
+     "texto": ""
+    },
+    {
+     "fonte": "coresignal",
+     "tipo": "empresa",
+     "agencia": "Boondoggle",
+     "data": "2026-11-24",
+     "url": "https://www.linkedin.com/posts/sor-inc_add-continuous-level-to-your-magnetic-activity-7530782244416786432-9Ib-",
+     "texto": ""
+    },
+    {
+     "fonte": "coresignal",
+     "tipo": "empresa",
+     "agencia": "Boondoggle",
+     "data": "2026-11-24",
+     "url": "https://www.linkedin.com/posts/the-bond-buyer_munis-little-changed-as-longer-term-usts-activity-7530782358111903744-HujE",
+     "texto": ""
+    },
+    {
+     "fonte": "coresignal",
+     "tipo": "funcionario",
+     "agencia": "Boondoggle",
+     "data": "2026-11-25",
+     "url": "https://www.linkedin.com/posts/sarat-samantaray-05a4a1283_title-18000-sqft-commercial-warehouse-activity-7531148961391415296-xhx9",
+     "texto": ""
+    },
+    {
+     "fonte": "coresignal",
+     "tipo": "funcionario",
+     "agencia": "Boondoggle",
+     "data": "2026-11-25",
+     "url": "https://ae.linkedin.com/posts/%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D9%86-%D8%A8%D8%AE%D9%8A%D8%AA-%D8%A7%D9%84%D8%B2%D9%87%D8%B1%D8%A7%D9%86%D9%8A-4a7491121_%D8%A3%D8%B9%D8%AA%D8%B2-%D8%A8%D8%AD%D8%B5%D9%88%D9%84%D9%8A-%D8%B9%D9%84%D9%89-%D9%87%D8%B0%D9%87-%D8%A7%D9%84%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AA%D9%83%D8%B1%D9%8A%D9%85%D9%8A%D8%A9-%D8%A7%D9%84%D8%AA%D9%8A-activity-7531150926582026240-6lb2",
+     "texto": ""
+    },
+    {
+     "fonte": "coresignal",
+     "tipo": "funcionario",
+     "agencia": "Boondoggle",
+     "data": "2026-11-25",
+     "url": "https://ae.linkedin.com/posts/%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D9%86-%D8%A8%D8%AE%D9%8A%D8%AA-%D8%A7%D9%84%D8%B2%D9%87%D8%B1%D8%A7%D9%86%D9%8A-4a7491121_%D8%A3%D8%B9%D8%AA%D8%B2-%D8%A8%D8%AD%D8%B5%D9%88%D9%84%D9%8A-%D8%B9%D9%84%D9%89-%D9%87%D8%B0%D9%87-%D8%A7%D9%84%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AA%D9%83%D8%B1%D9%8A%D9%85%D9%8A%D8%A9-%D8%A7%D9%84%D8%AA%D9%8A-activity-7531152108188790785-q1sY",
+     "texto": ""
+    }
+   ],
+   "so_apify": 1,
+   "so_coresignal": 0,
+   "nas_duas": 0,
+   "paginas_linkedin_achadas": 194
   }
  ],
  "candidatas": [
@@ -5585,6 +5689,16 @@
    "agencia": "DNA",
    "data": "2026-11-25T07:36:20",
    "url": "https://www.linkedin.com/posts/safarsarthak_linkedinads-performancemarketing-b2bmarketing-activity-7531259466709880832-Gg4x",
+   "video": false,
+   "fonte": "apify",
+   "tipo": "funcionario"
+  },
+  {
+   "marca": "Google",
+   "titulo": "Google’s holiday ad prescribes a phone for too much phone. Alex Cooper plays a couples therapist in “Phonehead Therapy,” where a man is so…",
+   "agencia": "i.d.e.a.",
+   "data": "2026-11-24T19:25:27",
+   "url": "https://www.linkedin.com/posts/nonishaney_google-pixel-is-the-cure-for-phonehead-syndrome-activity-7531075533707755520-RI7A",
    "video": false,
    "fonte": "apify",
    "tipo": "funcionario"
