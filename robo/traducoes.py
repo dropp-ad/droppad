@@ -23,7 +23,13 @@ CAMPOS = ("title", "summary", "frase")
 ACHADOS = os.environ.get("TRADUCOES_ACHADOS", "/tmp/traducoes.json")
 POR_RODADA = int(os.environ.get("TRADUCOES_POR_RODADA", "600"))
 LOTE = 25  # campanhas por pedido ao tradutor
-STORY_CHARS = int(os.environ.get("TRADUCOES_STORY_CHARS", "200000"))  # texto longo traduzido por rodada, por língua
+INICIO = time.time()
+LIMITE_S = int(os.environ.get("TRADUCOES_LIMITE_S", str(22 * 60)))  # para antes do tempo do workflow acabar
+
+
+def sem_tempo():
+    return time.time() - INICIO > LIMITE_S
+STORY_CHARS = int(os.environ.get("TRADUCOES_STORY_CHARS", "80000"))  # texto longo traduzido por rodada, por língua
 STORY_PARAGRAFOS = 6  # o site mostra no máximo 6 parágrafos
 
 
@@ -66,6 +72,9 @@ def traduzir_campanhas(camps):
     """Devolve {id: {"en": {...}, "es": {...}}} para as campanhas dadas."""
     achados = {}
     for i in range(0, len(camps), LOTE):
+        if sem_tempo():
+            log("  tempo esgotado: o resto fica para a próxima rodada")
+            break
         lote = camps[i:i + LOTE]
         pares = []  # (id, campo, texto)
         for c in lote:
@@ -103,6 +112,9 @@ def traduzir_storys(camp, achados):
                 total += tam
         log("Texto longo para %s: %d campanhas (%d caracteres)" % (lg, len(alvo), total))
         for cid, pars in alvo:
+            if sem_tempo():
+                log("  tempo esgotado no texto longo: o resto fica para a próxima rodada")
+                break
             out, bloco = [], []
             for p in pars + [None]:
                 if p is None or (bloco and sum(len(b) for b in bloco) + len(p) > 4500):
