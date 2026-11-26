@@ -130,6 +130,9 @@ def limpar_creditos(pares):
     out, vistos = [], set()
     for funcao, nome in pares:
         nome = re.sub(r"\s+", " ", nome).strip(" ,;")
+        if ":" in nome:  # "General Manager: Automotive: Fulano" → função "General Manager, Automotive", nome "Fulano"
+            mais, nome = nome.rsplit(":", 1)
+            funcao, nome = "%s, %s" % (funcao, mais.strip()), nome.strip()
         k = (A.chave(funcao), A.chave(nome))
         if not nome or k in vistos:
             continue

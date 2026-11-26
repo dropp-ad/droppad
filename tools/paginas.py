@@ -74,7 +74,8 @@ dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;margin:22px 0
 h2{font-size:18px;margin:34px 0 10px;color:#fff}ul{list-style:none;padding:0;margin:0}li{padding:8px 0;border-bottom:1px solid #1a1a1a}li a{text-decoration:none}li small{color:#888;margin-left:6px}
 footer{color:#666;font-size:13px;text-align:center;padding:30px 20px}
 .ficha{grid-template-columns:minmax(140px,max-content) 1fr;font-size:15px}.ficha a,dd a{color:#fff;text-decoration:underline;text-decoration-color:#555;text-underline-offset:3px}
-.ficha a:hover,dd a:hover{text-decoration-color:#f15a3a}"""
+.ficha a:hover,dd a:hover{text-decoration-color:#f15a3a}
+@media(max-width:620px){.ficha{grid-template-columns:1fr;gap:0}.ficha dt{margin-top:12px;font-size:13px}.ficha dd{margin-bottom:2px}}"""
 
 
 def esc(s):
