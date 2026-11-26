@@ -56,8 +56,12 @@ def _tem_marca(marca, texto):
 
 
 def _nome_entre_aspas(c):
-    q = re.search(r"[“\"«‘']([^”\"»’']{4,60})[”\"»’']", c.get("title", "") + " " + c.get("summary", ""))
-    return q.group(1) if q else ""
+    """Nome da campanha entre aspas (“ ” « » "), diferente da marca. Apóstrofo não conta como aspas (IKEA’s)."""
+    for m in re.finditer(r"[“\"«]([^”\"»]{5,60})[”\"»]", c.get("title", "") + " " + c.get("summary", "")):
+        nome = m.group(1).strip()
+        if A.chave(nome) != A.chave(c.get("brand")) and len(A.chave(nome)) >= 6:
+            return nome
+    return ""
 
 
 def bate_com_a_campanha(c, texto):
@@ -94,7 +98,8 @@ def _nomes_compostos(c):
 
 
 NAO_E_FILME = re.compile(r"\b(link in bio|review|resenha|unboxing|haul|tutorial|how to|como usar|gameplay|reagindo|react|"
-                         r"podcast|entrevista|interview|ao vivo|live|cupom|achadinhos|vale a pena)\b", re.I)
+                         r"podcast|entrevista|interview|ao vivo|live|cupom|achadinhos|vale a pena|shorts|vlog|preso|desafio|challenge|"
+                         r"\d+ (?:dias|days|horas|hours))\b", re.I)
 
 
 UI_YT = re.compile(r"^(adicionar à fila|add to queue|enviar feedback|send feedback|assistir mais tarde|watch later|compartilhar|share|novo|new|"
@@ -146,7 +151,7 @@ def buscar_youtube(c):
                 continue  # short de produto, resenha, tutorial, influenciador
             if re.search(r"[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]", titulo) and c.get("region") not in ("Ásia", "Asia", "APAC"):
                 continue  # filme da mesma marca em outro país (Coreia, Japão, China)
-            if bate_com_a_campanha(c, titulo) or (bate_com_a_campanha(c, titulo + " " + canal) and _tem_marca(c["brand"], titulo)):
+            if bate_com_a_campanha(c, titulo):  # só o título do vídeo (o texto ao redor é de outros vídeos)
                 log("  + youtube:", vid, "|", titulo)
                 return [vid]
     return []
