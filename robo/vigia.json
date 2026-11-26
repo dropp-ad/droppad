@@ -49,7 +49,7 @@
       "mod": "Thu, 26 Nov 2026 02:30:22 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 02:37:29 GMT"
+      "mod": "Thu, 26 Nov 2026 03:02:14 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"2af192e271387a2afc6f85376e569c01\"",
@@ -71,19 +71,19 @@
       "mod": "Wed, 25 Nov 2026 16:15:51 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"c61daada2e332f79771430c61e445209\"",
-      "mod": "Thu, 26 Nov 2026 02:21:22 GMT"
+      "etag": "\"3aa30a1343f59f366b176134400e8044\"",
+      "mod": "Thu, 26 Nov 2026 02:38:51 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
       "etag": "\"83195c49f324002789cbfd0c89406c7f\"",
       "mod": "Thu, 26 Nov 2026 01:19:07 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Thu, 26 Nov 2026 02:29:15 GMT"
+      "mod": "Thu, 26 Nov 2026 02:46:15 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
-      "etag": "\"c75cdcd9ba6473386c98f31f1846c4e8\"",
-      "mod": "Thu, 26 Nov 2026 02:37:46 GMT"
+      "etag": "\"65a76819f2f1af896304fb1ae2589e0c\"",
+      "mod": "Thu, 26 Nov 2026 02:57:57 GMT"
     },
     "https://www.adweek.com/feed/": {
       "etag": "W/\"dba2e5654c22ded2d2697063bbf9cfc0\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 02:38:15 GMT"
+      "mod": "Thu, 26 Nov 2026 03:02:15 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 02:37:51 GMT"
+      "mod": "Thu, 26 Nov 2026 03:01:21 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 02:28:18 GMT"
+      "mod": "Thu, 26 Nov 2026 03:00:17 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 156,
+  "yt_pos": 141,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -980,14 +980,20 @@
       "Smith Social": "smithsocialagency",
       "Dentsu": "",
       "Hakuhodo": "",
-      "ADK Marketing Solutions": ""
+      "ADK Marketing Solutions": "",
+      "ShapeWin Co., Ltd.": "",
+      "Mozmene": "",
+      "TOKYO MARKETING": "",
+      "Next Level Japan": "",
+      "M Global Japan": ""
     },
     "tentadas": {
-      "ShapeWin Co., Ltd.": [
-        "shapewinco.ltd."
+      "An-yal": [
+        "anyal",
+        "anyalagency"
       ]
     },
-    "pos": 1048,
+    "pos": 1060,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1333,9 +1339,15 @@
       "Amicus Digital",
       "Roobix",
       "Dentsu",
-      "Hakuhodo"
+      "Hakuhodo",
+      "ADK Marketing Solutions",
+      "ShapeWin Co., Ltd.",
+      "Mozmene",
+      "TOKYO MARKETING",
+      "Next Level Japan",
+      "M Global Japan"
     ],
-    "rodadas": 2014,
+    "rodadas": 2038,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2382,7 +2394,12 @@
       "Dentsu": [],
       "Hakuhodo": [],
       "ADK Marketing Solutions": [],
-      "ShapeWin Co., Ltd.": []
+      "ShapeWin Co., Ltd.": [],
+      "Mozmene": [],
+      "TOKYO MARKETING": [],
+      "Next Level Japan": [],
+      "M Global Japan": [],
+      "An-yal": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3136,6 +3153,6 @@
     "https://campaignbrief.com/droga5-anz-scores-grand-at-clio-entertainment-for-sbss-the-ad-that-can-only-be-seen-on-sbs",
     "https://campaignbriefasia.com/2026/11/26/cafe-de-coral-launches-wholesome-all-day-campaign-for-revamped-menu-via-dentsu-hong-kong"
   ],
-  "ultima_rodada": "2026-11-26T02:38:11.782335+00:00",
+  "ultima_rodada": "2026-11-26T03:02:11.956903+00:00",
   "ultima_novidade": "2026-11-26T02:38:11.782335+00:00"
 }
