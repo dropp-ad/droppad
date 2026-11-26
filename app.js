@@ -477,7 +477,9 @@
     // o quadro fica da altura do post do Instagram (sem faixas em cima/embaixo e sem cortar o rodapé);
     // no celular ocupa a largura toda, no computador cabe em 80% da altura da tela
     // o vídeo recortado ocupa a largura do quadro (no computador, sem passar de 80% da altura da tela)
-    var s = CELULAR.matches ? w / IG_W : Math.min(w / IG_W, (window.innerHeight * 0.8) / h);
+    // altura máxima: o que sobra da tela depois do cabeçalho, texto e botões do post (pra "Comentar" ficar sempre visível)
+    var cabe = Math.max(CELULAR.matches ? 320 : 360, window.innerHeight - (CELULAR.matches ? 300 : 330));
+    var s = Math.min(w / IG_W, cabe / h);
     var alt = Math.round(h * s) + "px";
     if (media.style.height !== alt) media.style.height = alt;
     box.style.transform = "translate(-50%,-50%) scale(" + s.toFixed(4) + ")";
