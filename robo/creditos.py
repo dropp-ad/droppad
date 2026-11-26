@@ -192,7 +192,15 @@ def aplicar():
 def testar(urls):
     for u in urls:
         try:
-            res = limpar_creditos(creditos_de(baixar(u)))
+            pg = baixar(u)
+            res = limpar_creditos(creditos_de(pg))
+            if not res and os.environ.get("DEPURAR"):
+                ls = linhas_de(pg)
+                idx = [i for i, l in enumerate(ls) if re.search(r"redit|ficha|agency|agência|cliente|client", l, re.I)][:3]
+                for i in idx:
+                    log("   ~", " || ".join(x[:70] for x in ls[i:i + 6]))
+                if not idx:
+                    log("   ~ sem pistas; miolo:", len(ls), "linhas; fim da página tem 'credit'?", bool(re.search(r"redits?", pg[-60000:], re.I)))
         except Exception as e:  # noqa: BLE001
             res = "erro: %s" % e
         log("==", u)
