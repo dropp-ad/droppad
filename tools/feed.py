@@ -17,7 +17,7 @@ CORTE = re.compile(r"(\.\.\.|…|\[…\]|\[\.\.\.\])\s*$")
 LIXO = re.compile(r"apareceu primeiro em|appeared first on|se publicó primero en|Gostou do conteúdo\?|Leia também|Read more:", re.I)
 
 CAMPOS = ("id", "date", "brand", "title", "agency", "source", "url", "region", "cc", "summary",
-          "frase", "yt", "video", "image", "addedAt", "idea", "credits", "creatives", "production", "director")
+          "frase", "yt", "video", "image", "addedAt", "idea", "credits", "creatives", "production", "director", "igm")
 
 CORTE_DIAS = 400  # o que fica no feed.json; o resto vai para antigo/
 

@@ -68,7 +68,7 @@ header a{text-decoration:none;font-weight:800;letter-spacing:-.02em;font-size:20
 main{max-width:860px;margin:0 auto;padding:24px 20px 60px}.kick{color:#f15a3a;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:13px;margin:0 0 8px}
 h1{font-size:clamp(26px,4.4vw,40px);line-height:1.12;margin:0 0 10px;color:#fff}.by{color:#aaa;margin:0 0 20px}.by b{color:#fff}
 .media{position:relative;width:100%;aspect-ratio:16/9;background:#111;margin:0 0 22px;overflow:hidden}.media iframe,.media img{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
-.media.v{aspect-ratio:4/5;max-width:440px}.media.v iframe{top:-58px;height:calc(100% + 400px)}
+.media.v{aspect-ratio:4/5;max-width:400px;margin-left:auto;margin-right:auto}
 .cta{display:inline-block;margin:6px 0 26px;padding:12px 18px;background:#fff;color:#000;font-weight:800;text-decoration:none}
 dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;margin:22px 0;padding:16px 0;border-top:1px solid #222;border-bottom:1px solid #222}dt{color:#888}dd{margin:0}
 h2{font-size:18px;margin:34px 0 10px;color:#fff}ul{list-style:none;padding:0;margin:0}li{padding:8px 0;border-bottom:1px solid #1a1a1a}li a{text-decoration:none}li small{color:#888;margin-left:6px}
@@ -172,8 +172,12 @@ def bloco_midia(c):
         return ('<div class="media"><iframe src="https://player.vimeo.com/video/%s" title="%s" loading="lazy" '
                 'allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>' % (esc(ref), nome))
     if tipo == "ig":
-        return ('<div class="media v"><iframe src="%s" title="%s" loading="lazy" scrolling="no" '
-                'allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>' % (esc(ref), nome))
+        # só a mídia do post: o robô mede onde ela fica no embed ("igm" = [topo, altura] a 400 px de largura)
+        m = c.get("igm") if isinstance(c.get("igm"), list) and len(c.get("igm")) == 2 else [54, 500]
+        topo, alt = m[0] + 2, max(120, m[1] - 4)
+        return ('<div class="media v" style="aspect-ratio:400/%d"><iframe src="%s" title="%s" loading="lazy" scrolling="no" '
+                'style="top:-%dpx;height:1100px" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>'
+                % (alt, esc(ref), nome, topo))
     if tipo == "tt":
         return ('<div class="media v" style="aspect-ratio:9/16"><iframe src="https://www.tiktok.com/player/v1/%s" title="%s" '
                 'loading="lazy" allowfullscreen style="top:0;height:100%%"></iframe></div>' % (esc(ref), nome))

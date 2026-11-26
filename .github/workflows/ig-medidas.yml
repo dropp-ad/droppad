@@ -1,0 +1,57 @@
+name: Medidas do Instagram (recorte do vídeo)
+
+# Mede num navegador onde fica o vídeo dentro do embed do Instagram de cada campanha, para o site
+# mostrar só o vídeo, sem o cabeçalho e o rodapé do Instagram. De hora em hora, só as que faltam.
+on:
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: ig-medidas
+  cancel-in-progress: false
+
+jobs:
+  medir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
+
+      - name: Medir e publicar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "droppad robô"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python robo/ig_medidas.py
+          for tentativa in 1 2 3 4 5; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            python robo/ig_medidas.py --aplicar
+            git add campaigns.json
+            if git diff --cached --quiet; then
+              echo "Nada novo."
+              exit 0
+            fi
+            git commit -q -m "Medidas do Instagram (recorte do vídeo) $(TZ=America/Sao_Paulo date '+%F %H:%M') (robô)"
+            if git push origin HEAD:main; then
+              if ! git diff --quiet HEAD~1 HEAD -- campaigns.json; then
+                gh workflow run publicar.yml -R "${{ github.repository }}" --ref main >/dev/null 2>&1 || true
+              fi
+              exit 0
+            fi
+            echo "Push recusado; tentando de novo ($tentativa/5)."
+            sleep 5
+          done
+          exit 1

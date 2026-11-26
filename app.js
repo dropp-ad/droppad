@@ -74,7 +74,8 @@
         yt: arr(x.yt, function (s) { return /^[\w-]{11}$/.test(s); }),
         video: safeUrl(str(x.video)), image: safeUrl(str(x.image) || (Array.isArray(x.images) ? str(x.images[0]) : "")),
         addedAt: str(x.addedAt), story: arr(x.story, Boolean), st: !!x.st, hidden: !!x.hidden,
-        idea: str(x.idea), frase: str(x.frase), credits: creditsOf(x), tl: !!x.tl
+        idea: str(x.idea), frase: str(x.frase), credits: creditsOf(x), tl: !!x.tl,
+        igm: Array.isArray(x.igm) && x.igm.length === 2 && +x.igm[1] > 100 ? [+x.igm[0], +x.igm[1]] : null
       };
       c.fl = films(c);
       return c;
@@ -459,12 +460,18 @@
      O embed avisa a própria altura por postMessage (MEASURE); até lá, vale uma altura típica. */
   var CELULAR = window.matchMedia("(max-width: 760px)");
   var IG_W = 400, IG_CROP_H = 494, igRO = "ResizeObserver" in window ? new ResizeObserver(function (es) { es.forEach(function (e) { scaleIG(e.target); }); }) : null;
+  // onde fica a mídia dentro do embed (o robô mede: "igm" = [topo, altura]); sem medida, o padrão 4:5
+  function recorteIG(box, c) {
+    var topo = c.igm ? c.igm[0] + 2 : 58, alt = c.igm ? c.igm[1] - 4 : IG_CROP_H;
+    box.dataset.ch = alt;
+    box.style.setProperty("--igt", -topo + "px");
+  }
   function scaleIG(media) {
     var box = media.querySelector(".igbox");
     if (!box) return;
     // só o vídeo/foto do post: o embed do Instagram (400 px de largura) mostra a mídia em 4:5, 400×500,
     // logo abaixo de um cabeçalho de 54 px; o quadro recorta esse pedaço (o CSS sobe o iframe)
-    var h = IG_CROP_H, w = media.clientWidth, bh = media.clientHeight;
+    var h = +box.dataset.ch || IG_CROP_H, w = media.clientWidth, bh = media.clientHeight;
     if (!w || !bh) return;
     box.style.setProperty("--igh", h + "px");
     // o quadro fica da altura do post do Instagram (sem faixas em cima/embaixo e sem cortar o rodapé);
@@ -648,6 +655,7 @@
         // post do Instagram/TikTok aparece direto, sem capa antes (carrega quando chega perto da tela)
         var box0 = el("div", f0.kind === "ig" ? "igbox" : null);
         if (f0.reel) box0.dataset.reel = "1";
+        if (f0.kind === "ig") recorteIG(box0, c);
         var fr0 = el("iframe");
         fr0.src = f0.src;
         fr0.loading = "lazy";
@@ -1452,7 +1460,7 @@
       fr.setAttribute("allowfullscreen", "");
       fr.setAttribute("scrolling", "no");
       fr.title = tr("{b} no {p}", { b: c.brand, p: f.kind === "ig" ? "Instagram" : "TikTok" });
-      if (f.kind === "ig") { slot.className = "igbox"; if (f.reel) slot.dataset.reel = "1"; fitIG(art._media); }
+      if (f.kind === "ig") { slot.className = "igbox"; if (f.reel) slot.dataset.reel = "1"; recorteIG(slot, c); fitIG(art._media); }
       slot.appendChild(fr);
       fr.addEventListener("load", playing);
       setTimeout(playing, 2500);
