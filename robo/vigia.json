@@ -34,7 +34,7 @@
       "mod": "Wed, 25 Nov 2026 15:06:41 GMT"
     },
     "https://www.contentgrip.com/feed/": {
-      "etag": "W/\"3144b-hcHlCCOU9YPMU4W42DHfJU9EBZc\""
+      "etag": "W/\"31311-W3g4TVhqmncOuusUq3xws2tlOg4\""
     },
     "https://www.nossomeio.com.br/feed/": {
       "etag": "\"22442-6612035414f07\"",
@@ -49,11 +49,11 @@
       "mod": "Thu, 26 Nov 2026 06:05:45 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 06:10:28 GMT"
+      "mod": "Thu, 26 Nov 2026 06:30:15 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"291fc608196ae72d20b6db701d47b343\"",
-      "mod": "Thu, 26 Nov 2026 06:04:08 GMT"
+      "etag": "\"72d20da5080f8e857a93d6ae520056f5\"",
+      "mod": "Thu, 26 Nov 2026 06:13:39 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795668609-gzip\"",
@@ -79,7 +79,7 @@
       "mod": "Thu, 26 Nov 2026 01:19:07 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Thu, 26 Nov 2026 06:11:02 GMT"
+      "mod": "Thu, 26 Nov 2026 06:30:16 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"d83ce2d22817c38e620e9ddafb0870a2\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 06:11:16 GMT"
+      "mod": "Thu, 26 Nov 2026 06:30:16 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"1b9f3093d8618180701200c6c2e4c3a8-gzip\"",
-      "mod": "Thu, 26 Nov 2026 05:57:54 GMT"
+      "etag": "W/\"a8905d034a3c72f90540252a49f1af65-gzip\"",
+      "mod": "Thu, 26 Nov 2026 06:15:12 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -128,8 +128,8 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://thestable.com.au/feed/": {
-      "etag": "\"223c4955ef24ee5001b904d4358173a7\"",
-      "mod": "Thu, 26 Nov 2026 06:10:37 GMT"
+      "etag": "\"63288f6dfd448f3ffeca7459ea1e97f2\"",
+      "mod": "Thu, 26 Nov 2026 06:13:53 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
       "mod": "Thu, 26 Nov 2026 03:00:54 GMT"
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 06:10:58 GMT"
+      "mod": "Thu, 26 Nov 2026 06:29:26 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 06:10:19 GMT"
+      "mod": "Thu, 26 Nov 2026 06:21:18 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 108,
+  "yt_pos": 90,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1035,17 +1035,20 @@
       "Megri Digital": "",
       "Dinametra": "dinametra",
       "Aloha! Marketing Digital": "",
-      "another": "anotheragency"
+      "another": "anotheragency",
+      "VaynerMedia México": "",
+      "2btube México": "",
+      "Serna Group": "",
+      "SENSO Mx": "",
+      "Boundify": "",
+      "MHA Consulting": "mhaconsulting_"
     },
     "tentadas": {
-      "2btube México": [
-        "2btubemxico"
-      ],
-      "VaynerMedia México": [
-        "vaynermediamxico"
+      "Grinbin": [
+        "grinbin"
       ]
     },
-    "pos": 1155,
+    "pos": 1164,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1443,9 +1446,13 @@
       "Hashtag Media Group",
       "Megri Digital",
       "Aloha! Marketing Digital",
-      "VaynerMedia México"
+      "VaynerMedia México",
+      "2btube México",
+      "Serna Group",
+      "SENSO Mx",
+      "Boundify"
     ],
-    "rodadas": 2228,
+    "rodadas": 2247,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2548,7 +2555,12 @@
       "Dinametra": [],
       "another": [],
       "VaynerMedia México": [],
-      "2btube México": []
+      "2btube México": [],
+      "Serna Group": [],
+      "SENSO Mx": [],
+      "Boundify": [],
+      "MHA Consulting": [],
+      "Grinbin": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3308,8 +3320,10 @@
     "https://www.mediaweek.com.au/technology/adform-to-offer-chatgpt-ads-to-apac-advertisers",
     "https://www.retailgazette.co.uk/blog/2026/11/co-op-wholesale-launches-extended-christmas-campaign-to-boost-festive-sales",
     "https://www.medianews4u.com/nmc-revises-ethical-advertising-guidelines-what-it-means-for-healthcare-marketers",
-    "https://www.afaqs.com/news/advertising/sachin-tendulkar-calls-out-unhealthy-habits-in-sugarfits-new-campaign-12842400"
+    "https://www.afaqs.com/news/advertising/sachin-tendulkar-calls-out-unhealthy-habits-in-sugarfits-new-campaign-12842400",
+    "https://www.contentgrip.com/amazon-meta-muse-ad-talks",
+    "https://www.afaqs.com/news/mktg/bisleris-latest-newspaper-ad-reassures-consumers-amid-fssai-controversy-12842440"
   ],
-  "ultima_rodada": "2026-11-26T06:11:12.913774+00:00",
-  "ultima_novidade": "2026-11-26T06:11:12.913774+00:00"
+  "ultima_rodada": "2026-11-26T06:30:12.769167+00:00",
+  "ultima_novidade": "2026-11-26T06:30:12.769167+00:00"
 }
