@@ -45,15 +45,15 @@
       "mod": "Thu, 26 Nov 2026 16:49:01 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 16:52:39 GMT"
+      "mod": "Thu, 26 Nov 2026 16:53:39 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
       "mod": "Thu, 26 Nov 2026 06:49:38 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795711866-gzip\"",
-      "mod": "Thu, 26 Nov 2026 16:51:06 GMT"
+      "etag": "W/\"1795711989-gzip\"",
+      "mod": "Thu, 26 Nov 2026 16:53:09 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 16:52:40 GMT"
+      "mod": "Thu, 26 Nov 2026 16:53:40 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -125,8 +125,8 @@
       "mod": "Thu, 26 Nov 2026 16:45:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
-      "etag": "\"ca98a3c59260cdfbcc5732117149e8c1\"",
-      "mod": "Thu, 26 Nov 2026 16:40:11 GMT"
+      "etag": "\"a4d5565d661be552f561a43346ba2c99\"",
+      "mod": "Thu, 26 Nov 2026 16:52:46 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
       "etag": "\"7a01aa6fa807d37211146b109a045429\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 16:52:40 GMT"
+      "mod": "Thu, 26 Nov 2026 16:53:41 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -313,7 +313,7 @@
       "mod": "Thu, 30 Jul 2026 19:59:18 GMT"
     }
   },
-  "yt_pos": 111,
+  "yt_pos": 141,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1161,7 +1161,7 @@
       "Liquorice": ""
     },
     "tentadas": {},
-    "pos": 1669,
+    "pos": 1670,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1671,7 +1671,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 2870,
+    "rodadas": 2871,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3445,7 +3445,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 95,
+    "pos_quente": 96,
     "lida": {
       "droga5sp": "2026-11-26T16:12:37.122527+00:00",
       "mboothagency": "2026-11-26T15:19:36.939289+00:00",
@@ -3492,7 +3492,7 @@
       "kesselskramer": "2026-11-26T15:39:37.230750+00:00",
       "northfolkagency": "2026-11-26T15:39:37.230750+00:00",
       "meaningfulsocialclub": "2026-11-26T15:40:36.581165+00:00",
-      "vamp": "2026-11-26T15:40:36.581165+00:00",
+      "vamp": "2026-11-26T16:53:37.104038+00:00",
       "melbournesocialco": "2026-11-26T15:41:36.521475+00:00",
       "ogilvyitaly": "2026-11-26T15:41:36.521475+00:00",
       "squidgroupnz": "2026-11-26T15:42:36.786671+00:00",
@@ -3621,7 +3621,8 @@
       "barragency": "2026-11-26T16:50:36.390539+00:00",
       "lyfemarketing": "2026-11-26T16:50:36.390539+00:00",
       "sirclemedia": "2026-11-26T16:51:37.206128+00:00",
-      "duncanchannon": "2026-11-26T16:52:36.612734+00:00"
+      "duncanchannon": "2026-11-26T16:52:36.612734+00:00",
+      "unrulyagency": "2026-11-26T16:53:37.104038+00:00"
     },
     "ultimo_post": {
       "droga5sp": "2026-11-25",
@@ -3791,7 +3792,8 @@
       "barragency": "2026-11-26",
       "lyfemarketing": "2026-09-15",
       "sirclemedia": "2026-11-26",
-      "duncanchannon": "2026-10-15"
+      "duncanchannon": "2026-10-15",
+      "unrulyagency": "2026-11-07"
     }
   },
   "vistos": [
@@ -4028,8 +4030,9 @@
     "https://grandesnomesdapropaganda.com.br/anunciantes/gallo-apresenta-sua-nova-campanha-global-sabor-do-comeco-ao-fim",
     "https://roastbrief.com.mx/2026/11/la-temporada-alta-impulsa-el-uso-de-inteligencia-artificial-en-whatsapp-para-optimizar-la-atencion-comercial",
     "https://www.merca20.com/mientras-los-mexicanos-se-preparan-para-el-black-friday-bbva-santander-banamex-y-hsbc-dan-este-importante-anuncio-en-el-dof",
-    "https://www.merca20.com/oreo-convierte-la-navidad-en-una-dulce-venganza-contra-santa-claus-en-esta-campana"
+    "https://www.merca20.com/oreo-convierte-la-navidad-en-una-dulce-venganza-contra-santa-claus-en-esta-campana",
+    "https://roastbrief.com.mx/2026/11/auntie-annes-celebra-thanksgiving-con-un-encantador-comercial-de-fieltro-que-espanta-el-mal-humor-de-las-compras"
   ],
-  "ultima_rodada": "2026-11-26T16:52:36.612734+00:00",
-  "ultima_novidade": "2026-11-26T16:42:36.581468+00:00"
+  "ultima_rodada": "2026-11-26T16:53:37.104038+00:00",
+  "ultima_novidade": "2026-11-26T16:53:37.104038+00:00"
 }
