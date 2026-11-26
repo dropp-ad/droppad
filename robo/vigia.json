@@ -19,8 +19,8 @@
       "mod": "Thu, 26 Nov 2026 07:35:13 GMT"
     },
     "https://www.informabtl.com/feed/": {
-      "etag": "W/\"b62898e61841bf427538690328682248\"",
-      "mod": "Wed, 25 Nov 2026 23:30:14 GMT"
+      "etag": "W/\"1a8dc41302f50ff8578e040070482232\"",
+      "mod": "Thu, 26 Nov 2026 10:00:29 GMT"
     },
     "https://propmark.com.br/feed/": {
       "etag": "\"efe3b2a83362405492bc9c920bb28f04\"",
@@ -45,26 +45,26 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"72110d00bb7bcefb298939eccd19ab0b\"",
-      "mod": "Thu, 26 Nov 2026 08:00:05 GMT"
+      "etag": "W/\"36a8064e9966d83bded75da2ede57417\"",
+      "mod": "Thu, 26 Nov 2026 10:05:35 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 10:03:25 GMT"
+      "mod": "Thu, 26 Nov 2026 10:12:16 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
       "mod": "Thu, 26 Nov 2026 06:49:38 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795687360-gzip\"",
-      "mod": "Thu, 26 Nov 2026 10:02:40 GMT"
+      "etag": "W/\"1795687926-gzip\"",
+      "mod": "Thu, 26 Nov 2026 10:12:06 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
       "mod": "Thu, 07 May 2026 12:47:56 GMT"
     },
     "https://www.decisionmarketing.co.uk/feed/": {
-      "mod": "Thu, 26 Nov 2026 09:12:12 GMT"
+      "mod": "Thu, 26 Nov 2026 10:04:49 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
       "etag": "\"562aad5da05b4a7689086081226ca974\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 10:03:29 GMT"
+      "mod": "Thu, 26 Nov 2026 10:12:29 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"1aa25ceb47ed48147668c3f6d375a2af-gzip\"",
-      "mod": "Thu, 26 Nov 2026 09:59:25 GMT"
+      "etag": "W/\"c3987b422866f6d30bbd08b386663cea-gzip\"",
+      "mod": "Thu, 26 Nov 2026 10:08:08 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -194,7 +194,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 10:02:58 GMT"
+      "mod": "Thu, 26 Nov 2026 10:12:11 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -271,7 +271,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 09:54:30 GMT"
+      "mod": "Thu, 26 Nov 2026 10:04:30 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -313,7 +313,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 159,
+  "yt_pos": 135,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1095,10 +1095,18 @@
       "King James": "",
       "VML South Africa": "",
       "Avatar Agency Group": "",
-      "Rogerwilco": ""
+      "Rogerwilco": "",
+      "Ivory Brands": ""
     },
-    "tentadas": {},
-    "pos": 1271,
+    "tentadas": {
+      "Hellocomputer": [
+        "hellocomputer"
+      ],
+      "NATIVE VML": [
+        "nativevml"
+      ]
+    },
+    "pos": 1275,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1552,9 +1560,12 @@
       "Story Talent",
       "King James",
       "VML South Africa",
-      "Avatar Agency Group"
+      "Avatar Agency Group",
+      "Rogerwilco",
+      "Ivory Brands",
+      "Hellocomputer"
     ],
-    "rodadas": 2460,
+    "rodadas": 2469,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2718,7 +2729,10 @@
       "King James": [],
       "VML South Africa": [],
       "Avatar Agency Group": [],
-      "Rogerwilco": []
+      "Rogerwilco": [],
+      "Ivory Brands": [],
+      "Hellocomputer": [],
+      "NATIVE VML": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3484,8 +3498,9 @@
     "https://www.afaqs.com/news/advertising/milky-mists-capella-challenges-the-dark-chocolate-advertising-playbook-12842457",
     "https://www.merca20.com/marketing-2027-como-cambiara-la-distribucion-de-los-presupuestos-publicitarios",
     "https://www.merca20.com/retromarketing-parece-una-pelicula-de-terror-pero-es-un-comercial-del-ano-2000-protagonizado-por-un-bailarin-de-ballet-de-mas-de-1-90-metros",
-    "https://www.medianews4u.com/sugarfit-ropes-in-sachin-tendulkar-for-sugarfitmeany-campaign-on-metabolic-health-awareness"
+    "https://www.medianews4u.com/sugarfit-ropes-in-sachin-tendulkar-for-sugarfitmeany-campaign-on-metabolic-health-awareness",
+    "https://www.medianews4u.com/v-guard-launches-cool-wires-campaign-to-shift-consumer-focus-towards-heat-management-and-electrical-safety"
   ],
-  "ultima_rodada": "2026-11-26T10:03:26.396408+00:00",
+  "ultima_rodada": "2026-11-26T10:12:26.448097+00:00",
   "ultima_novidade": "2026-11-26T10:03:26.396408+00:00"
 }
