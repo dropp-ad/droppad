@@ -49,11 +49,11 @@
       "mod": "Thu, 26 Nov 2026 01:00:24 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 01:08:00 GMT"
+      "mod": "Thu, 26 Nov 2026 01:21:42 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"eaed77e5af96356456542aa48afedf5f\"",
-      "mod": "Thu, 26 Nov 2026 01:05:05 GMT"
+      "etag": "\"6636843e136b993c0b476b60e2d8f761\"",
+      "mod": "Thu, 26 Nov 2026 01:11:48 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795652030-gzip\"",
@@ -71,26 +71,26 @@
       "mod": "Wed, 25 Nov 2026 16:15:51 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"ac47464ed6685f8f22f7b577fa7927e5\"",
-      "mod": "Thu, 26 Nov 2026 01:08:56 GMT"
+      "etag": "\"3ea0f2fd959fa165b9877d201e900188\"",
+      "mod": "Thu, 26 Nov 2026 01:09:56 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
-      "etag": "\"505701cbe5a51fabb64ead7f5c16b23d\"",
-      "mod": "Thu, 26 Nov 2026 00:50:48 GMT"
+      "etag": "\"83195c49f324002789cbfd0c89406c7f\"",
+      "mod": "Thu, 26 Nov 2026 01:19:07 GMT"
     },
     "https://www.afaqs.com/rss": {
       "mod": "Thu, 26 Nov 2026 00:00:52 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
-      "etag": "\"26f86c9f5e481801366e23b87aef8e47\"",
-      "mod": "Thu, 26 Nov 2026 00:44:09 GMT"
+      "etag": "\"7cb73b213468219fa08072023013763b\"",
+      "mod": "Thu, 26 Nov 2026 01:19:13 GMT"
     },
     "https://www.adweek.com/feed/": {
       "etag": "W/\"dba2e5654c22ded2d2697063bbf9cfc0\"",
       "mod": "Thu, 26 Nov 2026 00:00:09 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 01:08:02 GMT"
+      "mod": "Thu, 26 Nov 2026 01:18:58 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
       "etag": "\"0ab6d16ee376eec886f1959b98a72dc3\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 01:09:01 GMT"
+      "mod": "Thu, 26 Nov 2026 01:22:01 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -135,8 +135,8 @@
       "mod": "Thu, 26 Nov 2026 00:34:32 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"3da0bb303040f8da260b69b43e200b26\"",
-      "mod": "Thu, 26 Nov 2026 01:00:00 GMT"
+      "etag": "\"fbcfa5bfb02f350b9610be2835542a4f\"",
+      "mod": "Thu, 26 Nov 2026 01:15:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"70cd0f6a2e9c06acc2d0faaf3ae2f4c8\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 01:08:44 GMT"
+      "mod": "Thu, 26 Nov 2026 01:21:02 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 01:03:03 GMT"
+      "mod": "Thu, 26 Nov 2026 01:14:03 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 132,
+  "yt_pos": 81,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -954,15 +954,15 @@
       "Thrive Digital": "thrivedigitalagency",
       "Intrepid Digital": "",
       "Uprise Digital": "uprisedigitalagency",
-      "Smith Brothers Media": ""
+      "Smith Brothers Media": "",
+      "80/20 Digital": "",
+      "Born Social": "bornsocialagency",
+      "Merge Marketing": "mergemarketing",
+      "BMF Sydney": "",
+      "Blend Commerce": ""
     },
-    "tentadas": {
-      "80/20 Digital": [
-        "8020digital",
-        "8020digitalagency"
-      ]
-    },
-    "pos": 1003,
+    "tentadas": {},
+    "pos": 1010,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1287,9 +1287,12 @@
       "Eight Clients",
       "First Page Australia",
       "SOUP Agency",
-      "Intrepid Digital"
+      "Intrepid Digital",
+      "Smith Brothers Media",
+      "80/20 Digital",
+      "Blend Commerce"
     ],
-    "rodadas": 1925,
+    "rodadas": 1938,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2310,7 +2313,11 @@
       "Thrive Digital": [],
       "Uprise Digital": [],
       "Smith Brothers Media": [],
-      "80/20 Digital": []
+      "80/20 Digital": [],
+      "Born Social": [],
+      "Merge Marketing": [],
+      "Blend Commerce": [],
+      "BMF Sydney": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3060,6 +3067,6 @@
     "https://campaignbrief.co.nz/2026/11/25/countdown-to-free-entry-to-campaign-brief-new-zealand-agency-of-the-year-hot-list-2027-deadline-friday-4-december",
     "https://campaignbrief.com/golden-crumpets-brings-mr-golden-to-social-for-the-first-time-in-new-campaign-via-of-a-feather"
   ],
-  "ultima_rodada": "2026-11-26T01:08:57.502122+00:00",
+  "ultima_rodada": "2026-11-26T01:21:57.543092+00:00",
   "ultima_novidade": "2026-11-26T01:08:57.502122+00:00"
 }
