@@ -11,7 +11,8 @@ with sync_playwright() as p:
         pg = ctx.new_page()
         for i, u in enumerate(urls):
             try:
-                pg.goto(u, wait_until="networkidle", timeout=45000)
+                r = pg.goto(u, wait_until="networkidle", timeout=45000)
+                print("status", r.status if r else None, u)
                 pg.wait_for_timeout(5000)
                 pg.screenshot(path="prints/%d-%s.png" % (i, nome))
                 print("ok", nome, u)

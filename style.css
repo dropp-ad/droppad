@@ -264,7 +264,7 @@ html.digitando .more-cue, html.digitando .to-top, html.digitando .newpill { disp
    e o quadro mostra 494 px de altura (corta 4 px em cima e 2 embaixo, pra nunca aparecer borda branca). */
 .is-ig .media { aspect-ratio: auto; height: 80vh; background: #000; }
 .is-ig .host > .igbox { left: 50%; top: 50%; bottom: auto; right: auto; width: 400px !important; height: var(--igh, 494px) !important; transform: translate(-50%, -50%) scale(.7); transform-origin: 50% 50%; background: #000; overflow: hidden; }
-.is-ig .host > .igbox iframe { inset: auto; left: 0; top: var(--igt, -58px); width: 100% !important; height: 1100px !important; background: #000; }
+.is-ig .host > .igbox iframe { inset: auto; left: -2px; top: var(--igt, -58px); width: calc(100% + 4px) !important; height: 1100px !important; background: #000; }
 .is-vert .cover { display: none; }
 .is-vert .host { z-index: 3; }
 .is-vert .bigplay, .is-vert .ptime, .is-vert .mute, .is-vert .bar { display: none !important; }

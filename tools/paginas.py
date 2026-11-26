@@ -176,7 +176,7 @@ def bloco_midia(c):
         m = c.get("igm") if isinstance(c.get("igm"), list) and len(c.get("igm")) == 2 else [54, 500]
         topo, alt = m[0] + 2, max(120, m[1] - 4)
         return ('<div class="media v" style="aspect-ratio:400/%d"><iframe src="%s" title="%s" loading="lazy" scrolling="no" '
-                'style="top:-%dpx;height:1100px" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>'
+                'style="top:-%dpx;left:-2px;width:calc(100%% + 4px);height:1100px" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>'
                 % (alt, esc(ref), nome, topo))
     if tipo == "tt":
         return ('<div class="media v" style="aspect-ratio:9/16"><iframe src="https://www.tiktok.com/player/v1/%s" title="%s" '
