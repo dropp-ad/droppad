@@ -1,11 +1,11 @@
 {
   "cond": {
     "https://www.b9.com.br/feed/": {
-      "etag": "W/\"5df2-4TkjQvw4lLPzuwsGtyNslja0QO0\""
+      "etag": "W/\"5df2-CKlhM8Hvrh8x9Yn4dgmIEyue410\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"932721f4c86b6ec71a24ea7942c46150\"",
-      "mod": "Thu, 26 Nov 2026 13:21:47 GMT"
+      "etag": "\"77b998dbedd164480abaaf0289769f64\"",
+      "mod": "Thu, 26 Nov 2026 14:18:32 GMT"
     },
     "https://creativosbr.com.br/feed/": {
       "etag": "W/\"3c68efce364b9a1ef1e0944fdd06b460\"",
@@ -33,8 +33,8 @@
       "etag": "W/\"30bd5-s6LGGvUWc04hJgVTrLhXlwWptU0\""
     },
     "https://www.nossomeio.com.br/feed/": {
-      "etag": "\"75baabf8c379ff826931931491a8cacf\"",
-      "mod": "Thu, 26 Nov 2026 13:52:18 GMT"
+      "etag": "\"1e277-6612e979a70d6\"",
+      "mod": "Thu, 26 Nov 2026 14:16:40 GMT"
     },
     "https://www.adworld.ie/feed/": {
       "etag": "\"b778f8e5ac045bc29a7be1e54d179c8b\"",
@@ -45,23 +45,23 @@
       "mod": "Thu, 26 Nov 2026 13:11:28 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 13:52:39 GMT"
+      "mod": "Thu, 26 Nov 2026 14:22:40 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
       "mod": "Thu, 26 Nov 2026 06:49:38 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795700166-gzip\"",
-      "mod": "Thu, 26 Nov 2026 13:36:06 GMT"
+      "etag": "W/\"1795702633-gzip\"",
+      "mod": "Thu, 26 Nov 2026 14:17:13 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
       "mod": "Thu, 07 May 2026 12:47:56 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
-      "etag": "\"82edca2a668fed2a6c038503bd07df68\"",
-      "mod": "Thu, 26 Nov 2026 13:46:28 GMT"
+      "etag": "\"2187c34a304288326e57e6392a53dab3\"",
+      "mod": "Thu, 26 Nov 2026 14:08:09 GMT"
     },
     "https://campaignbrief.com/feed/": {
       "etag": "\"0e87feb4792128632303d0e4a76d224a\"",
@@ -83,15 +83,15 @@
       "mod": "Thu, 26 Nov 2026 09:03:10 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
-      "etag": "\"49d7e1826854f389b51c04b85cd5a602\"",
-      "mod": "Thu, 26 Nov 2026 11:49:21 GMT"
+      "etag": "\"3f4ecc638f40c9149622ee5c6d5ca501\"",
+      "mod": "Thu, 26 Nov 2026 14:20:41 GMT"
     },
     "https://bbdo.com/feed/": {
       "etag": "W/\"d19e6feb3b8183716af7e9ecf21ae2f1\"",
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 13:52:40 GMT"
+      "mod": "Thu, 26 Nov 2026 14:22:41 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -118,15 +118,15 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Thu, 26 Nov 2026 13:51:52 GMT"
+      "mod": "Thu, 26 Nov 2026 14:18:33 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"2ca85f411c66426e8426a0d2a2777953\"",
-      "mod": "Thu, 26 Nov 2026 13:45:00 GMT"
+      "etag": "\"361ad46ff065e475a7c1c46b2c1208ba\"",
+      "mod": "Thu, 26 Nov 2026 14:00:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
-      "etag": "\"70cd0f6a2e9c06acc2d0faaf3ae2f4c8\"",
-      "mod": "Wed, 25 Nov 2026 22:41:33 GMT"
+      "etag": "\"1c86046cb146aeaf41fe04744cb3dee2\"",
+      "mod": "Thu, 26 Nov 2026 14:21:55 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
       "etag": "\"7a01aa6fa807d37211146b109a045429\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 13:52:40 GMT"
+      "mod": "Thu, 26 Nov 2026 14:22:41 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -249,7 +249,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 13:43:42 GMT"
+      "mod": "Thu, 26 Nov 2026 14:14:42 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -294,7 +294,7 @@
       "mod": "Thu, 26 Nov 2026 11:12:36 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 07:05:35 GMT"
+      "mod": "Thu, 26 Nov 2026 14:00:59 GMT"
     },
     "https://thestable.com.au/feed/": {
       "etag": "\"63288f6dfd448f3ffeca7459ea1e97f2\"",
@@ -313,7 +313,7 @@
       "mod": "Thu, 30 Jul 2026 19:59:18 GMT"
     }
   },
-  "yt_pos": 120,
+  "yt_pos": 138,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1161,7 +1161,7 @@
       "Liquorice": ""
     },
     "tentadas": {},
-    "pos": 1400,
+    "pos": 1460,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1671,7 +1671,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 2689,
+    "rodadas": 2719,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3677,6 +3677,6 @@
     "https://creativosbr.com.br/subway-coloca-nepo-babies-na-fila-em-campanha-de-black-friday",
     "https://www.decisionmarketing.co.uk/news/bauer-media-extends-assertive-yield-advertising-deal"
   ],
-  "ultima_rodada": "2026-11-26T13:52:36.988630+00:00",
+  "ultima_rodada": "2026-11-26T14:22:37.663706+00:00",
   "ultima_novidade": "2026-11-26T12:30:26.938854+00:00"
 }
