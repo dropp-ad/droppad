@@ -17,8 +17,10 @@ CORTE = re.compile(r"(\.\.\.|…|\[…\]|\[\.\.\.\])\s*$")
 LIXO = re.compile(r"apareceu primeiro em|appeared first on|se publicó primero en|Gostou do conteúdo\?|Leia também|Read more:", re.I)
 
 CAMPOS = ("id", "date", "brand", "title", "agency", "source", "url", "region", "cc", "summary",
-          "frase", "yt", "video", "image", "addedAt", "idea", "credits", "creatives", "production", "director", "igm")
+          "frase", "yt", "video", "image", "addedAt", "idea", "credits", "creatives", "production", "director", "igm", "ficha")
 
+PRINCIPAL = re.compile(r"cco|chief creative|creative director|ecd|dire[çc][ãa]o (geral |executiva )?de cria|diretor(a|es)? (geral |executiv[oa]s? )?de cria|"
+                       r"vp de cria|^dire[çc][ãa]o$|^diretor(a)?$|^director$|realiza|produtora|production compan|productora", re.I)
 CORTE_DIAS = 400  # o que fica no feed.json; o resto vai para antigo/
 
 
@@ -54,6 +56,15 @@ def main(src, dst):
         item = enxuta(x)
         if isinstance(x.get("tr"), dict):
             item["_tr"] = x["tr"]
+        # no feed só os créditos principais (o card do fim do filme mostra até 5; a ficha inteira está em /c/<id>/)
+        for k in ("credits", "ficha"):
+            if isinstance(item.get(k), list):
+                item[k] = [r for r in item[k] if isinstance(r, dict) and PRINCIPAL.search(str(r.get("role", "")))
+                           and not re.search(r"assist|trainee|estagi|team|equipe", str(r.get("role", "")), re.I)][:6]
+                if not item[k]:
+                    item.pop(k)
+                if k == "ficha" and x.get("credits"):
+                    item.pop(k, None)
         story = [s for s in (x.get("story") or []) if isinstance(s, str) and s.strip() and not LIXO.search(s)]
         cid = str(x.get("id") or "")
         if story and (not tem_filme(x) or CORTE.search(x.get("frase") or x.get("summary") or "")) and cid and "/" not in cid and not cid.startswith("."):

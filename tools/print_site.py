@@ -14,7 +14,7 @@ with sync_playwright() as p:
                 r = pg.goto(u, wait_until="networkidle", timeout=45000)
                 print("status", r.status if r else None, u)
                 pg.wait_for_timeout(5000)
-                pg.screenshot(path="prints/%d-%s.png" % (i, nome))
+                pg.screenshot(path="prints/%d-%s.png" % (i, nome), full_page=(nome == "cel"))
                 print("ok", nome, u)
             except Exception as e:  # noqa: BLE001
                 print("erro", nome, u, e)

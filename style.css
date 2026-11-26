@@ -351,3 +351,9 @@ body { animation: pagein .35s var(--ease); }
 .to-top:hover { border-color: #555; }
 .to-top svg { width: 18px; height: 18px; stroke-width: 2; }
 @media (max-width: 760px) { .to-top { right: 12px; bottom: calc(14px + env(safe-area-inset-bottom)); width: 40px; height: 40px; } }
+
+/* créditos clicáveis no card do fim do filme */
+.end-cred a.cred { color: inherit; text-decoration: underline; text-decoration-color: rgba(255,255,255,.35); text-underline-offset: 3px; }
+.end-cred a.cred:hover { text-decoration-color: var(--accent, #f15a3a); }
+.end-ficha { display: inline-block; margin: 2px 0 14px; font-size: 13px; color: inherit; opacity: .75; }
+.end-ficha:hover { opacity: 1; }

@@ -1,0 +1,58 @@
+name: Ficha técnica das campanhas
+
+# Abre a matéria de origem de cada campanha e lê a ficha técnica (créditos): agência, criação, direção,
+# produtora... O site mostra os principais no fim do filme e a ficha inteira na página da campanha, com
+# cada nome levando à página da pessoa ou da empresa. De hora em hora, até 400 matérias por rodada.
+on:
+  schedule:
+    - cron: "57 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: creditos
+  cancel-in-progress: false
+
+jobs:
+  creditos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Procurar e publicar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "droppad robô"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python robo/creditos.py
+          cp robo/creditos.json /tmp/creditos_estado.json
+          for tentativa in 1 2 3 4 5; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            cp /tmp/creditos_estado.json robo/creditos.json
+            python robo/creditos.py --aplicar
+            git add robo/creditos.json campaigns.json
+            if git diff --cached --quiet; then
+              echo "Nada novo."
+              exit 0
+            fi
+            git commit -q -m "Ficha técnica das campanhas $(TZ=America/Sao_Paulo date '+%F %H:%M') (robô)"
+            if git push origin HEAD:main; then
+              if ! git diff --quiet HEAD~1 HEAD -- campaigns.json; then
+                gh workflow run publicar.yml -R "${{ github.repository }}" --ref main >/dev/null 2>&1 || true
+              fi
+              exit 0
+            fi
+            echo "Push recusado; tentando de novo ($tentativa/5)."
+            sleep 5
+          done
+          exit 1

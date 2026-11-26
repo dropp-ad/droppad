@@ -42,7 +42,8 @@
       role = str(role); name = Array.isArray(name) ? name.map(str).filter(Boolean).join(", ") : str(name);
       if (role && name) out.push([role, name]);
     }
-    if (Array.isArray(x.credits)) x.credits.forEach(function (k) { if (k && typeof k === "object") add(k.role, k.name || k.names); });
+    var lista = Array.isArray(x.credits) && x.credits.length ? x.credits : Array.isArray(x.ficha) ? x.ficha : null;
+    if (lista) lista.forEach(function (k) { if (k && typeof k === "object") add(k.role, k.name || k.names); });
     else if (x.credits && typeof x.credits === "object") Object.keys(x.credits).forEach(function (k) { add(k, x.credits[k]); });
     if (x.creatives) add(tr("Criação"), x.creatives);
     if (x.production) add(tr("Produtora"), x.production);
@@ -199,6 +200,7 @@
     "Produtora": ["Production", "Productora", "Production", "Produktion", "Casa di produzione", "Productie", "制作会社", "제작사", "制作公司"],
     "Direção": ["Director", "Dirección", "Réalisation", "Regie", "Regia", "Regie", "監督", "감독", "导演"],
     "Agência": ["Agency", "Agencia", "Agence", "Agentur", "Agenzia", "Bureau", "エージェンシー", "대행사", "代理商"],
+    "Ficha técnica completa ↗": ["Full credits ↗", "Ficha técnica completa ↗", "Tous les crédits ↗", "Alle Credits ↗", "Tutti i crediti ↗", "Alle credits ↗", "クレジット一覧 ↗", "전체 크레딧 ↗", "完整制作名单 ↗"],
     "Origem": ["Origin", "Origen", "Origine", "Herkunft", "Origine", "Herkomst", "地域", "지역", "地区"],
     "A ideia": ["The idea", "La idea", "L'idée", "Die Idee", "L'idea", "Het idee", "アイデア", "아이디어", "创意概念"],
     "Estreou hoje": ["Launched today", "Estrenó hoy", "Sorti aujourd'hui", "Heute gestartet", "Uscito oggi", "Vandaag gelanceerd", "本日公開", "오늘 공개", "今日上线"],
@@ -1267,6 +1269,25 @@
     }, function () { /* nada */ });
   }
 
+  /* ---------- Créditos clicáveis: cada pessoa/empresa leva à página dela (/p/nome/ ou /a/nome/) ---------- */
+  var CRED_PRINCIPAL = /cco|chief creative|creative director|ecd|dire[çc][ãa]o (geral |executiva )?de cria|diretor(a|es)? (geral |executiv[oa]s? )?de cria|vp de cria|^dire[çc][ãa]o$|^diretor(a)?$|^director$|realiza|produtora|production compan|productora/i;
+  var CRED_EMPRESA = /ag[êe]ncia|agency|produtora|production compan|productora|post[- ]?produ|p[óo]s[- ]?produ|sound|[áa]udio|m[úu]sica|music|vfx|studio|est[úu]dio/i;
+  function slugNome(s) {
+    return str(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70);
+  }
+  function ddComLinks(texto, tipo) {
+    var dd = el("dd");
+    var partes = tipo === "a" ? [str(texto).split(",")[0]] : str(texto).split(/(\s*(?:,\s*(?:and|e|y)\s+|,|;|\/|\s&\s|\se\s|\sand\s|\sy\s)\s*)/);
+    partes.forEach(function (p, i) {
+      var nome = p.replace(/\(.*?\)/g, "").trim();
+      if (i % 2 === 1 || !nome || nome.length > 60 || /\d{2,}/.test(nome)) { dd.appendChild(document.createTextNode(p)); return; }
+      var a = link("cred", nome, "/" + tipo + "/" + slugNome(nome) + "/");
+      a.addEventListener("click", function (e) { e.stopPropagation(); });
+      dd.appendChild(a);
+    });
+    return dd;
+  }
+
   /* ---------- Card do fim do filme: a ideia e os créditos ---------- */
   function endCard(art, c) {
     var card = el("div", "endcard");
@@ -1277,12 +1298,21 @@
     var idea = c.idea || c.summary;
     if (idea) inner.appendChild(el("p", "end-idea", idea));
     var rows = [];
-    if (c.agency) rows.push([tr("Agência"), c.agency]);
-    c.credits.forEach(function (k) { if (!((k[0] === "Agência" || k[0] === tr("Agência")) && k[1] === c.agency)) rows.push(k); });
+    if (c.agency) rows.push([tr("Agência"), c.agency, "a"]);
+    // no card só os créditos principais (liderança de criação, direção, produtora); a ficha inteira fica
+    // na página da campanha
+    var principais = c.credits.filter(function (k) {
+      return !/^(ag[êe]ncia|agency|agencia)s?$/i.test(k[0]) && CRED_PRINCIPAL.test(k[0]) && !/assist|trainee|estagi|junior|j[úu]nior|team|equipe/i.test(k[0]);
+    }).slice(0, 5);
+    principais.forEach(function (k) { rows.push([k[0], k[1], CRED_EMPRESA.test(k[0]) ? "a" : "p"]); });
     rows.push([tr("Origem"), flagOf(c.cc) + " " + tr(c.region || "Global")]);
     var dl = el("dl", "end-cred");
-    rows.forEach(function (k) { dl.appendChild(el("dt", null, k[0])); dl.appendChild(el("dd", null, k[1])); });
+    rows.forEach(function (k) { dl.appendChild(el("dt", null, k[0])); dl.appendChild(k[2] ? ddComLinks(k[1], k[2]) : el("dd", null, k[1])); });
     inner.appendChild(dl);
+    if (c.credits.length > principais.length) {
+      var toda = link("end-ficha", tr("Ficha técnica completa ↗"), "/c/" + encodeURIComponent(c.id) + "/");
+      inner.appendChild(toda);
+    }
     var acts = el("div", "end-acts");
     var again = el("button", "end-btn", tr("↺ Ver de novo")); again.type = "button";
     again.addEventListener("click", function (e) { e.stopPropagation(); art.classList.remove("ended"); art.dataset.part = 0; activate(art, true); });
