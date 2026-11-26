@@ -16,7 +16,7 @@
       "mod": "Wed, 25 Nov 2026 22:34:14 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Thu, 26 Nov 2026 03:35:11 GMT"
+      "mod": "Thu, 26 Nov 2026 07:35:13 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"b62898e61841bf427538690328682248\"",
@@ -49,7 +49,7 @@
       "mod": "Thu, 26 Nov 2026 07:00:42 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 07:32:16 GMT"
+      "mod": "Thu, 26 Nov 2026 07:41:25 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 07:32:16 GMT"
+      "mod": "Thu, 26 Nov 2026 07:42:17 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"f012411a873e5c39b5a1fa158a9223c1-gzip\"",
-      "mod": "Thu, 26 Nov 2026 07:20:38 GMT"
+      "etag": "W/\"9306c74b5cadf5c0257e14103306789e-gzip\"",
+      "mod": "Thu, 26 Nov 2026 07:34:54 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -143,8 +143,8 @@
       "mod": "Wed, 25 Nov 2026 22:41:33 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
-      "etag": "\"b87f915d8c860a07cf4da5c778de32ed\"",
-      "mod": "Thu, 26 Nov 2026 06:57:25 GMT"
+      "etag": "\"aff7dd9b0c8f1b036b8b47788bfd669b\"",
+      "mod": "Thu, 26 Nov 2026 07:36:38 GMT"
     },
     "https://wearesocial.com/it/feed/": {
       "etag": "W/\"142edc7baade8a4b5bd0a2a67ab57ef5\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 07:31:59 GMT"
+      "mod": "Thu, 26 Nov 2026 07:42:17 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 07:26:17 GMT"
+      "mod": "Thu, 26 Nov 2026 07:36:19 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 39,
+  "yt_pos": 45,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1059,19 +1059,18 @@
       "Ogilvy México": "",
       "Leo Burnett México": "",
       "Publicis México": "",
-      "VML México": ""
+      "VML México": "",
+      "dentsu México": "",
+      "iProspect México": "",
+      "Jellyfish México": "",
+      "Accenture Song México": ""
     },
     "tentadas": {
-      "iProspect México": [
-        "iprospectmxico",
-        "iprospectmxicoagency"
-      ],
-      "dentsu México": [
-        "dentsumxico",
-        "dentsumxicoagency"
+      "Edelman México": [
+        "edelmanmxico"
       ]
     },
-    "pos": 1195,
+    "pos": 1200,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1488,9 +1487,11 @@
       "Leo Burnett México",
       "Publicis México",
       "VML México",
-      "dentsu México"
+      "dentsu México",
+      "iProspect México",
+      "Jellyfish México"
     ],
-    "rodadas": 2309,
+    "rodadas": 2319,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2617,7 +2618,10 @@
       "Publicis México": [],
       "VML México": [],
       "dentsu México": [],
-      "iProspect México": []
+      "iProspect México": [],
+      "Jellyfish México": [],
+      "Accenture Song México": [],
+      "Edelman México": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3383,6 +3387,6 @@
     "https://www.afaqs.com/news/advertising/milky-mists-capella-challenges-the-dark-chocolate-advertising-playbook-12842457",
     "https://www.merca20.com/marketing-2027-como-cambiara-la-distribucion-de-los-presupuestos-publicitarios"
   ],
-  "ultima_rodada": "2026-11-26T07:32:13.129765+00:00",
+  "ultima_rodada": "2026-11-26T07:42:13.242802+00:00",
   "ultima_novidade": "2026-11-26T06:30:12.769167+00:00"
 }
