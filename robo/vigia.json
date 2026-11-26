@@ -4,8 +4,8 @@
       "etag": "W/\"5ee6-klLQNjezr/3ppwUJOpbS1V1ylT8\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"f2a77a782feaa42653dcc6933cf27f60\"",
-      "mod": "Wed, 25 Nov 2026 20:38:13 GMT"
+      "etag": "\"8d2b357d96c41a3ba5f60aa45dd6d6e6\"",
+      "mod": "Thu, 26 Nov 2026 01:28:02 GMT"
     },
     "https://creativosbr.com.br/feed/": {
       "etag": "W/\"f793b977949d05f296ec8aa8f7aafc5d\"",
@@ -45,11 +45,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"1905e02070f7795ab5c40fec432b7acf\"",
-      "mod": "Thu, 26 Nov 2026 01:00:24 GMT"
+      "etag": "W/\"5617129624737a89af82fda75b36bf11\"",
+      "mod": "Thu, 26 Nov 2026 01:30:19 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 01:21:42 GMT"
+      "mod": "Thu, 26 Nov 2026 01:38:00 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"6636843e136b993c0b476b60e2d8f761\"",
@@ -71,8 +71,8 @@
       "mod": "Wed, 25 Nov 2026 16:15:51 GMT"
     },
     "https://campaignbrief.com/feed/": {
-      "etag": "\"3ea0f2fd959fa165b9877d201e900188\"",
-      "mod": "Thu, 26 Nov 2026 01:09:56 GMT"
+      "etag": "\"40e4677f142f9dfb13601e424b152bf0\"",
+      "mod": "Thu, 26 Nov 2026 01:38:51 GMT"
     },
     "https://campaignbrief.co.nz/feed/": {
       "etag": "\"83195c49f324002789cbfd0c89406c7f\"",
@@ -90,7 +90,7 @@
       "mod": "Thu, 26 Nov 2026 00:00:09 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 01:18:58 GMT"
+      "mod": "Thu, 26 Nov 2026 01:36:11 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
       "etag": "\"0ab6d16ee376eec886f1959b98a72dc3\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 01:22:01 GMT"
+      "mod": "Thu, 26 Nov 2026 01:39:00 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 01:21:02 GMT"
+      "mod": "Thu, 26 Nov 2026 01:38:28 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 01:14:03 GMT"
+      "mod": "Thu, 26 Nov 2026 01:35:04 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 81,
+  "yt_pos": 150,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -958,11 +958,23 @@
       "80/20 Digital": "",
       "Born Social": "bornsocialagency",
       "Merge Marketing": "mergemarketing",
+      "Blend Commerce": "",
       "BMF Sydney": "",
-      "Blend Commerce": ""
+      "Clemenger BBDO": "",
+      "Howatson+Company": "",
+      "Terrier Agency": "",
+      "Human Digital": "humandigitalagency"
     },
-    "tentadas": {},
-    "pos": 1010,
+    "tentadas": {
+      "Digital Stream Ltd": [
+        "digitalstreamltd",
+        "digitalstreamltdagency"
+      ],
+      "Webzilla Digital Marketing": [
+        "webzilladigitalmarketing"
+      ]
+    },
+    "pos": 1018,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1290,9 +1302,13 @@
       "Intrepid Digital",
       "Smith Brothers Media",
       "80/20 Digital",
-      "Blend Commerce"
+      "Blend Commerce",
+      "BMF Sydney",
+      "Clemenger BBDO",
+      "Howatson+Company",
+      "Terrier Agency"
     ],
-    "rodadas": 1938,
+    "rodadas": 1955,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2317,7 +2333,13 @@
       "Born Social": [],
       "Merge Marketing": [],
       "Blend Commerce": [],
-      "BMF Sydney": []
+      "BMF Sydney": [],
+      "Clemenger BBDO": [],
+      "Howatson+Company": [],
+      "Terrier Agency": [],
+      "Human Digital": [],
+      "Digital Stream Ltd": [],
+      "Webzilla Digital Marketing": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3065,8 +3087,10 @@
     "https://campaignbrief.co.nz/2026/11/26/james-hopkins-make-ten-great-ads",
     "https://campaignbriefasia.com/2026/11/26/james-hopkins-make-ten-great-ads",
     "https://campaignbrief.co.nz/2026/11/25/countdown-to-free-entry-to-campaign-brief-new-zealand-agency-of-the-year-hot-list-2027-deadline-friday-4-december",
-    "https://campaignbrief.com/golden-crumpets-brings-mr-golden-to-social-for-the-first-time-in-new-campaign-via-of-a-feather"
+    "https://campaignbrief.com/golden-crumpets-brings-mr-golden-to-social-for-the-first-time-in-new-campaign-via-of-a-feather",
+    "https://www.bandt.com.au/nrma-launches-new-campaign-celebrating-the-value-of-normality",
+    "https://campaignbrief.com/nrma-insurance-celebrates-the-extraordinary-value-of-normal-in-new-work-via-accenture-song"
   ],
-  "ultima_rodada": "2026-11-26T01:21:57.543092+00:00",
-  "ultima_novidade": "2026-11-26T01:08:57.502122+00:00"
+  "ultima_rodada": "2026-11-26T01:38:57.356280+00:00",
+  "ultima_novidade": "2026-11-26T01:38:57.356280+00:00"
 }
