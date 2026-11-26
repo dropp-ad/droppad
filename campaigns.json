@@ -21182,112 +21182,6 @@
     "igm": [
       54,
       500
-    ],
-    "ficha": [
-      {
-        "role": "Cliente",
-        "name": "Bauducco®"
-      },
-      {
-        "role": "Produto",
-        "name": "Bauducco Chocottone® e Bauducco® Panettone"
-      },
-      {
-        "role": "Campanha",
-        "name": "Bauducco Natal Disney"
-      },
-      {
-        "role": "Agência",
-        "name": "GALERIA.ag"
-      },
-      {
-        "role": "Creative Chairman",
-        "name": "Rafael Urenha"
-      },
-      {
-        "role": "CCO",
-        "name": "Phil Daijó, Rafael Ziggy"
-      },
-      {
-        "role": "Direção Executiva de Criação",
-        "name": "Silvio Amorim"
-      },
-      {
-        "role": "Direção de Criação",
-        "name": "Raphael Lucone, Thomaz Dantas"
-      },
-      {
-        "role": "Criação",
-        "name": "Epaminondas Paulino, Enzo Roncari, Giovanna Lazzarotti, Jefferson Iago"
-      },
-      {
-        "role": "Atendimento",
-        "name": "Ana Coutinho, Michelle Latessa, Fabiana Vieira, Jaqueline Martins e Heloá Zelli"
-      },
-      {
-        "role": "Aprovação cliente",
-        "name": "André Britto, André Kieling, Carolina Gonçalves Beal, Myrhella Lucarini Caseri de Paula e Marcella da Silva Postigo"
-      },
-      {
-        "role": "Mídia",
-        "name": "Paulo Ilha, Patrícia Alves, Gabriela Loureiro, Mariana Navarro, Gustavo Ricardo, Ariela Guirão"
-      },
-      {
-        "role": "PR",
-        "name": "Patricia Capuchinho, Tercio Silveira, Analuá Baptista e Klara Oliveira"
-      },
-      {
-        "role": "Estratégia",
-        "name": "Carol Mello, Danilo Santos, Izabela Eusébio e Giulia Arruda"
-      },
-      {
-        "role": "Direção de Produção Gráfica e Digital",
-        "name": "Marcos Moura e Durval Brum"
-      },
-      {
-        "role": "Produção Gráfica",
-        "name": "Durval Brum e Paulo Ribeiro"
-      },
-      {
-        "role": "Produção Integrada",
-        "name": "Ducha Lopes, Andrea Metzker, Michelle Teixeira, Cintia Mantero, Malu Santos"
-      },
-      {
-        "role": "Produção",
-        "name": "The Magic AI"
-      },
-      {
-        "role": "Direção",
-        "name": "Felipe Valério (Wait)"
-      },
-      {
-        "role": "Produção Executiva",
-        "name": "Ana Maitê Fröhlich, Bruno Meira, Matheus Akkari"
-      },
-      {
-        "role": "Produtor Executivo Associado",
-        "name": "Gabriel Meira de Vasconcellos"
-      },
-      {
-        "role": "Creative Leads",
-        "name": "Fabio Meirelles, Gustavo Tissot"
-      },
-      {
-        "role": "Editor",
-        "name": "Bruno Athaydes"
-      },
-      {
-        "role": "Audio",
-        "name": "Clamp Music"
-      },
-      {
-        "role": "Produção",
-        "name": "Tiago Abrahao"
-      },
-      {
-        "role": "Atendimento",
-        "name": "Claudia Lampert"
-      }
     ]
   },
   {
@@ -21988,6 +21882,129 @@
         "summary": "Primeira campanha holandesa da Canva reescreve um clássico da música local, com 'desastres de design' cantando em louvor a um layout bem-feito."
       }
     }
+  },
+  {
+    "id": "2026-10-28-bauducco-a-magia-da-bauducco-encontrou-a-magi",
+    "date": "2026-10-28",
+    "brand": "Bauducco",
+    "title": "A magia da Bauducco encontrou a magia de Toy Story",
+    "agency": "Galeria",
+    "source": "Clube de Criação",
+    "url": "https://clubedecriacao.com.br/acervo/a-magia-da-bauducco-encontrou-a-magia-de-toy-story-galeria-bauducco/",
+    "region": "Brasil",
+    "cc": "BR",
+    "summary": "Bauducco estreia “A magia da Bauducco encontrou a magia de Toy Story”, campanha assinada pela Galeria. Direção de criação de Phil Daijó, Rafael Ziggy, Silvio Amorim.",
+    "addedAt": "2026-11-26T14:05:21Z",
+    "yt": [
+      "NTYc-sozDZw"
+    ],
+    "image": "https://clubedecriacao.com.br/wp-content/uploads/2026/10/CAPA-16X09-1024x572.png",
+    "ficha": [
+      {
+        "role": "Cliente",
+        "name": "Bauducco®"
+      },
+      {
+        "role": "Produto",
+        "name": "Bauducco Chocottone® e Bauducco® Panettone"
+      },
+      {
+        "role": "Campanha",
+        "name": "Bauducco Natal Disney"
+      },
+      {
+        "role": "Agência",
+        "name": "GALERIA.ag"
+      },
+      {
+        "role": "Creative Chairman",
+        "name": "Rafael Urenha"
+      },
+      {
+        "role": "CCO",
+        "name": "Phil Daijó, Rafael Ziggy"
+      },
+      {
+        "role": "Direção Executiva de Criação",
+        "name": "Silvio Amorim"
+      },
+      {
+        "role": "Direção de Criação",
+        "name": "Raphael Lucone, Thomaz Dantas"
+      },
+      {
+        "role": "Criação",
+        "name": "Epaminondas Paulino, Enzo Roncari, Giovanna Lazzarotti, Jefferson Iago"
+      },
+      {
+        "role": "Atendimento",
+        "name": "Ana Coutinho, Michelle Latessa, Fabiana Vieira, Jaqueline Martins e Heloá Zelli"
+      },
+      {
+        "role": "Aprovação cliente",
+        "name": "André Britto, André Kieling, Carolina Gonçalves Beal, Myrhella Lucarini Caseri de Paula e Marcella da Silva Postigo"
+      },
+      {
+        "role": "Mídia",
+        "name": "Paulo Ilha, Patrícia Alves, Gabriela Loureiro, Mariana Navarro, Gustavo Ricardo, Ariela Guirão"
+      },
+      {
+        "role": "PR",
+        "name": "Patricia Capuchinho, Tercio Silveira, Analuá Baptista e Klara Oliveira"
+      },
+      {
+        "role": "Estratégia",
+        "name": "Carol Mello, Danilo Santos, Izabela Eusébio e Giulia Arruda"
+      },
+      {
+        "role": "Direção de Produção Gráfica e Digital",
+        "name": "Marcos Moura e Durval Brum"
+      },
+      {
+        "role": "Produção Gráfica",
+        "name": "Durval Brum e Paulo Ribeiro"
+      },
+      {
+        "role": "Produção Integrada",
+        "name": "Ducha Lopes, Andrea Metzker, Michelle Teixeira, Cintia Mantero, Malu Santos"
+      },
+      {
+        "role": "Produção",
+        "name": "The Magic AI"
+      },
+      {
+        "role": "Direção",
+        "name": "Felipe Valério (Wait)"
+      },
+      {
+        "role": "Produção Executiva",
+        "name": "Ana Maitê Fröhlich, Bruno Meira, Matheus Akkari"
+      },
+      {
+        "role": "Produtor Executivo Associado",
+        "name": "Gabriel Meira de Vasconcellos"
+      },
+      {
+        "role": "Creative Leads",
+        "name": "Fabio Meirelles, Gustavo Tissot"
+      },
+      {
+        "role": "Editor",
+        "name": "Bruno Athaydes"
+      },
+      {
+        "role": "Audio",
+        "name": "Clamp Music"
+      },
+      {
+        "role": "Produção",
+        "name": "Tiago Abrahao"
+      },
+      {
+        "role": "Atendimento",
+        "name": "Claudia Lampert"
+      }
+    ]
   },
   {
     "id": "2026-10-28-jugos-frutop-pulpix-nuestro-talento-llega-tambien-al-car",

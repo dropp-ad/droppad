@@ -318,7 +318,8 @@ def mesma_campanha(a, b):
         d = abs((dt.date.fromisoformat(a["date"]) - dt.date.fromisoformat(b["date"])).days)
     except (ValueError, KeyError):
         return False
-    return d <= 3 and bool(_palavras(a.get("title")) & _palavras(b.get("title")))
+    marca = _palavras(a.get("brand"))
+    return d <= 3 and bool((_palavras(a.get("title")) - marca) & (_palavras(b.get("title")) - marca))
 
 
 def enriquecer(velha, nova):
