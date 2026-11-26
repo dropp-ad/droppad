@@ -33,6 +33,8 @@ jobs:
                 campaigns.json novidades.json views.json arquivo.json .nojekyll _site/
           # imagem que aparece ao compartilhar o link (WhatsApp, redes)
           cp image.png _site/compartilhar.png
+          # arquivo de verificação do Google Search Console
+          cp google70ed4a174e58c73b.html _site/
           # versão enxuta das campanhas, que é o que o site carrega
           python3 tools/feed.py campaigns.json _site
           # uma página por campanha (Google e prévia de link) + sitemap.xml e robots.txt
