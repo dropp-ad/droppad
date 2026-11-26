@@ -4,8 +4,8 @@
       "etag": "W/\"5ee6-cMWHGQgh3zUMrXRdwLKS/QMfSEs\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"04546c7f45463611c1d5b1d10372fe0f\"",
-      "mod": "Thu, 26 Nov 2026 12:57:52 GMT"
+      "etag": "\"932721f4c86b6ec71a24ea7942c46150\"",
+      "mod": "Thu, 26 Nov 2026 13:21:47 GMT"
     },
     "https://creativosbr.com.br/feed/": {
       "etag": "W/\"3c68efce364b9a1ef1e0944fdd06b460\"",
@@ -33,19 +33,19 @@
       "etag": "W/\"30bd5-s6LGGvUWc04hJgVTrLhXlwWptU0\""
     },
     "https://www.nossomeio.com.br/feed/": {
-      "etag": "\"21c24-6612d05057c3b\"",
-      "mod": "Thu, 26 Nov 2026 12:24:05 GMT"
+      "etag": "\"229a0-6612dd24e445f\"",
+      "mod": "Thu, 26 Nov 2026 13:21:30 GMT"
     },
     "https://www.adworld.ie/feed/": {
       "etag": "\"b778f8e5ac045bc29a7be1e54d179c8b\"",
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"18f7a6b114d72a769a6ffea5de7aedfb\"",
-      "mod": "Thu, 26 Nov 2026 12:20:16 GMT"
+      "etag": "W/\"32fd12ce3af0d83529d33b1118a220bb\"",
+      "mod": "Thu, 26 Nov 2026 13:11:28 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 13:12:22 GMT"
+      "mod": "Thu, 26 Nov 2026 13:21:28 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 13:12:29 GMT"
+      "mod": "Thu, 26 Nov 2026 13:22:29 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -118,11 +118,11 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Thu, 26 Nov 2026 12:58:24 GMT"
+      "mod": "Thu, 26 Nov 2026 13:20:18 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"061bfa3fde651f0ce57dbab0f5321f52\"",
-      "mod": "Thu, 26 Nov 2026 13:00:00 GMT"
+      "etag": "\"b79de4282cb95061aae36b2109a8942a\"",
+      "mod": "Thu, 26 Nov 2026 13:15:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"70cd0f6a2e9c06acc2d0faaf3ae2f4c8\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 13:12:17 GMT"
+      "mod": "Thu, 26 Nov 2026 13:21:30 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -249,7 +249,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 13:12:31 GMT"
+      "mod": "Thu, 26 Nov 2026 13:22:31 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -285,12 +285,9 @@
     "https://www.thefirmpr.com/feed/": {
       "etag": "\"af6b524cafc50e94678aee7948be94b3\"",
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
-    },
-    "https://www.marketingdirecto.com/feed/": {
-      "mod": "Thu, 26 Nov 2026 12:23:27 GMT"
     }
   },
-  "yt_pos": 96,
+  "yt_pos": 102,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1126,15 +1123,18 @@
       "LLYC Africa": "",
       "Kantar Africa": "",
       "BrandLead": "",
-      "Eclipse Communications": "eclipsecommunications"
+      "Eclipse Communications": "eclipsecommunications",
+      "Meropa Communications": "",
+      "House of Brave": "houseofbrave_",
+      "Machine_": ""
     },
     "tentadas": {
-      "Meropa Communications": [
-        "meropacommunications",
-        "meropacommunicationsagency"
+      "Tin Can": [
+        "tincan",
+        "tincanagency"
       ]
     },
-    "pos": 1365,
+    "pos": 1370,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1635,9 +1635,11 @@
       "dentsu Nigeria",
       "LLYC Africa",
       "Kantar Africa",
-      "BrandLead"
+      "BrandLead",
+      "Meropa Communications",
+      "Tin Can"
     ],
-    "rodadas": 2649,
+    "rodadas": 2659,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2856,7 +2858,10 @@
       "Kantar Africa": [],
       "BrandLead": [],
       "Meropa Communications": [],
-      "Eclipse Communications": []
+      "Eclipse Communications": [],
+      "House of Brave": [],
+      "Tin Can": [],
+      "Machine_": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3634,6 +3639,6 @@
     "https://www.marketingdirecto.com/campanas-navidenas/acciona-vuelve-cobijarse-magia-de-la-animacion-2d-nuevo-delicioso-spot-navideno",
     "https://creativosbr.com.br/subway-coloca-nepo-babies-na-fila-em-campanha-de-black-friday"
   ],
-  "ultima_rodada": "2026-11-26T13:12:26.617994+00:00",
+  "ultima_rodada": "2026-11-26T13:22:27.043698+00:00",
   "ultima_novidade": "2026-11-26T12:30:26.938854+00:00"
 }
