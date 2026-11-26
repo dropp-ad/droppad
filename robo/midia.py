@@ -68,6 +68,11 @@ def bate_com_a_campanha(c, texto):
     """O texto (título de vídeo ou de matéria) fala desta campanha? Marca como palavra inteira E um sinal forte:
     a agência (palavra inteira), o nome da campanha entre aspas, um nome próprio composto da campanha
     ("Ary Fontoura", "Gloss Absolu", "Really Philly") ou duas palavras específicas do título."""
+    # o vídeo tem exatamente o título da campanha (longo o bastante para não ser genérico): é ele,
+    # mesmo sem a marca no nome do vídeo ("What we make of this moment, will make this moment.")
+    tit = A.chave(c.get("title", ""))
+    if len(tit) >= 15 and len(c.get("title", "").split()) >= 3 and tit in A.chave(texto):
+        return True
     if not _tem_marca(c["brand"], texto):
         return False
     t = re.sub(r"\s+", " ", A.sem_acento(texto).lower())
