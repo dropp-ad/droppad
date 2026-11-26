@@ -37,6 +37,11 @@ DESDE = (AGORA - dt.timedelta(days=int(os.environ.get("JANELA_DIAS", "7")))).dat
 ENV = lambda k, p: int(os.environ.get(k, p))  # noqa: E731
 APIFY_EMPRESAS, APIFY_POR_EMPRESA = ENV("APIFY_EMPRESAS", "150"), ENV("APIFY_POR_EMPRESA", "3")
 APIFY_BUSCAS, APIFY_POR_BUSCA = ENV("APIFY_BUSCAS", "60"), ENV("APIFY_POR_BUSCA", "25")
+# perfis de pessoas que postam campanhas de várias agências (curadores): os posts novos de cada um
+PERFIS = [
+    {"nome": "Rian Swart", "url": "https://www.linkedin.com/in/rian-swart-425570143/"},
+]
+APIFY_POR_PERFIL = ENV("APIFY_POR_PERFIL", "15")
 CS_AGENCIAS, CS_COLETAS = ENV("CORESIGNAL_AGENCIAS", "150"), ENV("CORESIGNAL_COLETAS", "60")
 PALAVRAS = "(campaign OR campanha OR campaña OR campagne OR film OR filme OR spot OR commercial)"
 
@@ -224,6 +229,31 @@ def ler_apify(todas, estado, placar):
             a = next((a for a in sorted(bloco, key=lambda a: -len(a["nome"])) if A.chave(a["nome"]) in onde), None)
             out.append(apify_item(it, "apify", "funcionario", a))
     placar["citacoes"] = {"http": st2, "buscas": len(ags), "posts": total}
+    # 3) perfis de curadores: a agência vem do próprio texto (uma das agências da lista, ou "by/por X")
+    st3, itens = apify_rodar("harvestapi~linkedin-profile-posts",
+                             {"targetUrls": [p["url"] for p in PERFIS], "maxPosts": APIFY_POR_PERFIL},
+                             len(PERFIS) * APIFY_POR_PERFIL, tok)
+    n3 = 0
+    if isinstance(itens, list):
+        por_nome = sorted(todas, key=lambda a: -len(a["nome"]))
+        for it in itens:
+            if not isinstance(it, dict):
+                continue
+            texto = it.get("content") or it.get("text") or ""
+            autor = (it.get("author") or {}).get("name") or ""
+            perfil = next((p["nome"] for p in PERFIS if A.chave(p["nome"]) in A.chave(autor)), PERFIS[0]["nome"])
+            k = A.chave(texto)
+            a = next((a for a in por_nome if len(A.chave(a["nome"])) >= 4 and A.chave(a["nome"]) in k), None)
+            if not a:
+                m = re.search(r"\b(?:by|por|agency:?|agência:?|agencia:?|created by|criad[ao] pela)\s+@?([A-Z][\w&.’'\-]+(?: [A-Z][\w&.’'\-]+){0,3})", texto)
+                a = {"nome": m.group(1).strip() if m else "", "slugs": [""], "regiao": "Global", "cc": ""}
+            a = dict(a, curador=perfil)
+            out.append(apify_item(it, "apify", "curador", a))
+            n3 += 1
+    else:
+        placar["perfis_erro"] = str(itens)[:300]
+    placar["perfis"] = {"http": st3, "posts": n3}
+    total += n3
     placar["status"] = "ok"
     placar["custo_usd"] = round((placar["empresas"].get("posts", 0) + total) * 0.0028, 2)
     return out
@@ -332,7 +362,7 @@ def campanha_por_marca(p, a, conta, falso):
     marca = ""
     for h in re.findall(r"#([\wÀ-ÿ]{3,40})", texto):
         k = A.chave(h)
-        if k in conhecidas and not k.startswith(ag) and not ag.startswith(k):
+        if k in conhecidas and not (ag and (k.startswith(ag) or ag.startswith(k))):
             marca = conhecidas[k]
             break
     if not marca:
@@ -349,11 +379,11 @@ def campanha_por_marca(p, a, conta, falso):
         return None
     linhas = [A.limpar(x) for x in A.HASHTAG.sub(" ", texto).splitlines() if A.limpar(x).strip(" .·-—|")]
     titulo = (linhas[0] if linhas else marca)[:140]
-    q = re.search(r"\b(?:campanha|campaign|campaña|filme|film|projeto|project)\s+[“\"«]([^”\"»]{3,70})[”\"»]", inicio, re.I)
+    q = re.search(r"\b(?:campanha|campaign|campaña|filme|film|projeto|project)\s*:?\s*[“\"«]([^”\"»]{3,70})[”\"»]", inicio, re.I)
     if q:
         titulo = q.group(1).strip()  # o nome da campanha entre aspas é o melhor título
     return {"id": "%s-%s-%s" % (data, A.slug(marca, 20), A.slug(titulo, 36)), "date": data, "brand": marca,
-            "title": titulo, "agency": a["nome"], "source": "LinkedIn · " + a["nome"], "url": p["url"],
+            "title": titulo, "agency": a["nome"], "source": "LinkedIn · " + (a.get("curador") or a["nome"]), "url": p["url"],
             "region": a["regiao"], "cc": a["cc"], "summary": A.primeira_frase(inicio),
             "addedAt": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")}
 
@@ -376,7 +406,7 @@ def vira_campanha(p):
     if A.INSTITUCIONAL.search(c["brand"]) or NAO_LI.search(p["texto"][:400]):
         return None
     # o site não embute post do LinkedIn: entra como card, com a imagem do post e o link para ele
-    c["source"] = "LinkedIn · " + a["nome"]
+    c["source"] = "LinkedIn · " + (a.get("curador") or a["nome"])
     c.pop("video", None)
     if p["imagem"]:
         c["image"] = p["imagem"]
