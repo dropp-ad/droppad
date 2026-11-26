@@ -84,9 +84,9 @@ def miolo_da_pagina(url):
             pg = r.read(2_000_000).decode("utf-8", "replace")
     except Exception:  # noqa: BLE001
         return ""
-    # só a parte principal (sem a barra lateral de "últimas", que tem filmes de outras campanhas)
-    m = re.search(r"<(main|article)\b.*?</\1>", pg, re.S | re.I)
-    return m.group(0) if m else pg[:len(pg) // 2]
+    # o primeiro filme da página é o da campanha (a barra lateral vem depois e só tem links)
+    m = re.search(r"<iframe[^>]+(?:youtube|vimeo)[^>]+>", pg, re.I)
+    return m.group(0) if m else ""
 
 
 def ficha_de(conteudo):
@@ -131,6 +131,8 @@ def texto_proprio(marca, nome, agencia, ficha, pecas):
         partes.append("Direção de criação de %s." % dc)
     prod = valor(ficha, r"produtora( de imagem| de filme)?$", r"production company", r"productora", r"casa produtora")
     dire = pessoas(ficha, r"^dire[çc][ãa]o( de cena)?$|^diretor(a)?( de cena)?$|^director$|^film director$|^realiza")
+    if prod and ("," in prod or " e " in prod or len(prod.split()) > 5):
+        prod = ""  # é a lista de pessoas da produção da agência, não o nome da produtora
     if prod and dire:
         partes.append("O filme tem direção de %s, pela %s." % (dire, prod))
     elif prod:
@@ -217,7 +219,10 @@ def campanha_das_ultimas(x):
         return None
     data = x["date"][:10]
     regiao, cc = regiao_de(agencia, corpo[:400])
-    if regiao == "Brasil" and not re.search(r"\bbrasil|brasileir|são paulo|rio de janeiro", corpo, re.I):
+    fora = re.search(r"\b(EUA|Estados Unidos|Nova York|Los Angeles|Reino Unido|Londres|Inglaterra|França|Paris|Alemanha|"
+                     r"Itália|Espanha|Japão|Tóquio|China|Coreia|Índia|Austrália|Canadá|México|Argentina|Holanda|Suécia|"
+                     r"Dinamarca|Noruega|Irlanda|Escócia|Dubai|Emirados|África do Sul|Nova Zelândia|Singapura)\b", corpo[:700])
+    if regiao == "Brasil" and fora and not re.search(r"\bbrasil|brasileir|são paulo|rio de janeiro", corpo[:700], re.I):
         regiao, cc = "Global", ""
     og = ((x.get("yoast_head_json") or {}).get("og_image") or [{}])[0].get("url", "")
     c = {
