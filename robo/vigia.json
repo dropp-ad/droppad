@@ -41,11 +41,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"ecb9fba6848b7b20c90ace809a04f22e\"",
-      "mod": "Thu, 26 Nov 2026 15:37:54 GMT"
+      "etag": "W/\"d3fe91afe74942cb6df51186445736ab\"",
+      "mod": "Thu, 26 Nov 2026 15:40:35 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 15:38:39 GMT"
+      "mod": "Thu, 26 Nov 2026 15:40:40 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 15:38:40 GMT"
+      "mod": "Thu, 26 Nov 2026 15:40:41 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 15:38:40 GMT"
+      "mod": "Thu, 26 Nov 2026 15:40:32 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -249,7 +249,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 15:30:43 GMT"
+      "mod": "Thu, 26 Nov 2026 15:40:43 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -311,12 +311,9 @@
     "https://ansonstoner.com/feed/": {
       "etag": "\"3d1dfd4ec40c364ee8f3707791fc87dc\"",
       "mod": "Thu, 30 Jul 2026 19:59:18 GMT"
-    },
-    "https://www.marketingdirecto.com/feed/": {
-      "mod": "Thu, 26 Nov 2026 13:22:15 GMT"
     }
   },
-  "yt_pos": 96,
+  "yt_pos": 156,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1164,7 +1161,7 @@
       "Liquorice": ""
     },
     "tentadas": {},
-    "pos": 1593,
+    "pos": 1595,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1674,7 +1671,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 2796,
+    "rodadas": 2798,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3448,7 +3445,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 21,
+    "pos_quente": 23,
     "lida": {
       "droga5sp": "2026-11-26T15:19:36.939289+00:00",
       "mboothagency": "2026-11-26T15:19:36.939289+00:00",
@@ -3491,7 +3488,11 @@
       "meltwater": "2026-11-26T15:37:36.929976+00:00",
       "braveagency": "2026-11-26T15:37:36.929976+00:00",
       "emplifi": "2026-11-26T15:38:36.819570+00:00",
-      "strikedigitalagency": "2026-11-26T15:38:36.819570+00:00"
+      "strikedigitalagency": "2026-11-26T15:38:36.819570+00:00",
+      "kesselskramer": "2026-11-26T15:39:37.230750+00:00",
+      "northfolkagency": "2026-11-26T15:39:37.230750+00:00",
+      "meaningfulsocialclub": "2026-11-26T15:40:36.581165+00:00",
+      "vamp": "2026-11-26T15:40:36.581165+00:00"
     },
     "ultimo_post": {
       "droga5sp": "2026-11-25",
@@ -3533,7 +3534,10 @@
       "meltwater": "2026-11-20",
       "braveagency": "2020-09-16",
       "emplifi": "2026-11-26",
-      "strikedigitalagency": "2026-11-25"
+      "strikedigitalagency": "2026-11-25",
+      "kesselskramer": "2026-11-23",
+      "meaningfulsocialclub": "2026-11-24",
+      "vamp": "2026-11-26"
     }
   },
   "vistos": [
@@ -3771,6 +3775,6 @@
     "https://roastbrief.com.mx/2026/11/la-temporada-alta-impulsa-el-uso-de-inteligencia-artificial-en-whatsapp-para-optimizar-la-atencion-comercial",
     "https://www.merca20.com/mientras-los-mexicanos-se-preparan-para-el-black-friday-bbva-santander-banamex-y-hsbc-dan-este-importante-anuncio-en-el-dof"
   ],
-  "ultima_rodada": "2026-11-26T15:38:36.819570+00:00",
-  "ultima_novidade": "2026-11-26T15:38:36.819570+00:00"
+  "ultima_rodada": "2026-11-26T15:40:36.581165+00:00",
+  "ultima_novidade": "2026-11-26T15:40:36.581165+00:00"
 }
