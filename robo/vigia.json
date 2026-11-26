@@ -45,11 +45,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"078dbedde6d64f28f5df3d4d4a6b26b9\"",
-      "mod": "Thu, 26 Nov 2026 06:05:45 GMT"
+      "etag": "W/\"23a0c2ba9bcdec0bc266e17c0bc27604\"",
+      "mod": "Thu, 26 Nov 2026 07:00:42 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 07:01:29 GMT"
+      "mod": "Thu, 26 Nov 2026 07:32:16 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -64,7 +64,7 @@
       "mod": "Thu, 07 May 2026 12:47:56 GMT"
     },
     "https://www.decisionmarketing.co.uk/feed/": {
-      "mod": "Thu, 26 Nov 2026 07:00:21 GMT"
+      "mod": "Thu, 26 Nov 2026 07:05:19 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
       "etag": "\"562aad5da05b4a7689086081226ca974\"",
@@ -79,7 +79,7 @@
       "mod": "Thu, 26 Nov 2026 01:19:07 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Thu, 26 Nov 2026 06:42:15 GMT"
+      "mod": "Thu, 26 Nov 2026 07:29:16 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"d83ce2d22817c38e620e9ddafb0870a2\"",
@@ -90,7 +90,7 @@
       "mod": "Thu, 26 Nov 2026 00:00:09 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 01:55:46 GMT"
+      "mod": "Thu, 26 Nov 2026 07:05:35 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
       "etag": "\"0ab6d16ee376eec886f1959b98a72dc3\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 07:02:16 GMT"
+      "mod": "Thu, 26 Nov 2026 07:32:16 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"ef44e3c1950bb78a8b7a63b80e6e58d6-gzip\"",
-      "mod": "Thu, 26 Nov 2026 07:01:20 GMT"
+      "etag": "W/\"f012411a873e5c39b5a1fa158a9223c1-gzip\"",
+      "mod": "Thu, 26 Nov 2026 07:20:38 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -159,7 +159,7 @@
       "mod": "Tue, 27 Oct 2026 14:40:14 GMT"
     },
     "https://www.thjnk.ch/blog-feed.xml": {
-      "mod": "Wed, 25 Nov 2026 19:01:46 GMT"
+      "mod": "Thu, 26 Nov 2026 07:27:17 GMT"
     },
     "https://www.tbwa.it/feed/": {
       "etag": "W/\"b893c0154ed7bafaac2f0b8c9b414324\"",
@@ -174,8 +174,8 @@
       "mod": "Fri, 06 Nov 2026 09:29:17 GMT"
     },
     "https://vilvigroup.lt/feed/": {
-      "etag": "\"a507bf38ab4ba61df74f61def7fb5b6f\"",
-      "mod": "Fri, 20 Nov 2026 12:46:04 GMT"
+      "etag": "\"06424fb4d8118bfd755842024bf42108\"",
+      "mod": "Thu, 26 Nov 2026 07:26:17 GMT"
     },
     "https://www.cohnandjansen.ro/feed/": {
       "etag": "\"ea5f6db108ae1cfc1ac4d2200809ccb4\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 07:01:16 GMT"
+      "mod": "Thu, 26 Nov 2026 07:31:59 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 06:54:17 GMT"
+      "mod": "Thu, 26 Nov 2026 07:26:17 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 168,
+  "yt_pos": 39,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1051,18 +1051,27 @@
       "Holy Brand Agency": "",
       "CBI Market": "cbimarket",
       "Mambo Creative Agency": "",
-      "Thera Media": ""
+      "Thera Media": "",
+      "iVirtual": "",
+      "Swing Media Marketing": "",
+      "Agencia SEO Monterrey": "",
+      "Orbis Agencia de Marketing Digital": "",
+      "Ogilvy México": "",
+      "Leo Burnett México": "",
+      "Publicis México": "",
+      "VML México": ""
     },
     "tentadas": {
-      "iVirtual": [
-        "ivirtual",
-        "ivirtualagency"
+      "iProspect México": [
+        "iprospectmxico",
+        "iprospectmxicoagency"
       ],
-      "Swing Media Marketing": [
-        "swingmediamarketing"
+      "dentsu México": [
+        "dentsumxico",
+        "dentsumxicoagency"
       ]
     },
-    "pos": 1180,
+    "pos": 1195,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1471,9 +1480,17 @@
       "Holy Brand Agency",
       "Mambo Creative Agency",
       "Thera Media",
-      "iVirtual"
+      "iVirtual",
+      "Swing Media Marketing",
+      "Agencia SEO Monterrey",
+      "Orbis Agencia de Marketing Digital",
+      "Ogilvy México",
+      "Leo Burnett México",
+      "Publicis México",
+      "VML México",
+      "dentsu México"
     ],
-    "rodadas": 2279,
+    "rodadas": 2309,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2592,7 +2609,15 @@
       "CBI Market": [],
       "Thera Media": [],
       "iVirtual": [],
-      "Swing Media Marketing": []
+      "Swing Media Marketing": [],
+      "Agencia SEO Monterrey": [],
+      "Orbis Agencia de Marketing Digital": [],
+      "Ogilvy México": [],
+      "Leo Burnett México": [],
+      "Publicis México": [],
+      "VML México": [],
+      "dentsu México": [],
+      "iProspect México": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3355,8 +3380,9 @@
     "https://www.afaqs.com/news/advertising/sachin-tendulkar-calls-out-unhealthy-habits-in-sugarfits-new-campaign-12842400",
     "https://www.contentgrip.com/amazon-meta-muse-ad-talks",
     "https://www.afaqs.com/news/mktg/bisleris-latest-newspaper-ad-reassures-consumers-amid-fssai-controversy-12842440",
-    "https://www.afaqs.com/news/advertising/milky-mists-capella-challenges-the-dark-chocolate-advertising-playbook-12842457"
+    "https://www.afaqs.com/news/advertising/milky-mists-capella-challenges-the-dark-chocolate-advertising-playbook-12842457",
+    "https://www.merca20.com/marketing-2027-como-cambiara-la-distribucion-de-los-presupuestos-publicitarios"
   ],
-  "ultima_rodada": "2026-11-26T07:02:12.658561+00:00",
+  "ultima_rodada": "2026-11-26T07:32:13.129765+00:00",
   "ultima_novidade": "2026-11-26T06:30:12.769167+00:00"
 }
