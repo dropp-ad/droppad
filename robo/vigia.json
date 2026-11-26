@@ -45,11 +45,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"23a0c2ba9bcdec0bc266e17c0bc27604\"",
-      "mod": "Thu, 26 Nov 2026 07:00:42 GMT"
+      "etag": "W/\"72110d00bb7bcefb298939eccd19ab0b\"",
+      "mod": "Thu, 26 Nov 2026 08:00:05 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 07:41:25 GMT"
+      "mod": "Thu, 26 Nov 2026 08:11:39 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -64,7 +64,7 @@
       "mod": "Thu, 07 May 2026 12:47:56 GMT"
     },
     "https://www.decisionmarketing.co.uk/feed/": {
-      "mod": "Thu, 26 Nov 2026 07:05:19 GMT"
+      "mod": "Thu, 26 Nov 2026 07:46:52 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
       "etag": "\"562aad5da05b4a7689086081226ca974\"",
@@ -79,7 +79,7 @@
       "mod": "Thu, 26 Nov 2026 01:19:07 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Thu, 26 Nov 2026 07:29:16 GMT"
+      "mod": "Thu, 26 Nov 2026 08:02:29 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"d83ce2d22817c38e620e9ddafb0870a2\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 07:42:17 GMT"
+      "mod": "Thu, 26 Nov 2026 08:12:29 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"9306c74b5cadf5c0257e14103306789e-gzip\"",
-      "mod": "Thu, 26 Nov 2026 07:34:54 GMT"
+      "etag": "W/\"fa11f10b8656386fdb8b9d81fe22e581-gzip\"",
+      "mod": "Thu, 26 Nov 2026 08:09:37 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -185,9 +185,6 @@
       "etag": "\"5b10a6b158834169546a0780b1fe9526\"",
       "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
     },
-    "https://www.marketingdirecto.com/feed/": {
-      "mod": "Wed, 25 Nov 2026 16:09:10 GMT"
-    },
     "https://duncanchannon.com/feed/": {
       "etag": "W/\"478aa93ed5b8aeec455efd1ac2c952f4\"",
       "mod": "Tue, 17 Nov 2026 23:29:59 GMT"
@@ -197,7 +194,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 07:42:17 GMT"
+      "mod": "Thu, 26 Nov 2026 08:12:01 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +271,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 07:36:19 GMT"
+      "mod": "Thu, 26 Nov 2026 08:07:31 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +313,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 45,
+  "yt_pos": 63,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1063,14 +1060,25 @@
       "dentsu México": "",
       "iProspect México": "",
       "Jellyfish México": "",
-      "Accenture Song México": ""
+      "Accenture Song México": "",
+      "Edelman México": "",
+      "Weber Shandwick México": "",
+      "Ketchum México": "",
+      "FleishmanHillard México": "",
+      "Burson México": "",
+      "Golin México": ""
     },
     "tentadas": {
-      "Edelman México": [
-        "edelmanmxico"
+      "Carat México": [
+        "caratmxico",
+        "caratmxicoagency"
+      ],
+      "Havas Media México": [
+        "havasmediamxico",
+        "havasmediamxicoagency"
       ]
     },
-    "pos": 1200,
+    "pos": 1215,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1489,9 +1497,17 @@
       "VML México",
       "dentsu México",
       "iProspect México",
-      "Jellyfish México"
+      "Jellyfish México",
+      "Accenture Song México",
+      "Edelman México",
+      "Weber Shandwick México",
+      "Ketchum México",
+      "FleishmanHillard México",
+      "Burson México",
+      "Golin México",
+      "Havas Media México"
     ],
-    "rodadas": 2319,
+    "rodadas": 2349,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2621,7 +2637,14 @@
       "iProspect México": [],
       "Jellyfish México": [],
       "Accenture Song México": [],
-      "Edelman México": []
+      "Edelman México": [],
+      "Weber Shandwick México": [],
+      "Ketchum México": [],
+      "FleishmanHillard México": [],
+      "Burson México": [],
+      "Golin México": [],
+      "Havas Media México": [],
+      "Carat México": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3385,8 +3408,9 @@
     "https://www.contentgrip.com/amazon-meta-muse-ad-talks",
     "https://www.afaqs.com/news/mktg/bisleris-latest-newspaper-ad-reassures-consumers-amid-fssai-controversy-12842440",
     "https://www.afaqs.com/news/advertising/milky-mists-capella-challenges-the-dark-chocolate-advertising-playbook-12842457",
-    "https://www.merca20.com/marketing-2027-como-cambiara-la-distribucion-de-los-presupuestos-publicitarios"
+    "https://www.merca20.com/marketing-2027-como-cambiara-la-distribucion-de-los-presupuestos-publicitarios",
+    "https://www.merca20.com/retromarketing-parece-una-pelicula-de-terror-pero-es-un-comercial-del-ano-2000-protagonizado-por-un-bailarin-de-ballet-de-mas-de-1-90-metros"
   ],
-  "ultima_rodada": "2026-11-26T07:42:13.242802+00:00",
+  "ultima_rodada": "2026-11-26T08:12:27.099541+00:00",
   "ultima_novidade": "2026-11-26T06:30:12.769167+00:00"
 }
