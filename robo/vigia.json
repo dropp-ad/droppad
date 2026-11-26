@@ -23,8 +23,8 @@
       "mod": "Wed, 25 Nov 2026 23:30:14 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"efe3b2a83362405492bc9c920bb28f04\"",
-      "mod": "Thu, 26 Nov 2026 01:42:03 GMT"
+      "etag": "\"cf437999b36ed554ae4d598580d56e7d\"",
+      "mod": "Thu, 26 Nov 2026 01:41:28 GMT"
     },
     "https://www.marketingdive.com/feeds/news/": {
       "mod": "Wed, 25 Nov 2026 15:46:00 GMT"
@@ -34,7 +34,7 @@
       "mod": "Wed, 25 Nov 2026 15:06:41 GMT"
     },
     "https://www.contentgrip.com/feed/": {
-      "etag": "W/\"30254-kg6o9qTGWkQt8DHLBlt1sTNiZL0\""
+      "etag": "W/\"30753-98Q5W2X3t2WLqV+gKghgtuC7k5g\""
     },
     "https://www.nossomeio.com.br/feed/": {
       "etag": "\"22442-6612035414f07\"",
@@ -45,19 +45,19 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"a58a6ba4cad16c9e4658407c2f227f77\"",
-      "mod": "Thu, 26 Nov 2026 02:30:22 GMT"
+      "etag": "W/\"64842451b4c0378022736ee6713245da\"",
+      "mod": "Thu, 26 Nov 2026 04:58:56 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 04:32:04 GMT"
+      "mod": "Thu, 26 Nov 2026 05:01:15 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"2af192e271387a2afc6f85376e569c01\"",
-      "mod": "Thu, 26 Nov 2026 01:46:27 GMT"
+      "etag": "\"e8b2f5a4e29d7631e5285f108810ce0a\"",
+      "mod": "Thu, 26 Nov 2026 04:38:42 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795652030-gzip\"",
-      "mod": "Thu, 26 Nov 2026 00:13:50 GMT"
+      "etag": "W/\"1795668609-gzip\"",
+      "mod": "Thu, 26 Nov 2026 04:50:09 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -79,7 +79,7 @@
       "mod": "Thu, 26 Nov 2026 01:19:07 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Thu, 26 Nov 2026 04:01:15 GMT"
+      "mod": "Thu, 26 Nov 2026 04:47:06 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"d83ce2d22817c38e620e9ddafb0870a2\"",
@@ -101,11 +101,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 04:32:16 GMT"
+      "mod": "Thu, 26 Nov 2026 05:02:16 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"ff1843305c438f46396210bf1a7360b9-gzip\"",
-      "mod": "Thu, 26 Nov 2026 04:31:04 GMT"
+      "etag": "W/\"81bd872eee588ba1dbd557c7d920707d-gzip\"",
+      "mod": "Thu, 26 Nov 2026 04:57:58 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 04:31:31 GMT"
+      "mod": "Thu, 26 Nov 2026 05:02:14 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 04:26:17 GMT"
+      "mod": "Thu, 26 Nov 2026 04:56:18 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 78,
+  "yt_pos": 96,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1007,18 +1007,23 @@
       "Leo Burnett Tokyo": "",
       "Grey Tokyo": "",
       "Cheil Japan": "",
-      "We Are Social Tokyo": ""
+      "We Are Social Tokyo": "",
+      "VML Japan": "",
+      "Jellyfish Japan": "",
+      "Criteo Japan": "",
+      "Cartah Holdings": "",
+      "Opt": "optagency",
+      "Septeni Holdings": "",
+      "Transcosmos": "",
+      "FullSpeed": "",
+      "GMO Internet Group": ""
     },
     "tentadas": {
-      "VML Japan": [
-        "vmljapan",
-        "vmljapanagency"
-      ],
-      "Jellyfish Japan": [
-        "jellyfishjapan"
+      "Recruit": [
+        "recruit"
       ]
     },
-    "pos": 1105,
+    "pos": 1120,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1392,9 +1397,16 @@
       "Leo Burnett Tokyo",
       "Grey Tokyo",
       "Cheil Japan",
-      "We Are Social Tokyo"
+      "We Are Social Tokyo",
+      "VML Japan",
+      "Jellyfish Japan",
+      "Criteo Japan",
+      "Cartah Holdings",
+      "Septeni Holdings",
+      "Transcosmos",
+      "FullSpeed"
     ],
-    "rodadas": 2129,
+    "rodadas": 2159,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2469,7 +2481,15 @@
       "Cheil Japan": [],
       "We Are Social Tokyo": [],
       "VML Japan": [],
-      "Jellyfish Japan": []
+      "Jellyfish Japan": [],
+      "Criteo Japan": [],
+      "Cartah Holdings": [],
+      "Septeni Holdings": [],
+      "Opt": [],
+      "Transcosmos": [],
+      "FullSpeed": [],
+      "GMO Internet Group": [],
+      "Recruit": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3227,6 +3247,6 @@
     "https://www.mediaweek.com.au/radio/mediaworks-holds-new-zealand-commercial-radio-lead",
     "https://www.mediaweek.com.au/marketing/nrma-insurance-evolves-a-help-company-platform-with-accenture-song-campaign"
   ],
-  "ultima_rodada": "2026-11-26T04:32:12.367088+00:00",
+  "ultima_rodada": "2026-11-26T05:02:12.586311+00:00",
   "ultima_novidade": "2026-11-26T03:14:11.598222+00:00"
 }
