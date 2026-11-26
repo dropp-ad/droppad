@@ -58,6 +58,12 @@ def main(src, dst):
         if story and (not tem_filme(x) or CORTE.search(x.get("frase") or x.get("summary") or "")) and cid and "/" not in cid and not cid.startswith("."):
             with open(os.path.join(pasta, cid + ".json"), "w", encoding="utf-8") as f:
                 json.dump({"story": story[:6]}, f, ensure_ascii=False, separators=(",", ":"))
+            # o mesmo texto em inglês e espanhol, quando o robô de traduções já fez
+            for lg, t in (x.get("tr") or {}).items():
+                st_lg = [s for s in ((t or {}).get("story") or []) if isinstance(s, str) and s.strip() and not LIXO.search(s)]
+                if lg in ("en", "es") and st_lg:
+                    with open(os.path.join(pasta, "%s-%s.json" % (cid, lg)), "w", encoding="utf-8") as f:
+                        json.dump({"story": st_lg[:6]}, f, ensure_ascii=False, separators=(",", ":"))
             item["st"] = 1
         feed.append(item)
     # o site abre só com o último ano (feed.json leve); os anos anteriores ficam em antigo/AAAA.json e

@@ -534,7 +534,7 @@
     }
     fill(c.story);
     if (c.st && !body.children.length) {
-      fetch("historia/" + encodeURIComponent(c.id) + ".json")
+      buscarHistoria(c)
         .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
         .then(function (j) { fill(j.story); })
         .catch(function () { /* fica só com o título e o link */ });
@@ -548,7 +548,7 @@
   function historia(c) {
     if (c.story && c.story.length) return Promise.resolve(c.story);
     if (!c.st) return Promise.resolve([]);
-    if (!c._hist) c._hist = fetch("historia/" + encodeURIComponent(c.id) + ".json")
+    if (!c._hist) c._hist = buscarHistoria(c)
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (j) { return Array.isArray(j.story) ? j.story.map(str).filter(Boolean) : []; })
       .catch(function () { c._hist = null; return []; });
@@ -1833,6 +1833,14 @@
   // "no-cache" revalida com o servidor: se nada mudou, o navegador usa a cópia que já tem.
   // título e resumo vêm na língua de quem lê: feed-en.json (inglês, também para as outras línguas) e
   // feed-es.json; em português, feed.json. Os anos antigos seguem o mesmo padrão (antigo/2024-en.json).
+  // texto longo da campanha (o que abre em "Ver mais"), na língua de quem lê quando já foi traduzido
+  function buscarHistoria(c) {
+    var base = "historia/" + encodeURIComponent(c.id);
+    var suf = sufixoConteudo();
+    var pt = function () { return fetch(base + ".json"); };
+    if (!suf) return pt();
+    return fetch(base + suf + ".json").then(function (r) { return r.ok ? r : pt(); }, pt);
+  }
   function sufixoConteudo() { return LANG === "pt" ? "" : LANG === "es" ? "-es" : "-en"; }
   var sufixoCarregado = "";
   function loadData(mode) {

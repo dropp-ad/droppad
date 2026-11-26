@@ -2,6 +2,7 @@
 língua de quem entra; o português continua sendo o texto principal de campaigns.json).
 
 Guarda em cada campanha:  "tr": {"en": {"title": ..., "summary": ..., "frase": ...}, "es": {...}}
+e, para as campanhas com texto longo (o que abre em "Ver mais"), "story": [parágrafos].
 Título curto (até 4 palavras) costuma ser o nome da campanha ("Really Philly Good"): fica como está.
 
 Uso no workflow:  python robo/traducoes.py            → traduz e grava em /tmp/traducoes.json
@@ -22,6 +23,8 @@ CAMPOS = ("title", "summary", "frase")
 ACHADOS = os.environ.get("TRADUCOES_ACHADOS", "/tmp/traducoes.json")
 POR_RODADA = int(os.environ.get("TRADUCOES_POR_RODADA", "600"))
 LOTE = 25  # campanhas por pedido ao tradutor
+STORY_CHARS = int(os.environ.get("TRADUCOES_STORY_CHARS", "200000"))  # texto longo traduzido por rodada, por língua
+STORY_PARAGRAFOS = 6  # o site mostra no máximo 6 parágrafos
 
 
 def log(*a):
@@ -56,7 +59,7 @@ def traduzir_lista(textos, lingua):
 
 def precisa(c):
     tr = c.get("tr") or {}
-    return any(lg not in tr for lg in LINGUAS) and not c.get("hidden")
+    return any(not (tr.get(lg) or {}).get("ok") for lg in LINGUAS) and not c.get("hidden")
 
 
 def traduzir_campanhas(camps):
@@ -75,11 +78,41 @@ def traduzir_campanhas(camps):
             textos = traduzir_lista([p[2] for p in pares], lg) if pares else []
             for (cid, k, orig), novo in zip(pares, textos):
                 achados.setdefault(cid, {}).setdefault(lg, {})[k] = novo
-            for c in lote:  # campanha sem nada para traduzir (só título curto): marca como feita
-                achados.setdefault(c["id"], {}).setdefault(lg, {})
+            for c in lote:  # marca título/resumo como feitos (mesmo sem nada a traduzir, só título curto)
+                achados.setdefault(c["id"], {}).setdefault(lg, {})["ok"] = 1
             time.sleep(0.5)
         log("  traduzidas: %d/%d" % (min(i + LOTE, len(camps)), len(camps)))
     return achados
+
+
+def precisa_story(c, lg):
+    return bool(c.get("story")) and not c.get("hidden") and "story" not in ((c.get("tr") or {}).get(lg) or {})
+
+
+def traduzir_storys(camp, achados):
+    """Texto longo (parágrafos): junta parágrafos em pedidos de até ~4.500 caracteres."""
+    for lg in LINGUAS:
+        alvo, total = [], 0
+        for c in camp:
+            if precisa_story(c, lg):
+                pars = [" ".join(str(p).split()) for p in c["story"][:STORY_PARAGRAFOS] if str(p).strip()]
+                tam = sum(len(p) for p in pars)
+                if total + tam > STORY_CHARS and alvo:
+                    break
+                alvo.append((c["id"], pars))
+                total += tam
+        log("Texto longo para %s: %d campanhas (%d caracteres)" % (lg, len(alvo), total))
+        for cid, pars in alvo:
+            out, bloco = [], []
+            for p in pars + [None]:
+                if p is None or (bloco and sum(len(b) for b in bloco) + len(p) > 4500):
+                    if bloco:
+                        out += traduzir_lista(bloco, lg)
+                        time.sleep(0.3)
+                    bloco = []
+                if p is not None:
+                    bloco.append(p[:4500])
+            achados.setdefault(cid, {}).setdefault(lg, {})["story"] = out
 
 
 def main():
@@ -87,6 +120,7 @@ def main():
     alvo = [c for c in camp if precisa(c)][:POR_RODADA]  # campaigns.json já vem do mais novo ao mais velho
     log("Campanhas sem tradução:", sum(1 for c in camp if precisa(c)), "| nesta rodada:", len(alvo))
     achados = traduzir_campanhas(alvo)
+    traduzir_storys(camp, achados)
     json.dump(achados, open(ACHADOS, "w", encoding="utf-8"), ensure_ascii=False)
 
 
@@ -102,7 +136,9 @@ def aplicar():
     for c in camp:
         a = achados.get(c.get("id"))
         if a:
-            c.setdefault("tr", {}).update(a)
+            tr = c.setdefault("tr", {})
+            for lg, campos in a.items():
+                tr.setdefault(lg, {}).update(campos)  # junta (título/resumo de uma rodada, texto longo de outra)
             n += 1
     if n:
         A.salvar_json(A.CAMP, camp)
