@@ -163,6 +163,47 @@ def _parece_da_agencia(ag, perfil, chave, st=None):
     return bool(parece) or not generico
 
 
+PARADA_DIAS = 30        # conta sem post há mais que isso: lida no máximo 1x por dia
+QUENTE_DIAS = 60        # conta que rendeu campanha nesse prazo: entra no rodízio rápido
+
+
+def _quentes():
+    """@ das contas de Instagram que já viraram campanha no site nos últimos QUENTE_DIAS."""
+    try:
+        with open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "campaigns.json"),
+                  encoding="utf-8") as f:
+            camp = json.load(f)
+    except (OSError, ValueError):
+        return set()
+    desde = (dt.date.today() - dt.timedelta(days=QUENTE_DIAS)).isoformat()
+    return {c["source"].split("@", 1)[1].lower() for c in camp
+            if (c.get("source") or "").startswith("Instagram · @") and (c.get("date") or "") >= desde}
+
+
+def _proxima(leitura, pos, st, agora, quente=False):
+    """Escolhe a próxima conta a ler. A 1ª chamada de cada rodada vai para as contas que mais rendem
+    campanha (rodízio próprio, volta em ~1-2h); as outras seguem o rodízio geral, pulando contas
+    paradas (sem post há PARADA_DIAS) que já foram lidas nas últimas 24h."""
+    if quente:
+        q = _quentes()
+        lista = [c for c in leitura if c["usuario"] in q]
+        if lista:
+            i = st.get("pos_quente", 0)
+            st["pos_quente"] = i + 1
+            return lista[i % len(lista)], pos
+    ult, lida = st.get("ultimo_post", {}), st.get("lida", {})
+    parada = (agora - dt.timedelta(days=PARADA_DIAS)).date().isoformat()
+    ontem = (agora - dt.timedelta(hours=24)).isoformat()
+    for _ in range(len(leitura)):
+        conta = leitura[pos % len(leitura)]
+        pos += 1
+        u = conta["usuario"]
+        if ult.get(u, "9") < parada and lida.get(u, "") > ontem:
+            continue
+        return conta, pos
+    return leitura[pos % len(leitura)], pos + 1
+
+
 def rodada(fontes, vigia, agora, log, chave):
     """Gasta até CHAMADAS_POR_RODADA chamadas: lê contas conhecidas e descobre as das agências.
     Devolve [(post, conta)] com os posts lidos; conta = {"usuario","nome","regiao","cc","agencia"}."""
@@ -248,10 +289,13 @@ def rodada(fontes, vigia, agora, log, chave):
                     contas[ag["nome"]] = ""
                     st["tentadas"].pop(ag["nome"], None)
             elif leitura:
-                conta = leitura[pos % len(leitura)]
-                pos += 1
+                conta, pos = _proxima(leitura, pos, st, agora, quente=(gastas == 0))
                 itens, uso, existe = posts(conta["usuario"])
                 gastas += 1
+                st.setdefault("lida", {})[conta["usuario"]] = agora.isoformat()
+                datas = sorted((p.get("timestamp") or "")[:10] for p in itens if p.get("timestamp"))
+                if datas:
+                    st.setdefault("ultimo_post", {})[conta["usuario"]] = datas[-1]
                 if not existe:
                     mortas[conta["usuario"]] = agora.isoformat()
                     log("  instagram: @%s não existe ou não é conta profissional; pulando por 30 dias" % conta["usuario"])

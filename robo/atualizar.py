@@ -860,6 +860,75 @@ def marca_ig(texto):
     return ""
 
 
+# produto → marca, para legendas que citam só o produto ("Surface Laptop", "iPhone")
+PRODUTO_MARCA = {"surface": "Microsoft", "xbox": "Microsoft", "windows": "Microsoft", "copilot": "Microsoft",
+                 "iphone": "Apple", "ipad": "Apple", "airpods": "Apple", "macbook": "Apple", "pixel": "Google",
+                 "galaxy": "Samsung", "big mac": "McDonald's", "méqui": "McDonald's",
+                 "whopper": "Burger King", "kitkat": "KitKat", "oreo": "Oreo", "coke": "Coca-Cola"}
+# palavras que o robô já tomou por marca e não são
+NAO_MARCA_IG = {"to", "it", "that", "this", "these", "those", "season", "creativity", "pr", "someone", "dont", "don't",
+                "keys", "thanksgiving", "halloweekend", "portfolio night", "q1", "q2", "q3", "q4", "h1", "h2",
+                "vegetables", "web traffic", "chicago", "meet", "watch", "new", "our", "we", "nosso", "nossa", "big news",
+                "forget", "introducing", "behind the scenes", "bastidores", "happy", "feliz", "proud", "orgulho",
+                "hoje", "aussie", "there", "nothing", "what", "good", "life", "love", "home", "time", "world", "mundo",
+                "vida", "casa", "tempo", "amor", "the world", "today", "now", "agora", "here", "aqui"}
+_MARCAS_CACHE = {}
+
+
+def marcas_conhecidas():
+    """Marcas que já apareceram em campanhas de veículos (não de Instagram) pelo menos 2 vezes,
+    da mais longa para a mais curta: servem para achar a marca na legenda mesmo sem verbo."""
+    if "lista" in _MARCAS_CACHE:
+        return _MARCAS_CACHE["lista"]
+    cont = {}
+    try:
+        with open(CAMP, encoding="utf-8") as f:
+            for c in json.load(f):
+                if (c.get("source") or "").startswith("Instagram"):
+                    continue
+                m = (c.get("brand") or "").replace("’", "'").strip()
+                if len(chave(m)) >= 3 and sem_acento(m).lower() not in NAO_MARCA_IG and marca_ok(m):
+                    cont[m] = cont.get(m, 0) + 1
+    except (OSError, ValueError):
+        pass
+    lista = sorted([m for m, n in cont.items() if n >= 2], key=lambda m: -len(m))
+    _MARCAS_CACHE["lista"] = lista
+    return lista
+
+
+def marca_conhecida(texto):
+    """Primeira marca conhecida citada no texto: por nome, por @ (@mcdonaldsde) ou por # (#McDonalds)."""
+    t = (texto or "").replace("’", "'")
+    melhor = None
+    for m in marcas_conhecidas():
+        r = re.search(r"(?<![\w@#])" + re.escape(m) + r"(?:'s)?(?![\w])", t)
+        if r and (melhor is None or r.start() < melhor[0]):
+            melhor = (r.start(), m)
+    for r in re.finditer(r"[@#]([\w.]{3,40})", t):
+        h = chave(r.group(1))
+        for m in marcas_conhecidas():
+            k = chave(m)
+            if len(k) >= 4 and h.startswith(k) and len(h) - len(k) <= 6:
+                if melhor is None or r.start() < melhor[0]:
+                    melhor = (r.start(), m)
+                break
+    for prod, m in PRODUTO_MARCA.items():
+        if melhor:  # nome da marca ou @ já achado: o produto só entra quando a marca não aparece
+            break
+        r = re.search(r"\b" + re.escape(prod) + r"\b", t, re.I)
+        if r and (melhor is None or r.start() < melhor[0]):
+            melhor = (r.start(), m)
+    return melhor[1] if melhor else ""
+
+
+def limpar_marca_ig(m):
+    m = re.sub(r"^(?:for|to|para|pra|pour|für)\s+", "", (m or "").strip(), flags=re.I)
+    m = re.sub(r"\s+(?:de|del|do|da)$", "", m.replace("’", "'")).strip()
+    if sem_acento(m).lower() in NAO_MARCA_IG:
+        return ""
+    return marca_ok(m)
+
+
 def post_para_campanha(p, conta, limite):
     """Um post de Instagram vira campanha, ou None se não tiver cara de campanha."""
     legenda = p.get("caption") or ""
@@ -877,10 +946,17 @@ def post_para_campanha(p, conta, limite):
         return None
     if not FORTE.search(texto[:600]) and p.get("media_type") != "VIDEO":
         return None  # foto sem cara de campanha (bastidores, vagas, cultura da agência...)
-    marca = marca_de(titulo) or marca_ig(texto) or marca_de(texto[:300])
+    # 1) marca conhecida no título; 2) marca do título pelas regras; 3) marca conhecida na legenda
+    # (por nome, @ ou #), que vence uma "marca" do título que nunca apareceu antes (ex.: o nome do diretor);
+    # 4) regras na legenda; 5) o @ citado com "for/para".
+    conhecida_tit = marca_conhecida(titulo)
+    pela_regra = limpar_marca_ig(marca_de(titulo))
+    conhecida_txt = marca_conhecida(HASHTAG.sub(" ", texto[:600]) + " " + " ".join(re.findall(r"#\w+", legenda)))
+    marca = conhecida_tit or (conhecida_txt if conhecida_txt and pela_regra not in marcas_conhecidas() else "") \
+        or pela_regra or limpar_marca_ig(marca_ig(texto)) or limpar_marca_ig(marca_de(texto[:300]))
     if not marca:
-        m = re.search(r"(?:for|para|pour|für|with|com|con|x)\s+@?([a-z][\w]*\.[\w.]{2,30}|@[\w.]{2,30})", texto, re.I)
-        marca = marca_ok(m.group(1).replace(".", " ").replace("_", " ").title()) if m else ""
+        m = re.search(r"(?:for|para|pour|für|with|com|con|x)\s+(?:@([\w.]{2,30})|([a-z][\w]*\.[\w.]{2,30}))", legenda, re.I)
+        marca = limpar_marca_ig((m.group(1) or m.group(2)).replace(".", " ").replace("_", " ").title()) if m else ""
     if not marca or chave(marca) == chave(conta["nome"]):
         return None
     # post da própria agência (equipe, datas, eventos), não campanha: marca que começa com o nome
