@@ -268,6 +268,11 @@ html.digitando .more-cue, html.digitando .to-top, html.digitando .newpill { disp
 .is-vert .cover { display: none; }
 .is-vert .host { z-index: 3; }
 .is-vert .bigplay, .is-vert .ptime, .is-vert .mute, .is-vert .bar { display: none !important; }
+/* Instagram: camada de toque por cima do embed (celular) e botão "Abrir no Instagram" no canto do quadro */
+.host > .igtap { position: absolute; inset: 0; z-index: 2; display: block; background: transparent; -webkit-tap-highlight-color: transparent; }
+.igopen { position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); z-index: 7; padding: 7px 11px; background: rgba(0, 0, 0, .72); color: #fff;
+  font-size: 12.5px; font-weight: 700; text-decoration: none; white-space: nowrap; border: 1px solid rgba(255, 255, 255, .18); }
+.igopen:hover { color: var(--hot); }
 
 .newpill { position: fixed; left: 50%; top: calc(var(--top-h) + 10px); z-index: 40; transform: translateX(-50%); padding: 8px 16px;
   background: #fff; color: #000; font-size: 13px; font-weight: 700; box-shadow: 0 6px 20px rgba(0, 0, 0, .5); animation: endin .4s ease; }

@@ -220,6 +220,7 @@
     "Ler mais": ["Read more", "Leer más", "Lire plus", "Mehr lesen", "Leggi di più", "Lees meer", "続きを読む", "더 읽기", "阅读更多"],
     "Ler a matéria em {s}": ["Read the story on {s}", "Leer la nota en {s}", "Lire l'article sur {s}", "Artikel auf {s} lesen", "Leggi l'articolo su {s}", "Lees het artikel op {s}", "{s}で記事を読む", "{s}에서 기사 보기", "在 {s} 阅读"],
     "Ler em {s} ↗": ["Read on {s} ↗", "Leer en {s} ↗", "Lire sur {s} ↗", "Auf {s} lesen ↗", "Leggi su {s} ↗", "Lees op {s} ↗", "{s}で読む ↗", "{s}에서 보기 ↗", "在 {s} 阅读 ↗"],
+    "Abrir no Instagram ↗": ["Open on Instagram ↗", "Abrir en Instagram ↗", "Ouvrir sur Instagram ↗", "Auf Instagram öffnen ↗", "Apri su Instagram ↗", "Openen op Instagram ↗", "Instagramで開く ↗", "인스타그램에서 열기 ↗", "在 Instagram 打开 ↗"],
     "Ver matéria ↗": ["Read story ↗", "Ver nota ↗", "Voir l'article ↗", "Zum Artikel ↗", "Vedi articolo ↗", "Bekijk artikel ↗", "記事を見る ↗", "기사 보기 ↗", "查看报道 ↗"],
     " para ": [" for ", " para ", " pour ", " für ", " per ", " voor ", " × ", " × ", " × "],
     "via {s}": ["via {s}", "vía {s}", "via {s}", "via {s}", "via {s}", "via {s}", "{s}より", "{s} 경유", "来自 {s}"],
@@ -467,6 +468,7 @@
   /* Instagram: o post inteiro (cabeçalho, filme e rodapé) entra reduzido no quadro 16:9, sem cortar.
      O embed avisa a própria altura por postMessage (MEASURE); até lá, vale uma altura típica. */
   var CELULAR = window.matchMedia("(max-width: 760px)");
+  var TOQUE = window.matchMedia("(hover: none), (pointer: coarse)");
   var IG_W = 400, IG_CROP_H = 494, igRO = "ResizeObserver" in window ? new ResizeObserver(function (es) { es.forEach(function (e) { scaleIG(e.target); }); }) : null;
   // onde fica a mídia dentro do embed (o robô mede: "igm" = [topo, altura]); sem medida, o padrão 4:5
   function recorteIG(box, c) {
@@ -681,6 +683,17 @@
         host0.appendChild(box0);
         art.classList.add("embed-on");
         if (f0.kind === "ig") fitIG(media);
+        // o play do embed do Instagram muitas vezes não toca dentro do site no celular (reels com música
+        // licenciada, app instalado): no toque, o post abre direto no Instagram
+        if (f0.kind === "ig") {
+          var igu = "https://www.instagram.com/" + (f0.reel ? "reel" : "p") + "/" + f0.id + "/";
+          if (TOQUE.matches) {
+            var tap = link("igtap", "", igu);
+            tap.setAttribute("aria-label", tr("Abrir no Instagram ↗"));
+            host0.appendChild(tap);
+          }
+          media.appendChild(link("igopen", tr("Abrir no Instagram ↗"), igu));
+        }
       }
       media.appendChild(cover);
       media.appendChild(host0);
