@@ -41,19 +41,19 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"064e8af7513b98bf271d347c1d469b7d\"",
-      "mod": "Thu, 26 Nov 2026 15:09:11 GMT"
+      "etag": "W/\"38e0e7a832f1105ad56f9a01567ac863\"",
+      "mod": "Thu, 26 Nov 2026 15:23:10 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 15:21:39 GMT"
+      "mod": "Thu, 26 Nov 2026 15:24:39 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
       "mod": "Thu, 26 Nov 2026 06:49:38 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795706225-gzip\"",
-      "mod": "Thu, 26 Nov 2026 15:17:05 GMT"
+      "etag": "W/\"1795706586-gzip\"",
+      "mod": "Thu, 26 Nov 2026 15:23:06 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 15:22:39 GMT"
+      "mod": "Thu, 26 Nov 2026 15:25:40 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 15:22:40 GMT"
+      "mod": "Thu, 26 Nov 2026 15:25:39 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -313,7 +313,7 @@
       "mod": "Thu, 30 Jul 2026 19:59:18 GMT"
     }
   },
-  "yt_pos": 57,
+  "yt_pos": 147,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1161,7 +1161,7 @@
       "Liquorice": ""
     },
     "tentadas": {},
-    "pos": 1577,
+    "pos": 1580,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1671,7 +1671,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 2780,
+    "rodadas": 2783,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3445,7 +3445,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 5,
+    "pos_quente": 8,
     "lida": {
       "droga5sp": "2026-11-26T15:19:36.939289+00:00",
       "mboothagency": "2026-11-26T15:19:36.939289+00:00",
@@ -3456,7 +3456,13 @@
       "wt.ag": "2026-11-26T15:21:52.349939+00:00",
       "webtonic_": "2026-11-26T15:21:52.349939+00:00",
       "publicisbrasil": "2026-11-26T15:22:36.473252+00:00",
-      "criticalmassagency": "2026-11-26T15:22:36.473252+00:00"
+      "criticalmassagency": "2026-11-26T15:22:36.473252+00:00",
+      "venablesbell": "2026-11-26T15:23:36.861556+00:00",
+      "initiativeagency": "2026-11-26T15:23:36.861556+00:00",
+      "cramerkrasselt": "2026-11-26T15:24:37.088784+00:00",
+      "horizonmediaagency": "2026-11-26T15:24:37.088784+00:00",
+      "ignitevisibility": "2026-11-26T15:25:36.330212+00:00",
+      "groupmagency": "2026-11-26T15:25:36.330212+00:00"
     },
     "ultimo_post": {
       "droga5sp": "2026-11-25",
@@ -3467,7 +3473,13 @@
       "wt.ag": "2026-11-25",
       "webtonic_": "2025-12-28",
       "publicisbrasil": "2026-11-26",
-      "criticalmassagency": "2026-11-20"
+      "criticalmassagency": "2026-11-20",
+      "venablesbell": "2026-09-30",
+      "initiativeagency": "2018-11-01",
+      "cramerkrasselt": "2026-11-19",
+      "horizonmediaagency": "2023-11-20",
+      "ignitevisibility": "2026-11-23",
+      "groupmagency": "2023-03-14"
     }
   },
   "vistos": [
@@ -3704,6 +3716,6 @@
     "https://grandesnomesdapropaganda.com.br/anunciantes/gallo-apresenta-sua-nova-campanha-global-sabor-do-comeco-ao-fim",
     "https://roastbrief.com.mx/2026/11/la-temporada-alta-impulsa-el-uso-de-inteligencia-artificial-en-whatsapp-para-optimizar-la-atencion-comercial"
   ],
-  "ultima_rodada": "2026-11-26T15:22:36.473252+00:00",
-  "ultima_novidade": "2026-11-26T15:21:36.772831+00:00"
+  "ultima_rodada": "2026-11-26T15:25:36.330212+00:00",
+  "ultima_novidade": "2026-11-26T15:25:36.330212+00:00"
 }
