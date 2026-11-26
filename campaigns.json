@@ -8899,109 +8899,6 @@
     }
   },
   {
-    "id": "2026-11-17-leroy-merlin-sua-casa-e-prioridade-2",
-    "date": "2026-11-17",
-    "brand": "Leroy Merlin",
-    "title": "Sua casa é prioridade",
-    "agency": "Monks",
-    "source": "Clube de Criação",
-    "url": "https://clubedecriacao.com.br/acervo/sua-casa-e-prioridade-monks-leroy-merlin/",
-    "region": "Brasil",
-    "cc": "BR",
-    "summary": "Leroy Merlin estreia “Sua casa é prioridade”, campanha assinada pela Monks. Direção de criação de Charles Alvarenga. O esforço inclui filme, mídia exterior e redes sociais.",
-    "addedAt": "2026-11-26T14:05:21Z",
-    "yt": [
-      "qYX3TW2kRD0"
-    ],
-    "image": "https://clubedecriacao.com.br/wp-content/uploads/2026/11/image-2026-11-17T171716.232-1024x576.png",
-    "ficha": [
-      {
-        "role": "Agency",
-        "name": "Monks"
-      },
-      {
-        "role": "Client",
-        "name": "Leroy Merlin"
-      },
-      {
-        "role": "Product",
-        "name": "Ofertas de Produtos Diversos"
-      },
-      {
-        "role": "Campaign",
-        "name": "Black da Leroy"
-      },
-      {
-        "role": "Client Team",
-        "name": "Carol Braune, André Paixão, Nicolas Kim, Diego Juan Baptista, Diego Lucchesi de Macedo Fernandes e Leonardo Antunes Marins"
-      },
-      {
-        "role": "Managing Director",
-        "name": "Fernando Ruocco"
-      },
-      {
-        "role": "SVP of Creative Transformation",
-        "name": "Debora Nitta"
-      },
-      {
-        "role": "Group Account Director",
-        "name": "Isabella Dell’Antonia"
-      },
-      {
-        "role": "Account Director",
-        "name": "Claudia Simões"
-      },
-      {
-        "role": "Account Team",
-        "name": "Fausto Parise, Débora Faustino e Mariana Ortiz"
-      },
-      {
-        "role": "Creative Director",
-        "name": "Charles Alvarenga"
-      },
-      {
-        "role": "Creative Team",
-        "name": "Bruno Cavalcanti, Leon Guimarães, Fernando Souza, Tatyane Campos"
-      },
-      {
-        "role": "Head of Strategy & Connections",
-        "name": "Quentin Mahé"
-      },
-      {
-        "role": "Strategy Team",
-        "name": "Guilherme Pádua e Tomás Coutinho"
-      },
-      {
-        "role": "Media Director",
-        "name": "Gabriel Fernandez"
-      },
-      {
-        "role": "Media Team",
-        "name": "Daniele Lopes, Renato Kristman e Marcus Veras"
-      },
-      {
-        "role": "Head of Production",
-        "name": "Marília Padija"
-      },
-      {
-        "role": "Post-Producer",
-        "name": "Poliana Pompeo"
-      },
-      {
-        "role": "Image Production (Artificial Intelligence)",
-        "name": "Angry Films Ltda"
-      },
-      {
-        "role": "Director",
-        "name": "Gabriela Silva Maruyama e Luis Bruno Silva Maruyama"
-      },
-      {
-        "role": "Post-Production",
-        "name": "ANGRY Films"
-      }
-    ]
-  },
-  {
     "id": "2026-11-17-restos-du-coeur-la-fracture",
     "date": "2026-11-17",
     "brand": "Restos du Cœur",
@@ -9265,7 +9162,97 @@
         "title": "Leroy Merlin dá voz à casa na Black Friday com \"Sua casa é prioridade\"",
         "summary": "Feito integralmente com IA generativa, o filme de Black Friday coloca a própria casa para reivindicar espaço nas decisões de compra, com humor e situações do cotidiano."
       }
-    }
+    },
+    "yt": [
+      "qYX3TW2kRD0"
+    ],
+    "image": "https://clubedecriacao.com.br/wp-content/uploads/2026/11/image-2026-11-17T171716.232-1024x576.png",
+    "ficha": [
+      {
+        "role": "Agency",
+        "name": "Monks"
+      },
+      {
+        "role": "Client",
+        "name": "Leroy Merlin"
+      },
+      {
+        "role": "Product",
+        "name": "Ofertas de Produtos Diversos"
+      },
+      {
+        "role": "Campaign",
+        "name": "Black da Leroy"
+      },
+      {
+        "role": "Client Team",
+        "name": "Carol Braune, André Paixão, Nicolas Kim, Diego Juan Baptista, Diego Lucchesi de Macedo Fernandes e Leonardo Antunes Marins"
+      },
+      {
+        "role": "Managing Director",
+        "name": "Fernando Ruocco"
+      },
+      {
+        "role": "SVP of Creative Transformation",
+        "name": "Debora Nitta"
+      },
+      {
+        "role": "Group Account Director",
+        "name": "Isabella Dell’Antonia"
+      },
+      {
+        "role": "Account Director",
+        "name": "Claudia Simões"
+      },
+      {
+        "role": "Account Team",
+        "name": "Fausto Parise, Débora Faustino e Mariana Ortiz"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Charles Alvarenga"
+      },
+      {
+        "role": "Creative Team",
+        "name": "Bruno Cavalcanti, Leon Guimarães, Fernando Souza, Tatyane Campos"
+      },
+      {
+        "role": "Head of Strategy & Connections",
+        "name": "Quentin Mahé"
+      },
+      {
+        "role": "Strategy Team",
+        "name": "Guilherme Pádua e Tomás Coutinho"
+      },
+      {
+        "role": "Media Director",
+        "name": "Gabriel Fernandez"
+      },
+      {
+        "role": "Media Team",
+        "name": "Daniele Lopes, Renato Kristman e Marcus Veras"
+      },
+      {
+        "role": "Head of Production",
+        "name": "Marília Padija"
+      },
+      {
+        "role": "Post-Producer",
+        "name": "Poliana Pompeo"
+      },
+      {
+        "role": "Image Production (Artificial Intelligence)",
+        "name": "Angry Films Ltda"
+      },
+      {
+        "role": "Director",
+        "name": "Gabriela Silva Maruyama e Luis Bruno Silva Maruyama"
+      },
+      {
+        "role": "Post-Production",
+        "name": "ANGRY Films"
+      }
+    ]
   },
   {
     "id": "2026-11-17-selfit-fit-de-paixao",
@@ -21195,6 +21182,112 @@
     "igm": [
       54,
       500
+    ],
+    "ficha": [
+      {
+        "role": "Cliente",
+        "name": "Bauducco®"
+      },
+      {
+        "role": "Produto",
+        "name": "Bauducco Chocottone® e Bauducco® Panettone"
+      },
+      {
+        "role": "Campanha",
+        "name": "Bauducco Natal Disney"
+      },
+      {
+        "role": "Agência",
+        "name": "GALERIA.ag"
+      },
+      {
+        "role": "Creative Chairman",
+        "name": "Rafael Urenha"
+      },
+      {
+        "role": "CCO",
+        "name": "Phil Daijó, Rafael Ziggy"
+      },
+      {
+        "role": "Direção Executiva de Criação",
+        "name": "Silvio Amorim"
+      },
+      {
+        "role": "Direção de Criação",
+        "name": "Raphael Lucone, Thomaz Dantas"
+      },
+      {
+        "role": "Criação",
+        "name": "Epaminondas Paulino, Enzo Roncari, Giovanna Lazzarotti, Jefferson Iago"
+      },
+      {
+        "role": "Atendimento",
+        "name": "Ana Coutinho, Michelle Latessa, Fabiana Vieira, Jaqueline Martins e Heloá Zelli"
+      },
+      {
+        "role": "Aprovação cliente",
+        "name": "André Britto, André Kieling, Carolina Gonçalves Beal, Myrhella Lucarini Caseri de Paula e Marcella da Silva Postigo"
+      },
+      {
+        "role": "Mídia",
+        "name": "Paulo Ilha, Patrícia Alves, Gabriela Loureiro, Mariana Navarro, Gustavo Ricardo, Ariela Guirão"
+      },
+      {
+        "role": "PR",
+        "name": "Patricia Capuchinho, Tercio Silveira, Analuá Baptista e Klara Oliveira"
+      },
+      {
+        "role": "Estratégia",
+        "name": "Carol Mello, Danilo Santos, Izabela Eusébio e Giulia Arruda"
+      },
+      {
+        "role": "Direção de Produção Gráfica e Digital",
+        "name": "Marcos Moura e Durval Brum"
+      },
+      {
+        "role": "Produção Gráfica",
+        "name": "Durval Brum e Paulo Ribeiro"
+      },
+      {
+        "role": "Produção Integrada",
+        "name": "Ducha Lopes, Andrea Metzker, Michelle Teixeira, Cintia Mantero, Malu Santos"
+      },
+      {
+        "role": "Produção",
+        "name": "The Magic AI"
+      },
+      {
+        "role": "Direção",
+        "name": "Felipe Valério (Wait)"
+      },
+      {
+        "role": "Produção Executiva",
+        "name": "Ana Maitê Fröhlich, Bruno Meira, Matheus Akkari"
+      },
+      {
+        "role": "Produtor Executivo Associado",
+        "name": "Gabriel Meira de Vasconcellos"
+      },
+      {
+        "role": "Creative Leads",
+        "name": "Fabio Meirelles, Gustavo Tissot"
+      },
+      {
+        "role": "Editor",
+        "name": "Bruno Athaydes"
+      },
+      {
+        "role": "Audio",
+        "name": "Clamp Music"
+      },
+      {
+        "role": "Produção",
+        "name": "Tiago Abrahao"
+      },
+      {
+        "role": "Atendimento",
+        "name": "Claudia Lampert"
+      }
     ]
   },
   {
@@ -21895,129 +21988,6 @@
         "summary": "Primeira campanha holandesa da Canva reescreve um clássico da música local, com 'desastres de design' cantando em louvor a um layout bem-feito."
       }
     }
-  },
-  {
-    "id": "2026-10-28-bauducco-a-magia-da-bauducco-encontrou-a-magi",
-    "date": "2026-10-28",
-    "brand": "Bauducco",
-    "title": "A magia da Bauducco encontrou a magia de Toy Story",
-    "agency": "Galeria",
-    "source": "Clube de Criação",
-    "url": "https://clubedecriacao.com.br/acervo/a-magia-da-bauducco-encontrou-a-magia-de-toy-story-galeria-bauducco/",
-    "region": "Brasil",
-    "cc": "BR",
-    "summary": "Bauducco estreia “A magia da Bauducco encontrou a magia de Toy Story”, campanha assinada pela Galeria. Direção de criação de Phil Daijó, Rafael Ziggy, Silvio Amorim.",
-    "addedAt": "2026-11-26T14:05:21Z",
-    "yt": [
-      "NTYc-sozDZw"
-    ],
-    "image": "https://clubedecriacao.com.br/wp-content/uploads/2026/10/CAPA-16X09-1024x572.png",
-    "ficha": [
-      {
-        "role": "Cliente",
-        "name": "Bauducco®"
-      },
-      {
-        "role": "Produto",
-        "name": "Bauducco Chocottone® e Bauducco® Panettone"
-      },
-      {
-        "role": "Campanha",
-        "name": "Bauducco Natal Disney"
-      },
-      {
-        "role": "Agência",
-        "name": "GALERIA.ag"
-      },
-      {
-        "role": "Creative Chairman",
-        "name": "Rafael Urenha"
-      },
-      {
-        "role": "CCO",
-        "name": "Phil Daijó, Rafael Ziggy"
-      },
-      {
-        "role": "Direção Executiva de Criação",
-        "name": "Silvio Amorim"
-      },
-      {
-        "role": "Direção de Criação",
-        "name": "Raphael Lucone, Thomaz Dantas"
-      },
-      {
-        "role": "Criação",
-        "name": "Epaminondas Paulino, Enzo Roncari, Giovanna Lazzarotti, Jefferson Iago"
-      },
-      {
-        "role": "Atendimento",
-        "name": "Ana Coutinho, Michelle Latessa, Fabiana Vieira, Jaqueline Martins e Heloá Zelli"
-      },
-      {
-        "role": "Aprovação cliente",
-        "name": "André Britto, André Kieling, Carolina Gonçalves Beal, Myrhella Lucarini Caseri de Paula e Marcella da Silva Postigo"
-      },
-      {
-        "role": "Mídia",
-        "name": "Paulo Ilha, Patrícia Alves, Gabriela Loureiro, Mariana Navarro, Gustavo Ricardo, Ariela Guirão"
-      },
-      {
-        "role": "PR",
-        "name": "Patricia Capuchinho, Tercio Silveira, Analuá Baptista e Klara Oliveira"
-      },
-      {
-        "role": "Estratégia",
-        "name": "Carol Mello, Danilo Santos, Izabela Eusébio e Giulia Arruda"
-      },
-      {
-        "role": "Direção de Produção Gráfica e Digital",
-        "name": "Marcos Moura e Durval Brum"
-      },
-      {
-        "role": "Produção Gráfica",
-        "name": "Durval Brum e Paulo Ribeiro"
-      },
-      {
-        "role": "Produção Integrada",
-        "name": "Ducha Lopes, Andrea Metzker, Michelle Teixeira, Cintia Mantero, Malu Santos"
-      },
-      {
-        "role": "Produção",
-        "name": "The Magic AI"
-      },
-      {
-        "role": "Direção",
-        "name": "Felipe Valério (Wait)"
-      },
-      {
-        "role": "Produção Executiva",
-        "name": "Ana Maitê Fröhlich, Bruno Meira, Matheus Akkari"
-      },
-      {
-        "role": "Produtor Executivo Associado",
-        "name": "Gabriel Meira de Vasconcellos"
-      },
-      {
-        "role": "Creative Leads",
-        "name": "Fabio Meirelles, Gustavo Tissot"
-      },
-      {
-        "role": "Editor",
-        "name": "Bruno Athaydes"
-      },
-      {
-        "role": "Audio",
-        "name": "Clamp Music"
-      },
-      {
-        "role": "Produção",
-        "name": "Tiago Abrahao"
-      },
-      {
-        "role": "Atendimento",
-        "name": "Claudia Lampert"
-      }
-    ]
   },
   {
     "id": "2026-10-28-jugos-frutop-pulpix-nuestro-talento-llega-tambien-al-car",
@@ -72054,37 +72024,6 @@
     }
   },
   {
-    "id": "2026-04-23-pomarola-o-cara-do-molho",
-    "date": "2026-04-23",
-    "brand": "Pomarola",
-    "title": "O cara do molho",
-    "agency": "MRM Brasil",
-    "source": "Clube de Criação",
-    "url": "https://clubedecriacao.com.br/acervo/o-cara-do-molho-mrm-brasil-pomarola/",
-    "region": "Brasil",
-    "cc": "BR",
-    "summary": "Pomarola estreia “O cara do molho”, campanha assinada pela MRM Brasil. Direção de criação de Douglas Kozonoe (Dogura).",
-    "addedAt": "2026-11-26T14:05:21Z",
-    "yt": [
-      "Ez5S5onvfjQ"
-    ],
-    "image": "https://clubedecriacao.com.br/wp-content/uploads/2026/04/image.png",
-    "ficha": [
-      {
-        "role": "Agência",
-        "name": "MRM Brasil"
-      },
-      {
-        "role": "CEO",
-        "name": "Fábio Souza"
-      },
-      {
-        "role": "CCO",
-        "name": "Douglas Kozonoe (Dogura)"
-      }
-    ]
-  },
-  {
     "id": "2026-04-23-scg-scg-unveils-smile-campaign-via-tbwa",
     "date": "2026-04-23",
     "brand": "SCG",
@@ -72423,7 +72362,22 @@
         "summary": "Chay Suede se convierte en vampiro en una parodia de \"Entrevista con el Vampiro\" en otro capítulo del lema \"Sólo el que tiene Pomarola tiene la salsa\".",
         "ok": 1
       }
-    }
+    },
+    "image": "https://clubedecriacao.com.br/wp-content/uploads/2026/04/image.png",
+    "ficha": [
+      {
+        "role": "Agência",
+        "name": "MRM Brasil"
+      },
+      {
+        "role": "CEO",
+        "name": "Fábio Souza"
+      },
+      {
+        "role": "CCO",
+        "name": "Douglas Kozonoe (Dogura)"
+      }
+    ]
   },
   {
     "id": "2026-04-22-casas-bahia-dia-das-maes-casas-bahia",

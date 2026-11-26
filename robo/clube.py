@@ -305,6 +305,36 @@ def main(testar=False):
     log("Do Clube nesta rodada:", len(novas), "| acervo na página", estado.get("acervo_pagina"))
 
 
+def _palavras(t):
+    return {w for w in re.findall(r"[a-z0-9]{5,}", A.sem_acento(t or "").lower())} - {"campanha", "campaign", "black", "friday", "natal"}
+
+
+def mesma_campanha(a, b):
+    """Mesma marca, estreia com até 3 dias de diferença e o título com uma palavra em comum: é a mesma
+    campanha vinda de dois lugares (o Clube e um veículo)."""
+    if A.chave(a.get("brand")) != A.chave(b.get("brand")) or not A.chave(a.get("brand")):
+        return False
+    try:
+        d = abs((dt.date.fromisoformat(a["date"]) - dt.date.fromisoformat(b["date"])).days)
+    except (ValueError, KeyError):
+        return False
+    return d <= 3 and bool(_palavras(a.get("title")) & _palavras(b.get("title")))
+
+
+def enriquecer(velha, nova):
+    """A campanha que já estava no site ganha o que o Clube tem a mais (filme, imagem, ficha técnica)."""
+    if not velha.get("yt") and not velha.get("video"):
+        if nova.get("yt"):
+            velha["yt"] = nova["yt"]
+        elif nova.get("video"):
+            velha["video"] = nova["video"]
+    for k in ("image", "ficha"):
+        if nova.get(k) and not velha.get(k):
+            velha[k] = nova[k]
+    if nova.get("agency") and not velha.get("agency"):
+        velha["agency"] = nova["agency"]
+
+
 def aplicar():
     """Junta em campaigns.json sem repetir (mesmo link, mesma marca+título, ou mesmo filme). Campanhas que
     já vieram do Clube pelo feed antigo trocam o texto do Clube pelo texto próprio."""
@@ -317,6 +347,9 @@ def aplicar():
     chaves = {(A.chave(c.get("brand", "")), A.chave(c.get("title", ""))) for c in camp}
     yts = {y for c in camp for y in (c.get("yt") or [])}
     ids = {c["id"] for c in camp}
+    por_marca = {}
+    for x in camp:
+        por_marca.setdefault(A.chave(x.get("brand")), []).append(x)
     entrou, trocou = 0, 0
     for c in novas:
         u = c["url"].split("?")[0].rstrip("/")
@@ -332,6 +365,11 @@ def aplicar():
                 trocou += 1
             continue
         if (A.chave(c["brand"]), A.chave(c["title"])) in chaves or any(y in yts for y in c.get("yt") or []):
+            continue
+        igual = next((x for x in por_marca.get(A.chave(c["brand"]), []) if mesma_campanha(c, x)), None)
+        if igual:
+            enriquecer(igual, c)
+            trocou += 1
             continue
         while c["id"] in ids:
             c["id"] += "-2"
