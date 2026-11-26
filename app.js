@@ -44,9 +44,9 @@
     }
     if (Array.isArray(x.credits)) x.credits.forEach(function (k) { if (k && typeof k === "object") add(k.role, k.name || k.names); });
     else if (x.credits && typeof x.credits === "object") Object.keys(x.credits).forEach(function (k) { add(k, x.credits[k]); });
-    if (x.creatives) add("Criação", x.creatives);
-    if (x.production) add("Produtora", x.production);
-    if (x.director) add("Direção", x.director);
+    if (x.creatives) add(tr("Criação"), x.creatives);
+    if (x.production) add(tr("Produtora"), x.production);
+    if (x.director) add(tr("Direção"), x.director);
     return out;
   }
   // Malásia e Índia: só entram campanhas de agências dos grandes grupos internacionais
@@ -146,7 +146,7 @@
   try { dn = new Intl.DisplayNames(["pt-BR"], { type: "region" }); } catch (e) { /* navegador antigo */ }
   function countryName(cc) {
     var nomes = { BR: "Brasil", US: "EUA", GB: "Reino Unido" };
-    if (nomes[cc]) return nomes[cc];
+    if (LANG === "pt" && nomes[cc]) return nomes[cc];
     try { return (dn && dn.of(cc)) || cc; } catch (e) { return cc; }
   }
   function guessCountry() {
@@ -188,6 +188,137 @@
 
   /* ---------- Estado ---------- */
   var state = { items: [], list: [], shown: 0, region: "", perDay: {}, home: { cc: "BR", label: "Brasil" } };
+
+  /* ---------- Língua: a do país de quem entra (o mesmo mapa do Contato) ---------- */
+  // ordem das traduções: en, es, fr, de, it, nl, ja, ko, zh (o português é a própria chave)
+  var LINGUAS = ["en", "es", "fr", "de", "it", "nl", "ja", "ko", "zh"];
+  var LOCALE = { pt: "pt-BR", en: "en", es: "es", fr: "fr", de: "de", it: "it", nl: "nl", ja: "ja", ko: "ko", zh: "zh-CN" };
+  var TXT = {
+    "Criação": ["Creative", "Creatividad", "Création", "Kreation", "Creatività", "Creatie", "クリエイティブ", "크리에이티브", "创意"],
+    "Produtora": ["Production", "Productora", "Production", "Produktion", "Casa di produzione", "Productie", "制作会社", "제작사", "制作公司"],
+    "Direção": ["Director", "Dirección", "Réalisation", "Regie", "Regia", "Regie", "監督", "감독", "导演"],
+    "Agência": ["Agency", "Agencia", "Agence", "Agentur", "Agenzia", "Bureau", "エージェンシー", "대행사", "代理商"],
+    "Origem": ["Origin", "Origen", "Origine", "Herkunft", "Origine", "Herkomst", "地域", "지역", "地区"],
+    "A ideia": ["The idea", "La idea", "L'idée", "Die Idee", "L'idea", "Het idee", "アイデア", "아이디어", "创意概念"],
+    "Estreou hoje": ["Launched today", "Estrenó hoy", "Sorti aujourd'hui", "Heute gestartet", "Uscito oggi", "Vandaag gelanceerd", "本日公開", "오늘 공개", "今日上线"],
+    "Estreou ontem": ["Launched yesterday", "Estrenó ayer", "Sorti hier", "Gestern gestartet", "Uscito ieri", "Gisteren gelanceerd", "昨日公開", "어제 공개", "昨日上线"],
+    "Estreou {d}": ["Launched {d}", "Estrenó el {d}", "Sorti le {d}", "Gestartet am {d}", "Uscito il {d}", "Gelanceerd op {d}", "{d}公開", "{d} 공개", "{d}上线"],
+    "há {n} min": ["{n} min ago", "hace {n} min", "il y a {n} min", "vor {n} Min.", "{n} min fa", "{n} min geleden", "{n}分前", "{n}분 전", "{n}分钟前"],
+    "há {n} h": ["{n} h ago", "hace {n} h", "il y a {n} h", "vor {n} Std.", "{n} h fa", "{n} u geleden", "{n}時間前", "{n}시간 전", "{n}小时前"],
+    "Ver mais": ["See more", "Ver más", "Voir plus", "Mehr anzeigen", "Mostra altro", "Meer zien", "もっと見る", "더 보기", "展开"],
+    "Ver menos": ["See less", "Ver menos", "Voir moins", "Weniger anzeigen", "Mostra meno", "Minder zien", "閉じる", "접기", "收起"],
+    "fonte": ["source", "fuente", "source", "Quelle", "fonte", "bron", "出典", "출처", "来源"],
+    "Ler a matéria completa em {s} ↗": ["Read the full story on {s} ↗", "Leer la nota completa en {s} ↗", "Lire l'article complet sur {s} ↗", "Ganzen Artikel auf {s} lesen ↗", "Leggi l'articolo completo su {s} ↗", "Lees het hele artikel op {s} ↗", "{s}で記事を読む ↗", "{s}에서 기사 전문 보기 ↗", "在 {s} 阅读全文 ↗"],
+    "Ler a matéria completa ↗": ["Read the full story ↗", "Leer la nota completa ↗", "Lire l'article complet ↗", "Ganzen Artikel lesen ↗", "Leggi l'articolo completo ↗", "Lees het hele artikel ↗", "記事を読む ↗", "기사 전문 보기 ↗", "阅读全文 ↗"],
+    "Ler o resto do texto": ["Read the rest", "Leer el resto", "Lire la suite", "Weiterlesen", "Leggi il resto", "Lees verder", "続きを読む", "나머지 읽기", "阅读剩余内容"],
+    "Ler mais": ["Read more", "Leer más", "Lire plus", "Mehr lesen", "Leggi di più", "Lees meer", "続きを読む", "더 읽기", "阅读更多"],
+    "Ler a matéria em {s}": ["Read the story on {s}", "Leer la nota en {s}", "Lire l'article sur {s}", "Artikel auf {s} lesen", "Leggi l'articolo su {s}", "Lees het artikel op {s}", "{s}で記事を読む", "{s}에서 기사 보기", "在 {s} 阅读"],
+    "Ler em {s} ↗": ["Read on {s} ↗", "Leer en {s} ↗", "Lire sur {s} ↗", "Auf {s} lesen ↗", "Leggi su {s} ↗", "Lees op {s} ↗", "{s}で読む ↗", "{s}에서 보기 ↗", "在 {s} 阅读 ↗"],
+    "Ver matéria ↗": ["Read story ↗", "Ver nota ↗", "Voir l'article ↗", "Zum Artikel ↗", "Vedi articolo ↗", "Bekijk artikel ↗", "記事を見る ↗", "기사 보기 ↗", "查看报道 ↗"],
+    " para ": [" for ", " para ", " pour ", " für ", " per ", " voor ", " × ", " × ", " × "],
+    "via {s}": ["via {s}", "vía {s}", "via {s}", "via {s}", "via {s}", "via {s}", "{s}より", "{s} 경유", "来自 {s}"],
+    "{b} no {p}": ["{b} on {p}", "{b} en {p}", "{b} sur {p}", "{b} auf {p}", "{b} su {p}", "{b} op {p}", "{p}の{b}", "{p}의 {b}", "{b} 的 {p}"],
+    "Mais opções": ["More options", "Más opciones", "Plus d'options", "Weitere Optionen", "Altre opzioni", "Meer opties", "その他", "더 보기", "更多选项"],
+    "Mais opções…": ["More options…", "Más opciones…", "Plus d'options…", "Weitere Optionen…", "Altre opzioni…", "Meer opties…", "その他…", "더 보기…", "更多选项…"],
+    "Copiar link": ["Copy link", "Copiar enlace", "Copier le lien", "Link kopieren", "Copia link", "Link kopiëren", "リンクをコピー", "링크 복사", "复制链接"],
+    "Link copiado": ["Link copied", "Enlace copiado", "Lien copié", "Link kopiert", "Link copiato", "Link gekopieerd", "リンクをコピーしました", "링크를 복사했어요", "链接已复制"],
+    "Selecione e copie o link": ["Select and copy the link", "Selecciona y copia el enlace", "Sélectionnez et copiez le lien", "Link markieren und kopieren", "Seleziona e copia il link", "Selecteer en kopieer de link", "リンクを選択してコピーしてください", "링크를 선택해 복사하세요", "请选择并复制链接"],
+    "Este filme só toca no YouTube ↗": ["This film only plays on YouTube ↗", "Este video solo se ve en YouTube ↗", "Ce film ne se lit que sur YouTube ↗", "Dieser Film läuft nur auf YouTube ↗", "Questo video si vede solo su YouTube ↗", "Deze film speelt alleen op YouTube ↗", "この動画はYouTubeでのみ再生できます ↗", "이 영상은 YouTube에서만 재생돼요 ↗", "此视频仅能在 YouTube 播放 ↗"],
+    "Ligar ou desligar o som": ["Sound on or off", "Activar o desactivar el sonido", "Activer ou couper le son", "Ton an oder aus", "Attiva o disattiva l'audio", "Geluid aan of uit", "音声のオン・オフ", "소리 켜기/끄기", "打开或关闭声音"],
+    "Filme {i} de {n}": ["Film {i} of {n}", "Video {i} de {n}", "Film {i} sur {n}", "Film {i} von {n}", "Video {i} di {n}", "Film {i} van {n}", "動画 {i}/{n}", "영상 {i}/{n}", "视频 {i}/{n}"],
+    "Comentários sobre esta campanha": ["Comments on this campaign", "Comentarios sobre esta campaña", "Commentaires sur cette campagne", "Kommentare zu dieser Kampagne", "Commenti su questa campagna", "Reacties op deze campagne", "このキャンペーンへのコメント", "이 캠페인에 대한 댓글", "关于此广告的评论"],
+    "Compartilhar esta campanha": ["Share this campaign", "Compartir esta campaña", "Partager cette campagne", "Diese Kampagne teilen", "Condividi questa campagna", "Deel deze campagne", "このキャンペーンをシェア", "이 캠페인 공유", "分享此广告"],
+    "Comentar": ["Comment", "Comentar", "Commenter", "Kommentieren", "Commenta", "Reageren", "コメント", "댓글", "评论"],
+    "Compartilhar": ["Share", "Compartir", "Partager", "Teilen", "Condividi", "Delen", "シェア", "공유", "分享"],
+    "Você": ["You", "Tú", "Vous", "Du", "Tu", "Jij", "あなた", "나", "你"],
+    "Leitor": ["Reader", "Lector", "Lecteur", "Leser", "Lettore", "Lezer", "読者", "독자", "读者"],
+    "Não deu para apagar agora.": ["Couldn't delete it right now.", "No se pudo borrar ahora.", "Impossible de supprimer pour l'instant.", "Löschen gerade nicht möglich.", "Impossibile eliminare ora.", "Verwijderen lukt nu niet.", "今は削除できませんでした。", "지금은 삭제할 수 없어요.", "暂时无法删除。"],
+    "Não foi possível carregar os comentários agora.": ["Couldn't load the comments right now.", "No se pudieron cargar los comentarios ahora.", "Impossible de charger les commentaires pour l'instant.", "Kommentare konnten gerade nicht geladen werden.", "Impossibile caricare i commenti ora.", "Reacties laden lukt nu niet.", "今はコメントを読み込めませんでした。", "지금은 댓글을 불러올 수 없어요.", "暂时无法加载评论。"],
+    "Ninguém comentou ainda. Comece a conversa.": ["No comments yet. Start the conversation.", "Nadie comentó todavía. Empieza la conversación.", "Aucun commentaire pour l'instant. Lancez la discussion.", "Noch keine Kommentare. Fang die Unterhaltung an.", "Ancora nessun commento. Inizia tu la conversazione.", "Nog geen reacties. Begin het gesprek.", "まだコメントはありません。最初のコメントをどうぞ。", "아직 댓글이 없어요. 첫 댓글을 남겨 보세요.", "还没有评论，来说两句吧。"],
+    "Entre para comentar:": ["Sign in to comment:", "Inicia sesión para comentar:", "Connectez-vous pour commenter :", "Zum Kommentieren anmelden:", "Accedi per commentare:", "Log in om te reageren:", "ログインしてコメント：", "로그인하고 댓글 달기:", "登录后评论："],
+    "Escreva seu comentário…": ["Write your comment…", "Escribe tu comentario…", "Écrivez votre commentaire…", "Schreib deinen Kommentar…", "Scrivi il tuo commento…", "Schrijf je reactie…", "コメントを入力…", "댓글을 입력하세요…", "写下你的评论…"],
+    "Seu comentário": ["Your comment", "Tu comentario", "Votre commentaire", "Dein Kommentar", "Il tuo commento", "Je reactie", "コメント", "댓글", "你的评论"],
+    "Comentando como {s} · ": ["Commenting as {s} · ", "Comentando como {s} · ", "Vous commentez en tant que {s} · ", "Du kommentierst als {s} · ", "Commenti come {s} · ", "Je reageert als {s} · ", "{s}としてコメント · ", "{s}(으)로 댓글 작성 중 · ", "以 {s} 的身份评论 · "],
+    "Calma: espere um pouco antes de comentar de novo.": ["Easy: wait a moment before commenting again.", "Calma: espera un poco antes de volver a comentar.", "Doucement : attendez un peu avant de recommenter.", "Langsam: Warte kurz, bevor du wieder kommentierst.", "Calma: aspetta un po' prima di commentare di nuovo.", "Rustig aan: wacht even voor je opnieuw reageert.", "少し時間をおいてからコメントしてください。", "잠시 후에 다시 댓글을 달아 주세요.", "请稍等片刻再评论。"],
+    "Não deu para enviar. Tente de novo.": ["Couldn't send it. Please try again.", "No se pudo enviar. Inténtalo de nuevo.", "Échec de l'envoi. Réessayez.", "Senden fehlgeschlagen. Bitte erneut versuchen.", "Invio non riuscito. Riprova.", "Versturen mislukt. Probeer opnieuw.", "送信できませんでした。もう一度お試しください。", "전송하지 못했어요. 다시 시도해 주세요.", "发送失败，请重试。"],
+    "Comentários": ["Comments", "Comentarios", "Commentaires", "Kommentare", "Commenti", "Reacties", "コメント", "댓글", "评论"],
+    "Comentários chegando em breve.": ["Comments coming soon.", "Comentarios muy pronto.", "Les commentaires arrivent bientôt.", "Kommentare kommen bald.", "Commenti in arrivo.", "Reacties komen binnenkort.", "コメント機能は近日公開。", "댓글 기능이 곧 열려요.", "评论功能即将上线。"],
+    "Carregando comentários…": ["Loading comments…", "Cargando comentarios…", "Chargement des commentaires…", "Kommentare werden geladen…", "Caricamento commenti…", "Reacties laden…", "コメントを読み込み中…", "댓글을 불러오는 중…", "正在加载评论…"],
+    "↺ Ver de novo": ["↺ Watch again", "↺ Ver de nuevo", "↺ Revoir", "↺ Noch mal ansehen", "↺ Rivedi", "↺ Opnieuw kijken", "↺ もう一度見る", "↺ 다시 보기", "↺ 再看一遍"],
+    "Próxima ↓": ["Next ↓", "Siguiente ↓", "Suivante ↓", "Nächste ↓", "Successiva ↓", "Volgende ↓", "次へ ↓", "다음 ↓", "下一个 ↓"],
+    "↑ Ver as campanhas mais recentes": ["↑ See the latest campaigns", "↑ Ver las campañas más recientes", "↑ Voir les campagnes les plus récentes", "↑ Neueste Kampagnen ansehen", "↑ Vedi le campagne più recenti", "↑ Bekijk de nieuwste campagnes", "↑ 最新のキャンペーンを見る", "↑ 최신 캠페인 보기", "↑ 查看最新广告"],
+    "Você chegou ao início do arquivo.": ["You've reached the start of the archive.", "Llegaste al inicio del archivo.", "Vous êtes arrivé au début des archives.", "Du bist am Anfang des Archivs angekommen.", "Sei arrivato all'inizio dell'archivio.", "Je bent bij het begin van het archief.", "アーカイブの最初に到達しました。", "아카이브의 처음까지 왔어요.", "已经到档案的开头了。"],
+    "Ainda não há campanhas de {s} no arquivo. Veja o Mundo.": ["No campaigns from {s} in the archive yet. See the World tab.", "Todavía no hay campañas de {s} en el archivo. Mira Mundo.", "Pas encore de campagnes de {s} dans les archives. Voir Monde.", "Noch keine Kampagnen aus {s} im Archiv. Sieh dir Welt an.", "Ancora nessuna campagna da {s} nell'archivio. Guarda Mondo.", "Nog geen campagnes uit {s} in het archief. Bekijk Wereld.", "{s}のキャンペーンはまだありません。「世界」をご覧ください。", "아직 {s} 캠페인이 없어요. '세계'를 확인해 보세요.", "档案中还没有{s}的广告，请看“全球”。"],
+    "Nenhuma campanha com esse filtro.": ["No campaigns with this filter.", "Ninguna campaña con este filtro.", "Aucune campagne avec ce filtre.", "Keine Kampagnen mit diesem Filter.", "Nessuna campagna con questo filtro.", "Geen campagnes met dit filter.", "この条件のキャンペーンはありません。", "이 조건에 맞는 캠페인이 없어요.", "没有符合条件的广告。"],
+    "Mundo": ["World", "Mundo", "Monde", "Welt", "Mondo", "Wereld", "世界", "세계", "全球"],
+    "MAIS {n} ESTREIA HOJE": ["{n} MORE LAUNCH TODAY", "{n} ESTRENO MÁS HOY", "ENCORE {n} SORTIE AUJOURD'HUI", "NOCH {n} START HEUTE", "ALTRA {n} USCITA OGGI", "NOG {n} LANCERING VANDAAG", "本日あと{n}件", "오늘 {n}개 더", "今天还有 {n} 个"],
+    "MAIS {n} ESTREIAS HOJE": ["{n} MORE LAUNCHES TODAY", "{n} ESTRENOS MÁS HOY", "ENCORE {n} SORTIES AUJOURD'HUI", "NOCH {n} STARTS HEUTE", "ALTRE {n} USCITE OGGI", "NOG {n} LANCERINGEN VANDAAG", "本日あと{n}件", "오늘 {n}개 더", "今天还有 {n} 个"],
+    "MAIS {n} ESTREIA ONTEM": ["{n} MORE LAUNCH YESTERDAY", "{n} ESTRENO MÁS AYER", "ENCORE {n} SORTIE HIER", "NOCH {n} START GESTERN", "ALTRA {n} USCITA IERI", "NOG {n} LANCERING GISTEREN", "昨日あと{n}件", "어제 {n}개 더", "昨天还有 {n} 个"],
+    "MAIS {n} ESTREIAS ONTEM": ["{n} MORE LAUNCHES YESTERDAY", "{n} ESTRENOS MÁS AYER", "ENCORE {n} SORTIES HIER", "NOCH {n} STARTS GESTERN", "ALTRE {n} USCITE IERI", "NOG {n} LANCERINGEN GISTEREN", "昨日あと{n}件", "어제 {n}개 더", "昨天还有 {n} 个"],
+    "MAIS {n} ESTREIA NESTE DIA": ["{n} MORE LAUNCH THIS DAY", "{n} ESTRENO MÁS ESTE DÍA", "ENCORE {n} SORTIE CE JOUR-LÀ", "NOCH {n} START AN DIESEM TAG", "ALTRA {n} USCITA QUEL GIORNO", "NOG {n} LANCERING DEZE DAG", "この日あと{n}件", "이날 {n}개 더", "当天还有 {n} 个"],
+    "MAIS {n} ESTREIAS NESTE DIA": ["{n} MORE LAUNCHES THIS DAY", "{n} ESTRENOS MÁS ESTE DÍA", "ENCORE {n} SORTIES CE JOUR-LÀ", "NOCH {n} STARTS AN DIESEM TAG", "ALTRE {n} USCITE QUEL GIORNO", "NOG {n} LANCERINGEN DEZE DAG", "この日あと{n}件", "이날 {n}개 더", "当天还有 {n} 个"],
+    "Rolar para a próxima campanha. {s}": ["Scroll to the next campaign. {s}", "Ir a la siguiente campaña. {s}", "Aller à la campagne suivante. {s}", "Zur nächsten Kampagne scrollen. {s}", "Vai alla campagna successiva. {s}", "Naar de volgende campagne. {s}", "次のキャンペーンへ。{s}", "다음 캠페인으로. {s}", "滚动到下一个广告。{s}"],
+    "Voltar ao topo": ["Back to top", "Volver arriba", "Retour en haut", "Nach oben", "Torna su", "Terug naar boven", "トップへ戻る", "맨 위로", "回到顶部"],
+    "Hoje": ["Today", "Hoy", "Aujourd'hui", "Heute", "Oggi", "Vandaag", "今日", "오늘", "今天"],
+    "↑ {n} campanha nova": ["↑ {n} new campaign", "↑ {n} campaña nueva", "↑ {n} nouvelle campagne", "↑ {n} neue Kampagne", "↑ {n} nuova campagna", "↑ {n} nieuwe campagne", "↑ 新着 {n} 件", "↑ 새 캠페인 {n}개", "↑ {n} 个新广告"],
+    "↑ {n} campanhas novas": ["↑ {n} new campaigns", "↑ {n} campañas nuevas", "↑ {n} nouvelles campagnes", "↑ {n} neue Kampagnen", "↑ {n} nuove campagne", "↑ {n} nieuwe campagnes", "↑ 新着 {n} 件", "↑ 새 캠페인 {n}개", "↑ {n} 个新广告"],
+    "Não foi possível carregar as campanhas. Recarregue a página em alguns minutos.": ["Couldn't load the campaigns. Reload the page in a few minutes.", "No se pudieron cargar las campañas. Recarga la página en unos minutos.", "Impossible de charger les campagnes. Rechargez la page dans quelques minutes.", "Kampagnen konnten nicht geladen werden. Lade die Seite in ein paar Minuten neu.", "Impossibile caricare le campagne. Ricarica la pagina tra qualche minuto.", "Campagnes laden lukt niet. Herlaad de pagina over een paar minuten.", "キャンペーンを読み込めませんでした。数分後に再読み込みしてください。", "캠페인을 불러오지 못했어요. 잠시 후 새로고침해 주세요.", "无法加载广告，请几分钟后刷新页面。"],
+    "Carregando campanhas…": ["Loading campaigns…", "Cargando campañas…", "Chargement des campagnes…", "Kampagnen werden geladen…", "Caricamento campagne…", "Campagnes laden…", "キャンペーンを読み込み中…", "캠페인을 불러오는 중…", "正在加载广告…"],
+    "Região": ["Region", "Región", "Région", "Region", "Regione", "Regio", "地域", "지역", "地区"],
+    "droppad, voltar ao topo": ["droppad, back to top", "droppad, volver arriba", "droppad, retour en haut", "droppad, nach oben", "droppad, torna su", "droppad, terug naar boven", "droppad、トップへ", "droppad, 맨 위로", "droppad，回到顶部"],
+    "Escolher uma data": ["Pick a date", "Elegir una fecha", "Choisir une date", "Datum wählen", "Scegli una data", "Kies een datum", "日付を選ぶ", "날짜 선택", "选择日期"],
+    "Ver campanhas a partir de uma data": ["See campaigns from a date", "Ver campañas desde una fecha", "Voir les campagnes à partir d'une date", "Kampagnen ab einem Datum ansehen", "Vedi le campagne da una data", "Bekijk campagnes vanaf een datum", "日付からキャンペーンを見る", "날짜부터 캠페인 보기", "查看某日期起的广告"],
+    "Voltar para hoje": ["Back to today", "Volver a hoy", "Revenir à aujourd'hui", "Zurück zu heute", "Torna a oggi", "Terug naar vandaag", "今日に戻る", "오늘로 돌아가기", "回到今天"],
+    "Som dos filmes": ["Film sound", "Sonido de los videos", "Son des films", "Ton der Filme", "Audio dei video", "Geluid van de films", "動画の音声", "영상 소리", "视频声音"],
+    "droppad · as campanhas que estrearam hoje no mundo": ["droppad · the campaigns that launched today around the world", "droppad · las campañas que se estrenaron hoy en el mundo", "droppad · les campagnes sorties aujourd'hui dans le monde", "droppad · die Kampagnen, die heute weltweit gestartet sind", "droppad · le campagne uscite oggi nel mondo", "droppad · de campagnes die vandaag wereldwijd lanceerden", "droppad · 今日世界で公開された広告", "droppad · 오늘 전 세계에 공개된 캠페인", "droppad · 今天全球上线的广告"],
+    "Brasil": ["Brazil", "Brasil", "Brésil", "Brasilien", "Brasile", "Brazilië", "ブラジル", "브라질", "巴西"],
+    "América Latina": ["Latin America", "América Latina", "Amérique latine", "Lateinamerika", "America Latina", "Latijns-Amerika", "ラテンアメリカ", "라틴아메리카", "拉丁美洲"],
+    "EUA e Canadá": ["US & Canada", "EE. UU. y Canadá", "États-Unis et Canada", "USA und Kanada", "USA e Canada", "VS en Canada", "米国・カナダ", "미국·캐나다", "美国和加拿大"],
+    "EUA": ["USA", "EE. UU.", "États-Unis", "USA", "USA", "VS", "米国", "미국", "美国"],
+    "Reino Unido": ["UK", "Reino Unido", "Royaume-Uni", "Großbritannien", "Regno Unito", "VK", "英国", "영국", "英国"],
+    "Europa": ["Europe", "Europa", "Europe", "Europa", "Europa", "Europa", "ヨーロッパ", "유럽", "欧洲"],
+    "Ásia-Pacífico": ["Asia-Pacific", "Asia-Pacífico", "Asie-Pacifique", "Asien-Pazifik", "Asia-Pacifico", "Azië-Pacific", "アジア太平洋", "아시아태평양", "亚太"],
+    "Oriente Médio e África": ["Middle East & Africa", "Oriente Medio y África", "Moyen-Orient et Afrique", "Nahost und Afrika", "Medio Oriente e Africa", "Midden-Oosten en Afrika", "中東・アフリカ", "중동·아프리카", "中东和非洲"],
+    "Global": ["Global", "Global", "Monde", "Global", "Globale", "Wereldwijd", "グローバル", "글로벌", "全球"]
+  };
+  var LANG = "pt";
+  // texto na língua de quem entra; {x} vira o valor passado
+  function tr(s, v) {
+    var d = TXT[s], i = LINGUAS.indexOf(LANG), out = s;
+    if (LANG !== "pt" && d) out = d[i >= 0 ? i : 0] || d[0];
+    if (v) for (var k in v) out = out.split("{" + k + "}").join(v[k]);
+    return out;
+  }
+  function mesesDe(lang) {
+    if (lang === "pt") return ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+    try {
+      var f = new Intl.DateTimeFormat(LOCALE[lang] || "en", { month: "short", timeZone: "UTC" });
+      var out = [];
+      for (var m = 0; m < 12; m++) out.push(f.format(new Date(Date.UTC(2020, m, 15))).replace(/\./g, "").toUpperCase());
+      return out;
+    } catch (e) { return ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]; }
+  }
+  // troca a língua da página (textos fixos do index.html, meses, nomes de países)
+  function aplicarLingua(lang) {
+    LANG = TXT.Hoje && (lang === "pt" || LINGUAS.indexOf(lang) >= 0) ? lang : "en";
+    MESES = mesesDe(LANG);
+    try { dn = new Intl.DisplayNames([LOCALE[LANG] || "en"], { type: "region" }); } catch (e) { dn = null; }
+    document.documentElement.lang = LOCALE[LANG] || "en";
+    document.title = tr("droppad · as campanhas que estrearam hoje no mundo");
+    function attr(sel, nome, pt) { var e = document.querySelector(sel); if (e) e.setAttribute(nome, tr(pt)); }
+    function txt(id, pt) { var e = $(id); if (e) e.textContent = tr(pt); }
+    attr("#chips", "aria-label", "Região");
+    attr("#reg-sel", "aria-label", "Região");
+    attr("#top", "aria-label", "droppad, voltar ao topo");
+    attr(".cal-btn", "title", "Escolher uma data");
+    attr("#cal-in", "aria-label", "Ver campanhas a partir de uma data");
+    attr("#cal-x", "aria-label", "Voltar para hoje");
+    attr("#sound", "aria-label", "Som dos filmes");
+    txt("reg-txt", "Mundo");
+    if (!state.upTo) txt("cal-txt", "Hoje");
+    var st = $("status");
+    if (st && !st.hidden && st.textContent === "Carregando campanhas…") st.textContent = tr("Carregando campanhas…");
+  }
   // som ligado por padrão; se o navegador bloquear áudio antes do primeiro toque,
   // o filme toca mudo e o som entra no primeiro clique/toque/tecla na página
   var sound = true, blocked = false, gestureAt = 0, unblockedAt = 0;
@@ -311,15 +442,15 @@
   function fmtT(t) { t = Math.max(0, Math.floor(t || 0)); var m = Math.floor(t / 60), s = t % 60; return m + ":" + (s < 10 ? "0" : "") + s; }
   function setTime(art, t, d) { var tg = art.querySelector(".ptime"); if (tg && d) tg.textContent = t > 0.5 ? fmtT(t) + " / " + fmtT(d) : fmtT(d); }
   var MESES = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
-  function selo(d) { return d === TODAY ? "Estreou hoje" : d === shift(TODAY, -1) ? "Estreou ontem" : "Estreou " + (+d.slice(8, 10)) + " " + MESES[+d.slice(5, 7) - 1]; }
+  function selo(d) { return d === TODAY ? tr("Estreou hoje") : d === shift(TODAY, -1) ? tr("Estreou ontem") : tr("Estreou {d}", { d: (+d.slice(8, 10)) + " " + MESES[+d.slice(5, 7) - 1] }); }
   // "há 2 h" a partir da hora em que entrou no site
   function haQuanto(iso) {
     var t = new Date(iso).getTime();
     if (isNaN(t)) return "";
     var m = Math.round((Date.now() - t) / 60000);
     if (m < 0) return "";
-    if (m < 60) return "há " + Math.max(1, m) + " min";
-    if (m < 24 * 60) return "há " + Math.round(m / 60) + " h";
+    if (m < 60) return tr("há {n} min", { n: Math.max(1, m) });
+    if (m < 24 * 60) return tr("há {n} h", { n: Math.round(m / 60) });
     return "";
   }
   var ICON_DOTS = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="3" height="3"/><rect x="10.5" y="11" width="3" height="3"/><rect x="17" y="11" width="3" height="3"/></svg>';
@@ -372,7 +503,7 @@
     var body = el("div", "news-body");
     box.appendChild(body);
     // começa mostrando pouco (umas 3 linhas); "Ver mais" abre o resto
-    var ver = el("button", "ver-mais", "Ver mais");
+    var ver = el("button", "ver-mais", tr("Ver mais"));
     ver.type = "button";
     ver.hidden = true;
     ver.addEventListener("click", function (e) {
@@ -383,7 +514,7 @@
         void body.offsetHeight; body.style.maxHeight = body.scrollHeight + "px";
       }
       else { body.style.maxHeight = ""; body.classList.add("fechado"); }
-      ver.textContent = abrir ? "Ver menos" : "Ver mais";
+      ver.textContent = abrir ? tr("Ver menos") : tr("Ver mais");
       ver.setAttribute("aria-expanded", abrir ? "true" : "false");
     });
     box.appendChild(ver);
@@ -408,7 +539,7 @@
         .then(function (j) { fill(j.story); })
         .catch(function () { /* fica só com o título e o link */ });
     }
-    if (c.url) box.appendChild(link("news-more", "Ler a matéria completa em " + (c.source || "fonte") + " ↗", c.url));
+    if (c.url) box.appendChild(link("news-more", tr("Ler a matéria completa em {s} ↗", { s: c.source || tr("fonte") }), c.url));
     return box;
   }
 
@@ -431,8 +562,8 @@
     p.appendChild(document.createTextNode(inicio));
     var more = el("button", "txt-more", "…");
     more.type = "button";
-    more.setAttribute("aria-label", "Ler o resto do texto");
-    more.title = "Ler mais";
+    more.setAttribute("aria-label", tr("Ler o resto do texto"));
+    more.title = tr("Ler mais");
     more.addEventListener("click", function (e) {
       e.stopPropagation();
       more.disabled = true;
@@ -451,7 +582,7 @@
         p.textContent = "";
         p.classList.add("open");
         mostrar.forEach(function (s, k) { if (k) p.appendChild(el("br")), p.appendChild(el("br")); p.appendChild(document.createTextNode(s)); });
-        if (c.url) { p.appendChild(document.createTextNode(" ")); p.appendChild(link("news-more", "Ler a matéria completa ↗", c.url)); }
+        if (c.url) { p.appendChild(document.createTextNode(" ")); p.appendChild(link("news-more", tr("Ler a matéria completa ↗"), c.url)); }
       });
     });
     p.appendChild(more);
@@ -472,13 +603,13 @@
     var who = el("div", "who");
     var b = el("b", null, ag || marca);
     if (ag && marca && marca.toLowerCase() !== ag.toLowerCase()) {
-      b.appendChild(el("i", null, " para "));
+      b.appendChild(el("i", null, tr(" para ")));
       b.appendChild(document.createTextNode(marca));
     }
     who.appendChild(b);
     var sm = el("small");
-    var bits = ["via " + (c.source || "—")];
-    if (c.region) bits.push(c.region);
+    var bits = [tr("via {s}", { s: c.source || "—" })];
+    if (c.region) bits.push(tr(c.region));
     var ha = haQuanto(c.addedAt);
     if (ha) bits.push(ha);
     if (c.url) sm.appendChild(link("", bits.join(" · "), c.url)); else sm.textContent = bits.join(" · ");
@@ -489,7 +620,7 @@
       (c.date.slice(0, 4) !== TODAY.slice(0, 4) ? " " + c.date.slice(0, 4) : "")));
     var mb = el("button", "more-btn");
     mb.type = "button";
-    mb.setAttribute("aria-label", "Mais opções");
+    mb.setAttribute("aria-label", tr("Mais opções"));
     mb.innerHTML = ICON_DOTS;
     mb.addEventListener("click", function (e) { e.stopPropagation(); share(c, mb); });
     head.appendChild(mb);
@@ -522,7 +653,7 @@
         fr0.allow = "autoplay; encrypted-media; picture-in-picture; clipboard-write";
         fr0.setAttribute("allowfullscreen", "");
         fr0.setAttribute("scrolling", "no");
-        fr0.title = c.brand + " no " + (f0.kind === "ig" ? "Instagram" : "TikTok");
+        fr0.title = tr("{b} no {p}", { b: c.brand, p: f0.kind === "ig" ? "Instagram" : "TikTok" });
         box0.appendChild(fr0);
         host0.appendChild(box0);
         art.classList.add("embed-on");
@@ -532,11 +663,11 @@
       media.appendChild(host0);
       media.appendChild(el("span", "bigplay"));
       media.appendChild(el("span", "ptime"));
-      media.appendChild(el("span", "fail", "Este filme só toca no YouTube ↗"));
+      media.appendChild(el("span", "fail", tr("Este filme só toca no YouTube ↗")));
       media.appendChild(endCard(art, c));
       var mute = el("button", "mute");
       mute.type = "button";
-      mute.setAttribute("aria-label", "Ligar ou desligar o som");
+      mute.setAttribute("aria-label", tr("Ligar ou desligar o som"));
       mute.innerHTML = ICON_SND;
       media.appendChild(mute);
       var bar = el("div", "bar");
@@ -547,7 +678,7 @@
         c.fl.forEach(function (f, i) {
           var d = el("button", i === 0 ? "fdot on" : "fdot");
           d.type = "button";
-          d.setAttribute("aria-label", "Filme " + (i + 1) + " de " + c.fl.length);
+          d.setAttribute("aria-label", tr("Filme {i} de {n}", { i: i + 1, n: c.fl.length }));
           d.addEventListener("click", function (e) { e.stopPropagation(); art.dataset.part = i; activate(art, true); });
           dots.appendChild(d);
         });
@@ -579,7 +710,7 @@
         if (c.url) {
           media.classList.add("abre");
           media.setAttribute("role", "link");
-          media.setAttribute("aria-label", "Ler a matéria em " + (c.source || "fonte"));
+          media.setAttribute("aria-label", tr("Ler a matéria em {s}", { s: c.source || tr("fonte") }));
           media.addEventListener("click", function (e) { e.stopPropagation(); window.open(c.url, "_blank", "noopener"); });
         }
       } else {
@@ -598,18 +729,18 @@
     var acts = el("div", "acts");
     var cm = el("button", "act cmt");
     cm.type = "button";
-    cm.setAttribute("aria-label", "Comentários sobre esta campanha");
-    cm.innerHTML = ICON_CMT + "<span>Comentar</span>";
+    cm.setAttribute("aria-label", tr("Comentários sobre esta campanha"));
+    cm.innerHTML = ICON_CMT; cm.appendChild(el("span", null, tr("Comentar")));
     cm.appendChild(el("span", "n"));
     cm.addEventListener("click", function (e) { e.stopPropagation(); openComments(c); });
     acts.appendChild(cm);
     var sh = el("button", "act share");
     sh.type = "button";
-    sh.setAttribute("aria-label", "Compartilhar esta campanha");
-    sh.innerHTML = ICON_SHARE + "<span>Compartilhar</span>";
+    sh.setAttribute("aria-label", tr("Compartilhar esta campanha"));
+    sh.innerHTML = ICON_SHARE; sh.appendChild(el("span", null, tr("Compartilhar")));
     sh.addEventListener("click", function (e) { e.stopPropagation(); share(c, sh); });
     acts.appendChild(sh);
-    if (c.url) acts.appendChild(link("link", "Ver matéria ↗", c.url));
+    if (c.url) acts.appendChild(link("link", tr("Ver matéria ↗"), c.url));
     acts.classList.add("rv"); acts.style.setProperty("--i", news ? 4 : 3);
     art.appendChild(acts);
     paintCount(art);
@@ -714,16 +845,16 @@
       menu.appendChild(b);
     }
     function open(u) { window.open(u, "_blank", "noopener"); closeMenu(); }
-    item("Copiar link", function () {
+    item(tr("Copiar link"), function () {
       copy(url).then(function (ok) {
-        if (ok) { toast("Link copiado"); closeMenu(); } else { field.focus(); field.select(); toast("Selecione e copie o link"); }
+        if (ok) { toast(tr("Link copiado")); closeMenu(); } else { field.focus(); field.select(); toast(tr("Selecione e copie o link")); }
       });
     });
     item("WhatsApp", function () { open("https://wa.me/?text=" + encodeURIComponent(txt + " " + url)); });
     item("X / Twitter", function () { open("https://x.com/intent/post?text=" + encodeURIComponent(txt) + "&url=" + encodeURIComponent(url)); });
     item("LinkedIn", function () { open("https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(url)); });
     item("E-mail", function () { location.href = "mailto:?subject=" + encodeURIComponent(title) + "&body=" + encodeURIComponent(txt + "\n\n" + url); closeMenu(); });
-    if (navigator.share) item("Mais opções…", function () { navigator.share({ title: title, text: txt, url: url }).catch(function () {}); closeMenu(); });
+    if (navigator.share) item(tr("Mais opções…"), function () { navigator.share({ title: title, text: txt, url: url }).catch(function () {}); closeMenu(); });
     document.body.appendChild(menu);
     var r = btn.getBoundingClientRect(), w = menu.offsetWidth;
     var hgt = menu.offsetHeight;
@@ -910,7 +1041,7 @@
   }
   function nameOf(u) {
     var m = (u && u.user_metadata) || {};
-    return m.full_name || m.name || "Você";
+    return m.full_name || m.name || tr("Você");
   }
   var fmtAgo = new Intl.RelativeTimeFormat("pt-BR", { numeric: "auto" });
   function ago(iso) {
@@ -934,14 +1065,14 @@
     li.appendChild(av);
     var box = el("div", "cmt-b");
     var hd = el("div", "cmt-h");
-    hd.appendChild(el("b", null, k.author_name || "Leitor"));
+    hd.appendChild(el("b", null, k.author_name || tr("Leitor")));
     hd.appendChild(el("span", null, ago(k.created_at)));
     if (me && k.user_id === me.id) {
       var del = el("button", "cmt-del", "apagar"); del.type = "button";
       del.addEventListener("click", function () {
         del.disabled = true;
         sb.from("comments").delete().eq("id", k.id).then(function (r) {
-          if (r.error) { del.disabled = false; toast("Não deu para apagar agora."); } else li.remove();
+          if (r.error) { del.disabled = false; toast(tr("Não deu para apagar agora.")); } else li.remove();
         });
       });
       hd.appendChild(del);
@@ -959,8 +1090,8 @@
       .then(function (r) {
         if (cur !== c) return;
         list.textContent = "";
-        if (r.error) { list.appendChild(el("li", "drawer-note", "Não foi possível carregar os comentários agora.")); return; }
-        if (!r.data.length) list.appendChild(el("li", "drawer-note cmt-empty", "Ninguém comentou ainda. Comece a conversa."));
+        if (r.error) { list.appendChild(el("li", "drawer-note", tr("Não foi possível carregar os comentários agora."))); return; }
+        if (!r.data.length) list.appendChild(el("li", "drawer-note cmt-empty", tr("Ninguém comentou ainda. Comece a conversa.")));
         r.data.forEach(function (k) { list.appendChild(cmtItem(k)); });
       });
   }
@@ -970,7 +1101,7 @@
     if (!f) return;
     f.textContent = "";
     if (!me) {
-      f.appendChild(el("p", "cmt-ask", "Entre para comentar:"));
+      f.appendChild(el("p", "cmt-ask", tr("Entre para comentar:")));
       var row = el("div", "cmt-logins");
       function loginBtn(prov, label, icon) {
         var b = el("button", "cmt-login " + prov); b.type = "button";
@@ -987,14 +1118,14 @@
       return;
     }
     var ta = el("textarea", "cmt-in");
-    ta.maxLength = 1000; ta.rows = 3; ta.placeholder = "Escreva seu comentário…";
-    ta.setAttribute("aria-label", "Seu comentário");
+    ta.maxLength = 1000; ta.rows = 3; ta.placeholder = tr("Escreva seu comentário…");
+    ta.setAttribute("aria-label", tr("Seu comentário"));
     var bar = el("div", "cmt-bar");
-    var who = el("span", "cmt-me", "Comentando como " + nameOf(me) + " · ");
+    var who = el("span", "cmt-me", tr("Comentando como {s} · ", { s: nameOf(me) }));
     var out = el("button", "cmt-out", "sair"); out.type = "button";
     out.addEventListener("click", function () { sb.auth.signOut(); });
     who.appendChild(out);
-    var send = el("button", "cmt-send", "Comentar"); send.type = "button";
+    var send = el("button", "cmt-send", tr("Comentar")); send.type = "button";
     function post() {
       var txt = ta.value.trim();
       if (!txt || send.disabled) return;
@@ -1003,7 +1134,7 @@
       sb.from("comments").insert({ campaign_id: c.id, body: txt }).select("id,user_id,author_name,author_avatar,body,created_at").single()
         .then(function (r) {
           send.disabled = false;
-          if (r.error) { toast(/rapido|devagar/i.test(r.error.message) ? "Calma: espere um pouco antes de comentar de novo." : "Não deu para enviar. Tente de novo."); return; }
+          if (r.error) { toast(/rapido|devagar/i.test(r.error.message) ? tr("Calma: espere um pouco antes de comentar de novo.") : tr("Não deu para enviar. Tente de novo.")); return; }
           ta.value = "";
           if (cur !== c) return;
           var list = drawer.querySelector(".cmt-list");
@@ -1065,7 +1196,7 @@
     closeComments();
     snap(false);
     drawer = el("section", "cmts");
-    drawer.setAttribute("aria-label", "Comentários");
+    drawer.setAttribute("aria-label", tr("Comentários"));
     var body = el("div", "drawer-body"), form = el("div", "cmt-form");
     drawer.appendChild(body);
     drawer.appendChild(form);
@@ -1074,13 +1205,13 @@
     if (btn) btn.setAttribute("aria-expanded", "true");
     cur = c;
     if (!SUPABASE_URL || !SUPABASE_KEY) {
-      body.appendChild(el("p", "drawer-note", "Comentários chegando em breve."));
+      body.appendChild(el("p", "drawer-note", tr("Comentários chegando em breve.")));
     } else {
       var list = el("ul", "cmt-list");
-      list.appendChild(el("li", "drawer-note", "Carregando comentários…"));
+      list.appendChild(el("li", "drawer-note", tr("Carregando comentários…")));
       body.appendChild(list);
       loadSb().then(function () { if (cur !== c) return; loadList(c, body); refreshForm(); },
-        function () { body.textContent = ""; body.appendChild(el("p", "drawer-note", "Não foi possível carregar os comentários agora.")); });
+        function () { body.textContent = ""; body.appendChild(el("p", "drawer-note", tr("Não foi possível carregar os comentários agora."))); });
     }
     // abre deslizando pra baixo; depois fica com a altura natural (cresce com a lista)
     var p = drawer;
@@ -1108,31 +1239,31 @@
   function endCard(art, c) {
     var card = el("div", "endcard");
     var inner = el("div", "end-in");
-    inner.appendChild(el("span", "end-k", "A ideia"));
+    inner.appendChild(el("span", "end-k", tr("A ideia")));
     inner.appendChild(el("h3", "end-brand", c.brand || c.title));
     if (c.brand) inner.appendChild(el("p", "end-title", c.title));
     var idea = c.idea || c.summary;
     if (idea) inner.appendChild(el("p", "end-idea", idea));
     var rows = [];
-    if (c.agency) rows.push(["Agência", c.agency]);
-    c.credits.forEach(function (k) { if (!(k[0] === "Agência" && k[1] === c.agency)) rows.push(k); });
-    rows.push(["Origem", flagOf(c.cc) + " " + (c.region || "Global")]);
+    if (c.agency) rows.push([tr("Agência"), c.agency]);
+    c.credits.forEach(function (k) { if (!((k[0] === "Agência" || k[0] === tr("Agência")) && k[1] === c.agency)) rows.push(k); });
+    rows.push([tr("Origem"), flagOf(c.cc) + " " + tr(c.region || "Global")]);
     var dl = el("dl", "end-cred");
     rows.forEach(function (k) { dl.appendChild(el("dt", null, k[0])); dl.appendChild(el("dd", null, k[1])); });
     inner.appendChild(dl);
     var acts = el("div", "end-acts");
-    var again = el("button", "end-btn", "↺ Ver de novo"); again.type = "button";
+    var again = el("button", "end-btn", tr("↺ Ver de novo")); again.type = "button";
     again.addEventListener("click", function (e) { e.stopPropagation(); art.classList.remove("ended"); art.dataset.part = 0; activate(art, true); });
     acts.appendChild(again);
-    var next = el("button", "end-btn", "Próxima ↓"); next.type = "button";
+    var next = el("button", "end-btn", tr("Próxima ↓")); next.type = "button";
     next.addEventListener("click", function (e) { e.stopPropagation(); var n = art.nextElementSibling; if (n && n.classList.contains("post")) n.scrollIntoView({ behavior: "smooth", block: "center" }); });
     acts.appendChild(next);
     var shr = el("button", "end-btn share-end"); shr.type = "button";
-    shr.setAttribute("aria-label", "Compartilhar esta campanha");
+    shr.setAttribute("aria-label", tr("Compartilhar esta campanha"));
     shr.innerHTML = ICON_SHARE + "<span>Compartilhar</span>";
     shr.addEventListener("click", function (e) { e.stopPropagation(); share(c, shr); });
     acts.appendChild(shr);
-    if (c.url) acts.appendChild(link("end-btn ghost", "Ler em " + (c.source || "fonte") + " ↗", c.url));
+    if (c.url) acts.appendChild(link("end-btn ghost", tr("Ler em {s} ↗", { s: c.source || tr("fonte") }), c.url));
     inner.appendChild(acts);
     card.appendChild(inner);
     card.addEventListener("click", function (e) { e.stopPropagation(); });
@@ -1159,7 +1290,7 @@
     if (idx < 0) return false;
     if (idx > 0) {
       state.shown = idx;
-      var back = el("button", "newer", "↑ Ver as campanhas mais recentes");
+      var back = el("button", "newer", tr("↑ Ver as campanhas mais recentes"));
       back.type = "button";
       back.addEventListener("click", function () {
         try { history.replaceState(null, "", location.pathname); } catch (e) { /* nada */ }
@@ -1286,7 +1417,7 @@
       fr.allow = "autoplay; encrypted-media; picture-in-picture; clipboard-write";
       fr.setAttribute("allowfullscreen", "");
       fr.setAttribute("scrolling", "no");
-      fr.title = c.brand + " no " + (f.kind === "ig" ? "Instagram" : "TikTok");
+      fr.title = tr("{b} no {p}", { b: c.brand, p: f.kind === "ig" ? "Instagram" : "TikTok" });
       if (f.kind === "ig") { slot.className = "igbox"; if (f.reel) slot.dataset.reel = "1"; fitIG(art._media); }
       slot.appendChild(fr);
       fr.addEventListener("load", playing);
@@ -1394,8 +1525,8 @@
       feed.appendChild(w);
       carregarProximoAno().then(function () { filtrarLista(); renderCal(); renderMore(); });
     } else {
-      feed.appendChild(el("p", "end", state.list.length ? "Você chegou ao início do arquivo." :
-        state.region === "home" ? "Ainda não há campanhas de " + state.home.label + " no arquivo. Veja o Mundo." : "Nenhuma campanha com esse filtro."));
+      feed.appendChild(el("p", "end", state.list.length ? tr("Você chegou ao início do arquivo.") :
+        state.region === "home" ? tr("Ainda não há campanhas de {s} no arquivo. Veja o Mundo.", { s: state.home.label }) : tr("Nenhuma campanha com esse filtro.")));
     }
   }
   // o país do visitante; se o arquivo não tiver nada de lá, vale a região (ex.: Ásia-Pacífico)
@@ -1479,7 +1610,7 @@
     if (sel) sel.textContent = "";
     var h = state.home;
     // só duas abas: o mundo inteiro e o país de quem entra (EUA, Brasil, Japão…)
-    var opts = [["", "Mundo"], ["home", h.label]];
+    var opts = [["", tr("Mundo")], ["home", h.label]];
     opts.forEach(function (o) {
       var on = (state.region || "") === o[0];
       var b = el("button", null, o[1]);
@@ -1512,10 +1643,10 @@
     $("readbar").style.transform = "scaleX(" + (tot ? Math.min(1, ((art._k || 0) + 1) / tot) : 0) + ")";
     var left = tot - ((art._k || 0) + 1), t = "";
     var quando = c.date === TODAY ? " HOJE" : c.date === shift(TODAY, -1) ? " ONTEM" : " NESTE DIA";
-    if (left > 0 && nextPost(art)) t = "MAIS " + left + (left === 1 ? " ESTREIA" : " ESTREIAS") + quando;
+    if (left > 0 && nextPost(art)) t = tr("MAIS {n} " + (left === 1 ? "ESTREIA" : "ESTREIAS") + quando, { n: left });
     $("cue-txt").textContent = t;
     $("cue").hidden = !t;
-    $("cue-btn").setAttribute("aria-label", t ? "Rolar para a próxima campanha. " + t.toLowerCase() : "");
+    $("cue-btn").setAttribute("aria-label", t ? tr("Rolar para a próxima campanha. {s}", { s: t.toLowerCase() }) : "");
   }
   $("cue-btn").addEventListener("click", function () {
     var a = active ? active.art : document.querySelector(".post");
@@ -1542,8 +1673,8 @@
   (function () {
     var b = el("button", "to-top");
     b.type = "button";
-    b.setAttribute("aria-label", "Voltar ao topo");
-    b.title = "Voltar ao topo";
+    b.setAttribute("aria-label", tr("Voltar ao topo"));
+    b.title = tr("Voltar ao topo");
     b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5 12l7-7 7 7"/></svg>';
     b.addEventListener("click", irAoTopo);
     document.body.appendChild(b);
@@ -1587,7 +1718,7 @@
     var datas = state.items.map(function (c) { return c.date; }).sort();
     if (datas.length) { inp.min = antigo.min && antigo.min < datas[0] ? antigo.min : datas[0]; inp.max = datas[datas.length - 1]; }
     inp.value = state.upTo || "";
-    $("cal-txt").textContent = state.upTo ? (+state.upTo.slice(8, 10)) + " " + MESES[+state.upTo.slice(5, 7) - 1].toLowerCase() : "Hoje";
+    $("cal-txt").textContent = state.upTo ? (+state.upTo.slice(8, 10)) + " " + MESES[+state.upTo.slice(5, 7) - 1].toLowerCase() : tr("Hoje");
     $("cal").classList.toggle("on", !!state.upTo);
     $("cal-x").hidden = !state.upTo;
   }
@@ -1650,7 +1781,7 @@
           });
           document.body.appendChild(pill);
         }
-        pill.textContent = "↑ " + n + (n === 1 ? " campanha nova" : " campanhas novas");
+        pill.textContent = tr(n === 1 ? "↑ {n} campanha nova" : "↑ {n} campanhas novas", { n: n });
       })
       .catch(function () { /* tenta de novo na próxima */ });
   }
@@ -1704,11 +1835,14 @@
     return get("feed.json").catch(function () { return get("campaigns.json"); });
   }
   // dados e país de quem entra chegam ao mesmo tempo
+  aplicarLingua(linguaContato()); // primeiro palpite (país salvo ou língua do navegador)
   Promise.all([loadData("no-cache"), detectCountry(), carregarIndice()])
     .then(function (res) {
+      paisVisita = res[1] || "";
+      aplicarLingua(linguaContato()); // a língua do país de onde vem o acesso
       state.items = normalize(res[0]);
       setHome(res[1]);
-      paisVisita = res[1] || ""; pintarContato();
+      pintarContato();
       $("status").hidden = true;
       renderAll();
       goTo(sharedId());
@@ -1717,6 +1851,6 @@
     })
     .catch(function (err) {
       console.log("ERRO", err && err.stack);
-      $("status").textContent = "Não foi possível carregar as campanhas. Recarregue a página em alguns minutos.";
+      $("status").textContent = tr("Não foi possível carregar as campanhas. Recarregue a página em alguns minutos.");
     });
 })();
