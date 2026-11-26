@@ -23,8 +23,8 @@
       "mod": "Wed, 25 Nov 2026 23:30:14 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"cf437999b36ed554ae4d598580d56e7d\"",
-      "mod": "Thu, 26 Nov 2026 01:41:28 GMT"
+      "etag": "\"efe3b2a83362405492bc9c920bb28f04\"",
+      "mod": "Thu, 26 Nov 2026 01:42:03 GMT"
     },
     "https://www.marketingdive.com/feeds/news/": {
       "mod": "Wed, 25 Nov 2026 15:46:00 GMT"
@@ -49,11 +49,11 @@
       "mod": "Thu, 26 Nov 2026 05:07:22 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 05:28:15 GMT"
+      "mod": "Thu, 26 Nov 2026 05:31:38 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"e8b2f5a4e29d7631e5285f108810ce0a\"",
-      "mod": "Thu, 26 Nov 2026 04:38:42 GMT"
+      "etag": "\"686b34aa8bb31e489a22d17f9a919f57\"",
+      "mod": "Thu, 26 Nov 2026 05:30:23 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795668609-gzip\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 05:28:16 GMT"
+      "mod": "Thu, 26 Nov 2026 05:32:16 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"af5eb50bdfc70b4b49ff3ea43dc43961-gzip\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 05:27:50 GMT"
+      "mod": "Thu, 26 Nov 2026 05:31:56 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 141,
+  "yt_pos": 114,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1022,17 +1022,18 @@
       "Elogia México": "",
       "ABC Digital": "abcdigitalagency",
       "SUBE Agencia Digital": "",
-      "Conqr": ""
+      "Conqr": "",
+      "LLYC México": ""
     },
     "tentadas": {
-      "LLYC México": [
-        "llycmxico"
-      ],
       "Monks México": [
         "monksmxico"
+      ],
+      "Geotelecom MX": [
+        "geotelecommx"
       ]
     },
-    "pos": 1133,
+    "pos": 1135,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1420,9 +1421,10 @@
       "Elogia México",
       "SUBE Agencia Digital",
       "Conqr",
-      "LLYC México"
+      "LLYC México",
+      "Monks México"
     ],
-    "rodadas": 2185,
+    "rodadas": 2189,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2512,7 +2514,8 @@
       "ABC Digital": [],
       "Conqr": [],
       "LLYC México": [],
-      "Monks México": []
+      "Monks México": [],
+      "Geotelecom MX": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3273,6 +3276,6 @@
     "https://www.retailgazette.co.uk/blog/2026/11/co-op-wholesale-launches-extended-christmas-campaign-to-boost-festive-sales",
     "https://www.medianews4u.com/nmc-revises-ethical-advertising-guidelines-what-it-means-for-healthcare-marketers"
   ],
-  "ultima_rodada": "2026-11-26T05:28:12.484927+00:00",
+  "ultima_rodada": "2026-11-26T05:32:12.688899+00:00",
   "ultima_novidade": "2026-11-26T05:28:12.484927+00:00"
 }
