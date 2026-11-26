@@ -1,7 +1,7 @@
 {
   "cond": {
     "https://www.b9.com.br/feed/": {
-      "etag": "W/\"5df2-CKlhM8Hvrh8x9Yn4dgmIEyue410\""
+      "etag": "W/\"5df2-+P+KYQB8mZsVDWENXoYel7gGd3g\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
       "etag": "\"d088b02cd28e1c94bb9c1892ef9af3f8\"",
@@ -26,15 +26,15 @@
       "mod": "Wed, 25 Nov 2026 15:46:00 GMT"
     },
     "https://musebyclios.com/feed/": {
-      "etag": "W/\"0bd3fa4a8a194c86908cf5bcae957b8b\"",
-      "mod": "Wed, 25 Nov 2026 15:06:41 GMT"
+      "etag": "W/\"1c63690d4bc657e03a87c47abc126ed1\"",
+      "mod": "Thu, 26 Nov 2026 14:31:19 GMT"
     },
     "https://www.contentgrip.com/feed/": {
       "etag": "W/\"30bd5-s6LGGvUWc04hJgVTrLhXlwWptU0\""
     },
     "https://www.nossomeio.com.br/feed/": {
-      "etag": "\"1e277-6612e979a70d6\"",
-      "mod": "Thu, 26 Nov 2026 14:16:40 GMT"
+      "etag": "\"e4b2864d0ba3b77f1328be82dc945e08\"",
+      "mod": "Thu, 26 Nov 2026 14:52:15 GMT"
     },
     "https://www.adworld.ie/feed/": {
       "etag": "\"b778f8e5ac045bc29a7be1e54d179c8b\"",
@@ -45,23 +45,23 @@
       "mod": "Thu, 26 Nov 2026 13:11:28 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 14:30:39 GMT"
+      "mod": "Thu, 26 Nov 2026 14:52:12 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
       "mod": "Thu, 26 Nov 2026 06:49:38 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795703404-gzip\"",
-      "mod": "Thu, 26 Nov 2026 14:30:04 GMT"
+      "etag": "W/\"1795704672-gzip\"",
+      "mod": "Thu, 26 Nov 2026 14:51:12 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
       "mod": "Thu, 07 May 2026 12:47:56 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
-      "etag": "\"2187c34a304288326e57e6392a53dab3\"",
-      "mod": "Thu, 26 Nov 2026 14:08:09 GMT"
+      "etag": "\"60494538cba0c39c99f406e899de49aa\"",
+      "mod": "Thu, 26 Nov 2026 14:31:16 GMT"
     },
     "https://campaignbrief.com/feed/": {
       "etag": "\"0e87feb4792128632303d0e4a76d224a\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 14:30:40 GMT"
+      "mod": "Thu, 26 Nov 2026 14:52:41 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -118,15 +118,15 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Thu, 26 Nov 2026 14:29:16 GMT"
+      "mod": "Thu, 26 Nov 2026 14:51:45 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"361ad46ff065e475a7c1c46b2c1208ba\"",
       "mod": "Thu, 26 Nov 2026 14:00:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
-      "etag": "\"1c86046cb146aeaf41fe04744cb3dee2\"",
-      "mod": "Thu, 26 Nov 2026 14:21:55 GMT"
+      "etag": "\"c9473783dbe1a4a868155d84d4466d8d\"",
+      "mod": "Thu, 26 Nov 2026 14:45:33 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
       "etag": "\"7a01aa6fa807d37211146b109a045429\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 14:30:40 GMT"
+      "mod": "Thu, 26 Nov 2026 14:52:41 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -249,7 +249,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 14:25:42 GMT"
+      "mod": "Thu, 26 Nov 2026 14:46:42 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -313,7 +313,7 @@
       "mod": "Thu, 30 Jul 2026 19:59:18 GMT"
     }
   },
-  "yt_pos": 84,
+  "yt_pos": 156,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1161,7 +1161,7 @@
       "Liquorice": ""
     },
     "tentadas": {},
-    "pos": 1476,
+    "pos": 1520,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1671,7 +1671,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 2727,
+    "rodadas": 2749,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3679,6 +3679,6 @@
     "https://grandesnomesdapropaganda.com.br/anunciantes/alok-e-familia-estrelam-campanha-do-partage-lago-sul-shopping",
     "https://grandesnomesdapropaganda.com.br/anunciantes/gallo-apresenta-sua-nova-campanha-global-sabor-do-comeco-ao-fim"
   ],
-  "ultima_rodada": "2026-11-26T14:30:37.176275+00:00",
+  "ultima_rodada": "2026-11-26T14:52:36.595530+00:00",
   "ultima_novidade": "2026-11-26T14:30:37.176275+00:00"
 }
