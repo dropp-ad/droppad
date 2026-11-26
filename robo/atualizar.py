@@ -167,8 +167,30 @@ ENTREVISTA = re.compile(r"\b(entrevista|entrevistado|interview|interviewed|bate-
 PERGUNTA = re.compile(r"(\?|¿|^(why|how|what|when|is|are|can|should|por\s+que|porque|como|cómo|qué|que|o\s+que|quando|quem)\b|^(en|in|em)\s+(19|20)\d\d\b)", re.I)
 
 
+# dica/tutorial de marketing, post pessoal de funcionário, perfil de equipe: não é campanha
+CONTEUDO = re.compile(r"\b(your\s+(?:linkedin\s+|google\s+|meta\s+|facebook\s+|tiktok\s+|paid\s+)?(?:ads|campaigns?|audience|funnel|strategy|brand|landing\s+pages?)|"
+                      r"why\s+your|seus\s+an[uú]ncios|sua\s+(?:marca|estrat[eé]gia)|tus\s+anuncios|tips?|dicas|consejos|como\s+fazer|c[oó]mo\s+hacer|"
+                      r"guide|guia|checklist|mistakes|erros\s+(?:que|comuns)|best\s+practices|boas\s+pr[aá]ticas|optimi[sz]ation|otimiza[çc][aã]o|"
+                      r"\bI(?:'m|’m|\s+am)\s+(?:so\s+)?(?:happy|thrilled|excited|proud|honou?red)|estou\s+(?:muito\s+)?(?:feliz|orgulhos[oa])|"
+                      r"master\s+of|mba|capstone|graduat\w*|formatura|by\s+day|employee\s+spotlight|team\s+spotlight|spotlight\s+on|"
+                      r"(?:as|como)\s+(?:a|an|um|uma)?\s*(?:\w+\s+){0,2}(?:supervisor|manager|strategist|coordinator|analyst|director|intern|estagi[aá]ri[oa]|gerente|coordenador[a]?))\b", re.I)
+# a agência falando de prêmio ou festival, não da campanha
+PREMIO = re.compile(r"\b(awards?|awarded|prêmio|pr[eê]mios|premio|premios|premiad[ao]s?|shortlist\w*|finalist\w*|jury|j[uú]ri|jurado|"
+                    r"grand\s+prix|effies?|cannes\s+lions|jay\s+chiat|clios?|one\s+show|d&ad|el\s+ojo|cabor[eé]|festival)\b", re.I)
+# notícia de promoção de varejo (desconto, oferta, liquidação), não peça publicitária
+PROMO = re.compile(r"\b((?:campanha|a[çc][aã]o|a[çc][oõ]es|campaña|promo[çc][aã]o)\s+(?:de|com)\s+(?:descontos?|ofertas?|pre[çc]os?\s+baixos|liquida[çc][aã]o)|"
+                   r"descontos?\s+de\s+at[eé]|liquida[çc][aã]o|queima\s+de\s+estoque|"
+                   r"ofertas?\s+(?:em|nas)\s+lojas|nas\s+lojas\s+de\s+atacarejo)\b", re.I)
+
+
+# no título de matéria, só o que é claramente dica de marketing (título de campanha pode ter "How to", "guia"...)
+CONTEUDO_TIT = re.compile(r"\b((?:linkedin|google|meta|facebook|instagram|tiktok|paid)\s+ads\s+(?:for|might|are|is|para)|"
+                          r"why\s+your\s+(?:ads|pages|campaigns)|your\s+(?:linkedin\s+|google\s+|meta\s+)?ads\s+might|seus\s+an[uú]ncios|"
+                          r"tips|dicas|consejos|best\s+practices|boas\s+pr[aá]ticas|checklist|optimi[sz]ation|otimiza[çc][aã]o)\b", re.I)
+
+
 def parece_campanha(titulo, resumo="", so_campanhas=False):
-    if EXCLUI.search(titulo) or PERGUNTA.search(titulo.strip()):
+    if EXCLUI.search(titulo) or PERGUNTA.search(titulo.strip()) or CONTEUDO_TIT.search(titulo) or PROMO.search(titulo):
         return False
     if so_campanhas:
         return True
@@ -184,7 +206,11 @@ NAO_MARCA = {"black friday", "cyber monday", "natal", "navidad", "christmas", "n
              "australian", "american", "british", "global", "holiday", "festive", "brasil", "brazil", "méxico", "mexico", "argentina",
              "españa", "spain", "uk", "us", "eua", "india", "this", "esta", "este", "a", "o", "el", "la", "le", "les", "os", "as",
              "black", "friday", "dia", "day", "mundial", "copa", "vantagens", "brand", "marca", "marcas", "brands", "agency", "agência", "agencia",
-             "film", "filme", "spot", "case", "case study", "commercial", "comercial", "tvc", "ad", "ads", "video", "vídeo", "official", "oficial"}
+             "film", "filme", "spot", "case", "case study", "commercial", "comercial", "tvc", "ad", "ads", "video", "vídeo", "official", "oficial",
+             # áreas/disciplinas de marketing, não marcas
+             "paid media", "social media", "media", "mídia", "medios", "performance", "performance marketing", "digital marketing",
+             "marketing digital", "growth", "seo", "b2b", "b2c", "linkedin ads", "google ads", "meta ads", "facebook ads", "tiktok ads",
+             "retail media", "crm", "branding", "content", "conteúdo", "strategy", "estratégia", "data", "analytics", "ecommerce", "e-commerce"}
 
 
 def marca_ok(m):
@@ -981,6 +1007,8 @@ def post_para_campanha(p, conta, limite):
         return None
     # comemoração da agência no começo da legenda (sem falar de peça no título): não é campanha
     if (COMEMORACAO.search(texto[:300]) or EVENTO.search(texto[:300])) and not TEM_PECA.search(titulo):
+        return None
+    if CONTEUDO.search(texto[:400]) or PREMIO.search(texto[:1000]) or PROMO.search(texto[:300]):
         return None
     tipo = "reel" if "/reel/" in link else "p"
     cod = link.rstrip("/").rsplit("/", 1)[-1]

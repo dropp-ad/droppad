@@ -49,7 +49,11 @@ Depois disso, cadastre os 4 segredos da seção 3, ative o GitHub Pages e aponte
 - Só campanhas. Fica de fora:
   - entrevista ou podcast;
   - post institucional de agência (comemoração, foto da equipe, novos clientes, vagas, aniversário);
-  - evento, painel, palestra ou premiação.
+  - evento, painel, palestra ou premiação;
+  - agência falando de prêmio, festival, finalista ou shortlist;
+  - dica ou tutorial de marketing ("Your LinkedIn Ads…", "Google Ads for…");
+  - post pessoal de funcionário (formatura, "I'm honored to join…") ou perfil de alguém da equipe;
+  - notícia de promoção de varejo (campanha de desconto, liquidação).
 - Quando aparecer um post desses, barre o **tipo** de post no robô. Não bloqueie a conta da agência.
 - A exceção é quando a conta está trocada: o @ não é da agência (como o @crispin, que é de um músico). Nesse caso, ponha o @ em `robo/fontes.json` → `ig_bloqueadas`.
 - Nunca copie o texto da fonte; sempre reescreva.

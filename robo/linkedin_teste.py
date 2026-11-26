@@ -477,7 +477,8 @@ def campanha_por_marca(p, a, conta, falso):
         return None
     if A.EXCLUI.search(inicio[:300]) or A.INSTITUCIONAL.search(inicio[:300]) or A.ENTREVISTA.search(inicio[:400]):
         return None
-    if NAO_LI.search(inicio[:400]) or A.COMEMORACAO.search(inicio[:300]) or A.EVENTO.search(inicio[:300]):
+    if (NAO_LI.search(inicio[:400]) or A.COMEMORACAO.search(inicio[:300]) or A.EVENTO.search(inicio[:300])
+            or A.CONTEUDO.search(inicio[:400]) or A.PREMIO.search(inicio[:400]) or A.PROMO.search(inicio[:300])):
         return None
     ag = A.chave(a["nome"])
     conhecidas = marcas_conhecidas()
