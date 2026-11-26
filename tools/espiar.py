@@ -23,13 +23,17 @@ for u in sys.argv[1:]:
         if m not in links:
             links.append(m)
     print("links internos:", len(links))
-    for l in links[:80]:
+    for l in [x for x in links if "/acervo/" in x or "/ultimas/" in x][:12]:
         print("  ", l)
     for m in re.findall(r"<iframe[^>]+>", pg, re.I)[:10]:
         print("iframe:", m[:250])
     for m in sorted(set(re.findall(r"(?:youtube\.com/embed/|youtu\.be/|youtube\.com/watch\?v=|player\.vimeo\.com/video/|vimeo\.com/)[\w-]+", pg)))[:10]:
         print("video:", m)
-    for pad in [r"ficha t[ée]cnica", r"[Aa]nunciante", r"[Aa]gência", r"Dire[çc][ãa]o de cria", r"<item>"]:
+    m = re.search(r"<(article|main)\b.*?</\1>", pg, re.S | re.I)
+    if m:
+        txt = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " | ", m.group(0)))
+        print("ARTIGO:", txt[:2500])
+    for pad in [r"ficha t[ée]cnica", r"[Aa]nunciante", r"Dire[çc][ãa]o de cria", r"<item>"]:
         i = pg.find(re.search(pad, pg).group(0)) if re.search(pad, pg) else -1
         if i >= 0:
             print("--", pad, ":", re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " | ", pg[i:i + 900]))[:700])

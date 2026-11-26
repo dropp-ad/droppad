@@ -13,4 +13,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python tools/espiar.py https://clubedecriacao.com.br/ https://clubedecriacao.com.br/feed/ https://www.linkedin.com/in/rian-swart-425570143/
+      - run: python tools/espiar.py https://clubedecriacao.com.br/acervo/sua-casa-e-prioridade-monks-leroy-merlin/ https://clubedecriacao.com.br/ultimas/human-glasses-rack/ "https://clubedecriacao.com.br/wp-json/wp/v2/types" "https://clubedecriacao.com.br/acervo/" "https://clubedecriacao.com.br/acervo/page/2/"
+      - run: curl -s "https://clubedecriacao.com.br/wp-json/wp/v2/types" | python3 -c "import json,sys; d=json.load(sys.stdin); print({k:(v.get('rest_base'),v.get('name')) for k,v in d.items()})" || true
