@@ -104,7 +104,12 @@ def _nomes_compostos(c):
 
 NAO_E_FILME = re.compile(r"\b(link in bio|review|resenha|unboxing|haul|tutorial|how to|como usar|gameplay|reagindo|react|"
                          r"podcast|entrevista|interview|ao vivo|live|cupom|achadinhos|vale a pena|shorts|vlog|preso|desafio|challenge|"
-                         r"\d+ (?:dias|days|horas|hours))\b", re.I)
+                         r"\d+ (?:dias|days|horas|hours)|"
+                         # conversa sobre a campanha (prêmio, bastidores, palestra), não o filme
+                         r"pr[eê]mio|premio|premiad[ao]s?|premiaci[oó]n|award|awards|winners?|ganadore?s?|vencedore?s?|ganar|ganhar|"
+                         r"claves|keys\s+to|charla|conversa|conversamos|painel|panel|keynote|palestra|summit|webinar|"
+                         r"bastidores|behind\s+the\s+scenes|making\s+of|case\s+study|caso\s+de\s+[eé]xito|insider|"
+                         r"depoimento|testimonio|testimonial|fala\s+sobre|habla\s+de|talks?\s+about)\b", re.I)
 
 
 UI_YT = re.compile(r"^(adicionar à fila|add to queue|enviar feedback|send feedback|assistir mais tarde|watch later|compartilhar|share|novo|new|"

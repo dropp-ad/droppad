@@ -828,6 +828,13 @@ COMEMORACAO = re.compile(r"\b("
                            r"crescimento\s+d[eoa]\s+(?:pessoal|time|equipe)|crecimiento\s+de(?:l)?\s+(?:personal|equipo)|team\s+growth|"
                            r"nosso\s+time|nuestro\s+equipo|nuestra\s+gente|our\s+crew|team\s+photo|foto\s+d[eo]\s+(?:time|equipe|equipo)|"
                            r"legi[aã]o|legi[oó]n|family\s+photo|la\s+familia)\b", re.I)
+# post de evento (noite de premiação, painel, palestra, conferência): não é campanha
+EVENTO = re.compile(r"\b((?:great|amazing|wonderful|fantastic|incredible|unforgettable|inspiring|special|fun)\s+(?:evening|night|event|day|afternoon|morning)|"
+                    r"what\s+an?\s+(?:evening|night|event)|evening\s+(?:celebrating|of|with)|night\s+(?:celebrating|of|with)|"
+                    r"(?:que|uma|grande|linda|incr[ií]vel)\s+noite|noite\s+(?:de|incr[ií]vel|especial)|(?:gran|qu[eé])\s+noche|una\s+noche|"
+                    r"thanks?\s+(?:to\s+)?(?:everyone|all)\s+who\s+(?:came|joined|attended)|we\s+hosted|(?:was|were)\s+(?:thrilled|honou?red|proud|delighted)\s+to\s+(?:host|join|be|speak|attend)|"
+                    r"panel|painel|keynote|palestra|summit|conference|confer[eê]ncia|conferencia|meetup|roundtable|fireside|gala|"
+                    r"future\s+of\s+commerce|celebrating\s+the\s+future)\b", re.I)
 TEM_PECA = re.compile(r"\b(campaign|campanha|campaña|film|filme|spot|commercial|comercial|anúncio|ad)\b", re.I)
 
 
@@ -973,7 +980,7 @@ def post_para_campanha(p, conta, limite):
     if INSTITUCIONAL.search(titulo):
         return None
     # comemoração da agência no começo da legenda (sem falar de peça no título): não é campanha
-    if COMEMORACAO.search(texto[:300]) and not TEM_PECA.search(titulo):
+    if (COMEMORACAO.search(texto[:300]) or EVENTO.search(texto[:300])) and not TEM_PECA.search(titulo):
         return None
     tipo = "reel" if "/reel/" in link else "p"
     cod = link.rstrip("/").rsplit("/", 1)[-1]
