@@ -1,0 +1,16 @@
+name: Teste da ficha técnica (ramo creditos)
+
+on:
+  push:
+    branches: [creditos]
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python robo/creditos.py --testar https://campaignbrief.com/droga5-anz-scores-grand-at-clio-entertainment-for-sbss-the-ad-that-can-only-be-seen-on-sbs/ https://campaignbriefasia.com/2026/11/26/cafe-de-coral-launches-wholesome-all-day-campaign-for-revamped-menu-via-dentsu-hong-kong/ https://propmark.com.br/anunciantes/campari-reune-seis-personalidades-em-campanha-criada-pela-dpz/ https://www.meioemensagem.com.br/marketing/com-historico-de-parceria-avon-estara-no-filme-de-marta https://musebyclios.com/advertising/taco-bell-claims-christmas-bells-have-been-its-advertising-all-along/ https://www.adsoftheworld.com/campaigns/rage-against-the-ads https://creative.salon/articles/aa-charitable-trust-the-gate-clickbait https://roastbrief.com.mx/2026/11/vete-a-volar-la-campana-de-volaris-que-convirtio-el-desamor-en-creatividad-y-conquisto-cuatro-reconocimientos-en-el-ojo-de-iberoamerica-2026/ https://www.adworld.ie/2026/11/20/bullfinch-brings-jedward-back-to-the-audition-room-for-dominos-campaign/ https://www.bandt.com.au/business-events-sydney-unveils-brand-platform-nowhere-puts-you-closer-via-connecting-plots-group/ https://grandesnomesdapropaganda.com.br/anunciantes/mercatto-estreia-campanha-de-desconto-para-dois-estados/ https://www.marketingdive.com/news/chewy-jumps-on-stop-motion-animation-trend-lighting-up-holiday-ads/875412/ https://www.reasonwhy.es/actualidad/coleccion-jerseis-anuncio-navidad-carrefour-2026 https://creativosbr.com.br/dominos-lanca-colecionaveis-da-liga-da-justica-em-nova-campanha/?utm_source=rss&utm_medium=rss&utm_campaign=dominos-lanca-colecionaveis-da-liga-da-justica-em-nova-campanha
