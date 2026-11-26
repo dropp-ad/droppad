@@ -7,32 +7,23 @@ on:
 jobs:
   testar:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      # 1) o robô da ficha técnica em 40 campanhas (sem gravar nada no site)
+      - run: CREDITOS_POR_RODADA=40 python robo/creditos.py | tail -25
+      # 2) monta o site com as fichas achadas e tira prints de uma página de campanha e de uma pessoa
       - run: |
-          curl -s "https://clubedecriacao.com.br/wp-json/wp/v2/acervo?per_page=2" | python3 -c "
-          import json,sys,re
-          d=json.load(sys.stdin)
-          for x in d:
-              print('KEYS', sorted(x.keys()))
-              print('DATE', x.get('date'), 'LINK', x.get('link'))
-              print('TITLE', x['title']['rendered'])
-              print('ACF', json.dumps(x.get('acf'), ensure_ascii=False)[:1500])
-              print('CONTENT', re.sub(r'\s+',' ',x['content']['rendered'])[:2500])
-              print('TAX', {k:x.get(k) for k in x if isinstance(x.get(k), list) and k not in ('class_list',)})
-          "
-          curl -sI "https://clubedecriacao.com.br/wp-json/wp/v2/acervo?per_page=100" | grep -i "x-wp-total"
-          curl -s "https://clubedecriacao.com.br/wp-json/wp/v2/ultima?per_page=3" | python3 -c "
-          import json,sys,re
-          d=json.load(sys.stdin)
-          for x in d:
-              print('U-TITLE', x['title']['rendered'], x.get('date'), x.get('link'))
-              print('U-ACF', json.dumps(x.get('acf'), ensure_ascii=False)[:600])
-              print('U-CONTENT', re.sub(r'\s+',' ',x['content']['rendered'])[:1200])
-              print('U-TAX', {k:x.get(k) for k in x if isinstance(x.get(k), list) and k not in ('class_list',)})
-          "
-          curl -sI "https://clubedecriacao.com.br/wp-json/wp/v2/ultima?per_page=100" | grep -i "x-wp-total"
+          python robo/creditos.py --aplicar
+          mkdir _site && cp -r index.html style.css app.js favicon.svg _site/ && python3 tools/feed.py campaigns.json _site && python3 tools/paginas.py campaigns.json _site
+          pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
+          (cd _site && python -m http.server 8000 >/dev/null 2>&1 &) && sleep 2
+          C=$(python3 -c "import json;c=json.load(open('campaigns.json'));print(next(x['id'] for x in c if x['id'].startswith('2026-11-17-leroy-merlin-sua-casa')))")
+          mkdir prints && python tools/print_site.py "[\"http://localhost:8000/c/$C/\", \"http://localhost:8000/p/charles-alvarenga/\"]"
+          cd prints && git init -q -b diagnostico && git config user.name robo && git config user.email robo@x
+          git add -A && git commit -qm prints && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" diagnostico

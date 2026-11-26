@@ -72,7 +72,9 @@ h1{font-size:clamp(26px,4.4vw,40px);line-height:1.12;margin:0 0 10px;color:#fff}
 .cta{display:inline-block;margin:6px 0 26px;padding:12px 18px;background:#fff;color:#000;font-weight:800;text-decoration:none}
 dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;margin:22px 0;padding:16px 0;border-top:1px solid #222;border-bottom:1px solid #222}dt{color:#888}dd{margin:0}
 h2{font-size:18px;margin:34px 0 10px;color:#fff}ul{list-style:none;padding:0;margin:0}li{padding:8px 0;border-bottom:1px solid #1a1a1a}li a{text-decoration:none}li small{color:#888;margin-left:6px}
-footer{color:#666;font-size:13px;text-align:center;padding:30px 20px}"""
+footer{color:#666;font-size:13px;text-align:center;padding:30px 20px}
+.ficha{grid-template-columns:minmax(140px,max-content) 1fr;font-size:15px}.ficha a,dd a{color:#fff;text-decoration:underline;text-decoration-color:#555;text-underline-offset:3px}
+.ficha a:hover,dd a:hover{text-decoration-color:#f15a3a}"""
 
 
 def esc(s):
@@ -250,7 +252,11 @@ def pagina(c, lg, relacionadas):
         ficha.append((T["origem"][lg], regiao(c, lg)))
     if c.get("source"):
         ficha.append((T["fonte"][lg], c["source"]))
-    dl = "<dl>%s</dl>" % "".join("<dt>%s</dt><dd>%s</dd>" % (esc(k), esc(v)) for k, v in ficha) if ficha else ""
+    def _dd(k, v):
+        if k == T["agencia"][lg]:
+            return '<a href="%s">%s</a>' % (esc(link_entidade("a", v, lg)), esc(v))
+        return esc(v)
+    dl = "<dl>%s</dl>" % "".join("<dt>%s</dt><dd>%s</dd>" % (esc(k), _dd(k, v)) for k, v in ficha) if ficha else ""
     feed = SITE + PREFIXO[lg] + "/?c=" + urllib.parse.quote(c["id"])
     if lg != "pt":
         feed = SITE + "/?c=" + urllib.parse.quote(c["id"])
@@ -307,6 +313,7 @@ def pagina(c, lg, relacionadas):
 <a class="cta" href="{feed}">{verfeed} →</a>
 {corpo}
 {dl}
+{ficha}
 {ler}
 {rel}
 </main>
@@ -320,7 +327,122 @@ def pagina(c, lg, relacionadas):
         ld=dados_estruturados(c, lg, titulo, desc, url, imagem), home=esc(PREFIXO[lg] + "/" if lg != "pt" else "/"),
         lema=esc(T["lema"][lg]), estreou=esc(T["estreou"][lg].format(d=data_por_extenso(c.get("date"), lg))),
         h1=esc(texto(c, "title", lg)), by=by, midia=bloco_midia(c), feed=esc(feed), verfeed=esc(T["ver_feed"][lg]),
-        corpo=corpo, dl=dl, ler=ler, rel=rel)
+        corpo=corpo, dl=dl, ficha=bloco_ficha(c, lg), ler=ler, rel=rel)
+
+
+# ---------------------------------------------------------------- ficha técnica (créditos)
+EMPRESA = re.compile(r"ag[êe]ncia|agency|agencia|agence|produtora|production compan|productora|post[- ]?produ|p[óo]s[- ]?produ|"
+                     r"produtora de som|sound|audio|[áa]udio|m[úu]sica|music|vfx|studio|est[úu]dio|media agency|m[íi]dia\b", re.I)
+NAO_LIGA = re.compile(r"^(t[íi]tulo|title|campanha|campaign|campaña|produto|product|anunciante|advertiser|cliente|client|marca|brand|"
+                      r"pe[çc]a|pe[çc]as|ve[íi]culos?|m[íi]dias? utilizadas?|dura[çc][ãa]o|formato|data)s?\s*$", re.I)
+TITULO_FICHA = {"pt": "Ficha técnica", "en": "Credits", "es": "Ficha técnica"}
+T["campanhas_de"] = {"pt": "Campanhas com {n}", "en": "Campaigns with {n}", "es": "Campañas con {n}"}
+T["titulo_pessoa"] = {"pt": "{n}: campanhas e créditos", "en": "{n}: campaigns and credits", "es": "{n}: campañas y créditos"}
+T["desc_pessoa"] = {"pt": "Campanhas com crédito de {n} no droppad: {lista}.", "en": "Campaigns credited to {n} on droppad: {lista}.",
+                    "es": "Campañas con créditos de {n} en droppad: {lista}."}
+T["titulo_agencia"] = {"pt": "{n}: campanhas da agência", "en": "{n}: agency campaigns", "es": "{n}: campañas de la agencia"}
+T["como"] = {"pt": "como {r}", "en": "as {r}", "es": "como {r}"}
+
+
+def slug(s):
+    s = html.unescape(str(s or "")).lower()
+    for a, b in (("áàâãä", "a"), ("éèêë", "e"), ("íìîï", "i"), ("óòôõö", "o"), ("úùûü", "u"), ("ç", "c"), ("ñ", "n")):
+        for ch in a:
+            s = s.replace(ch, b)
+    return re.sub(r"[^a-z0-9]+", "-", s).strip("-")[:70]
+
+
+def creditos(c):
+    """[(função, nome)] da campanha: "credits" (robô da ficha técnica) ou "ficha" (Clube, curadores)."""
+    out = []
+    for k in (c.get("credits") or c.get("ficha") or []):
+        if isinstance(k, dict) and k.get("role") and (k.get("name") or k.get("names")):
+            nome = k.get("name") or k.get("names")
+            out.append((str(k["role"]).strip(), ", ".join(nome) if isinstance(nome, list) else str(nome).strip()))
+    return out
+
+
+def nomes_de(texto):
+    """'Fulana, Beltrano e Ciclano' → ['Fulana', 'Beltrano', 'Ciclano'] (corta cidade/país depois da vírgula em empresas)."""
+    partes = re.split(r"\s*(?:,\s*(?:and|e|y)\s+|,|;|/|\s&\s|\se\s|\sand\s|\sy\s)\s*", texto)
+    out = []
+    for p in partes:
+        p = re.sub(r"\(.*?\)", "", p).strip(" .-–—")
+        if 2 <= len(p) <= 60 and not re.search(r"\d{2,}|https?:|www\.", p) and len(p.split()) <= 6:
+            out.append(p)
+    return out
+
+
+def entidades(c):
+    """Pessoas e empresas creditadas: [(tipo 'p'|'a', nome, função)]."""
+    out = []
+    if c.get("agency"):
+        out.append(("a", c["agency"], "Agência"))
+    for funcao, texto in creditos(c):
+        if NAO_LIGA.search(funcao):
+            continue
+        tipo = "a" if EMPRESA.search(funcao) else "p"
+        nomes = nomes_de(texto)
+        if tipo == "a" and nomes:
+            nomes = nomes[:1]  # "HPLA, Los Angeles, California, USA" → HPLA
+        for n in nomes:
+            out.append((tipo, n, funcao))
+    return out
+
+
+def link_entidade(tipo, nome, lg=None):
+    # uma página só por pessoa/empresa (o nome é o mesmo em qualquer língua)
+    return "/%s/%s/" % (tipo, slug(nome))
+
+
+def bloco_ficha(c, lg):
+    linhas = []
+    for funcao, texto in creditos(c):
+        if NAO_LIGA.search(funcao):
+            linhas.append("<dt>%s</dt><dd>%s</dd>" % (esc(funcao), esc(texto)))
+            continue
+        tipo = "a" if EMPRESA.search(funcao) else "p"
+        nomes = nomes_de(texto)
+        if tipo == "a" and nomes:
+            resto = texto[len(nomes[0]):] if texto.startswith(nomes[0]) else ""
+            dd = '<a href="%s">%s</a>%s' % (esc(link_entidade("a", nomes[0], lg)), esc(nomes[0]), esc(resto))
+        else:
+            dd = esc(texto)
+            for n in sorted(nomes, key=len, reverse=True):
+                dd = dd.replace(esc(n), '<a href="%s">%s</a>' % (esc(link_entidade("p", n, lg)), esc(n)), 1)
+        linhas.append("<dt>%s</dt><dd>%s</dd>" % (esc(funcao), dd))
+    if not linhas:
+        return ""
+    return '<h2>%s</h2><dl class="ficha">%s</dl>' % (esc(TITULO_FICHA[lg]), "".join(linhas))
+
+
+def pagina_entidade(tipo, nome, itens, lg):
+    """Página de uma pessoa ou empresa: todas as campanhas com o crédito dela (ótima para busca pelo nome)."""
+    url = SITE + link_entidade(tipo, nome, lg)
+    marcas = []
+    for c, _ in itens:
+        if c.get("brand") and c["brand"] not in marcas:
+            marcas.append(c["brand"])
+    titulo = (T["titulo_agencia"] if tipo == "a" else T["titulo_pessoa"])[lg].format(n=nome) + " | droppad"
+    desc = corta(T["desc_pessoa"][lg].format(n=nome, lista=", ".join(marcas[:8])), 158)
+    lis = "".join('<li><a href="%s">%s</a><small>%s · %s</small></li>' % (
+        esc(PREFIXO[lg] + "/c/" + urllib.parse.quote(c["id"]) + "/"),
+        esc((c.get("brand") + " · " if c.get("brand") else "") + texto(c, "title", lg)),
+        esc(T["como"][lg].format(r=funcao)), esc(data_por_extenso(c.get("date"), lg))) for c, funcao in itens[:200])
+    ld = json.dumps({"@context": "https://schema.org", "@type": "Organization" if tipo == "a" else "Person", "name": nome, "url": url},
+                    ensure_ascii=False).replace("</", "<\\/")
+    alternos = ""
+    return """<!DOCTYPE html>
+<html lang="{hl}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{titulo}</title><meta name="description" content="{desc}"><link rel="canonical" href="{url}">{alternos}
+<meta property="og:title" content="{titulo}"><meta property="og:description" content="{desc}"><meta property="og:url" content="{url}">
+<meta property="og:image" content="{SITE}/compartilhar.png"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{ld}</script><link rel="stylesheet" href="/c.css"></head>
+<body><header><a href="{home}">droppad</a><span>{lema}</span></header>
+<main><h1>{nome}</h1><h2>{sub}</h2><ul>{lis}</ul></main><footer>droppad · <a href="{home}">dropp.ad</a></footer></body></html>
+""".format(hl=HTML_LANG[lg], titulo=esc(titulo), desc=esc(desc), url=esc(url), alternos=alternos, SITE=SITE, ld=ld,
+           home=esc(PREFIXO[lg] + "/" if lg != "pt" else "/"), lema=esc(T["lema"][lg]), nome=esc(nome),
+           sub=esc(T["campanhas_de"][lg].format(n=nome)), lis=lis)
 
 
 def id_ok(cid):
@@ -355,6 +477,27 @@ def main(src, dst):
                 f.write(pagina(c, lg, rel))
             urls[lg].append(c)
             n += 1
+    # páginas de pessoas e empresas creditadas (/p/<nome>/ e /a/<nome>/), em português, inglês e espanhol
+    ents = {}
+    for c in camp:
+        vistos = set()
+        for tipo, nome, funcao in entidades(c):
+            k = (tipo, slug(nome))
+            if not k[1] or k in vistos:
+                continue
+            vistos.add(k)
+            e = ents.setdefault(k, {"nome": nome, "itens": []})
+            e["itens"].append((c, funcao))
+    n_ent = 0
+    urls_ent = []
+    for (tipo, sl), e in ents.items():
+        pasta = os.path.join(dst, tipo, sl)
+        os.makedirs(pasta, exist_ok=True)
+        with open(os.path.join(pasta, "index.html"), "w", encoding="utf-8") as f:
+            f.write(pagina_entidade(tipo, e["nome"], e["itens"], "pt"))
+        urls_ent.append((tipo, e["nome"]))
+        n_ent += 1
+    print("páginas de pessoas e empresas:", n_ent)
     # sitemaps: um arquivo por língua (até 45 mil endereços cada), com as versões ligadas por hreflang
     os.makedirs(os.path.join(dst, "sitemaps"), exist_ok=True)
     arquivos = []
@@ -373,6 +516,16 @@ def main(src, dst):
             with open(os.path.join(dst, nome), "w", encoding="utf-8") as f:
                 f.write("\n".join(linhas))
             arquivos.append(nome)
+    for i in range(0, len(urls_ent), 15000):
+        nome = "sitemaps/creditos-%d.xml" % (i // 15000 + 1)
+        linhas = ['<?xml version="1.0" encoding="UTF-8"?>',
+                  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
+        for tipo, nm in urls_ent[i:i + 15000]:
+            linhas.append("<url><loc>%s</loc></url>" % esc(SITE + link_entidade(tipo, nm)))
+        linhas.append("</urlset>")
+        with open(os.path.join(dst, nome), "w", encoding="utf-8") as f:
+            f.write("\n".join(linhas))
+        arquivos.append(nome)
     hoje = dt.date.today().isoformat()
     with open(os.path.join(dst, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
