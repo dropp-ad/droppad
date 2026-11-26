@@ -1180,15 +1180,29 @@
 
   /* comentários abrem dentro do próprio post, logo abaixo dos botões */
   var drawer = null; // painel de comentários aberto (no post da campanha "cur")
-  function closeComments() {
+  function closeComments(semAnimar) {
     if (!drawer) return;
     var p = drawer, btn = p.parentNode && p.parentNode.querySelector(".act.cmt");
     drawer = null; cur = null;
+    window.removeEventListener("scroll", vigiaGaveta);
     if (btn) btn.setAttribute("aria-expanded", "false");
-    p.style.height = p.scrollHeight + "px";
-    requestAnimationFrame(function () { p.classList.remove("on"); p.style.height = "0px"; });
-    setTimeout(function () { p.remove(); }, 450);
+    if (semAnimar) {
+      // fecha na hora; se a gaveta estava acima da tela, compensa a rolagem pra nada pular
+      var r = p.getBoundingClientRect(), acima = Math.max(0, Math.min(r.bottom, 0) - r.top);
+      p.remove();
+      if (acima) window.scrollBy({ top: -acima, behavior: "instant" });
+    } else {
+      p.style.height = p.scrollHeight + "px";
+      requestAnimationFrame(function () { p.classList.remove("on"); p.style.height = "0px"; });
+      setTimeout(function () { p.remove(); }, 450);
+    }
     snap(true);
+  }
+  // se a pessoa rola pra outro post com os comentários abertos, fecha a gaveta e a rolagem volta a parar em cada post
+  function vigiaGaveta() {
+    if (!drawer || !drawer.parentNode) return;
+    var r = drawer.parentNode.getBoundingClientRect(), vh = window.innerHeight;
+    if (r.bottom < vh * 0.3 || r.top > vh * 0.7) closeComments(true);
   }
   // a rolagem "para em cada post" (scroll-snap); desliga enquanto os comentários estão abertos
   function snap(on) {
@@ -1219,6 +1233,7 @@
     var btn = art.querySelector(".act.cmt");
     if (btn) btn.setAttribute("aria-expanded", "true");
     cur = c;
+    window.addEventListener("scroll", vigiaGaveta, { passive: true });
     if (!SUPABASE_URL || !SUPABASE_KEY) {
       body.appendChild(el("p", "drawer-note", tr("Comentários chegando em breve.")));
     } else {
