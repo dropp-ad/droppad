@@ -18,3 +18,4 @@ jobs:
           python-version: "3.12"
       - run: pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
       - run: python tools/medir_ig.py '${{ inputs.urls }}'
+      - run: MOBILE=1 python tools/medir_ig.py '${{ inputs.urls }}'
