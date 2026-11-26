@@ -164,22 +164,29 @@ def casar(item, ags, nome_autor=""):
     return None
 
 
-BARRA = re.compile(r"^\s*([^/\n]{2,80}?)\s+/\s+([^/\n]{2,50}?)\s+/\s+([^/\n]{2,80}?)\s*$", re.M)
+# "Mama Bear / Microsoft / Droga5, New York": a agência vem sempre com a cidade (vírgula)
+BARRA = re.compile(r"^\s*([^/\n]{2,80}?)\s+/\s+([^/\n]{2,50}?)\s+/\s+([^/,\n]{2,60}?,[^/\n]{2,60}?)\s*$", re.M)
+RESUMAO = re.compile(r"\b(newsletter|most contagious|this week|esta semana|nesta semana|roundup|round-up|top \d+|"
+                     r"the best|os melhores|ranking|winners?|vencedor|shortlist|jury|júri|podcast|webinar|event|evento|"
+                     r"report|relatório|subscribe|assine)\b", re.I)
 
 
 def agencia_no_texto(texto, por_nome):
     """Agência citada num post de veículo: linha "Título / Marca / Agência, Cidade" (Contagious),
-    uma agência da lista do robô, ou "by/via/with X"."""
-    m = BARRA.search(texto or "")
+    "by/via/pela X", ou uma agência da lista do robô citada pelo nome."""
+    texto = texto or ""
+    m = BARRA.search(texto)
     if m:
         nome = m.group(3).split(",")[0].strip()
         return {"nome": nome, "slugs": [""], "regiao": "Global", "cc": "", "cidade": m.group(3)}
-    k = A.chave(texto or "")
-    a = next((a for a in por_nome if len(A.chave(a["nome"])) >= 4 and A.chave(a["nome"]) in k), None)
-    if a:
-        return a
-    m = re.search(r"\b(?:by|via|with|por|pela|criad[ao] pela|devised with|created by)\s+@?([A-Z][\w&.’'\-]+(?: [A-Z][\w&.’'\-]+){0,3})", texto or "")
-    return {"nome": m.group(1).strip() if m else "", "slugs": [""], "regiao": "Global", "cc": ""}
+    m = re.search(r"\b(?:by|via|devised with|created by|criad[ao] pela?|assinad[ao] pela?|desenvolvid[ao] pela?|"
+                  r"da agência|pela agência|de la agencia|creada por)\s+@?([A-Z][\w&.’'\\+\-]*(?: [A-Z&][\w&.’'\\+\-]*){0,3})", texto)
+    if m:
+        return {"nome": m.group(1).strip(" .,"), "slugs": [""], "regiao": "Global", "cc": ""}
+    for a in por_nome:
+        if len(a["nome"]) >= 4 and re.search(r"(?<![\w])" + re.escape(a["nome"]) + r"(?![\w])", texto):
+            return a
+    return {"nome": "", "slugs": [""], "regiao": "Global", "cc": ""}
 
 
 def campanha_de_barra(p):
@@ -588,8 +595,9 @@ def vira_campanha(p):
         if c:
             return c
     a = p["agencia"]
-    if p.get("tipo") == "publicacao" and not (a or {}).get("nome"):
-        return None  # post de veículo sem agência identificada
+    if p.get("tipo") == "publicacao" and (not (a or {}).get("nome") or RESUMAO.search((p["texto"] or "")[:200])
+                                         or len(p["texto"] or "") < 120):
+        return None  # post de veículo sem agência, resumo da semana, prêmio, evento ou só uma linha
     if not a or not p["texto"] or not p["data"] or p["data"][:10] < DESDE:
         return None
     falso = {"caption": p["texto"], "permalink": p["url"] or "https://www.linkedin.com/",
@@ -605,6 +613,14 @@ def vira_campanha(p):
         return None
     if A.INSTITUCIONAL.search(c["brand"]) or NAO_LI.search(p["texto"][:400]):
         return None
+    if p.get("tipo") == "publicacao":
+        # em veículo, a marca é a primeira marca conhecida citada (o texto não é da agência)
+        k = A.marca_conhecida((p["texto"] or "")[:400])
+        if k:
+            c["brand"] = k
+        m = re.search(r"\bby\s+[^.\n]{2,60}?\s+for\s+([A-Z][\w&’'\-]*(?: [A-Z][\w&’'\-]*){0,3})", p["texto"] or "")
+        if m and A.marca_ok(m.group(1)):
+            c["brand"] = A.marca_ok(m.group(1))
     # o site não embute post do LinkedIn: entra como card, com a imagem do post e o link para ele
     c["source"] = "LinkedIn · " + (a.get("curador") or a["nome"])
     c.pop("video", None)
