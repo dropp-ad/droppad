@@ -26,7 +26,8 @@ NOVAS = "/tmp/ig_novas.json"
 
 
 def contas(fontes, vigia):
-    lista, vistos = [], set()
+    bloq = {u.lstrip("@").lower() for u in (fontes.get("ig_bloqueadas") or {}).get("contas", [])}
+    lista, vistos = [], set(bloq)
     for c in fontes.get("instagram", []):
         u = c["usuario"].lstrip("@").lower()
         if u not in vistos:
@@ -38,7 +39,7 @@ def contas(fontes, vigia):
         por_nome.setdefault(c.get("nome", ""), {"nome": c.get("nome", ""), "regiao": c.get("regiao", "Global"),
                                                 "cc": c.get("cc", "")})
     for nome, u in (vigia.get("ig", {}).get("contas") or {}).items():
-        if u and u not in vistos and nome in por_nome:
+        if u and u not in vistos and nome in por_nome and u not in bloq:
             vistos.add(u)
             a = por_nome[nome]
             lista.append({"usuario": u, "nome": nome, "regiao": a.get("regiao", "Global"), "cc": a.get("cc", ""),

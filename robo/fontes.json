@@ -12560,5 +12560,11 @@
       "cc": "ZA",
       "agencia": "Liquorice"
     }
-  ]
+  ],
+  "ig_bloqueadas": {
+    "_nota": "@ de Instagram que não são da agência (o robô achou errado). Nunca lidos nem usados.",
+    "contas": [
+      "crispin"
+    ]
+  }
 }

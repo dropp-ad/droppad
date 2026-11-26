@@ -204,6 +204,11 @@ def _proxima(leitura, pos, st, agora, quente=False):
     return leitura[pos % len(leitura)], pos + 1
 
 
+def bloqueadas(fontes):
+    """@ de Instagram que não são da agência (achados errado pelo robô): nunca lidos."""
+    return {u.lstrip("@").lower() for u in (fontes.get("ig_bloqueadas") or {}).get("contas", [])}
+
+
 def rodada(fontes, vigia, agora, log, chave):
     """Gasta até CHAMADAS_POR_RODADA chamadas: lê contas conhecidas e descobre as das agências.
     Devolve [(post, conta)] com os posts lidos; conta = {"usuario","nome","regiao","cc","agencia"}."""
@@ -230,8 +235,11 @@ def rodada(fontes, vigia, agora, log, chave):
                     mortas.setdefault(u, agora.isoformat())
     except (OSError, ValueError):
         pass
+    bloq = bloqueadas(fontes)
+    for nome in [n for n, u in contas.items() if u in bloq]:
+        contas.pop(nome)  # @ errado: a agência volta para a fila e o robô procura o certo
     for c in fontes.get("instagram", []):
-        if c["usuario"].lstrip("@").lower() in mortas:
+        if c["usuario"].lstrip("@").lower() in mortas or c["usuario"].lstrip("@").lower() in bloq:
             continue
         leitura.append({"usuario": c["usuario"].lstrip("@").lower(), "nome": c.get("nome", c["usuario"]),
                         "regiao": c.get("regiao", "Global"), "cc": c.get("cc", ""), "agencia": c.get("agencia", "")})
@@ -272,7 +280,7 @@ def rodada(fontes, vigia, agora, log, chave):
                     revistas.append(ag["nome"])
                     contas.pop(ag["nome"], None)
                 tentadas = st.setdefault("tentadas", {}).setdefault(ag["nome"], [])
-                cands = [c for c in _candidatos(ag, chave, st) if c not in tentadas]
+                cands = [c for c in _candidatos(ag, chave, st) if c not in tentadas and c not in bloq]
                 if not cands:
                     contas[ag["nome"]] = ""
                     st["tentadas"].pop(ag["nome"], None)
