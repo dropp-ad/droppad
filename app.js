@@ -1555,8 +1555,9 @@
     if (baixandoAno) return baixandoAno;
     if (!antigo.anos.length) return Promise.resolve(false);
     var ano = antigo.anos.shift();
-    baixandoAno = fetch("antigo/" + ano + ".json")
+    baixandoAno = fetch("antigo/" + ano + sufixoCarregado + ".json")
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .catch(function () { return fetch("antigo/" + ano + ".json").then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); })
       .then(function (raw) {
         var ids = {};
         state.items.forEach(function (c) { ids[c.id] = 1; });
@@ -1830,9 +1831,17 @@
   })();
   // feed.json é a versão enxuta (gerada na publicação); campaigns.json fica de reserva.
   // "no-cache" revalida com o servidor: se nada mudou, o navegador usa a cópia que já tem.
+  // título e resumo vêm na língua de quem lê: feed-en.json (inglês, também para as outras línguas) e
+  // feed-es.json; em português, feed.json. Os anos antigos seguem o mesmo padrão (antigo/2024-en.json).
+  function sufixoConteudo() { return LANG === "pt" ? "" : LANG === "es" ? "-es" : "-en"; }
+  var sufixoCarregado = "";
   function loadData(mode) {
     function get(f) { return fetch(f, { cache: mode }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); }
-    return get("feed.json").catch(function () { return get("campaigns.json"); });
+    var suf = sufixoConteudo();
+    sufixoCarregado = suf;
+    return get("feed" + suf + ".json")
+      .catch(function () { sufixoCarregado = ""; return get("feed.json"); })
+      .catch(function () { return get("campaigns.json"); });
   }
   // dados e país de quem entra chegam ao mesmo tempo
   aplicarLingua(linguaContato()); // primeiro palpite (país salvo ou língua do navegador)
@@ -1840,6 +1849,11 @@
     .then(function (res) {
       paisVisita = res[1] || "";
       aplicarLingua(linguaContato()); // a língua do país de onde vem o acesso
+      // o país mostrou outra língua que a do primeiro palpite: baixa o feed na língua certa
+      if (sufixoConteudo() !== sufixoCarregado) return loadData("no-cache").then(function (d) { res[0] = d; return res; });
+      return res;
+    })
+    .then(function (res) {
       state.items = normalize(res[0]);
       setHome(res[1]);
       pintarContato();

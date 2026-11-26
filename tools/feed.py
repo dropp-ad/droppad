@@ -33,6 +33,16 @@ def enxuta(x):
     return out
 
 
+def na_lingua(item, lg):
+    out = {k: v for k, v in item.items() if k != "_tr"}
+    t = (item.get("_tr") or {}).get(lg) if lg else None
+    if isinstance(t, dict):
+        for k in ("title", "summary", "frase"):
+            if t.get(k) and out.get(k):
+                out[k] = t[k]
+    return out
+
+
 def main(src, dst):
     with open(src, encoding="utf-8") as f:
         dados = [x for x in json.load(f) if isinstance(x, dict) and not x.get("hidden")]
@@ -41,6 +51,8 @@ def main(src, dst):
     feed = []
     for x in dados:
         item = enxuta(x)
+        if isinstance(x.get("tr"), dict):
+            item["_tr"] = x["tr"]
         story = [s for s in (x.get("story") or []) if isinstance(s, str) and s.strip() and not LIXO.search(s)]
         cid = str(x.get("id") or "")
         if story and (not tem_filme(x) or CORTE.search(x.get("frase") or x.get("summary") or "")) and cid and "/" not in cid and not cid.startswith("."):
@@ -57,13 +69,17 @@ def main(src, dst):
         d = str(x.get("date", ""))
         if d < corte and len(d) >= 4:
             por_ano.setdefault(d[:4], []).append(x)
-    with open(os.path.join(dst, "feed.json"), "w", encoding="utf-8") as f:
-        json.dump(recente, f, ensure_ascii=False, separators=(",", ":"))
     pasta_ant = os.path.join(dst, "antigo")
     os.makedirs(pasta_ant, exist_ok=True)
-    for ano, itens in por_ano.items():
-        with open(os.path.join(pasta_ant, ano + ".json"), "w", encoding="utf-8") as f:
-            json.dump(itens, f, ensure_ascii=False, separators=(",", ":"))
+    # uma versão por língua: feed.json (português) e feed-en.json / feed-es.json, com título, resumo e
+    # frase traduzidos (campo "tr" de campaigns.json); o que ainda não foi traduzido fica em português
+    for lg in ("", "en", "es"):
+        suf = "-" + lg if lg else ""
+        with open(os.path.join(dst, "feed%s.json" % suf), "w", encoding="utf-8") as f:
+            json.dump([na_lingua(x, lg) for x in recente], f, ensure_ascii=False, separators=(",", ":"))
+        for ano, itens in por_ano.items():
+            with open(os.path.join(pasta_ant, ano + suf + ".json"), "w", encoding="utf-8") as f:
+                json.dump([na_lingua(x, lg) for x in itens], f, ensure_ascii=False, separators=(",", ":"))
     datas = sorted(str(x.get("date", "")) for x in feed if x.get("date"))
     with open(os.path.join(pasta_ant, "indice.json"), "w", encoding="utf-8") as f:
         json.dump({"anos": sorted(por_ano, reverse=True), "min": datas[0] if datas else "", "corte": corte}, f)

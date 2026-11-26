@@ -1,0 +1,55 @@
+name: Traduções das campanhas (inglês e espanhol)
+
+# Traduz título, resumo e frase das campanhas para inglês e espanhol (o site mostra a versão da língua
+# de quem entra). Roda de hora em hora, até 600 campanhas por rodada, das mais novas para as mais velhas.
+on:
+  schedule:
+    - cron: "47 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: traducoes
+  cancel-in-progress: false
+
+jobs:
+  traducoes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Procurar e publicar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "droppad robô"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python robo/traducoes.py
+          for tentativa in 1 2 3 4 5; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            python robo/traducoes.py --aplicar
+            git add campaigns.json
+            if git diff --cached --quiet; then
+              echo "Nada novo."
+              exit 0
+            fi
+            git commit -q -m "Traduções das campanhas (inglês e espanhol) $(TZ=America/Sao_Paulo date '+%F %H:%M') (robô)"
+            if git push origin HEAD:main; then
+              if ! git diff --quiet HEAD~1 HEAD -- campaigns.json; then
+                gh workflow run publicar.yml -R "${{ github.repository }}" --ref main >/dev/null 2>&1 || true
+              fi
+              exit 0
+            fi
+            echo "Push recusado; tentando de novo ($tentativa/5)."
+            sleep 5
+          done
+          exit 1
