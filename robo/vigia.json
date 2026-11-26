@@ -45,23 +45,23 @@
       "mod": "Thu, 26 Nov 2026 16:17:54 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 16:22:46 GMT"
+      "mod": "Thu, 26 Nov 2026 16:26:39 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
       "mod": "Thu, 26 Nov 2026 06:49:38 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795709765-gzip\"",
-      "mod": "Thu, 26 Nov 2026 16:16:05 GMT"
+      "etag": "W/\"1795710372-gzip\"",
+      "mod": "Thu, 26 Nov 2026 16:26:12 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
       "mod": "Thu, 07 May 2026 12:47:56 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
-      "etag": "\"785280af3b56e27fe90f3c3bf7739bb4\"",
-      "mod": "Thu, 26 Nov 2026 15:55:32 GMT"
+      "etag": "\"53749a50b04a69572cde45d09d91923a\"",
+      "mod": "Thu, 26 Nov 2026 16:23:59 GMT"
     },
     "https://campaignbrief.com/feed/": {
       "etag": "\"0e87feb4792128632303d0e4a76d224a\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 16:23:41 GMT"
+      "mod": "Thu, 26 Nov 2026 16:27:40 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 16:23:41 GMT"
+      "mod": "Thu, 26 Nov 2026 16:27:40 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -311,9 +311,12 @@
     "https://ansonstoner.com/feed/": {
       "etag": "\"3d1dfd4ec40c364ee8f3707791fc87dc\"",
       "mod": "Thu, 30 Jul 2026 19:59:18 GMT"
+    },
+    "https://www.marketingdirecto.com/feed/": {
+      "mod": "Thu, 26 Nov 2026 13:22:15 GMT"
     }
   },
-  "yt_pos": 123,
+  "yt_pos": 96,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1161,7 +1164,7 @@
       "Liquorice": ""
     },
     "tentadas": {},
-    "pos": 1638,
+    "pos": 1642,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1671,7 +1674,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 2841,
+    "rodadas": 2845,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3445,7 +3448,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 66,
+    "pos_quente": 70,
     "lida": {
       "droga5sp": "2026-11-26T16:12:37.122527+00:00",
       "mboothagency": "2026-11-26T15:19:36.939289+00:00",
@@ -3517,7 +3520,7 @@
       "smithsocialagency": "2026-11-26T15:51:36.774505+00:00",
       "tbwa": "2026-11-26T15:52:37.007548+00:00",
       "optagency": "2026-11-26T15:52:37.007548+00:00",
-      "mischiefusa": "2026-11-26T15:53:37.251149+00:00",
+      "mischiefusa": "2026-11-26T16:24:37.168293+00:00",
       "abcdigitalagency": "2026-11-26T15:53:37.251149+00:00",
       "rethinkideas": "2026-11-26T15:54:36.512159+00:00",
       "huelladigital": "2026-11-26T15:54:36.512159+00:00",
@@ -3573,7 +3576,14 @@
       "fahrenheitddb": "2026-11-26T16:22:36.305838+00:00",
       "propeg": "2026-11-26T16:22:36.305838+00:00",
       "impactbbdo": "2026-11-26T16:23:37.178335+00:00",
-      "fields360": "2026-11-26T16:23:37.178335+00:00"
+      "fields360": "2026-11-26T16:23:37.178335+00:00",
+      "huia.ag": "2026-11-26T16:24:37.168293+00:00",
+      "mojosupermarket": "2026-11-26T16:25:36.925954+00:00",
+      "sherlockcomms": "2026-11-26T16:25:36.925954+00:00",
+      "agenciatechandsoul": "2026-11-26T16:26:37.020199+00:00",
+      "barcodigital": "2026-11-26T16:26:37.020199+00:00",
+      "anacouto.ag": "2026-11-26T16:27:36.346321+00:00",
+      "estacaoindoor": "2026-11-26T16:27:36.346321+00:00"
     },
     "ultimo_post": {
       "droga5sp": "2026-11-25",
@@ -3695,7 +3705,14 @@
       "fahrenheitddb": "2026-11-17",
       "propeg": "2026-11-23",
       "impactbbdo": "2026-11-26",
-      "fields360": "2026-11-25"
+      "fields360": "2026-11-25",
+      "huia.ag": "2025-01-08",
+      "mojosupermarket": "2026-11-25",
+      "sherlockcomms": "2026-11-23",
+      "agenciatechandsoul": "2026-11-05",
+      "barcodigital": "2025-12-10",
+      "anacouto.ag": "2026-11-26",
+      "estacaoindoor": "2026-11-19"
     }
   },
   "vistos": [
@@ -3934,6 +3951,6 @@
     "https://www.merca20.com/mientras-los-mexicanos-se-preparan-para-el-black-friday-bbva-santander-banamex-y-hsbc-dan-este-importante-anuncio-en-el-dof",
     "https://www.merca20.com/oreo-convierte-la-navidad-en-una-dulce-venganza-contra-santa-claus-en-esta-campana"
   ],
-  "ultima_rodada": "2026-11-26T16:23:37.178335+00:00",
-  "ultima_novidade": "2026-11-26T16:23:37.178335+00:00"
+  "ultima_rodada": "2026-11-26T16:27:36.346321+00:00",
+  "ultima_novidade": "2026-11-26T16:27:36.346321+00:00"
 }
