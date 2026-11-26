@@ -1,7 +1,7 @@
 name: Traduções das campanhas (inglês e espanhol)
 
 # Traduz título, resumo e frase das campanhas para inglês e espanhol (o site mostra a versão da língua
-# de quem entra). Roda de hora em hora, até 600 campanhas por rodada, das mais novas para as mais velhas.
+# de quem entra). Roda de hora em hora, até 1.500 campanhas por rodada, das mais novas para as mais velhas.
 on:
   schedule:
     - cron: "47 * * * *"

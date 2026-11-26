@@ -21,7 +21,7 @@ import atualizar as A  # noqa: E402
 LINGUAS = ("en", "es")
 CAMPOS = ("title", "summary", "frase")
 ACHADOS = os.environ.get("TRADUCOES_ACHADOS", "/tmp/traducoes.json")
-POR_RODADA = int(os.environ.get("TRADUCOES_POR_RODADA", "600"))
+POR_RODADA = int(os.environ.get("TRADUCOES_POR_RODADA", "1500"))
 LOTE = 25  # campanhas por pedido ao tradutor
 INICIO = time.time()
 LIMITE_S = int(os.environ.get("TRADUCOES_LIMITE_S", str(22 * 60)))  # para antes do tempo do workflow acabar
@@ -29,7 +29,7 @@ LIMITE_S = int(os.environ.get("TRADUCOES_LIMITE_S", str(22 * 60)))  # para antes
 
 def sem_tempo():
     return time.time() - INICIO > LIMITE_S
-STORY_CHARS = int(os.environ.get("TRADUCOES_STORY_CHARS", "80000"))  # texto longo traduzido por rodada, por língua
+STORY_CHARS = int(os.environ.get("TRADUCOES_STORY_CHARS", "250000"))  # texto longo traduzido por rodada, por língua
 STORY_PARAGRAFOS = 6  # o site mostra no máximo 6 parágrafos
 
 
