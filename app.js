@@ -74,7 +74,7 @@
         yt: arr(x.yt, function (s) { return /^[\w-]{11}$/.test(s); }),
         video: safeUrl(str(x.video)), image: safeUrl(str(x.image) || (Array.isArray(x.images) ? str(x.images[0]) : "")),
         addedAt: str(x.addedAt), story: arr(x.story, Boolean), st: !!x.st, hidden: !!x.hidden,
-        idea: str(x.idea), frase: str(x.frase), credits: creditsOf(x)
+        idea: str(x.idea), frase: str(x.frase), credits: creditsOf(x), tl: !!x.tl
       };
       c.fl = films(c);
       return c;
@@ -458,12 +458,13 @@
   /* Instagram: o post inteiro (cabeçalho, filme e rodapé) entra reduzido no quadro 16:9, sem cortar.
      O embed avisa a própria altura por postMessage (MEASURE); até lá, vale uma altura típica. */
   var CELULAR = window.matchMedia("(max-width: 760px)");
-  var IG_W = 400, IG_H = 800, IG_H_REEL = 1010, igRO = "ResizeObserver" in window ? new ResizeObserver(function (es) { es.forEach(function (e) { scaleIG(e.target); }); }) : null;
+  var IG_W = 400, IG_CROP_H = 494, igRO = "ResizeObserver" in window ? new ResizeObserver(function (es) { es.forEach(function (e) { scaleIG(e.target); }); }) : null;
   function scaleIG(media) {
     var box = media.querySelector(".igbox");
     if (!box) return;
-    // até o Instagram avisar a altura: reel (9:16) é bem mais alto que post comum
-    var h = +box.dataset.h || (box.dataset.reel ? IG_H_REEL : IG_H), w = media.clientWidth, bh = media.clientHeight;
+    // só o vídeo/foto do post: o embed do Instagram (400 px de largura) mostra a mídia em 4:5, 400×500,
+    // logo abaixo de um cabeçalho de 54 px; o quadro recorta esse pedaço (o CSS sobe o iframe)
+    var h = IG_CROP_H, w = media.clientWidth, bh = media.clientHeight;
     if (!w || !bh) return;
     box.style.setProperty("--igh", h + "px");
     // o quadro fica da altura do post do Instagram (sem faixas em cima/embaixo e sem cortar o rodapé);
@@ -800,7 +801,12 @@
   var ICON_SHARE = '<svg viewBox="0 0 24 24" aria-hidden="true" stroke-linejoin="miter"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>';
   var ICON_CMT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v13H9l-6 4z"/></svg>';
   var ICON_SND = '<svg class="i-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><svg class="i-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
-  function linkOf(c) { return location.origin + location.pathname + "?c=" + encodeURIComponent(c.id); }
+  // link para compartilhar: a página própria da campanha (aparece no Google e gera a prévia com imagem no
+  // WhatsApp/LinkedIn), na língua de quem compartilha quando ela já foi traduzida
+  function linkOf(c) {
+    var pre = c.tl && LANG !== "pt" ? (LANG === "es" ? "/es" : "/en") : "";
+    return "https://dropp.ad" + pre + "/c/" + encodeURIComponent(c.id) + "/";
+  }
   function toast(msg) {
     var t = $("toast");
     if (!t) { t = el("div", "toast"); t.id = "toast"; t.setAttribute("role", "status"); document.body.appendChild(t); }

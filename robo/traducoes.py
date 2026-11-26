@@ -44,28 +44,32 @@ def _pedir(texto, lingua):
     return "".join(p[0] for p in dados[0] if p and p[0])
 
 
-def traduzir_lista(textos, lingua):
-    """Traduz vários textos num pedido só (um por linha). Se as linhas não baterem, traduz um a um."""
+def traduzir_lista(textos, lingua, juntar=False):
+    """Traduz uma lista de textos. Por padrão um pedido por texto: num pedido com várias linhas o tradutor
+    adivinha UMA língua para tudo, e um lote com títulos em inglês e resumos em português saía embaralhado
+    ("a rede testa" virava "a rede head"). juntar=True só para parágrafos do mesmo texto."""
     limpos = [" ".join(str(t).split()) for t in textos]
-    try:
-        out = _pedir("\n".join(limpos), lingua).split("\n")
-        if len(out) == len(limpos):
-            return [o.strip() or t for o, t in zip(out, limpos)]
-    except Exception as e:  # noqa: BLE001
-        log("  lote falhou:", e)
+    if juntar:
+        try:
+            out = _pedir("\n".join(limpos), lingua).split("\n")
+            if len(out) == len(limpos):
+                return [o.strip() or t for o, t in zip(out, limpos)]
+        except Exception as e:  # noqa: BLE001
+            log("  lote falhou:", e)
     res = []
     for t in limpos:
         try:
             res.append(_pedir(t, lingua).strip() or t)
         except Exception:  # noqa: BLE001
             res.append(t)
-        time.sleep(0.2)
+        time.sleep(0.1)
     return res
 
 
 def precisa(c):
     tr = c.get("tr") or {}
-    return any(not (tr.get(lg) or {}).get("ok") for lg in LINGUAS) and not c.get("hidden")
+    # ok=2: traduzido campo a campo (a versão 1, em lote, misturava as línguas e é refeita)
+    return any((tr.get(lg) or {}).get("ok") != 2 for lg in LINGUAS) and not c.get("hidden")
 
 
 def traduzir_campanhas(camps):
@@ -88,8 +92,7 @@ def traduzir_campanhas(camps):
             for (cid, k, orig), novo in zip(pares, textos):
                 achados.setdefault(cid, {}).setdefault(lg, {})[k] = novo
             for c in lote:  # marca título/resumo como feitos (mesmo sem nada a traduzir, só título curto)
-                achados.setdefault(c["id"], {}).setdefault(lg, {})["ok"] = 1
-            time.sleep(0.5)
+                achados.setdefault(c["id"], {}).setdefault(lg, {})["ok"] = 2
         log("  traduzidas: %d/%d" % (min(i + LOTE, len(camps)), len(camps)))
     return achados
 
@@ -119,7 +122,7 @@ def traduzir_storys(camp, achados):
             for p in pars + [None]:
                 if p is None or (bloco and sum(len(b) for b in bloco) + len(p) > 4500):
                     if bloco:
-                        out += traduzir_lista(bloco, lg)
+                        out += traduzir_lista(bloco, lg, juntar=True)
                         time.sleep(0.3)
                     bloco = []
                 if p is not None:
@@ -150,7 +153,11 @@ def aplicar():
         if a:
             tr = c.setdefault("tr", {})
             for lg, campos in a.items():
-                tr.setdefault(lg, {}).update(campos)  # junta (título/resumo de uma rodada, texto longo de outra)
+                atual = tr.setdefault(lg, {})
+                if campos.get("ok"):  # título/resumo refeitos: some o que a versão antiga tinha traduzido
+                    for k in CAMPOS:
+                        atual.pop(k, None)
+                atual.update(campos)  # junta (título/resumo de uma rodada, texto longo de outra)
             n += 1
     if n:
         A.salvar_json(A.CAMP, camp)

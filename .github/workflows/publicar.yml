@@ -20,7 +20,7 @@ concurrency:
 jobs:
   publicar:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url || steps.deploy1.outputs.page_url }}
@@ -35,6 +35,8 @@ jobs:
           cp image.png _site/compartilhar.png
           # versão enxuta das campanhas, que é o que o site carrega
           python3 tools/feed.py campaigns.json _site
+          # uma página por campanha (Google e prévia de link) + sitemap.xml e robots.txt
+          python3 tools/paginas.py campaigns.json _site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

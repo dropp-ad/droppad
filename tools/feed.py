@@ -36,7 +36,8 @@ def enxuta(x):
 def na_lingua(item, lg):
     out = {k: v for k, v in item.items() if k != "_tr"}
     t = (item.get("_tr") or {}).get(lg) if lg else None
-    if isinstance(t, dict):
+    if isinstance(t, dict) and t.get("ok") == 2:  # só a tradução campo a campo (a primeira, em lote, saía embaralhada)
+        out["tl"] = 1  # existe a página da campanha nessa língua (/en/c/… ou /es/c/…)
         for k in ("title", "summary", "frase"):
             if t.get(k) and out.get(k):
                 out[k] = t[k]
