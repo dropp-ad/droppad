@@ -12,7 +12,7 @@
       "mod": "Thu, 26 Nov 2026 18:58:54 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Thu, 26 Nov 2026 19:02:37 GMT"
+      "mod": "Thu, 26 Nov 2026 19:03:48 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"3119ee27debc24f2ee3b9cb441ebbfbc\"",
@@ -45,7 +45,7 @@
       "mod": "Thu, 26 Nov 2026 18:47:56 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 19:02:40 GMT"
+      "mod": "Thu, 26 Nov 2026 19:03:51 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 19:02:41 GMT"
+      "mod": "Thu, 26 Nov 2026 19:03:53 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -118,15 +118,15 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Thu, 26 Nov 2026 19:01:50 GMT"
+      "mod": "Thu, 26 Nov 2026 19:03:13 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"bef621b57559d472edc66f94b01b3edf\"",
       "mod": "Thu, 26 Nov 2026 19:00:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
-      "etag": "\"f4a0020018d16ba434981735c16dc342\"",
-      "mod": "Thu, 26 Nov 2026 18:38:06 GMT"
+      "etag": "\"78c3783bbd1659fae6ed1db60c953695\"",
+      "mod": "Thu, 26 Nov 2026 19:03:11 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
       "etag": "\"6991a24a7b26f69e217bef8ba53e34aa\"",
@@ -145,7 +145,7 @@
       "mod": "Tue, 27 Oct 2026 14:40:14 GMT"
     },
     "https://www.thjnk.ch/blog-feed.xml": {
-      "mod": "Thu, 26 Nov 2026 13:23:42 GMT"
+      "mod": "Thu, 26 Nov 2026 19:03:54 GMT"
     },
     "https://www.tbwa.it/feed/": {
       "etag": "W/\"b893c0154ed7bafaac2f0b8c9b414324\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 19:02:41 GMT"
+      "mod": "Thu, 26 Nov 2026 19:03:54 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -249,7 +249,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 18:52:43 GMT"
+      "mod": "Thu, 26 Nov 2026 19:03:56 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Thu, 26 Nov 2026 17:16:20 GMT"
     }
   },
-  "yt_pos": 42,
+  "yt_pos": 72,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1164,7 +1164,7 @@
       "Liquorice": ""
     },
     "tentadas": {},
-    "pos": 1799,
+    "pos": 1800,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1674,7 +1674,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 3000,
+    "rodadas": 3001,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3448,7 +3448,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 225,
+    "pos_quente": 226,
     "lida": {
       "droga5sp": "2026-11-26T18:38:36.924418+00:00",
       "mboothagency": "2026-11-26T15:19:36.939289+00:00",
@@ -3494,7 +3494,7 @@
       "strikedigitalagency": "2026-11-26T18:34:37.306139+00:00",
       "kesselskramer": "2026-11-26T19:02:37.106010+00:00",
       "northfolkagency": "2026-11-26T15:39:37.230750+00:00",
-      "meaningfulsocialclub": "2026-11-26T18:39:36.469017+00:00",
+      "meaningfulsocialclub": "2026-11-26T19:03:47.773052+00:00",
       "vamp": "2026-11-26T18:35:37.219332+00:00",
       "melbournesocialco": "2026-11-26T18:40:37.142732+00:00",
       "ogilvyitaly": "2026-11-26T18:36:36.899703+00:00",
@@ -3734,7 +3734,8 @@
       "wktokyo": "2026-11-26T18:59:36.484923+00:00",
       "droga5tokyo": "2026-11-26T19:00:36.704222+00:00",
       "posicionunomx": "2026-11-26T19:01:36.644822+00:00",
-      "alkemylatam": "2026-11-26T19:02:37.106010+00:00"
+      "alkemylatam": "2026-11-26T19:02:37.106010+00:00",
+      "mediasourcemx": "2026-11-26T19:03:47.773052+00:00"
     },
     "ultimo_post": {
       "droga5sp": "2026-11-25",
@@ -4006,7 +4007,8 @@
       "wktokyo": "2026-11-16",
       "droga5tokyo": "2026-11-13",
       "posicionunomx": "2026-09-29",
-      "alkemylatam": "2026-06-30"
+      "alkemylatam": "2026-06-30",
+      "mediasourcemx": "2026-11-25"
     }
   },
   "vistos": [
@@ -4253,6 +4255,6 @@
     "https://www.merca20.com/retromarketing-it-looks-like-a-horror-movie-but-its-a-2000-commercial-starring-a-ballet-dancer-over-63-tall",
     "https://www.abcdacomunicacao.com.br/campanha-do-instituto-gloria-usa-linguagem-do-taro-para-alertar-sobre-sinais-de-relacionamentos-abusivos"
   ],
-  "ultima_rodada": "2026-11-26T19:02:37.106010+00:00",
-  "ultima_novidade": "2026-11-26T18:03:36.373879+00:00"
+  "ultima_rodada": "2026-11-26T19:03:47.773052+00:00",
+  "ultima_novidade": "2026-11-26T19:03:47.773052+00:00"
 }
