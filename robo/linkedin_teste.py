@@ -1,7 +1,7 @@
 """Teste lado a lado de duas fontes pagas de posts do LinkedIn (Apify/HarvestAPI e Coresignal).
 
 Fase de teste, mas o que passar no filtro já é publicado no site (campaigns.json), como card
-com o link do post no LinkedIn. Cobre TODAS as agências do robô (lista do Pedro +
+com o link do post no LinkedIn. Também lê as páginas de veículos (PUBLICACOES: Contagious, Ads of the World, Adweek...). Cobre TODAS as agências do robô (lista do Pedro +
 agências cadastradas, ~1.000), em rodízio: cada rodada pega uma fatia da lista e continua de onde
 parou na seguinte. Para cada agência da fatia, três buscas:
   1. posts da página da empresa no LinkedIn;
@@ -42,6 +42,27 @@ PERFIS = [
     {"nome": "Rian Swart", "url": "https://www.linkedin.com/in/rian-swart-425570143/"},
 ]
 APIFY_POR_PERFIL = ENV("APIFY_POR_PERFIL", "15")
+# páginas de veículos/publicações no LinkedIn (Contagious, Ads of the World...): cada post de campanha
+# vira card. Vários palpites de endereço; o robô fica com o primeiro que trouxer post.
+PUBLICACOES = [
+    {"nome": "Contagious", "slugs": ["contagious-communications"]},
+    {"nome": "Ads of the World", "slugs": ["ads-of-the-world", "adsoftheworld"]},
+    {"nome": "Clube de Criação", "slugs": ["clube-de-criacao", "clubedecriacao"]},
+    {"nome": "Mumbrella", "slugs": ["mumbrella"]},
+    {"nome": "Adweek", "slugs": ["adweek"]},
+    {"nome": "The Drum", "slugs": ["the-drum", "thedrum"]},
+    {"nome": "Campaign", "slugs": ["campaign-magazine", "campaign-uk", "campaign-us"]},
+    {"nome": "Ad Age", "slugs": ["advertising-age", "adage"]},
+    {"nome": "LBB Online", "slugs": ["little-black-book", "lbbonline", "lbb-online"]},
+    {"nome": "shots", "slugs": ["shots"]},
+    {"nome": "Muse by Clios", "slugs": ["muse-by-clios", "clio-awards"]},
+    {"nome": "Creative Review", "slugs": ["creative-review"]},
+    {"nome": "Campaign Brief", "slugs": ["campaign-brief", "campaignbrief"]},
+    {"nome": "Meio & Mensagem", "slugs": ["meio-&-mensagem", "meioemensagem", "meio-e-mensagem"]},
+    {"nome": "Propmark", "slugs": ["propmark"]},
+    {"nome": "B9", "slugs": ["b9"]},
+]
+APIFY_POR_PUBLICACAO = ENV("APIFY_POR_PUBLICACAO", "8")
 CS_AGENCIAS, CS_COLETAS = ENV("CORESIGNAL_AGENCIAS", "150"), ENV("CORESIGNAL_COLETAS", "60")
 PALAVRAS = "(campaign OR campanha OR campaña OR campagne OR film OR filme OR spot OR commercial)"
 
@@ -141,6 +162,56 @@ def casar(item, ags, nome_autor=""):
         if alvo and (alvo == A.chave(a["nome"]) or alvo in [s.replace("-", "") for s in a["slugs"]]):
             return a
     return None
+
+
+BARRA = re.compile(r"^\s*([^/\n]{2,80}?)\s+/\s+([^/\n]{2,50}?)\s+/\s+([^/\n]{2,80}?)\s*$", re.M)
+
+
+def agencia_no_texto(texto, por_nome):
+    """Agência citada num post de veículo: linha "Título / Marca / Agência, Cidade" (Contagious),
+    uma agência da lista do robô, ou "by/via/with X"."""
+    m = BARRA.search(texto or "")
+    if m:
+        nome = m.group(3).split(",")[0].strip()
+        return {"nome": nome, "slugs": [""], "regiao": "Global", "cc": "", "cidade": m.group(3)}
+    k = A.chave(texto or "")
+    a = next((a for a in por_nome if len(A.chave(a["nome"])) >= 4 and A.chave(a["nome"]) in k), None)
+    if a:
+        return a
+    m = re.search(r"\b(?:by|via|with|por|pela|criad[ao] pela|devised with|created by)\s+@?([A-Z][\w&.’'\-]+(?: [A-Z][\w&.’'\-]+){0,3})", texto or "")
+    return {"nome": m.group(1).strip() if m else "", "slugs": [""], "regiao": "Global", "cc": ""}
+
+
+def campanha_de_barra(p):
+    """Posts no formato da Contagious: o texto termina com "Mama Bear / Microsoft / Droga5, New York".
+    Vira campanha com título, marca e agência dessa linha; o resumo é escrito pelo robô."""
+    m = BARRA.search(p["texto"] or "")
+    if not m or not p["data"] or p["data"][:10] < DESDE:
+        return None
+    titulo, marca, ag_txt = [x.strip(" .") for x in m.groups()]
+    partes = [x.strip() for x in ag_txt.split(",")]
+    agencia = partes[0]
+    if not A.marca_ok(marca) or not agencia:
+        return None
+    pais = partes[-1].lower() if len(partes) >= 2 else ""
+    regiao, cc = PAIS_REGIAO.get(pais, ("Global", ""))
+    cidade = partes[1] if len(partes) >= 2 else ""
+    if not cc and re.search(r"new york|los angeles|chicago|san francisco|portland|minneapolis|austin|boston", cidade, re.I):
+        regiao, cc = "EUA", "US"
+    elif not cc and re.search(r"london|londres", cidade, re.I):
+        regiao, cc = "Reino Unido", "GB"
+    elif not cc and re.search(r"s[aã]o paulo|rio de janeiro", cidade, re.I):
+        regiao, cc = "Brasil", "BR"
+    resumo = "%s lança “%s”, campanha da %s%s." % (marca, titulo, agencia, (" (" + cidade + ")") if cidade else "")
+    data = p["data"][:10]
+    curador = (p["agencia"] or {}).get("curador", "LinkedIn")
+    c = {"id": "%s-%s-%s" % (data, A.slug(marca, 20), A.slug(titulo, 36)), "date": data, "brand": marca,
+         "title": titulo, "agency": agencia, "source": "LinkedIn · " + curador, "url": p["url"],
+         "region": regiao, "cc": cc, "summary": resumo, "addedAt": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")}
+    if p["imagem"]:
+        c["image"] = p["imagem"]
+    return {"marca": marca, "titulo": titulo, "agencia": agencia, "data": p["data"], "url": p["url"],
+            "video": bool(p["video"]), "fonte": p["fonte"], "tipo": p["tipo"], "campanha": c}
 
 
 def post_norm(fonte, tipo, ag, texto, url, data, video="", img=""):
@@ -254,6 +325,50 @@ def ler_apify(todas, estado, placar):
         placar["perfis_erro"] = str(itens)[:300]
     placar["perfis"] = {"http": st3, "posts": n3}
     total += n3
+    # 4) páginas de veículos/publicações: agência e marca vêm do texto do post
+    st_pub = estado.setdefault("slug_pub", {})
+    urls = []
+    ok_pub = estado.setdefault("slug_pub_ok", {})
+    for pub in PUBLICACOES:
+        i = st_pub.get(pub["nome"], 0)
+        if pub["nome"] in ok_pub:
+            slug = ok_pub[pub["nome"]]
+        elif isinstance(i, int) and i < len(pub["slugs"]):
+            slug = pub["slugs"][i]
+        else:
+            continue  # nenhum palpite trouxe post: precisa do endereço certo à mão
+        urls.append(("https://www.linkedin.com/company/%s/" % slug, pub))
+    st4, itens = apify_rodar("harvestapi~linkedin-company-posts",
+                             {"targetUrls": [u for u, _ in urls], "maxPosts": APIFY_POR_PUBLICACAO},
+                             len(urls) * APIFY_POR_PUBLICACAO, tok)
+    n4, vieram = 0, set()
+    if isinstance(itens, list):
+        por_slug = {u.rstrip("/").rsplit("/", 1)[-1].lower(): (u, pub) for u, pub in urls}
+        por_nome = sorted(todas, key=lambda a: -len(a["nome"]))
+        for it in itens:
+            if not isinstance(it, dict):
+                continue
+            autor = it.get("author") or {}
+            slug = str(autor.get("universalName") or "").lower()
+            achou = por_slug.get(slug) or next(((u, pub) for u, pub in urls
+                                               if A.chave(pub["nome"]) in A.chave(autor.get("name", ""))), None)
+            if not achou:
+                continue
+            u, pub = achou
+            vieram.add(pub["nome"])
+            st_pub[pub["nome"]] = "ok"
+            ok_pub[pub["nome"]] = u.rstrip("/").rsplit("/", 1)[-1]
+            texto = it.get("content") or it.get("text") or ""
+            a = agencia_no_texto(texto, por_nome)
+            out.append(apify_item(it, "apify", "publicacao", dict(a, curador=pub["nome"])))
+            n4 += 1
+        for u, pub in urls:  # página sem post: na próxima volta tenta o palpite seguinte
+            if pub["nome"] not in vieram and pub["nome"] not in ok_pub:
+                st_pub[pub["nome"]] = (st_pub.get(pub["nome"], 0) or 0) + 1
+    else:
+        placar["publicacoes_erro"] = str(itens)[:300]
+    placar["publicacoes"] = {"http": st4, "paginas": len(urls), "com_post": sorted(vieram), "posts": n4}
+    total += n4
     placar["status"] = "ok"
     placar["custo_usd"] = round((placar["empresas"].get("posts", 0) + total) * 0.0028, 2)
     return out
@@ -468,11 +583,13 @@ def campanha_de_curador(p):
 
 
 def vira_campanha(p):
-    if p.get("tipo") == "curador":
-        c = campanha_de_curador(p)
+    if p.get("tipo") in ("curador", "publicacao"):
+        c = campanha_de_curador(p) or campanha_de_barra(p)
         if c:
             return c
     a = p["agencia"]
+    if p.get("tipo") == "publicacao" and not (a or {}).get("nome"):
+        return None  # post de veículo sem agência identificada
     if not a or not p["texto"] or not p["data"] or p["data"][:10] < DESDE:
         return None
     falso = {"caption": p["texto"], "permalink": p["url"] or "https://www.linkedin.com/",
@@ -518,6 +635,9 @@ def publicar(caminho):
         u = c["url"].split("?")[0].rstrip("/")
         k = (A.chave(c["brand"]), A.chave(c["title"]))
         if u in urls or k in chaves or (k[0], c["date"]) in marca_dia:
+            continue
+        # já publicada com outro título (ex.: "Mama Bear" do post da Contagious x legenda do Instagram)
+        if len(k[1]) >= 5 and any(k[0] == m and (k[1] in t or t in k[1]) for m, t in chaves if len(t) >= 5):
             continue
         while c["id"] in ids:
             c["id"] += "-2"
