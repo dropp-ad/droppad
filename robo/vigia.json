@@ -45,11 +45,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"2176d0cfee450a3d613fe2a53dfd4d2c\"",
-      "mod": "Thu, 26 Nov 2026 02:00:34 GMT"
+      "etag": "W/\"a58a6ba4cad16c9e4658407c2f227f77\"",
+      "mod": "Thu, 26 Nov 2026 02:30:22 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 02:32:14 GMT"
+      "mod": "Thu, 26 Nov 2026 02:37:29 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"2af192e271387a2afc6f85376e569c01\"",
@@ -82,8 +82,8 @@
       "mod": "Thu, 26 Nov 2026 02:29:15 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
-      "etag": "\"7cb73b213468219fa08072023013763b\"",
-      "mod": "Thu, 26 Nov 2026 01:19:13 GMT"
+      "etag": "\"c75cdcd9ba6473386c98f31f1846c4e8\"",
+      "mod": "Thu, 26 Nov 2026 02:37:46 GMT"
     },
     "https://www.adweek.com/feed/": {
       "etag": "W/\"dba2e5654c22ded2d2697063bbf9cfc0\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 02:32:15 GMT"
+      "mod": "Thu, 26 Nov 2026 02:38:15 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"8345a6256bf8d5ca4a20911afb07a6ce-gzip\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 02:31:43 GMT"
+      "mod": "Thu, 26 Nov 2026 02:37:51 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 123,
+  "yt_pos": 156,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -977,19 +977,17 @@
       "Found Digital": "",
       "Amicus Digital": "",
       "Roobix": "",
-      "Smith Social": "smithsocialagency"
+      "Smith Social": "smithsocialagency",
+      "Dentsu": "",
+      "Hakuhodo": "",
+      "ADK Marketing Solutions": ""
     },
     "tentadas": {
-      "Hakuhodo": [
-        "hakuhodo",
-        "hakuhodoagency"
-      ],
-      "Dentsu": [
-        "dentsu",
-        "dentsuagency"
+      "ShapeWin Co., Ltd.": [
+        "shapewinco.ltd."
       ]
     },
-    "pos": 1045,
+    "pos": 1048,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1334,9 +1332,10 @@
       "Found Digital",
       "Amicus Digital",
       "Roobix",
-      "Dentsu"
+      "Dentsu",
+      "Hakuhodo"
     ],
-    "rodadas": 2008,
+    "rodadas": 2014,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2381,7 +2380,9 @@
       "Roobix": [],
       "Smith Social": [],
       "Dentsu": [],
-      "Hakuhodo": []
+      "Hakuhodo": [],
+      "ADK Marketing Solutions": [],
+      "ShapeWin Co., Ltd.": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3132,8 +3133,9 @@
     "https://campaignbrief.com/golden-crumpets-brings-mr-golden-to-social-for-the-first-time-in-new-campaign-via-of-a-feather",
     "https://www.bandt.com.au/nrma-launches-new-campaign-celebrating-the-value-of-normality",
     "https://campaignbrief.com/nrma-insurance-celebrates-the-extraordinary-value-of-normal-in-new-work-via-accenture-song",
-    "https://campaignbrief.com/droga5-anz-scores-grand-at-clio-entertainment-for-sbss-the-ad-that-can-only-be-seen-on-sbs"
+    "https://campaignbrief.com/droga5-anz-scores-grand-at-clio-entertainment-for-sbss-the-ad-that-can-only-be-seen-on-sbs",
+    "https://campaignbriefasia.com/2026/11/26/cafe-de-coral-launches-wholesome-all-day-campaign-for-revamped-menu-via-dentsu-hong-kong"
   ],
-  "ultima_rodada": "2026-11-26T02:32:11.927930+00:00",
-  "ultima_novidade": "2026-11-26T01:55:57.352291+00:00"
+  "ultima_rodada": "2026-11-26T02:38:11.782335+00:00",
+  "ultima_novidade": "2026-11-26T02:38:11.782335+00:00"
 }
