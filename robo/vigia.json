@@ -1,15 +1,15 @@
 {
   "cond": {
     "https://www.b9.com.br/feed/": {
-      "etag": "W/\"5ee6-PyBt2vsuYMwj065166TMPVxl0HM\""
+      "etag": "W/\"5ee6-cMWHGQgh3zUMrXRdwLKS/QMfSEs\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"69974bf5ff033740d240b0a5377e9fed\"",
-      "mod": "Thu, 26 Nov 2026 12:30:06 GMT"
+      "etag": "\"04546c7f45463611c1d5b1d10372fe0f\"",
+      "mod": "Thu, 26 Nov 2026 12:57:52 GMT"
     },
     "https://creativosbr.com.br/feed/": {
-      "etag": "W/\"f793b977949d05f296ec8aa8f7aafc5d\"",
-      "mod": "Wed, 25 Nov 2026 21:14:26 GMT"
+      "etag": "W/\"3c68efce364b9a1ef1e0944fdd06b460\"",
+      "mod": "Thu, 26 Nov 2026 13:06:04 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
       "mod": "Thu, 26 Nov 2026 11:35:27 GMT"
@@ -45,23 +45,23 @@
       "mod": "Thu, 26 Nov 2026 12:20:16 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 12:42:28 GMT"
+      "mod": "Thu, 26 Nov 2026 13:12:22 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
       "mod": "Thu, 26 Nov 2026 06:49:38 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795692493-gzip\"",
-      "mod": "Thu, 26 Nov 2026 11:28:13 GMT"
+      "etag": "W/\"1795698161-gzip\"",
+      "mod": "Thu, 26 Nov 2026 13:02:41 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
       "mod": "Thu, 07 May 2026 12:47:56 GMT"
     },
     "https://www.jai-un-pote-dans-la.com/feed/": {
-      "etag": "\"912b8dcc79f26f0e186a84ebc87c0fcb\"",
-      "mod": "Thu, 26 Nov 2026 11:55:51 GMT"
+      "etag": "\"c5ca704cb1009cff93d4b1c84d5b175d\"",
+      "mod": "Thu, 26 Nov 2026 13:12:00 GMT"
     },
     "https://campaignbrief.com/feed/": {
       "etag": "\"0e87feb4792128632303d0e4a76d224a\"",
@@ -91,11 +91,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 12:42:29 GMT"
+      "mod": "Thu, 26 Nov 2026 13:12:29 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"4af1fa53bd12edbfb003ecc206428c3e-gzip\"",
-      "mod": "Thu, 26 Nov 2026 12:24:52 GMT"
+      "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
+      "mod": "Thu, 26 Nov 2026 13:09:39 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -118,11 +118,11 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Thu, 26 Nov 2026 12:35:40 GMT"
+      "mod": "Thu, 26 Nov 2026 12:58:24 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"0d812e91592c76b5245d6ac75e93815d\"",
-      "mod": "Thu, 26 Nov 2026 12:30:00 GMT"
+      "etag": "\"061bfa3fde651f0ce57dbab0f5321f52\"",
+      "mod": "Thu, 26 Nov 2026 13:00:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"70cd0f6a2e9c06acc2d0faaf3ae2f4c8\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 12:41:30 GMT"
+      "mod": "Thu, 26 Nov 2026 13:12:17 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -249,7 +249,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 12:41:30 GMT"
+      "mod": "Thu, 26 Nov 2026 13:12:31 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -287,10 +287,10 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     },
     "https://www.marketingdirecto.com/feed/": {
-      "mod": "Thu, 26 Nov 2026 10:59:03 GMT"
+      "mod": "Thu, 26 Nov 2026 12:23:27 GMT"
     }
   },
-  "yt_pos": 78,
+  "yt_pos": 96,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1117,14 +1117,24 @@
       "Anakle": "",
       "Tertulia Digital": "",
       "CKDigital": "ckdigital",
-      "LoudSilence Media": ""
+      "LoudSilence Media": "",
+      "TBWA\\Concept": "tbwaconcept",
+      "Ogilvy Nigeria": "",
+      "McCann Lagos": "",
+      "Havas West Africa": "",
+      "dentsu Nigeria": "",
+      "LLYC Africa": "",
+      "Kantar Africa": "",
+      "BrandLead": "",
+      "Eclipse Communications": "eclipsecommunications"
     },
     "tentadas": {
-      "Ogilvy Nigeria": [
-        "ogilvynigeria"
+      "Meropa Communications": [
+        "meropacommunications",
+        "meropacommunicationsagency"
       ]
     },
-    "pos": 1350,
+    "pos": 1365,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1618,9 +1628,16 @@
       "Verdant",
       "Anakle",
       "Tertulia Digital",
-      "LoudSilence Media"
+      "LoudSilence Media",
+      "Ogilvy Nigeria",
+      "McCann Lagos",
+      "Havas West Africa",
+      "dentsu Nigeria",
+      "LLYC Africa",
+      "Kantar Africa",
+      "BrandLead"
     ],
-    "rodadas": 2619,
+    "rodadas": 2649,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2830,7 +2847,16 @@
       "Tertulia Digital": [],
       "LoudSilence Media": [],
       "CKDigital": [],
-      "Ogilvy Nigeria": []
+      "Ogilvy Nigeria": [],
+      "TBWA\\Concept": [],
+      "McCann Lagos": [],
+      "Havas West Africa": [],
+      "dentsu Nigeria": [],
+      "LLYC Africa": [],
+      "Kantar Africa": [],
+      "BrandLead": [],
+      "Meropa Communications": [],
+      "Eclipse Communications": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3604,8 +3630,10 @@
     "https://www.marketingdirecto.com/creacion/feliz-navidad-verdad-eroski-reivindica-navidad-sin-filtros-nueva-campana",
     "https://www.medianews4u.com/zoo-media-and-foxymoron-turn-mentos-wilds-newspaper-ad-into-an-interactive-print-experience",
     "https://www.afaqs.com/news/advertising/licious-puts-choosy-meat-buyers-at-the-centre-of-new-campaign-12843545",
-    "https://www.abcdacomunicacao.com.br/grupo-trimais-aposta-na-relacao-com-os-clientes-em-nova-campanha-de-marketing"
+    "https://www.abcdacomunicacao.com.br/grupo-trimais-aposta-na-relacao-com-os-clientes-em-nova-campanha-de-marketing",
+    "https://www.marketingdirecto.com/campanas-navidenas/acciona-vuelve-cobijarse-magia-de-la-animacion-2d-nuevo-delicioso-spot-navideno",
+    "https://creativosbr.com.br/subway-coloca-nepo-babies-na-fila-em-campanha-de-black-friday"
   ],
-  "ultima_rodada": "2026-11-26T12:42:26.845000+00:00",
+  "ultima_rodada": "2026-11-26T13:12:26.617994+00:00",
   "ultima_novidade": "2026-11-26T12:30:26.938854+00:00"
 }
