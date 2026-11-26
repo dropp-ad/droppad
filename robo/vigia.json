@@ -49,7 +49,7 @@
       "mod": "Thu, 26 Nov 2026 04:58:56 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 05:01:15 GMT"
+      "mod": "Thu, 26 Nov 2026 05:07:15 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"e8b2f5a4e29d7631e5285f108810ce0a\"",
@@ -101,7 +101,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 05:02:16 GMT"
+      "mod": "Thu, 26 Nov 2026 05:07:16 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"81bd872eee588ba1dbd557c7d920707d-gzip\"",
@@ -197,7 +197,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 05:02:14 GMT"
+      "mod": "Thu, 26 Nov 2026 05:06:20 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -274,7 +274,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 04:56:18 GMT"
+      "mod": "Thu, 26 Nov 2026 05:07:18 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -316,7 +316,7 @@
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
     }
   },
-  "yt_pos": 96,
+  "yt_pos": 99,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1019,11 +1019,14 @@
       "GMO Internet Group": ""
     },
     "tentadas": {
+      "Kotozna": [
+        "kotozna"
+      ],
       "Recruit": [
         "recruit"
       ]
     },
-    "pos": 1120,
+    "pos": 1123,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1404,9 +1407,11 @@
       "Cartah Holdings",
       "Septeni Holdings",
       "Transcosmos",
-      "FullSpeed"
+      "FullSpeed",
+      "GMO Internet Group",
+      "Recruit"
     ],
-    "rodadas": 2159,
+    "rodadas": 2164,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2489,7 +2494,8 @@
       "Transcosmos": [],
       "FullSpeed": [],
       "GMO Internet Group": [],
-      "Recruit": []
+      "Recruit": [],
+      "Kotozna": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3247,6 +3253,6 @@
     "https://www.mediaweek.com.au/radio/mediaworks-holds-new-zealand-commercial-radio-lead",
     "https://www.mediaweek.com.au/marketing/nrma-insurance-evolves-a-help-company-platform-with-accenture-song-campaign"
   ],
-  "ultima_rodada": "2026-11-26T05:02:12.586311+00:00",
-  "ultima_novidade": "2026-11-26T03:14:11.598222+00:00"
+  "ultima_rodada": "2026-11-26T05:07:12.938057+00:00",
+  "ultima_novidade": "2026-11-26T05:07:12.938057+00:00"
 }
