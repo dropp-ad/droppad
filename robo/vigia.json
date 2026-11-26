@@ -41,11 +41,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"1c0623343461215ec4588d90eb7a06b6\"",
-      "mod": "Thu, 26 Nov 2026 16:04:50 GMT"
+      "etag": "W/\"62b39a15a6cae90d1e41db214fc2645d\"",
+      "mod": "Thu, 26 Nov 2026 16:17:54 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 16:16:40 GMT"
+      "mod": "Thu, 26 Nov 2026 16:21:40 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 16:16:41 GMT"
+      "mod": "Thu, 26 Nov 2026 16:22:40 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -118,15 +118,15 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Thu, 26 Nov 2026 15:51:08 GMT"
+      "mod": "Thu, 26 Nov 2026 16:20:39 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"26680aa1963e9676857cd739d2992a2a\"",
       "mod": "Thu, 26 Nov 2026 16:15:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
-      "etag": "\"681b1fb33519a2d314664e368f78049d\"",
-      "mod": "Thu, 26 Nov 2026 16:12:19 GMT"
+      "etag": "\"84c63b7684a966d522458d63ee34862d\"",
+      "mod": "Thu, 26 Nov 2026 16:17:20 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
       "etag": "\"7a01aa6fa807d37211146b109a045429\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 16:16:41 GMT"
+      "mod": "Thu, 26 Nov 2026 16:22:40 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -313,7 +313,7 @@
       "mod": "Thu, 30 Jul 2026 19:59:18 GMT"
     }
   },
-  "yt_pos": 60,
+  "yt_pos": 93,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1161,7 +1161,7 @@
       "Liquorice": ""
     },
     "tentadas": {},
-    "pos": 1631,
+    "pos": 1637,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1671,7 +1671,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 2834,
+    "rodadas": 2840,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3445,7 +3445,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 59,
+    "pos_quente": 65,
     "lida": {
       "droga5sp": "2026-11-26T16:12:37.122527+00:00",
       "mboothagency": "2026-11-26T15:19:36.939289+00:00",
@@ -3453,7 +3453,7 @@
       "powerdigitalagency": "2026-11-26T15:20:36.438050+00:00",
       "galeria.ag": "2026-11-26T16:16:37.224439+00:00",
       "youngandlaramore": "2026-11-26T15:21:36.772831+00:00",
-      "wt.ag": "2026-11-26T15:21:52.349939+00:00",
+      "wt.ag": "2026-11-26T16:19:36.914116+00:00",
       "webtonic_": "2026-11-26T15:21:52.349939+00:00",
       "publicisbrasil": "2026-11-26T15:22:36.473252+00:00",
       "criticalmassagency": "2026-11-26T15:22:36.473252+00:00",
@@ -3560,7 +3560,18 @@
       "antoniberlin": "2026-11-26T16:14:37.094227+00:00",
       "ogilvybrasil": "2026-11-26T16:14:37.094227+00:00",
       "scholzandfriends": "2026-11-26T16:15:36.869634+00:00",
-      "bbdobelgium": "2026-11-26T16:16:37.224439+00:00"
+      "bbdobelgium": "2026-11-26T16:16:37.224439+00:00",
+      "agency_brigada": "2026-11-26T16:17:37.156078+00:00",
+      "akqacasa": "2026-11-26T16:17:37.156078+00:00",
+      "happinessbrussels": "2026-11-26T16:18:37.091441+00:00",
+      "cpbbrasil": "2026-11-26T16:18:37.091441+00:00",
+      "boysandgirlsltd": "2026-11-26T16:19:36.914116+00:00",
+      "akestamholst": "2026-11-26T16:20:37.071198+00:00",
+      "v4company": "2026-11-26T16:20:37.071198+00:00",
+      "stendahls": "2026-11-26T16:21:36.877582+00:00",
+      "npdigitalbr": "2026-11-26T16:21:36.877582+00:00",
+      "fahrenheitddb": "2026-11-26T16:22:36.305838+00:00",
+      "propeg": "2026-11-26T16:22:36.305838+00:00"
     },
     "ultimo_post": {
       "droga5sp": "2026-11-25",
@@ -3670,7 +3681,17 @@
       "antoniberlin": "2026-10-20",
       "ogilvybrasil": "2026-11-26",
       "scholzandfriends": "2026-11-26",
-      "bbdobelgium": "2026-11-25"
+      "bbdobelgium": "2026-11-25",
+      "agency_brigada": "2026-11-26",
+      "akqacasa": "2026-11-11",
+      "happinessbrussels": "2026-11-25",
+      "cpbbrasil": "2026-11-26",
+      "boysandgirlsltd": "2026-11-11",
+      "akestamholst": "2026-11-04",
+      "v4company": "2026-11-25",
+      "stendahls": "2026-11-25",
+      "fahrenheitddb": "2026-11-17",
+      "propeg": "2026-11-23"
     }
   },
   "vistos": [
@@ -3909,6 +3930,6 @@
     "https://www.merca20.com/mientras-los-mexicanos-se-preparan-para-el-black-friday-bbva-santander-banamex-y-hsbc-dan-este-importante-anuncio-en-el-dof",
     "https://www.merca20.com/oreo-convierte-la-navidad-en-una-dulce-venganza-contra-santa-claus-en-esta-campana"
   ],
-  "ultima_rodada": "2026-11-26T16:16:37.224439+00:00",
+  "ultima_rodada": "2026-11-26T16:22:36.305838+00:00",
   "ultima_novidade": "2026-11-26T16:16:37.224439+00:00"
 }
