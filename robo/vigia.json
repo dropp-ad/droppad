@@ -4,8 +4,8 @@
       "etag": "W/\"5df2-CKlhM8Hvrh8x9Yn4dgmIEyue410\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"77b998dbedd164480abaaf0289769f64\"",
-      "mod": "Thu, 26 Nov 2026 14:18:32 GMT"
+      "etag": "\"4a6bdb3533ed12c91f7111c7e5169b37\"",
+      "mod": "Thu, 26 Nov 2026 14:24:58 GMT"
     },
     "https://creativosbr.com.br/feed/": {
       "etag": "W/\"3c68efce364b9a1ef1e0944fdd06b460\"",
@@ -45,15 +45,15 @@
       "mod": "Thu, 26 Nov 2026 13:11:28 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 14:22:40 GMT"
+      "mod": "Thu, 26 Nov 2026 14:24:39 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
       "mod": "Thu, 26 Nov 2026 06:49:38 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
-      "etag": "W/\"1795702633-gzip\"",
-      "mod": "Thu, 26 Nov 2026 14:17:13 GMT"
+      "etag": "W/\"1795703048-gzip\"",
+      "mod": "Thu, 26 Nov 2026 14:24:08 GMT"
     },
     "https://www.marketing-beat.co.uk/feed/": {
       "etag": "\"95df86aa933eb25b57c890f6631684e2\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 14:22:41 GMT"
+      "mod": "Thu, 26 Nov 2026 14:25:40 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 14:22:41 GMT"
+      "mod": "Thu, 26 Nov 2026 14:25:14 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -249,7 +249,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 14:14:42 GMT"
+      "mod": "Thu, 26 Nov 2026 14:25:42 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -313,7 +313,7 @@
       "mod": "Thu, 30 Jul 2026 19:59:18 GMT"
     }
   },
-  "yt_pos": 138,
+  "yt_pos": 81,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1161,7 +1161,7 @@
       "Liquorice": ""
     },
     "tentadas": {},
-    "pos": 1460,
+    "pos": 1466,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1671,7 +1671,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 2719,
+    "rodadas": 2722,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3675,8 +3675,9 @@
     "https://www.abcdacomunicacao.com.br/grupo-trimais-aposta-na-relacao-com-os-clientes-em-nova-campanha-de-marketing",
     "https://www.marketingdirecto.com/campanas-navidenas/acciona-vuelve-cobijarse-magia-de-la-animacion-2d-nuevo-delicioso-spot-navideno",
     "https://creativosbr.com.br/subway-coloca-nepo-babies-na-fila-em-campanha-de-black-friday",
-    "https://www.decisionmarketing.co.uk/news/bauer-media-extends-assertive-yield-advertising-deal"
+    "https://www.decisionmarketing.co.uk/news/bauer-media-extends-assertive-yield-advertising-deal",
+    "https://grandesnomesdapropaganda.com.br/anunciantes/alok-e-familia-estrelam-campanha-do-partage-lago-sul-shopping"
   ],
-  "ultima_rodada": "2026-11-26T14:22:37.663706+00:00",
-  "ultima_novidade": "2026-11-26T12:30:26.938854+00:00"
+  "ultima_rodada": "2026-11-26T14:25:36.727095+00:00",
+  "ultima_novidade": "2026-11-26T14:25:36.727095+00:00"
 }
