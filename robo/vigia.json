@@ -1,7 +1,7 @@
 {
   "cond": {
     "https://www.b9.com.br/feed/": {
-      "etag": "W/\"5fcd-BLQibFsqH3SytUSp89vRz9FeZUg\""
+      "etag": "W/\"5d71-9zguoZOwnm6QyZmjE4iqUCRTkGM\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
       "etag": "\"5457a0cc28dbebdc815fbd9dfeb31e73\"",
@@ -41,11 +41,11 @@
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"6bdd44571a6cdbd20d972ace1261c3ea\"",
-      "mod": "Thu, 26 Nov 2026 20:59:27 GMT"
+      "etag": "W/\"ad2d03b46fc1386be07ef299326fd543\"",
+      "mod": "Thu, 26 Nov 2026 21:27:31 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 21:28:39 GMT"
+      "mod": "Thu, 26 Nov 2026 21:31:53 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 21:28:52 GMT"
+      "mod": "Thu, 26 Nov 2026 21:32:53 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 21:28:52 GMT"
+      "mod": "Thu, 26 Nov 2026 21:32:53 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -272,8 +272,8 @@
       "mod": "Thu, 29 Oct 2026 19:32:20 GMT"
     },
     "https://noblestudios.com/feed/": {
-      "etag": "\"e7d48ab932ef4a0c5f34616eaf1e586c\"",
-      "mod": "Thu, 26 Nov 2026 09:29:46 GMT"
+      "etag": "\"801d5c540612af5cc549931a85bff485\"",
+      "mod": "Thu, 26 Nov 2026 21:30:27 GMT"
     },
     "https://www.chatterbuzzmedia.com/blog/feed/": {
       "etag": "W/\"abca381411c5c0f86415bc839e922bcb\"",
@@ -316,7 +316,7 @@
       "mod": "Thu, 26 Nov 2026 17:16:20 GMT"
     }
   },
-  "yt_pos": 159,
+  "yt_pos": 132,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1164,7 +1164,7 @@
       "Crispin": "crispinagency"
     },
     "tentadas": {},
-    "pos": 1947,
+    "pos": 1951,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1674,7 +1674,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 3146,
+    "rodadas": 3150,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3448,15 +3448,15 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 368,
+    "pos_quente": 372,
     "lida": {
       "droga5sp": "2026-11-26T20:12:48.021981+00:00",
       "mboothagency": "2026-11-26T15:19:36.939289+00:00",
-      "ampfy": "2026-11-26T18:39:36.469017+00:00",
+      "ampfy": "2026-11-26T21:30:48.321320+00:00",
       "powerdigitalagency": "2026-11-26T15:20:36.438050+00:00",
-      "galeria.ag": "2026-11-26T18:40:37.142732+00:00",
+      "galeria.ag": "2026-11-26T21:31:47.490807+00:00",
       "youngandlaramore": "2026-11-26T15:21:36.772831+00:00",
-      "wt.ag": "2026-11-26T18:41:36.538766+00:00",
+      "wt.ag": "2026-11-26T21:32:48.104715+00:00",
       "webtonic_": "2026-11-26T15:21:52.349939+00:00",
       "publicisbrasil": "2026-11-26T18:43:37.043623+00:00",
       "criticalmassagency": "2026-11-26T15:22:36.473252+00:00",
@@ -3578,7 +3578,7 @@
       "impactbbdo": "2026-11-26T21:25:48.280111+00:00",
       "fields360": "2026-11-26T16:23:37.178335+00:00",
       "huia.ag": "2026-11-26T16:24:37.168293+00:00",
-      "mojosupermarket": "2026-11-26T21:13:47.941925+00:00",
+      "mojosupermarket": "2026-11-26T21:32:48.104715+00:00",
       "sherlockcomms": "2026-11-26T16:25:36.925954+00:00",
       "agenciatechandsoul": "2026-11-26T21:14:47.608986+00:00",
       "barcodigital": "2026-11-26T16:26:37.020199+00:00",
@@ -3600,7 +3600,7 @@
       "mediabrandsbrasil": "2026-11-26T16:35:36.618489+00:00",
       "allen_gerritsen": "2026-11-26T21:23:48.122561+00:00",
       "essencemediacombr": "2026-11-26T16:36:36.557890+00:00",
-      "digitas.na": "2026-11-26T21:25:48.280111+00:00",
+      "digitas.na": "2026-11-26T21:29:48.082813+00:00",
       "webershandwickbr": "2026-11-26T16:38:36.978650+00:00",
       "artsandlabor": "2026-11-26T21:26:48.068499+00:00",
       "hugebrasil": "2026-11-26T16:39:37.313314+00:00",
@@ -3612,7 +3612,7 @@
       "hugeinc": "2026-11-26T16:42:36.581468+00:00",
       "agencycreative": "2026-11-26T20:00:48.393074+00:00",
       "leoburnett": "2026-11-26T16:43:36.683433+00:00",
-      "mothernewyork": "2026-11-26T16:44:36.913319+00:00",
+      "mothernewyork": "2026-11-26T21:30:48.321320+00:00",
       "bastionbuntin": "2026-11-26T20:02:48.226436+00:00",
       "lifeatlt": "2026-11-26T20:03:48.031491+00:00",
       "themartinagency": "2026-11-26T16:46:36.594666+00:00",
@@ -3837,7 +3837,9 @@
       "sokoagency": "2026-11-26T21:22:47.638356+00:00",
       "bmf_australia": "2026-11-26T21:24:47.876084+00:00",
       "joepublic": "2026-11-26T21:26:48.068499+00:00",
-      "webelieversnow": "2026-11-26T21:28:47.619106+00:00"
+      "webelieversnow": "2026-11-26T21:28:47.619106+00:00",
+      "martinagency": "2026-11-26T21:29:48.082813+00:00",
+      "wearetranslation": "2026-11-26T21:31:47.490807+00:00"
     },
     "ultimo_post": {
       "droga5sp": "2026-11-25",
@@ -4209,7 +4211,9 @@
       "noblegraphics_": "2025-10-05",
       "bmf_australia": "2026-11-26",
       "joepublic": "2026-11-18",
-      "webelieversnow": "2026-11-25"
+      "webelieversnow": "2026-11-25",
+      "martinagency": "2026-11-26",
+      "wearetranslation": "2026-11-25"
     }
   },
   "vistos": [
@@ -4459,6 +4463,6 @@
     "https://www.abcdacomunicacao.com.br/neugebauer-traz-campanha-de-natal-com-viagens-para-fernando-de-noronha-e-super-premios",
     "https://grandesnomesdapropaganda.com.br/mercado-digital/spr-assina-a-nova-campanha-institucional-da-atlas"
   ],
-  "ultima_rodada": "2026-11-26T21:28:47.619106+00:00",
+  "ultima_rodada": "2026-11-26T21:32:48.104715+00:00",
   "ultima_novidade": "2026-11-26T21:28:47.619106+00:00"
 }
