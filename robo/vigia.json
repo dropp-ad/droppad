@@ -4,8 +4,8 @@
       "etag": "W/\"5ee6-PyBt2vsuYMwj065166TMPVxl0HM\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
-      "etag": "\"8d2b357d96c41a3ba5f60aa45dd6d6e6\"",
-      "mod": "Thu, 26 Nov 2026 01:28:02 GMT"
+      "etag": "\"313f5a601cb16984e0874b080bc2e54c\"",
+      "mod": "Thu, 26 Nov 2026 11:13:12 GMT"
     },
     "https://creativosbr.com.br/feed/": {
       "etag": "W/\"f793b977949d05f296ec8aa8f7aafc5d\"",
@@ -45,7 +45,7 @@
       "mod": "Thu, 26 Nov 2026 10:41:58 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 11:11:54 GMT"
+      "mod": "Thu, 26 Nov 2026 11:24:28 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -83,19 +83,19 @@
       "mod": "Thu, 26 Nov 2026 09:03:10 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
-      "etag": "\"37b6eceb83f3cf8c3aa2af61df633259\"",
-      "mod": "Thu, 26 Nov 2026 10:53:02 GMT"
+      "etag": "\"4ba43266d6d8a61d48340a6d5bdd8a8d\"",
+      "mod": "Thu, 26 Nov 2026 11:21:41 GMT"
     },
     "https://bbdo.com/feed/": {
       "etag": "W/\"d19e6feb3b8183716af7e9ecf21ae2f1\"",
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 11:12:28 GMT"
+      "mod": "Thu, 26 Nov 2026 11:24:29 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"476ac605634ccf36532a7510b998d2ab-gzip\"",
-      "mod": "Thu, 26 Nov 2026 11:10:48 GMT"
+      "etag": "W/\"6fae7372d9363c52eb782d39601e8b06-gzip\"",
+      "mod": "Thu, 26 Nov 2026 11:24:14 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -118,7 +118,7 @@
       "mod": "Tue, 27 Oct 2026 17:16:13 GMT"
     },
     "https://www.meioemensagem.com.br/feed/": {
-      "mod": "Thu, 26 Nov 2026 09:10:39 GMT"
+      "mod": "Thu, 26 Nov 2026 11:22:57 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
       "etag": "\"fbcfa5bfb02f350b9610be2835542a4f\"",
@@ -129,8 +129,8 @@
       "mod": "Wed, 25 Nov 2026 22:41:33 GMT"
     },
     "https://www.retailgazette.co.uk/feed/": {
-      "etag": "\"44b70c2bd4b2a0414757a7642dd1d8bb\"",
-      "mod": "Thu, 26 Nov 2026 07:41:27 GMT"
+      "etag": "\"7a01aa6fa807d37211146b109a045429\"",
+      "mod": "Thu, 26 Nov 2026 11:02:35 GMT"
     },
     "https://wearesocial.com/it/feed/": {
       "etag": "W/\"142edc7baade8a4b5bd0a2a67ab57ef5\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 11:12:15 GMT"
+      "mod": "Thu, 26 Nov 2026 11:23:33 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -249,7 +249,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 11:06:31 GMT"
+      "mod": "Thu, 26 Nov 2026 11:17:30 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -285,9 +285,12 @@
     "https://www.thefirmpr.com/feed/": {
       "etag": "\"af6b524cafc50e94678aee7948be94b3\"",
       "mod": "Mon, 16 Nov 2026 20:18:00 GMT"
+    },
+    "https://www.marketingdirecto.com/feed/": {
+      "mod": "Thu, 26 Nov 2026 10:59:03 GMT"
     }
   },
-  "yt_pos": 171,
+  "yt_pos": 90,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1088,14 +1091,18 @@
       "iProspect South Africa": "",
       "Jellyfish South Africa": "",
       "Accenture Song South Africa": "",
-      "WPP South Africa": ""
+      "WPP South Africa": "",
+      "Omnicom Africa": "",
+      "IPG Mediabrands South Africa": "",
+      "EssenceMediacom South Africa": ""
     },
     "tentadas": {
-      "Omnicom Africa": [
-        "omnicomafrica"
+      "Mindshare South Africa": [
+        "mindsharesouthafrica",
+        "mindsharesouthafricaagency"
       ]
     },
-    "pos": 1305,
+    "pos": 1311,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1566,9 +1573,13 @@
       "Golin South Africa",
       "iProspect South Africa",
       "Jellyfish South Africa",
-      "Accenture Song South Africa"
+      "Accenture Song South Africa",
+      "WPP South Africa",
+      "Omnicom Africa",
+      "IPG Mediabrands South Africa",
+      "EssenceMediacom South Africa"
     ],
-    "rodadas": 2529,
+    "rodadas": 2541,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2752,7 +2763,10 @@
       "Jellyfish South Africa": [],
       "Accenture Song South Africa": [],
       "WPP South Africa": [],
-      "Omnicom Africa": []
+      "Omnicom Africa": [],
+      "IPG Mediabrands South Africa": [],
+      "EssenceMediacom South Africa": [],
+      "Mindshare South Africa": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3522,8 +3536,10 @@
     "https://www.medianews4u.com/v-guard-launches-cool-wires-campaign-to-shift-consumer-focus-towards-heat-management-and-electrical-safety",
     "https://www.contentgrip.com/bake-off-ad-break",
     "https://marketinginsiderreview.com/acciona-estrena-campana-navidad-2026",
-    "https://marketinginsiderreview.com/eroski-estrena-campana-navidad-2026-feliz-navidad-de-verdad"
+    "https://marketinginsiderreview.com/eroski-estrena-campana-navidad-2026-feliz-navidad-de-verdad",
+    "https://www.marketingdirecto.com/creacion/feliz-navidad-verdad-eroski-reivindica-navidad-sin-filtros-nueva-campana",
+    "https://www.medianews4u.com/zoo-media-and-foxymoron-turn-mentos-wilds-newspaper-ad-into-an-interactive-print-experience"
   ],
-  "ultima_rodada": "2026-11-26T11:12:26.308689+00:00",
-  "ultima_novidade": "2026-11-26T10:53:26.632111+00:00"
+  "ultima_rodada": "2026-11-26T11:24:27.154744+00:00",
+  "ultima_novidade": "2026-11-26T11:24:27.154744+00:00"
 }
