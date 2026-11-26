@@ -45,7 +45,7 @@
       "mod": "Thu, 26 Nov 2026 10:41:58 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 11:37:28 GMT"
+      "mod": "Thu, 26 Nov 2026 11:42:28 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -83,19 +83,19 @@
       "mod": "Thu, 26 Nov 2026 09:03:10 GMT"
     },
     "https://marketinginsiderreview.com/feed/": {
-      "etag": "\"706044c66754448b2b625ccd85b67b24\"",
-      "mod": "Thu, 26 Nov 2026 11:33:07 GMT"
+      "etag": "\"ca035e48f5ec42e960fcf89bd87e9230\"",
+      "mod": "Thu, 26 Nov 2026 11:42:18 GMT"
     },
     "https://bbdo.com/feed/": {
       "etag": "W/\"d19e6feb3b8183716af7e9ecf21ae2f1\"",
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 11:37:29 GMT"
+      "mod": "Thu, 26 Nov 2026 11:42:29 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"e4627602e604af5d6678b72218637e9d-gzip\"",
-      "mod": "Thu, 26 Nov 2026 11:27:27 GMT"
+      "etag": "W/\"2414c6b9fc6fb15d1b2c7871e0d65667-gzip\"",
+      "mod": "Thu, 26 Nov 2026 11:39:39 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 11:36:51 GMT"
+      "mod": "Thu, 26 Nov 2026 11:41:59 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -290,7 +290,7 @@
       "mod": "Thu, 26 Nov 2026 10:59:03 GMT"
     }
   },
-  "yt_pos": 39,
+  "yt_pos": 42,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1100,8 +1100,15 @@
       "Carat South Africa": "",
       "OMD South Africa": ""
     },
-    "tentadas": {},
-    "pos": 1318,
+    "tentadas": {
+      "PHD South Africa": [
+        "phdsouthafrica"
+      ],
+      "Starcom South Africa": [
+        "starcomsouthafrica"
+      ]
+    },
+    "pos": 1320,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1579,9 +1586,11 @@
       "EssenceMediacom South Africa",
       "Mindshare South Africa",
       "Wavemaker South Africa",
-      "Carat South Africa"
+      "Carat South Africa",
+      "OMD South Africa",
+      "PHD South Africa"
     ],
-    "rodadas": 2554,
+    "rodadas": 2559,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -2771,7 +2780,9 @@
       "Mindshare South Africa": [],
       "Wavemaker South Africa": [],
       "Carat South Africa": [],
-      "OMD South Africa": []
+      "OMD South Africa": [],
+      "PHD South Africa": [],
+      "Starcom South Africa": []
     },
     "mortas": {
       "havasmedia": "2026-11-24T20:47:43.944196+00:00",
@@ -3546,6 +3557,6 @@
     "https://www.medianews4u.com/zoo-media-and-foxymoron-turn-mentos-wilds-newspaper-ad-into-an-interactive-print-experience",
     "https://www.afaqs.com/news/advertising/licious-puts-choosy-meat-buyers-at-the-centre-of-new-campaign-12843545"
   ],
-  "ultima_rodada": "2026-11-26T11:37:27.101197+00:00",
+  "ultima_rodada": "2026-11-26T11:42:26.962654+00:00",
   "ultima_novidade": "2026-11-26T11:37:27.101197+00:00"
 }
