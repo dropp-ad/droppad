@@ -200,6 +200,9 @@
     "Produtora": ["Production", "Productora", "Production", "Produktion", "Casa di produzione", "Productie", "制作会社", "제작사", "制作公司"],
     "Direção": ["Director", "Dirección", "Réalisation", "Regie", "Regia", "Regie", "監督", "감독", "导演"],
     "Agência": ["Agency", "Agencia", "Agence", "Agentur", "Agenzia", "Bureau", "エージェンシー", "대행사", "代理商"],
+    "← Voltar ao feed": ["← Back to feed", "← Volver al feed", "← Retour au fil", "← Zurück zum Feed", "← Torna al feed", "← Terug naar de feed", "← フィードに戻る", "← 피드로 돌아가기", "← 返回信息流"],
+    "Ver a página da campanha": ["Open the campaign page", "Ver la página de la campaña", "Voir la page de la campagne", "Kampagnenseite öffnen", "Apri la pagina della campagna", "Campagnepagina openen", "キャンペーンページを開く", "캠페인 페이지 열기", "打开广告页面"],
+    "Abrir a página ↗": ["Open the page ↗", "Abrir la página ↗", "Ouvrir la page ↗", "Seite öffnen ↗", "Apri la pagina ↗", "Pagina openen ↗", "ページを開く ↗", "페이지 열기 ↗", "打开页面 ↗"],
     "Ficha técnica completa ↗": ["Full credits ↗", "Ficha técnica completa ↗", "Tous les crédits ↗", "Alle Credits ↗", "Tutti i crediti ↗", "Alle credits ↗", "クレジット一覧 ↗", "전체 크레딧 ↗", "完整制作名单 ↗"],
     "Origem": ["Origin", "Origen", "Origine", "Herkunft", "Origine", "Herkomst", "地域", "지역", "地区"],
     "A ideia": ["The idea", "La idea", "L'idée", "Die Idee", "L'idea", "Het idee", "アイデア", "아이디어", "创意概念"],
@@ -307,7 +310,10 @@
     MESES = mesesDe(LANG);
     try { dn = new Intl.DisplayNames([LOCALE[LANG] || "en"], { type: "region" }); } catch (e) { dn = null; }
     document.documentElement.lang = LOCALE[LANG] || "en";
-    document.title = tr("droppad · as campanhas que estrearam hoje no mundo");
+    var tit = tr("droppad · as campanhas que estrearam hoje no mundo");
+    if (detAberto) tituloFeed = tit; else document.title = tit; // com a página de uma campanha aberta, o título é o dela
+    var fch = document.querySelector(".detalhe-fechar");
+    if (fch) fch.textContent = tr("← Voltar ao feed");
     function attr(sel, nome, pt) { var e = document.querySelector(sel); if (e) e.setAttribute(nome, tr(pt)); }
     function txt(id, pt) { var e = $(id); if (e) e.textContent = tr(pt); }
     attr("#chips", "aria-label", "Região");
@@ -619,7 +625,10 @@
       b.appendChild(el("i", null, tr(" para ")));
       b.appendChild(document.createTextNode(marca));
     }
-    who.appendChild(b);
+    var pg = el("a", "who-link");
+    pg.href = paginaDe(c);
+    pg.appendChild(b);
+    who.appendChild(pg);
     var sm = el("small");
     var bits = [tr("via {s}", { s: c.source || "—" })];
     if (c.region) bits.push(tr(c.region));
@@ -864,6 +873,7 @@
       menu.appendChild(b);
     }
     function open(u) { window.open(u, "_blank", "noopener"); closeMenu(); }
+    item(tr("Ver a página da campanha"), function () { closeMenu(); abrirPagina(paginaDe(c), true); });
     item(tr("Copiar link"), function () {
       copy(url).then(function (ok) {
         if (ok) { toast(tr("Link copiado")); closeMenu(); } else { field.focus(); field.select(); toast(tr("Selecione e copie o link")); }
@@ -1269,6 +1279,112 @@
     }, function () { /* nada */ });
   }
 
+  /* ---------- Página da campanha (e de pessoas/empresas) aberta numa caixa sobre a timeline ----------
+     As páginas /c/<id>/, /p/<nome>/ e /a/<nome>/ existem de verdade (Google, prévia de link). Dentro do
+     site elas abrem por cima do feed; quem chega direto por um link já vê a caixa aberta, com o feed
+     atrás, e "Voltar ao feed" fecha a caixa. */
+  var det = null, detAberto = false, detEmpurrou = false, tituloFeed = document.title;
+  function paginaDe(c) {
+    var pre = c.tl && LANG !== "pt" ? (LANG === "es" ? "/es" : "/en") : "";
+    return pre + "/c/" + encodeURIComponent(c.id) + "/";
+  }
+  function caminhoInterno(href) {
+    try {
+      var u = new URL(href, location.href);
+      if (u.origin !== location.origin) return "";
+      return /^\/(?:(?:en|es)\/)?(?:c|p|a)\/[^/]+\/?$/.test(u.pathname) ? u.pathname : "";
+    } catch (e) { return ""; }
+  }
+  function caixa() {
+    if (det) return det;
+    det = $("detalhe");
+    if (!det) {
+      det = el("div", "detalhe");
+      det.id = "detalhe";
+      det.innerHTML = '<div class="detalhe-fundo"></div><div class="detalhe-box" role="dialog" aria-modal="true">' +
+        '<button type="button" class="detalhe-fechar"></button><div class="detalhe-conteudo" id="detalhe-conteudo"></div></div>';
+      document.body.appendChild(det);
+    }
+    det.querySelector(".detalhe-fechar").addEventListener("click", function () { fecharCaixa(false); });
+    var fundo = det.querySelector(".detalhe-fundo");
+    if (fundo) fundo.addEventListener("click", function () { fecharCaixa(false); });
+    return det;
+  }
+  function abrirCaixa() {
+    caixa().querySelector(".detalhe-fechar").textContent = tr("← Voltar ao feed");
+    det.classList.add("aberto");
+    document.documentElement.classList.add("com-detalhe");
+    detAberto = true;
+    deactivate(); // o filme do feed para
+  }
+  function fecharCaixa(peloHistorico) {
+    if (!detAberto) return;
+    detAberto = false;
+    det.classList.remove("aberto");
+    document.documentElement.classList.remove("com-detalhe");
+    $("detalhe-conteudo").innerHTML = ""; // para o vídeo da página
+    document.title = tituloFeed;
+    if (!peloHistorico) {
+      if (detEmpurrou) { detEmpurrou = false; history.back(); }
+      else { try { history.replaceState(null, "", "/"); } catch (e) { /* nada */ } }
+    }
+    travadoAte = Date.now() + 500;
+    clearTimeout(pickTimer);
+    pickTimer = setTimeout(pick, 550);
+  }
+  function abrirPagina(caminho, empurrar) {
+    if (!caminho) return;
+    var cont = (caixa(), $("detalhe-conteudo"));
+    cont.innerHTML = '<p class="detalhe-carregando">…</p>';
+    var estava = detAberto;
+    abrirCaixa();
+    try {
+      if (empurrar && !estava) { history.pushState({ detalhe: caminho }, "", caminho); detEmpurrou = true; }
+      else history.replaceState({ detalhe: caminho }, "", caminho);
+    } catch (e) { /* nada */ }
+    fetch(caminho).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }).then(function (h) {
+      var doc = new DOMParser().parseFromString(h, "text/html");
+      var m = doc.getElementById("detalhe-conteudo");
+      if (!m) throw new Error("sem conteúdo");
+      cont.innerHTML = m.innerHTML; // página do próprio site
+      if (doc.title) document.title = doc.title;
+      det.querySelector(".detalhe-box").scrollTop = 0;
+    }).catch(function () {
+      cont.innerHTML = "";
+      var a = link("detalhe-fora", tr("Abrir a página ↗"), caminho);
+      cont.appendChild(a);
+    });
+  }
+  // links para páginas do site (créditos, campanhas relacionadas, cabeçalho do post) abrem na caixa
+  document.addEventListener("click", function (e) {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest("a[href]");
+    if (!a) return;
+    if (a.classList.contains("detalhe-feed")) { e.preventDefault(); fecharCaixa(false); return; }
+    var cam = caminhoInterno(a.getAttribute("href"));
+    if (!cam) return;
+    e.preventDefault();
+    e.stopPropagation();
+    abrirPagina(cam, true);
+  }, true);
+  window.addEventListener("popstate", function (e) {
+    if (e.state && e.state.detalhe) abrirPagina(e.state.detalhe, false);
+    else fecharCaixa(true);
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && detAberto) fecharCaixa(false); });
+  // chegou direto numa página /c/, /p/ ou /a/: a caixa já vem aberta no HTML
+  function caixaDaChegada() {
+    var d = $("detalhe");
+    if (!d || !d.classList.contains("aberto")) return "";
+    caixa();
+    det.querySelector(".detalhe-fechar").textContent = tr("← Voltar ao feed");
+    detAberto = true;
+    document.documentElement.classList.add("com-detalhe");
+    tituloFeed = tr("droppad · as campanhas que estrearam hoje no mundo");
+    var m = location.pathname.match(/\/c\/([^/]+)\/?$/);
+    return m ? decodeURIComponent(m[1]) : "";
+  }
+
   /* ---------- Créditos clicáveis: cada pessoa/empresa leva à página dela (/p/nome/ ou /a/nome/) ---------- */
   var CRED_PRINCIPAL = /cco|chief creative|creative director|ecd|dire[çc][ãa]o (geral |executiva )?de cria|diretor(a|es)? (geral |executiv[oa]s? )?de cria|vp de cria|^dire[çc][ãa]o$|^diretor(a)?$|^director$|realiza|produtora|production compan|productora/i;
   var CRED_EMPRESA = /ag[êe]ncia|agency|produtora|production compan|productora|post[- ]?produ|p[óo]s[- ]?produ|sound|[áa]udio|m[úu]sica|music|vfx|studio|est[úu]dio/i;
@@ -1310,7 +1426,7 @@
     rows.forEach(function (k) { dl.appendChild(el("dt", null, k[0])); dl.appendChild(k[2] ? ddComLinks(k[1], k[2]) : el("dd", null, k[1])); });
     inner.appendChild(dl);
     if (c.credits.length > principais.length) {
-      var toda = link("end-ficha", tr("Ficha técnica completa ↗"), "/c/" + encodeURIComponent(c.id) + "/");
+      var toda = link("end-ficha", tr("Ficha técnica completa ↗"), paginaDe(c));
       inner.appendChild(toda);
     }
     var acts = el("div", "end-acts");
@@ -1430,6 +1546,7 @@
   document.addEventListener("fullscreenchange", segurarFilme);
   document.addEventListener("webkitfullscreenchange", segurarFilme);
   function pick() {
+    if (detAberto) return; // a página da campanha está aberta por cima: o feed fica parado
     if (emTelaCheia() || Date.now() < travadoAte) {
       clearTimeout(pickTimer);
       pickTimer = setTimeout(pick, 400); // decide de novo quando a tela assentar
@@ -1631,7 +1748,7 @@
   var antigo = { anos: [], min: "" }; // anos que ainda não foram baixados, do mais novo ao mais velho
   var baixandoAno = null;
   function carregarIndice() {
-    return fetch("antigo/indice.json", { cache: "no-cache" })
+    return fetch("/antigo/indice.json", { cache: "no-cache" })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (j) {
         if (j && Array.isArray(j.anos)) {
@@ -1645,9 +1762,9 @@
     if (baixandoAno) return baixandoAno;
     if (!antigo.anos.length) return Promise.resolve(false);
     var ano = antigo.anos.shift();
-    baixandoAno = fetch("antigo/" + ano + sufixoCarregado + ".json")
+    baixandoAno = fetch("/antigo/" + ano + sufixoCarregado + ".json")
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .catch(function () { return fetch("antigo/" + ano + ".json").then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); })
+      .catch(function () { return fetch("/antigo/" + ano + ".json").then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); })
       .then(function (raw) {
         var ids = {};
         state.items.forEach(function (c) { ids[c.id] = 1; });
@@ -1843,7 +1960,7 @@
   var lastCheck = Date.now(), pending = null, lastStamp = null;
   function pollNew() {
     lastCheck = Date.now();
-    fetch("novidades.json?t=" + Date.now(), { cache: "no-store" })
+    fetch("/novidades.json?t=" + Date.now(), { cache: "no-store" })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (n) {
         var stamp = n.atualizado + "|" + n.total + "|" + n.ultimo;
@@ -1925,7 +2042,7 @@
   // feed-es.json; em português, feed.json. Os anos antigos seguem o mesmo padrão (antigo/2024-en.json).
   // texto longo da campanha (o que abre em "Ver mais"), na língua de quem lê quando já foi traduzido
   function buscarHistoria(c) {
-    var base = "historia/" + encodeURIComponent(c.id);
+    var base = "/historia/" + encodeURIComponent(c.id);
     var suf = sufixoConteudo();
     var pt = function () { return fetch(base + ".json"); };
     if (!suf) return pt();
@@ -1937,11 +2054,12 @@
     function get(f) { return fetch(f, { cache: mode }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); }
     var suf = sufixoConteudo();
     sufixoCarregado = suf;
-    return get("feed" + suf + ".json")
-      .catch(function () { sufixoCarregado = ""; return get("feed.json"); })
-      .catch(function () { return get("campaigns.json"); });
+    return get("/feed" + suf + ".json")
+      .catch(function () { sufixoCarregado = ""; return get("/feed.json"); })
+      .catch(function () { return get("/campaigns.json"); });
   }
   // dados e país de quem entra chegam ao mesmo tempo
+  var idChegada = caixaDaChegada(); // chegou por um link /c/<id>/: a campanha aberta por cima do feed
   aplicarLingua(linguaContato()); // primeiro palpite (país salvo ou língua do navegador)
   Promise.all([loadData("no-cache"), detectCountry(), carregarIndice()])
     .then(function (res) {
@@ -1957,7 +2075,7 @@
       pintarContato();
       $("status").hidden = true;
       renderAll();
-      goTo(sharedId());
+      goTo(sharedId() || idChegada);
       resumeLogin();
       registrarVisita();
     })

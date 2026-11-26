@@ -311,7 +311,7 @@ def pagina(c, lg, relacionadas):
 <h1>{h1}</h1>
 {by}
 {midia}
-<a class="cta" href="{feed}">{verfeed} →</a>
+<a class="detalhe-feed" href="{feed}">{verfeed} →</a>
 {corpo}
 {dl}
 {ficha}
@@ -446,6 +446,45 @@ def pagina_entidade(tipo, nome, itens, lg):
            sub=esc(T["campanhas_de"][lg].format(n=nome)), lis=lis)
 
 
+# ---------------------------------------------------------------- a página dentro do site
+# Cada página (/c/, /p/, /a/) é o próprio site (timeline, cabeçalho, app.js) com o conteúdo da campanha
+# numa caixa aberta por cima: quem chega por um link vê a caixa e, ao fechar ("Voltar ao feed"), está no
+# feed. O conteúdo fica no HTML (o Google lê) e o app usa o mesmo conteúdo quando abre a caixa por dentro.
+_CASCA = None
+
+
+def casca():
+    global _CASCA
+    if _CASCA is None:
+        raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        with open(os.path.join(raiz, "index.html"), encoding="utf-8") as f:
+            h = f.read()
+        # caminhos relativos viram absolutos (a página fica em /c/<id>/)
+        h = re.sub(r'(\s(?:src|href|poster)=")(?!https?:|/|#|data:|mailto:)(?:\./)?', r"\1/", h)
+        cab = h[h.index("<head>") + 6:h.index("</head>")]
+        # sai o que é da home (título, descrição, canonical, og, twitter); a página põe os dela
+        cab = re.sub(r'\s*<(title)>.*?</title>|\s*<meta (?:name|property)="(?:description|og:[^"]*|twitter:[^"]*)"[^>]*>|\s*<link rel="canonical"[^>]*>', "", cab)
+        corpo = h[h.index("<body>") + 6:h.index("</body>")]
+        _CASCA = (cab, corpo)
+    return _CASCA
+
+
+def envolver(doc, lg):
+    """Pega a página gerada (cabeçalho com as tags de busca + <main>) e põe dentro do site, numa caixa aberta."""
+    cab_site, corpo_site = casca()
+    cab = doc[doc.index("<head>") + 6:doc.index("</head>")]
+    cab = re.sub(r'\s*<meta charset[^>]*>|\s*<meta name="viewport"[^>]*>|\s*<link rel="icon"[^>]*>|\s*<link rel="stylesheet" href="/c.css">', "", cab)
+    miolo = doc[doc.index("<main>") + 6:doc.index("</main>")]
+    caixa = ('<div class="detalhe aberto" id="detalhe"><div class="detalhe-fundo"></div>'
+             '<div class="detalhe-box" role="dialog" aria-modal="true"><button type="button" class="detalhe-fechar">%s</button>'
+             '<div class="detalhe-conteudo" id="detalhe-conteudo">%s</div></div></div>' % (esc(T["voltar"][lg]), miolo))
+    return ('<!DOCTYPE html>\n<html lang="%s" class="com-detalhe">\n<head>%s\n%s</head>\n<body>\n%s\n%s</body>\n</html>\n'
+            % (HTML_LANG[lg], cab_site.split("<title>")[0], cab, caixa, corpo_site))
+
+
+T["voltar"] = {"pt": "← Voltar ao feed", "en": "← Back to feed", "es": "← Volver al feed"}
+
+
 def id_ok(cid):
     return bool(cid) and re.fullmatch(r"[\w.\-]+", cid) is not None and not cid.startswith(".")
 
@@ -475,7 +514,7 @@ def main(src, dst):
             pasta = os.path.join(dst, PREFIXO[lg].strip("/"), "c", c["id"])
             os.makedirs(pasta, exist_ok=True)
             with open(os.path.join(pasta, "index.html"), "w", encoding="utf-8") as f:
-                f.write(pagina(c, lg, rel))
+                f.write(envolver(pagina(c, lg, rel), lg))
             urls[lg].append(c)
             n += 1
     # páginas de pessoas e empresas creditadas (/p/<nome>/ e /a/<nome>/), em português, inglês e espanhol
@@ -495,7 +534,7 @@ def main(src, dst):
         pasta = os.path.join(dst, tipo, sl)
         os.makedirs(pasta, exist_ok=True)
         with open(os.path.join(pasta, "index.html"), "w", encoding="utf-8") as f:
-            f.write(pagina_entidade(tipo, e["nome"], e["itens"], "pt"))
+            f.write(envolver(pagina_entidade(tipo, e["nome"], e["itens"], "pt"), "pt"))
         urls_ent.append((tipo, e["nome"]))
         n_ent += 1
     print("páginas de pessoas e empresas:", n_ent)

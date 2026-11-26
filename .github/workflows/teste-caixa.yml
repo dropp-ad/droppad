@@ -1,0 +1,26 @@
+name: Teste da caixa (ramo caixa)
+
+on:
+  push:
+    branches: [caixa]
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          mkdir _site && cp -r index.html style.css app.js favicon.svg logo-poster.jpg logo-loop.mp4 logo-loop.webm _site/
+          python3 tools/feed.py campaigns.json _site && python3 tools/paginas.py campaigns.json _site
+          pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
+          (cd _site && python -m http.server 8000 >/dev/null 2>&1 &) && sleep 2
+          C=$(python3 -c "import json;c=json.load(open('campaigns.json'));print(next(x['id'] for x in c if x.get('ficha') and x.get('yt')))")
+          mkdir prints && python tools/teste_caixa.py http://localhost:8000 "$C"
+          cd prints && git init -q -b diagnostico && git config user.name robo && git config user.email robo@x
+          git add -A && git commit -qm prints && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" diagnostico
