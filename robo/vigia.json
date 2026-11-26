@@ -8,8 +8,8 @@
       "mod": "Thu, 26 Nov 2026 19:52:05 GMT"
     },
     "https://creativosbr.com.br/feed/": {
-      "etag": "W/\"46098f44a480efa636c912e2590701bb\"",
-      "mod": "Thu, 26 Nov 2026 19:28:47 GMT"
+      "etag": "W/\"eccf91a5454d0c066db62d97246ab166\"",
+      "mod": "Thu, 26 Nov 2026 20:29:08 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
       "mod": "Thu, 26 Nov 2026 19:03:48 GMT"
@@ -33,19 +33,19 @@
       "etag": "W/\"30bd5-s6LGGvUWc04hJgVTrLhXlwWptU0\""
     },
     "https://www.nossomeio.com.br/feed/": {
-      "etag": "\"1dbcf-66130163f908b\"",
-      "mod": "Thu, 26 Nov 2026 16:03:39 GMT"
+      "etag": "\"1ddfe-66133d551d687\"",
+      "mod": "Thu, 26 Nov 2026 20:31:50 GMT"
     },
     "https://www.adworld.ie/feed/": {
       "etag": "\"b778f8e5ac045bc29a7be1e54d179c8b\"",
       "mod": "Tue, 24 Nov 2026 16:49:30 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"e57b07293fa289ee90a198e0d50de684\"",
-      "mod": "Thu, 26 Nov 2026 19:55:51 GMT"
+      "etag": "W/\"379acb1f31948631cc19eb427b3b244e\"",
+      "mod": "Thu, 26 Nov 2026 20:26:14 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Thu, 26 Nov 2026 20:01:56 GMT"
+      "mod": "Thu, 26 Nov 2026 20:32:51 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"cf578da6e21566acf4494a2b609e51e7\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 20:02:53 GMT"
+      "mod": "Thu, 26 Nov 2026 20:32:53 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -121,8 +121,8 @@
       "mod": "Thu, 26 Nov 2026 19:59:05 GMT"
     },
     "https://www.abcdacomunicacao.com.br/feed": {
-      "etag": "\"28c58a6beb597f3cab0e97cc8e6918e7\"",
-      "mod": "Thu, 26 Nov 2026 20:00:00 GMT"
+      "etag": "\"b9f8f2efe845666f92c5687d5bc9d5eb\"",
+      "mod": "Thu, 26 Nov 2026 20:15:00 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"0621fc9bfbbcd1f0cb25079392e9e2e8\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Thu, 26 Nov 2026 20:02:53 GMT"
+      "mod": "Thu, 26 Nov 2026 20:32:54 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -249,7 +249,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Thu, 26 Nov 2026 19:57:55 GMT"
+      "mod": "Thu, 26 Nov 2026 20:30:54 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -297,8 +297,8 @@
       "mod": "Thu, 26 Nov 2026 14:00:59 GMT"
     },
     "https://thestable.com.au/feed/": {
-      "etag": "\"63288f6dfd448f3ffeca7459ea1e97f2\"",
-      "mod": "Thu, 26 Nov 2026 06:13:53 GMT"
+      "etag": "\"bc006a2d62351e478e5099a3fde274fe\"",
+      "mod": "Thu, 26 Nov 2026 20:16:01 GMT"
     },
     "https://bruketa-zinic.com/feed/": {
       "etag": "\"5b10a6b158834169546a0780b1fe9526\"",
@@ -316,7 +316,7 @@
       "mod": "Thu, 26 Nov 2026 17:16:20 GMT"
     }
   },
-  "yt_pos": 78,
+  "yt_pos": 96,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1160,10 +1160,11 @@
       "Morrison": "",
       "Honey + Moon": "honeymoonagency",
       "Boomtown": "",
-      "Liquorice": ""
+      "Liquorice": "",
+      "Crispin": "crispinagency"
     },
     "tentadas": {},
-    "pos": 1859,
+    "pos": 1889,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1673,7 +1674,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 3060,
+    "rodadas": 3090,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3447,9 +3448,9 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 285,
+    "pos_quente": 312,
     "lida": {
-      "droga5sp": "2026-11-26T18:38:36.924418+00:00",
+      "droga5sp": "2026-11-26T20:12:48.021981+00:00",
       "mboothagency": "2026-11-26T15:19:36.939289+00:00",
       "ampfy": "2026-11-26T18:39:36.469017+00:00",
       "powerdigitalagency": "2026-11-26T15:20:36.438050+00:00",
@@ -3467,36 +3468,36 @@
       "groupmagency": "2026-11-26T15:25:36.330212+00:00",
       "archertroy": "2026-11-26T18:47:36.564895+00:00",
       "omnicom": "2026-11-26T15:26:37.242041+00:00",
-      "razorfish": "2026-11-26T18:48:36.732194+00:00",
+      "razorfish": "2026-11-26T20:16:48.136931+00:00",
       "tribe": "2026-11-26T15:27:37.416718+00:00",
-      "wpp": "2026-11-26T18:49:37.146644+00:00",
+      "wpp": "2026-11-26T20:17:47.518258+00:00",
       "qualitymeats_": "2026-11-26T15:28:36.765372+00:00",
-      "workinprogress": "2026-11-26T18:50:36.928010+00:00",
+      "workinprogress": "2026-11-26T20:18:48.077188+00:00",
       "directiveconsulting": "2026-11-26T15:29:36.716092+00:00",
-      "redantler": "2026-11-26T18:52:37.247097+00:00",
+      "redantler": "2026-11-26T20:20:47.551593+00:00",
       "thriveinternetmarketingagency": "2026-11-26T15:30:37.109776+00:00",
-      "buck_design": "2026-11-26T18:53:37.135746+00:00",
+      "buck_design": "2026-11-26T20:21:47.936706+00:00",
       "victoriousagency": "2026-11-26T15:31:36.633397+00:00",
-      "psyop": "2026-11-26T18:54:37.102355+00:00",
+      "psyop": "2026-11-26T20:22:48.165652+00:00",
       "klientboost": "2026-11-26T15:32:37.005209+00:00",
-      "connellypartners": "2026-11-26T18:55:36.956385+00:00",
+      "connellypartners": "2026-11-26T20:23:48.083237+00:00",
       "fantasyagency": "2026-11-26T15:33:36.611511+00:00",
-      "thegoatagency": "2026-11-26T18:56:37.122469+00:00",
+      "thegoatagency": "2026-11-26T20:24:47.533060+00:00",
       "collinsagency": "2026-11-26T15:34:37.016693+00:00",
-      "sociallypowerful": "2026-11-26T18:57:36.415346+00:00",
-      "betcparis": "2026-11-26T19:38:48.131569+00:00",
-      "traackr": "2026-11-26T18:58:36.491995+00:00",
+      "sociallypowerful": "2026-11-26T20:25:48.008578+00:00",
+      "betcparis": "2026-11-26T20:07:47.601475+00:00",
+      "traackr": "2026-11-26T20:26:47.696532+00:00",
       "tbwaparis": "2026-11-26T15:36:36.383105+00:00",
-      "meltwater": "2026-11-26T18:59:36.484923+00:00",
+      "meltwater": "2026-11-26T20:27:47.408819+00:00",
       "braveagency": "2026-11-26T15:37:36.929976+00:00",
-      "emplifi": "2026-11-26T19:01:36.644822+00:00",
-      "strikedigitalagency": "2026-11-26T18:34:37.306139+00:00",
-      "kesselskramer": "2026-11-26T19:04:48.283644+00:00",
+      "emplifi": "2026-11-26T20:29:47.516922+00:00",
+      "strikedigitalagency": "2026-11-26T20:08:47.769268+00:00",
+      "kesselskramer": "2026-11-26T20:30:47.544877+00:00",
       "northfolkagency": "2026-11-26T15:39:37.230750+00:00",
-      "meaningfulsocialclub": "2026-11-26T19:05:47.923442+00:00",
-      "vamp": "2026-11-26T18:35:37.219332+00:00",
-      "melbournesocialco": "2026-11-26T19:06:48.259138+00:00",
-      "ogilvyitaly": "2026-11-26T18:36:36.899703+00:00",
+      "meaningfulsocialclub": "2026-11-26T20:31:47.898300+00:00",
+      "vamp": "2026-11-26T20:09:47.949747+00:00",
+      "melbournesocialco": "2026-11-26T20:32:48.026180+00:00",
+      "ogilvyitaly": "2026-11-26T20:10:47.622617+00:00",
       "squidgroupnz": "2026-11-26T19:07:48.024752+00:00",
       "thjnk": "2026-11-26T15:42:36.786671+00:00",
       "digitalinfluencenz": "2026-11-26T19:08:48.182348+00:00",
@@ -3516,8 +3517,8 @@
       "ogilvy": "2026-11-26T19:36:48.171804+00:00",
       "nakedcreative_": "2026-11-26T15:50:36.856899+00:00",
       "droga5": "2026-11-26T19:37:47.558503+00:00",
-      "smithsocialagency": "2026-11-26T18:37:36.451225+00:00",
-      "tbwa": "2026-11-26T19:40:47.865771+00:00",
+      "smithsocialagency": "2026-11-26T20:11:48.293263+00:00",
+      "tbwa": "2026-11-26T20:05:47.563207+00:00",
       "optagency": "2026-11-26T15:52:37.007548+00:00",
       "mischiefusa": "2026-11-26T19:50:47.481911+00:00",
       "abcdigitalagency": "2026-11-26T15:53:37.251149+00:00",
@@ -3537,21 +3538,21 @@
       "behaveagency": "2026-11-26T16:00:36.784940+00:00",
       "wearevccp": "2026-11-26T20:01:48.172671+00:00",
       "cbimarket": "2026-11-26T16:01:36.522685+00:00",
-      "crispin": "2026-11-26T19:28:47.820571+00:00",
+      "crispin": "2026-11-26T20:11:48.293263+00:00",
       "clockworkagency": "2026-11-26T16:02:37.280500+00:00",
       "thecommunityagency": "2026-11-26T19:29:47.896010+00:00",
       "publicisgroupeafrica": "2026-11-26T16:03:36.681438+00:00",
       "silversideai": "2026-11-26T19:30:48.154748+00:00",
       "zenithsouthafrica": "2026-11-26T16:04:37.241002+00:00",
-      "72andsunny_": "2026-11-26T19:31:47.789487+00:00",
+      "72andsunny_": "2026-11-26T20:18:48.077188+00:00",
       "squaddigital": "2026-11-26T16:05:36.937247+00:00",
-      "goodby_silverstein": "2026-11-26T19:32:47.832299+00:00",
+      "goodby_silverstein": "2026-11-26T20:19:48.344448+00:00",
       "zurisocial": "2026-11-26T16:06:36.445140+00:00",
-      "anomaly": "2026-11-26T19:33:48.316855+00:00",
+      "anomaly": "2026-11-26T20:20:47.551593+00:00",
       "ckdigital": "2026-11-26T16:07:36.347523+00:00",
-      "mckinney": "2026-11-26T19:34:47.814809+00:00",
+      "mckinney": "2026-11-26T20:22:48.165652+00:00",
       "tbwaconcept": "2026-11-26T16:08:36.858424+00:00",
-      "bbdo": "2026-11-26T19:35:48.135386+00:00",
+      "bbdo": "2026-11-26T20:32:48.026180+00:00",
       "eclipsecommunications": "2026-11-26T16:09:36.604148+00:00",
       "grey": "2026-11-26T19:36:48.171804+00:00",
       "houseofbrave_": "2026-11-26T16:10:36.491669+00:00",
@@ -3613,14 +3614,14 @@
       "leoburnett": "2026-11-26T16:43:36.683433+00:00",
       "mothernewyork": "2026-11-26T16:44:36.913319+00:00",
       "bastionbuntin": "2026-11-26T20:02:48.226436+00:00",
-      "lifeatlt": "2026-11-26T18:28:37.035954+00:00",
+      "lifeatlt": "2026-11-26T20:03:48.031491+00:00",
       "themartinagency": "2026-11-26T16:46:36.594666+00:00",
-      "vitro.agency": "2026-11-26T18:29:37.242512+00:00",
+      "vitro.agency": "2026-11-26T20:04:47.879764+00:00",
       "webershandwick": "2026-11-26T16:47:36.787528+00:00",
       "hlkagency": "2026-11-26T18:30:37.000232+00:00",
       "praytellagency": "2026-11-26T16:48:36.685992+00:00",
       "jellyfishglobal": "2026-11-26T16:49:36.371135+00:00",
-      "barragency": "2026-11-26T18:32:36.459029+00:00",
+      "barragency": "2026-11-26T20:06:48.132083+00:00",
       "lyfemarketing": "2026-11-26T16:50:36.390539+00:00",
       "sirclemedia": "2026-11-26T16:51:37.206128+00:00",
       "duncanchannon": "2026-11-26T16:52:36.612734+00:00",
@@ -3656,7 +3657,7 @@
       "metrictheory": "2026-11-26T17:27:36.932723+00:00",
       "seerinteractive": "2026-11-26T17:28:36.636696+00:00",
       "webfx": "2026-11-26T17:29:36.373674+00:00",
-      "coalitiontech": "2026-11-26T18:51:36.460542+00:00",
+      "coalitiontech": "2026-11-26T20:19:48.344448+00:00",
       "disruptivehq": "2026-11-26T17:31:36.382780+00:00",
       "barrelny": "2026-11-26T17:32:37.119649+00:00",
       "clayglobal": "2026-11-26T17:33:37.069404+00:00",
@@ -3681,7 +3682,7 @@
       "mojoagency": "2026-11-26T17:57:36.677996+00:00",
       "pulseadvertising": "2026-11-26T17:58:37.005923+00:00",
       "iconosquare": "2026-11-26T18:00:36.523288+00:00",
-      "brandwatch": "2026-11-26T19:00:36.704222+00:00",
+      "brandwatch": "2026-11-26T20:28:48.236477+00:00",
       "ogilvyuk": "2026-11-26T18:05:36.604447+00:00",
       "ddbamsterdam": "2026-11-26T18:06:36.736930+00:00",
       "leoburnettmadrid": "2026-11-26T18:07:37.082258+00:00",
@@ -3776,7 +3777,28 @@
       "wiedenkennedy": "2026-11-26T19:57:47.945357+00:00",
       "bbhlondon": "2026-11-26T19:58:47.987594+00:00",
       "adamandevetbwa": "2026-11-26T19:59:47.552298+00:00",
-      "knownagency": "2026-11-26T20:02:48.226436+00:00"
+      "knownagency": "2026-11-26T20:02:48.226436+00:00",
+      "iwgroup": "2026-11-26T20:03:48.031491+00:00",
+      "blndollarboy": "2026-11-26T20:04:47.879764+00:00",
+      "codeandtheory": "2026-11-26T20:05:47.563207+00:00",
+      "acc": "2026-11-26T20:06:48.132083+00:00",
+      "msqpartners": "2026-11-26T20:07:47.601475+00:00",
+      "attnagency": "2026-11-26T20:08:47.769268+00:00",
+      "joancreative": "2026-11-26T20:09:47.949747+00:00",
+      "collemcvoy": "2026-11-26T20:10:47.622617+00:00",
+      "almaagency": "2026-11-26T20:12:48.021981+00:00",
+      "dnaandstone": "2026-11-26T20:16:48.136931+00:00",
+      "whalar": "2026-11-26T20:17:47.518258+00:00",
+      "wearedeutsch": "2026-11-26T20:21:47.936706+00:00",
+      "consciousminds": "2026-11-26T20:23:48.083237+00:00",
+      "iversonagency": "2026-11-26T20:24:47.533060+00:00",
+      "laughlinconstable": "2026-11-26T20:25:48.008578+00:00",
+      "capeagency": "2026-11-26T20:26:47.696532+00:00",
+      "collectivelyinc": "2026-11-26T20:27:47.408819+00:00",
+      "wearesocialus": "2026-11-26T20:28:48.236477+00:00",
+      "dept_global": "2026-11-26T20:29:47.516922+00:00",
+      "galepartners": "2026-11-26T20:30:47.544877+00:00",
+      "rgabydesign": "2026-11-26T20:31:47.898300+00:00"
     },
     "ultimo_post": {
       "droga5sp": "2026-11-25",
@@ -3840,7 +3862,7 @@
       "humandigitalagency": "2021-08-16",
       "ogilvy": "2026-11-26",
       "droga5": "2026-11-04",
-      "smithsocialagency": "2026-11-25",
+      "smithsocialagency": "2026-11-26",
       "tbwa": "2026-11-12",
       "optagency": "2022-12-19",
       "mischiefusa": "2026-11-26",
@@ -3936,7 +3958,7 @@
       "leoburnett": "2026-10-30",
       "mothernewyork": "2026-11-25",
       "bastionbuntin": "2026-11-23",
-      "lifeatlt": "2026-11-24",
+      "lifeatlt": "2026-11-26",
       "themartinagency": "2026-11-26",
       "vitro.agency": "2026-11-06",
       "webershandwick": "2026-10-29",
@@ -4090,7 +4112,28 @@
       "wiedenkennedy": "2026-06-08",
       "bbhlondon": "2026-07-28",
       "adamandevetbwa": "2026-11-26",
-      "knownagency": "2018-11-08"
+      "knownagency": "2018-11-08",
+      "iwgroup": "2026-11-24",
+      "blndollarboy": "2026-11-23",
+      "codeandtheory": "2026-11-26",
+      "acc": "2023-07-21",
+      "msqpartners": "2026-10-07",
+      "attnagency": "2026-07-21",
+      "joancreative": "2026-07-22",
+      "collemcvoy": "2026-10-22",
+      "almaagency": "2026-11-25",
+      "dnaandstone": "2026-11-09",
+      "whalar": "2026-10-29",
+      "wearedeutsch": "2026-11-12",
+      "consciousminds": "2026-10-23",
+      "iversonagency": "2026-07-08",
+      "laughlinconstable": "2026-11-11",
+      "capeagency": "2024-02-29",
+      "collectivelyinc": "2026-11-12",
+      "wearesocialus": "2026-11-19",
+      "dept_global": "2026-11-25",
+      "galepartners": "2026-11-24",
+      "rgabydesign": "2026-09-16"
     }
   },
   "vistos": [
@@ -4340,6 +4383,6 @@
     "https://www.abcdacomunicacao.com.br/neugebauer-traz-campanha-de-natal-com-viagens-para-fernando-de-noronha-e-super-premios",
     "https://grandesnomesdapropaganda.com.br/mercado-digital/spr-assina-a-nova-campanha-institucional-da-atlas"
   ],
-  "ultima_rodada": "2026-11-26T20:02:48.226436+00:00",
+  "ultima_rodada": "2026-11-26T20:32:48.026180+00:00",
   "ultima_novidade": "2026-11-26T19:45:47.969721+00:00"
 }
