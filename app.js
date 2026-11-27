@@ -341,10 +341,16 @@
   }
   function onFirstGesture() {
     gestureAt = Date.now();
-    ["pointerdown", "touchstart", "keydown"].forEach(function (t) { document.removeEventListener(t, onFirstGesture, true); });
+    ["pointerup", "click", "keydown"].forEach(function (t) { document.removeEventListener(t, onFirstGesture, true); });
     if (sound && blocked) { unblockedAt = Date.now(); setSound(true); }
   }
-  ["pointerdown", "touchstart", "keydown"].forEach(function (t) { document.addEventListener(t, onFirstGesture, true); });
+  // só toque/clique de verdade libera o som (rolar a tela não conta para o navegador): o primeiro
+  // toque em qualquer lugar da página liga o som do filme que já está tocando, e os próximos já vêm com som
+  ["pointerup", "click", "keydown"].forEach(function (t) { document.addEventListener(t, onFirstGesture, true); });
+  function somLiberado() {
+    if (navigator.userActivation) return navigator.userActivation.hasBeenActive;
+    return !!gestureAt;
+  }
   function fallbackMuted(mute, play) {
     blocked = true;
     try { mute(); play(); } catch (e) { /* nada */ }
@@ -1698,8 +1704,9 @@
               pl.mute(); pl.playVideo();
               if (!sound || blocked) return;
               pl.unMute(); pl.playVideo();
-              if (!gestureAt) setTimeout(function () {
-                if (!alive() || gestureAt) return;
+              // tenta com som sempre; se o navegador barrar (parou ou ficou mudo), segue tocando sem som
+              setTimeout(function () {
+                if (!alive()) return;
                 try { if (pl.getPlayerState() !== 1 || pl.isMuted()) fallbackMuted(function () { pl.mute(); }, function () { pl.playVideo(); }); } catch (err) { /* nada */ }
               }, 1200);
             },
@@ -1721,7 +1728,7 @@
         if (!alive()) return;
         var p = new Vimeo.Player(slot, {
           url: "https://vimeo.com/" + f.id + (f.hash ? "/" + f.hash : ""),
-          autoplay: true, muted: !(sound && !blocked && gestureAt), loop: false, playsinline: true, controls: true, dnt: true, texttrack: "pt",
+          autoplay: true, muted: !(sound && !blocked && somLiberado()), loop: false, playsinline: true, controls: true, dnt: true, texttrack: "pt",
           width: 1280, title: false, byline: false, portrait: false
         });
         me.player = p;
@@ -1730,10 +1737,10 @@
         p.on("ended", ended);
         p.on("timeupdate", function (d) { if (alive()) { art.querySelector(".bar i").style.width = (d.percent * 100) + "%"; setTime(art, d.seconds, d.duration); } });
         p.ready().then(function () {
-          if (!sound || blocked || gestureAt) return;
+          if (!sound || blocked) return;
           p.setMuted(false).then(function () { return p.play(); }).catch(function () {});
           setTimeout(function () {
-            if (!alive() || gestureAt) return;
+            if (!alive()) return;
             p.getPaused().then(function (x) { if (x) fallbackMuted(function () { p.setMuted(true); }, function () { p.play().catch(function () {}); }); });
           }, 1200);
         }).catch(failed);
