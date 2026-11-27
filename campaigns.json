@@ -14284,6 +14284,112 @@
     "igm": [
       54,
       500
+    ],
+    "ficha": [
+      {
+        "role": "Campanha",
+        "name": "Trailer de Cinema 2026"
+      },
+      {
+        "role": "Cliente",
+        "name": "Seguros Unimed"
+      },
+      {
+        "role": "Título",
+        "name": "Sessão Assegurada"
+      },
+      {
+        "role": "Agência",
+        "name": "DPZ"
+      },
+      {
+        "role": "CEO",
+        "name": "Benjamin Yung Jr"
+      },
+      {
+        "role": "CCO",
+        "name": "Pedro Araújo, Renato Simões"
+      },
+      {
+        "role": "Direção de Criação",
+        "name": "Erich Moreira, Gabi Marcatto, Leonardo Konjedic"
+      },
+      {
+        "role": "Head Of Art",
+        "name": "Thiago Rocha"
+      },
+      {
+        "role": "Criação",
+        "name": "Luiz Zamorano, Gustavo Paro, Gabriel Rosa, Luan Alves"
+      },
+      {
+        "role": "Motion Designer",
+        "name": "Diego Tokunaga"
+      },
+      {
+        "role": "Negócios",
+        "name": "Denise Nogueira"
+      },
+      {
+        "role": "Estratégia",
+        "name": "Hugo Costa, Carolina Elizaur"
+      },
+      {
+        "role": "Head de Produção Integrada",
+        "name": "Paula Alimonda"
+      },
+      {
+        "role": "Produção Integrada",
+        "name": "Felipe Telles, Juliana Fernandes, Pam Verissimo, Guilherme Rodrigues"
+      },
+      {
+        "role": "PR e Comunicação",
+        "name": "Larissa Spinola, Beatriz Barreto"
+      },
+      {
+        "role": "Aprovação pelo Cliente",
+        "name": "Renata Ucha, Eduardo Campos, Cibele Froes, Fabio Machado"
+      },
+      {
+        "role": "Produtora de imagem",
+        "name": "Vetor Zero"
+      },
+      {
+        "role": "Direção",
+        "name": "Thiago Martins e Gabriel Nobrega"
+      },
+      {
+        "role": "Direção Executiva",
+        "name": "Gabriel Nobrega"
+      },
+      {
+        "role": "Produção Executiva",
+        "name": "Francisco Puech"
+      },
+      {
+        "role": "Direção de Projetos",
+        "name": "Márcia Guimarães"
+      },
+      {
+        "role": "Direção de Novos Negócios",
+        "name": "Luiz Braga"
+      },
+      {
+        "role": "Gerente de Projetos",
+        "name": "Rubia Elias e Mônica Andrade"
+      },
+      {
+        "role": "Gerente de Projetos Jr",
+        "name": "Stella Balboni"
+      },
+      {
+        "role": "Head de Pós-produção",
+        "name": "Tatiana Caparelli"
+      },
+      {
+        "role": "Coordenação de Pós-produção",
+        "name": "Henrique Gomes"
+      }
     ]
   },
   {
