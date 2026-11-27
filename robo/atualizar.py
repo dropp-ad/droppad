@@ -530,6 +530,17 @@ def buscar_bing(q):
     return itens
 
 
+def buscar_reviews(site):
+    secao = urllib.parse.urlsplit(site["busca_reviews"])
+    dominio = secao.hostname.removeprefix("www.")
+    itens = buscar_bing("site:" + dominio + secao.path)
+    for it in itens:
+        link = urllib.parse.urlsplit(it["link"])
+        if (link.scheme in {"http", "https"} and (link.hostname or "").removeprefix("www.") == dominio
+                and re.fullmatch(re.escape(secao.path) + r"\d{4}/[^/]+/?", link.path, re.I)):
+            yield it
+
+
 # ---------------------------------------------------------------- filmes
 YT = re.compile(r"(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=|shorts/|v/)|youtu\.be/)([\w-]{11})")
 VIMEO = re.compile(r"player\.vimeo\.com/video/(\d+)(?:\?h=([0-9a-f]+))?|vimeo\.com/(\d{6,})(?:/([0-9a-f]{6,}))?")
@@ -1382,7 +1393,16 @@ def main():
             for it in itens:
                 considerar(it, f, ARQUIVO_INICIO)
 
-    # 3) buscas no Bing News (acha sites novos)
+    # 3) buscas no Bing News (reviews conhecidas e descoberta de sites)
+    if not RAPIDO:
+        for fonte in fontes.get("sites", []):
+            if not fonte.get("busca_reviews"):
+                continue
+            try:
+                for it in buscar_reviews(fonte):
+                    considerar(it, fonte, inicio_normal)
+            except (OSError, ValueError, ET.ParseError) as e:
+                log("  busca de reviews falhou:", fonte["nome"], e)
     buscas = [] if RAPIDO else fontes.get("buscas", [])
     if buscas:
         k = estado.get("proxima_busca", 0) % len(buscas)
