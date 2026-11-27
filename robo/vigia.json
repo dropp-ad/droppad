@@ -1,7 +1,7 @@
 {
   "cond": {
     "https://www.b9.com.br/feed/": {
-      "etag": "W/\"5d72-pSqaXzfwZYfGKHPRbl7298TafHQ\""
+      "etag": "W/\"5d72-VlcAfqE1ec7fP/0So3gCsYhnxlY\""
     },
     "https://grandesnomesdapropaganda.com.br/feed/": {
       "etag": "\"9b4dbcd757343defbf169bc33c848c74\"",
@@ -41,11 +41,11 @@
       "mod": "Fri, 27 Nov 2026 13:27:46 GMT"
     },
     "https://www.merca20.com/feed/": {
-      "etag": "W/\"2c556ea7028d9df7b907f3bc24b93ae7\"",
-      "mod": "Fri, 27 Nov 2026 19:30:02 GMT"
+      "etag": "W/\"931bf10d0988e27b949ecd0e08063fd9\"",
+      "mod": "Fri, 27 Nov 2026 19:43:31 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Fri, 27 Nov 2026 19:36:50 GMT"
+      "mod": "Fri, 27 Nov 2026 19:43:50 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"fef0e0a28808c2881518c92c8da1e872\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Fri, 27 Nov 2026 19:37:51 GMT"
+      "mod": "Fri, 27 Nov 2026 19:43:51 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"f30036d7bb854bb4a3d3c4781cadc7c7-gzip\"",
@@ -168,7 +168,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Fri, 27 Nov 2026 19:37:11 GMT"
+      "mod": "Fri, 27 Nov 2026 19:43:20 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -291,7 +291,7 @@
       "mod": "Fri, 27 Nov 2026 13:53:58 GMT"
     },
     "https://theinspirationroom.com/daily/feed/": {
-      "mod": "Fri, 27 Nov 2026 19:33:50 GMT"
+      "mod": "Fri, 27 Nov 2026 19:40:06 GMT"
     },
     "https://www.marketingdirecto.com/feed/": {
       "mod": "Fri, 27 Nov 2026 15:58:13 GMT"
@@ -307,7 +307,7 @@
       "mod": "Fri, 27 Nov 2026 10:45:50 GMT"
     },
     "https://www.strategies.fr/feed": {
-      "mod": "Fri, 27 Nov 2026 19:37:51 GMT"
+      "mod": "Fri, 27 Nov 2026 19:42:51 GMT"
     },
     "https://thestable.com.au/feed/": {
       "etag": "\"1bc2ed9ea9ed4301fe5c0864435c8a78\"",
@@ -326,7 +326,7 @@
       "mod": "Thu, 27 Jun 2024 15:55:37 GMT"
     }
   },
-  "yt_pos": 189,
+  "yt_pos": 195,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1174,7 +1174,7 @@
       "Crispin": "crispinagency"
     },
     "tentadas": {},
-    "pos": 3812,
+    "pos": 3818,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1684,7 +1684,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 4456,
+    "rodadas": 4462,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3458,7 +3458,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 1678,
+    "pos_quente": 1684,
     "lida": {
       "droga5sp": "2026-11-27T19:20:47.401720+00:00",
       "mboothagency": "2026-11-27T18:27:47.665713+00:00",
@@ -3530,7 +3530,7 @@
       "smithsocialagency": "2026-11-27T18:59:47.887362+00:00",
       "tbwa": "2026-11-27T18:52:48.183403+00:00",
       "optagency": "2026-11-27T19:00:48.275161+00:00",
-      "mischiefusa": "2026-11-27T19:20:47.401720+00:00",
+      "mischiefusa": "2026-11-27T19:38:47.583672+00:00",
       "abcdigitalagency": "2026-11-27T19:01:47.826495+00:00",
       "rethinkideas": "2026-11-27T18:54:47.645655+00:00",
       "huelladigital": "2026-11-27T19:02:48.096126+00:00",
@@ -3588,26 +3588,26 @@
       "impactbbdo": "2026-11-27T19:19:47.419108+00:00",
       "fields360": "2026-11-27T19:31:47.880915+00:00",
       "huia.ag": "2026-11-27T19:32:47.848016+00:00",
-      "mojosupermarket": "2026-11-27T19:22:48.111550+00:00",
+      "mojosupermarket": "2026-11-27T19:40:48.109802+00:00",
       "sherlockcomms": "2026-11-27T19:33:47.777275+00:00",
-      "agenciatechandsoul": "2026-11-27T19:23:47.326780+00:00",
+      "agenciatechandsoul": "2026-11-27T19:41:47.355529+00:00",
       "barcodigital": "2026-11-27T19:34:48.315115+00:00",
-      "anacouto.ag": "2026-11-27T19:25:48.207615+00:00",
+      "anacouto.ag": "2026-11-27T19:43:48.005476+00:00",
       "estacaoindoor": "2026-11-27T19:35:47.652159+00:00",
       "headspropaganda": "2026-11-27T19:36:47.555318+00:00",
       "agenciawe": "2026-11-27T19:26:47.982051+00:00",
       "cubo.network": "2026-11-27T19:37:47.570292+00:00",
       "thisiscollins": "2026-11-27T19:27:47.990423+00:00",
-      "haze.ag": "2026-11-26T16:30:36.400339+00:00",
+      "haze.ag": "2026-11-27T19:38:47.583672+00:00",
       "kampgrizzly": "2026-11-27T19:28:47.591904+00:00",
-      "agenciatrato": "2026-11-26T16:31:36.385663+00:00",
+      "agenciatrato": "2026-11-27T19:39:47.684620+00:00",
       "highdiveus": "2026-11-27T17:00:35.127846+00:00",
-      "agencialua": "2026-11-26T16:32:36.779536+00:00",
+      "agencialua": "2026-11-27T19:40:48.109802+00:00",
       "barkley.okrp": "2026-11-27T19:29:47.374371+00:00",
-      "fbizoficial": "2026-11-26T16:33:36.892904+00:00",
-      "iprospectbrasil": "2026-11-26T16:34:37.092246+00:00",
+      "fbizoficial": "2026-11-27T19:41:47.355529+00:00",
+      "iprospectbrasil": "2026-11-27T19:42:47.767157+00:00",
       "carmichael_lynch": "2026-11-27T19:31:47.880915+00:00",
-      "mediabrandsbrasil": "2026-11-26T16:35:36.618489+00:00",
+      "mediabrandsbrasil": "2026-11-27T19:43:48.005476+00:00",
       "allen_gerritsen": "2026-11-27T17:12:34.766930+00:00",
       "essencemediacombr": "2026-11-26T16:36:36.557890+00:00",
       "digitas.na": "2026-11-27T19:33:47.777275+00:00",
@@ -3847,7 +3847,7 @@
       "sokoagency": "2026-11-27T16:18:34.994845+00:00",
       "bmf_australia": "2026-11-27T16:20:35.226896+00:00",
       "joepublic": "2026-11-27T16:22:35.145382+00:00",
-      "webelieversnow": "2026-11-27T19:21:47.786298+00:00",
+      "webelieversnow": "2026-11-27T19:39:47.684620+00:00",
       "martinagency": "2026-11-27T16:25:35.319693+00:00",
       "wearetranslation": "2026-11-27T16:27:34.646792+00:00",
       "mekanism": "2026-11-27T16:30:34.578956+00:00",
@@ -3857,7 +3857,7 @@
       "rpa_advertising": "2026-11-27T16:33:34.933848+00:00",
       "jotapontoag": "2026-11-27T16:35:34.519243+00:00",
       "mynd": "2026-11-27T16:36:34.883315+00:00",
-      "squid.creators": "2026-11-27T19:24:47.552584+00:00",
+      "squid.creators": "2026-11-27T19:42:47.767157+00:00",
       "agencia_ginga": "2026-11-27T16:38:34.855693+00:00",
       "tatil_design": "2026-11-27T16:39:34.677953+00:00",
       "druid.creative": "2026-11-26T21:47:48.204948+00:00",
@@ -4803,6 +4803,6 @@
     "https://roastbrief.com.mx/2026/11/piracanjuba-estrena-un-conmovedor-filme-sobre-el-autismo-y-el-acompanamiento-materno",
     "https://creativosbr.com.br/piracanjuba-aborda-empatia-e-inclusao-em-campanha-de-natal"
   ],
-  "ultima_rodada": "2026-11-27T19:37:47.570292+00:00",
+  "ultima_rodada": "2026-11-27T19:43:48.005476+00:00",
   "ultima_novidade": "2026-11-27T19:37:47.570292+00:00"
 }
