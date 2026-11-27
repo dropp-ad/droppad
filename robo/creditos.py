@@ -13,17 +13,20 @@ Uso no workflow:  python robo/creditos.py            → lê e grava em /tmp/cre
                   python robo/creditos.py --testar URL [URL…]  → só mostra o que acharia
 """
 import concurrent.futures as cf
+import datetime as dt
 import html
 import json
 import os
 import re
 import sys
 import time
+import urllib.parse
 import urllib.request
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
 import atualizar as A  # noqa: E402
+from midia import bate_com_a_campanha  # noqa: E402
 
 ESTADO = os.path.join(AQUI, "creditos.json")
 ACHADOS = "/tmp/creditos.json"
@@ -48,6 +51,12 @@ FUNCOES = re.compile(
 SEPARADOR = re.compile(r"^\s*([^:–—|\n]{2,60}?)\s*(?::|\s[–—-]\s|\s\|\s)\s*(.{2,300})$")
 NAO_E_NOME = re.compile(r"https?://|www\.|@\w+\.\w|\b(leia|read|see|veja|confira|saiba|clique|click|subscribe|assine|newsletter|"
                         r"cookie|copyright|©|todos os direitos)\b", re.I)
+FUNCAO_AGENCIA = re.compile(r"^(?:(?:agência|agencia|agency|agence)(?: (?:criativa|creativa|creative))?|creative agency)$", re.I)
+ATRIBUICAO = re.compile(
+    r"(?i:\b(?:criad[ao] pela?|desenvolvid[ao] pela?|assinad[ao] pela?|cread[ao] por|"
+    r"(?:created|developed) by)\s+(?:(?:a |the )?(?:agência|agencia|creative agency|agency)\s+)?)"
+    r"([A-ZÀ-Ý][\w&’'.+-]*(?:\s+[A-ZÀ-Ý&][\w&’'.+-]*){0,4})"
+)
 
 
 def log(*a):
@@ -148,6 +157,77 @@ def ler(c):
         return c["id"], ("erro", str(e)[:80])
 
 
+def agencia_de_creditos(creditos, c):
+    marcas = {A.chave(c["brand"]), "youtube", "instagram", "linkedin", "tiktok"}
+    nomes = {
+        k["name"].strip(): None for k in creditos
+        if FUNCAO_AGENCIA.fullmatch(k["role"])
+        and 1 < len(k["name"].strip()) <= 60
+        and A.chave(k["name"]) not in marcas
+    }
+    return next(iter(nomes)) if len(nomes) == 1 else ""
+
+
+def agencia_na_materia(c, pagina):
+    creditos = limpar_creditos(creditos_de(pagina))
+    if any(FUNCAO_AGENCIA.fullmatch(k["role"]) for k in creditos):
+        return agencia_de_creditos(creditos, c)
+    creditos = [
+        {"role": "Agência", "name": nome.rstrip(".")}
+        for linha in linhas_de(pagina)[:100]
+        for nome in ATRIBUICAO.findall(linha)
+    ]
+    return agencia_de_creditos(creditos, c)
+
+
+def procurar_agencia(c):
+    agencia = agencia_de_creditos(c.get("credits") or c.get("ficha") or [], c)
+    if agencia:
+        return c["id"], agencia
+    fonte = c.get("url") or ""
+    if fonte.startswith(("https://", "http://")):
+        try:
+            agencia = agencia_na_materia(c, baixar(fonte))
+        except (OSError, ValueError):
+            pass
+        if agencia:
+            return c["id"], agencia
+
+    consulta = '"%s" %s %s' % (c["brand"], c["title"][:120], "agência" if c.get("cc") == "BR" else "agency")
+    idioma, pais = ("pt-BR", "BR") if c.get("cc") == "BR" else ("en-US", "US")
+    google = "https://news.google.com/rss/search?" + urllib.parse.urlencode(
+        {"q": consulta, "hl": idioma, "gl": pais, "ceid": f"{pais}:{idioma[:2]}"}
+    )
+    try:
+        itens = A.ler_feed(A.baixar(google, timeout=10))
+    except (OSError, ValueError, A.ET.ParseError) as e:
+        log("  Google Notícias indisponível:", type(e).__name__)
+        itens = []
+    for item in itens[:6]:
+        titulo = item["titulo"].rsplit(" - ", 1)[0]
+        if bate_com_a_campanha(c, titulo):
+            agencia = agencia_na_materia(c, "<p>" + html.escape(titulo) + "</p>")
+            if agencia:
+                return c["id"], agencia
+
+    # O feed do Google costuma fornecer links opacos. O Bing já entrega URLs
+    # das matérias, onde podemos conferir o crédito quando o título é insuficiente.
+    try:
+        itens = A.buscar_bing(consulta)
+    except (OSError, ValueError, A.ET.ParseError):
+        itens = []
+    for item in itens[:6]:
+        if item["link"] == fonte or not bate_com_a_campanha(c, item["titulo"]):
+            continue
+        try:
+            agencia = agencia_na_materia(c, baixar(item["link"]))
+        except (OSError, ValueError):
+            continue
+        if agencia:
+            return c["id"], agencia
+    return c["id"], ""
+
+
 def main():
     inicio = time.time()
     estado = A.ler_json(ESTADO, {})
@@ -172,20 +252,37 @@ def main():
                 log("  +", cid, "|", "; ".join("%s: %s" % (k["role"], k["name"][:40]) for k in res[:4]))
     estado["tentadas"] = sorted(feitas)
     A.salvar_json(ESTADO, estado)
-    json.dump(achados, open(ACHADOS, "w", encoding="utf-8"), ensure_ascii=False)
     log("Com ficha técnica:", len(achados), "de", len(alvo))
+    ontem = (dt.datetime.now(A.TZ).date() - dt.timedelta(days=1)).isoformat()
+    sem_agencia = [
+        dict(c, credits=c.get("credits") or c.get("ficha") or achados.get(c["id"], []))
+        for c in camp if c.get("date", "") >= ontem and c.get("brand") and c.get("title")
+        and not c.get("hidden") and not (c.get("agency") or "").strip()
+    ][:20]
+    with cf.ThreadPoolExecutor(8) as ex:
+        agencias = {cid: nome for cid, nome in ex.map(procurar_agencia, sem_agencia) if nome}
+    log("Agências encontradas:", len(agencias), "de", len(sem_agencia))
+    with open(ACHADOS, "w", encoding="utf-8") as f:
+        json.dump({"creditos": achados, "agencias": agencias}, f, ensure_ascii=False)
 
 
 def aplicar():
     try:
-        achados = json.load(open(ACHADOS, encoding="utf-8"))
+        with open(ACHADOS, encoding="utf-8") as f:
+            resultado = json.load(f)
     except (OSError, ValueError):
         return
     camp = A.ler_json(A.CAMP, [])
+    achados = resultado.get("creditos", {})
+    agencias = resultado.get("agencias", {})
     n = 0
     for c in camp:
-        if c.get("id") in achados and not c.get("credits"):
-            c["credits"] = achados[c["id"]]
+        cid = c.get("id")
+        if cid in achados and not c.get("credits"):
+            c["credits"] = achados[cid]
+            n += 1
+        if cid in agencias and not (c.get("agency") or "").strip():
+            c["agency"] = agencias[cid]
             n += 1
     if n:
         A.salvar_json(A.CAMP, camp)
