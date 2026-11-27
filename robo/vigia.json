@@ -45,11 +45,11 @@
       "mod": "Thu, 26 Nov 2026 23:52:28 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Fri, 27 Nov 2026 00:32:50 GMT"
+      "mod": "Fri, 27 Nov 2026 00:34:36 GMT"
     },
     "https://mumbrella.com.au/feed/": {
-      "etag": "\"e830557a7667d3104eab5d8af4e6713d\"",
-      "mod": "Fri, 27 Nov 2026 00:29:08 GMT"
+      "etag": "\"1bd83688088e2f72b85e3bbf40a63efc\"",
+      "mod": "Fri, 27 Nov 2026 00:33:16 GMT"
     },
     "https://www.cbnews.fr/rss.xml": {
       "etag": "W/\"1795718585-gzip\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Fri, 27 Nov 2026 00:32:52 GMT"
+      "mod": "Fri, 27 Nov 2026 00:34:53 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"c057f342b276db91b6277d58df0fded9-gzip\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Fri, 27 Nov 2026 00:32:15 GMT"
+      "mod": "Fri, 27 Nov 2026 00:34:54 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -249,7 +249,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Fri, 27 Nov 2026 00:23:55 GMT"
+      "mod": "Fri, 27 Nov 2026 00:34:56 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -294,7 +294,7 @@
       "mod": "Thu, 26 Nov 2026 11:12:36 GMT"
     },
     "https://www.bandt.com.au/feed/": {
-      "mod": "Fri, 27 Nov 2026 00:32:31 GMT"
+      "mod": "Fri, 27 Nov 2026 00:34:27 GMT"
     },
     "https://thestable.com.au/feed/": {
       "etag": "\"cb0129736097f1fa0866b81283e6081b\"",
@@ -316,7 +316,7 @@
       "mod": "Thu, 26 Nov 2026 17:16:20 GMT"
     }
   },
-  "yt_pos": 93,
+  "yt_pos": 153,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1164,7 +1164,7 @@
       "Crispin": "crispinagency"
     },
     "tentadas": {},
-    "pos": 2151,
+    "pos": 2157,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1674,7 +1674,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 3330,
+    "rodadas": 3332,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3448,7 +3448,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 552,
+    "pos_quente": 554,
     "lida": {
       "droga5sp": "2026-11-26T23:21:48.002789+00:00",
       "mboothagency": "2026-11-27T00:11:48.258784+00:00",
@@ -3531,13 +3531,13 @@
       "serviceplan": "2026-11-27T00:07:47.564226+00:00",
       "mhaconsulting_": "2026-11-26T15:57:36.828876+00:00",
       "bearmeetseagleonfire": "2026-11-27T00:08:48.084849+00:00",
-      "infosol_": "2026-11-26T15:58:37.033203+00:00",
+      "infosol_": "2026-11-27T00:33:47.710856+00:00",
       "dpzoficial": "2026-11-27T00:09:47.648065+00:00",
       "mosaicomedia": "2026-11-26T15:59:37.284078+00:00",
       "klick.health": "2026-11-26T20:00:48.393074+00:00",
       "behaveagency": "2026-11-26T16:00:36.784940+00:00",
       "wearevccp": "2026-11-27T00:10:47.712218+00:00",
-      "cbimarket": "2026-11-26T16:01:36.522685+00:00",
+      "cbimarket": "2026-11-27T00:34:48.106876+00:00",
       "crispin": "2026-11-26T20:11:48.293263+00:00",
       "clockworkagency": "2026-11-26T16:02:37.280500+00:00",
       "thecommunityagency": "2026-11-27T00:11:48.258784+00:00",
@@ -3580,7 +3580,7 @@
       "huia.ag": "2026-11-26T16:24:37.168293+00:00",
       "mojosupermarket": "2026-11-27T00:32:48.112994+00:00",
       "sherlockcomms": "2026-11-26T16:25:36.925954+00:00",
-      "agenciatechandsoul": "2026-11-26T22:48:48.260764+00:00",
+      "agenciatechandsoul": "2026-11-27T00:33:47.710856+00:00",
       "barcodigital": "2026-11-26T16:26:37.020199+00:00",
       "anacouto.ag": "2026-11-26T22:50:48.324952+00:00",
       "estacaoindoor": "2026-11-26T23:25:47.475358+00:00",
@@ -3847,7 +3847,7 @@
       "rpa_advertising": "2026-11-26T21:38:48.159875+00:00",
       "jotapontoag": "2026-11-26T21:41:48.251524+00:00",
       "mynd": "2026-11-26T21:42:47.493644+00:00",
-      "squid.creators": "2026-11-26T22:49:47.847876+00:00",
+      "squid.creators": "2026-11-27T00:34:48.106876+00:00",
       "agencia_ginga": "2026-11-26T21:44:48.344355+00:00",
       "tatil_design": "2026-11-26T21:45:47.690488+00:00",
       "druid.creative": "2026-11-26T21:47:48.204948+00:00",
@@ -4046,7 +4046,7 @@
       "serviceplan": "2026-11-26",
       "mhaconsulting_": "2026-08-13",
       "bearmeetseagleonfire": "2026-11-22",
-      "infosol_": "2026-11-25",
+      "infosol_": "2026-11-26",
       "dpzoficial": "2026-11-17",
       "mosaicomedia": "2023-09-16",
       "klick.health": "2026-11-25",
@@ -4723,8 +4723,9 @@
     "https://campaignbrief.com/freelance-creative-lachlan-collie-launches-yuletube-a-home-for-the-worlds-christmas-ads",
     "https://www.merca20.com/cuando-las-marcas-convierten-sus-archivos-publicitarios-en-activos-creativos",
     "https://campaignbrief.co.nz/2026/11/27/freelance-creative-lachlan-collie-launches-yuletube-a-home-for-the-worlds-christmas-ads",
-    "https://mumbrella.com.au/key-pharmaceuticals-launches-anti-smoking-pill-cyventine-in-new-campaign-from-72-and-sunny-946312"
+    "https://mumbrella.com.au/key-pharmaceuticals-launches-anti-smoking-pill-cyventine-in-new-campaign-from-72-and-sunny-946312",
+    "https://www.mediaweek.com.au/agencies/72andsunny-sydney-launches-25-day-quit-smoking-campaign-for-cyventine"
   ],
-  "ultima_rodada": "2026-11-27T00:32:48.112994+00:00",
-  "ultima_novidade": "2026-11-27T00:17:48.040936+00:00"
+  "ultima_rodada": "2026-11-27T00:34:48.106876+00:00",
+  "ultima_novidade": "2026-11-27T00:34:48.106876+00:00"
 }
