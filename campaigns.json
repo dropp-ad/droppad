@@ -23,7 +23,8 @@
         "summary": "La tecnología tiene miles de funciones. Nosotros encontramos la más importante: conectar con las personas.",
         "ok": 2
       }
-    }
+    },
+    "igm": []
   },
   {
     "id": "2026-11-26-bureau-clara-wichman-bureau-clara-wichmann-turns-linkedin",
@@ -10548,7 +10549,11 @@
         "summary": "¡Estamos agregando algunos caballos de fuerza al Astillero!",
         "ok": 2
       }
-    }
+    },
+    "igm": [
+      54,
+      225
+    ]
   },
   {
     "id": "2026-11-18-morana-by-now-you-ve-probably-heard-that-ep",
@@ -10574,7 +10579,11 @@
         "summary": "Probablemente hayas oído que EP+Co se ha unido a Bond Brand Loyalty.",
         "ok": 2
       }
-    }
+    },
+    "igm": [
+      54,
+      533
+    ]
   },
   {
     "id": "2026-11-18-very-there-is-nobody-at-jung-von-matt-who",
