@@ -289,8 +289,15 @@ PLATAFORMAS = {"meta", "google", "facebook", "instagram", "tiktok", "linkedin", 
                "pinterest", "snapchat", "amazon ads", "google ads", "meta ads", "threads", "reddit", "ai", "ia"}
 
 
+# notícia de negócio (patrocínio, parceria, evento do mercado) sem falar de peça no título
+NEGOCIO_TIT = re.compile(r"\b(industry\s+leaders|official\s+(?:\w+\s+)?(?:partner|sponsor)|teams\s+up\s+with|partners\s+with|"
+                         r"brings\s+.{3,40}\s+together|patrocinador\s+oficial|parceria\s+com|alian[çz]a\s+con|patrocinador\s+oficial)\b", re.I)
+
+
 def parece_campanha(titulo, resumo="", so_campanhas=False):
     if EXCLUI.search(titulo) or PERGUNTA.search(titulo.strip()) or CONTEUDO_TIT.search(titulo) or PROMO.search(titulo):
+        return False
+    if NEGOCIO_TIT.search(titulo) and not TEM_PECA.search(titulo):
         return False
     if so_campanhas:
         return True

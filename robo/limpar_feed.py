@@ -38,7 +38,7 @@ def motivo(c):
     if src.startswith("LinkedIn") and not (c.get("yt") or c.get("video") or c.get("images")
                                            or ("static.licdn.com" not in (c.get("image") or "") and c.get("image"))):
         return "LinkedIn sem filme nem imagem"
-    if not social and (A.CONTEUDO_TIT.search(t) or A.PROMO.search(t)):
+    if not social and (A.CONTEUDO_TIT.search(t) or A.PROMO.search(t) or (A.NEGOCIO_TIT.search(t) and not A.TEM_PECA.search(t))):
         return "título de não-campanha"
     return ""
 
