@@ -103,7 +103,7 @@ def candidatas(camp, postados):
     out = []
 
     for c in camp:
-        if c.get("id") in postados:
+        if c.get("hidden") or c.get("id") in postados:
             continue
 
         if not c.get("brand") or not c.get("agency"):

@@ -1068,7 +1068,8 @@ HASHTAG = re.compile(r"(?:^|\s)#\w+")
 INSTITUCIONAL = re.compile(r"\b(thankful|thanksgiving|grateful|gratid[aã]o|happy holidays|feliz natal|boas festas|our (team|people|office|family)|"
                            r"nosso time|nossa equipe|meet the (people|team)|meet our|conhe[cç]a (o )?nosso|conhe[cç]a (a )?nossa|we'?re hiring|"
                            r"estamos contratando|vagas|anniversary|anivers[aá]rio|birthday|tbt|throwback|reflects on|portfolio night|is a wrap|"
-                           r"year in review|retrospectiva|first year|primeiro ano)\b", re.I)
+                           r"year in review|retrospectiva|first year|primeiro ano|"
+                           r"inova[çc][aã]o acontece quando (?:as )?pessoas (?:certas )?se encontram)\b", re.I)
 # post de comemoração da agência (novos clientes, crescimento, foto do time): vale para a legenda toda
 COMEMORACAO = re.compile(r"\b("
                            r"nov[oa]s\s+clientes|nuev[oa]s\s+clientes|new\s+clients?|new\s+business|"
@@ -1086,6 +1087,17 @@ EVENTO = re.compile(r"\b((?:great|amazing|wonderful|fantastic|incredible|unforge
                     r"conversation\s+(?:about|on|with)|conversa\s+sobre|"
                     r"future\s+of\s+commerce|celebrating\s+the\s+future)\b", re.I)
 TEM_PECA = re.compile(r"\b(campaign|campanha|campaña|film|filme|spot|commercial|comercial|anúncio|ad)\b", re.I)
+CLIPE_MUSICAL = re.compile(r"\b(music video|videoclipe|clipe musical)\b", re.I)
+REFERENCIA_PUBLICITARIA = re.compile(r"\b(campaign|campanha|campaña|commercial|comercial|brand film|advert(?:isement)?|branded)\b", re.I)
+VENDA_INGRESSOS = re.compile(r"\b(?:presale|pre-sale|ticket sales|tickets on sale|acesso antecipado aos ingressos|venda de ingressos|pré-venda)\b", re.I)
+SHOW_MUSICAL = re.compile(r"\b(?:concert|tour|residency|turnê|concerto|banda|band|arena|show)\b", re.I)
+
+
+def entretenimento_fora_do_feed(texto):
+    return bool(
+        (CLIPE_MUSICAL.search(texto) and not REFERENCIA_PUBLICITARIA.search(texto))
+        or (VENDA_INGRESSOS.search(texto) and SHOW_MUSICAL.search(texto))
+    )
 
 
 def ler_instagram(fontes, vigia, dias=JANELA_DIAS):
@@ -1594,6 +1606,10 @@ def main():
         titulo = it["titulo"]
         resumo_txt = limpar(it["resumo"]) or limpar(desc) or limpar(it["corpo"])
         texto = f"{titulo}. {resumo_txt}. {limpar(it['corpo'])[:1500]}"
+        if f.get("pagina_reviews"):
+            contexto = " ".join((texto, *hist, limpar(corpo_da_materia(it.get("pagina", "")))[:3500]))
+            if entretenimento_fora_do_feed(contexto):
+                continue
         marca = marca_de(titulo)
         if not marca:
             continue  # sem marca identificável, provavelmente não é campanha
@@ -1670,6 +1686,11 @@ def main():
                     log("  ▶ filme achado antes de publicar:", c["brand"], "|", c["title"][:70])
             except Exception as e:  # noqa: BLE001
                 log("  busca de filme falhou:", c["id"], e)
+
+    # Reviews editoriais só entram com a peça em vídeo, após a busca pelo filme.
+    fontes_reviews = {f["nome"] for f in fontes.get("sites", []) if f.get("pagina_reviews")}
+    if not SIMULAR:
+        novas = [c for c in novas if c["source"] not in fontes_reviews or c.get("yt") or c.get("video")]
 
     # 8) salva
     if SIMULAR:
