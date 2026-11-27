@@ -220,6 +220,7 @@
     "Ler mais": ["Read more", "Leer más", "Lire plus", "Mehr lesen", "Leggi di più", "Lees meer", "続きを読む", "더 읽기", "阅读更多"],
     "Ler a matéria em {s}": ["Read the story on {s}", "Leer la nota en {s}", "Lire l'article sur {s}", "Artikel auf {s} lesen", "Leggi l'articolo su {s}", "Lees het artikel op {s}", "{s}で記事を読む", "{s}에서 기사 보기", "在 {s} 阅读"],
     "Ler em {s} ↗": ["Read on {s} ↗", "Leer en {s} ↗", "Lire sur {s} ↗", "Auf {s} lesen ↗", "Leggi su {s} ↗", "Lees op {s} ↗", "{s}で読む ↗", "{s}에서 보기 ↗", "在 {s} 阅读 ↗"],
+    "Tela cheia": ["Full screen", "Pantalla completa", "Plein écran", "Vollbild", "Schermo intero", "Volledig scherm", "全画面", "전체 화면", "全屏"],
     "Abrir no Instagram ↗": ["Open on Instagram ↗", "Abrir en Instagram ↗", "Ouvrir sur Instagram ↗", "Auf Instagram öffnen ↗", "Apri su Instagram ↗", "Openen op Instagram ↗", "Instagramで開く ↗", "인스타그램에서 열기 ↗", "在 Instagram 打开 ↗"],
     "Ver matéria ↗": ["Read story ↗", "Ver nota ↗", "Voir l'article ↗", "Zum Artikel ↗", "Vedi articolo ↗", "Bekijk artikel ↗", "記事を見る ↗", "기사 보기 ↗", "查看报道 ↗"],
     " para ": [" for ", " para ", " pour ", " für ", " per ", " voor ", " × ", " × ", " × "],
@@ -709,6 +710,15 @@
       var bar = el("div", "bar");
       bar.appendChild(el("i"));
       media.appendChild(bar);
+      // tela cheia própria para filme que não é do YouTube (Vimeo, Instagram, TikTok): o YouTube já tem a dele
+      if (c.fl.some(function (f) { return f.kind !== "yt"; })) {
+        var fsb = el("button", "fsbtn");
+        fsb.type = "button";
+        fsb.setAttribute("aria-label", tr("Tela cheia"));
+        fsb.innerHTML = ICON_FS;
+        fsb.addEventListener("click", function (e) { e.stopPropagation(); fsb.blur(); alternarTelaCheia(art); });
+        media.appendChild(fsb);
+      }
       if (c.fl.length > 1) {
         var dots = el("div", "fdots");
         c.fl.forEach(function (f, i) {
@@ -834,6 +844,7 @@
 
   /* ---------- Compartilhar: link que abre direto na campanha ---------- */
   var ICON_SHARE = '<svg viewBox="0 0 24 24" aria-hidden="true" stroke-linejoin="miter"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>';
+  var ICON_FS = '<svg class="i-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>';
   var ICON_CMT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v13H9l-6 4z"/></svg>';
   var ICON_SND = '<svg class="i-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><svg class="i-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
   // link para compartilhar: a página própria da campanha (aparece no Google e gera a prévia com imagem no
@@ -1539,7 +1550,37 @@
   // muda de tamanho e o observador acha que o filme saiu da tela, e aí ele parava. Enquanto estiver em
   // tela cheia, e por um instante depois de girar ou sair dela, ninguém troca nem para o filme.
   var travadoAte = 0;
-  function emTelaCheia() { return !!(document.fullscreenElement || document.webkitFullscreenElement); }
+  var fsArt = null; // post em tela cheia pelo botão próprio
+  function emTelaCheia() { return !!(fsArt || document.fullscreenElement || document.webkitFullscreenElement); }
+  function alternarTelaCheia(art) {
+    if (fsArt) { sairTelaCheia(); return; }
+    fsArt = art;
+    art.classList.add("fs-on");
+    document.documentElement.classList.add("fs-trava");
+    if (!(active && active.art === art)) activate(art, true);
+    var m = art._media || art.querySelector(".media");
+    var req = m && (m.requestFullscreen || m.webkitRequestFullscreen);
+    if (req) { try { var r = req.call(m); if (r && r.catch) r.catch(function () {}); } catch (e) { /* iPhone: fica o quadro cobrindo a tela */ } }
+    if (art.classList.contains("is-ig")) fitIG(m);
+    travadoAte = Date.now() + 1800;
+  }
+  function sairTelaCheia() {
+    var art = fsArt;
+    fsArt = null;
+    if (!art) return;
+    art.classList.remove("fs-on");
+    document.documentElement.classList.remove("fs-trava");
+    if (document.fullscreenElement || document.webkitFullscreenElement) {
+      try { (document.exitFullscreen || document.webkitExitFullscreen).call(document); } catch (e) { /* nada */ }
+    }
+    if (art.classList.contains("is-ig")) fitIG(art._media);
+    segurarFilme();
+  }
+  // saiu da tela cheia pelo próprio navegador (gesto, tecla Esc): desfaz o quadro também
+  function aoSairDoNavegador() { if (fsArt && !(document.fullscreenElement || document.webkitFullscreenElement)) sairTelaCheia(); }
+  document.addEventListener("fullscreenchange", aoSairDoNavegador);
+  document.addEventListener("webkitfullscreenchange", aoSairDoNavegador);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && fsArt) sairTelaCheia(); });
   function segurarFilme() {
     travadoAte = Date.now() + 1800;
     if (emTelaCheia()) return;
@@ -1569,9 +1610,8 @@
     ratios.forEach(function (r, m) { if (r > br) { br = r; best = m._art; } });
     if (best && br >= 0.6) {
       if (active && active.art === best) return;
-      // filme não toca sozinho: só começa quando a pessoa clica; rolar para outro post para o que tocava
-      if (best._c.fl.length) { if (active) deactivate(); paintChrome(best); }
-      else activate(best, false);
+      // o filme começa sozinho (sem som) quando o post para no centro da tela; rolar para outro post para o que tocava
+      activate(best, false);
     }
     else if (active && (ratios.get(active.art._media) || 0) < 0.3) deactivate();
   }
