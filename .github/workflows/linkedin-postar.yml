@@ -5,9 +5,6 @@ name: Postar no LinkedIn
 # Para pausar: Actions → "Postar no LinkedIn" → ⋯ → Disable workflow.
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: [.github/workflows/linkedin-postar.yml]
   schedule:
     - cron: "7,37 * * * *"
 
@@ -20,42 +17,17 @@ concurrency:
 
 jobs:
   postar:
-    if: github.event_name != 'push' || github.event.head_commit.message == 'Envia Ford e OpenAI ao LinkedIn'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Postar
-        if: github.event_name != 'push'
         env:
           LINKEDIN_WEBHOOK: ${{ secrets.LINKEDIN_WEBHOOK }}
         run: python robo/linkedin_postar.py
-      - name: Enviar Ford e OpenAI
-        if: github.event_name == 'push'
-        env:
-          LINKEDIN_WEBHOOK: ${{ secrets.LINKEDIN_WEBHOOK }}
-          POSTS_POR_RODADA: '2'
-        run: |
-          PYTHONPATH=robo python - <<'PY'
-          import linkedin_postar as bot
-
-          ids = {
-              "2026-11-27-ford-zack-snyder-dirige-e-matt-damon-narr",
-              "2026-11-27-openai-openai-aposta-no-jeito-brasileiro-de",
-          }
-          candidatas = bot.candidatas
-
-          def filtrar(campanhas, postados):
-              return candidatas([c for c in campanhas if c.get("id") in ids], postados)
-
-          bot.candidatas = filtrar
-          bot.main()
-          PY
       - name: Guardar o que já foi postado
         run: |
           git config user.name "droppad robô"
@@ -65,9 +37,8 @@ jobs:
             git diff --cached --quiet && exit 0
             git commit -q -m "LinkedIn: campanhas postadas ($(TZ=America/Sao_Paulo date '+%F %H:%M'), robô)"
             git push -q origin HEAD:main && exit 0
+            git reset -q --soft HEAD~1
             cp robo/linkedin_postar.json /tmp/lp.json
-            git fetch -q origin main
-            git reset -q --hard origin/main
+            git stash -q; git pull -q --rebase origin main; git stash drop -q || true
             cp /tmp/lp.json robo/linkedin_postar.json
           done
-          exit 1
