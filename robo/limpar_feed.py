@@ -51,11 +51,13 @@ def main():
     fora = [(c, m) for c, m in fora if m]
     for c, m in fora:
         print("%s | %-24s | %-55s | %s" % (c["date"], (c.get("source") or "")[:24], c["title"][:55], m))
-    print("%d de %d saem" % (len(fora), len(camp)))
-    if teste or not fora:
-        return
     ids = {c["id"] for c, _ in fora}
     novo = [c for c in camp if c["id"] not in ids]
+    antes = len(novo)
+    novo = A.deduplicar(novo)
+    print("%d de %d saem pelos filtros; %d repetidas juntadas" % (len(fora), len(camp), antes - len(novo)))
+    if teste or len(novo) == len(camp):
+        return
     with open(caminho, "w", encoding="utf-8") as f:
         f.write(json.dumps(novo, ensure_ascii=False, indent=2) + "\n")
     nov = os.path.join(RAIZ, "novidades.json")

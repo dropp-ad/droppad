@@ -109,7 +109,88 @@ def ler_json(p, padrao):
         return padrao
 
 
+# ---------------------------------------------------------------- campanha repetida
+# A mesma campanha chega por várias fontes (post da agência, Clube de Criação, veículos em línguas
+# diferentes). Antes de gravar, junta as repetidas e fica com a melhor versão (a que tem filme).
+PALAVRA_COMUM = set("""about after against agency ahead also and anos ante apos aqui assim being brand campaign campaigns campanha
+campanhas campaña campañas cria criada criado com como contra creative dela dele delas depois desde does donde during esta este
+este esto from have into isso just lanca lança lançou launch launched launches made marca mais make makes mas meio muito nesta
+neste nova novas novo nuevo nueva onde other para pela pelo pelos pelas por porque sobre sua suas such than that their them then
+there these they this through todo todos uma uns very week what when where which while with without your film filme comercial
+spot video vídeo anuncio anúncio ad ads new latest natal navidad noel christmas holiday holidays festive black friday
+cyber verao verano summer 2025 2026 2027 novembro noviembre november dezembro diciembre december celebra casa home dia day""".split())
+
+
+def _palavras(c):
+    t = sem_acento(((c.get("title") or "") + " " + (c.get("summary") or "")[:300]).lower()).replace("'", "").replace("’", "")
+    marca = set(re.findall(r"\w+", sem_acento((c.get("brand") or "").lower().replace("'", "").replace("’", ""))))
+    ag = set(re.findall(r"\w+", sem_acento((c.get("agency") or "").lower())))
+    return {w for w in re.findall(r"[a-z0-9][a-z0-9'-]{3,}", t) if w not in PALAVRA_COMUM and w not in marca and w not in ag}
+
+
+def _filmes(c):
+    return set(c.get("yt") or []) | ({c["video"]} if c.get("video") else set())
+
+
+def mesma_campanha(a, b):
+    try:
+        dias = abs((dt.date.fromisoformat(a["date"]) - dt.date.fromisoformat(b["date"])).days)
+    except (KeyError, ValueError):
+        return False
+    if dias > 7:
+        return False
+    if _filmes(a) & _filmes(b):
+        return True
+    ka, kb = chave(a.get("brand", "")), chave(b.get("brand", ""))
+    if len(ka) < 2 or len(kb) < 2:
+        return False
+    ta = chave((a.get("title") or "") + " " + (a.get("summary") or "")[:300])
+    tb = chave((b.get("title") or "") + " " + (b.get("summary") or "")[:300])
+    marca = ka == kb or (len(min(ka, kb, key=len)) >= 4 and (ka in kb or kb in ka)) or (len(ka) >= 5 and ka in tb) or (len(kb) >= 5 and kb in ta)
+    if not marca:
+        return False
+    ga, gb = chave(a.get("agency", "")), chave(b.get("agency", ""))
+    comum = len(_palavras(a) & _palavras(b))
+    if ga and ga == gb and a.get("source") != b.get("source") and (comum >= 1 or dias <= 2):
+        return True  # mesma marca e mesma agência, vinda de outra fonte, com algo em comum ou quase no mesmo dia
+    return comum >= 2
+
+
+def _qualidade(c):
+    return (bool(c.get("yt") or c.get("video")), bool(c.get("image") or c.get("images")), bool(c.get("agency")),
+            not str(c.get("source", "")).startswith("LinkedIn"))
+
+
+def deduplicar(camp, dias=14):
+    """Tira campanhas repetidas das últimas semanas; fica a melhor, com a data de estreia mais antiga."""
+    if not camp:
+        return camp
+    limite = (dt.date.today() - dt.timedelta(days=dias)).isoformat()
+    recentes = [c for c in camp if c.get("date", "") >= limite and not c.get("hidden")]
+    fora = set()
+    for i, a in enumerate(recentes):
+        if a["id"] in fora:
+            continue
+        for b in recentes[i + 1:]:
+            if b["id"] in fora or not mesma_campanha(a, b):
+                continue
+            boa, ruim = (a, b) if _qualidade(a) >= _qualidade(b) else (b, a)
+            boa["date"] = min(a["date"], b["date"])
+            if not boa.get("agency") and ruim.get("agency"):
+                boa["agency"] = ruim["agency"]
+            # filmes diferentes da mesma campanha (ex.: série de filmes) ficam juntos no post que fica
+            extra = [y for y in (ruim.get("yt") or []) if y not in (boa.get("yt") or [])]
+            if extra and (boa.get("yt") or not boa.get("video")):
+                boa["yt"] = ((boa.get("yt") or []) + extra)[:4]
+            fora.add(ruim["id"])
+            if ruim is a:
+                break
+    return [c for c in camp if c.get("id") not in fora]
+
+
 def salvar_json(p, obj):
+    if p == CAMP and isinstance(obj, list):
+        obj[:] = deduplicar(obj)
     with open(p, "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
         f.write("\n")
@@ -1435,6 +1516,21 @@ def main():
     txs = 0 if SIMULAR or RAPIDO else completar_textos(camp, estado)
     log("Textos completos para resumos cortados:", txs)
     capas += txs
+
+    # 7b) antes de publicar só com imagem, procura o filme (na matéria, no YouTube, em outras matérias)
+    sem_filme = [c for c in novas if not c.get("yt") and not c.get("video")]
+    if sem_filme and not SIMULAR:
+        import time  # noqa: PLC0415
+        import midia  # noqa: PLC0415  (fica ao lado deste arquivo)
+        fim = time.time() + int(os.environ.get("BUSCA_FILME_SEG", "70"))
+        for c in sem_filme:
+            if time.time() > fim:
+                break
+            try:
+                if midia.completar(c).get("yt") or c.get("video"):
+                    log("  ▶ filme achado antes de publicar:", c["brand"], "|", c["title"][:70])
+            except Exception as e:  # noqa: BLE001
+                log("  busca de filme falhou:", c["id"], e)
 
     # 8) salva
     if SIMULAR:

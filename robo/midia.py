@@ -259,8 +259,9 @@ def main():
     camp = A.ler_json(A.CAMP, [])
     # sem filme e sem imagem; e as do LinkedIn mesmo com imagem: o vídeo do post não toca no site, então
     # procura o filme (YouTube, matérias) pelo título — o link do post continua sendo o do LinkedIn
+    # toda campanha recente sem filme, mesmo com imagem: o filme vem antes da imagem, e pode estar em
+    # outra matéria ou no YouTube da marca/agência
     alvo = [c for c in camp if c.get("date", "") >= limite and not c.get("yt") and not c.get("video")
-            and (not (c.get("image") or c.get("images")) or str(c.get("source", "")).startswith("LinkedIn"))
             and not c.get("hidden") and tent.get(c["id"], 0) < MAX_TENTATIVAS]
     alvo.sort(key=lambda c: (tent.get(c["id"], 0), c.get("date", "")), reverse=False)
     alvo = sorted(alvo[:POR_RODADA], key=lambda c: c.get("date", ""), reverse=True)
