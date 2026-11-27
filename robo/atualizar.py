@@ -146,11 +146,17 @@ def mesma_campanha(a, b):
         return False
     ta = chave((a.get("title") or "") + " " + (a.get("summary") or "")[:300])
     tb = chave((b.get("title") or "") + " " + (b.get("summary") or "")[:300])
-    marca = ka == kb or (len(min(ka, kb, key=len)) >= 4 and (ka in kb or kb in ka)) or (len(ka) >= 5 and ka in tb) or (len(kb) >= 5 and kb in ta)
+    ga, gb = chave(a.get("agency", "")), chave(b.get("agency", ""))
+    plat = {chave(x) for x in PLATAFORMAS}
+    # a marca de um citada no texto do outro só vale se não for plataforma nem, na verdade, o nome da agência
+    pelo_texto = (len(ka) >= 5 and ka in tb and ka not in plat and ka != gb) or (len(kb) >= 5 and kb in ta and kb not in plat and kb != ga)
+    marca = ka == kb or (len(min(ka, kb, key=len)) >= 4 and (ka in kb or kb in ka)) or pelo_texto
     if not marca:
         return False
-    ga, gb = chave(a.get("agency", "")), chave(b.get("agency", ""))
     comum = len(_palavras(a) & _palavras(b))
+    # a agência de um aparece no texto do outro ("…campanha da 72andSunny" x post da 72andSunny), em até 3 dias
+    if dias <= 3 and ((len(ga) >= 4 and ga in tb) or (len(gb) >= 4 and gb in ta)):
+        return True
     if ga and ga == gb and a.get("source") != b.get("source") and (comum >= 1 or dias <= 2):
         return True  # mesma marca e mesma agência, vinda de outra fonte, com algo em comum ou quase no mesmo dia
     return comum >= 2
