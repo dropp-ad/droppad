@@ -599,7 +599,7 @@
       ],
       "regiao": "EUA",
       "cc": "US",
-      "so_campanhas": true
+      "so_campanhas": false
     },
     {
       "nome": "The Inspiration Room",
@@ -617,7 +617,7 @@
       ],
       "regiao": "Oriente Médio",
       "cc": "AE",
-      "so_campanhas": true
+      "so_campanhas": false
     },
     {
       "nome": "adobo Magazine",
@@ -626,7 +626,7 @@
       ],
       "regiao": "Filipinas",
       "cc": "PH",
-      "so_campanhas": true
+      "so_campanhas": false
     },
     {
       "nome": "Ad Age",
@@ -636,7 +636,7 @@
       ],
       "regiao": "EUA",
       "cc": "US",
-      "so_campanhas": true
+      "so_campanhas": false
     },
     {
       "nome": "Campaign UK",
@@ -646,7 +646,7 @@
       ],
       "regiao": "Reino Unido",
       "cc": "GB",
-      "so_campanhas": true
+      "so_campanhas": false
     },
     {
       "nome": "AdNews",
@@ -656,7 +656,7 @@
       ],
       "regiao": "Austrália",
       "cc": "AU",
-      "so_campanhas": true
+      "so_campanhas": false
     },
     {
       "nome": "Horizont",
@@ -666,7 +666,7 @@
       ],
       "regiao": "Alemanha",
       "cc": "DE",
-      "so_campanhas": true
+      "so_campanhas": false
     },
     {
       "nome": "W&V",
@@ -676,7 +676,7 @@
       ],
       "regiao": "Alemanha",
       "cc": "DE",
-      "so_campanhas": true
+      "so_campanhas": false
     },
     {
       "nome": "Stratégies",
@@ -686,7 +686,7 @@
       ],
       "regiao": "França",
       "cc": "FR",
-      "so_campanhas": true
+      "so_campanhas": false
     }
   ],
   "buscas": [

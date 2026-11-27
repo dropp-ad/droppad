@@ -16,8 +16,17 @@ RAIZ = os.path.dirname(AQUI)
 CURADORIAS = ("LinkedIn · Rian Swart", "LinkedIn · Clube", "Clube de Criação")
 
 
+# veículos gerais de marketing incluídos em 27/11/2026: só vale matéria com palavra de campanha no título
+GERAIS = {"Adweek", "Campaign Middle East", "adobo Magazine", "Ad Age", "Campaign UK", "AdNews", "Horizont", "W&V", "Stratégies"}
+FEEDS = {f["nome"]: f for f in A.ler_json(A.FONTES, {}).get("feeds", []) if f["nome"] in GERAIS}
+
+
 def motivo(c):
     src = c.get("source") or ""
+    fo = FEEDS.get(src)
+    if fo and not A.parece_campanha(c.get("title") or "", "", fo.get("so_campanhas")) \
+            and (c.get("date") or "") >= (A.HOJE - A.dt.timedelta(days=7)).isoformat() and not (c.get("yt") or c.get("video")):
+        return "matéria de veículo sem cara de campanha"
     if src.startswith("LinkedIn") and not (c.get("yt") or c.get("video") or c.get("images")
                                            or ("static.licdn.com" not in (c.get("image") or "") and c.get("image"))):
         return "LinkedIn sem filme nem imagem"

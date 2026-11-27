@@ -226,7 +226,7 @@ def primeira_frase(s, n=240):
 
 # ---------------------------------------------------------------- filtro
 FORTE = re.compile(r"""(\bcampaign|\bcampanha|\bcampaña|\bcampagne|\bkampagne|\bcampagna|\bads?\b|\badvert|\bspots?\b|\btvc\b|
-    \bcommercials?\b|\bcomerciais\b|\bcomercial\b|\bfilme\b|\bfilm\b|\banúncio|\banuncio|\bpublicidade|\bpublicitári|\bpublicitari|
+    \bcommercials?\b|\bcomerciais\b|\bcomercial\b|\bfilme\b|\bfilm\b|\bwerbespot|\bwerbefilm|\bpublicit[ée]|\banúncio|\banuncio|\bpublicidade|\bpublicitári|\bpublicitari|
     \bactivation|\bativação|\bactivación|\bbrand\s+film|\bnew\s+work\b|\bjingle|\bmanifesto|\bmanifiesto|\bwerbung|\bpub\b|\bstunt\b|\bOOH\b)""", re.I | re.X)
 EXCLUI = re.compile(r"""\b(award|awards|winners?|shortlist|jury|júri|jurado|prêmio|premio|premiação|premiados|effie|lions|
     appoint(s|ed|ment)?|hires?|hired|promot(es|ed|ion)|joins|named|contrata|contratação|nomeia|nomeado|assume|ficha|nombra|nombramiento|
@@ -279,7 +279,7 @@ PROMO = re.compile(r"\b((?:campanha|a[çc][aã]o|a[çc][oõ]es|campaña|promo[ç
 # no título de matéria, só o que é claramente dica de marketing (título de campanha pode ter "How to", "guia"...)
 CONTEUDO_TIT = re.compile(r"\b((?:linkedin|google|meta|facebook|instagram|tiktok|paid)\s+ads\s+(?:for|might|are|is|para)|"
                           r"why\s+your\s+(?:ads|pages|campaigns)|your\s+(?:linkedin\s+|google\s+|meta\s+)?ads\s+might|seus\s+an[uú]ncios|"
-                          r"tips|dicas|consejos|best\s+practices|boas\s+pr[aá]ticas|checklist|optimi[sz]ation|otimiza[çc][aã]o|"
+                          r"tips|tipps|dicas|consejos|conseils|astuces|best\s+practices|boas\s+pr[aá]ticas|checklist|optimi[sz]ation|otimiza[çc][aã]o|"
                           # evento de entidade/mercado e notícia de vaga
                           r"confraterniza\w*|toma\s+posse|nova\s+diretoria|happy\s+hour|homenagem\s+(?:a|à|ao|para)\s+(?:primeira|primeiro|presidente|fundador)|"
                           r"(?:abap|abracom|fenapro|sinapro|cenp)\b(?!\s+(?:lan[çc]a|estreia)\s+campanha)|contrata\s+(?:diretor|gerente|vp|head))\b", re.I)
@@ -290,7 +290,7 @@ PLATAFORMAS = {"meta", "google", "facebook", "instagram", "tiktok", "linkedin", 
 
 
 # notícia de negócio (patrocínio, parceria, evento do mercado) sem falar de peça no título
-NEGOCIO_TIT = re.compile(r"\b(industry\s+leaders|official\s+(?:\w+\s+)?(?:partner|sponsor)|teams\s+up\s+with|partners\s+with|"
+NEGOCIO_TIT = re.compile(r"\b(industry\s+leaders|official\s+(?:\w+\s+)?(?:partner|sponsor)|teams\s+up\s+with|partners\s+with|join\s+forces|partnership\s+agreement|signs?\s+(?:a\s+)?(?:deal|partnership|agreement)|"
                          r"brings\s+.{3,40}\s+together|patrocinador\s+oficial|parceria\s+com|alian[çz]a\s+con|patrocinador\s+oficial)\b", re.I)
 
 
