@@ -1,0 +1,34 @@
+name: Verificar David Reviews
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/verificar-david-reviews.yml]
+permissions:
+  contents: read
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verificar acesso e leitura de reviews
+        run: |
+          PYTHONPATH=robo python3 - <<'PY' | tee -a "$GITHUB_STEP_SUMMARY"
+          import concurrent.futures
+          import atualizar as a
+
+          url = "https://www.davidreviews.com/Reviews/"
+          try:
+              pagina = a.baixar(url, timeout=20)
+          except Exception as e:
+              print(f"Acesso à fonte: {type(e).__name__} {e}")
+              raise
+          links = a.links_reviews(url, pagina)
+          print(f"Fonte acessível. Links encontrados: {len(links)}")
+          with concurrent.futures.ThreadPoolExecutor(6) as executor:
+              for link, item in zip(links, executor.map(a.item_review, list(links)[:16])):
+                  if item:
+                      print(f"- {item['data']} | {item['titulo']} | {link}")
+                  else:
+                      print(f"- Sem metadados: {link}")
+          PY
