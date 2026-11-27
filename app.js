@@ -83,7 +83,7 @@
     }).filter(function (c) { return isDay(c.date) && c.title && !c.hidden && !foraDaRede(c) && !institucional(c); })
       .sort(function (a, b) {
         if (a.date !== b.date) return a.date < b.date ? 1 : -1;
-        if (!!a.fl.length !== !!b.fl.length) return a.fl.length ? -1 : 1; // no mesmo dia, filmes primeiro
+        // no mesmo dia, as que entraram no site por último aparecem primeiro
         return a.addedAt < b.addedAt ? 1 : a.addedAt > b.addedAt ? -1 : 0;
       });
   }
