@@ -29,7 +29,7 @@
       "falhas": 0
     },
     "Janela Publicitária": {
-      "falhas": 24
+      "falhas": 25
     },
     "Creativosbr": {
       "url": "https://creativosbr.com.br/feed/",
@@ -45,41 +45,41 @@
     },
     "Roastbrief": {
       "url": "https://roastbrief.com.mx/rss",
-      "falhas": 1
+      "falhas": 0
     },
     "Insider Latam": {
       "url": "https://insiderlatam.com/rss",
       "falhas": 0
     },
     "Adlatina": {
-      "falhas": 24
+      "falhas": 25
     },
     "Merca2.0": {
       "url": "https://www.merca20.com/feed/",
       "falhas": 0
     },
     "Revista Mercado": {
-      "falhas": 24
+      "falhas": 25
     },
     "Latinspots": {
-      "falhas": 24
+      "falhas": 25
     },
     "InformaBTL": {
       "url": "https://www.informabtl.com/feed/",
       "falhas": 0
     },
     "Reason Why": {
-      "falhas": 24
+      "falhas": 25
     },
     "Marketing Directo": {
       "url": "https://www.marketingdirecto.com/feed/",
       "falhas": 0
     },
     "PuroMarketing": {
-      "falhas": 24
+      "falhas": 25
     },
     "Control Publicidad": {
-      "falhas": 24
+      "falhas": 25
     },
     "El Publicista": {
       "url": "https://www.elpublicista.es/rss",
@@ -94,37 +94,37 @@
       "falhas": 0
     },
     "Ads of the World": {
-      "falhas": 24
+      "falhas": 25
     },
     "DesignRush News": {
-      "falhas": 24
+      "falhas": 25
     },
     "Ads of Brands": {
-      "falhas": 24
+      "falhas": 25
     },
     "ContentGrip": {
       "url": "https://www.contentgrip.com/feed/",
       "falhas": 0
     },
     "LBB Online": {
-      "falhas": 24
+      "falhas": 25
     },
     "Adworld.ie": {
       "url": "https://www.adworld.ie/feed/",
       "falhas": 0
     },
     "Creative Salon": {
-      "falhas": 24
+      "falhas": 25
     },
     "Creative Review": {
-      "falhas": 24
+      "falhas": 25
     },
     "Decision Marketing": {
       "url": "https://www.decisionmarketing.co.uk/feed/",
-      "falhas": 1
+      "falhas": 0
     },
     "Retail Gazette": {
-      "falhas": 0,
+      "falhas": 1,
       "url": "https://www.retailgazette.co.uk/feed/"
     },
     "Marketing Beat": {
@@ -136,7 +136,7 @@
       "falhas": 0
     },
     "The Drum": {
-      "falhas": 24
+      "falhas": 25
     },
     "J'ai un pote dans la com": {
       "url": "https://www.jai-un-pote-dans-la.com/feed/",
@@ -148,7 +148,7 @@
     },
     "B&T": {
       "url": "https://www.bandt.com.au/feed/",
-      "falhas": 1
+      "falhas": 0
     },
     "Mediaweek": {
       "url": "https://www.mediaweek.com.au/feed/",
@@ -160,7 +160,7 @@
     },
     "The Stable": {
       "url": "https://thestable.com.au/feed/",
-      "falhas": 1
+      "falhas": 0
     },
     "Campaign Brief": {
       "url": "https://campaignbrief.com/feed/",
@@ -175,17 +175,17 @@
       "falhas": 0
     },
     "Marketech APAC": {
-      "falhas": 24
+      "falhas": 25
     },
     "Marketing-Interactive": {
-      "falhas": 24
+      "falhas": 25
     },
     "MediaNews4U": {
       "url": "https://www.medianews4u.com/feed/",
       "falhas": 0
     },
     "Manifest Media": {
-      "falhas": 24
+      "falhas": 25
     },
     "afaqs": {
       "url": "https://www.afaqs.com/rss",
@@ -261,7 +261,7 @@
     },
     "Cohn & Jansen": {
       "url": "https://www.cohnandjansen.ro/feed/",
-      "falhas": 1
+      "falhas": 0
     },
     "Milk": {
       "url": "https://vilvigroup.lt/feed/",
@@ -273,7 +273,7 @@
     },
     "Bruketa&Žinić&Grey": {
       "url": "https://bruketa-zinic.com/feed/",
-      "falhas": 1
+      "falhas": 0
     },
     "Communis": {
       "url": "https://communis.rs/feed/",
@@ -397,7 +397,7 @@
     },
     "Anson Stoner": {
       "url": "https://ansonstoner.com/feed/",
-      "falhas": 1
+      "falhas": 0
     },
     "Chatter Buzz": {
       "url": "https://www.chatterbuzzmedia.com/blog/feed/",
@@ -418,6 +418,32 @@
     "Noble Studios": {
       "url": "https://noblestudios.com/feed/",
       "falhas": 0
+    },
+    "The Inspiration Room": {
+      "falhas": 1
+    },
+    "Campaign Middle East": {
+      "url": "https://campaignme.com/feed/",
+      "falhas": 0
+    },
+    "adobo Magazine": {
+      "url": "https://www.adobomagazine.com/feed/",
+      "falhas": 0
+    },
+    "Ad Age": {
+      "falhas": 1
+    },
+    "Campaign UK": {
+      "falhas": 1
+    },
+    "AdNews": {
+      "falhas": 1
+    },
+    "W&V": {
+      "falhas": 1
+    },
+    "Stratégies": {
+      "falhas": 1
     }
   },
   "testados": {
@@ -605,14 +631,14 @@
     "seucreditodigital.com.br": "sem-feed",
     "enquantoissoemgoias.com": "sem-feed",
     "brasilturis.com.br": "sem-feed",
-    "tiinside.com.br": "pendente",
-    "aquinoticias.com": "pendente",
-    "tribune.com.pk": "pendente",
-    "forbes.com": "pendente",
-    "sfweekly.com": "pendente",
-    "e-architect.com": "pendente",
-    "cadenadial.com": "pendente",
-    "hosteleriasalamanca.es": "pendente",
+    "tiinside.com.br": "sem-feed",
+    "aquinoticias.com": "sem-feed",
+    "tribune.com.pk": "sem-feed",
+    "forbes.com": "sem-feed",
+    "sfweekly.com": "sem-feed",
+    "e-architect.com": "sem-feed",
+    "cadenadial.com": "sem-feed",
+    "hosteleriasalamanca.es": "sem-feed",
     "lavozdealmeria.com": "pendente",
     "cronicavasca.elespanol.com": "pendente",
     "ejecentral.com.mx": "pendente",
@@ -768,7 +794,40 @@
     "quatrorodas.abril.com.br": "pendente",
     "elperiodicodearagon.com": "pendente",
     "cronicaglobal.elespanol.com": "pendente",
-    "planoinformativo.com": "pendente"
+    "planoinformativo.com": "pendente",
+    "upi.com": "pendente",
+    "commercialappeal.com": "pendente",
+    "comingsoon.net": "pendente",
+    "thaiexaminer.com": "pendente",
+    "foxnews.com": "pendente",
+    "dailycommercial.com": "pendente",
+    "palmbeachpost.com": "pendente",
+    "thesun.co.uk": "pendente",
+    "burlingtonfreepress.com": "pendente",
+    "chicagotribune.com": "pendente",
+    "aviacionline.com": "pendente",
+    "commercialobserver.com": "pendente",
+    "kcur.org": "pendente",
+    "ynetnews.com": "pendente",
+    "i24news.tv": "pendente",
+    "clevelandjewishnews.com": "pendente",
+    "ad-hoc-news.de": "pendente",
+    "forbes.com.br": "pendente",
+    "autogear.pt": "pendente",
+    "agendadopoder.com.br": "pendente",
+    "timesbrasil.com.br": "pendente",
+    "exclusivo.com.br": "pendente",
+    "eltiempo.com": "pendente",
+    "motogp.com": "pendente",
+    "proyectopuente.com.mx": "pendente",
+    "mashable.com": "pendente",
+    "kenilworth.nub.news": "pendente",
+    "lancasteronline.com": "pendente",
+    "seacoastonline.com": "pendente",
+    "owensoundcurrent.com": "pendente",
+    "townsvillebulletin.com.au": "pendente",
+    "nbcnews.com": "pendente",
+    "nytimes.com": "pendente"
   },
   "bloqueados_yt": [
     "9RZktO7r5VY",
@@ -784,7 +843,7 @@
       "fim": true
     },
     "Propmark": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "Grandes Nomes da Propaganda": {
@@ -800,11 +859,11 @@
       "fim": true
     },
     "Nosso Meio": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "ABC da Comunicação": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "Janela Publicitária": {
@@ -812,15 +871,15 @@
       "fim": false
     },
     "Creativosbr": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "B9": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "Exame": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "Roastbrief": {
@@ -848,7 +907,7 @@
       "fim": false
     },
     "InformaBTL": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "Reason Why": {
@@ -868,15 +927,15 @@
       "fim": false
     },
     "El Publicista": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "Marketing Dive": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "Muse by Clios": {
-      "pagina": 41,
+      "pagina": 45,
       "fim": false
     },
     "Ads of the World": {
@@ -892,7 +951,7 @@
       "fim": false
     },
     "ContentGrip": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "LBB Online": {
@@ -900,7 +959,7 @@
       "fim": false
     },
     "Adworld.ie": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "Creative Salon": {
@@ -924,7 +983,7 @@
       "fim": true
     },
     "Creative Boom": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "The Drum": {
@@ -932,11 +991,11 @@
       "fim": false
     },
     "J'ai un pote dans la com": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "CB News": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "B&T": {
@@ -944,7 +1003,7 @@
       "fim": true
     },
     "Mediaweek": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "Mumbrella": {
@@ -956,15 +1015,15 @@
       "fim": true
     },
     "Campaign Brief": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "Campaign Brief NZ": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "Campaign Brief Asia": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "Marketech APAC": {
@@ -976,7 +1035,7 @@
       "fim": false
     },
     "MediaNews4U": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "Manifest Media": {
@@ -984,27 +1043,27 @@
       "fim": false
     },
     "afaqs": {
-      "pagina": 61,
+      "pagina": 65,
       "fim": false
     },
     "marketinginsiderreview.com": {
-      "pagina": 49,
+      "pagina": 53,
       "fim": false
     },
     "Adweek": {
-      "pagina": 39,
+      "pagina": 44,
       "fim": false
     },
     "Muse by Clio": {
-      "pagina": 39,
+      "pagina": 43,
       "fim": false
     },
     "Clio Awards": {
-      "pagina": 39,
+      "pagina": 43,
       "fim": false
     },
     "Horizont": {
-      "pagina": 29,
+      "pagina": 34,
       "fim": false
     },
     "BBDO": {
@@ -1016,7 +1075,7 @@
       "fim": true
     },
     "We Are Social": {
-      "pagina": 37,
+      "pagina": 41,
       "fim": false
     },
     "adam&eveDDB": {
@@ -1032,7 +1091,7 @@
       "fim": true
     },
     "We Are Social Italy": {
-      "pagina": 30,
+      "pagina": 34,
       "fim": false
     },
     "TBWA\\Italia": {
@@ -1040,7 +1099,7 @@
       "fim": true
     },
     "JAM": {
-      "pagina": 30,
+      "pagina": 34,
       "fim": false
     },
     "Forsman & Bodenfors": {
@@ -1048,11 +1107,11 @@
       "fim": true
     },
     "thjnk Zürich": {
-      "pagina": 37,
+      "pagina": 41,
       "fim": false
     },
     "Mito": {
-      "pagina": 30,
+      "pagina": 34,
       "fim": false
     },
     "Cohn & Jansen": {
@@ -1108,8 +1167,8 @@
       "fim": true
     },
     "Connelly Partners": {
-      "pagina": 33,
-      "fim": false
+      "pagina": 35,
+      "fim": true
     },
     "360PR+": {
       "pagina": 5,
@@ -1160,7 +1219,7 @@
       "fim": true
     },
     "Vault Communications": {
-      "pagina": 31,
+      "pagina": 35,
       "fim": false
     },
     "Luquire": {
@@ -1200,7 +1259,7 @@
       "fim": true
     },
     "Bigeye": {
-      "pagina": 29,
+      "pagina": 33,
       "fim": false
     },
     "The Firm Public Relations": {
@@ -1208,17 +1267,49 @@
       "fim": true
     },
     "KPS3": {
-      "pagina": 29,
+      "pagina": 33,
       "fim": false
     },
     "Noble Studios": {
-      "pagina": 29,
+      "pagina": 31,
+      "fim": true
+    },
+    "The Inspiration Room": {
+      "pagina": 1,
+      "fim": false
+    },
+    "Campaign Middle East": {
+      "pagina": 5,
+      "fim": false
+    },
+    "adobo Magazine": {
+      "pagina": 5,
+      "fim": false
+    },
+    "Ad Age": {
+      "pagina": 1,
+      "fim": false
+    },
+    "Campaign UK": {
+      "pagina": 1,
+      "fim": false
+    },
+    "AdNews": {
+      "pagina": 1,
+      "fim": false
+    },
+    "W&V": {
+      "pagina": 1,
+      "fim": false
+    },
+    "Stratégies": {
+      "pagina": 1,
       "fim": false
     }
   },
-  "proxima_busca": 16,
-  "ultima_execucao": "2026-11-27T05:06:10.453634+00:00",
-  "ultimas_novas": 68,
+  "proxima_busca": 22,
+  "ultima_execucao": "2026-11-27T15:12:12.510218+00:00",
+  "ultimas_novas": 58,
   "sem_imagem": [
     "https://bookingagentinfo.com/news/coco-gauff-partners-with-mercedes-benz-on-new-u-s-open-campaign/",
     "https://campaignbrief.co.nz/2026/06/30/end-of-financial-year-is-today-get-a-tax-deductible-portfolio-reel-membership-with-latest-ad-agency-and-production-company-staff-lists-for-new-zealand-australia/",
@@ -1367,9 +1458,11 @@
     "https://www.abcdacomunicacao.com.br/dabelle-beauty-apresenta-campanha-o-matte-que-da-match-para-lancamento-do-lip-combo-boca-perfeita-matte/",
     "https://www.abcdacomunicacao.com.br/grupo-trimais-aposta-na-relacao-com-os-clientes-em-nova-campanha-de-marketing/",
     "https://www.abcdacomunicacao.com.br/haskell-e-vizzela-lancam-collab-com-campanha-digital-que-reune-duplas-de-influenciadoras/",
+    "https://www.abcdacomunicacao.com.br/hoya-vision-care-promove-campanha-para-ampliar-a-conscientizacao-sobre-a-miopia-infantil/",
     "https://www.abcdacomunicacao.com.br/inspirada-na-bombril-e-em-the-office-campanha-da-godiva-para-o-protein-complete-da-herbalife-aposta-em-autenticidade/",
     "https://www.abcdacomunicacao.com.br/melody-estrela-campanha-da-uber-para-o-lancamento-do-elas-indicam-moto/",
     "https://www.abcdacomunicacao.com.br/morana-celebra-o-dia-da-mulher-com-campanha-que-exalta-sororidade-pertencimento-e-forca-coletiva/",
+    "https://www.abcdacomunicacao.com.br/netshoes-aposta-em-rafael-portugal-para-campanha-de-black-november-com-estrategia-de-influencia-da-digital-social-br/",
     "https://www.abcdacomunicacao.com.br/neugebauer-traz-campanha-de-natal-com-viagens-para-fernando-de-noronha-e-super-premios/",
     "https://www.abcdacomunicacao.com.br/nova-york-apresenta-sua-nova-campanha-global-de-turismo-the-nyc-effect/",
     "https://www.abcdacomunicacao.com.br/nsc-reune-mercado-publicitario-para-reforcar-lideranca-de-audiencia-em-criciuma/",
@@ -1399,6 +1492,7 @@
     "https://www.adworld.ie/2026/01/09/boysgirls-returns-with-new-campaign-for-re-turn/",
     "https://www.adworld.ie/2026/01/09/tbwa-ireland-rolls-out-global-campaign-for-optimum-nutrition/",
     "https://www.adworld.ie/2026/01/23/supervalu-stresses-super-value-in-campaign-from-boysgirls/",
+    "https://www.adworld.ie/2026/01/30/the-future-of-advertising-up-for-discussion-as-aai-celebrates-75-anniversary/",
     "https://www.adworld.ie/2026/02/13/publicis-dublin-launches-campaign-for-ptsbs-green-proposition-and-home-upgrade-hub/",
     "https://www.adworld.ie/2026/02/13/tbwa-turns-on-the-taps-for-weep-riverrock-valentines-campaign/",
     "https://www.adworld.ie/2026/02/13/the-public-house-creates-affirmative-campaign-for-irish-defence-forces/",
@@ -1444,6 +1538,7 @@
     "https://www.adworld.ie/2026/11/20/bullfinch-brings-jedward-back-to-the-audition-room-for-dominos-campaign/",
     "https://www.adworld.ie/?p=54274",
     "https://www.chilevision.cl/partners-chv/ni-sanchez-ni-vidal-ni-medel-garay-chile-va-al-mundial/amp/",
+    "https://www.connellypartners.com/news/connelly-partners-launches-new-work-for-the-track-at-new-balance/",
     "https://www.creativereview.co.uk/mcdonalds-side-missions-xbox-campaign/",
     "https://www.grocerygazette.co.uk/2026/09/01/hovis-launches-4m-nationwide-campaign/",
     "https://www.instagram.com/reel/DgLSr42S-R4/",
@@ -3030,12 +3125,177 @@
       "id": "UCnJrzrdxB2U1mjOh1ZCySDw",
       "canal": "Noble Studios",
       "handle": "noblestudios"
+    },
+    "GEICO": {
+      "id": "UCHxcqJWQQcoVmVh5eHVqVxg",
+      "canal": "GEICO Insurance",
+      "handle": "geico"
+    },
+    "State Farm": {
+      "id": "UCsjj_YdoShWrnAHrgN9ud-g",
+      "canal": "State Farm Insurance",
+      "handle": "statefarm"
+    },
+    "Progressive": {
+      "id": "UCFJFDSwAheAb4OjsSjRq_Gg",
+      "canal": "Progressive Insurance",
+      "handle": "progressive"
+    },
+    "Allstate": {
+      "id": "UCsqbhaLz0e3fLcF8jREJjSw",
+      "canal": "Allstate",
+      "handle": "allstate"
+    },
+    "Liberty Mutual": {
+      "id": "UCEhs4PaXKrWEICKzFzjT4Rg",
+      "canal": "Liberty Mutual",
+      "handle": "libertymutual"
+    },
+    "McDonald's": {
+      "id": "UCbpUSVxiBSjc0CHm0ksuJgw",
+      "canal": "McDonald's",
+      "handle": "mcdonalds"
+    },
+    "Burger King": {
+      "id": "UC23ZqC2LTzl7dfOi6EmwJhg",
+      "canal": "BURGER KING",
+      "handle": "burgerking"
+    },
+    "Wendy's": {
+      "id": "UCxXHHbiGUO3RziA5kW0m1qw",
+      "canal": "Wendy's",
+      "handle": "wendys"
+    },
+    "Taco Bell": {
+      "id": "UCGAWuGsaWysuMHbj0w2-Ffw",
+      "canal": "Taco Bell",
+      "handle": "tacobell"
+    },
+    "KFC": {
+      "id": "UCR8RWMHZcSgqjD0HiUiJ_cQ",
+      "canal": "KFC",
+      "handle": "kfc"
+    },
+    "Domino's": {
+      "id": "UCO1328RJ5y-TrR2oRq9fBYw",
+      "canal": "Domino's Pizza",
+      "handle": "dominos"
+    },
+    "Pizza Hut": {
+      "id": "UCmHNk3DjDiDzuVrj0aiprZQ",
+      "canal": "Pizza Hut",
+      "handle": "pizzahut"
+    },
+    "Subway": null,
+    "Starbucks": {
+      "id": "UCj4nCgtjKJppK_IZeY8TUJg",
+      "canal": "Starbucks Coffee",
+      "handle": "starbucks"
+    },
+    "Dunkin'": {
+      "id": "UC4XAoY7tlWulP5p5kY6ZQyw",
+      "canal": "Dunkin",
+      "handle": "dunkin"
+    },
+    "Chipotle": {
+      "id": "UClrnM-TRoxc-Mv48wgkukrg",
+      "canal": "Chipotle Mexican Grill",
+      "handle": "chipotle"
+    },
+    "Popeyes": {
+      "id": "UCBEZh6fiU1m_7uf3JnLObZQ",
+      "canal": "Popeyes",
+      "handle": "popeyes"
+    },
+    "Arby's": {
+      "id": "UCsgTfnHjztU_6jSwYNgI7rg",
+      "canal": "Arby's",
+      "handle": "arbys"
+    },
+    "Coca-Cola": null,
+    "Pepsi": {
+      "id": "UCH47Lk8Qv2Vdr7yu7JHyvug",
+      "canal": "Pepsi",
+      "handle": "pepsi"
+    },
+    "Budweiser": null,
+    "Bud Light": null,
+    "Michelob Ultra": null,
+    "Coors Light": null,
+    "Miller Lite": null,
+    "Heineken": null,
+    "Stella Artois": null,
+    "Corona": null,
+    "Apple": {
+      "id": "UCYFQ33UIPERYx8-ZHucZbDA",
+      "canal": "Apple",
+      "handle": "apple"
+    },
+    "Samsung": {
+      "id": "UCWwgaK7x0_FR1goeSRazfsQ",
+      "canal": "Samsung",
+      "handle": "samsung"
+    },
+    "Google": {
+      "id": "UCK8sQmJBp8GCxrOtXWBpyEA",
+      "canal": "Google",
+      "handle": "google"
+    },
+    "Microsoft": {
+      "id": "UCVGOyzms_XJNk_DHqrffXCw",
+      "canal": "Microsoft",
+      "handle": "microsoft"
+    },
+    "Amazon": {
+      "id": "UCxGq825hl0AHP18I9-JGKgg",
+      "canal": "amazon",
+      "handle": "amazon"
+    },
+    "Target": {
+      "id": "UCralvBh1hSGRf4SrjS-mY7Q",
+      "canal": "Target",
+      "handle": "target"
+    },
+    "Walmart": {
+      "id": "UC701pqb1-HJPS4RMjSmK4Yg",
+      "canal": "Walmart",
+      "handle": "walmart"
+    },
+    "Best Buy": {
+      "id": "UC5pK3w6QEq1bUMmU2Hs43Pw",
+      "canal": "Best Buy",
+      "handle": "bestbuy"
+    },
+    "The Home Depot": {
+      "id": "UCc8ACUpd_ZutCunMqQmi95Q",
+      "canal": "The Home Depot",
+      "handle": "homedepot"
+    },
+    "Lowe's": {
+      "id": "UCqd2hbtE2N9fb0D2nTrLT1w",
+      "canal": "Lowe's Home Improvement",
+      "handle": "lowes"
+    },
+    "Nike": {
+      "id": "UCNhxq7He5p-_FdBh0OaxcQg",
+      "canal": "Nike",
+      "handle": "nike"
+    },
+    "adidas": {
+      "id": "UCuLUOxd7ezJ8c6NSLBNRRfg",
+      "canal": "adidas",
+      "handle": "adidas"
     }
   },
   "midia_v4": [
     "https://adsofbrands.net/en/news/john-lewis-and-saatchi-saatchi-offer-a-dose-of-gifting-honesty-with-daisy-may-cooper-for-mother-s-d/9587",
     "https://bmeditores.mx/avicultura/la-union-nacional-de-avicultores-presenta-el-poder-del-huevo-mexicano/",
     "https://campaignbrief.co.nz/",
+    "https://campaignbrief.co.nz/2025/06/17/ogilvy-sydney-and-milo-kick-off-10th-anniversary-year-for-advertising-capstone-challenge/",
+    "https://campaignbrief.co.nz/2025/06/23/maccas-nz-launches-new-mouth-watering-real-time-out-of-home-campaign-via-ddb-aotearoa/",
+    "https://campaignbrief.co.nz/2025/06/24/meridian-brings-fresh-energy-and-community-impact-to-aotearoa-in-new-campaign-via-81/",
+    "https://campaignbrief.co.nz/2025/07/01/steinlager-raises-a-glass-to-the-next-crop-of-nzs-finest-in-cinematic-campaign-via-the-tuesday-club/",
+    "https://campaignbrief.co.nz/2025/07/02/breville-launches-global-campaign-for-new-filter-coffee-machine-the-luxe-brewer-via-the-cowboys/",
     "https://campaignbrief.co.nz/2025/07/07/cardrona-drops-in-on-bondi-beach-as-realnz-launches-first-campaign-with-thinkerbell/",
     "https://campaignbrief.co.nz/2025/07/09/cannabis-clinic-launches-aotearoas-first-anti-stigma-campaign-for-medicinal-cannabis-via-abel/",
     "https://campaignbrief.co.nz/2025/07/18/generate-puts-performance-first-in-new-centre-of-performance-campaign-via-true/",
@@ -3151,6 +3411,7 @@
     "https://campaignbrief.co.nz/2026/10/30/pandora-brings-zodiac-inspired-talisman-collection-to-anz-in-new-ooh-via-jack-nimble/",
     "https://campaignbrief.co.nz/2026/11/02/aucklands-ad-production-crowd-get-a-monthly-friday-hangout-at-the-grey-lynn-firehouse/",
     "https://campaignbrief.co.nz/2026/11/17/aa-mines-data-to-spotlight-aa-member-savings-in-new-national-campaign-via-quantum-jump/",
+    "https://campaignbrief.com/7-eleven-launches-in-house-agency-the-corner-shop-with-first-major-campaign-for-coffee/",
     "https://campaignbrief.com/99-bikes-launches-new-national-campaign-we-know-riders-via-alt-shift/",
     "https://campaignbrief.com/airbag-man-launches-new-brand-campaign-feel-the-performance-via-new-word-order/",
     "https://campaignbrief.com/ali-wong-calls-out-pricey-roaming-in-vodafones-latest-campaign-via-howatsoncompany/",
@@ -3160,12 +3421,15 @@
     "https://campaignbrief.com/anglicaresa-launches-were-there-supported-independent-living-campaign-via-topbunk/",
     "https://campaignbrief.com/ausgrid-launches-new-the-switch-is-on-campaign-to-uplift-electrification-via-stake/",
     "https://campaignbrief.com/aussie-expat-tara-ford-leads-droga5-londons-reverse-campaign-for-ikea-in-saudi-arabia/",
+    "https://campaignbrief.com/aussie-expat-tim-pashen-behind-plastic-changes-ballsy-campaign-via-worth-your-while-denmark/",
     "https://campaignbrief.com/aussie-expat-tim-pashen-co-writes-reject-the-rejections-campaign-for-people-like-us-tackling-ai-hiring-bias-via-worth-your-while/",
     "https://campaignbrief.com/australian-bananas-turns-a-banana-into-a-gym-pass-for-two-in-new-campaign-via-thinkerbell/",
+    "https://campaignbrief.com/australian-government-launches-first-national-perimenopause-awareness-campaign-via-ogilvy/",
     "https://campaignbrief.com/australian-macadamias-launches-youve-got-good-taste-campaign-via-weber-shandwick/",
     "https://campaignbrief.com/avid-launches-national-brand-platform-with-dual-campaigns-via-martins-brand-house/",
     "https://campaignbrief.com/bakers-delight-celebrates-the-joy-of-freshly-baked-moments-in-new-campaign-via-hero/",
     "https://campaignbrief.com/bank-of-queensland-goes-full-queensland-in-new-social-first-campaign-via-kill-boring-dead/",
+    "https://campaignbrief.com/barwon-coast-caravan-parks-unveils-who-dares-winters-off-peak-campaign-via-goodproper/",
     "https://campaignbrief.com/bastion-dentsu-pr-and-tag-join-forces-to-deliver-geely-auto-australias-largest-campaign-yet/",
     "https://campaignbrief.com/bendigo-bank-brings-grass-roots-football-to-life-at-the-mcg-and-adelaide-oval-in-new-work-via-dig/",
     "https://campaignbrief.com/beyond-the-valley-launches-new-fortune-favours-the-curious-campaign-via-untitled-group/",
@@ -3174,6 +3438,7 @@
     "https://campaignbrief.com/bureau-clara-wichmann-turns-linkedins-open-to-work-badge-into-a-demand-for-equal-pay-in-new-campaign-via-dawn-amsterdam/",
     "https://campaignbrief.com/butterfly-foundation-helps-australians-rethink-negative-self-body-talk-in-new-campaign-via-icon/",
     "https://campaignbrief.com/byrdli-launches-creator-led-travel-commerce-campaign-with-alabama-tourism-and-travel-south-usa/",
+    "https://campaignbrief.com/campaignlab-expands-into-the-us-with-first-multi-market-campaign-for-intercontinental-fiji/",
     "https://campaignbrief.com/chris-hemsworth-spins-a-tall-tale-about-whisky-to-brother-luke-in-archie-roses-new-global-campaign-directed-by-justin-mcmillan/",
     "https://campaignbrief.com/chupa-chups-unveils-free-the-funshine-campaign-via-the-idea-shed-and-havas-media-australia/",
     "https://campaignbrief.com/clearlight-turns-wellness-into-an-investment-with-new-sweat-equity-campaign-via-hellions/",
@@ -3185,16 +3450,20 @@
     "https://campaignbrief.com/cyventine-makes-quitting-smoking-a-25-day-job-in-new-campaign-via-72andsunny-sydney/",
     "https://campaignbrief.com/didi-makes-sore-losers-pay-for-leaving-the-game-early-in-latest-campaign-via-sunday-gravy/",
     "https://campaignbrief.com/dilmah-celebrates-purpose-heritage-and-quality-in-major-brand-campaign-via-rcj/",
+    "https://campaignbrief.com/domain-strategy-for-campaign-launches-why-your-reseller-choice-is-a-marketing-decision/",
     "https://campaignbrief.com/droga5-anz-scores-grand-at-clio-entertainment-for-sbss-the-ad-that-can-only-be-seen-on-sbs/",
     "https://campaignbrief.com/eat-the-wild-campaign-via-bonfire-goes-viral-viewers-fall-for-skull-island-prawns-hook-line-and-sinker/",
     "https://campaignbrief.com/eatclub-launches-first-major-brand-campaign-dining-out-done-smart-via-its-friday/",
+    "https://campaignbrief.com/electrolux-launches-new-steam-when-you-need-it-campaign-via-connecting-plots-group/",
     "https://campaignbrief.com/end-of-financial-year-is-today-get-a-tax-deductible-portfolio-reel-membership-with-latest-ad-agency-and-production-company-staff-lists-for-australia-new-zealand/",
     "https://campaignbrief.com/everlab-asks-aussies-what-their-body-is-trying-to-tell-them-in-first-brand-campaign-via-outside-in/",
     "https://campaignbrief.com/farmers-union-brings-its-live-cultures-to-life-in-new-its-a-living-thing-campaign-via-thinkerbell/",
     "https://campaignbrief.com/golden-crumpets-brings-mr-golden-to-social-for-the-first-time-in-new-campaign-via-of-a-feather/",
     "https://campaignbrief.com/gordon-legal-gets-personal-in-new-brand-campaign-via-by-all-means/",
     "https://campaignbrief.com/gotcha4life-helps-aussies-put-their-emotions-into-words-in-new-work-via-sciencefiction-initiative/",
+    "https://campaignbrief.com/green-challenges-generational-inequality-with-the-solar-inheritance-campaign-via-bounce/",
     "https://campaignbrief.com/hard-rated-recruits-body-double-for-orange-passionfruit-campaign-via-clemenger-bbdo/",
+    "https://campaignbrief.com/healthy-male-launches-new-campaign-for-mens-health-week-2026-via-not-another/",
     "https://campaignbrief.com/iab-australia-launches-free-ai-impact-assessment-tool-to-help-advertising-professionals-prepare-for-the-future-of-work/",
     "https://campaignbrief.com/ing-celebrates-savvy-savers-in-new-saving-is-in-campaign-for-ing-savings-booster-via-ogilvy/",
     "https://campaignbrief.com/jack-daniels-brings-back-gentleman-jack-dad-ads-campaign-via-we-are-different-starcom/",
@@ -3209,6 +3478,7 @@
     "https://campaignbrief.com/logitech-anz-launches-new-ooh-campaign-ditch-the-jitters-own-the-spotlight-via-umm/",
     "https://campaignbrief.com/maccas-brings-back-brekkie-nostalgia-with-birdies-brekkie-meal-campaign-via-wieden-kennedy-sydney-akcelo-omd-digitas-and-eleven/",
     "https://campaignbrief.com/masterfoods-launches-new-bold-flavour-range-with-campaign-via-tp-that-is-anything-but-mid/",
+    "https://campaignbrief.com/mcdonalds-australia-launches-bold-new-you-know-where-outdoor-campaign-via-akcelo/",
     "https://campaignbrief.com/mcdonalds-netherlands-embraces-the-terrible-side-of-christmas-in-new-ai-spot-via-tbwaneboko",
     "https://campaignbrief.com/mckinnon-prize-puts-the-focus-on-leadership-over-politics-in-new-campaign-via-3rdspace/",
     "https://campaignbrief.com/melbourne-park-celebrates-the-power-of-live-experiences-in-new-campaign-via-town-square/",
@@ -3221,6 +3491,7 @@
     "https://campaignbrief.com/nrma-insurance-celebrates-the-extraordinary-value-of-normal-in-new-work-via-accenture-song/",
     "https://campaignbrief.com/nrma-roadside-assistance-turns-cultural-intelligence-into-new-every-trip-matters-campaign-via-cultural-pulse/",
     "https://campaignbrief.com/opentable-celebrates-everything-dad-adds-to-the-table-in-london-fathers-day-campaign-via-2045/",
+    "https://campaignbrief.com/original-source-launches-refreshingly-original-platform-with-ooh-campaign-via-sickdogwolfman/",
     "https://campaignbrief.com/pandora-launches-media-first-campaign-for-pandora-wonders-collection-via-dentsu/",
     "https://campaignbrief.com/parramatta-mission-launches-the-unliveable-listings-in-bold-campaign-via-3rdspace/",
     "https://campaignbrief.com/philips-avent-launches-new-integrated-love-for-mum-campaign-via-we-scout/",
@@ -3231,15 +3502,18 @@
     "https://campaignbrief.com/samsung-launches-new-digital-ooh-campaign-welcome-to-foldables-in-australia/",
     "https://campaignbrief.com/sanitarium-puts-runners-first-with-immersive-upgo-protein-campaign-via-curious-nation/",
     "https://campaignbrief.com/selfwealth-launches-new-identity-and-campaign-via-bam/",
+    "https://campaignbrief.com/shannon-noll-helps-jetstar-celebrate-airlines-22nd-birthday-in-new-campaign-via-thinkerbell/",
     "https://campaignbrief.com/sick-kids-dreams-take-over-sydney-streets-in-schfs-campaign-for-sydney-sick-kids-appeal/",
     "https://campaignbrief.com/somersby-launches-for-a-night-in-in-campaign-for-somersby-double-8-2-via-clemenger-bbdo/",
     "https://campaignbrief.com/specsavers-brings-ernabella-artist-atipalku-intjalkis-story-to-life-in-new-purpose-led-campaign-via-tbwamelbourne-and-garuwa/",
     "https://campaignbrief.com/specsavers-gets-fans-spinning-around-for-afl-grand-final-in-new-ooh-push-via-tbwamelbourne/",
+    "https://campaignbrief.com/sportsbet-unveils-40-metre-statue-of-aloisi-on-sydney-harbour-in-new-campaign-via-tgi-wildcard/",
     "https://campaignbrief.com/spotify-launches-youre-among-fans-campaign-in-oz-with-lizzo-and-jay-shetty-via-bbdo-new-york/",
     "https://campaignbrief.com/st-kilda-football-club-honours-danny-frawleys-legacy-in-quietly-powerful-new-spuds-game-film-the-message-via-shotpro-group/",
     "https://campaignbrief.com/state-schools-relief-launches-new-brand-identity-in-new-campaign-via-the-fuel-agency/",
     "https://campaignbrief.com/stay-in-the-game-for-you-and-your-mob-new-campaign-puts-first-nations-voices-at-the-heart-of-bowel-cancer-screening-via-33-creative/",
     "https://campaignbrief.com/stratco-puts-a-full-orchestra-in-a-big-shed-in-the-flinders-ranges-in-new-campaign-via-nation/",
+    "https://campaignbrief.com/sunsweet-launches-new-influencer-campaign-snack-the-unexpected-via-havas-red/",
     "https://campaignbrief.com/support-act-urges-aussies-to-keep-aussie-music-on-rotation-for-ausmusic-t-shirt-day-in-new-campaign-via-bring/",
     "https://campaignbrief.com/suzuki-jimny-makes-light-work-of-victorias-pothole-problem-in-new-film-via-atimeplace/",
     "https://campaignbrief.com/tab-brings-australians-together-for-the-world-cup-in-new-the-cup-at-tab-campaign-via-bastion/",
@@ -3249,10 +3523,12 @@
     "https://campaignbrief.com/the-poolhouse-turns-the-backyard-pool-into-the-best-room-in-the-house-in-new-campaign-via-crave/",
     "https://campaignbrief.com/tixel-shows-how-far-a-fan-will-go-to-not-miss-a-gig-in-first-major-integrated-campaign/",
     "https://campaignbrief.com/tobys-estate-makes-tcs-sydney-marathon-partnership-personal-with-team-toby-campaign/",
+    "https://campaignbrief.com/ubank-brings-money-done-better-to-life-with-new-character-led-campaign-via-supersolid/",
     "https://campaignbrief.com/unsw-sydney-celebrates-the-role-of-difference-in-the-path-to-progress-in-new-animated-campaign-via-howatsoncompany/",
     "https://campaignbrief.com/western-sydney-university-launches-new-brand-campaign-charge-towards-change-via-bmf/",
     "https://campaignbrief.com/wise-unveils-major-brand-campaign-in-australia-as-it-targets-financial-needs-at-home-and-abroad/",
     "https://campaignbrief.com/worksafe-victoria-helps-injured-workers-get-back-to-work-and-back-to-life-in-latest-campaign-via-shannon-behaviour-change/",
+    "https://campaignbriefasia.com/2025/11/19/youngster-bkk-freezes-bangkok-with-extra-coolivery-stunt-for-smirnoff-ice-extra-cool/",
     "https://campaignbriefasia.com/2025/12/01/colonel-sanders-becomes-sanders-claus-in-kfc-thailands-new-holiday-campaign/",
     "https://campaignbriefasia.com/2025/12/02/standard-chartered-places-cio-at-the-centre-of-latest-nows-your-time-for-wealth-campaign/",
     "https://campaignbriefasia.com/2025/12/03/heinz-thailand-unveils-it-has-to-be-mom-campaign-via-flash-bomber-bangkok/",
@@ -3600,6 +3876,7 @@
     "https://creative.salon/articles/work/tmw-oak-furnitureland",
     "https://creative.salon/articles/work/toy-story-5-argos-t-p",
     "https://creativosbr.com.br/agencia-anacouto-assina-nova-campanha-para-yobem/?utm_source=rss&utm_medium=rss&utm_campaign=agencia-anacouto-assina-nova-campanha-para-yobem",
+    "https://creativosbr.com.br/agosto-roxo-execom-lanca-campanha-de-conscientizacao/?utm_source=rss&utm_medium=rss&utm_campaign=agosto-roxo-execom-lanca-campanha-de-conscientizacao",
     "https://creativosbr.com.br/bradesco-celebra-os-10-anos-da-b-ia-com-filme/?utm_source=rss&utm_medium=rss&utm_campaign=bradesco-celebra-os-10-anos-da-b-ia-com-filme",
     "https://creativosbr.com.br/cafe-uniao-reune-top-voices-do-linkedin-em-campanha/?utm_source=rss&utm_medium=rss&utm_campaign=cafe-uniao-reune-top-voices-do-linkedin-em-campanha",
     "https://creativosbr.com.br/canva-mostra-como-a-cultura-da-internet-pode-transformar-uma-campanha-em-conteudo/?utm_source=rss&utm_medium=rss&utm_campaign=canva-mostra-como-a-cultura-da-internet-pode-transformar-uma-campanha-em-conteudo",
@@ -3622,7 +3899,9 @@
     "https://creativosbr.com.br/johnnie-walker-lanca-filme-e-patrocina-turne-de-85-anos-de-ney-matogrosso/?utm_source=rss&utm_medium=rss&utm_campaign=johnnie-walker-lanca-filme-e-patrocina-turne-de-85-anos-de-ney-matogrosso",
     "https://creativosbr.com.br/josette-goulart-lanca-videocast-para-revelar-os-tombos-da-publicidade/?utm_source=rss&utm_medium=rss&utm_campaign=josette-goulart-lanca-videocast-para-revelar-os-tombos-da-publicidade",
     "https://creativosbr.com.br/jotacom-assina-campanha-da-nio-com-marcia-sensitiva-para-comunicar-preco-fixo/",
+    "https://creativosbr.com.br/kfc-lanca-campanha-de-molhos-e-celebra-o-dia-do-bigode-com-item-gratis-para-bigodudos/?utm_source=rss&utm_medium=rss&utm_campaign=kfc-lanca-campanha-de-molhos-e-celebra-o-dia-do-bigode-com-item-gratis-para-bigodudos",
     "https://creativosbr.com.br/lacta-convida-ivete-sangalo-para-campanha-de-natal/?utm_source=rss&utm_medium=rss&utm_campaign=lacta-convida-ivete-sangalo-para-campanha-de-natal",
+    "https://creativosbr.com.br/mercado-pago-lanca-campanha-com-anitta/?utm_source=rss&utm_medium=rss&utm_campaign=mercado-pago-lanca-campanha-com-anitta",
     "https://creativosbr.com.br/mix-media-lanca-plataforma-propria-de-midia-e-transforma-a-forma-como-marcas-gerenciam-campanhas/?utm_source=rss&utm_medium=rss&utm_campaign=mix-media-lanca-plataforma-propria-de-midia-e-transforma-a-forma-como-marcas-gerenciam-campanhas",
     "https://creativosbr.com.br/murilo-benicio-e-pietro-antonelli-estrelam-campanha-de-dia-dos-pais-da-riachuelo/",
     "https://creativosbr.com.br/nova-campanha-de-white-horse-e-bar-store-de-old-parr-em-jaguariuna/?utm_source=rss&utm_medium=rss&utm_campaign=nova-campanha-de-white-horse-e-bar-store-de-old-parr-em-jaguariuna",
@@ -3631,6 +3910,7 @@
     "https://creativosbr.com.br/ri-happy-lanca-campanha-de-dia-das-criancas-com-a-barbie-como-influenciadora-digital-pela-primeira-vez/?utm_source=rss&utm_medium=rss&utm_campaign=ri-happy-lanca-campanha-de-dia-das-criancas-com-a-barbie-como-influenciadora-digital-pela-primeira-vez",
     "https://creativosbr.com.br/salon-line-e-gol-levam-experiencia-do-afropunk-brasil-aos-passageiros/?utm_source=rss&utm_medium=rss&utm_campaign=salon-line-e-gol-levam-experiencia-do-afropunk-brasil-aos-passageiros",
     "https://creativosbr.com.br/sodie-doces-diversifica-promocoes-e-lanca-campanha-dos-salgados-do-mes/?utm_source=rss&utm_medium=rss&utm_campaign=sodie-doces-diversifica-promocoes-e-lanca-campanha-dos-salgados-do-mes",
+    "https://creativosbr.com.br/tate-mcrae-danca-ao-som-de-deee-lite-em-campanha-da-calvin-klein/?utm_source=rss&utm_medium=rss&utm_campaign=tate-mcrae-danca-ao-som-de-deee-lite-em-campanha-da-calvin-klein",
     "https://creativosbr.com.br/terra-vivo-ads-lancam-experiencia-de-bem-estar/?utm_source=rss&utm_medium=rss&utm_campaign=terra-vivo-ads-lancam-experiencia-de-bem-estar",
     "https://creativosbr.com.br/terry-crews-revive-cena-de-as-branquelas-em-nova-campanha-da-shopee/?utm_source=rss&utm_medium=rss&utm_campaign=terry-crews-revive-cena-de-as-branquelas-em-nova-campanha-da-shopee",
     "https://creativosbr.com.br/tiktok-shop-lanca-primeira-campanha-de-black-friday-no-brasil/?utm_source=rss&utm_medium=rss&utm_campaign=tiktok-shop-lanca-primeira-campanha-de-black-friday-no-brasil",
@@ -3836,23 +4116,30 @@
     "https://musebyclios.com/?p=117805",
     "https://musebyclios.com/?p=118619",
     "https://musebyclios.com/ad-of-the-week/ishowspeed-and-a-mannequin-hit-the-road-for-expedia/",
+    "https://musebyclios.com/advertising/all-righta-ore-ida-just-launched-the-zaniest-ads-for-its-french-fries/?utm_source=rss&utm_medium=rss&utm_campaign=all-righta-ore-ida-just-launched-the-zaniest-ads-for-its-french-fries",
     "https://musebyclios.com/advertising/confused-coms-precocious-puppets-will-have-you-laughing-til-the-cows-come-home",
+    "https://musebyclios.com/advertising/finally-tampon-advertising-isnt-just-for-women-anymore/?utm_source=rss&utm_medium=rss&utm_campaign=finally-tampon-advertising-isnt-just-for-women-anymore",
     "https://musebyclios.com/advertising/for-verizon-jonathan-baileys-hottie-scrooge-temps-ego-nwodim/",
     "https://musebyclios.com/advertising/ghosts-buffaloes-and-warrior-kitties-crave-dominos-dip/",
     "https://musebyclios.com/advertising/harrys-says-you-dont-need-to-strike-oil-to-get-a-great-shave-and-smell-great/",
+    "https://musebyclios.com/advertising/in-topgolfs-weird-ads-everyones-got-hands-for-heads/?utm_source=rss&utm_medium=rss&utm_campaign=in-topgolfs-weird-ads-everyones-got-hands-for-heads",
     "https://musebyclios.com/advertising/its-a-lovely-day-for-humans-not-bots-in-latest-zevia-campaign/?utm_source=rss&utm_medium=rss&utm_campaign=its-a-lovely-day-for-humans-not-bots-in-latest-zevia-campaign",
     "https://musebyclios.com/advertising/its-okay-to-be-a-hot-mess-sometimes-maruchan-says/",
     "https://musebyclios.com/advertising/kalshi-explains-itself-and-serves-the-worlds-longest-sandwich/",
     "https://musebyclios.com/advertising/man-morphs-into-a-cookie-in-awesome-maxibon-commercial/?utm_source=rss&utm_medium=rss&utm_campaign=man-morphs-into-a-cookie-in-awesome-maxibon-commercial",
+    "https://musebyclios.com/advertising/my-7-layer-dip-recipe-for-long-lasting-advertising-success/?utm_source=rss&utm_medium=rss&utm_campaign=my-7-layer-dip-recipe-for-long-lasting-advertising-success",
+    "https://musebyclios.com/advertising/nude-turkey-guy-primed-for-stuffing-headlines-bizarre-ads-for-prism/?utm_source=rss&utm_medium=rss&utm_campaign=nude-turkey-guy-primed-for-stuffing-headlines-bizarre-ads-for-prism",
     "https://musebyclios.com/advertising/sarah-michelle-gellar-spoofs-scream-and-more-great-spooky-season-spots/?utm_source=rss&utm_medium=rss&utm_campaign=sarah-michelle-gellar-spoofs-scream-and-more-great-spooky-season-spots",
     "https://musebyclios.com/advertising/strange-brew-liquid-death-iced-tea-vs-long-island-iced-tea/",
     "https://musebyclios.com/advertising/subarus-barkley-family-chases-oscar-mayers-wienermobile/",
     "https://musebyclios.com/advertising/taco-bell-claims-christmas-bells-have-been-its-advertising-all-along/",
     "https://musebyclios.com/advertising/tax-cidents-can-happen-sometimes-theyre-costly/",
     "https://musebyclios.com/advertising/timothee-chalamet-laces-up-for-adidas-in-weeks-top-spot/?utm_source=rss&utm_medium=rss&utm_campaign=timothee-chalamet-laces-up-for-adidas-in-weeks-top-spot",
+    "https://musebyclios.com/advertising/wk-bakes-weepy-humor-into-spots-for-heinz-beanz/?utm_source=rss&utm_medium=rss&utm_campaign=wk-bakes-weepy-humor-into-spots-for-heinz-beanz",
     "https://musebyclios.com/advertising/you-had-to-be-at-least-100-years-old-to-star-in-this-titos-vodka-ad/",
     "https://musebyclios.com/cannabis/nug-on-the-rug-spreads-cheer-so-be-nice-not-naughty/",
     "https://musebyclios.com/experiential/doordash-spirit-board-channels-the-spooky-season/",
+    "https://musebyclios.com/film-tv/alf-reborn-on-ryan-reynolds-maximum-effort-channel-in-ads-for-big-brands/?utm_source=rss&utm_medium=rss&utm_campaign=alf-reborn-on-ryan-reynolds-maximum-effort-channel-in-ads-for-big-brands",
     "https://musebyclios.com/film-tv/dylan-efron-stars-as-a-swole-santa-for-yahoo-mail/",
     "https://musebyclios.com/film-tv/home-alones-little-neros-pizza-brought-to-life-to-celebrate-the-films-35th-anniversary/?utm_source=rss&utm_medium=rss&utm_campaign=home-alones-little-neros-pizza-brought-to-life-to-celebrate-the-films-35th-anniversary",
     "https://musebyclios.com/film-tv/its-world-cup-season-that-makes-gordon-ramsay-even-more-of-a-prig/",
@@ -3965,10 +4252,12 @@
     "https://www.abcdacomunicacao.com.br/com-o-mote-maes-que-movem-centauro-lanca-campanha-de-dia-das-maes-com-milene-domingues-e-ronald/",
     "https://www.abcdacomunicacao.com.br/grupo-trimais-aposta-na-relacao-com-os-clientes-em-nova-campanha-de-marketing/",
     "https://www.abcdacomunicacao.com.br/haskell-e-vizzela-lancam-collab-com-campanha-digital-que-reune-duplas-de-influenciadoras/",
+    "https://www.abcdacomunicacao.com.br/hoya-vision-care-promove-campanha-para-ampliar-a-conscientizacao-sobre-a-miopia-infantil/",
     "https://www.abcdacomunicacao.com.br/inspirada-na-bombril-e-em-the-office-campanha-da-godiva-para-o-protein-complete-da-herbalife-aposta-em-autenticidade/",
     "https://www.abcdacomunicacao.com.br/melody-estrela-campanha-da-uber-para-o-lancamento-do-elas-indicam-moto/",
     "https://www.abcdacomunicacao.com.br/morana-celebra-o-dia-da-mulher-com-campanha-que-exalta-sororidade-pertencimento-e-forca-coletiva/",
     "https://www.abcdacomunicacao.com.br/nagumo-leva-aroma-de-flor-de-cerejeira-aos-cupons-fiscais-em-campanha-que-celebra-suas-raizes-japonesas/",
+    "https://www.abcdacomunicacao.com.br/netshoes-aposta-em-rafael-portugal-para-campanha-de-black-november-com-estrategia-de-influencia-da-digital-social-br/",
     "https://www.abcdacomunicacao.com.br/neugebauer-traz-campanha-de-natal-com-viagens-para-fernando-de-noronha-e-super-premios/",
     "https://www.abcdacomunicacao.com.br/nova-york-apresenta-sua-nova-campanha-global-de-turismo-the-nyc-effect/",
     "https://www.abcdacomunicacao.com.br/nsc-reune-mercado-publicitario-para-reforcar-lideranca-de-audiencia-em-criciuma/",
@@ -4019,6 +4308,7 @@
     "https://www.adworld.ie/2025/12/12/irs-delivers-for-the-national-lottery-in-new-good-causes-campaign/",
     "https://www.adworld.ie/2025/12/19/coca-cola-brings-christmas-brand-awareness-campaign-to-life-at-tesco/",
     "https://www.adworld.ie/2025/12/19/irs-delivers-disruptive-audio-placements-for-rsa-campaign/",
+    "https://www.adworld.ie/2026/01/30/the-future-of-advertising-up-for-discussion-as-aai-celebrates-75-anniversary/",
     "https://www.adworld.ie/2026/02/20/ardmore-group-scores-with-fifa-world-cup-campaign-for-visit-pennsylvania/",
     "https://www.adworld.ie/2026/04/24/bloom-rolls-out-new-nitrate-free-campaign-for-brady-family-ham/",
     "https://www.adworld.ie/2026/05/15/oliver-and-fulfil-team-up-for-high-impact-social-campaign/",
@@ -4071,6 +4361,8 @@
     "https://www.chatterbuzzmedia.com/blog/linkedin-advertising-strategy-b2b/",
     "https://www.chilevision.cl/partners-chv/ni-sanchez-ni-vidal-ni-medel-garay-chile-va-al-mundial/amp/",
     "https://www.comicbasics.com/mcdonalds-unwraps-a-new-whimsical-grinch-meal-commercial/",
+    "https://www.connellypartners.com/news/connelly-partners-launches-new-work-for-the-track-at-new-balance/",
+    "https://www.connellypartners.com/news/keeping-it-real-all-roads-point-to-authenticity-for-gen-z/",
     "https://www.contentgrip.com/bankwest-virtual-card-risk-ads/",
     "https://www.contentgrip.com/joe-fresh-halloween-puffers/",
     "https://www.contentgrip.com/mms-rylan-cinema-prank/",
@@ -4188,6 +4480,7 @@
     "https://www.medianews4u.com/nexxen-partners-with-gracenote-to-expand-content-based-targeting-for-ctv-advertising/",
     "https://www.medianews4u.com/nmc-revises-ethical-advertising-guidelines-what-it-means-for-healthcare-marketers/",
     "https://www.medianews4u.com/openai-brings-sana-shaikh-on-board-for-global-ads-solutions-in-india/",
+    "https://www.medianews4u.com/optimizegeo-launches-integrated-demand-engine-to-strengthen-brand-visibility-across-ai-search-shopping-and-advertising/",
     "https://www.medianews4u.com/raffaello-ropes-in-kriti-sanon-as-brand-endorser-launches-say-hello-with-raffaello-campaign/",
     "https://www.medianews4u.com/shemaroome-launches-band-baaja-binge-campaign-with-curated-gujarati-wedding-themed-content-line-up/",
     "https://www.medianews4u.com/sony-liv-attracts-over-50-advertisers-for-indias-tour-of-new-zealand-2026/",
@@ -5563,12 +5856,15 @@
     "https://campaignbrief.co.nz/2026/11/10/spca-makes-the-case-for-a-simpler-kind-of-family-in-new-have-a-dog-instead-campaign-via-special/",
     "https://campaignbrief.co.nz/2026/11/18/smart-makes-common-sense-seductive-in-new-kiwisaver-campaign-via-the-enthusiasts/",
     "https://campaignbrief.com/bbh-singapore-launches-klooks-new-global-get-your-travel-right-campaign/",
+    "https://campaignbrief.com/bellamys-organic-launches-new-australian-fifa-world-cup-2026-sponsorship-campaign-via-optimo/",
     "https://campaignbrief.com/care-pharmaceuticals-little-range-launches-theres-a-little-for-nearly-every-little-problem-campaign-via-kiindred-kiin-agency-this-is-flow/",
     "https://campaignbrief.com/chery-tiggo-9-makes-drivers-miss-a-car-they-dont-even-own-yet-in-new-campaign-via-dentsu-creative/",
     "https://campaignbrief.com/commbank-brings-a-side-of-joy-to-banking-in-new-yello-rewards-campaign-via-howatsoncompany/",
     "https://campaignbrief.com/cotton-australia-puts-growers-in-the-hot-seat-in-social-first-campaign-via-the-content-division/",
     "https://campaignbrief.com/dfes-invites-west-australians-to-join-the-ready-in-new-campaign-via-rare/",
     "https://campaignbrief.com/didi-brings-good-fortune-to-flemington-with-nudgy-in-new-activation-via-sunday-gravy/",
+    "https://campaignbrief.com/dispensed-australia-taps-doodle-google-artist-for-new-this-is-not-medical-advice-brand-campaign/",
+    "https://campaignbrief.com/dogs-are-gonna-dog-elanco-launches-new-advocate-ultra-chew-campaign-via-today-the-brave/",
     "https://campaignbrief.com/domain-brings-immersive-3d-property-tours-to-life-with-the-open-home-thats-always-open-campaign-via-howatsoncompany/",
     "https://campaignbrief.com/donut-king-puts-buddy-centre-stage-in-ai-created-all-buns-glazing-campaign-via-thinkerbell/",
     "https://campaignbrief.com/garnier-celebrates-every-version-of-you-with-new-me-micellar-and-i-campaign-via-the-reactor/",
@@ -5580,6 +5876,7 @@
     "https://campaignbrief.com/latest-instalment-of-ausify-campaign-via-bureau-of-everything-invites-aussies-to-get-their-pda-on-with-local-music/",
     "https://campaignbrief.com/lilydale-turns-farmers-dedication-into-powerful-shopper-choice-moment-in-new-campaign-via-omnicom-oceania-and-clemenger-bbdo/",
     "https://campaignbrief.com/maccas-transforms-drive-thru-takeaway-bag-into-protective-mcrib-bib-in-new-campaign-via-akcelo/",
+    "https://campaignbrief.com/murdoch-university-puts-care-at-the-heart-of-every-career-in-new-campaign-via-berlin/",
     "https://campaignbrief.com/racgp-launches-me-my-gp-campaign-via-bastion-celebrating-gp-patient-relationships/",
     "https://campaignbrief.com/some-campaigns-take-months-engines-country-spirit-city-heart-for-the-ekka-took-150-years/",
     "https://campaignbrief.com/spca-makes-the-case-for-a-simpler-kind-of-family-in-new-have-a-dog-instead-campaign-via-special/",
@@ -5595,6 +5892,14 @@
     "https://campaignbrief.com/victorian-department-of-health-unveils-lets-get-better-womens-health-campaign-via-showpony/",
     "https://campaignbrief.com/victorians-for-nature-unveils-worst-hiking-trail-on-earth-on-alltrails-in-new-work-via-fireside/",
     "https://campaignbrief.com/water-corporation-and-the-brand-agency-launch-new-education-campaign-water-colours-the-west/",
+    "https://campaignbriefasia.com/2025/10/29/govees-haunted-light-show-vantage-pictures-turns-vietnam-suburb-into-a-horror-film-set/",
+    "https://campaignbriefasia.com/2025/10/31/omelette-digital-captures-11-years-of-hong-kong-rides-in-new-campaign-for-uber-hong-kong/",
+    "https://campaignbriefasia.com/2025/11/03/antangin-celebrates-indonesias-everyday-heroes-in-pejuang-pantang-tumbang-campaign/",
+    "https://campaignbriefasia.com/2025/11/06/battlegrounds-mobile-india-launches-parody-driven-bgmi-drops-campaign-with-talented-india/",
+    "https://campaignbriefasia.com/2025/11/11/sting-launches-fast-paced-it-must-be-sting-campaign-across-asia-via-leo-thailand/",
+    "https://campaignbriefasia.com/2025/11/17/jollibee-celebrates-modern-family-joy-in-charming-christmas-film-buo-ang-saya-ng-pasko/",
+    "https://campaignbriefasia.com/2025/11/18/heinz-taps-bbdo-bangkok-bbdo-guerrero-for-its-first-unified-southeast-asia-christmas-campaign/",
+    "https://campaignbriefasia.com/2025/11/19/prime-tiles-launches-new-jodcha-jivan-campaign-celebrating-nepali-family-life/",
     "https://campaignbriefasia.com/2025/11/24/fundamental-launches-whatsapp-campaign-for-rural-india-highlighting-voice-and-video-notes/",
     "https://campaignbriefasia.com/2025/12/01/early-and-talented-create-pickyourtrails-first-campaign-highlighting-customised-holidays/",
     "https://campaignbriefasia.com/2025/12/01/huggies-india-launches-new-geelu-monster-film-highlighting-fastest-absorption-claim/",
@@ -5722,7 +6027,10 @@
     "https://creativosbr.com.br/airbnb-lanca-campanha-para-celebrar-o-carnaval-brasileiro/?utm_source=rss&utm_medium=rss&utm_campaign=airbnb-lanca-campanha-para-celebrar-o-carnaval-brasileiro",
     "https://creativosbr.com.br/azul-lanca-campanha-o-ceu-do-verao-e-azul-e-amplia-malha-de-voos-em-congonhas-ate-o-carnaval/?utm_source=rss&utm_medium=rss&utm_campaign=azul-lanca-campanha-o-ceu-do-verao-e-azul-e-amplia-malha-de-voos-em-congonhas-ate-o-carnaval",
     "https://creativosbr.com.br/cachaca-51-estreia-campanha-a-boa-ideia-do-brasil-esta-de-roupa-nova/?utm_source=rss&utm_medium=rss&utm_campaign=cachaca-51-estreia-campanha-a-boa-ideia-do-brasil-esta-de-roupa-nova",
+    "https://creativosbr.com.br/centauro-lanca-campanha-futebol-desde-sempre-para-celebrar-a-paixao-nacional/?utm_source=rss&utm_medium=rss&utm_campaign=centauro-lanca-campanha-futebol-desde-sempre-para-celebrar-a-paixao-nacional",
     "https://creativosbr.com.br/espacolaser-lanca-campanha-de-halloween-inspirada-em-crepusculo/?utm_source=rss&utm_medium=rss&utm_campaign=espacolaser-lanca-campanha-de-halloween-inspirada-em-crepusculo",
+    "https://creativosbr.com.br/giovanna-lancellotti-sera-a-estrela-da-proxima-campanha-de-9-9-da-shein/?utm_source=rss&utm_medium=rss&utm_campaign=giovanna-lancellotti-sera-a-estrela-da-proxima-campanha-de-9-9-da-shein",
+    "https://creativosbr.com.br/joe-jonas-e-camila-coutinho-falam-sobre-nova-campanha-da-heineken/?utm_source=rss&utm_medium=rss&utm_campaign=joe-jonas-e-camila-coutinho-falam-sobre-nova-campanha-da-heineken",
     "https://creativosbr.com.br/pacoquita-transforma-seu-protagonismo-e-referencia-em-brasilidade-em-nova-campanha/?utm_source=rss&utm_medium=rss&utm_campaign=pacoquita-transforma-seu-protagonismo-e-referencia-em-brasilidade-em-nova-campanha",
     "https://creativosbr.com.br/twix-lanca-campanha-dois-e-mais-que-um-no-brasil/?utm_source=rss&utm_medium=rss&utm_campaign=twix-lanca-campanha-dois-e-mais-que-um-no-brasil",
     "https://creativosbr.com.br/yoki-transforma-o-sucesso-da-linha-caseirissima-em-campanha-de-natal/?utm_source=rss&utm_medium=rss&utm_campaign=yoki-transforma-o-sucesso-da-linha-caseirissima-em-campanha-de-natal",
@@ -5730,6 +6038,7 @@
     "https://nossomeio.com.br/assai-campanha-52-anos-rodrigo-faro/",
     "https://nossomeio.com.br/betania-homenageia-o-dia-do-nordestino-em-campanha-assinada-pela-ampla-e-protagonizada-por-joao-gomes/",
     "https://nossomeio.com.br/bndes-apresenta-solucoes-de-credito-para-micro-pequenas-e-medias-empresas-mpmes-em-nova-campanha-publicitaria/",
+    "https://nossomeio.com.br/bradesco-vida-e-previdencia-lanca-campanha-num-piscar-de-olhos-com-tadeu-schmidt/",
     "https://nossomeio.com.br/caixa-alia-filme-consciencia-negra/",
     "https://nossomeio.com.br/cartao-de-todos-celebra-25-anos-com-novo-filme-estrelado-por-ana-maria-braga/",
     "https://nossomeio.com.br/colegio-luciano-feijao-aposta-em-relacoes-humanas-como-eixo-de-campanha-de-matriculas-para-2027/",
@@ -5743,6 +6052,7 @@
     "https://nossomeio.com.br/subway-campanha-cle-o-pires-luisa-perisse-nepo-babies/",
     "https://nossomeio.com.br/w3haus-atualiza-campanha-de-outubro-rosa-da-azul-com-foco-em-prevencao/",
     "https://nossomeio.com.br/wyda-transforma-perrengues-da-cozinha-em-cenas-de-terror-em-campanha-de-halloween/",
+    "https://nossomeio.com.br/yoki-e-simone-mendes-estrelam-campanha-de-natal-eu-que-fiz/",
     "https://roastbrief.com.mx/2026/09/choose-cruelty-cruelty-free-la-emotiva-campana-de-theplan-y-animal-libre-ante-las-fiestas-patrias-en-chile/",
     "https://roastbrief.com.mx/2026/09/el-rio-open-presenta-un-nuevo-ciclo-comienza-ahora-la-campana-para-su-edicion-2027/",
     "https://roastbrief.com.mx/2026/09/uber-eats-convierte-los-rituales-de-los-aficionados-en-el-corazon-de-su-nueva-campana-con-laliga/",
@@ -5796,7 +6106,7 @@
   "arquivo_inicio": "2020-11-17",
   "arquivo_mes": {
     "Meio & Mensagem": {
-      "mes": "2023-11",
+      "mes": "2023-07",
       "pagina": 0
     },
     "Propmark": {
@@ -5834,7 +6144,7 @@
     },
     "Creativosbr": {
       "mes": "2025-07",
-      "pagina": 0
+      "pagina": 4
     },
     "B9": {
       "mes": "2025-11",
@@ -5847,7 +6157,7 @@
       "sem_wp": true
     },
     "Roastbrief": {
-      "mes": "2023-11",
+      "mes": "2023-07",
       "pagina": 0
     },
     "Adlatina": {
@@ -5868,7 +6178,7 @@
       "pagina": 0
     },
     "InformaBTL": {
-      "mes": "2023-11",
+      "mes": "2023-07",
       "pagina": 0
     },
     "Reason Why": {
@@ -5876,7 +6186,7 @@
       "pagina": 0
     },
     "Marketing Directo": {
-      "mes": "2023-11",
+      "mes": "2023-07",
       "pagina": 0
     },
     "PuroMarketing": {
@@ -5971,7 +6281,7 @@
       "sem_wp": true
     },
     "B&T": {
-      "mes": "2023-11",
+      "mes": "2023-07",
       "pagina": 0
     },
     "Mediaweek": {
@@ -6057,7 +6367,7 @@
       "sem_wp": true
     },
     "McCann": {
-      "mes": "2023-11",
+      "mes": "2023-07",
       "pagina": 0
     },
     "We Are Social": {
@@ -6066,7 +6376,7 @@
       "sem_wp": true
     },
     "adam&eveDDB": {
-      "mes": "2024-11",
+      "mes": "2024-09",
       "pagina": 1
     },
     "Lucky Generals": {
@@ -6095,7 +6405,7 @@
       "sem_wp": true
     },
     "Forsman & Bodenfors": {
-      "mes": "2024-06",
+      "mes": "2024-04",
       "pagina": 1
     },
     "thjnk Zürich": {
@@ -6119,7 +6429,7 @@
       "sem_wp": true
     },
     "Tabasco": {
-      "mes": "2023-11",
+      "mes": "2023-07",
       "pagina": 0
     },
     "Bruketa&Žinić&Grey": {
@@ -6133,11 +6443,11 @@
       "sem_wp": true
     },
     "Duncan Channon": {
-      "mes": "2024-02",
+      "mes": "2023-11",
       "pagina": 0
     },
     "Pollinate": {
-      "mes": "2024-04",
+      "mes": "2023-12",
       "pagina": 0
     },
     "Cramer-Krasselt": {
@@ -6151,11 +6461,11 @@
       "sem_wp": true
     },
     "Modern Climate": {
-      "mes": "2024-01",
+      "mes": "2023-09",
       "pagina": 0
     },
     "Arnold Worldwide": {
-      "mes": "2023-11",
+      "mes": "2023-07",
       "pagina": 0
     },
     "Hill Holliday": {
@@ -6189,8 +6499,8 @@
       "sem_wp": true
     },
     "The Infinite Agency": {
-      "mes": "2024-05",
-      "pagina": 1
+      "mes": "2024-02",
+      "pagina": 0
     },
     "Agency Creative": {
       "mes": "2025-11",
@@ -6223,7 +6533,7 @@
       "sem_wp": true
     },
     "GMMB": {
-      "mes": "2023-11",
+      "mes": "2023-07",
       "pagina": 0
     },
     "Brownstein Group": {
@@ -6272,7 +6582,7 @@
       "sem_wp": true
     },
     "Anson Stoner": {
-      "mes": "2023-11",
+      "mes": "2023-07",
       "pagina": 0
     },
     "Chatter Buzz": {
@@ -6286,7 +6596,7 @@
       "sem_wp": true
     },
     "The Firm Public Relations": {
-      "mes": "2023-11",
+      "mes": "2023-07",
       "pagina": 0
     },
     "KPS3": {
@@ -6295,11 +6605,68 @@
       "sem_wp": true
     },
     "Noble Studios": {
-      "mes": "2023-11",
+      "mes": "2023-07",
+      "pagina": 0
+    },
+    "The Inspiration Room": {
+      "mes": "2025-11",
+      "pagina": 0
+    },
+    "Campaign Middle East": {
+      "mes": "2025-11",
+      "pagina": 0,
+      "sem_wp": true
+    },
+    "adobo Magazine": {
+      "mes": "2025-11",
+      "pagina": 0,
+      "sem_wp": true
+    },
+    "Ad Age": {
+      "mes": "2025-11",
+      "pagina": 0
+    },
+    "Campaign UK": {
+      "mes": "2025-11",
+      "pagina": 0
+    },
+    "AdNews": {
+      "mes": "2025-11",
+      "pagina": 0
+    },
+    "W&V": {
+      "mes": "2025-11",
+      "pagina": 0
+    },
+    "Stratégies": {
+      "mes": "2025-11",
       "pagina": 0
     }
   },
   "descartadas": [
+    "https://adamandevetbwa.com/campaign-big-shortlists-2024",
+    "https://campaignbrief.co.nz/2025/05/19/break-up-with-your-car-auckland-transport-urges-aucklanders-out-of-car-monogamy-via-federation",
+    "https://campaignbrief.co.nz/2025/05/19/ellena-mills-dad-diary-part-1-kerning-craft-and-creative-envy",
+    "https://campaignbrief.co.nz/2025/05/20/vogels-send-kiwis-a-slice-of-home-in-new-toastcards-campaign-via-ddb-aotearoa",
+    "https://campaignbrief.co.nz/2025/05/22/13-entries-from-new-zealand-make-the-cut-as-final-round-of-dad-2025-shortlists-are-announced",
+    "https://campaignbrief.co.nz/2025/05/22/v-energy-thinkerbell-fuel-the-flow-state-in-new-campaign-for-slow-release-energy-range-v-riise",
+    "https://campaignbrief.co.nz/2025/05/23/2degrees-creates-phone-lullabies-to-put-you-and-your-phone-to-sleep-at-bedtime-in-new-radio-campaign-via-tbwanz-and-eardrum",
+    "https://campaignbrief.co.nz/2025/05/25/ben-coulsons-dad-dairy-part-2-the-spanish-inquisition",
+    "https://campaignbrief.co.nz/2025/05/25/motion-sickness-and-dig-pr-share-14-spot-in-2025-adc-asia-pacific-agency-rankings",
+    "https://campaignbrief.co.nz/2025/05/26/division-takes-out-dad-2025-production-company-of-the-year-title",
+    "https://campaignbrief.co.nz/2025/05/30/bestads-best-tv-of-the-week-toblerones-chocolate-like-nobodys-watching-via-le-pub",
+    "https://campaignbrief.co.nz/2025/05/30/campaign-briefs-the-work-2025-opens-for-entries-free-to-enter-deadline-may-20th-2",
+    "https://campaignbrief.co.nz/2025/06/02/lotto-nz-bares-it-all-in-latest-imagine-campaign-via-ddb-aotearoa-brings-promises-and-powerball-dreams-to-life",
+    "https://campaignbrief.co.nz/2025/06/03/animates-pawprint-petition-campaign-reaches-parliament-with-173000-signatures",
+    "https://campaignbrief.co.nz/2025/06/03/marty-hungerford-how-marketing-and-advertising-creatives-can-thrive-in-the-ai-era",
+    "https://campaignbrief.co.nz/2025/06/05/%ef%bb%bf%ef%bb%bfyoung-people-encouraged-to-ghost-their-loved-ones-while-driving-in-new-campaign-via-vml-nz",
+    "https://campaignbrief.co.nz/2025/06/09/romanos-harnesses-ai-for-first-ever-brand-campaign-everyday-masterpieces-via-minthc",
+    "https://campaignbrief.co.nz/2025/06/09/run-dmcs-its-like-that-gets-a-lego-remix-in-new-she-built-that-campaign-via-our-lego-agency",
+    "https://campaignbrief.co.nz/2025/06/11/ad-industry-associations-unite-to-launch-worlds-first-llm-benchmark-for-creativity",
+    "https://campaignbrief.co.nz/2025/06/11/medibank-sharon-strzelecki-get-aussies-talking-in-new-family-roast-campaign-via-colenso-bbdo",
+    "https://campaignbrief.co.nz/2025/06/12/campaign-brief-qa-inside-attivos-next-chapter-with-anthony-gregorio-and-sue-squillace",
+    "https://campaignbrief.co.nz/2025/06/12/wendys-serves-up-loyalty-to-one-nz-warriors-fans-in-feed-the-faith-campaign-via-chemistry",
+    "https://campaignbrief.co.nz/2025/06/13/cb-qa-with-dr-mathew-farry-md-courageous-conversation-south-pacific-institute-on-deis-evolution-advertisings-role-in-driving-change",
     "https://campaignbrief.co.nz/2025/06/16/cb-exclusive-academyex-launches-the-play-lab-with-a-campaign-that-turns-learning-on-its-head-and-dares-executives-to-play",
     "https://campaignbrief.co.nz/2025/06/17/ad-net-zero-strengthens-global-framework-for-advertising-emissions-measurement",
     "https://campaignbrief.co.nz/2025/06/17/aussies-and-kiwis-plus-global-creatives-attend-the-campaign-brief-cannes-welcome-drinks-honoring-special-guest-king-david-droga",
@@ -6392,17 +6759,25 @@
     "https://campaignbrief.co.nz/2025/11/17/fisher-funds-encourages-kiwis-to-connect-with-their-money-in-new-campaign-via-special-nz",
     "https://campaignbrief.com/afl-aims-to-inspire-next-generation-of-fans-in-new-kids-footy-month-campaign-via-reconnected",
     "https://campaignbrief.com/allianz-showcases-why-its-worth-it-when-it-matters-most-in-new-campaign-via-howatsonco",
+    "https://campaignbrief.com/alpha-keri-relaunches-with-new-social-first-campaign-and-tiktok-debut-via-the-social-cliq",
     "https://campaignbrief.com/apple-takes-on-online-trackers-in-global-privacy-campaign-clingers-via-tbwamedia-arts-lab",
+    "https://campaignbrief.com/aussie-born-platform-envato-unveils-creative-flow-activated-global-campaign-via-superheroes",
+    "https://campaignbrief.com/australian-students-score-dad-new-blood-pencils-across-three-universities",
     "https://campaignbrief.com/batiste-partners-with-pop-trio-blusher-to-give-bad-hair-a-good-shh-in-new-campaign-via-bounce",
     "https://campaignbrief.com/bcf-gives-australias-fishing-shirt-obsession-a-winter-upgrade-in-new-campaign-via-thinkerbell",
     "https://campaignbrief.com/bestads-best-tv-film-of-the-week-andrexs-push-like-youre-pooing-via-fcb-london",
+    "https://campaignbrief.com/bestads-best-tv-film-of-the-week-hornbachs-a-stupid-useless-board-via-heimattbwa-berlin",
+    "https://campaignbrief.com/bestads-best-tv-film-of-the-week-yapes-moments-via-121-latam-peru",
     "https://campaignbrief.com/campaign-brief-wa-agency-of-the-year-block-takes-on-the-billing-model-with-unblock",
+    "https://campaignbrief.com/campaign-briefs-the-work-2025-opens-for-entries-free-to-enter-deadline-may-20th-2-2",
     "https://campaignbrief.com/cb-hot-suit-takes-kim-le-gras-general-manager-campaign-creative-cheil-australia",
+    "https://campaignbrief.com/city-of-melbourne-embraces-winter-with-new-melbourne-at-its-most-melbourne-campaign-via-town-square-and-zenith-australia",
     "https://campaignbrief.com/commuters-on-st-kilda-road-spot-huge-mistakes-in-specsavers-latest-digital-billboard-campaign",
     "https://campaignbrief.com/cost-of-living-pressures-and-rapid-ai-innovation-rewrite-the-rules-of-customer-loyalty-campaigns",
     "https://campaignbrief.com/department-of-education-gives-shape-to-a-new-free-kinder-campaign-via-fenton-stephens",
     "https://campaignbrief.com/dog-poo-takes-centre-field-in-lykas-new-poo-on-the-ground-afl-campaign-with-channel-7",
     "https://campaignbrief.com/east-coast-car-rentals-encourages-aussies-to-avoid-car-renthell-in-new-campaign-via-firme-agency-and-frontier-media",
+    "https://campaignbrief.com/ebay-live-doubles-down-on-gaming-led-fandom-and-collectables-culture-in-campaign-via-dentsu",
     "https://campaignbrief.com/eleven-haircare-bottles-the-feeling-of-australian-summer-in-new-campaign-via-willow-blake",
     "https://campaignbrief.com/esafety-commissioner-turns-scammers-own-tactics-against-them-in-new-campaign-via-icon",
     "https://campaignbrief.com/eva-responds-to-monocultural-debate-with-mobile-billboard-stunt-in-melbourne",
@@ -6415,13 +6790,16 @@
     "https://campaignbrief.com/gesha-coffee-co-evolves-with-new-campaign-via-kwppartners-and-raz-studios",
     "https://campaignbrief.com/gordon-ramsay-stars-in-uber-eats-first-ever-global-campaign-across-17-markets-via-mother",
     "https://campaignbrief.com/grocery-buyers-to-add-some-frills-to-dinner-in-new-ai-driven-kalettes-campaign-via-ten-past-ten",
+    "https://campaignbrief.com/healthy-harold-redefines-urgency-in-new-tax-appeal-campaign-via-nation-donor-republic",
     "https://campaignbrief.com/hearing-australia-doubles-down-on-commitment-to-care-in-new-campaign-via-the-station-agency",
     "https://campaignbrief.com/hesta-champions-an-authentic-vision-of-retirement-in-new-campaign-via-akqa-australia",
     "https://campaignbrief.com/hickinbotham-is-where-the-heart-is-in-latest-campaign-via-melbourne-creative-agency-good-one",
     "https://campaignbrief.com/hr-block-encourages-aussies-to-stop-settling-for-good-enough-in-new-campaign-via-frog",
     "https://campaignbrief.com/industry-backs-childrens-cancer-foundation-with-2m-in-pro-bono-support-launches-new-campaign-via-cummins-partners",
     "https://campaignbrief.com/its-watties-you-need-kiwi-icon-returns-in-first-masterbrand-campaign-since-2021-via-tbwanz",
+    "https://campaignbrief.com/jameson-irish-whiskey-dan-does-footy-launch-the-ultra-kicking-challenge-campaign-via-2045",
     "https://campaignbrief.com/kfc-puts-kiwis-super-rugby-club-loyalty-to-the-ultimate-test-in-new-campaign-via-special-pr",
+    "https://campaignbrief.com/kfc-reminds-australia-the-zinger-is-still-the-benchmark-in-new-campaign-via-sunday-gravy",
     "https://campaignbrief.com/kfcs-secret-box-lab-puts-cardboard-through-its-paces-in-new-boxfull-campaign-via-special",
     "https://campaignbrief.com/kic-calls-out-optimisation-culture-in-new-progress-not-perfection-campaign",
     "https://campaignbrief.com/kill-boring-dead-launches-first-campaign-for-cathay-pacific-with-creator-led-tiktok-strategy",
@@ -6436,9 +6814,11 @@
     "https://campaignbrief.com/mg-motor-australia-showcases-refined-intensity-of-im-in-first-brand-campaign-via-elevencom",
     "https://campaignbrief.com/mobistorage-has-moving-and-storage-all-sorted-in-new-campaign-via-rare",
     "https://campaignbrief.com/mutti-wears-its-obsession-on-its-fingertips-in-new-muttiholic-ooh-campaign-via-wiredco",
+    "https://campaignbrief.com/northern-territory-proves-its-none-of-a-kind-in-new-tourism-campaign-via-kwp-partners",
     "https://campaignbrief.com/nudie-brings-the-squish-back-to-juice-in-new-brand-campaign-via-common-ventures",
     "https://campaignbrief.com/petsures-ruff-n-tumble-and-9lives-insurance-brands-launch-new-campaigns-via-an-idea-world",
     "https://campaignbrief.com/rawr-pet-food-creates-catshimi-omakase-for-cat-social-community-in-new-work-via-thinkerbell",
+    "https://campaignbrief.com/road-safety-advisory-council-of-tasmania-unveils-little-distraction-big-impact-campaign-via-cummins-partners",
     "https://campaignbrief.com/road-safety-commission-tackles-world-cup-fatigue-with-new-work-from-the-brand-agency",
     "https://campaignbrief.com/sbs-champions-aussies-right-to-watch-the-world-cup-at-work-in-new-campaign-fronted-by-nick-mohammed-via-droga5-poem-hearts-science",
     "https://campaignbrief.com/skyn-condoms-showcases-the-beauty-of-football-fans-faces-in-new-global-campaign-via-lc",
@@ -6454,10 +6834,27 @@
     "https://campaignbrief.com/tooheys-smuggles-blues-support-into-queensland-in-a-trojan-stag-in-new-campaign-via-thinkerbell",
     "https://campaignbrief.com/toyota-betts-big-in-latest-chapter-of-long-running-legendary-moments-campaign-via-gemba",
     "https://campaignbrief.com/uber-eats-calls-upon-sports-stars-and-a-very-unprofessional-checkout-assistant-in-ding-dong-deals-campaign-via-special-essencemediacom",
+    "https://campaignbrief.com/urban-ethos-targets-kitchen-frustrations-in-new-integrated-campaign-via-trp",
     "https://campaignbrief.com/vgccc-encourages-young-men-to-beat-dumb-thumb-in-latest-campaign-via-the-royals",
     "https://campaignbrief.com/victorian-aboriginal-community-controlled-health-organisation-engages-think-hq-for-new-bowel-cancer-screening-campaign",
     "https://campaignbrief.com/vilis-family-bakery-dares-sa-to-risk-it-for-the-bbq-brisket-in-new-campaign-via-kwppartners",
     "https://campaignbrief.com/westpac-collaborates-with-young-artists-in-new-youth-led-campaign-via-the-tuesday-club",
+    "https://campaignbriefasia.com/2025/10/09/google-gemini-and-ddb-group-singapore-launch-student-driven-campaign-in-indonesia",
+    "https://campaignbriefasia.com/2025/10/09/made-by-dyslexia-reveals-the-economic-cost-of-not-harnessing-dyslexic-thinking-in-partnership-with-ddb-group-melbourne-and-ocean-outdoor",
+    "https://campaignbriefasia.com/2025/10/10/dove-marks-international-day-of-the-girl-with-a-call-to-change-the-compliment-in-new-global-campaign-via-zulu-alpha-kilo-ny-and-canada",
+    "https://campaignbriefasia.com/2025/10/13/julies-and-govt-singapore-release-deepavali-short-film-the-duel-exploring-family-dynamics",
+    "https://campaignbriefasia.com/2025/10/16/garden-and-dentsu-hong-kong-celebrate-everyday-joy-with-let-every-day-bloom-campaign",
+    "https://campaignbriefasia.com/2025/10/20/dentsu-creative-webchutney-and-greenlam-celebrate-the-heart-of-diwali-in-new-film",
+    "https://campaignbriefasia.com/2025/10/20/mg-thailands-lifetime-warranty-becomes-a-story-of-care-in-film-by-dream-riders-thailand",
+    "https://campaignbriefasia.com/2025/10/22/ddb-group-hong-kong-and-fsdc-give-money-a-voice-in-new-global-campaign",
+    "https://campaignbriefasia.com/2025/10/22/volkswagen-takes-120000-passengers-on-a-flower-power-tour-in-new-campaign-via-ddb-aotearoa",
+    "https://campaignbriefasia.com/2025/10/24/bessium-wishes-the-planet-an-unhappy-diwali-in-efgh-indias-anti-pollution-campaign",
+    "https://campaignbriefasia.com/2025/10/27/turning-multi-country-campaigns-into-success-stories-through-the-eyes-of-seven-sunday-films",
+    "https://campaignbriefasia.com/2025/10/27/vale-piyush-pandey-the-giant-who-gave-indian-advertising-its-soul-and-moustache",
+    "https://campaignbriefasia.com/2025/10/27/vml-hong-kong-and-triumph-empower-women-across-apac-via-new-just-like-you-campaign",
+    "https://campaignbriefasia.com/2025/10/28/geki-ramen-targets-k-culture-fans-with-new-campaign-by-fcb-ulka-bangalore",
+    "https://campaignbriefasia.com/2025/10/28/hktvmall-simplifies-rebates-with-new-cashback-%e7%af%a4%e7%af%a4%e8%b3%ba-campaign-via-omelette-digital",
+    "https://campaignbriefasia.com/2025/10/28/maya-bank-and-dentsu-creative-manila-rewrite-the-rules-of-the-black-card-with-new-film",
     "https://campaignbriefasia.com/2025/10/29/bestads-best-tv-film-of-the-week-save-the-childrens-la-fiesta-via-fcb-newlink-mexico",
     "https://campaignbriefasia.com/2025/10/30/blkj-havas-singapore-and-brewlander-turn-ai-into-the-ultimate-craft-beer-ad-tool",
     "https://campaignbriefasia.com/2025/10/30/heinz-thailand-and-shooting-stellar-turn-expired-ketchup-into-a-spooky-halloween-campaign",
@@ -6559,22 +6956,30 @@
     "https://campaignbriefasia.com/2026/03/06/preganews-film-encourages-conversations-around-postpartum-depression-this-womens-day",
     "https://campaignbriefasia.com/2026/03/06/starhub-serves-up-sweet-moments-with-orchard-road-activation-this-weekend",
     "https://campaignbriefasia.com/2026/03/09/the-shout-group-and-rhb-celebrate-inclusion-education-in-2026-raya-film",
+    "https://creativosbr.com.br/a-campanha-que-ninguem-viu",
     "https://creativosbr.com.br/azeite-andorinha-une-rita-lobo-e-narcisa-tamborindeguy-em-nova-campanha",
     "https://creativosbr.com.br/brad-pitt-e-cobrado-por-16-cachorros-em-campanha-da-delonghi",
     "https://creativosbr.com.br/bradesco-seguros-e-leroy-merlin-lancam-campanha-sobre-protecao-residencial",
     "https://creativosbr.com.br/britania-adesiva-metro-de-salvador-em-campanha-divertida-de-ventiladores",
     "https://creativosbr.com.br/campanha-leva-t%e2%80%91cross-rock-in-rio-as-pistas-do-asfalto-a-musica",
+    "https://creativosbr.com.br/campanha-pedigree-vira-lata-reforca-legado-de-mais-de-89-mil-adocoes",
     "https://creativosbr.com.br/campanha-shein-com-rafa-kalimann",
     "https://creativosbr.com.br/chicooh-anuncia-alianca-com-publicitario-luciano-limongi",
     "https://creativosbr.com.br/cinepolis-anuncia-combo-especial-em-comemoracao-aos-30-anos-do-filme-toy-story",
     "https://creativosbr.com.br/coke-bag-e-destaque-em-campanha-de-halloween-da-fanta-e-china-in-box",
     "https://creativosbr.com.br/com-chef-erick-jacquin-wyda-lanca-campanha-para-apresentar-a-linha-masterchef",
     "https://creativosbr.com.br/conheca-a-ativacao-da-coca-cola-para-o-rock-in-rio-2026",
+    "https://creativosbr.com.br/decreto-define-fim-de-modelos-estrangeiros-na-publicidade-da-nigeria",
     "https://creativosbr.com.br/droga5-da-novo-significado-a-bandeira-do-brasil-em-campanha-pela-vida-marinha",
     "https://creativosbr.com.br/eletromidia-eleva-nova-campanha-com-grandes-nomes-do-mercado-condominial",
     "https://creativosbr.com.br/em-nova-campanha-ministerio-da-saude-agradece-as-familias-e-aos-profissionais-que-fazem-a-doacao-de-orgaos-acontecer",
     "https://creativosbr.com.br/fiuk-vira-personagem-de-nova-campanha-sobre-aprovacao-de-credito",
+    "https://creativosbr.com.br/g1-lanca-campanha-que-marca-inicio-das-comemoracoes-de-seus-20-anos",
+    "https://creativosbr.com.br/granplus-da-brf-pet-completa-15-anos-e-lanca-nova-fase-de-campanha",
     "https://creativosbr.com.br/hands-reforca-lideranca-comercial-com-as-chegadas-de-rodrigo-nhan-silveira-e-enrico-giannelli",
+    "https://creativosbr.com.br/heineken-lanca-campanha-sobre-equilibrio-digital-com-joe-jonas",
+    "https://creativosbr.com.br/ifood-anuncia-novo-vice-presidente-do-ifood-ads-e-precificacao",
+    "https://creativosbr.com.br/japao-resiste-a-inteligencia-artificial-na-publicidade",
     "https://creativosbr.com.br/kallas-midia-ooh-amplia-presenca-de-marcas-no-rock-in-rio-com-operacao-integrada-de-midia-e-mobilidade",
     "https://creativosbr.com.br/kallas-midia-ooh-consolida-lideranca-no-norte-e-acelera-expansao-com-foco-em-inovacao-e-sustentabilidade",
     "https://creativosbr.com.br/marcia-sensitiva-tira-encosto-de-fys-em-nova-campanha",
@@ -6591,12 +6996,16 @@
     "https://creativosbr.com.br/philips-avent-escolhe-carro-forte-para-campanha-de-conscientizacao-sobre-doacao-de-leite-materno",
     "https://creativosbr.com.br/professor-publicitario-e-especialista-em-marketing-lanca-livro-que-propoe-uma-nova-forma-de-construir-marcas-na-era-da-confianca",
     "https://creativosbr.com.br/renault-inaugura-nova-fase-no-brasil-com-campanha-viva-a-nova-renault",
+    "https://creativosbr.com.br/rivalo-revive-narracoes-esportivas-historicas-em-nova-campanha",
     "https://creativosbr.com.br/selton-mello-estrela-campanha-de-fim-de-ano-da-lacta",
     "https://creativosbr.com.br/sem-parar-e-marcia-sensitiva-se-unem-em-campanha-de-halloween",
     "https://creativosbr.com.br/serasa-estrela-tichina-arnold-em-nova-campanha-com-humor-e-nostalgia",
     "https://creativosbr.com.br/tramontina-une-guerrilha-e-tv-em-campanha-var-do-churrasco",
     "https://creativosbr.com.br/vini-jr-se-declara-em-campanha-apos-assumir-namoro-com-virginia",
+    "https://jai-un-pote-dans-la.com/amazon-trimestre-record-publicite-cloud-ia-aws-anthropic",
     "https://jai-un-pote-dans-la.com/axa-familles-monoparentales-publicis-conseil",
+    "https://jai-un-pote-dans-la.com/campagne-belle-dooh-canicule-degre-violence-femmes",
+    "https://jai-un-pote-dans-la.com/campagnes-prevention-sante-expose-archives-nationales",
     "https://jai-un-pote-dans-la.com/cgv-2027-tf1-pub-simplifie-acces-pub-tv-mise-convergence",
     "https://jai-un-pote-dans-la.com/chatgpt-ads-manager-openai-ouvre-sa-regie-vise-milliard-de-dollars",
     "https://jai-un-pote-dans-la.com/dacia-electrifie-sa-gamme-avec-campagne-publicis-conseil",
@@ -6611,8 +7020,10 @@
     "https://jai-un-pote-dans-la.com/stellar-tech-rudy-lauer-chief-commercial-officer",
     "https://marketinginsiderreview.com/bizum-lanza-campana-primeras-veces",
     "https://marketinginsiderreview.com/brahma-elige-la-america-nueva-agencia-creativa",
+    "https://marketinginsiderreview.com/canal-de-isabel-ii-lanza-campana-el-agua-de-madrid-tambien-es-patrimonio",
     "https://marketinginsiderreview.com/del-anuncio-a-la-referencia-exacta-por-que-ecommerce-debe-cuidar-paginas-de-producto",
     "https://marketinginsiderreview.com/el-ojo-de-iberoamerica-2026-completa-lista-de-presidentes-de-jurados",
+    "https://marketinginsiderreview.com/festival-el-ojo-de-iberoamerica-2026-lanza-campana-cierre-de-inscripciones",
     "https://marketinginsiderreview.com/fotocasa-lleva-camion-mudanza-barbie-el-corte-ingles-castellana",
     "https://marketinginsiderreview.com/fundacion-secretariado-gitano-elige-sra-rushmore-para-campana-sensibilizacion-sobre-educacion",
     "https://marketinginsiderreview.com/havas-creative-desarrollara-campana-de-navidad-2026-de-el-almendro",
@@ -6620,6 +7031,7 @@
     "https://marketinginsiderreview.com/hubspot-anuncia-integracion-crm-con-chatgpt-ads",
     "https://marketinginsiderreview.com/kfc-lanza-la-salvajada-menus-mucho-pollo-a-precio-reducido",
     "https://marketinginsiderreview.com/leroy-merlin-estrena-campana-las-ofertas-que-estabas-esperando",
+    "https://marketinginsiderreview.com/madrid-turismo-by-ifema-madrid-estrena-campana-con-concepto-madrid-beats",
     "https://marketinginsiderreview.com/merchandising-textil-cuatro-senales-para-saber-si-una-campana-ha-sido-util",
     "https://marketinginsiderreview.com/revolut-lanza-campana-sobre-ansiedad-de-gestiones-bancarias-con-ibai-llanos",
     "https://marketinginsiderreview.com/se-abre-la-convocatoria-de-los-premios-jcdecaux-2027",
@@ -6632,59 +7044,106 @@
     "https://musebyclios.com/advertising/6-ads-you-should-watch-before-starting-an-agency",
     "https://musebyclios.com/advertising/90-years-pass-in-this-skippy-ads-30-seconds",
     "https://musebyclios.com/advertising/acd-natasher-beecher-brings-culture-to-the-health-advertising-industry-2",
+    "https://musebyclios.com/advertising/advertising-to-queer-folk-pride-month-and-beyond",
     "https://musebyclios.com/advertising/after-controversy-ms-recuts-its-holiday-ad",
     "https://musebyclios.com/advertising/amicas-film-series-says-were-defined-by-what-we-leave-behind",
     "https://musebyclios.com/advertising/apples-exhilarating-ooh-leaps-into-dance",
     "https://musebyclios.com/advertising/baby-bottles-worth-censoring-love-on-the-road-and-a-pub-that-stays-open-on-christmas",
+    "https://musebyclios.com/advertising/cannabis-media-council-releases-advertising-guidelines",
+    "https://musebyclios.com/advertising/corona-bottles-vanish-from-ads-to-encourage-recycling",
     "https://musebyclios.com/advertising/disability-advocacy-sexy-breast-cancer-and-abstract-car-ads",
     "https://musebyclios.com/advertising/elves-live-it-up-off-shelf-in-tuis-holiday-ad-debut",
+    "https://musebyclios.com/advertising/family-caregivers-shine-in-quietly-powerful-film-from-tena",
+    "https://musebyclios.com/advertising/finland-just-made-the-bleakest-lottery-ads-of-all-time",
+    "https://musebyclios.com/advertising/foxes-wear-people-in-eos-shave-creams-unhinged-ads",
     "https://musebyclios.com/advertising/frito-lay-gives-fans-a-taste-of-super-bowl-in-pre-game-ad",
+    "https://musebyclios.com/advertising/heinz-celebrates-its-deep-cultural-ties-in-global-campaign",
+    "https://musebyclios.com/advertising/high-schoolers-all-look-exactly-alike-in-this-ed-tech-ad",
     "https://musebyclios.com/advertising/in-coca-colas-holiday-advert-santas-are-everywhere",
     "https://musebyclios.com/advertising/in-krogers-holiday-spot-every-picture-tells-a-story",
     "https://musebyclios.com/advertising/in-nbas-2023-24-tip-off-spot-its-everyones-game",
+    "https://musebyclios.com/advertising/in-shebas-new-ads-cat-owners-are-allergic-to-cats",
     "https://musebyclios.com/advertising/john-lewis-christmas-ad-stars-a-sinister-hunger-that-goes-unsated",
     "https://musebyclios.com/advertising/kids-food-charity-makes-the-burpiest-ad-of-all-time",
+    "https://musebyclios.com/advertising/metas-jonathan-kratz-on-the-challenging-times-faced-by-advertisers",
+    "https://musebyclios.com/advertising/miller-lite-faces-backlash-over-spot-launched-during-womens-history-month",
     "https://musebyclios.com/advertising/mtn-dew-gets-beaucoup-bizarro-in-your-soul-ads",
+    "https://musebyclios.com/advertising/one-thing-leads-to-another-in-nyts-latest-campaign",
     "https://musebyclios.com/advertising/parallels-between-running-a-marathon-and-creating-great-ads",
     "https://musebyclios.com/advertising/parkland-victims-parents-launch-lawsuit-media-campaign-to-combat-gun-violence",
+    "https://musebyclios.com/advertising/propelled-by-its-own-ads-burger-king-treks-through-time",
+    "https://musebyclios.com/advertising/reaction-splinters-over-aubrey-plazas-wood-milk-ads",
     "https://musebyclios.com/advertising/ryan-reynolds-and-rob-mcelhenney-lend-their-voices-to-ms-xmas-campaign",
     "https://musebyclios.com/advertising/sleighin-alive-john-travoltas-capital-one-commercial-tops-our-holiday-poll",
     "https://musebyclios.com/advertising/smithsonian-adds-collection-from-ad-pioneer-byron-lewis",
+    "https://musebyclios.com/advertising/so-many-fun-touches-in-this-paranoid-kfc-ad",
     "https://musebyclios.com/advertising/some-metoo-themed-ads-luis-rubiales-and-many-others-should-watch",
+    "https://musebyclios.com/advertising/thanks-to-andreas-nilsson-velveetas-la-dolce-campaign-got-subtly-cheesier",
+    "https://musebyclios.com/advertising/the-barbecue-test-lighting-a-cultural-spark-across-healthcare-ads-and-creativity",
     "https://musebyclios.com/advertising/the-beatles-in-my-life-powers-evocative-holiday-spot-from-amazon",
+    "https://musebyclios.com/advertising/the-day-advertising-died-and-marketings-new-era-dawned",
     "https://musebyclios.com/advertising/the-players-are-naked-in-these-sports-betting-ads-from-canada",
+    "https://musebyclios.com/advertising/these-pioneering-lgbtqia-campaigns-changed-everything",
     "https://musebyclios.com/advertising/these-statues-from-amazon-immortalize-ad-biz-heroics",
+    "https://musebyclios.com/advertising/this-nightmarish-a-i-generated-hotel-ad-makes-us-long-for-the-human-experience",
     "https://musebyclios.com/advertising/this-year-postens-christmas-ad-goes-back-to-enchanted-basics",
+    "https://musebyclios.com/advertising/volkswagen-explores-a-cars-blind-spot-to-shine-a-light-on-safety",
+    "https://musebyclios.com/advertising/vw-intros-its-bus-reboot-dubbed-the-id-buzz-with-slick-ooh",
+    "https://musebyclios.com/advertising/watch-this-ad-or-its-creators-will-fund-an-abortion",
+    "https://musebyclios.com/advertising/we-must-lift-up-young-bipoc-creatives-in-advertising-and-branded-content",
+    "https://musebyclios.com/advertising/youll-see-right-through-this-canada-post-campaign",
+    "https://musebyclios.com/design/these-philips-ads-give-refurbs-a-retro-futuristic-makeover",
     "https://musebyclios.com/film-tv/2-minutes-with-bob-israel-marketing-film-and-theater-impresario",
+    "https://musebyclios.com/film-tv/akiko-iwakawa-on-cutting-a-super-bowl-spot-and-how-brands-can-work-better-with-editors",
     "https://musebyclios.com/film-tv/apple-and-taika-waititi-made-a-sweet-film-about-accessibility",
+    "https://musebyclios.com/film-tv/as-upfronts-begin-tubi-targets-marketers-with-film-series",
     "https://musebyclios.com/film-tv/greenpeace-france-casts-pollution-as-the-villain-in-horror-film-spoofs",
     "https://musebyclios.com/film-tv/im-just-ken-the-story-behind-that-viral-heineken-ad",
+    "https://musebyclios.com/film-tv/its-ryan-reynolds-ad-world-we-just-live-in-it",
     "https://musebyclios.com/film-tv/kristen-and-daxs-driveway-is-a-conveyor-belt-of-vehicles-in-latest-carvana-ad",
+    "https://musebyclios.com/film-tv/matthew-maher-on-playing-nike-design-legend-peter-moore-in-the-new-film-air",
+    "https://musebyclios.com/film-tv/sofia-coppola-directs-keanu-reeves-in-suntorys-zippy-anniversary-film",
+    "https://musebyclios.com/film-tv/ted-lassos-brett-goldstein-stars-in-this-ludicrously-extreme-fitness-ad",
+    "https://musebyclios.com/film-tv/wk-gives-samsung-galaxy-the-horror-film-treatment",
     "https://musebyclios.com/film-tv/xmas-is-over-so-ryan-reynolds-mint-mobile-put-santa-in-its-ads",
     "https://musebyclios.com/health/explosive-film-condemns-violence-against-transgender-people",
+    "https://musebyclios.com/music/14-big-bad-delightfully-weird-ads-from-hip-hops-50-years-on-earth",
+    "https://musebyclios.com/music/adele-john-malkovich-magic-and-bird-drive-spot-hyping-nba-finals",
+    "https://musebyclios.com/music/amazon-ad-council-music-can-help-parents-connect-with-teens-on-mental-health",
     "https://musebyclios.com/music/avocados-from-mexico-lets-its-jingle-do-the-talking",
     "https://musebyclios.com/music/cindy-crawford-channels-iconic-92-pepsi-super-bowl-ad-for-one-margarita",
     "https://musebyclios.com/music/music-supervisor-peymon-maskan-makes-ads-that-dont-skip-a-beat",
+    "https://musebyclios.com/music/sonic-revolution-how-a-i-is-redefining-the-value-of-music-in-advertising",
     "https://musebyclios.com/music/spotify-makes-2023-version-of-wrapped-its-biggest-campaign-ever",
     "https://musebyclios.com/musings/monthly-musings-mariah-ad-spotlights-our-latest-events",
     "https://musebyclios.com/worldviews/aces-u-s-open-tie-ins-and-other-great-tennis-ads",
+    "https://musebyclios.com/worldviews/ads-from-the-middle-east-explore-self-expression-dreams-of-youth",
     "https://musebyclios.com/worldviews/an-eggie-revolution-perfect-paella-and-other-great-ads-from-spain",
+    "https://musebyclios.com/worldviews/bold-barmy-and-beautiful-campaigns-from-across-the-globe",
+    "https://musebyclios.com/worldviews/exploring-impressive-intriguing-and-irreverent-ads-from-south-africa",
     "https://musebyclios.com/worldviews/great-ads-from-japan-feature-godzilla-king-ghidorah-and-a-lonely-water-heater",
     "https://musebyclios.com/worldviews/great-baseball-ads-just-in-time-for-the-mlb-playoffs",
+    "https://musebyclios.com/worldviews/groundbreaking-latam-campaigns-pushing-the-creative-envelope",
     "https://musebyclios.com/worldviews/here-comes-the-judge-plus-lizards-and-led-hula-hoops-in-rad-ads-from-the-u-k",
+    "https://musebyclios.com/worldviews/highlighting-bright-beery-bearded-ads-from-australia-and-new-zealand",
     "https://musebyclios.com/worldviews/innovative-ads-from-south-korea-feature-k-pop-k-food-and-car-parts-as-high-fashion",
     "https://musebyclios.com/worldviews/italian-style-these-impressive-ads-focus-on-cars-cuisine-friendship-and-footwear",
     "https://musebyclios.com/worldviews/memorable-holiday-ads-from-around-the-world",
+    "https://musebyclios.com/worldviews/mulling-marvelous-meditative-and-sometimes-magical-campaigns-from-mongolia",
     "https://musebyclios.com/worldviews/past-present-and-future-collide-in-breakthrough-ads-from-india",
     "https://musebyclios.com/worldviews/reunions-soup-and-beer-play-into-these-delightful-ads-from-nigeria",
     "https://musebyclios.com/worldviews/singapores-creativity-shines-in-these-recent-commercial-gems",
+    "https://musebyclios.com/worldviews/spotlighting-bodacious-badass-campaigns-from-southeast-asia",
+    "https://musebyclios.com/worldviews/these-ads-from-france-run-a-gamut-of-styles-and-emotions",
     "https://musebyclios.com/worldviews/these-great-ads-from-argentina-feature-a-i-probing-fingers-and-puffy-chair-people",
+    "https://noblestudios.com/noble-news/web-development-design/noble-studios-launches-new-website-for-adventuresmith-explorations",
     "https://noblestudios.com/paid-media/google-discovery-ads",
     "https://propmark.com.br/anunciantes/anhanguera-e-unopar-lancam-campanhas-criadas-pela-ogilvy",
     "https://propmark.com.br/anunciantes/aramis-anuncia-amyr-klink-como-protagonista-de-campanha-de-fim-de-ano",
     "https://propmark.com.br/anunciantes/campanha-da-betc-havas-conecta-lor-e-aluf-no-spfw",
     "https://propmark.com.br/anunciantes/campanha-da-gomes-da-costa-apresenta-o-macarrao-com-atum-como-solucao",
     "https://propmark.com.br/anunciantes/hapvida-leva-elba-ramalho-a-campanha-de-outubro-rosa-sobre-diagnostico-precoce",
+    "https://propmark.com.br/anunciantes/kenner-e-flamengo-resgatam-origem-no-remo-em-nova-campanha",
     "https://propmark.com.br/anunciantes/mcdonalds-apresenta-mequi-box-em-campanha-sobre-diferentes-momentos",
     "https://propmark.com.br/anunciantes/selton-mello-estrela-nova-fase-da-campanha-do-bradesco-empresas",
     "https://propmark.com.br/anunciantes/volvo-lanca-campanha-com-grey-brasil-para-reforcar-seguranca-no-transito",
@@ -6730,6 +7189,7 @@
     "https://roastbrief.com.mx/2026/09/sydney-sweeney-paraliza-las-redes-con-la-audaz-nueva-campana-de-la-app-de-apuestas-novig",
     "https://roastbrief.com.mx/2026/09/tnt-sports-x-jenaro-la-primera-campana-conjunta-que-enaltece-la-pasion-del-futbol-chileno",
     "https://roastbrief.com.mx/2026/09/tu-celu-puede-esperar-coca-cola-expande-en-argentina-la-campana-el-mundo-puede-esperar",
+    "https://wearesocial.com/it/blog/2022/02/super-bowl-ads-2022-la-nostra-classifica",
     "https://wearesocial.com/it/blog/2022/05/youtube-testa-le-ads-sugli-short-mercoledisocial",
     "https://www.abcdacomunicacao.com.br/7days-prepara-campanha-multiplataforma-para-acompanhar-a-jornada-dos-estudantes-durante-o-enem",
     "https://www.abcdacomunicacao.com.br/black-friday-pode-encarecer-leads-imobiliarios-e-exigir-mais-eficiencia-das-campanhas-de-marketing",
@@ -6744,6 +7204,14 @@
     "https://www.abcdacomunicacao.com.br/ronaldinho-gaucho-foge-do-obvio-em-nova-campanha-de-verao-de-itaipava",
     "https://www.abcdacomunicacao.com.br/shopping-penha-anuncia-renata-vergara-como-nova-gerente-financeira-e-comercial",
     "https://www.abcdacomunicacao.com.br/unisinos-lanca-campanha-de-vestibular-2027-conectada-ao-novo-posicionamento-institucional",
+    "https://www.adobomagazine.com/campaign-spotlight/julas-herb-champions-t-beauty-in-first-brand-campaign-by-wolf-bkk",
+    "https://www.adobomagazine.com/insight/fifty5blue-strengthens-digital-advertising-intelligence-in-the-philippines-with-adclarity",
+    "https://www.adworld.ie/2026/01/09/bonfire-unveils-new-beacon-care-fertility-campaign",
+    "https://www.adworld.ie/2026/01/09/hidden-hearing-stresses-clarity-expertise-in-new-campaign-from-bloom",
+    "https://www.adworld.ie/2026/01/09/irish-advertising-market-to-grow-by-9-7-in-2026-according-to-wpp-media",
+    "https://www.adworld.ie/2026/01/09/out-look-traffic-helps-drive-ooh-impact",
+    "https://www.adworld.ie/2026/01/16/energy-galore-in-new-campaign-from-boysgirls",
+    "https://www.adworld.ie/2026/01/16/out-look-vodafone-impacts-as-the-biggest-brand-on-ooh-in-2025",
     "https://www.adworld.ie/2026/01/23/ooh-the-impact-of-colour",
     "https://www.adworld.ie/2026/01/30/avonmore-plans-to-shake-up-protein-drinks-market-with-new-goosebump-campaign",
     "https://www.adworld.ie/2026/01/30/out-look-the-ooh-release-window",
@@ -6922,6 +7390,7 @@
     "https://www.connellypartners.com/news/boston-business-journal-largest-advertising-agencies-in-massachusetts",
     "https://www.connellypartners.com/news/campaign-us-how-working-moms-can-truly-work-from-anywhere",
     "https://www.connellypartners.com/news/campaign-us-why-being-bold-during-uncertainty-makes-you-a-better-leader",
+    "https://www.connellypartners.com/news/engaging-women-beyond-sappy-spots-and-pepto-pink-during-the-super-bowl",
     "https://www.decisionmarketing.co.uk/news/ad-budgets-rise-again-as-brands-play-the-long-game",
     "https://www.decisionmarketing.co.uk/news/burnham-faces-health-lobby-fury-over-ad-ban-failings",
     "https://www.decisionmarketing.co.uk/news/cmos-urged-to-wake-up-to-creator-content-commercials",
@@ -6937,6 +7406,7 @@
     "https://www.decisionmarketing.co.uk/news/parla-polishes-up-debut-tv-ad-for-sustainable-oral-care",
     "https://www.decisionmarketing.co.uk/news/pure-cremation-ad-scorched-for-misleading-consumers",
     "https://www.decisionmarketing.co.uk/news/tesco-whoosh-ad-push-gets-serious-about-rapid-delivery",
+    "https://www.forsman.com/news/50-years-of-strategy",
     "https://www.forsman.com/news/new-work-road-safety-authority",
     "https://www.informabtl.com/activaciones-dia-de-muertos-2026-marcas-btl",
     "https://www.informabtl.com/informabtl-21-aniversario-21-campanas",
@@ -6956,12 +7426,15 @@
     "https://www.marketing-beat.co.uk/2025/09/17/clarins-sweet-spot-pop-up",
     "https://www.marketing-beat.co.uk/2025/09/18/icc-catch-the-spirit-campaign",
     "https://www.marketing-beat.co.uk/2025/09/19/marks-spencer-mother",
+    "https://www.medianews4u.com/aaais-indie-council-to-organise-2-day-ai-bootcamp-for-advertising-professionals-in-mumbai",
     "https://www.medianews4u.com/brands-celebrate-the-spirit-of-togetherness-gifting-and-new-beginnings-through-festive-campaigns-diwali-2026",
     "https://www.medianews4u.com/brands-turn-the-spotlight-on-human-connections-and-festive-emotions-diwali-campaigns-2026",
     "https://www.medianews4u.com/campa-cola-unveils-tayyari-big-tyohaar-bada-big-festive-campaign-conceptualised-by-mccann-india",
     "https://www.medianews4u.com/coral-media-brings-mtr-foods-indias-sweetest-language-campaign-to-life-through-ooh-and-immersive-experiences",
     "https://www.medianews4u.com/himalaya-babycare-focuses-on-newborn-winter-care-with-its-latest-parenting-campaign",
+    "https://www.medianews4u.com/id-fresh-makes-a-case-for-moms-food-wisdom-in-new-id-ka-idea-campaign",
     "https://www.medianews4u.com/kurlon-ropes-in-siddharth-for-festive-campaign-upgrade-what-matters",
+    "https://www.medianews4u.com/m-n-rao-marks-60-years-of-bespoke-tailoring-with-documentary-style-brand-film-by-the-content-theory",
     "https://www.medianews4u.com/m-o-m-reimagines-traditional-chikki-with-makhana-based-innovation-and-humour-led-campaign",
     "https://www.medianews4u.com/ob-gob-and-ravi-shastri-add-a-playful-twist-to-outdoor-advertising-at-juhu-beach",
     "https://www.medianews4u.com/orient-electric-partners-with-wpp-media-to-explore-advertising-on-chatgpt",
