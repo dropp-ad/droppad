@@ -45,7 +45,7 @@
       "mod": "Fri, 27 Nov 2026 08:00:57 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Fri, 27 Nov 2026 09:22:14 GMT"
+      "mod": "Fri, 27 Nov 2026 09:23:15 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"fef0e0a28808c2881518c92c8da1e872\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Fri, 27 Nov 2026 09:22:16 GMT"
+      "mod": "Fri, 27 Nov 2026 09:23:16 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"2fa515d99b09d0903a6c5aacf71a897e-gzip\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Fri, 27 Nov 2026 09:22:16 GMT"
+      "mod": "Fri, 27 Nov 2026 09:23:17 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -294,7 +294,7 @@
       "mod": "Fri, 27 Nov 2026 09:07:55 GMT"
     }
   },
-  "yt_pos": 87,
+  "yt_pos": 117,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1142,7 +1142,7 @@
       "Crispin": "crispinagency"
     },
     "tentadas": {},
-    "pos": 2953,
+    "pos": 2954,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1652,7 +1652,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 3840,
+    "rodadas": 3841,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3426,7 +3426,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 1062,
+    "pos_quente": 1063,
     "lida": {
       "droga5sp": "2026-11-27T07:51:12.183643+00:00",
       "mboothagency": "2026-11-27T06:31:12.325416+00:00",
@@ -3473,7 +3473,7 @@
       "kesselskramer": "2026-11-27T08:21:12.148562+00:00",
       "northfolkagency": "2026-11-27T06:42:11.569227+00:00",
       "meaningfulsocialclub": "2026-11-27T08:24:12.028229+00:00",
-      "vamp": "2026-11-27T07:46:12.257852+00:00",
+      "vamp": "2026-11-27T09:23:12.124623+00:00",
       "melbournesocialco": "2026-11-27T08:25:11.487881+00:00",
       "ogilvyitaly": "2026-11-27T07:47:11.479201+00:00",
       "squidgroupnz": "2026-11-27T08:30:12.056353+00:00",
@@ -3948,7 +3948,7 @@
       "mullenloweus": "2026-11-27T00:09:47.648065+00:00",
       "edelman": "2026-11-27T06:30:11.450188+00:00",
       "crispinagency": "2026-11-27T00:39:47.639326+00:00",
-      "giant_spoon": "2026-11-27T03:04:59.413337+00:00",
+      "giant_spoon": "2026-11-27T09:23:12.124623+00:00",
       "brainsagency": "2026-11-27T03:06:59.458795+00:00"
     },
     "ultimo_post": {
@@ -4722,6 +4722,6 @@
     "https://www.medianews4u.com/csb-bank-puts-kids-at-the-centre-of-its-first-brand-campaign-bankingkiboli",
     "https://www.meioemensagem.com.br/comunicacao/piracanjuba-destaca-empatia-em-campanha-de-natal"
   ],
-  "ultima_rodada": "2026-11-27T09:22:11.834206+00:00",
+  "ultima_rodada": "2026-11-27T09:23:12.124623+00:00",
   "ultima_novidade": "2026-11-27T09:22:11.834206+00:00"
 }
