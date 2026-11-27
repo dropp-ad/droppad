@@ -180,6 +180,10 @@ CONTEUDO = re.compile(r"\b(your\s+(?:linkedin\s+|google\s+|meta\s+|facebook\s+|t
                       r"project\s+spotlight|case\s+study|caso\s+de\s+[eé]xito|c[oó]mo\s+pasar|como\s+passar|nosotros\s+encontramos|n[oó]s\s+encontramos|"
                       r"ad\s+budget|or[çc]amento\s+de\s+(?:m[ií]dia|publicidade)|presupuesto\s+publicitario|"
                       r"was\s+never\s+meant\s+to|the\s+real\s+story\s+of|"
+                      # agência comentando campanha dos outros
+                      r"ditched|after\s+(?:two|three|\d+)\s+years\s+of|here'?s\s+why|what\s+(?:we|brands|marketers)\s+can\s+learn|lessons?\s+from|"
+                      r"key\s+takeaways?|our\s+take|thoughts\s+on|hot\s+takes?|looking\s+beyond\s+the\s+ad|the\s+other\s+angle|"
+                      r"o\s+que\s+(?:aprender|aprendemos)|li[çc][õo]es\s+d[aeo]|"
                       r"(?:as|como)\s+(?:a|an|um|uma)?\s*(?:\w+\s+){0,2}(?:supervisor|manager|strategist|coordinator|analyst|director|intern|estagi[aá]ri[oa]|gerente|coordenador[a]?))\b", re.I)
 # a agência falando de prêmio ou festival, não da campanha
 PREMIO = re.compile(r"\b(awards?|awarded|prêmio|pr[eê]mios|premio|premios|premiad[ao]s?|shortlist\w*|finalist\w*|jury|j[uú]ri|jurado|"
@@ -878,6 +882,8 @@ EVENTO = re.compile(r"\b((?:great|amazing|wonderful|fantastic|incredible|unforge
                     r"(?:que|uma|grande|linda|incr[ií]vel)\s+noite|noite\s+(?:de|incr[ií]vel|especial)|(?:gran|qu[eé])\s+noche|una\s+noche|"
                     r"thanks?\s+(?:to\s+)?(?:everyone|all)\s+who\s+(?:came|joined|attended)|we\s+hosted|(?:was|were)\s+(?:thrilled|honou?red|proud|delighted)\s+to\s+(?:host|join|be|speak|attend)|"
                     r"panel|painel|keynote|palestra|summit|conference|confer[eê]ncia|conferencia|meetup|roundtable|fireside|gala|"
+                    r"(?:walking|walked|took|take)\s+(?:on\s+)?(?:to\s+)?(?:the\s+)?stage|on\s+stage|no\s+palco|en\s+el\s+escenario|nextm|"
+                    r"conversation\s+(?:about|on|with)|conversa\s+sobre|"
                     r"future\s+of\s+commerce|celebrating\s+the\s+future)\b", re.I)
 TEM_PECA = re.compile(r"\b(campaign|campanha|campaña|film|filme|spot|commercial|comercial|anúncio|ad)\b", re.I)
 

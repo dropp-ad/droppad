@@ -221,7 +221,18 @@ def campanha_de_barra(p):
             "video": bool(p["video"]), "fonte": p["fonte"], "tipo": p["tipo"], "campanha": c}
 
 
+def imagem_real(img):
+    """A imagem genérica do LinkedIn ("Posted on LinkedIn", static.licdn.com) não conta como imagem."""
+    img = img or ""
+    return "" if "static.licdn.com" in img or "/aero-v1/" in img else img
+
+
+def tem_midia(c):
+    return bool(c.get("yt") or c.get("video") or imagem_real(c.get("image")) or c.get("images"))
+
+
 def post_norm(fonte, tipo, ag, texto, url, data, video="", img=""):
+    img = imagem_real(img)
     return {"fonte": fonte, "tipo": tipo, "agencia": ag, "texto": texto or "", "url": url or "",
             "data": str(data or "")[:19], "video": video or "", "imagem": img or ""}
 
@@ -645,7 +656,11 @@ def publicar(caminho):
     marca_dia = {(A.chave(c.get("brand", "")), c.get("date")) for c in camp}
     import midia  # noqa: PLC0415  (fica ao lado deste arquivo)
     for c in novas:
+        if not imagem_real(c.get("image")):
+            c.pop("image", None)
         midia.completar(c)
+    # sem filme nem imagem da campanha (só o card azul do LinkedIn): não entra
+    novas = [c for c in novas if tem_midia(c)]
     mexeu = False
     entraram = []
     for c in novas:

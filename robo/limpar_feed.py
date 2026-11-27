@@ -18,6 +18,9 @@ CURADORIAS = ("LinkedIn · Rian Swart", "LinkedIn · Clube", "Clube de Criação
 
 def motivo(c):
     src = c.get("source") or ""
+    if src.startswith("LinkedIn") and not (c.get("yt") or c.get("video") or c.get("images")
+                                           or ("static.licdn.com" not in (c.get("image") or "") and c.get("image"))):
+        return "LinkedIn sem filme nem imagem"
     if src.startswith(CURADORIAS):
         return ""
     social = src.startswith(("Instagram", "LinkedIn"))
@@ -32,6 +35,9 @@ def motivo(c):
         return "plataforma como marca"
     if social and c.get("brand") and not A.marca_ok(c["brand"]) and marca in {A.sem_acento(x) for x in A.NAO_MARCA}:
         return "marca inválida"
+    if src.startswith("LinkedIn") and not (c.get("yt") or c.get("video") or c.get("images")
+                                           or ("static.licdn.com" not in (c.get("image") or "") and c.get("image"))):
+        return "LinkedIn sem filme nem imagem"
     if not social and (A.CONTEUDO_TIT.search(t) or A.PROMO.search(t)):
         return "título de não-campanha"
     return ""
