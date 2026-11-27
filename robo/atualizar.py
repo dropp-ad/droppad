@@ -551,13 +551,18 @@ def item_review(url):
         return None
     meta = {}
     for tag_meta in re.findall(r"<meta\b[^>]*>", pagina, re.I):
-        attrs = dict(re.findall(r'''([\w:-]+)\s*=\s*["']([^"']*)["']''', tag_meta))
+        attrs = {nome.lower(): valor for nome, _, valor in re.findall(
+            r'''([\w:-]+)\s*=\s*(["'])(.*?)\2''', tag_meta, re.S,
+        )}
         nome = attrs.get("property") or attrs.get("name") or attrs.get("itemprop")
         if nome and "content" in attrs:
             meta[nome.lower()] = attrs["content"]
     publicado = meta.get("article:published_time") or meta.get("datepublished")
     if not publicado:
         m = re.search(r'''"datePublished"\s*:\s*"([^"]+)"''', pagina, re.I)
+        publicado = m.group(1) if m else ""
+    if not publicado:
+        m = re.search(r"Review posted:\s*(\d{1,2} [A-Za-z]+ \d{4})\b", pagina, re.I)
         publicado = m.group(1) if m else ""
     if not publicado:
         miolo = corpo_da_materia(pagina)
@@ -582,7 +587,7 @@ def item_review(url):
         m = re.search(r"<title\b[^>]*>(.*?)</title>", pagina, re.I | re.S)
         titulo = limpar(m.group(1)) if m else ""
     titulo = re.sub(r"^DAVID(?: Reviews)?\s*[|:–—-]\s*|\s*[|–—-]\s*DAVID(?: Reviews)?$", "", titulo, flags=re.I)
-    par = re.fullmatch(r'''(.+?)\s*[:–—-]?\s+["“](.+?)["”]''', titulo)
+    par = re.fullmatch(r'''(.+?)\s*[:–—-]?\s+["“'‘](.+?)["”'’]''', titulo)
     if par:
         titulo = '%s: "%s"' % (par[1].rstrip(" :–—-"), par[2])
     if not data or not titulo:

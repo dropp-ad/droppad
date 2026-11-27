@@ -4,37 +4,76 @@ on:
     branches: [main]
     paths: [.github/workflows/verificar-david-reviews.yml]
 permissions:
-  contents: read
+  contents: write
+  actions: write
+concurrency:
+  group: atualizar-ad-drop
+  cancel-in-progress: false
 jobs:
   verificar:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
-      - name: Verificar acesso e leitura de reviews
+        with:
+          ref: main
+      - name: Ler reviews de hoje e publicar no dropp.ad
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          set -o pipefail
-          PYTHONPATH=robo python3 - <<'PY' | tee -a "$GITHUB_STEP_SUMMARY"
-          import concurrent.futures
+          git config user.name "droppad robô"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for tentativa in 1 2 3; do
+            PYTHONPATH=robo python3 - <<'PY'
+          import tempfile
+          from pathlib import Path
           import atualizar as a
 
-          url = "https://www.davidreviews.com/Reviews/"
-          try:
-              pagina = a.baixar(url, timeout=20)
-          except Exception as e:
-              print(f"::error::Acesso à fonte: {type(e).__name__} {e}")
-              raise
-          links = a.links_reviews(url, pagina)
-          print(f"::notice::Fonte acessível. Links encontrados: {len(links)}")
-          import re
-          from html import unescape
-          for link in list(links)[:3]:
-              review = a.baixar(link, timeout=15)
-              title = re.search(r"<title[^>]*>(.*?)</title>", review, re.I | re.S)
-              print("::notice::TITLE " + (a.limpar(title[1]) if title else "(ausente)"))
-              for line in review.splitlines():
-                  if re.search(r'og:|publish|november|2026-11-|<h[12]|<video|mp4|m3u8|player', line, re.I):
-                      line = unescape(re.sub(r"\s+", " ", line)).strip()
-                      if 0 < len(line) < 700:
-                          print("::notice::MARKUP " + line)
+          fontes = a.ler_json(a.FONTES, {})
+          site, = [s for s in fontes["sites"] if s["nome"] == "David Reviews"]
+          original, novidades = a.CAMP, a.NOVIDADES
+          existentes = a.ler_json(original, [])
+          revisar = a.item_review
+
+          def somente_hoje(url):
+              item = revisar(url)
+              if item and item["data"] == "2026-11-27":
+                  print(f"::notice::REVIEW {item['data']} | {item['titulo']} | {url}")
+                  return item
+              return None
+
+          with tempfile.TemporaryDirectory() as raiz:
+              raiz = Path(raiz)
+              a.CAMP, a.NOVIDADES = str(raiz / "campaigns.json"), str(raiz / "novidades.json")
+              a.FONTES, a.ESTADO = str(raiz / "fontes.json"), str(raiz / "estado.json")
+              Path(a.CAMP).write_bytes(Path(original).read_bytes())
+              # Coleta pontual da página de reviews, sem rodar as outras fontes.
+              a.salvar_json(a.FONTES, {"feeds": [], "sites": [site]})
+              a.fontes_dos_sites = lambda *_: []
+              a.completar_imagens = a.completar_fotos = a.completar_textos = lambda *_: 0
+              a.item_review = somente_hoje
+              a.MAX_POR_FONTE_DIA = 40
+              a.main()
+              ids = {c["id"] for c in existentes}
+              novos = [c for c in a.ler_json(a.CAMP, []) if c["id"] not in ids]
+          assert all(c["source"] == site["nome"] and c["date"] == "2026-11-27" for c in novos)
+          print(f"::notice::REVIEW novas campanhas publicáveis: {len(novos)}")
+          for c in novos:
+              print(f"::notice::REVIEW publicação {c['id']}")
+          if novos:
+              tudo = sorted([*existentes, *novos], key=lambda c: (c["date"], c.get("addedAt", "")), reverse=True)
+              a.salvar_json(original, tudo)
+              a.salvar_json(novidades, {"atualizado": a.AGORA.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                                        "total": len(tudo), "ultimo": tudo[0]["id"]})
           PY
+            git add campaigns.json novidades.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Publica as campanhas de hoje da David Reviews'
+            if git push origin HEAD:main; then
+              gh workflow run publicar.yml --ref main
+              exit 0
+            fi
+            git fetch -q origin main
+            git reset -q --hard origin/main
+          done
+          exit 1
