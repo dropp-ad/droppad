@@ -45,7 +45,7 @@
       "mod": "Fri, 27 Nov 2026 16:59:12 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Fri, 27 Nov 2026 16:58:37 GMT"
+      "mod": "Fri, 27 Nov 2026 17:03:38 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"fef0e0a28808c2881518c92c8da1e872\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Fri, 27 Nov 2026 16:59:38 GMT"
+      "mod": "Fri, 27 Nov 2026 17:03:39 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"f30036d7bb854bb4a3d3c4781cadc7c7-gzip\"",
@@ -172,7 +172,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Fri, 27 Nov 2026 16:58:40 GMT"
+      "mod": "Fri, 27 Nov 2026 17:02:40 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -295,13 +295,13 @@
       "mod": "Fri, 27 Nov 2026 13:53:58 GMT"
     },
     "https://theinspirationroom.com/daily/feed/": {
-      "mod": "Fri, 27 Nov 2026 16:54:21 GMT"
+      "mod": "Fri, 27 Nov 2026 16:57:50 GMT"
     },
     "https://www.marketingdirecto.com/feed/": {
       "mod": "Fri, 27 Nov 2026 15:58:13 GMT"
     }
   },
-  "yt_pos": 90,
+  "yt_pos": 153,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1149,7 +1149,7 @@
       "Crispin": "crispinagency"
     },
     "tentadas": {},
-    "pos": 3619,
+    "pos": 3627,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1659,7 +1659,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 4298,
+    "rodadas": 4302,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3433,7 +3433,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 1520,
+    "pos_quente": 1524,
     "lida": {
       "droga5sp": "2026-11-27T16:44:35.159098+00:00",
       "mboothagency": "2026-11-27T12:29:33.732755+00:00",
@@ -3447,7 +3447,7 @@
       "criticalmassagency": "2026-11-27T12:32:33.434761+00:00",
       "venablesbell": "2026-11-27T16:50:35.003932+00:00",
       "initiativeagency": "2026-11-26T15:23:36.861556+00:00",
-      "cramerkrasselt": "2026-11-27T16:51:35.179689+00:00",
+      "cramerkrasselt": "2026-11-27T17:03:35.077517+00:00",
       "horizonmediaagency": "2026-11-26T15:24:37.088784+00:00",
       "ignitevisibility": "2026-11-27T16:52:35.103776+00:00",
       "groupmagency": "2026-11-26T15:25:36.330212+00:00",
@@ -3465,13 +3465,13 @@
       "victoriousagency": "2026-11-26T15:31:36.633397+00:00",
       "psyop": "2026-11-27T16:59:34.666753+00:00",
       "klientboost": "2026-11-26T15:32:37.005209+00:00",
-      "connellypartners": "2026-11-27T16:24:35.242391+00:00",
+      "connellypartners": "2026-11-27T17:00:35.127846+00:00",
       "fantasyagency": "2026-11-26T15:33:36.611511+00:00",
-      "thegoatagency": "2026-11-27T15:27:34.850877+00:00",
+      "thegoatagency": "2026-11-27T17:01:34.457818+00:00",
       "collinsagency": "2026-11-27T12:36:33.476133+00:00",
-      "sociallypowerful": "2026-11-27T15:28:34.960967+00:00",
+      "sociallypowerful": "2026-11-27T17:02:34.720843+00:00",
       "betcparis": "2026-11-27T16:38:34.855693+00:00",
-      "traackr": "2026-11-27T15:29:34.370138+00:00",
+      "traackr": "2026-11-27T17:03:35.077517+00:00",
       "tbwaparis": "2026-11-27T12:38:33.770567+00:00",
       "meltwater": "2026-11-27T15:30:35.019065+00:00",
       "braveagency": "2026-11-26T15:37:36.929976+00:00",
@@ -3576,9 +3576,9 @@
       "haze.ag": "2026-11-26T16:30:36.400339+00:00",
       "kampgrizzly": "2026-11-27T16:59:34.666753+00:00",
       "agenciatrato": "2026-11-26T16:31:36.385663+00:00",
-      "highdiveus": "2026-11-27T11:02:12.066902+00:00",
+      "highdiveus": "2026-11-27T17:00:35.127846+00:00",
       "agencialua": "2026-11-26T16:32:36.779536+00:00",
-      "barkley.okrp": "2026-11-27T16:21:35.241921+00:00",
+      "barkley.okrp": "2026-11-27T17:02:34.720843+00:00",
       "fbizoficial": "2026-11-26T16:33:36.892904+00:00",
       "iprospectbrasil": "2026-11-26T16:34:37.092246+00:00",
       "carmichael_lynch": "2026-11-27T16:32:34.543607+00:00",
@@ -3859,7 +3859,7 @@
       "thesisagency": "2026-11-26T22:13:48.225420+00:00",
       "pollinateagency": "2026-11-26T22:14:48.125491+00:00",
       "vsapartners": "2026-11-26T22:16:47.718561+00:00",
-      "schafercondoncarter": "2026-11-27T11:03:11.841295+00:00",
+      "schafercondoncarter": "2026-11-27T17:01:34.457818+00:00",
       "twoxfouragency": "2026-11-26T22:19:48.046814+00:00",
       "tdhcreative": "2026-11-27T11:06:12.372064+00:00",
       "upshotagency": "2026-11-26T22:22:47.516978+00:00",
@@ -4772,6 +4772,6 @@
     "https://propmark.com.br/anunciantes/piracanjuba-estreia-campanha-de-natal-sobre-empatia-e-inclusao",
     "https://propmark.com.br/anunciantes/bradesco-vida-e-previdencia-estreia-campanha-criada-pela-almapbbdo"
   ],
-  "ultima_rodada": "2026-11-27T16:59:34.666753+00:00",
+  "ultima_rodada": "2026-11-27T17:03:35.077517+00:00",
   "ultima_novidade": "2026-11-27T16:59:34.666753+00:00"
 }
