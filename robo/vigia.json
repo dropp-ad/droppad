@@ -19,8 +19,8 @@
       "mod": "Fri, 27 Nov 2026 19:50:01 GMT"
     },
     "https://propmark.com.br/feed/": {
-      "etag": "\"059ec0dee737e53bf4dbe4d94f196c0a\"",
-      "mod": "Fri, 27 Nov 2026 22:13:13 GMT"
+      "etag": "\"32b6d7e3cf0a4af1648655b324d7fe2e\"",
+      "mod": "Fri, 27 Nov 2026 22:14:30 GMT"
     },
     "https://www.marketingdive.com/feeds/news/": {
       "mod": "Wed, 25 Nov 2026 15:46:00 GMT"
@@ -45,7 +45,7 @@
       "mod": "Fri, 27 Nov 2026 22:05:40 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Fri, 27 Nov 2026 22:13:50 GMT"
+      "mod": "Fri, 27 Nov 2026 22:17:11 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"dc09f370236fec131ab517c4409df333\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Fri, 27 Nov 2026 22:13:52 GMT"
+      "mod": "Fri, 27 Nov 2026 22:17:51 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"f30036d7bb854bb4a3d3c4781cadc7c7-gzip\"",
@@ -168,7 +168,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Fri, 27 Nov 2026 22:13:45 GMT"
+      "mod": "Fri, 27 Nov 2026 22:17:51 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -245,7 +245,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Fri, 27 Nov 2026 22:05:53 GMT"
+      "mod": "Fri, 27 Nov 2026 22:15:55 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -291,7 +291,7 @@
       "mod": "Fri, 27 Nov 2026 13:53:58 GMT"
     },
     "https://theinspirationroom.com/daily/feed/": {
-      "mod": "Fri, 27 Nov 2026 22:09:49 GMT"
+      "mod": "Fri, 27 Nov 2026 22:12:50 GMT"
     },
     "https://www.marketingdirecto.com/feed/": {
       "mod": "Fri, 27 Nov 2026 15:58:13 GMT"
@@ -307,7 +307,7 @@
       "mod": "Fri, 27 Nov 2026 10:45:50 GMT"
     },
     "https://www.strategies.fr/feed": {
-      "mod": "Fri, 27 Nov 2026 22:13:52 GMT"
+      "mod": "Fri, 27 Nov 2026 22:17:52 GMT"
     },
     "https://thestable.com.au/feed/": {
       "etag": "\"f933d6e7e0830dd6c88ac56aa053c3af\"",
@@ -326,7 +326,7 @@
       "mod": "Thu, 27 Jun 2024 15:55:37 GMT"
     }
   },
-  "yt_pos": 168,
+  "yt_pos": 231,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1174,7 +1174,7 @@
       "Crispin": "crispinagency"
     },
     "tentadas": {},
-    "pos": 3971,
+    "pos": 3975,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1684,7 +1684,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 4612,
+    "rodadas": 4616,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3458,7 +3458,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 1834,
+    "pos_quente": 1838,
     "lida": {
       "droga5sp": "2026-11-27T21:45:47.460629+00:00",
       "mboothagency": "2026-11-27T18:27:47.665713+00:00",
@@ -3514,15 +3514,15 @@
       "fitzroyamsterdam": "2026-11-27T18:51:48.165551+00:00",
       "publicisjapan": "2026-11-27T22:05:48.076670+00:00",
       "boondoggleagency": "2026-11-27T18:52:48.183403+00:00",
-      "wkmexico": "2026-11-27T20:39:47.989066+00:00",
+      "wkmexico": "2026-11-27T22:14:47.279816+00:00",
       "thrivedigitalagency": "2026-11-27T18:53:48.282671+00:00",
-      "greymexico": "2026-11-27T20:40:48.029315+00:00",
+      "greymexico": "2026-11-27T22:15:48.079132+00:00",
       "uprisedigitalagency": "2026-11-27T18:54:47.645655+00:00",
-      "almapbbdo": "2026-11-27T20:41:47.791900+00:00",
+      "almapbbdo": "2026-11-27T22:16:47.971460+00:00",
       "bornsocialagency": "2026-11-27T18:55:47.415110+00:00",
       "artplan": "2026-11-27T14:56:34.413689+00:00",
       "mergemarketing": "2026-11-27T18:56:47.972414+00:00",
-      "wmccannbr": "2026-11-27T20:42:48.190057+00:00",
+      "wmccannbr": "2026-11-27T22:17:47.699566+00:00",
       "humandigitalagency": "2026-11-27T18:57:47.503841+00:00",
       "ogilvy": "2026-11-27T20:43:48.214462+00:00",
       "nakedcreative_": "2026-11-27T18:58:47.477117+00:00",
@@ -3749,10 +3749,10 @@
       "impalamexico": "2026-11-27T22:11:48.181433+00:00",
       "thinkingsocialmx": "2026-11-27T22:12:48.109509+00:00",
       "pelmx": "2026-11-27T22:13:48.006538+00:00",
-      "inpulsedigital": "2026-11-26T19:07:48.024752+00:00",
-      "alturainteractive": "2026-11-26T19:08:48.182348+00:00",
-      "concepthausmx": "2026-11-26T19:09:48.272553+00:00",
-      "retornodigitalmx": "2026-11-27T14:40:34.925583+00:00",
+      "inpulsedigital": "2026-11-27T22:14:47.279816+00:00",
+      "alturainteractive": "2026-11-27T22:15:48.079132+00:00",
+      "concepthausmx": "2026-11-27T22:16:47.971460+00:00",
+      "retornodigitalmx": "2026-11-27T22:17:47.699566+00:00",
       "mccannmexico": "2026-11-27T14:41:34.460294+00:00",
       "ddbmexico": "2026-11-26T19:12:47.817336+00:00",
       "havasmexico": "2026-11-27T14:42:34.474736+00:00",
@@ -4041,7 +4041,7 @@
       "uprisedigitalagency": "2022-12-02",
       "almapbbdo": "2026-11-27",
       "artplan": "2026-11-25",
-      "wmccannbr": "2026-11-25",
+      "wmccannbr": "2026-11-27",
       "humandigitalagency": "2021-08-16",
       "ogilvy": "2026-11-26",
       "droga5": "2026-11-04",
@@ -4806,6 +4806,6 @@
     "https://roastbrief.com.mx/2026/11/creator-ads-llega-a-mexico-con-su-ia-the-guardian-pretende-disminuir-tiempo-y-costos-en-campanas-publicitarias",
     "https://www.thestable.com.au/world-of-tanks-nez-khammal-the-gaming-ad-of-the-year-has-arrived"
   ],
-  "ultima_rodada": "2026-11-27T22:13:48.006538+00:00",
-  "ultima_novidade": "2026-11-27T21:47:47.893846+00:00"
+  "ultima_rodada": "2026-11-27T22:17:47.699566+00:00",
+  "ultima_novidade": "2026-11-27T22:17:47.699566+00:00"
 }
