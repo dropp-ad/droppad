@@ -65,17 +65,31 @@ def tem_filme(c):
     return bool(c.get("yt") or c.get("video"))
 
 
+def mencao(nome, cadastro):
+    # Apenas IDs confirmados manualmente, nunca palpites de slug.
+    item = cadastro.get(nome.casefold().strip(), {})
+    if isinstance(item, dict):
+        ident = str(item.get("id", ""))
+        oficial = item.get("name", "")
+        if re.fullmatch(r"[1-9][0-9]*", ident) and isinstance(oficial, str) and oficial.strip():
+            return "@[%s](urn:li:organization:%s)" % (esc(oficial), ident)
+    return esc(nome)
+
+
 def texto_de(c, indice=0):
     marca = c.get("brand", "").strip()
     ag = c.get("agency", "").strip()
 
     abertura = ABERTURAS[indice % len(ABERTURAS)]
 
-    corpo = "New work for %s by %s." % (marca, ag)
+    cadastro = ler(os.path.join(AQUI, "linkedin_empresas.json"), {})
+    if not isinstance(cadastro, dict):
+        cadastro = {}
+    corpo = "New work for %s by %s." % (mencao(marca, cadastro), mencao(ag, cadastro))
 
     return "%s\n\n%s\n\n%s\n\n%s" % (
         esc(abertura),
-        esc(corpo),
+        corpo,
         esc(ASSINATURA),
         esc(link_de(c)),
     )
