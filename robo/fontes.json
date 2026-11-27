@@ -591,6 +591,102 @@
       "regiao": "Índia",
       "cc": "IN",
       "so_campanhas": false
+    },
+    {
+      "nome": "Adweek",
+      "urls": [
+        "https://www.adweek.com/feed/"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "so_campanhas": true
+    },
+    {
+      "nome": "The Inspiration Room",
+      "urls": [
+        "https://theinspirationroom.com/daily/feed/"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "so_campanhas": true
+    },
+    {
+      "nome": "Campaign Middle East",
+      "urls": [
+        "https://campaignme.com/feed/"
+      ],
+      "regiao": "Oriente Médio",
+      "cc": "AE",
+      "so_campanhas": true
+    },
+    {
+      "nome": "adobo Magazine",
+      "urls": [
+        "https://www.adobomagazine.com/feed/"
+      ],
+      "regiao": "Filipinas",
+      "cc": "PH",
+      "so_campanhas": true
+    },
+    {
+      "nome": "Ad Age",
+      "urls": [
+        "https://adage.com/arc/outboundfeeds/rss/?outputType=xml",
+        "https://adage.com/rss.xml"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "so_campanhas": true
+    },
+    {
+      "nome": "Campaign UK",
+      "urls": [
+        "https://www.campaignlive.co.uk/rss/news",
+        "https://www.campaignlive.co.uk/rss"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "so_campanhas": true
+    },
+    {
+      "nome": "AdNews",
+      "urls": [
+        "https://www.adnews.com.au/rss",
+        "https://www.adnews.com.au/feed"
+      ],
+      "regiao": "Austrália",
+      "cc": "AU",
+      "so_campanhas": true
+    },
+    {
+      "nome": "Horizont",
+      "urls": [
+        "https://www.horizont.net/news/feed/",
+        "https://www.horizont.net/rss/"
+      ],
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "so_campanhas": true
+    },
+    {
+      "nome": "W&V",
+      "urls": [
+        "https://www.wuv.de/rss",
+        "https://www.wuv.de/feed"
+      ],
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "so_campanhas": true
+    },
+    {
+      "nome": "Stratégies",
+      "urls": [
+        "https://www.strategies.fr/rss",
+        "https://www.strategies.fr/feed"
+      ],
+      "regiao": "França",
+      "cc": "FR",
+      "so_campanhas": true
     }
   ],
   "buscas": [
@@ -609,7 +705,15 @@
     "new TVC campaign",
     "Black Friday campanha",
     "brand film campaign",
-    "anuncio nueva campaña marca"
+    "anuncio nueva campaña marca",
+    "TV commercial 2026",
+    "holiday commercial",
+    "new commercial ad",
+    "novo comercial marca",
+    "nuevo comercial marca",
+    "Christmas advert 2026",
+    "publicité télé nouvelle",
+    "Werbespot neu"
   ],
   "descobertas": [
     {
@@ -12566,5 +12670,1741 @@
     "contas": [
       "crispin"
     ]
-  }
+  },
+  "marcas": [
+    {
+      "nome": "GEICO",
+      "youtube": [
+        "geico"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "State Farm",
+      "youtube": [
+        "statefarm"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Progressive",
+      "youtube": [
+        "progressive"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Allstate",
+      "youtube": [
+        "allstate"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Liberty Mutual",
+      "youtube": [
+        "libertymutual"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "McDonald's",
+      "youtube": [
+        "mcdonalds"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Burger King",
+      "youtube": [
+        "burgerking"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Wendy's",
+      "youtube": [
+        "wendys"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Taco Bell",
+      "youtube": [
+        "tacobell"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "KFC",
+      "youtube": [
+        "kfc"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Domino's",
+      "youtube": [
+        "dominos"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Pizza Hut",
+      "youtube": [
+        "pizzahut"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Subway",
+      "youtube": [
+        "subway"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Starbucks",
+      "youtube": [
+        "starbucks"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Dunkin'",
+      "youtube": [
+        "dunkin"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Chipotle",
+      "youtube": [
+        "chipotle"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Popeyes",
+      "youtube": [
+        "popeyes"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Arby's",
+      "youtube": [
+        "arbys"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Coca-Cola",
+      "youtube": [
+        "cocacola"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Pepsi",
+      "youtube": [
+        "pepsi"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Budweiser",
+      "youtube": [
+        "budweiser"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Bud Light",
+      "youtube": [
+        "budlight"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Michelob Ultra",
+      "youtube": [
+        "michelobultra"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Coors Light",
+      "youtube": [
+        "coorslight"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Miller Lite",
+      "youtube": [
+        "millerlite"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Heineken",
+      "youtube": [
+        "heineken"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Stella Artois",
+      "youtube": [
+        "stellaartois"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Corona",
+      "youtube": [
+        "corona",
+        "coronausa"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Apple",
+      "youtube": [
+        "apple"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Samsung",
+      "youtube": [
+        "samsung"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Google",
+      "youtube": [
+        "google"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Microsoft",
+      "youtube": [
+        "microsoft"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Amazon",
+      "youtube": [
+        "amazon"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Target",
+      "youtube": [
+        "target"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Walmart",
+      "youtube": [
+        "walmart"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Best Buy",
+      "youtube": [
+        "bestbuy"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "The Home Depot",
+      "youtube": [
+        "homedepot"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Lowe's",
+      "youtube": [
+        "lowes"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Nike",
+      "youtube": [
+        "nike"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "adidas",
+      "youtube": [
+        "adidas"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Toyota",
+      "youtube": [
+        "toyotausa"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Ford",
+      "youtube": [
+        "ford"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Chevrolet",
+      "youtube": [
+        "chevrolet"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Honda",
+      "youtube": [
+        "honda"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Hyundai",
+      "youtube": [
+        "hyundaiusa"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Kia",
+      "youtube": [
+        "kiaamerica",
+        "kiausa"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Nissan",
+      "youtube": [
+        "nissanusa"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Jeep",
+      "youtube": [
+        "jeep"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Subaru",
+      "youtube": [
+        "subaruofamerica",
+        "subaru"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "BMW",
+      "youtube": [
+        "bmw",
+        "bmwusa"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Mercedes-Benz",
+      "youtube": [
+        "mercedesbenz"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Volkswagen",
+      "youtube": [
+        "volkswagen",
+        "vwusa"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "T-Mobile",
+      "youtube": [
+        "tmobile"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Verizon",
+      "youtube": [
+        "verizon"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "AT&T",
+      "youtube": [
+        "att"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Xfinity",
+      "youtube": [
+        "xfinity"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Visa",
+      "youtube": [
+        "visa"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Mastercard",
+      "youtube": [
+        "mastercard"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "American Express",
+      "youtube": [
+        "americanexpress"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Capital One",
+      "youtube": [
+        "capitalone"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Chase",
+      "youtube": [
+        "chase"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "PayPal",
+      "youtube": [
+        "paypal"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "DoorDash",
+      "youtube": [
+        "doordash"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Uber",
+      "youtube": [
+        "uber"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Airbnb",
+      "youtube": [
+        "airbnb"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Booking.com",
+      "youtube": [
+        "bookingcom"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Expedia",
+      "youtube": [
+        "expedia"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Squarespace",
+      "youtube": [
+        "squarespace"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Duolingo",
+      "youtube": [
+        "duolingo"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Spotify",
+      "youtube": [
+        "spotify"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Liquid Death",
+      "youtube": [
+        "liquiddeath"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Doritos",
+      "youtube": [
+        "doritos"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Lay's",
+      "youtube": [
+        "lays"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Pringles",
+      "youtube": [
+        "pringles"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Oreo",
+      "youtube": [
+        "oreo"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Snickers",
+      "youtube": [
+        "snickers"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "M&M's",
+      "youtube": [
+        "mms"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Skittles",
+      "youtube": [
+        "skittles"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "KitKat",
+      "youtube": [
+        "kitkat"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Cadbury",
+      "youtube": [
+        "cadbury",
+        "cadburyuk"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Heinz",
+      "youtube": [
+        "heinz"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Tide",
+      "youtube": [
+        "tide"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Gillette",
+      "youtube": [
+        "gillette"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Old Spice",
+      "youtube": [
+        "oldspice"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Dove",
+      "youtube": [
+        "dove"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Axe",
+      "youtube": [
+        "axe"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "IKEA",
+      "youtube": [
+        "ikea",
+        "ikeausa"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "H&M",
+      "youtube": [
+        "hm"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "LEGO",
+      "youtube": [
+        "lego"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Etsy",
+      "youtube": [
+        "etsy"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "eBay",
+      "youtube": [
+        "ebay"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Wayfair",
+      "youtube": [
+        "wayfair"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Chewy",
+      "youtube": [
+        "chewy"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Sephora",
+      "youtube": [
+        "sephora"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "L'Oréal Paris",
+      "youtube": [
+        "lorealparis",
+        "lorealparisusa"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Maybelline",
+      "youtube": [
+        "maybelline"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Colgate",
+      "youtube": [
+        "colgate"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Hellmann's",
+      "youtube": [
+        "hellmanns"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Little Caesars",
+      "youtube": [
+        "littlecaesars"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Papa Johns",
+      "youtube": [
+        "papajohns"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Whataburger",
+      "youtube": [
+        "whataburger"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Applebee's",
+      "youtube": [
+        "applebees"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Chili's",
+      "youtube": [
+        "chilis"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Olive Garden",
+      "youtube": [
+        "olivegarden"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "TurboTax",
+      "youtube": [
+        "turbotax"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "H&R Block",
+      "youtube": [
+        "hrblock"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Grammarly",
+      "youtube": [
+        "grammarly"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Instacart",
+      "youtube": [
+        "instacart"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Lyft",
+      "youtube": [
+        "lyft"
+      ],
+      "regiao": "EUA",
+      "cc": "US",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Marriott Bonvoy",
+      "youtube": [
+        "marriottbonvoy"
+      ],
+      "regiao": "Global",
+      "cc": "",
+      "tipo": "marca"
+    },
+    {
+      "nome": "John Lewis",
+      "youtube": [
+        "johnlewis",
+        "johnlewisandpartners"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "M&S",
+      "youtube": [
+        "marksandspencer"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Sainsbury's",
+      "youtube": [
+        "sainsburys"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Tesco",
+      "youtube": [
+        "tesco"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Asda",
+      "youtube": [
+        "asda"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Aldi UK",
+      "youtube": [
+        "aldiuk"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Lidl GB",
+      "youtube": [
+        "lidlgb"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Boots",
+      "youtube": [
+        "boots",
+        "bootsuk"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Argos",
+      "youtube": [
+        "argos"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Waitrose",
+      "youtube": [
+        "waitrose"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "McDonald's UK",
+      "youtube": [
+        "mcdonaldsuk"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "British Airways",
+      "youtube": [
+        "britishairways"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Sky",
+      "youtube": [
+        "sky"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Virgin Media",
+      "youtube": [
+        "virginmedia"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "BT",
+      "youtube": [
+        "bt"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Vodafone UK",
+      "youtube": [
+        "vodafoneuk"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Three UK",
+      "youtube": [
+        "threeuk"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Currys",
+      "youtube": [
+        "currys"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Very",
+      "youtube": [
+        "veryuk"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Coca-Cola GB",
+      "youtube": [
+        "cocacolagb"
+      ],
+      "regiao": "Reino Unido",
+      "cc": "GB",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Itaú",
+      "youtube": [
+        "itau"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Bradesco",
+      "youtube": [
+        "bradesco"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Nubank",
+      "youtube": [
+        "nubank"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Santander Brasil",
+      "youtube": [
+        "santanderbrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Banco do Brasil",
+      "youtube": [
+        "bancodobrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Caixa",
+      "youtube": [
+        "caixa"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Magalu",
+      "youtube": [
+        "magazineluiza",
+        "magalu"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Casas Bahia",
+      "youtube": [
+        "casasbahia"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Mercado Livre",
+      "youtube": [
+        "mercadolivre"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "iFood",
+      "youtube": [
+        "ifood"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Natura",
+      "youtube": [
+        "natura",
+        "naturabrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "O Boticário",
+      "youtube": [
+        "oboticario"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Havaianas",
+      "youtube": [
+        "havaianas"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Guaraná Antarctica",
+      "youtube": [
+        "guaranaantarctica"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Brahma",
+      "youtube": [
+        "brahma",
+        "cervejabrahma"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Skol",
+      "youtube": [
+        "skol",
+        "skolbr"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Heineken Brasil",
+      "youtube": [
+        "heinekenbrasil",
+        "heinekenbr"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Coca-Cola Brasil",
+      "youtube": [
+        "cocacolabrasil",
+        "cocacolabr"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "McDonald's Brasil",
+      "youtube": [
+        "mcdonaldsbrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Burger King Brasil",
+      "youtube": [
+        "burgerkingbrasil",
+        "burgerkingbr"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Vivo",
+      "youtube": [
+        "vivo"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Claro Brasil",
+      "youtube": [
+        "clarobrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "TIM Brasil",
+      "youtube": [
+        "timbrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Fiat",
+      "youtube": [
+        "fiatbrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Volkswagen do Brasil",
+      "youtube": [
+        "vwbrasil",
+        "volkswagendobrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Chevrolet Brasil",
+      "youtube": [
+        "chevroletbrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Toyota do Brasil",
+      "youtube": [
+        "toyotadobrasil",
+        "toyotabrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Sadia",
+      "youtube": [
+        "sadia"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Seara",
+      "youtube": [
+        "seara"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Samsung Brasil",
+      "youtube": [
+        "samsungbrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Renner",
+      "youtube": [
+        "lojasrenner",
+        "renner"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "C&A Brasil",
+      "youtube": [
+        "cea",
+        "ceabrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Riachuelo",
+      "youtube": [
+        "riachuelo"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Rappi Brasil",
+      "youtube": [
+        "rappibrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "PicPay",
+      "youtube": [
+        "picpay"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Mercado Pago",
+      "youtube": [
+        "mercadopago",
+        "mercadopagobrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Hering",
+      "youtube": [
+        "hering"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Itaipava",
+      "youtube": [
+        "itaipava"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Amstel Brasil",
+      "youtube": [
+        "amstelbrasil"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Bis",
+      "youtube": [
+        "bis"
+      ],
+      "regiao": "Brasil",
+      "cc": "BR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Coca-Cola México",
+      "youtube": [
+        "cocacolamexico"
+      ],
+      "regiao": "México",
+      "cc": "MX",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Telcel",
+      "youtube": [
+        "telcel"
+      ],
+      "regiao": "México",
+      "cc": "MX",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Bimbo",
+      "youtube": [
+        "bimbo",
+        "bimbomexico"
+      ],
+      "regiao": "México",
+      "cc": "MX",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Corona México",
+      "youtube": [
+        "cervezacorona"
+      ],
+      "regiao": "México",
+      "cc": "MX",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Mercado Libre México",
+      "youtube": [
+        "mercadolibremexico"
+      ],
+      "regiao": "México",
+      "cc": "MX",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Campofrío",
+      "youtube": [
+        "campofrio"
+      ],
+      "regiao": "Espanha",
+      "cc": "ES",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Ruavieja",
+      "youtube": [
+        "ruavieja"
+      ],
+      "regiao": "Espanha",
+      "cc": "ES",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Lotería de Navidad",
+      "youtube": [
+        "loteriasyapuestas"
+      ],
+      "regiao": "Espanha",
+      "cc": "ES",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Mahou",
+      "youtube": [
+        "mahou"
+      ],
+      "regiao": "Espanha",
+      "cc": "ES",
+      "tipo": "marca"
+    },
+    {
+      "nome": "El Corte Inglés",
+      "youtube": [
+        "elcorteingles"
+      ],
+      "regiao": "Espanha",
+      "cc": "ES",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Woolworths",
+      "youtube": [
+        "woolworths"
+      ],
+      "regiao": "Austrália",
+      "cc": "AU",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Coles",
+      "youtube": [
+        "coles"
+      ],
+      "regiao": "Austrália",
+      "cc": "AU",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Bunnings",
+      "youtube": [
+        "bunnings"
+      ],
+      "regiao": "Austrália",
+      "cc": "AU",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Telstra",
+      "youtube": [
+        "telstra"
+      ],
+      "regiao": "Austrália",
+      "cc": "AU",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Qantas",
+      "youtube": [
+        "qantas"
+      ],
+      "regiao": "Austrália",
+      "cc": "AU",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Intermarché",
+      "youtube": [
+        "intermarche"
+      ],
+      "regiao": "França",
+      "cc": "FR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Carrefour",
+      "youtube": [
+        "carrefour",
+        "carrefourfrance"
+      ],
+      "regiao": "França",
+      "cc": "FR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Leclerc",
+      "youtube": [
+        "eleclerc"
+      ],
+      "regiao": "França",
+      "cc": "FR",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Edeka",
+      "youtube": [
+        "edeka"
+      ],
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "tipo": "marca"
+    },
+    {
+      "nome": "Lidl",
+      "youtube": [
+        "lidl"
+      ],
+      "regiao": "Alemanha",
+      "cc": "DE",
+      "tipo": "marca"
+    }
+  ]
 }

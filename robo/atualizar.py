@@ -806,7 +806,7 @@ def canal_id(ag, estado):
         d = re.search(r'<meta property="og:description" content="([^"]*)"', pag)
         desc = html.unescape(d.group(1)) if d else ""
         # nomes curtos/genéricos (Loop, Known, Cape...) precisam parecer agência de verdade
-        generico = len(chave_ag) <= 6 or ag.get("estrito")
+        generico = (len(chave_ag) <= 6 or ag.get("estrito")) and ag.get("tipo") != "marca"
         parece_agencia = re.search(r"agen|advertis|creative|criativ|publicid|marketing|brand|studio|comunica|network|ideas", nome + " " + desc, re.I)
         # lista nova (estrito): o canal tem de citar o site da agência ou parecer agência de verdade
         cita_site = bool(dom_ag) and dom_ag.lower() in pag.lower()
@@ -881,7 +881,8 @@ def ler_canais(fontes, estado, dias=45, vigia=None):
     No modo rápido (vigia), lê só uma fatia dos canais já conhecidos por rodada, em rodízio."""
     out = []
     limite = (HOJE - dt.timedelta(days=dias)).isoformat()
-    ags = [a for a in fontes.get("agencias", []) if a.get("youtube")]
+    # agências e também os canais oficiais das marcas (onde o comercial muitas vezes sai antes da imprensa)
+    ags = [a for a in fontes.get("agencias", []) + fontes.get("marcas", []) if a.get("youtube")]
     if vigia is not None:
         ags = [a for a in ags if (estado.get("canais") or {}).get(a["nome"])]
         if ags:
@@ -928,6 +929,11 @@ def ler_canais(fontes, estado, dias=45, vigia=None):
             for g in e.iter():
                 if tag(g) == "description" and g.text:
                     desc = g.text
+            if ag.get("tipo") == "marca":
+                c = video_de_marca(ag, cid, vid, titulo, data, desc, vigia)
+                if c:
+                    out.append(c)
+                continue
             partes = [x.strip() for x in re.split(r"\s+[|–—]\s+|\s+-\s+|:\s+", titulo) if x.strip()]
             marca = marca_ok(partes[0]) if len(partes) > 1 else ""
             marca = marca or marca_de(titulo)
@@ -942,6 +948,39 @@ def ler_canais(fontes, estado, dias=45, vigia=None):
                         if desc and len(desc) > 40 else "",
                         "addedAt": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")})
     return out
+
+
+# canal da marca: só entra vídeo com cara de comercial (o canal também tem tutorial, live, receita...)
+EH_COMERCIAL = re.compile(r"\b(commercials?|tv\s*spot|tvc|ad|advert|official\s+ad|super\s+bowl|holiday|christmas|xmas|natal|navidad|no[eë]l|weihnacht|"
+                          r"campaign|campanha|campaña|campagne|comercial|anuncio|anúncio|filme|film|spot|publicidad|publicité|werbung|"
+                          r":(?:06|15|30|45|60)\b|\(\s*(?:15|30|45|60|90)\s*(?:s|sec|seg)?\s*\))", re.I)
+NAO_COMERCIAL = re.compile(r"#shorts|\bshorts?\b|how\s+to|tutorial|review|unboxing|recipe|receita|receta|\blive\b|livestream|ao\s+vivo|en\s+vivo|"
+                           r"podcast|episode|epis[oó]dio|interview|entrevista|behind\s+the\s+scenes|bastidores|making\s+of|trailer|teaser|"
+                           r"keynote|event|evento|webinar|q\s*&\s*a|faq|explained|walkthrough|demo|setup|support|ajuda|suporte|asmr|playlist|full\s+version", re.I)
+
+
+def video_de_marca(ag, cid, vid, titulo, data, desc, vigia):
+    """Vídeo novo do canal oficial de uma marca vira campanha (com filme) se tiver cara de comercial:
+    "GEICO | How 15% Saved Christmas", "Nome do filme | Comercial de Natal", ":30", "TV Spot"..."""
+    if NAO_COMERCIAL.search(titulo) or EXCLUI.search(titulo) or PERGUNTA.search(titulo):
+        return None
+    marca = ag["nome"]
+    km = chave(re.sub(r"\b(brasil|uk|gb|usa|us|m[eé]xico|do brasil)\b", "", marca, flags=re.I))
+    sufixo = re.compile(r"\s*[(\[]?\s*(official\s+(?:ad|commercial|video)|tv\s+spot|commercial|comercial)\s*[)\]]?\s*$", re.I)
+    partes = [x.strip() for x in re.split(r"\s+[|–—]\s+|\s+-\s+", titulo) if x.strip()]
+    formato_marca = len(partes) > 1 and any(km and km[:5] in chave(p) for p in partes)
+    partes = [sufixo.sub("", p).strip() or p for p in partes]
+    if not (EH_COMERCIAL.search(titulo) or formato_marca):
+        return None
+    nome = " — ".join(p for p in partes if not (km and km[:5] in chave(p) and len(chave(p)) <= len(km) + 3)) or titulo
+    nome = re.sub(r"\s*[|(\[]?\s*(official\s+(?:ad|commercial|video)|tv\s+spot|commercial|comercial)\s*[)\]]?\s*$", "", nome, flags=re.I).strip() or titulo
+    return {"id": "%s-%s-%s" % (data, slug(marca, 20), slug(nome, 36)), "date": data, "brand": marca,
+            "title": nome, "agency": "", "source": "YouTube · " + cid["canal"],
+            "url": "https://www.youtube.com/watch?v=" + vid, "region": ag.get("regiao", "Global"),
+            "cc": ag.get("cc", ""), "yt": [vid],
+            "summary": (primeira_frase(desc) if vigia is not None else traduzir(primeira_frase(desc)))
+            if desc and len(desc) > 40 else "",
+            "addedAt": AGORA.strftime("%Y-%m-%dT%H:%M:%SZ")}
 
 
 # ---------------------------------------------------------------- Instagram
