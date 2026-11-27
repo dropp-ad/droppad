@@ -5287,7 +5287,7 @@
     {
       "nome": "David Reviews",
       "site": "https://www.davidreviews.com/",
-      "busca_reviews": "https://www.davidreviews.com/Reviews/",
+      "pagina_reviews": "https://www.davidreviews.com/Reviews/",
       "so_campanhas": true,
       "regiao": "Global",
       "cc": "",

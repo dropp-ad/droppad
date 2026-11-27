@@ -530,15 +530,66 @@ def buscar_bing(q):
     return itens
 
 
-def buscar_reviews(site):
-    secao = urllib.parse.urlsplit(site["busca_reviews"])
+def links_reviews(url, pagina):
+    secao = urllib.parse.urlsplit(url)
     dominio = secao.hostname.removeprefix("www.")
-    itens = buscar_bing("site:" + dominio + secao.path)
-    for it in itens:
-        link = urllib.parse.urlsplit(it["link"])
+    links = {}
+    for href in re.findall(r'''\bhref\s*=\s*["']([^"']+)''', pagina, re.I):
+        link = urllib.parse.urlsplit(urllib.parse.urljoin(url, html.unescape(href)))
         if (link.scheme in {"http", "https"} and (link.hostname or "").removeprefix("www.") == dominio
                 and re.fullmatch(re.escape(secao.path) + r"\d{4}/[^/]+/?", link.path, re.I)):
-            yield it
+            canonico = urllib.parse.urlunsplit((secao.scheme, secao.netloc, link.path.rstrip("/") + "/", "", ""))
+            links[canonico] = None
+    return links
+
+
+def item_review(url):
+    try:
+        pagina = baixar(url, timeout=12)
+    except (OSError, ValueError) as e:
+        log("  review indisponível:", url, type(e).__name__)
+        return None
+    meta = {}
+    for tag_meta in re.findall(r"<meta\b[^>]*>", pagina, re.I):
+        attrs = dict(re.findall(r'''([\w:-]+)\s*=\s*["']([^"']*)["']''', tag_meta))
+        nome = attrs.get("property") or attrs.get("name") or attrs.get("itemprop")
+        if nome and "content" in attrs:
+            meta[nome.lower()] = attrs["content"]
+    publicado = meta.get("article:published_time") or meta.get("datepublished")
+    if not publicado:
+        m = re.search(r'''"datePublished"\s*:\s*"([^"]+)"''', pagina, re.I)
+        publicado = m.group(1) if m else ""
+    if not publicado:
+        miolo = corpo_da_materia(pagina)
+        m = re.search(r'''<time\b[^>]*\bdatetime\s*=\s*["']([^"']+)''', miolo, re.I)
+        publicado = m.group(1) if m else ""
+        if not publicado:
+            m = re.search(
+                r"\b(\d{1,2})(?:st|nd|rd|th)? (January|February|March|April|May|June|July|August|September|October|November|December) (\d{4})\b",
+                limpar(miolo)[:2000], re.I,
+            )
+            publicado = " ".join(m.groups()) if m else ""
+    data = data_de(publicado)
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", publicado):
+        data = publicado
+    if not data and publicado:
+        try:
+            data = dt.datetime.strptime(publicado, "%d %B %Y").date().isoformat()
+        except ValueError:
+            pass
+    titulo = limpar(meta.get("og:title") or "")
+    if not titulo:
+        m = re.search(r"<title\b[^>]*>(.*?)</title>", pagina, re.I | re.S)
+        titulo = limpar(m.group(1)) if m else ""
+    titulo = re.sub(r"^DAVID(?: Reviews)?\s*[|:–—-]\s*|\s*[|–—-]\s*DAVID(?: Reviews)?$", "", titulo, flags=re.I)
+    par = re.fullmatch(r'''(.+?)\s*[:–—-]?\s+["“](.+?)["”]''', titulo)
+    if par:
+        titulo = '%s: "%s"' % (par[1].rstrip(" :–—-"), par[2])
+    if not data or not titulo:
+        log("  review sem título ou data verificável:", url)
+        return None
+    return {"link": url, "data": data, "titulo": titulo, "pagina": pagina, "corpo": "",
+            "resumo": meta.get("og:description") or meta.get("description", "")}
 
 
 # ---------------------------------------------------------------- filmes
@@ -1393,16 +1444,23 @@ def main():
             for it in itens:
                 considerar(it, f, ARQUIVO_INICIO)
 
-    # 3) buscas no Bing News (reviews conhecidas e descoberta de sites)
+    # 3) lista de reviews na fonte e buscas no Bing News para descobrir outros sites
     if not RAPIDO:
         for fonte in fontes.get("sites", []):
-            if not fonte.get("busca_reviews"):
+            pagina_reviews = fonte.get("pagina_reviews")
+            if not pagina_reviews:
                 continue
             try:
-                for it in buscar_reviews(fonte):
-                    considerar(it, fonte, inicio_normal)
-            except (OSError, ValueError, ET.ParseError) as e:
-                log("  busca de reviews falhou:", fonte["nome"], e)
+                links = links_reviews(pagina_reviews, baixar(pagina_reviews, timeout=15))
+            except (OSError, ValueError) as e:
+                log("  lista de reviews indisponível:", fonte["nome"], type(e).__name__)
+                continue
+            novos_links = [u for u in links if u.rstrip("/") not in urls][:40]
+            log("  lista de reviews:", fonte["nome"], len(links), "links,", len(novos_links), "por conferir")
+            with cf.ThreadPoolExecutor(8) as ex:
+                for it in ex.map(item_review, novos_links):
+                    if it:
+                        considerar(it, fonte, inicio_normal)
     buscas = [] if RAPIDO else fontes.get("buscas", [])
     if buscas:
         k = estado.get("proxima_busca", 0) % len(buscas)
@@ -1479,10 +1537,12 @@ def main():
     # 6) abre as matérias para pegar filmes
     def job_materia(par):
         it, f = par
-        try:
-            pag = baixar(it["link"], timeout=20)
-        except Exception:  # noqa: BLE001
-            pag = ""
+        pag = it.get("pagina", "")
+        if not pag:
+            try:
+                pag = baixar(it["link"], timeout=20)
+            except Exception:  # noqa: BLE001
+                pag = ""
         if it.get("corpo"):
             # o texto completo que o próprio site publica no feed também traz os filmes e as fotos
             pag = (pag + "\n" if pag else "") + "<article>" + it["corpo"] + "</article>"
@@ -1522,6 +1582,8 @@ def main():
         if len(novas) >= MAX_NOVAS:
             break
         yts = [y for y in yts if y not in bloqueados]
+        if f.get("pagina_reviews") and not (yts or vimeo or img or fotos):
+            continue
         if yts and all(y in yts_usados for y in yts):
             continue  # o mesmo filme já está no site (mesma campanha, outra fonte)
         titulo = it["titulo"]
