@@ -13,6 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verificar acesso e leitura de reviews
         run: |
+          set -o pipefail
           PYTHONPATH=robo python3 - <<'PY' | tee -a "$GITHUB_STEP_SUMMARY"
           import concurrent.futures
           import atualizar as a
@@ -21,14 +22,18 @@ jobs:
           try:
               pagina = a.baixar(url, timeout=20)
           except Exception as e:
-              print(f"Acesso à fonte: {type(e).__name__} {e}")
+              print(f"::error::Acesso à fonte: {type(e).__name__} {e}")
               raise
           links = a.links_reviews(url, pagina)
-          print(f"Fonte acessível. Links encontrados: {len(links)}")
+          print(f"::notice::Fonte acessível. Links encontrados: {len(links)}")
+          if not links:
+              import re
+              hrefs = re.findall(r'href="([^"]+)"', pagina, re.I)
+              print("::notice::Links com Review: " + " | ".join(h for h in hrefs if "review" in h.lower())[:1500])
           with concurrent.futures.ThreadPoolExecutor(6) as executor:
               for link, item in zip(links, executor.map(a.item_review, list(links)[:16])):
                   if item:
-                      print(f"- {item['data']} | {item['titulo']} | {link}")
+                      print(f"::notice::{item['data']} | {item['titulo']} | {link}")
                   else:
-                      print(f"- Sem metadados: {link}")
+                      print(f"::warning::Sem metadados: {link}")
           PY
