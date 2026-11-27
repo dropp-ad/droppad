@@ -45,7 +45,7 @@
       "mod": "Fri, 27 Nov 2026 22:05:40 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Fri, 27 Nov 2026 23:22:50 GMT"
+      "mod": "Fri, 27 Nov 2026 23:23:51 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"f4abc62c32e214333d47d7d137a21cf0\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Fri, 27 Nov 2026 23:22:52 GMT"
+      "mod": "Fri, 27 Nov 2026 23:23:53 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"f30036d7bb854bb4a3d3c4781cadc7c7-gzip\"",
@@ -168,7 +168,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Fri, 27 Nov 2026 23:22:20 GMT"
+      "mod": "Fri, 27 Nov 2026 23:23:21 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -291,7 +291,7 @@
       "mod": "Fri, 27 Nov 2026 13:53:58 GMT"
     },
     "https://theinspirationroom.com/daily/feed/": {
-      "mod": "Fri, 27 Nov 2026 23:17:08 GMT"
+      "mod": "Fri, 27 Nov 2026 23:19:59 GMT"
     },
     "https://www.marketingdirecto.com/feed/": {
       "mod": "Fri, 27 Nov 2026 15:58:13 GMT"
@@ -307,7 +307,7 @@
       "mod": "Fri, 27 Nov 2026 10:45:50 GMT"
     },
     "https://www.strategies.fr/feed": {
-      "mod": "Fri, 27 Nov 2026 23:22:52 GMT"
+      "mod": "Fri, 27 Nov 2026 23:23:53 GMT"
     },
     "https://thestable.com.au/feed/": {
       "etag": "\"b4c1b029ea51c573375dbd9c59e34f5f\"",
@@ -326,7 +326,7 @@
       "mod": "Thu, 27 Jun 2024 15:55:37 GMT"
     }
   },
-  "yt_pos": 60,
+  "yt_pos": 120,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1174,7 +1174,7 @@
       "Crispin": "crispinagency"
     },
     "tentadas": {},
-    "pos": 4040,
+    "pos": 4041,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1684,7 +1684,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 4681,
+    "rodadas": 4682,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3458,7 +3458,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 1903,
+    "pos_quente": 1904,
     "lida": {
       "droga5sp": "2026-11-27T23:20:49.177032+00:00",
       "mboothagency": "2026-11-27T18:27:47.665713+00:00",
@@ -3466,7 +3466,7 @@
       "powerdigitalagency": "2026-11-27T18:28:47.359804+00:00",
       "galeria.ag": "2026-11-27T23:22:48.458117+00:00",
       "youngandlaramore": "2026-11-27T18:29:48.012070+00:00",
-      "wt.ag": "2026-11-27T21:48:47.760588+00:00",
+      "wt.ag": "2026-11-27T23:23:49.150570+00:00",
       "webtonic_": "2026-11-27T18:30:47.287842+00:00",
       "publicisbrasil": "2026-11-27T21:51:48.225634+00:00",
       "criticalmassagency": "2026-11-27T18:31:48.062514+00:00",
@@ -3797,7 +3797,7 @@
       "joancreative": "2026-11-27T23:16:48.864587+00:00",
       "collemcvoy": "2026-11-27T23:17:49.114867+00:00",
       "almaagency": "2026-11-27T23:18:48.561083+00:00",
-      "dnaandstone": "2026-11-27T15:23:35.262413+00:00",
+      "dnaandstone": "2026-11-27T23:23:49.150570+00:00",
       "whalar": "2026-11-27T15:24:34.968309+00:00",
       "wearedeutsch": "2026-11-27T16:49:35.277969+00:00",
       "consciousminds": "2026-11-26T20:23:48.083237+00:00",
@@ -4806,6 +4806,6 @@
     "https://roastbrief.com.mx/2026/11/creator-ads-llega-a-mexico-con-su-ia-the-guardian-pretende-disminuir-tiempo-y-costos-en-campanas-publicitarias",
     "https://www.thestable.com.au/world-of-tanks-nez-khammal-the-gaming-ad-of-the-year-has-arrived"
   ],
-  "ultima_rodada": "2026-11-27T23:22:48.458117+00:00",
+  "ultima_rodada": "2026-11-27T23:23:49.150570+00:00",
   "ultima_novidade": "2026-11-27T23:22:48.458117+00:00"
 }
