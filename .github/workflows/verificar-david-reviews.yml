@@ -26,14 +26,15 @@ jobs:
               raise
           links = a.links_reviews(url, pagina)
           print(f"::notice::Fonte acessível. Links encontrados: {len(links)}")
-          if not links:
-              import re
-              hrefs = re.findall(r'href="([^"]+)"', pagina, re.I)
-              print("::notice::Links com Review: " + " | ".join(h for h in hrefs if "review" in h.lower())[:1500])
-          with concurrent.futures.ThreadPoolExecutor(6) as executor:
-              for link, item in zip(links, executor.map(a.item_review, list(links)[:16])):
-                  if item:
-                      print(f"::notice::{item['data']} | {item['titulo']} | {link}")
-                  else:
-                      print(f"::warning::Sem metadados: {link}")
+          import re
+          from html import unescape
+          for link in list(links)[:3]:
+              review = a.baixar(link, timeout=15)
+              title = re.search(r"<title[^>]*>(.*?)</title>", review, re.I | re.S)
+              print("::notice::TITLE " + (a.limpar(title[1]) if title else "(ausente)"))
+              for line in review.splitlines():
+                  if re.search(r'og:|publish|november|2026-11-|<h[12]|<video|mp4|m3u8|player', line, re.I):
+                      line = unescape(re.sub(r"\s+", " ", line)).strip()
+                      if 0 < len(line) < 700:
+                          print("::notice::MARKUP " + line)
           PY
