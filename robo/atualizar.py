@@ -517,6 +517,11 @@ def pegar_feed(fonte, estado, pagina=1, cond=None):
     return None
 
 
+def fonte_desativada(url):
+    host = (urllib.parse.urlsplit(url).hostname or "").lower().rstrip(".")
+    return host == "davidreviews.com" or host.endswith(".davidreviews.com")
+
+
 def buscar_bing(q):
     url = "https://www.bing.com/news/search?" + urllib.parse.urlencode({"q": q, "format": "rss", "setlang": "pt-br", "qft": 'interval="7"'})
     itens = []
@@ -528,73 +533,6 @@ def buscar_bing(q):
         it["link"] = link
         itens.append(it)
     return itens
-
-
-def links_reviews(url, pagina):
-    secao = urllib.parse.urlsplit(url)
-    dominio = secao.hostname.removeprefix("www.")
-    links = {}
-    for href in re.findall(r'''\bhref\s*=\s*["']([^"']+)''', pagina, re.I):
-        link = urllib.parse.urlsplit(urllib.parse.urljoin(url, html.unescape(href)))
-        if (link.scheme in {"http", "https"} and (link.hostname or "").removeprefix("www.") == dominio
-                and re.fullmatch(re.escape(secao.path) + r"\d{4}/[^/]+/?", link.path, re.I)):
-            canonico = urllib.parse.urlunsplit((secao.scheme, secao.netloc, link.path.rstrip("/") + "/", "", ""))
-            links[canonico] = None
-    return links
-
-
-def item_review(url):
-    try:
-        pagina = baixar(url, timeout=12)
-    except (OSError, ValueError) as e:
-        log("  review indisponível:", url, type(e).__name__)
-        return None
-    meta = {}
-    for tag_meta in re.findall(r"<meta\b[^>]*>", pagina, re.I):
-        attrs = {nome.lower(): valor for nome, _, valor in re.findall(
-            r'''([\w:-]+)\s*=\s*(["'])(.*?)\2''', tag_meta, re.S,
-        )}
-        nome = attrs.get("property") or attrs.get("name") or attrs.get("itemprop")
-        if nome and "content" in attrs:
-            meta[nome.lower()] = attrs["content"]
-    publicado = meta.get("article:published_time") or meta.get("datepublished")
-    if not publicado:
-        m = re.search(r'''"datePublished"\s*:\s*"([^"]+)"''', pagina, re.I)
-        publicado = m.group(1) if m else ""
-    if not publicado:
-        m = re.search(r"Review posted:\s*(\d{1,2} [A-Za-z]+ \d{4})\b", pagina, re.I)
-        publicado = m.group(1) if m else ""
-    if not publicado:
-        miolo = corpo_da_materia(pagina)
-        m = re.search(r'''<time\b[^>]*\bdatetime\s*=\s*["']([^"']+)''', miolo, re.I)
-        publicado = m.group(1) if m else ""
-        if not publicado:
-            m = re.search(
-                r"\b(\d{1,2})(?:st|nd|rd|th)? (January|February|March|April|May|June|July|August|September|October|November|December) (\d{4})\b",
-                limpar(miolo)[:2000], re.I,
-            )
-            publicado = " ".join(m.groups()) if m else ""
-    data = data_de(publicado)
-    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", publicado):
-        data = publicado
-    if not data and publicado:
-        try:
-            data = dt.datetime.strptime(publicado, "%d %B %Y").date().isoformat()
-        except ValueError:
-            pass
-    titulo = limpar(meta.get("og:title") or "")
-    if not titulo:
-        m = re.search(r"<title\b[^>]*>(.*?)</title>", pagina, re.I | re.S)
-        titulo = limpar(m.group(1)) if m else ""
-    titulo = re.sub(r"^DAVID(?: Reviews)?\s*[|:–—-]\s*|\s*[|–—-]\s*DAVID(?: Reviews)?$", "", titulo, flags=re.I)
-    par = re.fullmatch(r'''(.+?)\s*[:–—-]?\s+["“'‘](.+?)["”'’]''', titulo)
-    if par:
-        titulo = '%s: "%s"' % (par[1].rstrip(" :–—-"), par[2])
-    if not data or not titulo:
-        log("  review sem título ou data verificável:", url)
-        return None
-    return {"link": url, "data": data, "titulo": titulo, "pagina": pagina, "corpo": "",
-            "resumo": meta.get("og:description") or meta.get("description", "")}
 
 
 # ---------------------------------------------------------------- filmes
@@ -1087,18 +1025,6 @@ EVENTO = re.compile(r"\b((?:great|amazing|wonderful|fantastic|incredible|unforge
                     r"conversation\s+(?:about|on|with)|conversa\s+sobre|"
                     r"future\s+of\s+commerce|celebrating\s+the\s+future)\b", re.I)
 TEM_PECA = re.compile(r"\b(campaign|campanha|campaña|film|filme|spot|commercial|comercial|anúncio|ad)\b", re.I)
-CLIPE_MUSICAL = re.compile(r"\b(music video|videoclipe|clipe musical)\b", re.I)
-REFERENCIA_PUBLICITARIA = re.compile(r"\b(campaign|campanha|campaña|commercial|comercial|brand film|advert(?:isement)?|branded)\b", re.I)
-VENDA_INGRESSOS = re.compile(r"\b(?:presale|pre-sale|ticket sales|tickets on sale|acesso antecipado aos ingressos|venda de ingressos|pré-venda)\b", re.I)
-SHOW_MUSICAL = re.compile(r"\b(?:concert|tour|residency|turnê|concerto|banda|band|arena|show)\b", re.I)
-
-
-def entretenimento_fora_do_feed(texto):
-    return bool(
-        (CLIPE_MUSICAL.search(texto) and not REFERENCIA_PUBLICITARIA.search(texto))
-        or (VENDA_INGRESSOS.search(texto) and SHOW_MUSICAL.search(texto))
-    )
-
 
 def ler_instagram(fontes, vigia, dias=JANELA_DIAS):
     """Posts recentes das contas de Instagram (robo/instagram.py): cada post de campanha vira uma
@@ -1378,7 +1304,7 @@ def main():
         if not (minimo <= it["data"] <= HOJE.isoformat()):
             return
         u = it["link"].split("?")[0].rstrip("/")
-        if u in urls or u in vistos_vigia or u in descartadas:
+        if fonte_desativada(u) or u in urls or u in vistos_vigia or u in descartadas:
             return
         if not parece_campanha(it["titulo"], "", fonte.get("so_campanhas")):
             return
@@ -1461,23 +1387,7 @@ def main():
             for it in itens:
                 considerar(it, f, ARQUIVO_INICIO)
 
-    # 3) lista de reviews na fonte e buscas no Bing News para descobrir outros sites
-    if not RAPIDO:
-        for fonte in fontes.get("sites", []):
-            pagina_reviews = fonte.get("pagina_reviews")
-            if not pagina_reviews:
-                continue
-            try:
-                links = links_reviews(pagina_reviews, baixar(pagina_reviews, timeout=15))
-            except (OSError, ValueError) as e:
-                log("  lista de reviews indisponível:", fonte["nome"], type(e).__name__)
-                continue
-            novos_links = [u for u in links if u.rstrip("/") not in urls][:40]
-            log("  lista de reviews:", fonte["nome"], len(links), "links,", len(novos_links), "por conferir")
-            with cf.ThreadPoolExecutor(8) as ex:
-                for it in ex.map(item_review, novos_links):
-                    if it:
-                        considerar(it, fonte, inicio_normal)
+    # 3) buscas no Bing News (acha sites novos)
     buscas = [] if RAPIDO else fontes.get("buscas", [])
     if buscas:
         k = estado.get("proxima_busca", 0) % len(buscas)
@@ -1493,13 +1403,13 @@ def main():
             log("  busca:", q, len(itens), "resultados")
             for it in itens:
                 dom = urllib.parse.urlparse(it["link"]).netloc.replace("www.", "")
-                if not dom:
+                if not dom or fonte_desativada(it["link"]):
                     continue
                 if dom not in conhecidos and dom not in estado["testados"]:
                     estado["testados"][dom] = "pendente"
 
     # 4) testa sites novos: se tiverem feed com campanhas, viram fontes fixas
-    pend = [] if RAPIDO else [d for d, v in estado["testados"].items() if v == "pendente"][:TESTES_DESCOBERTA]
+    pend = [] if RAPIDO else [d for d, v in estado["testados"].items() if v == "pendente" and not fonte_desativada("https://" + d)][:TESTES_DESCOBERTA]
     for dom in pend:
         achou = None
         for u in ("https://%s/feed/" % dom, "https://%s/rss" % dom, "https://%s/feed" % dom, "https://%s/rss.xml" % dom):
@@ -1554,12 +1464,10 @@ def main():
     # 6) abre as matérias para pegar filmes
     def job_materia(par):
         it, f = par
-        pag = it.get("pagina", "")
-        if not pag:
-            try:
-                pag = baixar(it["link"], timeout=20)
-            except Exception:  # noqa: BLE001
-                pag = ""
+        try:
+            pag = baixar(it["link"], timeout=20)
+        except Exception:  # noqa: BLE001
+            pag = ""
         if it.get("corpo"):
             # o texto completo que o próprio site publica no feed também traz os filmes e as fotos
             pag = (pag + "\n" if pag else "") + "<article>" + it["corpo"] + "</article>"
@@ -1599,17 +1507,11 @@ def main():
         if len(novas) >= MAX_NOVAS:
             break
         yts = [y for y in yts if y not in bloqueados]
-        if f.get("pagina_reviews") and not (yts or vimeo or img or fotos):
-            continue
         if yts and all(y in yts_usados for y in yts):
             continue  # o mesmo filme já está no site (mesma campanha, outra fonte)
         titulo = it["titulo"]
         resumo_txt = limpar(it["resumo"]) or limpar(desc) or limpar(it["corpo"])
         texto = f"{titulo}. {resumo_txt}. {limpar(it['corpo'])[:1500]}"
-        if f.get("pagina_reviews"):
-            contexto = " ".join((texto, *hist, limpar(corpo_da_materia(it.get("pagina", "")))[:3500]))
-            if entretenimento_fora_do_feed(contexto):
-                continue
         marca = marca_de(titulo)
         if not marca:
             continue  # sem marca identificável, provavelmente não é campanha
@@ -1686,11 +1588,6 @@ def main():
                     log("  ▶ filme achado antes de publicar:", c["brand"], "|", c["title"][:70])
             except Exception as e:  # noqa: BLE001
                 log("  busca de filme falhou:", c["id"], e)
-
-    # Reviews editoriais só entram com a peça em vídeo, após a busca pelo filme.
-    fontes_reviews = {f["nome"] for f in fontes.get("sites", []) if f.get("pagina_reviews")}
-    if not SIMULAR:
-        novas = [c for c in novas if c["source"] not in fontes_reviews or c.get("yt") or c.get("video")]
 
     # 8) salva
     if SIMULAR:

@@ -5285,15 +5285,6 @@
   ],
   "sites": [
     {
-      "nome": "David Reviews",
-      "site": "https://www.davidreviews.com/",
-      "pagina_reviews": "https://www.davidreviews.com/Reviews/",
-      "so_campanhas": true,
-      "regiao": "Global",
-      "cc": "",
-      "tipo": "veiculo"
-    },
-    {
       "nome": "Campaign",
       "site": "https://www.campaignlive.com/",
       "regiao": "Global",
