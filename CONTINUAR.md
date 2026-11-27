@@ -53,7 +53,11 @@ Depois disso, cadastre os 4 segredos da seção 3, ative o GitHub Pages e aponte
   - agência falando de prêmio, festival, finalista ou shortlist;
   - dica ou tutorial de marketing ("Your LinkedIn Ads…", "Google Ads for…");
   - post pessoal de funcionário (formatura, "I'm honored to join…") ou perfil de alguém da equipe;
-  - notícia de promoção de varejo (campanha de desconto, liquidação).
+  - notícia de promoção de varejo (campanha de desconto, campanha promocional, liquidação);
+  - vaga ("Looking for Project Managers…"), podcast ou Q&A, "project spotlight" e case de agência;
+  - agência falando de plataforma (Meta, Google, TikTok, ChatGPT) ou de data comemorativa (Thanksgiving) como se fosse marca;
+  - evento de entidade do mercado (confraternização da ABAP, posse de diretoria).
+- Depois de criar um filtro novo, rode `python robo/limpar_feed.py` para tirar do feed o que já tinha entrado.
 - Quando aparecer um post desses, barre o **tipo** de post no robô. Não bloqueie a conta da agência.
 - A exceção é quando a conta está trocada: o @ não é da agência (como o @crispin, que é de um músico). Nesse caso, ponha o @ em `robo/fontes.json` → `ig_bloqueadas`.
 - Nunca copie o texto da fonte; sempre reescreva.

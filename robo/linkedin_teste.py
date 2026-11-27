@@ -495,7 +495,7 @@ def campanha_por_marca(p, a, conta, falso):
             if mk and A.chave(mk) != ag:
                 marca = mk
                 break
-    if not marca:
+    if not marca or (A.sem_acento(marca).lower() in A.PLATAFORMAS and not A.TEM_PECA.search(inicio[:200])):
         return None
     data = A.data_de(falso["timestamp"])
     if not data or data < DESDE:
