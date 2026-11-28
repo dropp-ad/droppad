@@ -45,7 +45,7 @@
       "mod": "Sat, 28 Nov 2026 04:46:48 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Sat, 28 Nov 2026 04:48:53 GMT"
+      "mod": "Sat, 28 Nov 2026 04:53:06 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"f4abc62c32e214333d47d7d137a21cf0\"",
@@ -91,11 +91,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Sat, 28 Nov 2026 04:49:07 GMT"
+      "mod": "Sat, 28 Nov 2026 04:54:07 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"e80ee8cc9557772129641657ac45f288-gzip\"",
-      "mod": "Sat, 28 Nov 2026 04:48:41 GMT"
+      "etag": "W/\"07fdb7de078a172c2c4b337c92416fea-gzip\"",
+      "mod": "Sat, 28 Nov 2026 04:51:14 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -168,7 +168,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Sat, 28 Nov 2026 04:48:13 GMT"
+      "mod": "Sat, 28 Nov 2026 04:53:19 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -245,7 +245,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Sat, 28 Nov 2026 04:43:10 GMT"
+      "mod": "Sat, 28 Nov 2026 04:54:08 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -291,7 +291,7 @@
       "mod": "Fri, 27 Nov 2026 13:53:58 GMT"
     },
     "https://theinspirationroom.com/daily/feed/": {
-      "mod": "Sat, 28 Nov 2026 04:42:52 GMT"
+      "mod": "Sat, 28 Nov 2026 04:49:50 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"a05f66262a5bf3e0ef9615a768b6d32d\"",
@@ -323,7 +323,7 @@
       "mod": "Thu, 27 Jun 2024 15:55:37 GMT"
     }
   },
-  "yt_pos": 133,
+  "yt_pos": 222,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1171,7 +1171,7 @@
       "Crispin": "crispinagency"
     },
     "tentadas": {},
-    "pos": 4440,
+    "pos": 4448,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1681,7 +1681,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 5007,
+    "rodadas": 5012,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3455,7 +3455,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 2229,
+    "pos_quente": 2234,
     "lida": {
       "droga5sp": "2026-11-28T04:29:05.141173+00:00",
       "mboothagency": "2026-11-28T03:18:04.510217+00:00",
@@ -3491,17 +3491,17 @@
       "fantasyagency": "2026-11-27T18:41:47.972317+00:00",
       "thegoatagency": "2026-11-28T04:47:05.127052+00:00",
       "collinsagency": "2026-11-28T03:25:05.183376+00:00",
-      "sociallypowerful": "2026-11-28T04:48:04.875950+00:00",
+      "sociallypowerful": "2026-11-28T04:52:05.038104+00:00",
       "betcparis": "2026-11-28T04:23:04.993091+00:00",
-      "traackr": "2026-11-28T04:49:04.362481+00:00",
+      "traackr": "2026-11-28T04:54:04.436436+00:00",
       "tbwaparis": "2026-11-28T03:27:04.473306+00:00",
-      "meltwater": "2026-11-28T03:14:05.107430+00:00",
+      "meltwater": "2026-11-28T04:50:04.945383+00:00",
       "braveagency": "2026-11-27T18:45:47.712819+00:00",
-      "emplifi": "2026-11-28T03:16:05.053443+00:00",
+      "emplifi": "2026-11-28T04:52:05.038104+00:00",
       "strikedigitalagency": "2026-11-28T03:28:04.663033+00:00",
-      "kesselskramer": "2026-11-28T03:17:05.166350+00:00",
+      "kesselskramer": "2026-11-28T04:53:04.520797+00:00",
       "northfolkagency": "2026-11-28T03:29:04.952164+00:00",
-      "meaningfulsocialclub": "2026-11-28T03:18:04.510217+00:00",
+      "meaningfulsocialclub": "2026-11-28T04:54:04.436436+00:00",
       "vamp": "2026-11-28T04:24:04.736287+00:00",
       "melbournesocialco": "2026-11-28T03:19:05.197766+00:00",
       "ogilvyitaly": "2026-11-28T04:25:04.923658+00:00",
@@ -3683,13 +3683,13 @@
       "fold7": "2026-11-27T20:58:47.556030+00:00",
       "thesocialshepherd": "2026-11-28T04:48:04.875950+00:00",
       "panorama3000": "2026-11-28T04:49:04.362481+00:00",
-      "elespacio": "2026-11-27T21:01:47.774923+00:00",
-      "theseoworks": "2026-11-27T21:02:47.800042+00:00",
+      "elespacio": "2026-11-28T04:50:04.945383+00:00",
+      "theseoworks": "2026-11-28T04:51:05.207141+00:00",
       "londonadvertising": "2026-11-27T21:03:47.390528+00:00",
       "mojoagency": "2026-11-27T21:04:48.105963+00:00",
       "pulseadvertising": "2026-11-27T21:05:47.423183+00:00",
-      "iconosquare": "2026-11-27T21:07:47.696150+00:00",
-      "brandwatch": "2026-11-28T03:15:04.451274+00:00",
+      "iconosquare": "2026-11-28T04:53:04.520797+00:00",
+      "brandwatch": "2026-11-28T04:51:05.207141+00:00",
       "ogilvyuk": "2026-11-27T21:12:48.143135+00:00",
       "ddbamsterdam": "2026-11-27T21:13:47.998072+00:00",
       "leoburnettmadrid": "2026-11-27T21:14:47.723894+00:00",
@@ -4807,6 +4807,6 @@
     "https://www.medianews4u.com/m3m-group-rolls-out-%e2%82%b95-crore-employee-recognition-campaign-shaurya-the-warriors",
     "https://www.medianews4u.com/jack-daniels-launches-limited-edition-festive-pack-with-for-a-cracker-of-a-night-campaign"
   ],
-  "ultima_rodada": "2026-11-28T04:49:04.362481+00:00",
+  "ultima_rodada": "2026-11-28T04:54:04.436436+00:00",
   "ultima_novidade": "2026-11-28T04:49:04.362481+00:00"
 }
