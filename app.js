@@ -735,6 +735,19 @@
           dots.appendChild(d);
         });
         media.appendChild(dots);
+        var advance = el("button", "fnext", "→");
+        advance.type = "button";
+        function labelNext(part) {
+          advance.setAttribute("aria-label", tr("Filme {i} de {n}", { i: (part + 1) % c.fl.length + 1, n: c.fl.length }));
+        }
+        art._labelNextFilm = labelNext;
+        labelNext(0);
+        advance.addEventListener("click", function (e) {
+          e.stopPropagation();
+          art.dataset.part = ((+art.dataset.part || 0) + 1) % c.fl.length;
+          activate(art, true);
+        });
+        media.appendChild(advance);
       }
       media.addEventListener("click", function (e) {
         if (mute.contains(e.target)) { mute.blur(); setSound(Date.now() - unblockedAt < 1000 ? true : !sound); if (!(active && active.art === art)) activate(art, true); return; }
@@ -1657,6 +1670,7 @@
     var f = c.fl[part];
     me.kind = f.kind;
     art.querySelectorAll(".fdot").forEach(function (d, i) { d.classList.toggle("on", i === part); });
+    if (art._labelNextFilm) art._labelNextFilm(part);
     art.classList.remove("failed", "ended");
     var slot = el("div");
     art.querySelector(".host").appendChild(slot);

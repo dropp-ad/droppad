@@ -149,6 +149,8 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .fdots { position: absolute; left: 0; right: 0; top: 10px; z-index: 6; display: flex; justify-content: center; gap: 6px; }
 .fdot { width: 8px; height: 8px; background: rgba(255, 255, 255, .45); }
 .fdot.on { background: #fff; width: 20px; }
+.fnext { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); z-index: 7; width: 36px; height: 36px; background: rgba(0, 0, 0, .65); color: #fff; font-size: 20px; display: grid; place-items: center; }
+.fnext:hover, .fnext:focus-visible { color: var(--hot); }
 .is-card .media { cursor: default; }
 .is-card .media.abre { cursor: pointer; }
 /* a notícia, quando a campanha não tem filme */
