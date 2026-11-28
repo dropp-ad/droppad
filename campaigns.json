@@ -23105,7 +23105,53 @@
       "H2PzNuGginM"
     ],
     "summary": "A Afya lança uma nova campanha para o Afya Whitebook, aplicativo de suporte à tomada de decisão clínica desenvolvido por médicos para apoiar estudantes de medicina, residentes e profissionais formados em sua rotina de atendimento.",
-    "addedAt": "2026-11-28T16:56:34Z"
+    "addedAt": "2026-11-28T16:56:34Z",
+    "credits": [
+      {
+        "role": "CEO e CO-CEO",
+        "name": "Marcelo Conduru e Paulo Castro"
+      },
+      {
+        "role": "Diretora de Atendimento",
+        "name": "Nina Franco"
+      },
+      {
+        "role": "Atendimento",
+        "name": "Livia Franco e Camilla Franco"
+      },
+      {
+        "role": "Head de Planejamento",
+        "name": "Jean Falcão e Fernanda Melo"
+      },
+      {
+        "role": "Planejamento",
+        "name": "Amanda Pereira"
+      },
+      {
+        "role": "Diretor de criação",
+        "name": "Inácio Ramos"
+      },
+      {
+        "role": "Supervisora de Criação",
+        "name": "Ana Accioli"
+      },
+      {
+        "role": "Redator",
+        "name": "Tallyson Moura e Bruno Faulhaber"
+      },
+      {
+        "role": "Diretor de arte",
+        "name": "Ana Accioli, Roberto Bastos, Diego Silva"
+      },
+      {
+        "role": "Diretor",
+        "name": "Victor Lima"
+      },
+      {
+        "role": "Áudio",
+        "name": "Bruno Genuíno"
+      }
+    ]
   },
   {
     "id": "2026-11-05-jetour-g700-w-e-assina-campanha-do-jetour-g700-e",
@@ -25907,7 +25953,57 @@
         "ok": 2,
         "summary": "Narrado por Lázaro Ramos e Taís Araujo, o filme de um minuto questiona o clichê do 'jeitinho brasileiro' e liga a diversidade cultural do país à variedade do cinema nacional."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Gerente de Criação",
+        "name": "Christiano Calvet"
+      },
+      {
+        "role": "Redação",
+        "name": "Giovanna Hallack"
+      },
+      {
+        "role": "Design",
+        "name": "Carolina Miranda"
+      },
+      {
+        "role": "Edição",
+        "name": "Camila Montano"
+      },
+      {
+        "role": "Produção de Design",
+        "name": "Renan Moraes"
+      },
+      {
+        "role": "Gerente de Conteúdo Audiovisual",
+        "name": "Ricardo Leo"
+      },
+      {
+        "role": "Coordenação de Produção",
+        "name": "Gabriela Bonn"
+      },
+      {
+        "role": "Produção Audiovisual",
+        "name": "Fábio Fernandes"
+      },
+      {
+        "role": "Gerente Sr. de Atendimento",
+        "name": "Suzana Prista"
+      },
+      {
+        "role": "Gerente de Atendimento",
+        "name": "Maria Gabriela Eloy"
+      },
+      {
+        "role": "Coordenação de Atendimento",
+        "name": "Kássio Araújo"
+      },
+      {
+        "role": "Atendimento",
+        "name": "Juliana Luz"
+      }
+    ]
   },
   {
     "id": "2026-11-04-amigos-do-figueira-volta-pra-casa",
@@ -81704,7 +81800,41 @@
       "C_xKBINSIEw"
     ],
     "summary": "Maxibon presenta su edición limitada Maxibon x Stranger Things con una campaña que tiene el claim 'Muerde y entra en el Mundo del Revés'.",
-    "addedAt": "2026-11-28T16:56:34Z"
+    "addedAt": "2026-11-28T16:56:34Z",
+    "credits": [
+      {
+        "role": "Cliente",
+        "name": "Maxibon"
+      },
+      {
+        "role": "Contacto Cliente",
+        "name": "Alba Rodrígo"
+      },
+      {
+        "role": "Agencia creativa",
+        "name": "Caffeina"
+      },
+      {
+        "role": "Dirección de Cuentas",
+        "name": "Antonella Romano"
+      },
+      {
+        "role": "Dirección creativa",
+        "name": "Silvia Zaccarelli & Andrea Piovesana & Leonardo Valeri"
+      },
+      {
+        "role": "Creativa/Copy",
+        "name": "Eleonora Giovia"
+      },
+      {
+        "role": "Creativa/Arte",
+        "name": "Simone De Angelis & Nicolas Mazloum"
+      },
+      {
+        "role": "Produccion",
+        "name": "The Blink Fish & H7-25 StudioPlanificación"
+      }
+    ]
   },
   {
     "id": "2026-07-21-johnnie-walker-keep-walking-cabo-verde",
@@ -84264,7 +84394,37 @@
       "-AsZHL3M8rE"
     ],
     "summary": "KFC lanza 'Dúos', una nueva campaña para presentar su promoción de dos productos por dos euros.",
-    "addedAt": "2026-11-28T16:56:34Z"
+    "addedAt": "2026-11-28T16:56:34Z",
+    "credits": [
+      {
+        "role": "Agencia",
+        "name": "PS21"
+      },
+      {
+        "role": "Anunciante",
+        "name": "KFC"
+      },
+      {
+        "role": "Campaña",
+        "name": "Dúos"
+      },
+      {
+        "role": "Contacto del cliente",
+        "name": "Kerman Romeo, Jorge Aylagas, Beatriz Martínez, Javier Dasí"
+      },
+      {
+        "role": "Productora",
+        "name": "Landia"
+      },
+      {
+        "role": "Realizador/Director",
+        "name": "Uriel Calatayud"
+      },
+      {
+        "role": "Agencia de medios",
+        "name": "Arena Media"
+      }
+    ]
   },
   {
     "id": "2026-07-15-whittaker-whittaker-s-campaign-celebrates-misc",
@@ -118827,7 +118987,77 @@
     "video": "https://vimeo.com/1181811452",
     "image": "https://campaignbrief.com/wp-content/uploads/2026/04/Screenshot-2026-04-13-at-8.18.32-am-1024x575.jpg",
     "summary": "Telstra is taking connectivity beyond the limits of traditional coverage with a new integrated campaign via Bear Meets E...",
-    "addedAt": "2026-11-28T16:56:34Z"
+    "addedAt": "2026-11-28T16:56:34Z",
+    "credits": [
+      {
+        "role": "Creative Agency",
+        "name": "Bear Meets Eagle On Fire"
+      },
+      {
+        "role": "Partner Agency",
+        "name": "+61"
+      },
+      {
+        "role": "Media Agency",
+        "name": "OMD Australia"
+      },
+      {
+        "role": "Client",
+        "name": "Telstra"
+      },
+      {
+        "role": "Chief Marketing Officer",
+        "name": "Brent Smart"
+      },
+      {
+        "role": "Head of Brand and Marketing Communications",
+        "name": "Alita McMenamin"
+      },
+      {
+        "role": "Head of Creative Excellence",
+        "name": "Nicky Bryson"
+      },
+      {
+        "role": "Senior Marketing Specialist",
+        "name": "Jon Hollett"
+      },
+      {
+        "role": "Head of Media & Marketing Operations",
+        "name": "Paula Marreiros"
+      },
+      {
+        "role": "Senior Media Specialist",
+        "name": "Ally Chin"
+      },
+      {
+        "role": "Production Company",
+        "name": "Passion Animation"
+      },
+      {
+        "role": "Director",
+        "name": "Catherine Prowse"
+      },
+      {
+        "role": "Producer",
+        "name": "Sam Hope"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Juliette Stern"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Belle Palmer"
+      },
+      {
+        "role": "Art Director",
+        "name": "Areeya Bass"
+      },
+      {
+        "role": "Character Design",
+        "name": "Enrico Buffa"
+      }
+    ]
   },
   {
     "id": "2026-04-12-dubai-s-parkin-and-fp7-mccann-dubai-turn-par",
@@ -119737,7 +119967,45 @@
     ],
     "summary": "Liquorland has redefined legendary moments, taking stars from the pitch, field and screen and transforming them into eve...",
     "addedAt": "2026-11-28T16:56:34Z",
-    "video": "https://vimeo.com/1181379055"
+    "video": "https://vimeo.com/1181379055",
+    "credits": [
+      {
+        "role": "Liquorland General Manager Customer Loyalty",
+        "name": "Mia Horner"
+      },
+      {
+        "role": "Liquorland Head of Brand, Partnerships & Experiences",
+        "name": "Brylie Dauparas"
+      },
+      {
+        "role": "Liquorland Brand Manager",
+        "name": "Renee Zumbo"
+      },
+      {
+        "role": "Liquorland Media Manager",
+        "name": "Philip Abeyratne"
+      },
+      {
+        "role": "Creative Agency",
+        "name": "Bashful"
+      },
+      {
+        "role": "Media Agency",
+        "name": "Smith St"
+      },
+      {
+        "role": "Director",
+        "name": "India Harris"
+      },
+      {
+        "role": "Production Company",
+        "name": "Rabbit"
+      },
+      {
+        "role": "Editor",
+        "name": "Lucas Vazquez"
+      }
+    ]
   },
   {
     "id": "2026-04-08-belong-belong-turns-reddit-hacks-into-natio",
@@ -121358,7 +121626,65 @@
     ],
     "summary": "Honda Australia has launched a new campaign highlighting the smooth driving experience of its CR-V hybrid, via its agenc...",
     "addedAt": "2026-11-28T16:56:34Z",
-    "video": "https://vimeo.com/1178675524"
+    "video": "https://vimeo.com/1178675524",
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Honda Australia"
+      },
+      {
+        "role": "General Manager Brand, Marketing & Digital",
+        "name": "Eva Barrett"
+      },
+      {
+        "role": "Head of Marketing",
+        "name": "Terri Golder"
+      },
+      {
+        "role": "Marketing Comms Manager",
+        "name": "Sylvia Chew"
+      },
+      {
+        "role": "Marketing Campaign Specialist",
+        "name": "Bronte Sassella"
+      },
+      {
+        "role": "Marketing Coordinator",
+        "name": "Hayley Pepper"
+      },
+      {
+        "role": "Creative Manager",
+        "name": "Glenn Gibbons"
+      },
+      {
+        "role": "Creative Agency",
+        "name": "Special"
+      },
+      {
+        "role": "CEO/Partners",
+        "name": "Lindsey Evans & Cade Heyde"
+      },
+      {
+        "role": "CCO/Partners",
+        "name": "Tom Martin & Julian Schreiber"
+      },
+      {
+        "role": "CSO/Partner",
+        "name": "Rebecca Stambanis"
+      },
+      {
+        "role": "National Managing Director",
+        "name": "Sasha Firth"
+      },
+      {
+        "role": "National Head of Production",
+        "name": "Tash Johnson"
+      },
+      {
+        "role": "Strategy Director",
+        "name": "Sam Butcher"
+      }
+    ]
   },
   {
     "id": "2026-04-01-drogaria-araujo-120-anos",
@@ -121892,7 +122218,25 @@
     ],
     "summary": "Tourism Tasmania has today launched the 2026 iteration of its Effie award-winning Off Season campaign, inviting Australi...",
     "addedAt": "2026-11-28T16:56:34Z",
-    "video": "https://vimeo.com/1178317643/2286cf3443"
+    "video": "https://vimeo.com/1178317643/2286cf3443",
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Tourism Tasmania"
+      },
+      {
+        "role": "Creative Agency",
+        "name": "BMF Australia"
+      },
+      {
+        "role": "Film production Director",
+        "name": "Kyra Bartley"
+      },
+      {
+        "role": "Production Company",
+        "name": "FINCH"
+      }
+    ]
   },
   {
     "id": "2026-03-30-pillow-talk-pillow-talk-celebrates-the-joy-when",
@@ -121920,7 +122264,53 @@
     ],
     "summary": "National bedding and homewares retailer Pillow Talk has launched a major new brand campaign via Melbourne creative agenc...",
     "addedAt": "2026-11-28T16:56:34Z",
-    "video": "https://vimeo.com/1178333988"
+    "video": "https://vimeo.com/1178333988",
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Pillow Talk"
+      },
+      {
+        "role": "Head of Marketing",
+        "name": "Maddy Naylor"
+      },
+      {
+        "role": "Digital Marketing Manager",
+        "name": "Maddie Chaplin"
+      },
+      {
+        "role": "Design Manager",
+        "name": "Renee Carloss"
+      },
+      {
+        "role": "Agency",
+        "name": "Whippet"
+      },
+      {
+        "role": "Associate Creative Director",
+        "name": "Bec Williams"
+      },
+      {
+        "role": "Head of Copy",
+        "name": "Flavia Mazdon"
+      },
+      {
+        "role": "Senior Account Director",
+        "name": "Sam Douglas"
+      },
+      {
+        "role": "Managing Director",
+        "name": "Lucy Yeo"
+      },
+      {
+        "role": "Customer & Strategy Director",
+        "name": "Adam Rafferty"
+      },
+      {
+        "role": "Music",
+        "name": "Music"
+      }
+    ]
   },
   {
     "id": "2026-03-30-cif-e-serasa-cif-limpa-nome-na-serasa",
@@ -139256,6 +139646,24 @@
     "igm": [
       54,
       500
+    ],
+    "credits": [
+      {
+        "role": "Agência Líder",
+        "name": "Live the Agency"
+      },
+      {
+        "role": "CEO",
+        "name": "Aline Rossin"
+      },
+      {
+        "role": "Diretora Executiva de Criação e Produção",
+        "name": "Isabella Pipitone"
+      },
+      {
+        "role": "Redatora Sênior",
+        "name": "Juliana Costa"
+      }
     ]
   },
   {
@@ -139348,7 +139756,129 @@
         "title": "Still Super, Now Better Value",
         "summary": "Um gerente de loja tenta anunciar os mais de 500 cortes de preço da SuperValu num único comercial e descobre que eles não cabem em 60 segundos."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "SuperValu"
+      },
+      {
+        "role": "Marketing Director",
+        "name": "Rita Kirwan"
+      },
+      {
+        "role": "Retail Marketing Manager",
+        "name": "John Kelly"
+      },
+      {
+        "role": "Brand Manager",
+        "name": "Maryclaire Lynch"
+      },
+      {
+        "role": "Local Marketing Brand Manager",
+        "name": "Karen O’Connor"
+      },
+      {
+        "role": "Agency",
+        "name": "Boys + Girls"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Rory Hamilton"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Jake O’Driscoll"
+      },
+      {
+        "role": "Associate Creative Director",
+        "name": "Dean Ryan"
+      },
+      {
+        "role": "Senior Copywriter",
+        "name": "Michael Whelan & Jack Walsh"
+      },
+      {
+        "role": "Head of Production",
+        "name": "Derek Doyle"
+      },
+      {
+        "role": "Business Director",
+        "name": "Sarah Sherry & Dave Curran"
+      },
+      {
+        "role": "Account Director",
+        "name": "Jessica Stokes"
+      },
+      {
+        "role": "Account Manager",
+        "name": "Darragh Thompson"
+      },
+      {
+        "role": "Executive Strategy Director",
+        "name": "Tara Finnegan"
+      },
+      {
+        "role": "Production",
+        "name": "Ponder"
+      },
+      {
+        "role": "Director",
+        "name": "Brian Durnin"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Paul Holmes"
+      },
+      {
+        "role": "Director of Photography",
+        "name": "Ivan McCullough"
+      },
+      {
+        "role": "1st Assistant Director",
+        "name": "Ciara McIlraith"
+      },
+      {
+        "role": "Production Co-ordinator",
+        "name": "Treasa O’Friel"
+      },
+      {
+        "role": "Location Manager",
+        "name": "Victoria Louise Jolliffe"
+      },
+      {
+        "role": "Casting Director",
+        "name": "Shauna Griffith"
+      },
+      {
+        "role": "Production Art Director",
+        "name": "Joe Fallover"
+      },
+      {
+        "role": "Sound Recordist",
+        "name": "Karl Merrin"
+      },
+      {
+        "role": "Post Production",
+        "name": "ScreenScene"
+      },
+      {
+        "role": "Editor",
+        "name": "Lee Hickey"
+      },
+      {
+        "role": "Post Producers",
+        "name": "Sinead Bagnall & Anne-Marie Downes, ScreenScene"
+      },
+      {
+        "role": "Sound Design",
+        "name": "Will Farrell, Blast Audio"
+      },
+      {
+        "role": "Music",
+        "name": "Makeba by Jain"
+      }
+    ]
   },
   {
     "id": "2026-01-23-rhb-dignity",
@@ -139617,6 +140147,60 @@
       "Com essa ideia, queríamos virar esse pensamento de cabeça para baixo de uma forma que parecesse inteligente, surpreendente e um pouco divertida. Quando percebemos que formas de mobiliário como as da IKEA existiram na grande arte ao longo da história, a conclusão é simples: um bom design é intemporal.",
       "E se pertence a um museu, provavelmente também pertence à sua casa.” Com ‘Obras-primas Acessíveis’, a IKEA recupera a narrativa em torno da acessibilidade, posicionando-a não como uma limitação, mas como um convite a designs próprios que perduram, inspiram e ganham o seu lugar na vida quotidiana.",
       "Cadastre-se gratuitamente e receba o Boletim Diário do Resumo da Campanha. Digite seu endereço de e-mail no espaço abaixo. Cadastre-se gratuitamente e receba o Boletim Diário do Resumo da Campanha. Digite seu endereço de e-mail no espaço abaixo."
+    ],
+    "credits": [
+      {
+        "role": "Client",
+        "name": "IKEA Saudi and Bahrain"
+      },
+      {
+        "role": "Chief Marketing Officer",
+        "name": "Rami Rihani"
+      },
+      {
+        "role": "Marketing Manager",
+        "name": "Ebba Ourfali"
+      },
+      {
+        "role": "Social Manager",
+        "name": "Raneem Kayal"
+      },
+      {
+        "role": "Marketing Specialist",
+        "name": "Payaswini Prasad"
+      },
+      {
+        "role": "Social",
+        "name": "Rafal Flimban"
+      },
+      {
+        "role": "Agency",
+        "name": "Memac Ogilvy"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Gautam Wadher"
+      },
+      {
+        "role": "Managing Partner",
+        "name": "Kevin Kurian"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Maram Ashour"
+      },
+      {
+        "role": "Art Director",
+        "name": "Leomerish Leyco"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Wayne Fernandes"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Aljazi Aldweesh"
+      }
     ]
   },
   {
@@ -139693,7 +140277,73 @@
         "title": "Youthline launches new national donation campaign ‘Help Us Answer’ via Droga5 ANZ",
         "summary": "A Youthline fez parceria com a Droga5 ANZ, parte da Accenture Song, para lançar uma nova e poderosa campanha de doações em todo o país..."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Youthline New Zealand"
+      },
+      {
+        "role": "CEO",
+        "name": "Shae Ronald"
+      },
+      {
+        "role": "GM Fundraising and Marketing",
+        "name": "Anastasia Potter"
+      },
+      {
+        "role": "Senior Direct & Digital Marketing Specialist",
+        "name": "Elijahh Raki"
+      },
+      {
+        "role": "Creative Agency",
+        "name": "Droga5 ANZ, part of Accenture Song"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Damon Stapleton & Barbara Humphries"
+      },
+      {
+        "role": "Principal Director",
+        "name": "Steve Kane"
+      },
+      {
+        "role": "Chief Strategy Officer",
+        "name": "Stevie Weber"
+      },
+      {
+        "role": "Group Business Director",
+        "name": "Ruth Coulson"
+      },
+      {
+        "role": "Business Manager",
+        "name": "Lily Tootill"
+      },
+      {
+        "role": "Executive Creative Directors",
+        "name": "Christie Cooper & James Conner"
+      },
+      {
+        "role": "Senior Art Director",
+        "name": "Erin Clarke"
+      },
+      {
+        "role": "Senior Copywriter",
+        "name": "Katrina Menary"
+      },
+      {
+        "role": "GM & Executive Producer",
+        "name": "Rosie Grayson"
+      },
+      {
+        "role": "Integrated Producer",
+        "name": "Callum Crabb"
+      },
+      {
+        "role": "Lead Designer",
+        "name": "Lucinda Fortescue-Hansen"
+      }
+    ]
   },
   {
     "id": "2026-01-22-manscaped-quality-meats-to-create-first-nation",
@@ -140386,7 +141036,25 @@
         "title": "Woolworths NZ shows that the perfect Kiwi summer actually doesn’t need much in new campaign via M+C Saatchi NZ and Dentsu",
         "summary": "A Woolworths New Zealand lançou uma nova campanha via M+C Saatchi NZ e Dentsu, que celebra a simplicidade e f..."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Creative Agency",
+        "name": "M+C Saatchi NZ"
+      },
+      {
+        "role": "Production Company",
+        "name": "Finch"
+      },
+      {
+        "role": "Director",
+        "name": "Lex Hodge"
+      },
+      {
+        "role": "Producer",
+        "name": "Helen Naulls"
+      }
+    ]
   },
   {
     "id": "2026-01-19-pague-menos-verao",
@@ -140440,7 +141108,113 @@
         "ok": 2,
         "summary": "Filme da plataforma #FlyTheFlag que reconstitui a trajetória de Tyler McGregor, que perdeu a perna para um câncer e se tornou capitão da seleção canadense de hóquei paralímpico rumo a Milano Cortina 2026."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "CEO",
+        "name": "Bryan Kane"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Nancy Crimi-Lamanna"
+      },
+      {
+        "role": "Chief Strategy Officer",
+        "name": "Shelly Brown"
+      },
+      {
+        "role": "Head of Corporate Communications and Reputation",
+        "name": "Tim Welsh"
+      },
+      {
+        "role": "Executive Creative Director",
+        "name": "Jeremiah McNama"
+      },
+      {
+        "role": "Associate Creative Director",
+        "name": "Cody Sabatine"
+      },
+      {
+        "role": "Associate Creative Director",
+        "name": "Joseph Vernuccio"
+      },
+      {
+        "role": "Art Director",
+        "name": "Cody Sabatine"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Joseph Vernuccio"
+      },
+      {
+        "role": "Sr. Vice President, Strategy",
+        "name": "Shelagh Hartford"
+      },
+      {
+        "role": "Group Account Director",
+        "name": "Erin Brown-Vandecruys"
+      },
+      {
+        "role": "Account Director",
+        "name": "Caiti Murray"
+      },
+      {
+        "role": "Vice President, Head of Creative",
+        "name": "Sylvain Dufresne"
+      },
+      {
+        "role": "Associate Creative Director",
+        "name": "AJ Poirier"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Ariane Gagné"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Marie-Christine Lessard"
+      },
+      {
+        "role": "Senior Broadcast Producer",
+        "name": "Anick Rozon"
+      },
+      {
+        "role": "Senior Broadcast Producer",
+        "name": "Josh Malone"
+      },
+      {
+        "role": "Director",
+        "name": "Kevin Foley"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Marcus Trulli"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Eugene Marchio"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Aasttha Khajuria"
+      },
+      {
+        "role": "Line Producer",
+        "name": "Andy McLeod"
+      },
+      {
+        "role": "Director of Photography",
+        "name": "Paul Meyers"
+      },
+      {
+        "role": "Production Designer",
+        "name": "David Dennis"
+      },
+      {
+        "role": "Production Manager",
+        "name": "Peter Vanstone"
+      }
+    ]
   },
   {
     "id": "2026-01-19-ikea-quality-on-the-billboard",
@@ -140524,7 +141298,45 @@
         "ok": 2
       }
     },
-    "video": "https://vimeo.com/1152036750"
+    "video": "https://vimeo.com/1152036750",
+    "credits": [
+      {
+        "role": "Agency",
+        "name": "SICKDOGWOLFMAN"
+      },
+      {
+        "role": "Production Company",
+        "name": "Haven’t You Done Well"
+      },
+      {
+        "role": "Director",
+        "name": "Will Suen & Sejon Im"
+      },
+      {
+        "role": "Producer",
+        "name": "Louise Todd-Smith"
+      },
+      {
+        "role": "Producer",
+        "name": "Bea Barbeau-Scurla"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Georgia Mappin"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Tom Rickard"
+      },
+      {
+        "role": "Post Producer",
+        "name": "Louise Todd-Smith"
+      },
+      {
+        "role": "DOP",
+        "name": "Nyssa Mitchell"
+      }
+    ]
   },
   {
     "id": "2026-01-18-kia-electric-envy",
@@ -140577,7 +141389,53 @@
         "title": "Get Almost, Almost Anything – Jim Courier",
         "summary": "No sétimo capítulo da plataforma ligada ao Australian Open, o ex-tenista Jim Courier troca a raquete pela mochila e vira entregador do Uber Eats em Melbourne, em formato de falso documentário."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Production Company",
+        "name": "Rabbit"
+      },
+      {
+        "role": "Director",
+        "name": "Ally Pankiw"
+      },
+      {
+        "role": "Founder / Executive Producer",
+        "name": "Lucas Jenner"
+      },
+      {
+        "role": "Partner MD / Executive Producer",
+        "name": "Alex Hay"
+      },
+      {
+        "role": "General Manager / Producer",
+        "name": "Katrina Maw"
+      },
+      {
+        "role": "DOP",
+        "name": "Gin Loane"
+      },
+      {
+        "role": "Production Designer",
+        "name": "Lucinda Thomson"
+      },
+      {
+        "role": "Editor",
+        "name": "Jack Hutchings"
+      },
+      {
+        "role": "Post-Production",
+        "name": "The Editors"
+      },
+      {
+        "role": "Music and Sound",
+        "name": "Sonar"
+      },
+      {
+        "role": "Media Agency",
+        "name": "EssenceMediacom"
+      }
+    ]
   },
   {
     "id": "2026-01-16-brahma-ancelotti-carnaval",
@@ -140659,7 +141517,73 @@
         "ok": 2,
         "summary": "Campanha bem-humorada reposiciona o DoneDeal Cars como opção para compradores de carros premium, brincando com a mania irlandesa de dar pronúncia 'continental' às palavras."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "CMO, DoneDeal",
+        "name": "Elaine Doyle"
+      },
+      {
+        "role": "Senior Marketing Manager, DoneDeal",
+        "name": "Leah Nestor"
+      },
+      {
+        "role": "Marketing Executive, DoneDeal",
+        "name": "Olive Kearney"
+      },
+      {
+        "role": "Creative Designer",
+        "name": "Kevin Gannon"
+      },
+      {
+        "role": "Director",
+        "name": "Ciarán Dooley"
+      },
+      {
+        "role": "CCO",
+        "name": "Rory Hamilton"
+      },
+      {
+        "role": "Art Director",
+        "name": "Jessie Newman"
+      },
+      {
+        "role": "Managing Director",
+        "name": "Alan McQuaid"
+      },
+      {
+        "role": "Account Manager",
+        "name": "Darragh O’Connor"
+      },
+      {
+        "role": "Producer",
+        "name": "Al Keegan"
+      },
+      {
+        "role": "Production Co-Ordinator",
+        "name": "Marissa Coon"
+      },
+      {
+        "role": "DOP",
+        "name": "Philip Blake"
+      },
+      {
+        "role": "Production Designer, Jo Mooney Make-Up Artist: Aitana Silvan",
+        "name": "Fiona Fagan"
+      },
+      {
+        "role": "Sound Recordist",
+        "name": "Ross Carew"
+      },
+      {
+        "role": "VFX",
+        "name": "Robin Winchester"
+      },
+      {
+        "role": "Sound Design & Mix",
+        "name": "Will Farrell @ Blast"
+      }
+    ]
   },
   {
     "id": "2026-01-15-omnicom-advertising-omnicom-advertising-unveils-new-hong",
@@ -140738,6 +141662,44 @@
       "Lam disse: “Estamos muito orgulhosos deste filme do 20º aniversário da marca, que representa um momento de reflexão que honra as nossas raízes enquanto olhamos para o futuro, celebrando a resiliência, a criatividade e as parcerias que nos levaram, dedicado a todos os que percorreram esta jornada connosco”.",
       "O filme, que tem versões em chinês tradicional e simplificado, foi lançado em um evento interno da empresa, antes de se tornar público no site da empresa e em diversos canais de mídia social. Na foto: Carol Lam, Sylvester Song e Chris Kyme.",
       "Cadastre-se gratuitamente e receba o Boletim Diário do Resumo da Campanha. Digite seu endereço de e-mail no espaço abaixo. Cadastre-se gratuitamente e receba o Boletim Diário do Resumo da Campanha. Digite seu endereço de e-mail no espaço abaixo."
+    ],
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Link Asset Management"
+      },
+      {
+        "role": "Client team",
+        "name": "Carol Lam, Raiden Cheung, Wendy Lui, David Ashton"
+      },
+      {
+        "role": "Agency team",
+        "name": "Chris Kyme, Flora Chow"
+      },
+      {
+        "role": "Production company",
+        "name": "One Sly Dog Films"
+      },
+      {
+        "role": "Post production",
+        "name": "B for Buck"
+      },
+      {
+        "role": "Director",
+        "name": "Sly Song@oneslydogfilms"
+      },
+      {
+        "role": "Producer/Post",
+        "name": "Buck Yau@bforbuck"
+      },
+      {
+        "role": "DOP",
+        "name": "Fung Wing Kai"
+      },
+      {
+        "role": "Production Manager",
+        "name": "Cheung Yat Hong"
+      }
     ]
   },
   {
@@ -141182,7 +142144,65 @@
         "title": "Opening The Door To More",
         "summary": "A Eurocamp transforma a porta de seus chalés em um portal para atividades e destinos, buscando uma nova geração de viajantes em campanha que começa no Reino Unido e Irlanda e segue pela Europa."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Creative Agency",
+        "name": "Squad"
+      },
+      {
+        "role": "Creative Partner",
+        "name": "David Barraclough"
+      },
+      {
+        "role": "Managing/Strategy Partner",
+        "name": "Rob Gray"
+      },
+      {
+        "role": "Director",
+        "name": "Mark Gill"
+      },
+      {
+        "role": "Studio Director",
+        "name": "Jess Cleary"
+      },
+      {
+        "role": "Production Company",
+        "name": "The Chase Films"
+      },
+      {
+        "role": "DOP",
+        "name": "Fernando Ruiz"
+      },
+      {
+        "role": "Senior Producer",
+        "name": "Natalie Lewis"
+      },
+      {
+        "role": "Production Manager",
+        "name": "Sam Atkins"
+      },
+      {
+        "role": "Service Production Company",
+        "name": "Film it in Spain"
+      },
+      {
+        "role": "Local Producer",
+        "name": "Roland Quesnel"
+      },
+      {
+        "role": "Social Content",
+        "name": "Nicholas Visuals"
+      },
+      {
+        "role": "VFX",
+        "name": "Last Pixel"
+      },
+      {
+        "role": "Audio Post Production",
+        "name": "We Make Audio"
+      }
+    ]
   },
   {
     "id": "2026-01-13-brahma-te-la-meresed",
@@ -141212,7 +142232,25 @@
         "ok": 2,
         "summary": "Na campanha de verão, a Brahma liga a sua 'sede' ao descanso merecido depois de um ano puxado, com filme dirigido por Tomás Quartino e música de Luck Ra."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Anunciante",
+        "name": "Cervecería y Maltería Quilmes"
+      },
+      {
+        "role": "Marca",
+        "name": "Brahma"
+      },
+      {
+        "role": "Agencia",
+        "name": "draftLine AR"
+      },
+      {
+        "role": "Campaña",
+        "name": "“Te la meresed”"
+      }
+    ]
   },
   {
     "id": "2026-01-13-prizepicks-playoffs",
@@ -141285,6 +142323,28 @@
       "A campanha desenrola-se através de três filmes distintos, cada um com o seu próprio tom e perspetiva: • Diversificação destaca a vasta gama de soluções de mobilidade da Toyota e o seu compromisso com a inclusão e a escolha. • Excelência em Serviços adota uma abordagem mais leve e enérgica, apresentando a rede de serviços da Toyota e a segurança que ela proporciona. • QDR explora a promessa central da marca de qualidade, durabilidade…",
       "Juntos, os filmes apresentam uma expressão coesa da promessa da marca Toyota: apoiar as pessoas que navegam com confiança num mundo de mobilidade em mudança. A campanha será lançada em vários mercados asiáticos através de plataformas digitais, sociais e de vídeo premium.",
       "Parceiro de negócios: The Crisp Group Chris Gurney – Cofundador, CCIO Shantanu Dasgupta – Cofundador, CEO Joshua Okada – Cofundador, COO Shir Lee Akazawa – Chefe de Estratégia de Conteúdo Mikyung Kim – Produtor Executivo"
+    ],
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Toyota Motor Asia"
+      },
+      {
+        "role": "General Manager",
+        "name": "Jaja Ishibashi"
+      },
+      {
+        "role": "Deputy General Manager",
+        "name": "Kenix Loh"
+      },
+      {
+        "role": "Assistant Manager",
+        "name": "Eri Kojima"
+      },
+      {
+        "role": "Business Partner",
+        "name": "The Crisp Group"
+      }
     ]
   },
   {
@@ -141360,7 +142420,169 @@
         "ok": 2,
         "summary": "Dirigida por Alice Braga y rodada en Salvador, la película sigue el viaje de Wagner Moura desde su infancia en Bahía hasta el reconocimiento internacional como símbolo del talento brasileño."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "AGÊNCIA",
+        "name": "AlmapBBDO"
+      },
+      {
+        "role": "ANUNCIANTE",
+        "name": "Cartão Elo"
+      },
+      {
+        "role": "TÍTULO",
+        "name": "Garoto"
+      },
+      {
+        "role": "PRODUTO",
+        "name": "Institucional"
+      },
+      {
+        "role": "PRESIDENTE E CEO",
+        "name": "Filipe Bartholomeu"
+      },
+      {
+        "role": "CCO",
+        "name": "Pernil"
+      },
+      {
+        "role": "VICE-PRESIDENTES DE CRIAÇÃO",
+        "name": "Fernando Duarte e Henrique Del Lama"
+      },
+      {
+        "role": "DIRETORES DE CRIAÇÃO",
+        "name": "Dudu Barcelos e Iron Brito"
+      },
+      {
+        "role": "CRIAÇÃO",
+        "name": "Daniel Trimer, Guto Merino"
+      },
+      {
+        "role": "VICE-PRESIDENTE DE ATENDIMENTO",
+        "name": "Renata Carvalho"
+      },
+      {
+        "role": "ATENDIMENTO",
+        "name": "Warley Vieira, Mayara Cortez, Luana Moraes"
+      },
+      {
+        "role": "PLANEJAMENTO",
+        "name": "David Gross, Iago Moura, Julia Albero, Isabela Craveiro, Eduarda Ramos e Ana Cecília Rodrigues"
+      },
+      {
+        "role": "PR Elo",
+        "name": "Matheus Gonzalez, Flavio Cano"
+      },
+      {
+        "role": "MÍDIA Elo",
+        "name": "Patricia Azzi, Erica Kliger e Eduardo Cintra"
+      },
+      {
+        "role": "MÍDIA",
+        "name": "Patrícia Gogliara, Marcos de Oliveira Filho, Leonardo Assennato, Gabriela Silva, Nádia Pascoal, Rebeca Dipold e Ludmilla Bandeira"
+      },
+      {
+        "role": "MÍDIA PERFORMANCE",
+        "name": "Danielle Farhat, Daniel Meneses, Analu Milek, Thaís Rosa San’Ana, Patrick Manzoni, Gabriel Nocais, Wagner da Silva Maia, Bruno Lima, Brenda Camargo"
+      },
+      {
+        "role": "SOCIAL INSIGHTS",
+        "name": "Joao Gabriel Fernandes, Gustavo Arakawa e Rafaella Carolina"
+      },
+      {
+        "role": "PRODUÇÃO AUDIOVISUAL",
+        "name": "Diego Villas Boas, Vera Jacinto, Eriana Simões"
+      },
+      {
+        "role": "APROVAÇÃO CLIENTE",
+        "name": "Mel Pedroso"
+      },
+      {
+        "role": "FOTOGRAFIA",
+        "name": "Mauricio Nahas"
+      },
+      {
+        "role": "PRODUÇÃO EXECUTIVA",
+        "name": "Notorious"
+      },
+      {
+        "role": "PRODUTORA DE IMAGEM",
+        "name": "Conspiração"
+      },
+      {
+        "role": "1ª ASS DE DIREÇÃO",
+        "name": "Maria Gentil"
+      },
+      {
+        "role": "DIRETOR DE FOTOGRAFIA",
+        "name": "Pierre de Kerchove"
+      },
+      {
+        "role": "DIRETOR DE ARTE",
+        "name": "Cláudio Amaral Peixoto"
+      },
+      {
+        "role": "DIRETORA COMERCIAL / PRODUTORA EXECUTIVA",
+        "name": "Cristina Lopes"
+      },
+      {
+        "role": "DIRETORA EXECUTIVA DE PRODUÇÃO",
+        "name": "Tania Pacheco"
+      },
+      {
+        "role": "GERENTE DE PRODUÇÃO EXECUTIVA",
+        "name": "Milla Monteiro"
+      },
+      {
+        "role": "DIRETOR DE PRODUÇÃO",
+        "name": "Guilherme Bolo"
+      },
+      {
+        "role": "COORDENADOR DE PRODUÇÃO",
+        "name": "Bedin Berriel"
+      },
+      {
+        "role": "PRODUTORA LOCAL",
+        "name": "Claudia Reis"
+      },
+      {
+        "role": "ASSISTENTE DE PRODUÇÃO EXECUTIVA",
+        "name": "Thiago Araujo"
+      },
+      {
+        "role": "DIRETORA DE PÓS",
+        "name": "Adriana Basbaum"
+      },
+      {
+        "role": "GERENTE DE PÓS-PRODUÇÃO",
+        "name": "Thiago Silva"
+      },
+      {
+        "role": "PÓS-PRODUTORA",
+        "name": "Rebeca Cardoso"
+      },
+      {
+        "role": "COLOR GRADING",
+        "name": "Bleach Films"
+      },
+      {
+        "role": "PRODUTORA DE ÁUDIO",
+        "name": "Raw Audio"
+      },
+      {
+        "role": "DIREÇÃO MUSICAL",
+        "name": "Hilton Raw"
+      },
+      {
+        "role": "PRODUÇÃO MUSICAL",
+        "name": "Hilton Raw; Fernando Forni, Ricardo Pinda e Rogerinho Pereira"
+      },
+      {
+        "role": "SOUND DESIGN E MIXAGEM",
+        "name": "Enrico Maccio e Philip Braunstein"
+      }
+    ]
   },
   {
     "id": "2026-01-12-cultura-inglesa-o-ingles-que-voce-leva-pra-vida",
@@ -141416,7 +142638,141 @@
         "title": "Aniversario CAIXA – 165 años",
         "summary": "En el día del aniversario, el banco público estrena películas que recuerdan su papel de apoyo y celebración de los logros de los brasileños a lo largo de 165 años."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Agência",
+        "name": "CALIA"
+      },
+      {
+        "role": "Cliente",
+        "name": "CAIXA"
+      },
+      {
+        "role": "Campanha",
+        "name": "Aniversário Caixa 165 anos"
+      },
+      {
+        "role": "Direção Geral de Criação",
+        "name": "Geisa Lopes"
+      },
+      {
+        "role": "Direção de Criação",
+        "name": "Cícero Fraga, Maurício Oliveira, Alexandre Ferro"
+      },
+      {
+        "role": "Head of art",
+        "name": "Bruno Lima"
+      },
+      {
+        "role": "Redação",
+        "name": "Eve Portilho e Filipe Fontes"
+      },
+      {
+        "role": "Direção de arte",
+        "name": "Bruno Lima, Alexsander Junior e Bruno Jefter"
+      },
+      {
+        "role": "Planejamento",
+        "name": "Analuiza Kazniakowski, Isabel Aquino, Liana Bonaccorsi, João Pinheiro e Cezar Pinheiro"
+      },
+      {
+        "role": "Atendimento",
+        "name": "Claudia Lassance, Rosa Cordeiro, Fernanda Lopes e Camila Sanglard"
+      },
+      {
+        "role": "Atendimento digital",
+        "name": "Amanda Cortez e Luiza Bezerra"
+      },
+      {
+        "role": "Mídia",
+        "name": "Mayko Chaves, Milena Lima, Rafael Herani, Bruna Garcia, Felipe Pereira, Marcos Alencar, Jessica Santos e Adriele Rolim"
+      },
+      {
+        "role": "Diretor de Planejamento e Conteúdo Digital",
+        "name": "Lucas Mansur"
+      },
+      {
+        "role": "Planejamento e Conteúdo Digital",
+        "name": "Camila Batista, Camila Beatriz e Regina Arruda"
+      },
+      {
+        "role": "Diretor de Produção",
+        "name": "Marcos Araújo"
+      },
+      {
+        "role": "Gestora Operacional Geral de Produção",
+        "name": "Fernanda Machado"
+      },
+      {
+        "role": "Gerente de Produção",
+        "name": "Hellen Cristhine"
+      },
+      {
+        "role": "Produção gráfica e RTV",
+        "name": "Marcos Araújo, Fernanda Machado, Hellen Cristhine, Lucas Xavier, Tamiris Monroe, Edson Lima e Beatriz Silva"
+      },
+      {
+        "role": "Aprovação cliente produção",
+        "name": "Wolmar Aguiar, Tiago Marquetto, Ludmila Albertini e Adriana Brasil"
+      },
+      {
+        "role": "Aprovação cliente mídia",
+        "name": "Leonardo Suzuki e Bárbara Oliveira Mendes"
+      },
+      {
+        "role": "Produtora de vídeo",
+        "name": "Maria Quitéria"
+      },
+      {
+        "role": "Diretor de Fotografia",
+        "name": "Pedro Viana"
+      },
+      {
+        "role": "Assistente de direção 1",
+        "name": "Mariana Alves de Araujo"
+      },
+      {
+        "role": "Assistente de direção 2",
+        "name": "Bianca Soares Pereira"
+      },
+      {
+        "role": "Diretor de atendimento/Direção executiva",
+        "name": "Márcia Guerra"
+      },
+      {
+        "role": "Produção executiva",
+        "name": "Manuela Tavares"
+      },
+      {
+        "role": "Atendimento",
+        "name": "Lorena Tornis e Michelle Rodrigues"
+      },
+      {
+        "role": "Coordenação de Produção",
+        "name": "Mafê Simão"
+      },
+      {
+        "role": "Diretor de produção",
+        "name": "Paula Ortiz"
+      },
+      {
+        "role": "Assistente de produção",
+        "name": "Giovanna Rodrigues Martins"
+      },
+      {
+        "role": "Produtor(a) de Figurino",
+        "name": "Silvana Moura de Abreu"
+      },
+      {
+        "role": "Produtor(a) de Elenco",
+        "name": "Dennys Carvalho"
+      },
+      {
+        "role": "Diretor de arte",
+        "name": "Guilherme Henrique Ferreira"
+      }
+    ]
   },
   {
     "id": "2026-01-12-penalty-a-volta-da-temporada",
@@ -141629,7 +142985,61 @@
         "ok": 2,
         "summary": "La campaña global con Lando Norris, Dan Sheehan y Marcus Smith muestra con humor a atletas de élite tratando de ocultar la marca de suplementos que les otorga una ventaja competitiva."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Optimum Nutrition"
+      },
+      {
+        "role": "Chief Brand Officer",
+        "name": "Colin Westcott-Pitt"
+      },
+      {
+        "role": "VP Consumer & Brand Strategy",
+        "name": "Aileen Donoghue"
+      },
+      {
+        "role": "Senior Director, Optimum Nutrition",
+        "name": "Mark Ryan"
+      },
+      {
+        "role": "VP Insights & Analytics",
+        "name": "Rory McDonnell"
+      },
+      {
+        "role": "Director I&A",
+        "name": "Lynsey Leahy"
+      },
+      {
+        "role": "Creative Agency",
+        "name": "TBWA\\ Ireland"
+      },
+      {
+        "role": "Global Client Leader",
+        "name": "Gordo Whittaker"
+      },
+      {
+        "role": "Creative Directors",
+        "name": "Des Creedon & Niall Staines"
+      },
+      {
+        "role": "Global Senior Producer",
+        "name": "Adam Sherry"
+      },
+      {
+        "role": "Senior Account Manager",
+        "name": "Áine Neenan"
+      },
+      {
+        "role": "Production Company",
+        "name": "BOLT! by TBWA"
+      },
+      {
+        "role": "Director",
+        "name": "Tom Merilion"
+      }
+    ]
   },
   {
     "id": "2026-01-09-bord-gais-energy-know-your-power",
@@ -141748,7 +143158,121 @@
         "summary": "Marriott International y BBH Singapore han lanzado una nueva campaña para Marriott Bonvoy, el grupo hotelero global...",
         "ok": 2
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Marriott International"
+      },
+      {
+        "role": "Senior Director, Brand Marketing",
+        "name": "Cassandra Leong"
+      },
+      {
+        "role": "Agency",
+        "name": "BBH Singapore"
+      },
+      {
+        "role": "Managing Director",
+        "name": "Sid Tuli"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Sascha Kuntze"
+      },
+      {
+        "role": "Chief Strategy Officer",
+        "name": "Stephane Missier"
+      },
+      {
+        "role": "Executive Creative Director",
+        "name": "Khairul Mondzi"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Gustavo Bonzanini"
+      },
+      {
+        "role": "Senior Art Director",
+        "name": "Melissa Ho"
+      },
+      {
+        "role": "Senior Copywriter",
+        "name": "Judy Au"
+      },
+      {
+        "role": "Head of Production/Executive Producer",
+        "name": "Wendi Chong"
+      },
+      {
+        "role": "Producer",
+        "name": "Isabelle Lee, Nadira BMZ"
+      },
+      {
+        "role": "Senior Account Director",
+        "name": "Melissa Law"
+      },
+      {
+        "role": "Associate Account Director",
+        "name": "Sabrina Ang"
+      },
+      {
+        "role": "Account Executive",
+        "name": "Claudia Tan"
+      },
+      {
+        "role": "Head of Strategy",
+        "name": "Amanda Lim"
+      },
+      {
+        "role": "Associate Director of Strategy",
+        "name": "Felicia Ong"
+      },
+      {
+        "role": "Social Specialist",
+        "name": "Kristal Lee"
+      },
+      {
+        "role": "Operations Director",
+        "name": "Eddie Jackson"
+      },
+      {
+        "role": "Designer",
+        "name": "Sheng Yong Ng"
+      },
+      {
+        "role": "Senior Creative Studio Designer",
+        "name": "Siew Wan Kew"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Kate Sharpe"
+      },
+      {
+        "role": "Producer",
+        "name": "Genevieve Simmers"
+      },
+      {
+        "role": "Director",
+        "name": "Rhys Thomas"
+      },
+      {
+        "role": "Director of Photography",
+        "name": "Joost van Gelder"
+      },
+      {
+        "role": "1st Assistant Director",
+        "name": "Benjamin Glickman"
+      },
+      {
+        "role": "Production Manager",
+        "name": "Samantha Linzell"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Trudi Koh Maybury"
+      }
+    ]
   },
   {
     "id": "2026-01-08-loewe-ano-do-cavalo",
@@ -142912,7 +144436,37 @@
         "title": "En 2026 tus sueños se harán realidad",
         "summary": "Sin diálogos, la película navideña muestra a una nieta que regala a su abuelo entradas para el GP de España de Fórmula 1, que regresa a Madrid en 2026, tras ver juntos imágenes de la carrera de 1981."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Agencia",
+        "name": "Annie Bonnie"
+      },
+      {
+        "role": "Anunciante",
+        "name": "MADRING"
+      },
+      {
+        "role": "Equipo creativo",
+        "name": "Samuel López y Lolo Ansareo"
+      },
+      {
+        "role": "Equipo cuentas",
+        "name": "Roberto Fanjul y Álvaro González"
+      },
+      {
+        "role": "Contacto de cliente",
+        "name": "Nira Juanco y Andrea Ballester"
+      },
+      {
+        "role": "Productora",
+        "name": "Movida Audiovisual"
+      },
+      {
+        "role": "Director",
+        "name": "David Del Río"
+      }
+    ]
   },
   {
     "id": "2025-12-29-loterias-el-nino-cumple-reyes",
@@ -143241,7 +144795,57 @@
         "ok": 2,
         "summary": "En el lanzamiento de la nueva camiseta de la Selección Mexicana, la marca reemplaza a los jugadores por nueve fanáticos elegidos en casting y los transforma en estrellas de piezas con la estética de una campaña deportiva épica."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Agencia",
+        "name": "ZURDA México Agency"
+      },
+      {
+        "role": "Cliente",
+        "name": "Sabritas"
+      },
+      {
+        "role": "Campaña",
+        "name": "El fan más fan"
+      },
+      {
+        "role": "CEO & Founder",
+        "name": "Denise Orman"
+      },
+      {
+        "role": "CCO & Founder",
+        "name": "Diego Gueler Montero"
+      },
+      {
+        "role": "Managing Director México",
+        "name": "Romina Levi"
+      },
+      {
+        "role": "Global Creative Directors",
+        "name": "Christian Leal Saint Jean, Sebastián Higueret"
+      },
+      {
+        "role": "Creative Directors",
+        "name": "Rubén Cabezas, Jorge Cordero"
+      },
+      {
+        "role": "Head of Business & Growth",
+        "name": "Rocío Serafini"
+      },
+      {
+        "role": "Business Director",
+        "name": "Micaela Galizia"
+      },
+      {
+        "role": "Business Manager",
+        "name": "Jordana Sitt"
+      },
+      {
+        "role": "Head of Strategy",
+        "name": "Joy Giangualano"
+      }
+    ]
   },
   {
     "id": "2025-12-22-shemaroo-kindness-badhaye-goodness",
@@ -143354,7 +144958,41 @@
         "ok": 2,
         "summary": "En una parodia de telecompra, la marca de tortillas crea platos con frases que disuaden de comentarios inconvenientes en la mesa navideña y sugiere reutilizar los restos de la cena en recetas con sus productos."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Marca",
+        "name": "Mission"
+      },
+      {
+        "role": "Contacto del cliente",
+        "name": "Javier Ramiro"
+      },
+      {
+        "role": "Agencia Creativa",
+        "name": "Manifiesto"
+      },
+      {
+        "role": "Director Creativo Ejecutivo",
+        "name": "Chiqui Palomares"
+      },
+      {
+        "role": "Directores Creativos",
+        "name": "Albert Alcácer, Guillermo Sánchez"
+      },
+      {
+        "role": "Equipo creativo, Mikel Merino, Iván Ezquerro, Raúl Gutiérrez",
+        "name": "Natalia López"
+      },
+      {
+        "role": "Equipo de cuentas",
+        "name": "Sergio Vega, Íñigo González"
+      },
+      {
+        "role": "Realizador",
+        "name": "Miguel Tresguerres"
+      }
+    ]
   },
   {
     "id": "2025-12-22-rapiditas-felices-sobras",
@@ -143479,7 +145117,97 @@
         "title": "Esta es la energía de la Navidad.",
         "summary": "En una animación realizada con IA, los adornos navideños cobran vida en una cálida noche de verano y descubren que el espíritu de la Navidad está en estar juntos."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Agência",
+        "name": "Propeg"
+      },
+      {
+        "role": "CEO",
+        "name": "Vítor Barros"
+      },
+      {
+        "role": "CCO",
+        "name": "Hermes Zambini"
+      },
+      {
+        "role": "ECD",
+        "name": "João Caetano Brasil"
+      },
+      {
+        "role": "Head of Art",
+        "name": "André Batista"
+      },
+      {
+        "role": "Diretores de Criação",
+        "name": "Ariston Quadros, Luciana Elaiuy, Rodrigo Cardoso"
+      },
+      {
+        "role": "Criação",
+        "name": "Luciana Elaiuy, Rodrigo Cardoso"
+      },
+      {
+        "role": "Atendimento",
+        "name": "Michele Estevez e Ana Ramos"
+      },
+      {
+        "role": "Planejamento",
+        "name": "Fernand Alphen e Babi Ferreira"
+      },
+      {
+        "role": "Mídia",
+        "name": "Felipe Arruda"
+      },
+      {
+        "role": "Produção",
+        "name": "Manuela Peixoto, Rose Zanetti, Lilian Garrido"
+      },
+      {
+        "role": "Produtora",
+        "name": "Rebolucion BR"
+      },
+      {
+        "role": "Diretor",
+        "name": "Cassu"
+      },
+      {
+        "role": "Produção Executiva",
+        "name": "Ciro César"
+      },
+      {
+        "role": "Head Line Producer",
+        "name": "Alexandre Mancen"
+      },
+      {
+        "role": "Head of Sales",
+        "name": "Fabi Gimenez"
+      },
+      {
+        "role": "Producer Senior",
+        "name": "Mariana Khuri"
+      },
+      {
+        "role": "Producer Junior",
+        "name": "Lúcio Sulzbach"
+      },
+      {
+        "role": "Coordenação de produção",
+        "name": "Erika Andrade e Sarah de Moura"
+      },
+      {
+        "role": "Assistente de Produção Rebolucion",
+        "name": "Erika Castro"
+      },
+      {
+        "role": "Direção de Arte",
+        "name": "Cassu"
+      },
+      {
+        "role": "Coordenação de Pós",
+        "name": "Fernando de Souza"
+      }
+    ]
   },
   {
     "id": "2025-12-19-panasonic-energia-confiavel",
@@ -143672,7 +145400,45 @@
         "title": "Una Navidad para recordarte",
         "summary": "La cadena mexicana de funerarias estrena una película navideña, creada por Ganem, dedicada a la memoria de quienes han fallecido durante las fiestas de fin de año."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "CEO Ganem Group",
+        "name": "Nasre Ganem"
+      },
+      {
+        "role": "CEO y CCO Ganem México",
+        "name": "Jorge Méndez"
+      },
+      {
+        "role": "Director General Creativo",
+        "name": "Armando Castelán"
+      },
+      {
+        "role": "Head of Art",
+        "name": "Zuriel Linares"
+      },
+      {
+        "role": "Directora General de Cuentas",
+        "name": "Nallely Recinas"
+      },
+      {
+        "role": "D. Creativo Asociado",
+        "name": "Paula De la Cruz"
+      },
+      {
+        "role": "Redactor",
+        "name": "Armando Castelán / Jorge Méndez"
+      },
+      {
+        "role": "Producción Audiovisual",
+        "name": "Social Club Films"
+      },
+      {
+        "role": "CEO J. García López",
+        "name": "Óscar Padilla"
+      }
+    ]
   },
   {
     "id": "2025-12-18-mcdonald-s-nz-mcdonald-s-nz-launches-its-muddiest",
@@ -143720,7 +145486,25 @@
         "title": "McDonald's NZ lanza su campaña más turbia 'Así es como somos Macca' hasta el momento a través de DDB Group Aotearoa",
         "summary": "McDonald's New Zealand y DDB Group Aotearoa han revelado su versión más aventurera de That's How We Mac..."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Agency",
+        "name": "DDB Group Aotearoa"
+      },
+      {
+        "role": "Production Company",
+        "name": "Good Oil"
+      },
+      {
+        "role": "Director",
+        "name": "Connor Pritchard"
+      },
+      {
+        "role": "Producer",
+        "name": "Andrew Maclean"
+      }
+    ]
   },
   {
     "id": "2025-12-18-coca-cola-weave-a-new-year",
@@ -144033,6 +145817,68 @@
       "Carlos Camacho, Chief Creative Officer, GUT Asia, said: “With Worth The Miss, we wanted Stella to show up in Korea with wit and confidence. Playing with the energy of Culinary Class Wars lets us tap into a cultural moment in a bold but simple way, pure Stella”",
       "This is one of the first campaigns emerging from ABInBev’s global partnership with Netflix, which will be rolling out across different regions and Netflix titles throughout 2026. Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below.",
       "Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below."
+    ],
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Stella Artois"
+      },
+      {
+        "role": "Agency",
+        "name": "GUT"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Carlos Camacho"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Meyvi Wedelia"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Gus Sung"
+      },
+      {
+        "role": "Associate Creative Director",
+        "name": "Ernest Chin"
+      },
+      {
+        "role": "Art Director",
+        "name": "Sixin Wu"
+      },
+      {
+        "role": "Lead Designer",
+        "name": "Paolo Escueta"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Monica Chang"
+      },
+      {
+        "role": "Managing Director",
+        "name": "Jessica Davey"
+      },
+      {
+        "role": "Account Director",
+        "name": "Danni Villanueva"
+      },
+      {
+        "role": "Head of Strategy",
+        "name": "Belynda Sim-Mak"
+      },
+      {
+        "role": "Strategy Director",
+        "name": "Chei Jeong Yoon Park"
+      },
+      {
+        "role": "Production",
+        "name": "Nine Tailed Fox"
+      },
+      {
+        "role": "Director",
+        "name": "Ryo Woong"
+      }
     ]
   },
   {
@@ -144157,7 +146003,21 @@
         "title": "Australia Post convierte las etiquetas de los paquetes en una campaña nacional de medios al aire libre",
         "summary": "En el pico de las compras navideñas, Australia Post muestra sus etiquetas de envío en vallas publicitarias junto a los minoristas asociados para mostrar el alcance de su red de entrega, desde las capitales hasta las regiones remotas."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Creative agency",
+        "name": "Thinkerbell"
+      },
+      {
+        "role": "Client",
+        "name": "Australia Post"
+      },
+      {
+        "role": "Media",
+        "name": "Wavemaker and Rev360"
+      }
+    ]
   },
   {
     "id": "2025-12-17-jollibee-buo-ang-saya-ng-pasko",
@@ -144409,7 +146269,49 @@
         "summary": "La nueva agencia creativa independiente tailandesa NUTs ha lanzado su primera campaña.",
         "ok": 2
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Beger Paint"
+      },
+      {
+        "role": "Agency",
+        "name": "NUTs Agency"
+      },
+      {
+        "role": "Production",
+        "name": "Showa Showa"
+      },
+      {
+        "role": "Creative Partner & Co-founder",
+        "name": "Supparat Thepparat"
+      },
+      {
+        "role": "Crative Group Head",
+        "name": "Supakij Samudchaiyakij"
+      },
+      {
+        "role": "Creative Art Director",
+        "name": "Kanyawee Lanyaem"
+      },
+      {
+        "role": "Account Management Director",
+        "name": "Oracha Chinsawatpun"
+      },
+      {
+        "role": "Account Manager",
+        "name": "Nutcha Suksabay"
+      },
+      {
+        "role": "Director",
+        "name": "Thapakorn U-Sakul (K.Aum)"
+      },
+      {
+        "role": "Producer",
+        "name": "Puii Pataraon"
+      }
+    ]
   },
   {
     "id": "2025-12-16-grupo-orletti-geely-silencio-o-novo-geely-ex2-chegou",
@@ -144514,7 +146416,77 @@
         "title": "Air New Zealand celebra a su gente y comunidades en una nueva película vía FCB Aotearoa",
         "summary": "Air New Zealand ha lanzado una nueva campaña que celebra a las personas, comunidades y empresas que la aerolínea conecta..."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Managing Director",
+        "name": "Laura Goldie"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Leisa Wall"
+      },
+      {
+        "role": "Chief Creative Strategist",
+        "name": "Matt Kingston"
+      },
+      {
+        "role": "Associate Creative Director",
+        "name": "Aaron Carbines"
+      },
+      {
+        "role": "Associate Creative Director",
+        "name": "Tim Gavriel"
+      },
+      {
+        "role": "Head of Content / Producer",
+        "name": "Amanda Langkilde"
+      },
+      {
+        "role": "Senior Account Director",
+        "name": "Charlotte Bosomworth"
+      },
+      {
+        "role": "Creative Services Manager",
+        "name": "Anna Von Trott"
+      },
+      {
+        "role": "Senior Producer",
+        "name": "Music – Sally Lankshear"
+      },
+      {
+        "role": "Production Company",
+        "name": "The Sweetshop"
+      },
+      {
+        "role": "Director",
+        "name": "Tom Gould"
+      },
+      {
+        "role": "MD / Executive Producer",
+        "name": "Ben Dailey"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Jimena Murray"
+      },
+      {
+        "role": "Production Manager",
+        "name": "Kristian Eek"
+      },
+      {
+        "role": "1st Assistant Director",
+        "name": "Paul Gray"
+      },
+      {
+        "role": "Director of Photography",
+        "name": "Ziga Zupančič"
+      },
+      {
+        "role": "Production Designer",
+        "name": "Jon Lithgow"
+      }
+    ]
   },
   {
     "id": "2025-12-16-pak-nsave-pak-nsave-shows-anything-can-be-a-gi",
@@ -144559,7 +146531,53 @@
         "title": "PAK'nSAVE demuestra que cualquier cosa puede ser un regalo una vez envuelto en una nueva campaña a través de FCB Aotearoa",
         "summary": "PAK'nSAVE está abordando uno de los mayores factores estresantes financieros de la temporada festiva: el intercambio de regalos, con su l..."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Chief Creative Officer",
+        "name": "Leisa Wall"
+      },
+      {
+        "role": "Chief Strategy Officer",
+        "name": "Matt Kingston"
+      },
+      {
+        "role": "Associate Creative Director",
+        "name": "Tim Gavriel"
+      },
+      {
+        "role": "Associate Creative Director",
+        "name": "Aaron Carbines"
+      },
+      {
+        "role": "Senior Copywriter",
+        "name": "Claire Herselman"
+      },
+      {
+        "role": "Senior Art Director",
+        "name": "Kat Tadaki"
+      },
+      {
+        "role": "Managing Director",
+        "name": "Jane Wardlaw"
+      },
+      {
+        "role": "Group Business Director",
+        "name": "Miki Hutchison"
+      },
+      {
+        "role": "Account Manager",
+        "name": "Lydia Holmes"
+      },
+      {
+        "role": "Head of Post-Production",
+        "name": "Corban Koschak"
+      },
+      {
+        "role": "Senior Content Producer",
+        "name": "Sara McConnochie"
+      }
+    ]
   },
   {
     "id": "2025-12-16-fecomercio-rs-natal-entre-geracoes",
@@ -145097,7 +147115,25 @@
         "title": "Samsung celebra la imaginación como superpotencia en la nueva campaña navideña del Reino Unido a través de Taylor Herring",
         "summary": "En el período previo a la Navidad, Campaign Brief destaca las campañas más esperadas de la temporada en..."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Samsung"
+      },
+      {
+        "role": "Brand Lead",
+        "name": "Lucy Coombs"
+      },
+      {
+        "role": "Senior Product Marketing Manager",
+        "name": "Jade Simmons"
+      },
+      {
+        "role": "Junior PR Manager",
+        "name": "Danny Kent"
+      }
+    ]
   },
   {
     "id": "2025-12-12-air-india-change-is-in-the-air",
@@ -145612,7 +147648,49 @@
         "ok": 2,
         "summary": "Dirigida por Rodrigo Cortés y sin presentadores, la película navideña muestra a dos niños jugando en una cena navideña y revela que son amigos de la infancia, ahora adultos, que se reencuentran."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Agencia",
+        "name": "CHINA parte de LLYC"
+      },
+      {
+        "role": "Anunciante",
+        "name": "MEDIASET"
+      },
+      {
+        "role": "Título",
+        "name": "«El Reencuentro»"
+      },
+      {
+        "role": "Contacto del cliente",
+        "name": "Sandra Fernández Hernández, Javier López Cuenllas, Marian López Freire Díaz, Ramón Verdet"
+      },
+      {
+        "role": "Contacto Agencia",
+        "name": "Mayte Flores"
+      },
+      {
+        "role": "Equipo Creativo",
+        "name": "Rafa Antón, Rafa Gil Fuentes, Darío Bustos"
+      },
+      {
+        "role": "Producer agencia",
+        "name": "María Cancelo"
+      },
+      {
+        "role": "Productora",
+        "name": "Only 925"
+      },
+      {
+        "role": "Productora Ejecutiva",
+        "name": "Mª Jesús Horcajuelo"
+      },
+      {
+        "role": "DOP",
+        "name": "Mario Montero"
+      }
+    ]
   },
   {
     "id": "2025-12-09-iguatemi-happy-together-season",
@@ -145967,7 +148045,33 @@
         "title": "La época más terrible del año.",
         "summary": "Película navideña holandesa realizada íntegramente con IA que parodia un clásico de fin de año para retratar el caos de diciembre, retirada del mercado días después debido a las críticas del público."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Marketing Manager",
+        "name": "Karin van Prooijen"
+      },
+      {
+        "role": "Creative Agency",
+        "name": "TBWA\\Neboko"
+      },
+      {
+        "role": "CCO",
+        "name": "Darre van Dijk"
+      },
+      {
+        "role": "Production Company",
+        "name": "Sweetshop UK"
+      },
+      {
+        "role": "Executive Producer/Producer",
+        "name": "Morgan Whitlock"
+      },
+      {
+        "role": "AI Production team",
+        "name": "TheGardening.Club"
+      }
+    ]
   },
   {
     "id": "2025-12-06-o2-not-a-sock-shop",
@@ -146084,7 +148188,45 @@
         "summary": "La marca de cerveza Smithwick's, propiedad de Diageo, ha presentado el último capítulo de su plataforma de marca \"Originals Find Originals\" con una nueva campaña que muestra la cerveza de color rojo rubí.",
         "ok": 2
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Smithwicks (Diageo)"
+      },
+      {
+        "role": "Client Team",
+        "name": "Roisin Field ( Head of Marketing – Beer); James Lace (Marketing Manager) & Charitini Ntini ( Brand Manager)"
+      },
+      {
+        "role": "Agency",
+        "name": "Ringers Creative"
+      },
+      {
+        "role": "Executive Creative Director",
+        "name": "Steven Mangan, Bobby Byrne"
+      },
+      {
+        "role": "Agency Producer",
+        "name": "Molly Kiely"
+      },
+      {
+        "role": "Copywriter",
+        "name": "James Foley"
+      },
+      {
+        "role": "Account Management",
+        "name": "Kathleen Healey & Lottie McCarthy"
+      },
+      {
+        "role": "Sound",
+        "name": "Mutiny"
+      },
+      {
+        "role": "Music",
+        "name": "Conor King – Colcannon"
+      }
+    ]
   },
   {
     "id": "2025-12-05-saudali-o-bom-do-natal-e-ser-feliz",
@@ -146230,7 +148372,37 @@
         "title": "Samsung Tailandia honra las cargas silenciosas de los padres en el Día del Padre",
         "summary": "Sin diálogo ni producto, la película muestra las dificultades que los padres enfrentan en silencio y el apoyo de la familia que los mantiene adelante, estrenada el Día del Padre tailandés."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Agency Producer",
+        "name": "Chainarong Wattanathanaku"
+      },
+      {
+        "role": "Production House",
+        "name": "Suneta House"
+      },
+      {
+        "role": "Director",
+        "name": "Teerapol Suneta (Ae)"
+      },
+      {
+        "role": "Assistant Director",
+        "name": "Kittikhun Jongkraiwut (Best)"
+      },
+      {
+        "role": "Producer",
+        "name": "Chanapa Ployarunrung (Jote)"
+      },
+      {
+        "role": "Production Manager",
+        "name": "Warawan Laksanarom (Fame)"
+      },
+      {
+        "role": "Cinematographer",
+        "name": "Chalongwut Chorruangsak (Joe)"
+      }
+    ]
   },
   {
     "id": "2025-12-05-alone-you-are-not-alone",
@@ -146256,7 +148428,33 @@
         "title": "Puede que vivas solo, pero no estás solo.",
         "summary": "El anuncio navideño de la ONG irlandesa que apoya a las personas mayores presenta a personas reales, incluidos voluntarios, personal y un usuario del servicio, para mostrar que quienes viven solos no tienen por qué ser indigentes."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Agency",
+        "name": "Bonfire"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Seán Hynes"
+      },
+      {
+        "role": "Production Company",
+        "name": "Roamer"
+      },
+      {
+        "role": "Director",
+        "name": "Leo Hynes"
+      },
+      {
+        "role": "DOP",
+        "name": "Ben Condell"
+      },
+      {
+        "role": "Sound",
+        "name": "Tony Crosse"
+      }
+    ]
   },
   {
     "id": "2025-12-05-dr-oetker-gingers-christmas",
@@ -146431,7 +148629,69 @@
         "title": "El significado de -196 revelado en un viaje surrealista por Tokio",
         "summary": "La búsqueda del significado del nombre de la bebida japonesa preparada lleva a un viaje absurdo por Tokio hasta el científico que explica la congelación de los limones a -196°C."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Chief Creative Officer",
+        "name": "Barbara Humphries"
+      },
+      {
+        "role": "Creative Directors",
+        "name": "Max Rapley and Danny Pattison"
+      },
+      {
+        "role": "Art Director",
+        "name": "Lachlan Rotherham"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Georgie Parchert"
+      },
+      {
+        "role": "Head of Strategy",
+        "name": "Ben De Castella"
+      },
+      {
+        "role": "Chief Client Officer",
+        "name": "Belinda Drew"
+      },
+      {
+        "role": "Business Director",
+        "name": "Harrison Stone"
+      },
+      {
+        "role": "Business Manager",
+        "name": "Matthew Stafford"
+      },
+      {
+        "role": "National Head of Production",
+        "name": "Romanca Mundrea"
+      },
+      {
+        "role": "Head of Production",
+        "name": "Penny Brown"
+      },
+      {
+        "role": "Senior Producer",
+        "name": "Simone OConnor"
+      },
+      {
+        "role": "Design Lead",
+        "name": "Melissa Watson"
+      },
+      {
+        "role": "Production Company",
+        "name": "Finch"
+      },
+      {
+        "role": "Director",
+        "name": "Arthur Studholme"
+      },
+      {
+        "role": "Editor",
+        "name": "Drew Thompson"
+      }
+    ]
   },
   {
     "id": "2025-12-04-bradesco-para-nao-esquecer",
@@ -146624,7 +148884,57 @@
         "title": "Heinz busca una verdadera madre tailandesa para marcar su salsa condimentada",
         "summary": "Para competir con las marcas de salsa locales que utilizan una figura materna, Heinz hizo un llamado a nivel nacional y eligió a una madre real para ilustrar la etiqueta del producto en toda Tailandia."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Advertiser",
+        "name": "KRAFT HEINZ (THAILAND) CO., LTD"
+      },
+      {
+        "role": "Brand",
+        "name": "HEINZ"
+      },
+      {
+        "role": "Head of Regional Marketing SSEA & HK",
+        "name": "Kittinai Viputthikul"
+      },
+      {
+        "role": "Regional Group Product Manager SSEA & HK",
+        "name": "Tin Htar Lwin"
+      },
+      {
+        "role": "Agency",
+        "name": "FLASH BOMBER"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Thanasorn Janekankit"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Supachai Limvutivong"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Buris Intrasawek"
+      },
+      {
+        "role": "Art Director",
+        "name": "Machima Phanthaksin"
+      },
+      {
+        "role": "General Manager",
+        "name": "Sujira Srivarakiat"
+      },
+      {
+        "role": "Account Manager",
+        "name": "Nachan Neanchaleay"
+      },
+      {
+        "role": "Project Director",
+        "name": "Nutcha Mauthorn"
+      }
+    ]
   },
   {
     "id": "2025-12-03-loccitane-au-bresil-puro-suco-do-bresil",
@@ -147246,6 +149556,16 @@
       "The lineup of these high-performance monitors includes: • VP2788-5K — iF Design Award winner, featuring a 27-inch 5K display with 99% DCI-P3 color coverage and exceptional detail for every workflow. • VP2488-4K — A 24-inch 4K display with 98% DCI-P3 coverage, ideal for professionals seeking high-end performance in a more flexible footprint.",
       "To learn more about ViewSonic’s Mac-optimized professional monitors, please visit the ColorPro VP88 Series page. * Apple and Mac are registered trademarks of Apple Inc. ViewSonic and its products are not affiliated with Apple Inc. Register for Free and receive the Campaign Brief Daily Bulletin.",
       "Type your email address in the space below. Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below."
+    ],
+    "credits": [
+      {
+        "role": "Client",
+        "name": "ViewSonic Global"
+      },
+      {
+        "role": "CEO",
+        "name": "James Chu"
+      }
     ]
   },
   {
@@ -147318,7 +149638,85 @@
         "title": "Allegro presenta una fábula moderna sobre la paternidad + amigos imaginarios en un anuncio navideño a través de DDB Varsovia",
         "summary": "En el período previo a la Navidad, Campaign Brief destaca las campañas más esperadas de la temporada en..."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "AGENCY",
+        "name": "DDB"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Zuzanna Duchniewska"
+      },
+      {
+        "role": "Deputy Creative Director",
+        "name": "Magdalena Kramer"
+      },
+      {
+        "role": "Senior Art Director",
+        "name": "Piotr Kopeć"
+      },
+      {
+        "role": "Senior Copywriter",
+        "name": "Marcin Rychlik"
+      },
+      {
+        "role": "Group Account Director",
+        "name": "Aleksandra Filipek"
+      },
+      {
+        "role": "Senior Account Manager",
+        "name": "Ewa Szarras"
+      },
+      {
+        "role": "Senior Project Manager",
+        "name": "Agata Niedźwiadek"
+      },
+      {
+        "role": "Deputy Strategy Director",
+        "name": "Łukasz Tarnowski"
+      },
+      {
+        "role": "Graphic Designer",
+        "name": "Barbara Zientek"
+      },
+      {
+        "role": "PRODUCTION",
+        "name": "MOON FILMS"
+      },
+      {
+        "role": "Exec Producer",
+        "name": "Magda Betlejewska, Jakub Ranik"
+      },
+      {
+        "role": "Producer",
+        "name": "Agata Wiśniewska"
+      },
+      {
+        "role": "Production manager",
+        "name": "Nela Niewiadomska"
+      },
+      {
+        "role": "Production coordinator",
+        "name": "Monika Wzorek"
+      },
+      {
+        "role": "Production coordinator",
+        "name": "Karolina Przyczka"
+      },
+      {
+        "role": "Production coordinator",
+        "name": "Michał Kontraktowicz"
+      },
+      {
+        "role": "Production assistant",
+        "name": "Michał Zawadzki"
+      },
+      {
+        "role": "Post-producer",
+        "name": "Julia Grzegórzek"
+      }
+    ]
   },
   {
     "id": "2025-12-01-sydney-roosters-hype-republic-produces-unique-bound",
@@ -147365,7 +149763,25 @@
         "title": "Hype Republic produce una película única 'Bound By Legacy' para la colaboración Sydney Roosters x adidas",
         "summary": "La productora de Gold Coast, Hype Republic, ha lanzado una nueva y poderosa pieza de marca de 90 segundos que presenta una nueva parte..."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Director",
+        "name": "Ethan McLean"
+      },
+      {
+        "role": "Producer",
+        "name": "Autumn Loveday-Atkins"
+      },
+      {
+        "role": "Line Producer",
+        "name": "Nicola-Ann Kennett"
+      },
+      {
+        "role": "DOP",
+        "name": "Don Buppapirak"
+      }
+    ]
   },
   {
     "id": "2025-12-01-skyn-soft-pulse",
@@ -147393,7 +149809,65 @@
         "title": "Soft Pulse: SKYN prueba si los corazones de las parejas laten sincronizados en Navidad",
         "summary": "En un experimento navideño, SKYN monitorea a parejas y extraños sentados espalda con espalda, sin verse ni escucharse, y muestra que solo los latidos del corazón de aquellos que ya tienen intimidad están sincronizados."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Brand",
+        "name": "SKYN"
+      },
+      {
+        "role": "Client",
+        "name": "Annie Hou"
+      },
+      {
+        "role": "Agency",
+        "name": "UltraSuperNew"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Yousuke Ozawa"
+      },
+      {
+        "role": "Art Director",
+        "name": "Diana Ganea"
+      },
+      {
+        "role": "Project Director/Head Producer",
+        "name": "Daiki Shimizu"
+      },
+      {
+        "role": "Creative Technologist",
+        "name": "Yan He"
+      },
+      {
+        "role": "Web Producer",
+        "name": "Mana Shigeki"
+      },
+      {
+        "role": "Art Director",
+        "name": "Haruna Akashi"
+      },
+      {
+        "role": "Junior Art Director",
+        "name": "Mimiko Koshi"
+      },
+      {
+        "role": "Creative Intern",
+        "name": "Yuen Tan"
+      },
+      {
+        "role": "Producer",
+        "name": "Ryubi Fukuda"
+      },
+      {
+        "role": "Producer",
+        "name": "Saaya Iijima"
+      },
+      {
+        "role": "Web Production",
+        "name": "UltraSuperNew Columbo"
+      }
+    ]
   },
   {
     "id": "2025-12-01-perdigao-como-nasce-uma-tradicao",
@@ -147706,7 +150180,41 @@
         "title": "Powershop lanza 'Pink Thursday' con 99% de descuento en nueva campaña vía 81",
         "summary": "Creado por 81, Powershop lanzó recientemente \"Pink Thursday\", un evento de compras en línea de un día que ofrece..."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Powershop"
+      },
+      {
+        "role": "Brand Specialist",
+        "name": "Julie Milligan"
+      },
+      {
+        "role": "Social Media Manager",
+        "name": "Georgia Budd"
+      },
+      {
+        "role": "Brand Lead",
+        "name": "Rhys Musson"
+      },
+      {
+        "role": "Head of Brand and Experience",
+        "name": "Tom Probert"
+      },
+      {
+        "role": "Agency",
+        "name": "81"
+      },
+      {
+        "role": "Production Agency",
+        "name": "Breakout Room"
+      },
+      {
+        "role": "Media",
+        "name": "MBM"
+      }
+    ]
   },
   {
     "id": "2025-11-27-yoki-yoki-transforma-o-sucesso-da-linha-c",
@@ -147746,7 +150254,33 @@
         "title": "Yoki convierte el éxito de la línea Caseiríssima en una campaña navideña",
         "summary": "Creada por DAVID, la campaña abraza con humor la costumbre de atribuirse el mérito de un plato con sabor casero, incluso cuando la practicidad proviene del envase. En Navidad, la cena es el centro de atención, y en Brasil, la costumbre de preparar…"
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "CCO",
+        "name": "Marie Julie Gerbauld"
+      },
+      {
+        "role": "Diretor de Criação Executivo",
+        "name": "João Gandara"
+      },
+      {
+        "role": "Diretor de Criação",
+        "name": "Renato Simon, João Mari Albuquerque"
+      },
+      {
+        "role": "Criação",
+        "name": "Filippe Pacheco, Rafael Teixeira, Carol Carrillo, Thatiana Mazza"
+      },
+      {
+        "role": "Atendimento",
+        "name": "Tom Gil, Caca Franklin, Juliana Chediac, Bruna Pereira, Karen Sousa"
+      },
+      {
+        "role": "Produção",
+        "name": "Fernanda Peixoto, Mariana Marinho, Amanda Santos, Leticia Brito"
+      }
+    ]
   },
   {
     "id": "2025-11-27-tiktok-shop-tiktok-shop-lanca-primeira-campanha",
@@ -147962,7 +150496,89 @@
         "ok": 2,
         "summary": "El Grinch 'sabotea' la Navidad del McDonald's británico con acciones en medios exteriores, radio, mapas de apps y filtros de Snapchat, que culminan con el lanzamiento de una Comida del Grinch y otros traviesos artículos."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Content Creative",
+        "name": "Rhianna Puddifant"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Ben Hooper"
+      },
+      {
+        "role": "Content Producer",
+        "name": "Ariana Balsaras"
+      },
+      {
+        "role": "Social Media & Community Manager",
+        "name": "Shanice Baker"
+      },
+      {
+        "role": "Junior Content Designer",
+        "name": "Hannah Lacey"
+      },
+      {
+        "role": "Client",
+        "name": "McDonald’s"
+      },
+      {
+        "role": "Chief Marketing Officer",
+        "name": "Ben Fox"
+      },
+      {
+        "role": "Marketing Director",
+        "name": "Matthew Reischauer"
+      },
+      {
+        "role": "Head of Marketing",
+        "name": "Chloe Bissell"
+      },
+      {
+        "role": "Head of Marketing",
+        "name": "Hannah Pain"
+      },
+      {
+        "role": "Marketing Manager",
+        "name": "Alexandra Martin"
+      },
+      {
+        "role": "Brand Manager",
+        "name": "Emma Pellegrinelli"
+      },
+      {
+        "role": "Campaign Assistant",
+        "name": "Abi Campbell"
+      },
+      {
+        "role": "Marketing Manager",
+        "name": "Jo Conlon"
+      },
+      {
+        "role": "Marketing Manager",
+        "name": "Alice Pavey"
+      },
+      {
+        "role": "Brand Manager",
+        "name": "Annabel Ranken"
+      },
+      {
+        "role": "Campaign Assistant",
+        "name": "Amelia Haywood"
+      },
+      {
+        "role": "Senior Brand Manager",
+        "name": "Georgia Pell-Johnson"
+      },
+      {
+        "role": "Marketing Executive",
+        "name": "Kai McHugh"
+      },
+      {
+        "role": "Campaign Assistant",
+        "name": "Callum Wheeldon"
+      }
+    ]
   },
   {
     "id": "2025-11-25-airbnb-airbnb-lanca-campanha-para-celebrar",
@@ -148085,7 +150701,29 @@
         "title": "Dash regresa mientras DoorDash y Airpoints toman vuelo en una nueva campaña de marca a través de FEDERATION",
         "summary": "Cuando se trata de entregas a pedido en restaurantes y tiendas de comestibles, nada mejor que un delicioso lado de..."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "DoorDash"
+      },
+      {
+        "role": "Marketing Manager",
+        "name": "Rhian Bedford-Palmer"
+      },
+      {
+        "role": "Agency",
+        "name": "FEDERATION"
+      },
+      {
+        "role": "Social and events",
+        "name": "Bastion Shine"
+      },
+      {
+        "role": "Production company",
+        "name": "Supernormal"
+      }
+    ]
   },
   {
     "id": "2025-11-25-josette-goulart-josette-goulart-lanca-videocast-para",
@@ -148327,6 +150965,96 @@
       "Then, of course, Amit Sharma came on board, sprinkled his magic on the script, found the amazing quarry which allowed us to situate the film geographically, a dialect coach lent great flavour to the script and thus was born, ‘Baatan Hi Baatan Mein.’ We cannot wait for people to experience it as a short film in single-screen theatres and via travelling cinemas in remote locations.”",
       "Amit Sharma, the National Award winning Indian director, added: “From the very first narration, I wanted to treat this script with a cinematic lens. It has complex emotions that deserve a wide canvas and cultural authenticity.",
       "Because it isn’t the story of just Aasha and Manoj, it is a story that plays out with millions of Indians. The two leads, Rrama Sharma and Rajkishore Sahoo truly became the Aasha and Manoj that the story needed. I am so happy the film is getting distributed in such a unique manner."
+    ],
+    "credits": [
+      {
+        "role": "Agency",
+        "name": "Fundamental"
+      },
+      {
+        "role": "CEO",
+        "name": "Nishant Saurabh"
+      },
+      {
+        "role": "CCO",
+        "name": "Pallavi Chakravarti"
+      },
+      {
+        "role": "ECD",
+        "name": "Neeraj Kanitkar"
+      },
+      {
+        "role": "Sr. Creative Director",
+        "name": "Gauri Burma"
+      },
+      {
+        "role": "ACD (Design)",
+        "name": "Jyoti Patil"
+      },
+      {
+        "role": "Group Head (Design)",
+        "name": "Pradnya Shirke"
+      },
+      {
+        "role": "Junior Copywriter",
+        "name": "Shivika Maheshwari"
+      },
+      {
+        "role": "Account Management Lead (Consulting)",
+        "name": "Neha Khaneja"
+      },
+      {
+        "role": "Account Director",
+        "name": "Lyncia Noronha"
+      },
+      {
+        "role": "Associate Account Director",
+        "name": "Bhavi Gala"
+      },
+      {
+        "role": "Production House",
+        "name": "Chrome Pictures"
+      },
+      {
+        "role": "Director",
+        "name": "Amit Sharma"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Napolean Daniel Amanna"
+      },
+      {
+        "role": "Associate Producer",
+        "name": "Aakriti Bhatnagar"
+      },
+      {
+        "role": "Client",
+        "name": "Meta"
+      },
+      {
+        "role": "Brand",
+        "name": "WhatsApp"
+      },
+      {
+        "role": "Consumer & Creator Marketing Director, APAC",
+        "name": "Vyom Prashant"
+      },
+      {
+        "role": "Consumer Marketing Lead APAC, WhatsApp",
+        "name": "Jasveen Kaur"
+      },
+      {
+        "role": "Media Strategy Manager",
+        "name": "Natasha Kapoor"
+      },
+      {
+        "role": "Program Manager",
+        "name": "Radhika Sabherwal"
+      },
+      {
+        "role": "Program Manager",
+        "name": "Rashi Gupta"
+      }
     ]
   },
   {
@@ -148384,7 +151112,57 @@
         "title": "Song lanza campaña nacional protagonizada por Neymar Jr.",
         "summary": "La marca apuesta por el cariño y el buen humor para reforzar su conexión con el público y reforzar su nueva firma: “Song."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Cliente, Canção Alimentos",
+        "name": "Alessandro Guerra, Fernanda Canovas, Bruna Corsi e Amanda Ferreira"
+      },
+      {
+        "role": "Agência",
+        "name": "Innova – All Around The Brand"
+      },
+      {
+        "role": "Sócio-diretor",
+        "name": "Alexandre Carmona"
+      },
+      {
+        "role": "Título",
+        "name": "Campanha Nova Canção"
+      },
+      {
+        "role": "Direção de criação",
+        "name": "Samuel Werczler"
+      },
+      {
+        "role": "Criação",
+        "name": "Luiz Aguiar, Rafael Bruno, Marcio Villar, Thiago Zanetin, Marcos Andrade, Fernando Cabral, João Vereza, Bruno Rigotti, Renata José, Lucas Mioto e Levy Mota"
+      },
+      {
+        "role": "Planejamento",
+        "name": "Julio Barros e Anderson Costa"
+      },
+      {
+        "role": "Produtora de vídeo",
+        "name": "Corazon Filmes"
+      },
+      {
+        "role": "Produtora de áudio",
+        "name": "Pingado Áudio"
+      },
+      {
+        "role": "Atendimento",
+        "name": "Mauricio Fernandes, Adriana Nigro e Danielly Cavalcante"
+      },
+      {
+        "role": "Mídia",
+        "name": "Roberta Queiroz, Marcela Condurú, Samantha Raffel, Kitty Ramos, Alexandre Mavouchian, Wellington Ferreira e João Vitor da Silva"
+      },
+      {
+        "role": "Social",
+        "name": "Leticia Martins, Thiago Pomarico, Samara Roque, Raphael Lima, Rogério Brambilla, Danielle Maio"
+      }
+    ]
   },
   {
     "id": "2025-11-24-cafe-uniao-cafe-uniao-reune-top-voices-do-linke",
@@ -148465,7 +151243,101 @@
         "title": "La Lotería Nacional de Irlanda celebra la generosidad del espíritu navideño en una nueva película a través de Folk VML",
         "summary": "La Lotería Nacional de Irlanda ha revelado su nueva campaña navideña."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "National Lottery"
+      },
+      {
+        "role": "Chief Marketing Officer",
+        "name": "Anne Mulcahy"
+      },
+      {
+        "role": "Head of Brand",
+        "name": "Maebh Gleeson"
+      },
+      {
+        "role": "Marketing Controller",
+        "name": "Susan O’Shea"
+      },
+      {
+        "role": "Senior Brand Manager",
+        "name": "Kate Mc Manus"
+      },
+      {
+        "role": "Brand Manager",
+        "name": "Stephen Cleary"
+      },
+      {
+        "role": "Senior Media Manager",
+        "name": "Deborah Tracey"
+      },
+      {
+        "role": "Creative Agency",
+        "name": "Folk VML"
+      },
+      {
+        "role": "Managing Director",
+        "name": "Enda Kelly"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Karl Waters"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Jonny Cullen"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Stephen Kelly"
+      },
+      {
+        "role": "Senior Art Director",
+        "name": "Conor Swanton"
+      },
+      {
+        "role": "Account Director",
+        "name": "Luke Mulligan"
+      },
+      {
+        "role": "Account Manager",
+        "name": "Ciara Ní Dhonnacha"
+      },
+      {
+        "role": "Head of Planning",
+        "name": "Eimear Fitzmaurice"
+      },
+      {
+        "role": "Planning Director",
+        "name": "Kim Comiskey"
+      },
+      {
+        "role": "Head of Production",
+        "name": "Michael Cullen"
+      },
+      {
+        "role": "Senior Producer",
+        "name": "Eric Brindley"
+      },
+      {
+        "role": "Media Agency",
+        "name": "Starcom"
+      },
+      {
+        "role": "Deputy Managing Director",
+        "name": "Aisling O Sullivan"
+      },
+      {
+        "role": "Client Director",
+        "name": "Ruth Barry"
+      },
+      {
+        "role": "Senior Client Manager",
+        "name": "Megan LaSalle"
+      }
+    ]
   },
   {
     "id": "2025-11-24-renault-viva-a-nova-renault",
@@ -148721,7 +151593,41 @@
         "title": "Los autos inteligentes tienen momentos tontos: MAS lanza nueva campaña de Seguro de Vehículos a través de Yarn",
         "summary": "MAS ha lanzado una nueva campaña de seguros de automóviles, creada por la agencia creativa independiente Yarn, que destaca c..."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "MAS"
+      },
+      {
+        "role": "CEO",
+        "name": "Jo McCauley"
+      },
+      {
+        "role": "Chief Distribution & Marketing Officer",
+        "name": "Matt Harvey"
+      },
+      {
+        "role": "Head of Marketing",
+        "name": "Laura Stephenson"
+      },
+      {
+        "role": "Brand Manager",
+        "name": "Tamzin Beazley"
+      },
+      {
+        "role": "Creative Agency",
+        "name": "Yarn"
+      },
+      {
+        "role": "CEO",
+        "name": "Heath Davy"
+      },
+      {
+        "role": "Executive Creative Directors",
+        "name": "Matt Sellars, Rich Robson"
+      }
+    ]
   },
   {
     "id": "2025-11-22-negra-modelo-chocolate-turin",
@@ -148825,7 +151731,105 @@
         "ok": 2,
         "summary": "Un conductor silencioso lleva una banda de música del campo a todos los ensayos y actuaciones, hasta que un premio gordo convierte la Navidad del grupo en una celebración colectiva."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "National Lottery"
+      },
+      {
+        "role": "Chief Marketing Officer",
+        "name": "Anne Mulcahy"
+      },
+      {
+        "role": "Head of Brand",
+        "name": "Maebh Gleeson"
+      },
+      {
+        "role": "Marketing Controller",
+        "name": "Susan O’Shea"
+      },
+      {
+        "role": "Senior Brand Manager",
+        "name": "Kate Mc Manus"
+      },
+      {
+        "role": "Brand Manager",
+        "name": "Stephen Cleary"
+      },
+      {
+        "role": "Senior Media Manager",
+        "name": "Deborah Tracey"
+      },
+      {
+        "role": "Creative Agency",
+        "name": "Folk VML"
+      },
+      {
+        "role": "Managing Director",
+        "name": "Enda Kelly"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Karl Waters"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Jonny Cullen"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Stephen Kelly"
+      },
+      {
+        "role": "Senior Art Director",
+        "name": "Conor Swanton"
+      },
+      {
+        "role": "Account Director",
+        "name": "Luke Mulligan"
+      },
+      {
+        "role": "Account Manager",
+        "name": "Ciara Ní Dhonnacha"
+      },
+      {
+        "role": "Head of Planning",
+        "name": "Eimear Fitzmaurice"
+      },
+      {
+        "role": "Planning Director",
+        "name": "Kim Comiskey"
+      },
+      {
+        "role": "Head of Production",
+        "name": "Michael Cullen"
+      },
+      {
+        "role": "Senior Producer",
+        "name": "Eric Brindley"
+      },
+      {
+        "role": "Media Agency",
+        "name": "Starcom"
+      },
+      {
+        "role": "Deputy Managing Director",
+        "name": "Aisling O Sullivan"
+      },
+      {
+        "role": "Client Director",
+        "name": "Ruth Barry"
+      },
+      {
+        "role": "Senior Client Manager",
+        "name": "Megan LaSalle"
+      },
+      {
+        "role": "In-house Agency",
+        "name": "OLIVER"
+      }
+    ]
   },
   {
     "id": "2025-11-21-sky-mobile-roy-keane-expect-more",
@@ -148851,7 +151855,113 @@
         "title": "Espere más – Natal con Roy Keane",
         "summary": "El exigente ex capitán Roy Keane regresa para la temporada navideña del operador, contrastando con humor seco las decepcionantes ofertas festivas con los planes flexibles de Sky Mobile."
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Sky Mobile"
+      },
+      {
+        "role": "Director of Marketing and Brand",
+        "name": "Caroline Donnellan"
+      },
+      {
+        "role": "Marketing Controller",
+        "name": "Matt Carolan"
+      },
+      {
+        "role": "Marketing Manager",
+        "name": "Laura Carroll"
+      },
+      {
+        "role": "Agency",
+        "name": "Core"
+      },
+      {
+        "role": "Managing Director",
+        "name": "Caitriona Ní Laoire"
+      },
+      {
+        "role": "Strategy Director",
+        "name": "Shane Doyle"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Rob Murray"
+      },
+      {
+        "role": "Business Director",
+        "name": "Kate O’Callaghan"
+      },
+      {
+        "role": "Client Director",
+        "name": "Hannah Hewetson"
+      },
+      {
+        "role": "Head of Production",
+        "name": "Andrew Counihan"
+      },
+      {
+        "role": "Junior Producer",
+        "name": "Jessica Hopkins"
+      },
+      {
+        "role": "Motion Graphics Designer",
+        "name": "Eoghan Reidy"
+      },
+      {
+        "role": "Media Strategy Director",
+        "name": "Liam Corbett"
+      },
+      {
+        "role": "Media Business Director",
+        "name": "Harry Counihan"
+      },
+      {
+        "role": "Media Client Director",
+        "name": "Sionainn Thornton"
+      },
+      {
+        "role": "Media Senior Client Manager",
+        "name": "Sarah Jane Clarke"
+      },
+      {
+        "role": "Media Client Manager",
+        "name": "Rebecca Doggett"
+      },
+      {
+        "role": "Production Company",
+        "name": "Arrow Films"
+      },
+      {
+        "role": "Director",
+        "name": "Damien O’Donnell"
+      },
+      {
+        "role": "Producer",
+        "name": "Anne-Marie Curran"
+      },
+      {
+        "role": "Line Producer",
+        "name": "Gráinne Tiernan"
+      },
+      {
+        "role": "Production Coordinator",
+        "name": "Treasa O’Friel"
+      },
+      {
+        "role": "DOP",
+        "name": "Simon Walsh"
+      },
+      {
+        "role": "Post-Production",
+        "name": "Screen Scene"
+      },
+      {
+        "role": "Sound",
+        "name": "Avondale Studios"
+      }
+    ]
   },
   {
     "id": "2025-11-20-wallapop-anti-villancico-bustamante",
@@ -149202,7 +152312,69 @@
         "summary": "Imagínese Bangkok, una ciudad donde el calor apenas cesa, interrumpida repentinamente por un visitante del Ártico.",
         "ok": 2
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Diageo Moet Hennessy (Thailand)"
+      },
+      {
+        "role": "Marketing Director",
+        "name": "Jarinee Wongkamthong"
+      },
+      {
+        "role": "Marketing Communication and Cultural Lead",
+        "name": "Kittisak Anansitichok"
+      },
+      {
+        "role": "Assistant Brand Manager",
+        "name": "Tanawat Phanishsam"
+      },
+      {
+        "role": "Agency",
+        "name": "Youngster BKK"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Boonasak Bunnahirun"
+      },
+      {
+        "role": "Executive Creative Director",
+        "name": "Lerdpong Jaturontrasame"
+      },
+      {
+        "role": "Associate Creative Director",
+        "name": "Juthamas Chaimung"
+      },
+      {
+        "role": "Art Director",
+        "name": "Wongrak Pikawat, Tapanee Auin"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Supakrit Srihachai"
+      },
+      {
+        "role": "Planning Director",
+        "name": "Wannaporn Osiriphan"
+      },
+      {
+        "role": "Account Director",
+        "name": "Paphawee Leksila"
+      },
+      {
+        "role": "Account Manager",
+        "name": "Ananya Pattayanont"
+      },
+      {
+        "role": "Producer",
+        "name": "Serene Witayanupapyuenyong"
+      },
+      {
+        "role": "Photographer / DOP Team",
+        "name": "Stormwind Company"
+      }
+    ]
   },
   {
     "id": "2025-11-18-oppo-india-oppo-india-launches-find-x9-series-w",
@@ -149507,6 +152679,168 @@
       "But then comes the reveal as the mother reaches into her son’s bag and pulls out a bottle of Heinz Ketchup. That’s when the truth hits: they weren’t waiting for him. They were waiting for Heinz, the ketchup that’s worth the wait. The moment the ketchup touches the food, time seems to slow.",
       "We see the rich, thick, red Heinz ketchup spreading across the hand-cut fries, dripping onto grilled barbecue sticks, covering the homemade pizza, and glistening over golden spring rolls. The tension breaks into joy. Laughter fills the room. Glasses clink. Plates move. Christmas has finally begun.",
       "Because for those who truly love food, the season doesn’t start until there’s Heinz."
+    ],
+    "credits": [
+      {
+        "role": "Managing Director of SSEA & HK",
+        "name": "Felipe Augusto Deslandes (Felipe)"
+      },
+      {
+        "role": "Head of Marketing SSEA & HK",
+        "name": "Kittinai Viputthikul (Kong)"
+      },
+      {
+        "role": "Senior Brand Manager SSEA & HK",
+        "name": "Sichol Wongsalangkul (Gift)"
+      },
+      {
+        "role": "Group Product Manager SSEA & HK",
+        "name": "Mark Quiambao"
+      },
+      {
+        "role": "Marketing Operations Analyst SSEA & HK",
+        "name": "Sawittree Pattanapanitchakul (Benz)"
+      },
+      {
+        "role": "Graphic Design Manager SSEA & HK",
+        "name": "Pichet Tuncharoen (Paint)"
+      },
+      {
+        "role": "Agency",
+        "name": "BBDO Bangkok"
+      },
+      {
+        "role": "Managing Partner",
+        "name": "Thipayachand Hasdin"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Thasorn Boonyanate"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Chanikarn Sittihiaree"
+      },
+      {
+        "role": "Creative Group Head",
+        "name": "Sasitorn Khamchoo"
+      },
+      {
+        "role": "Senior Copywriter",
+        "name": "Parung Chumponanomakun"
+      },
+      {
+        "role": "Chief Strategy Officer",
+        "name": "Prasit Kunanuphanchai"
+      },
+      {
+        "role": "Strategic Planning Manager",
+        "name": "Varisara Chaisutyakorn"
+      },
+      {
+        "role": "Business Director",
+        "name": "Aek Jittawait"
+      },
+      {
+        "role": "Group Account Director",
+        "name": "Kulanit Tungprasertpol"
+      },
+      {
+        "role": "Senior Account Executive",
+        "name": "Suthatta Maneejan"
+      },
+      {
+        "role": "Producer",
+        "name": "Paramee Soontornwuttinun"
+      },
+      {
+        "role": "Project Manager",
+        "name": "Kanokwan Kaewkern"
+      },
+      {
+        "role": "Agency",
+        "name": "BBDO Guerrero"
+      },
+      {
+        "role": "Chairman & CCO",
+        "name": "David Guerrero"
+      },
+      {
+        "role": "Creative Directors",
+        "name": "Dennis Nierra, Stephan Domingo"
+      },
+      {
+        "role": "Assoc. Creative Director",
+        "name": "Paul Ayson"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Jannah Jordan"
+      },
+      {
+        "role": "Planning Director",
+        "name": "Josef Montinola"
+      },
+      {
+        "role": "Account Director",
+        "name": "Michael Simpao"
+      },
+      {
+        "role": "Senior Account Manager",
+        "name": "Catherine Lao"
+      },
+      {
+        "role": "Client Service Director",
+        "name": "Kyle Cruz-Tan"
+      },
+      {
+        "role": "Production House",
+        "name": "Neon Films Co., Ltd"
+      },
+      {
+        "role": "Director",
+        "name": "Kulapat Aimmanoj"
+      },
+      {
+        "role": "Assistant Director",
+        "name": "Nathakorn Larprattanaporn"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Salinda Wisutkanchanachai"
+      },
+      {
+        "role": "Producer",
+        "name": "Khwanhathai Chainontee"
+      },
+      {
+        "role": "Production Manager",
+        "name": "Supaporn Kongkapee"
+      },
+      {
+        "role": "Post Producer",
+        "name": "Tritong K"
+      },
+      {
+        "role": "Cinematographer",
+        "name": "Songsit Kasiroek"
+      },
+      {
+        "role": "Art Director",
+        "name": "Jittakorn Usaneehemmakul"
+      },
+      {
+        "role": "Casting Director",
+        "name": "Noppakate Khumtavee"
+      },
+      {
+        "role": "Assistant Casting Director",
+        "name": "Dutsanee Sintudachrgul"
+      },
+      {
+        "role": "Location Manager",
+        "name": "Pannipa Kaewto"
+      }
     ]
   },
   {
@@ -149547,6 +152881,84 @@
       "It’s in the simplest things like sharing stories, laughter and a meal around the table that evokes the feeling of a truly Filipino Christmas.”",
       "Firrdaus Yusoff, Executive Creative Director, Forsman & Bodenfors Singapore, said: “To work with an iconic brand like Jollibee makes us all feel like a kid on Christmas morning. We have enjoyed every moment and felt like a true partner through the process.",
       "It’s safe to say the Jollibee Joy is contagious.” Forsman & Bodenfors also wrote and commissioned an original soundtrack for the campaign, bringing even more heart to the film and speaking to Filipinos’ renowned love for music."
+    ],
+    "credits": [
+      {
+        "role": "Creative Agency",
+        "name": "Forsman & Bodenfors Singapore"
+      },
+      {
+        "role": "Executive Creative Director",
+        "name": "Firrdaus Yusoff"
+      },
+      {
+        "role": "Designer",
+        "name": "Yen Wee"
+      },
+      {
+        "role": "Head of Strategy",
+        "name": "Siddhant Lahiri"
+      },
+      {
+        "role": "Group Client Director",
+        "name": "Adrian Ortiz"
+      },
+      {
+        "role": "Senior Client Manager",
+        "name": "Pixie Gan"
+      },
+      {
+        "role": "Head of PR",
+        "name": "Deborah Abraham"
+      },
+      {
+        "role": "Senior Producer",
+        "name": "Joshua Tan"
+      },
+      {
+        "role": "Singapore Production House",
+        "name": "Freeflow Productions Pte Ltd"
+      },
+      {
+        "role": "Director",
+        "name": "Roslee Yusof"
+      },
+      {
+        "role": "Director of Photography",
+        "name": "Mitch Ayers"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "TzeNi Ong"
+      },
+      {
+        "role": "Line Producer",
+        "name": "Jeslene Chia"
+      },
+      {
+        "role": "Head of Post Production",
+        "name": "Spencer Wong"
+      },
+      {
+        "role": "Senior Offline Editor",
+        "name": "Jay Sy"
+      },
+      {
+        "role": "Post Producer",
+        "name": "Feline Yeo"
+      },
+      {
+        "role": "Filipino Production House",
+        "name": "TwoFold"
+      },
+      {
+        "role": "Production Managers",
+        "name": "Sheila Cusi and Glenda Mugol"
+      },
+      {
+        "role": "1st Assistant Director",
+        "name": "Jules Dacanay"
+      }
     ]
   },
   {
@@ -149719,7 +153131,53 @@
         "summary": "ASB lanzó la campaña ASB Youth Financial Literacy, una plataforma multicanal totalmente integrada creada por Droga..."
       }
     },
-    "video": "https://vimeo.com/1136326803/e327e9daf5"
+    "video": "https://vimeo.com/1136326803/e327e9daf5",
+    "credits": [
+      {
+        "role": "Production Supervisor",
+        "name": "Freya Walker-Boden"
+      },
+      {
+        "role": "Audio",
+        "name": "Franklin Road Music & Sound"
+      },
+      {
+        "role": "Media Agency",
+        "name": "Initiative Aotearoa"
+      },
+      {
+        "role": "Head of Strategy",
+        "name": "Chris Thomas"
+      },
+      {
+        "role": "Group Business Director",
+        "name": "Shona Foster"
+      },
+      {
+        "role": "Communications Design Director",
+        "name": "Ashleigh Vreeburg"
+      },
+      {
+        "role": "Associate Investment Director",
+        "name": "Ketan Narsinh"
+      },
+      {
+        "role": "Senior Account Manager",
+        "name": "João Erceg"
+      },
+      {
+        "role": "Account Executive",
+        "name": "Riley Wratten-Young"
+      },
+      {
+        "role": "Group Digital Director",
+        "name": "Christina So"
+      },
+      {
+        "role": "Digital Account Manager",
+        "name": "Ivan Yeung"
+      }
+    ]
   },
   {
     "id": "2025-11-16-meridian-energy-meridian-energy-turns-sunshine-into",
@@ -149760,6 +153218,44 @@
     },
     "yt": [
       "qpl-snPhL4I"
+    ],
+    "credits": [
+      {
+        "role": "Agency",
+        "name": "81"
+      },
+      {
+        "role": "Agency Producer",
+        "name": "Bridget Bolton-Riley"
+      },
+      {
+        "role": "Media Agency",
+        "name": "MBM"
+      },
+      {
+        "role": "Production Company",
+        "name": "Good Oil"
+      },
+      {
+        "role": "Director",
+        "name": "Connor Pritchard"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Andrew McLean"
+      },
+      {
+        "role": "Managing Director",
+        "name": "George Mackenzie"
+      },
+      {
+        "role": "DOP",
+        "name": "Adam Luxton"
+      },
+      {
+        "role": "Post Production",
+        "name": "Good Oil"
+      }
     ]
   },
   {
@@ -149800,6 +153296,60 @@
       "This year, we’re reframing and revelling in the reality that Christmas isn’t made by those picture-perfect, frameable moments. It’s during the messy, weird and unscripted chaos where the Christmas spirit really kicks in, and that felt like a different take on the festive season.”",
       "Says Low: “The creative team at BBH had a good idea. The sort of idea you think, “has nobody done this before?” I filmed that idea as faithfully as I could and I think it worked out pretty well because I didn’t get cute about it.",
       "I honestly just tried to craft a story that conveys that initial idea.” The campaign also extends in-store with illustrated Christmas cards and themed F&F jumpers, and includes cultural tie-ins such as a Gogglebox partnership to spark national conversation around “what makes it Christmas.”"
+    ],
+    "credits": [
+      {
+        "role": "Designer",
+        "name": "Jiwoo Kim"
+      },
+      {
+        "role": "Designer",
+        "name": "Keiti Collins"
+      },
+      {
+        "role": "Production Company",
+        "name": "Biscuit Filmworks"
+      },
+      {
+        "role": "Director",
+        "name": "Jeff Low"
+      },
+      {
+        "role": "Producer",
+        "name": "Lucy Gossage"
+      },
+      {
+        "role": "Founding Partner",
+        "name": "Shawn Lacy"
+      },
+      {
+        "role": "Managing Director",
+        "name": "Rupert Reynolds-Maclean"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Hanna Bayatti"
+      },
+      {
+        "role": "Head of Production",
+        "name": "Emily Atterton"
+      },
+      {
+        "role": "Production Manager",
+        "name": "Patch Wadsworth"
+      },
+      {
+        "role": "DOP",
+        "name": "Thomas Townend"
+      },
+      {
+        "role": "Production Designer",
+        "name": "Arthur De Borman"
+      },
+      {
+        "role": "Casting Director",
+        "name": "Lesley Beastall"
+      }
     ]
   },
   {
@@ -149827,7 +153377,77 @@
       "Creative Director, Head of Design: Eimear O’Sullivan Senior Designer/Production Lead: Trevor Nolan Midweight Designer: Molly Devlin Head of Strategy: Sarah Walsh Account Director: Rebecca Mullen Marketing & Communications Manager: Harriet Mansergh"
     ],
     "summary": "DUBLIN — The Public House has developed a comprehensive brand identity for Bolands Mills as the historic Dublin landmark undergoes transformation into a mixed-use cultural and commercial destination.",
-    "addedAt": "2026-11-28T16:56:34Z"
+    "addedAt": "2026-11-28T16:56:34Z",
+    "credits": [
+      {
+        "role": "Creative Agency",
+        "name": "The Public House"
+      },
+      {
+        "role": "Creative Director, Head of Design",
+        "name": "Eimear O’Sullivan"
+      },
+      {
+        "role": "Senior Designer/Production Lead",
+        "name": "Trevor Nolan"
+      },
+      {
+        "role": "Midweight Designer",
+        "name": "Molly Devlin"
+      },
+      {
+        "role": "Motion Designer",
+        "name": "Kevin Hughes"
+      },
+      {
+        "role": "Head of Strategy",
+        "name": "Sarah Walsh"
+      },
+      {
+        "role": "Account Director",
+        "name": "Rebecca Mullen"
+      },
+      {
+        "role": "Managing Director",
+        "name": "Kerrie Sweeney"
+      },
+      {
+        "role": "Executive Creative Director",
+        "name": "Rob Maguire"
+      },
+      {
+        "role": "Media Agency",
+        "name": "Digital Impact"
+      },
+      {
+        "role": "Media Strategy & Planning",
+        "name": "Declan Kelly"
+      },
+      {
+        "role": "Media Account Director",
+        "name": "Jane Daly"
+      },
+      {
+        "role": "Client",
+        "name": "Bolands Mills"
+      },
+      {
+        "role": "Marketing & Communications Manager",
+        "name": "Harriet Mansergh"
+      },
+      {
+        "role": "Marketing & Communications Manager",
+        "name": "Kalle Ryan"
+      },
+      {
+        "role": "Programme Manager",
+        "name": "Rachael Miller"
+      },
+      {
+        "role": "Bolands Mills Marketing Manager",
+        "name": "Aoife Brady"
+      }
+    ]
   },
   {
     "id": "2025-11-14-bonfire-bonfire-launches-irish-pharmacy-unio",
@@ -149875,7 +153495,93 @@
         "summary": "Smyths Toys Superstores ha lanzado su campaña navideña de 2026, ampliando el impulso del minorista a Europa, ya que apunta a expandirse en Francia, Alemania y los Países Bajos.",
         "ok": 2
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Smyths Toys Superstores"
+      },
+      {
+        "role": "Joint European Marketing Directors",
+        "name": "Sinead Byrne & Martina Ruane"
+      },
+      {
+        "role": "Senior Marketing Executive",
+        "name": "Christian Walsh"
+      },
+      {
+        "role": "Agency",
+        "name": "Droga5 Dublin, part of Accenture Song"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Jen Speirs"
+      },
+      {
+        "role": "Creative Directors",
+        "name": "Alex Ingarfield & Carina Caye"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Niamh Aremband"
+      },
+      {
+        "role": "Art Director",
+        "name": "Lucas Oliveira"
+      },
+      {
+        "role": "Chief Strategy Officer",
+        "name": "Emma Sharkey"
+      },
+      {
+        "role": "Executive Group Account Director",
+        "name": "James Moore"
+      },
+      {
+        "role": "Senior Account Director",
+        "name": "David Curran"
+      },
+      {
+        "role": "Account Executive",
+        "name": "Smit Karmarkar"
+      },
+      {
+        "role": "Head of Production",
+        "name": "Jessica Bermingham"
+      },
+      {
+        "role": "Producer",
+        "name": "Siobhan Coakley"
+      },
+      {
+        "role": "Senior Producer",
+        "name": "Aisling O’Dwyer"
+      },
+      {
+        "role": "Production Company",
+        "name": "Ponder"
+      },
+      {
+        "role": "Director",
+        "name": "Brian Durnin"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Paul Holmes"
+      },
+      {
+        "role": "Production Coordinator",
+        "name": "Treasa O’Friel"
+      },
+      {
+        "role": "DOP",
+        "name": "Ignas Laugalis"
+      },
+      {
+        "role": "Production Designer",
+        "name": "Susie Cullen"
+      }
+    ]
   },
   {
     "id": "2025-11-12-kfc-black-friday-2025",
@@ -150016,6 +153722,128 @@
       "With the help of AI-powered media targeting, It Must be STING targets specific audience segments, from students to Muay Thai fans and farmers.",
       "It has achieved 750 million total views across social and digital platforms in Thailand alone, and has been adapted for six Southeast Asian countries including Vietnam, the Philippines, Malaysia, Cambodia, Laos and Myanmar.",
       "Content Director: Patsanun Jeenanat Influencer Management Manager: Yatichaphat Kittiwitchaowakun Influencer Management Specialist: Kannit Saisa Project Manager: Chavakorn Leelakul Design Director: Chutamas Pothong Graphic Designers: Apirak Jadrit, Rungsimunt Rujirekrungsima Multimedia Designer: Krittakan Chaiyadum Digital Content Manager: Kanokporn Oonsalee"
+    ],
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Sting Thailand (Suntory PepsiCo Beverage, Thailand)"
+      },
+      {
+        "role": "Marketing Director for Energy, MLC and Digital",
+        "name": "Yutana Jitcharoongphorn"
+      },
+      {
+        "role": "Senior Marketing Lead",
+        "name": "Gutzee Segura"
+      },
+      {
+        "role": "Chief Marketing Officer",
+        "name": "Anawat Sangkhasap"
+      },
+      {
+        "role": "Digital Marketing Manager",
+        "name": "Wiratchapong Chantapan"
+      },
+      {
+        "role": "Sr. Brand manager",
+        "name": "Nuwat Maytaprechakul"
+      },
+      {
+        "role": "Agency",
+        "name": "Leo Thailand"
+      },
+      {
+        "role": "Executive Creative Director",
+        "name": "Titipun Tubthong"
+      },
+      {
+        "role": "Associate Creative Director",
+        "name": "Nutthawut Amkamsong"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Kaiwan Teanngam"
+      },
+      {
+        "role": "Art Director",
+        "name": "Sutprasert Juntabua"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Naravit Hongsamut Copy"
+      },
+      {
+        "role": "Group Account Director",
+        "name": "Warin Waiyavut"
+      },
+      {
+        "role": "Account Director",
+        "name": "Ratchada Rujiworakulthong"
+      },
+      {
+        "role": "Account Executive",
+        "name": "Patcharaporn Wansumrit"
+      },
+      {
+        "role": "Head of Strategy",
+        "name": "Vibhu Harnvarakiat"
+      },
+      {
+        "role": "Associate Strategic Planning Director",
+        "name": "Sireerat Wasukhan"
+      },
+      {
+        "role": "Strategic Planner Supervisor",
+        "name": "Chattamachote Sesavej"
+      },
+      {
+        "role": "Strategic Planner Executive",
+        "name": "Wisharat Rattanataymee"
+      },
+      {
+        "role": "Content Director",
+        "name": "Patsanun Jeenanat"
+      },
+      {
+        "role": "Influencer Management Manager",
+        "name": "Yatichaphat Kittiwitchaowakun"
+      },
+      {
+        "role": "Project Manager",
+        "name": "Chavakorn Leelakul"
+      },
+      {
+        "role": "Design Director",
+        "name": "Chutamas Pothong"
+      },
+      {
+        "role": "Multimedia Designer",
+        "name": "Krittakan Chaiyadum"
+      },
+      {
+        "role": "Digital Content Manager",
+        "name": "Kanokporn Oonsalee"
+      },
+      {
+        "role": "Media agency",
+        "name": "Publicis Media Thailand"
+      },
+      {
+        "role": "Media Planning Director",
+        "name": "Jittinan Jotikabukkana"
+      },
+      {
+        "role": "Associate Media Planning Director",
+        "name": "Ekkaphop Chuengkul"
+      },
+      {
+        "role": "Senior Hybrid Planner",
+        "name": "Damisa Sae-lim"
+      },
+      {
+        "role": "Production",
+        "name": "Player 2 Production"
+      }
     ]
   },
   {
@@ -150055,7 +153883,29 @@
         "summary": "Noel Leeming ha lanzado su primera campaña centrada íntegramente en servicios de soluciones tecnológicas, presentando el nuevo NOELedge Se..."
       }
     },
-    "video": "https://vimeo.com/1122673539/bf453da5a6"
+    "video": "https://vimeo.com/1122673539/bf453da5a6",
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Noel Leeming"
+      },
+      {
+        "role": "Agency",
+        "name": "TBWA\\New Zealand"
+      },
+      {
+        "role": "Production Company",
+        "name": "Fish & Clips"
+      },
+      {
+        "role": "Audio House",
+        "name": "Liquid Studios"
+      },
+      {
+        "role": "Media Agency",
+        "name": "OMG New Zealand"
+      }
+    ]
   },
   {
     "id": "2025-11-10-ogilvy-india-ogilvy-india-brings-italian-flair-to",
@@ -150085,7 +153935,41 @@
         "summary": "La madera tiene una forma de dar vida a un hogar, añadiendo calidez, textura y una sensación de carácter personal.",
         "ok": 2
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Asian Paints"
+      },
+      {
+        "role": "Agency",
+        "name": "Ogilvy, Mumbai"
+      },
+      {
+        "role": "Creative Team (Ogilvy)",
+        "name": "Sukesh Nayak, Vivek Verma, Srinjayi Sengupta, Apurva Hadap, Abhijit Mahida, Samima Patel"
+      },
+      {
+        "role": "Account Management Team (Ogilvy)",
+        "name": "B Ramanathan, Dharal Goshalia, Vishwendra Singh Parmar, Shreyas Godse, Farhan Khan"
+      },
+      {
+        "role": "Planning Team (Ogilvy)",
+        "name": "Prem Narayan, Kshitij Rajoria, Sanjay Pillai, Atharva Chandorkar"
+      },
+      {
+        "role": "Production House",
+        "name": "Colonial Films"
+      },
+      {
+        "role": "Director",
+        "name": "Neal Massey"
+      },
+      {
+        "role": "Producer",
+        "name": "Rupesh (Pintu) Mishra"
+      }
+    ]
   },
   {
     "id": "2025-11-06-blissclub-blissclub-unveils-bliss-police-campa",
@@ -150241,7 +154125,29 @@
         "summary": "Primeros en la categoría, Healtheries y TBWANew Zealand convirtieron la hora de dormir en horario estelar con Sleep vs Sloth, una primicia social..."
       }
     },
-    "video": "https://vimeo.com/1132962980"
+    "video": "https://vimeo.com/1132962980",
+    "credits": [
+      {
+        "role": "Creative Agency",
+        "name": "TBWA New Zealand"
+      },
+      {
+        "role": "Client",
+        "name": "Healtheries"
+      },
+      {
+        "role": "PR & Influence",
+        "name": "Eleven PR"
+      },
+      {
+        "role": "Media",
+        "name": "Spark Foundry"
+      },
+      {
+        "role": "Production",
+        "name": "AO"
+      }
+    ]
   },
   {
     "id": "2025-11-04-john-lewis-john-lewis-unveils-2025-christmas-ca",
@@ -150360,6 +154266,56 @@
     },
     "yt": [
       "FTIUQxhtTCc"
+    ],
+    "credits": [
+      {
+        "role": "Agency",
+        "name": "AKQA"
+      },
+      {
+        "role": "Managing Director",
+        "name": "Justine Leong"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Tara McKenty"
+      },
+      {
+        "role": "Executive Creative Director",
+        "name": "Sarah McGregor"
+      },
+      {
+        "role": "Chief Strategy Officer",
+        "name": "Iona Macgregor"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Annie Bettis"
+      },
+      {
+        "role": "Art Director",
+        "name": "Fong Ong"
+      },
+      {
+        "role": "Production Director",
+        "name": "Colin Tuohy"
+      },
+      {
+        "role": "Group Client Partner",
+        "name": "Olivia Kaufman"
+      },
+      {
+        "role": "Client Partner",
+        "name": "Jayne Driver"
+      },
+      {
+        "role": "Senior Account Manager",
+        "name": "Kate Crowley"
+      },
+      {
+        "role": "Senior Designer",
+        "name": "Frank Turner"
+      }
     ]
   },
   {
@@ -150572,6 +154528,24 @@
     },
     "yt": [
       "WJgVhnmb1q0"
+    ],
+    "credits": [
+      {
+        "role": "Client",
+        "name": "Stone & Wood / Lion"
+      },
+      {
+        "role": "Creative Agency",
+        "name": "Monster Children Creative"
+      },
+      {
+        "role": "Production",
+        "name": "Monster Children Films"
+      },
+      {
+        "role": "Writer and Director",
+        "name": "Hamish Bennett"
+      }
     ]
   },
   {
@@ -150657,6 +154631,28 @@
     },
     "yt": [
       "paV_rPsIxsA"
+    ],
+    "credits": [
+      {
+        "role": "Agency",
+        "name": "DDB Group Aotearoa"
+      },
+      {
+        "role": "Production Company",
+        "name": "The Sweetshop"
+      },
+      {
+        "role": "Director",
+        "name": "Max Barden"
+      },
+      {
+        "role": "Managing Director/EP",
+        "name": "Ben Dailey"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Jimena Murray"
+      }
     ]
   },
   {
@@ -150930,6 +154926,96 @@
       "Anchored by the line “หอม…ถึงแก่นแท้” (A fragrance that reaches the soul), the campaign redefines what “drinking tea” can mean for a new generation, not just taste, but emotion; not just refreshment, but presence.",
       "Through Cha Jing, CJ WORX demonstrates how creativity can slow time in a category built on speed, transforming a ready-to-drink product into a sensory work of art. Team CJ WORX proves that even in the most crowded FMCG categories, there’s always a space for new launch, if you know how to scent it.",
       "Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below. Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below."
+    ],
+    "credits": [
+      {
+        "role": "Client",
+        "name": "General Beverage Co.,Ltd"
+      },
+      {
+        "role": "Brand",
+        "name": "Cha Jing"
+      },
+      {
+        "role": "Agency",
+        "name": "CJ WORX"
+      },
+      {
+        "role": "Chief Creative Officer",
+        "name": "Saharath Sawadatikom"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Kulthavach Kultanan"
+      },
+      {
+        "role": "Group Head, Art Director",
+        "name": "Pranod Thiangcham"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Orawan Chaovanakij"
+      },
+      {
+        "role": "Senior Account Director",
+        "name": "Poolida Chavengsaksongkram"
+      },
+      {
+        "role": "Account Manager",
+        "name": "Pattara Kheawchaoum"
+      },
+      {
+        "role": "Strategic Planning Director",
+        "name": "Parichart Kittitheerapornchai"
+      },
+      {
+        "role": "Strategic Planning Manager",
+        "name": "Sakila Punyaratabandhu"
+      },
+      {
+        "role": "House Production",
+        "name": "Dylan Film"
+      },
+      {
+        "role": "Director",
+        "name": "Tanis Pintong"
+      },
+      {
+        "role": "Producer",
+        "name": "Nanthanee Namtip"
+      },
+      {
+        "role": "Asst. Director",
+        "name": "Wisanukorn Kankong"
+      },
+      {
+        "role": "Production Manager",
+        "name": "Supaporn Kongkapee"
+      },
+      {
+        "role": "Director of Photograph",
+        "name": "Abhisit Prasongsup"
+      },
+      {
+        "role": "Art Director",
+        "name": "Nattapon Kotata"
+      },
+      {
+        "role": "Post Producer",
+        "name": "Kittitath Roikeanjan"
+      },
+      {
+        "role": "Editor",
+        "name": "Jinnaphat Thammasan"
+      },
+      {
+        "role": "VFX",
+        "name": "Naruechit Jittarurk, Spice Shop by The Post Bangkok Co., Ltd"
+      },
+      {
+        "role": "Sound",
+        "name": "Wanchai Sinprajugkul, Cine Sound Co., Ltd"
+      }
     ]
   },
   {
@@ -151062,6 +155148,32 @@
       "The local crews are incredible — technical, creative, and passionate. Everyone goes the extra mile.” He believes this project showcases Vietnam’s rising reputation as a global production hub. “It proves we can execute large-scale lighting and practical effects at an international level,” he adds.",
       "After three straight night shoots, the wrap was emotional. “Seeing the rough cuts on set and realizing it all worked — that was a huge moment,” Duong recalls. “Everyone brought something special,” he says. “Our lead actor Rory added humor and personality that made it all come alive.”",
       "For Vantage Pictures, it’s not just a Halloween campaign — it’s a benchmark for what’s possible in Vietnam. Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below. Register for Free and receive the Campaign Brief Daily Bulletin."
+    ],
+    "credits": [
+      {
+        "role": "Brand",
+        "name": "GOVEE"
+      },
+      {
+        "role": "Production House",
+        "name": "Vantage Pictures"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "James Duong, Clover Ho"
+      },
+      {
+        "role": "Director",
+        "name": "Salihin Ramli"
+      },
+      {
+        "role": "Producer",
+        "name": "An Hoang"
+      },
+      {
+        "role": "Line Producer",
+        "name": "Dennis Ha"
+      }
     ]
   },
   {
@@ -151146,7 +155258,77 @@
         "summary": "En honor al 20 aniversario de la saga y su regreso a los cines, la marca recrea la icónica escena de Edward bajo el sol con un toque de humor y estética pop. Espaçolaser, la cadena de depilación más grande del mundo, aprovecha Halloween para unir la cultura pop y…",
         "ok": 2
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Agência",
+        "name": "Jotacom"
+      },
+      {
+        "role": "Anunciante",
+        "name": "Espaçolaser"
+      },
+      {
+        "role": "Co-CEO",
+        "name": "Marcio Oliveira e Jaderson de Alencar"
+      },
+      {
+        "role": "VP de Criação",
+        "name": "Luiz Barrella"
+      },
+      {
+        "role": "VP de Operações e Planejamento",
+        "name": "Thiago Sheer"
+      },
+      {
+        "role": "VP de Mídia",
+        "name": "Ausra Sliesoraitis"
+      },
+      {
+        "role": "Head de Criação",
+        "name": "Raíssa Palamarczuk e Rodrigo Franz"
+      },
+      {
+        "role": "Direção de arte",
+        "name": "Nathalie Yogui e Luiz Fernando Lima"
+      },
+      {
+        "role": "Redação",
+        "name": "Polianna Lima"
+      },
+      {
+        "role": "Head de conteúdo",
+        "name": "Brunno Maceno"
+      },
+      {
+        "role": "Head de Projetos",
+        "name": "Mariane Cunha"
+      },
+      {
+        "role": "Gerente de Projetos/Atendimento",
+        "name": "Gabriela Andrade"
+      },
+      {
+        "role": "Head de Mídia",
+        "name": "Alex Cesmegi"
+      },
+      {
+        "role": "Coordenador de Mídia",
+        "name": "Leonardo Prata"
+      },
+      {
+        "role": "Head de Planejamento",
+        "name": "Ivo Vieira"
+      },
+      {
+        "role": "Coordenadora de Produção",
+        "name": "Beatriz Lamarão"
+      },
+      {
+        "role": "Produtora",
+        "name": "Poiu"
+      }
+    ]
   },
   {
     "id": "2025-10-27-terra-vivo-terra-vivo-ads-lancam-experiencia-de",
@@ -151926,7 +156108,45 @@
         "summary": "Apple has unveiled a new global brand platform for Mac celebrating that great ideas start from a blank page.",
         "ok": 2
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Agency",
+        "name": "TBWA\\ Media Arts Lab"
+      },
+      {
+        "role": "Director",
+        "name": "Mike Mills"
+      },
+      {
+        "role": "Production Company",
+        "name": "MJZ"
+      },
+      {
+        "role": "Director of Photography",
+        "name": "Arseni Khachaturan"
+      },
+      {
+        "role": "Post-Production Company",
+        "name": "Pariah"
+      },
+      {
+        "role": "Film Editing",
+        "name": "Exile"
+      },
+      {
+        "role": "Film Color",
+        "name": "Trafik"
+      },
+      {
+        "role": "Audio Post Production",
+        "name": "Lime Studios"
+      },
+      {
+        "role": "Composer/Music",
+        "name": "Emile Mosseri"
+      }
+    ]
   },
   {
     "id": "2025-10-20-shenzhen-the-nine-shanghai-s-jody-xiong-direc",
@@ -151966,6 +156186,52 @@
       "The child’s voice delivers lyrical reflections on innovation and humanity, while a parallel storyline follows an astronaut on a white horse journeying through mountains, seas, and cityscapes – a metaphor for Shenzhen’s boundless dreams.",
       "Visually, Fascinating traverses iconic Shenzhen landmarks: a pianist conjuring the sound of the sea at the Cloud Observatory; Wing Chun dancers atop Wutong Mountain; robotic art performances at City Art Square; Cantonese opera singers and sci-fi statues in surreal harmony; dancers, athletes, and artists across neon skylines and misty parks.",
       "The imagery moves seamlessly between the real and the fantastical, forming a visual symphony that captures the city’s soul."
+    ],
+    "credits": [
+      {
+        "role": "Brand",
+        "name": "Shenzhen Tourism Bureau, China"
+      },
+      {
+        "role": "Director",
+        "name": "Jody Xiong"
+      },
+      {
+        "role": "Creative Agency and Production Company",
+        "name": "The Nine Shanghai"
+      },
+      {
+        "role": "Executive Producer",
+        "name": "Liu Lei, Li Qiangqiang, Zhang Qi, Huang Weidong, Sheng Ming, Huang Qiongxing, Su Man, Zhu Yi, Ma Shimeng, Wang Yatong, Yang XiaokaiCreative"
+      },
+      {
+        "role": "Creative Director",
+        "name": "Jody Xiong"
+      },
+      {
+        "role": "Art Director",
+        "name": "Jody Xiong"
+      },
+      {
+        "role": "Director of Photography",
+        "name": "Guo Yonghong"
+      },
+      {
+        "role": "Designer",
+        "name": "Jody Xiong, Chen Ye"
+      },
+      {
+        "role": "Copywriter",
+        "name": "Candy Chen"
+      },
+      {
+        "role": "Producer",
+        "name": "Wang Yimeng"
+      },
+      {
+        "role": "Color Grading",
+        "name": "Zhang Yingjie"
+      }
     ]
   },
   {
@@ -152087,7 +156353,33 @@
         "summary": "McDonald’s India (West & South) has launched a new campaign titled ‘You Said It.",
         "ok": 2
       }
-    }
+    },
+    "credits": [
+      {
+        "role": "Creative",
+        "name": "Rahul Mathew, Harshada Menon, Siddhesh Khatavkar, Ankit Pathak, Maruthi S, Rishabh Kallyat, Sahiti Gurram, Jena Shah, Manika Pangtey, Tanvi Akkaraju, Thevar Subbiah"
+      },
+      {
+        "role": "Strategy",
+        "name": "Shashank Lanjekar, Aashna Shah, Roshni"
+      },
+      {
+        "role": "Business",
+        "name": "Monideepa Nandi, Sonia Kumar Barkha Bisht"
+      },
+      {
+        "role": "Agency Producer",
+        "name": "Jay Gaikwad"
+      },
+      {
+        "role": "Film Executive",
+        "name": "Saloni Sharma"
+      },
+      {
+        "role": "Director",
+        "name": "Sonal Batra"
+      }
+    ]
   },
   {
     "id": "2025-10-16-talented-india-talented-india-s-latest-campaign-pos",
@@ -152366,6 +156658,28 @@
       "For Indians everywhere, it’s a bridge that brings them closer to where their hearts truly belong. India Wali Diwali is a tribute to that feeling of belonging, to the memories we cherish, the traditions we carry, and the connections that define us across distances.",
       "It also reflects Tanishq’s belief that jewellery is more than adornment; it is a symbol of love, togetherness, and shared celebration.”",
       "Arpan Bhattacharyya, Head of Creative (Copy), South, Lowe Lintas, said: “For Indians who have been living abroad for a significant amount of time, the festive season is when the heart yearns the most for home."
+    ],
+    "credits": [
+      {
+        "role": "Creative Team",
+        "name": "Arpan Bhattacharyya, Sahul Patri"
+      },
+      {
+        "role": "Account Management",
+        "name": "Kishore Subramanian, Arunima Sardar, Sitara Belliappa B"
+      },
+      {
+        "role": "Production House",
+        "name": "ThisisThat Productions"
+      },
+      {
+        "role": "Director",
+        "name": "Shihab Karim"
+      },
+      {
+        "role": "Producer",
+        "name": "Ambika Singh"
+      }
     ]
   },
   {
