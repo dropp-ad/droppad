@@ -14,16 +14,16 @@
       "https://contentgrip-media.b-cdn.net/featured/Bench-Media-Aura-brings-AI-analysis-to-campaign-data.webp"
     ],
     "story": [
-      "Aura da Bench Media adiciona análise conversacional ao Bench Connect, com equipes de agências usando-o hoje e acesso direto ao cliente planejado em fases. O seu valor depende de dados limpos, atribuição confiável e revisão humana das recomendações.",
-      "A Bench Media apresentou o Aura em 17 de novembro de 2026, adicionando um assistente de análise de IA em linguagem simples à sua plataforma de inteligência de mídia Bench Connect.",
-      "A agência australiana afirma que os profissionais de marketing podem questionar o desempenho da campanha em canais conectados, em vez de montar planilhas separadas antes de cada investigação. O lançamento e a disponibilidade planejada foram descritos no relatório da Mediaweek de 17 de novembro.",
-      "O comunicado faz uma distinção importante entre uma ferramenta de agência já em uso e um produto de cliente amplamente disponível. A Bench diz que suas equipes de desempenho e atendimento ao cliente agora usam o Aura para análise de campanhas; o acesso direto para clientes será introduzido progressivamente nos próximos meses.",
-      "A empresa não publicou um cronograma de lançamento específico ou benchmarks independentes que mostrem que o Aura melhora o retorno da campanha. O Aura permite que as equipes do Bench façam perguntas em linguagem comum sobre os resultados das campanhas realizadas no Bench Connect e investiguem possíveis motivos para alterações no desempenho.",
-      "Um gerente de marketing pode perguntar quais canais parecem contribuir mais para os objetivos acordados. Um especialista em desempenho poderia investigar custos de aquisição mais elevados ou se os ganhos de conversão vêm de um público-alvo e não de toda a campanha.",
-      "As equipes criativas poderiam explorar sinais de fadiga antes de decidir o que deveria ser atualizado. Esses exemplos são importantes porque começam com uma pergunta dentro de um ambiente de relatório existente.",
-      "Uma resposta de IA não exige que o usuário exporte números de cada conta de publicidade e os compare manualmente em outro lugar. Isso pode tornar a investigação mais rápida, embora a empresa não tenha divulgado um estudo controlado sobre economia de tempo.",
-      "A líder de produto da Bench, Yasmin Brown, descreveu o objetivo como ajudar as equipes a determinar se uma mudança está acontecendo em uma campanha ou em um segmento específico. O resultado útil é uma decisão de investigar ou testar, e não uma prova automática de que um ajuste sugerido produzirá melhores resultados.",
-      "As conexões de dados existentes do Bench Connect são a base para as respostas da Aura, tornando a cobertura e a consistência dos dados mais importantes do que uma interface de chatbot sofisticada."
+      "Bench Media's Aura adds conversational analysis to Bench Connect, with agency teams using it today and direct client access planned in phases. Its value depends on clean data, trustworthy attribution and human review of recommendations.",
+      "Bench Media introduced Aura on November 17, 2026, adding a plain-language AI analysis assistant to its Bench Connect media intelligence platform.",
+      "The Australian agency says marketers can question campaign performance across connected channels instead of assembling separate spreadsheets before every investigation. The launch and planned availability were described in the November 17 Mediaweek report .",
+      "The release makes an important distinction between an agency tool already in use and a broadly available client product. Bench says its performance and client-service teams use Aura for campaign analysis now; direct access for customers will be introduced progressively over the coming months.",
+      "The company has not published a specific rollout schedule or independent benchmarks showing that Aura improves campaign returns. Aura lets Bench teams ask ordinary-language questions about campaign results held in Bench Connect and investigate possible reasons for changing performance.",
+      "A marketing manager might ask which channels appear to contribute most against agreed objectives. A performance specialist could investigate higher acquisition costs or whether conversion gains come from one audience rather than the whole campaign.",
+      "Creative teams could explore signals of fatigue before deciding what should be refreshed. Those examples matter because they begin with a question inside an existing reporting environment.",
+      "An AI answer does not require a user to export figures from every advertising account and manually compare them elsewhere. That can make investigation quicker, although the company has not released a controlled time-saving study.",
+      "Bench product lead Yasmin Brown described the goal as helping teams determine whether a change is happening across a campaign or within a particular segment. The useful output is a decision to investigate or test, not automatic proof that a suggested adjustment will produce better results.",
+      "Bench Connect's existing data connections are the foundation for Aura's answers, making data coverage and consistency more important than a polished chatbot interface."
     ],
     "summary": "Aura da Bench Media adiciona análise conversacional ao Bench Connect, com equipes de agências usando-o hoje e acesso direto ao cliente planejado em fases.",
     "addedAt": "2026-11-28T16:30:39Z"
@@ -19682,6 +19682,19 @@
     }
   },
   {
+    "id": "2026-11-10-athleta-athleta-celebrates-women-on-their-ow",
+    "date": "2026-11-10",
+    "brand": "Athleta",
+    "title": "Athleta celebrates women on their own terms with “My World. My Rules.” campaign",
+    "agency": "",
+    "source": "Campaign Middle East",
+    "url": "https://campaignme.com/athleta-celebrates-women-on-their-own-terms-with-my-world-my-rules-campaign/",
+    "region": "Oriente Médio",
+    "cc": "AE",
+    "summary": "The world may have its own ideas about who women should be, but every woman has a story, a path and a set of rules of her own.",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
     "id": "2026-11-10-netshoes-netshoes-aposta-em-rafael-portugal-p",
     "date": "2026-11-10",
     "brand": "Netshoes",
@@ -21947,7 +21960,10 @@
           "La presentación trajo una perspectiva nacional aplicada a la realidad de Santa Catarina, reforzando las oportunidades de integración entre las soluciones de Globo y el ecosistema multiplataforma de NSC."
         ]
       }
-    }
+    },
+    "images": [
+      "https://www.abcdacomunicacao.com.br/wp-content/themes/jnews/assets/img/jeg-empty.png"
+    ]
   },
   {
     "id": "2026-11-06-wickbold-wickbold-aposta-em-saudabilidade-e-b",
@@ -23076,6 +23092,22 @@
     }
   },
   {
+    "id": "2026-11-05-afya-afya-lanca-campanha-de-reposicioname",
+    "date": "2026-11-05",
+    "brand": "Afya",
+    "title": "Afya lança campanha de reposicionamento do Whitebook, criada pela NextJor",
+    "agency": "NextJor",
+    "source": "ABC da Comunicação",
+    "url": "https://www.abcdacomunicacao.com.br/afya-lanca-campanha-de-reposicionamento-do-whitebook-criada-pela-nextjor/",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "H2PzNuGginM"
+    ],
+    "summary": "A Afya lança uma nova campanha para o Afya Whitebook, aplicativo de suporte à tomada de decisão clínica desenvolvido por médicos para apoiar estudantes de medicina, residentes e profissionais formados em sua rotina de atendimento.",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
     "id": "2026-11-05-jetour-g700-w-e-assina-campanha-do-jetour-g700-e",
     "date": "2026-11-05",
     "brand": "JETOUR G700",
@@ -23086,6 +23118,7 @@
     "region": "Brasil",
     "cc": "BR",
     "images": [
+      "https://www.abcdacomunicacao.com.br/wp-content/themes/jnews/assets/img/jeg-empty.png",
       "https://www.abcdacomunicacao.com.br/wp-content/uploads/Campanha-G700-Jetour-W-E-Divulgacao-02.jpg"
     ],
     "story": [
@@ -23129,7 +23162,8 @@
           "La combinación de estos elementos guió la creación de un lenguaje que combina potencia, tecnología y comodidad con la capacidad de afrontar diferentes situaciones, dentro y fuera de las ciudades."
         ]
       }
-    }
+    },
+    "image": "https://www.abcdacomunicacao.com.br/wp-content/themes/jnews/assets/img/jeg-empty.png"
   },
   {
     "id": "2026-11-05-nissin-yakissoba-u-f-estreia-principal-campanha-do-ano-pa",
@@ -23203,7 +23237,19 @@
         "summary": "Nissin Foods do Brasil presenta su principal campaña del año para el Nissin Yakissoba U.F.O. línea, que refuerza la característica ultraintensa del producto y resalta nuevos sabores especiados en un enfoque que combina humor,…",
         "ok": 2
       }
-    }
+    },
+    "story": [
+      "A Nissin Foods do Brasil apresenta a sua principal campanha do ano para a linha Nissin Yakissoba U.F.O. , que reforça a característica ultra intenso do produto e dá destaque aos novos sabores picantes em uma abordagem que combina humor, criatividade e uma estética inusitada.",
+      "Explorando o conceito de que há sensações tão intensas que não podem ser explicadas, apenas sentidas, a ação transforma ingredientes e sachês em figuras inspiradas no universo alienígena, que ganham vida em cenas divertidas.",
+      "A proposta é traduzir visualmente a intensidade característica da linha de macarrão instantâneo de bandeja, contemplando tanto os sabores já consagrados quanto as novidades picantes, que contam com molhos mais encorpados.",
+      "O filme, que será veiculado até o final de novembro nas plataformas oficiais da NISSIN no Facebook, TikTok, Youtube e Instagram, traz o contagiante jingle: “Quem gosta do sabor, gosta muito do sabor” junto com a assinatura “Mega prático, ultra intenso!”.",
+      "Segundo Daniela Denizo, gerente de Marca da Nissin Foods do Brasil: “Mais do que apresentar as novas opções picantes, queremos explorar, de um jeito surpreendente, a personalidade ultra intensa de U.F.O.",
+      "Por isso, transformamos os elementos em personagens e apostamos em uma linguagem irreverente e bem-humorada para divertir o consumidor”. “A deliciosa ultra intensidade de U.F.O, que não pode ser traduzida em palavras, ganha vida por meio da dança dos ingredientes, do molho e até mesmo do Ufão!",
+      "Tenho certeza de que, toda vez que você ouvir a música cativante que celebra as maravilhas de U.F.O., vai sentir vontade de correr para experimentar.",
+      "Espero que, enquanto saboreia o produto, se lembre das peripécias desses personagens”, diz Hiroshi Yoda, diretor executivo de criação da Dentsu Creative.",
+      "Atualmente, a linha Nissin Yakissoba U.F.O. conta com 7 SKUs, recebendo recentemente os reforços dos sabores picantes, Carne com molho Japonês Picante e Galinha Caipira, para ampliar o portfólio da marca. BI: Silvia Visani, Bruno Honório, Camille Grillo e Naiky Rigatos",
+      "Mídia: Viviana Maurman, Carol Nunes, Rodrigo Moura, Leandro Lourenço e Letycia Moreira Negócios: Bruno Panico, Reo Sakamoto, Marcella Sousa, Pamella Kacelnikas, Jéssica Correa e Luana Santos"
+    ]
   },
   {
     "id": "2026-11-05-canva-canva-launches-what-will-you-canva-t",
@@ -28156,6 +28202,55 @@
         "summary": "Richard Ayoade vive um ranzinza à la Scrooge que os mascotes Connie e Trevor levam numa viagem nostálgica pelo antigo catálogo da Argos até os presentes de tecnologia e casa de hoje."
       }
     }
+  },
+  {
+    "id": "2026-10-31-orient-electric-orient-electric-launches-the-right-l",
+    "date": "2026-10-31",
+    "brand": "Orient Electric",
+    "title": "Orient Electric launches ‘The Right Light’ campaign to highlight 3-in-1 lighting solutions",
+    "agency": "",
+    "source": "MediaNews4U",
+    "url": "https://www.medianews4u.com/orient-electric-launches-the-right-light-campaign-to-highlight-3-in-1-lighting-solutions/",
+    "region": "Índia",
+    "cc": "IN",
+    "yt": [
+      "RuRa7CU3MCc"
+    ],
+    "summary": "New Delhi: Orient Electric, part of the CKA Birla Group, has launched ‘The Right Light’, an integrated campaign highlighting its lighting portfolio for modern Indian homes, with a focus on its 3-in-1 lighting solutions.",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2026-10-31-bonjour-bonjour-launches-festive-campaign-fe",
+    "date": "2026-10-31",
+    "brand": "Bonjour",
+    "title": "Bonjour launches festive campaign featuring Harshaali Malhotra, highlights ‘ONTO THE NEXT’ philosophy",
+    "agency": "",
+    "source": "MediaNews4U",
+    "url": "https://www.medianews4u.com/bonjour-launches-festive-campaign-featuring-harshaali-malhotra-highlights-onto-the-next-philosophy/",
+    "region": "Índia",
+    "cc": "IN",
+    "yt": [
+      "FczsFqr34BU"
+    ],
+    "summary": "Mumbai: Bonjour, the Indian socks and apparel brand, has launched its festive gifting film featuring actor Harshaali Malhotra.",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2026-10-31-kinder-schoko-bons-c-kinder-schoko-bons-crispy-launches-f",
+    "date": "2026-10-31",
+    "brand": "Kinder Schoko-Bons Crispy",
+    "title": "Kinder Schoko-Bons Crispy launches first-ever licensed campaign in India with Marvel",
+    "agency": "Marvel’s",
+    "source": "MediaNews4U",
+    "url": "https://www.medianews4u.com/kinder-schoko-bons-crispy-launches-first-ever-licensed-campaign-in-india-with-marvel/",
+    "region": "França",
+    "cc": "FR",
+    "image": "https://www.medianews4u.com/wp-content/uploads/2026/10/Kinder-1.jpg",
+    "images": [
+      "https://www.medianews4u.com/wp-content/uploads/2026/10/Kinder-1.jpg"
+    ],
+    "summary": "Mumbai: Kinder Schoko-Bons Crispy, from the house of Kinder, has launched its first-ever licensed campaign in India in association with Marvel, building on the anticipation around the upcoming release of Avengers: Doomsday.",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2026-10-31-heinz-troca-de-maionese-halloween",
@@ -46485,6 +46580,60 @@
         "summary": "Na despedida de Messi da seleção argentina, a Adidas levou uma camisa gigante de 30 metros de Rosário ao gramado do Monumental e lançou um documentário sobre os últimos dias do craque com a Albiceleste."
       }
     }
+  },
+  {
+    "id": "2026-10-05-avon-avon-estreia-recurso-do-instagram-pa",
+    "date": "2026-10-05",
+    "brand": "Avon",
+    "title": "Avon estreia recurso do Instagram para live ads no Brasil",
+    "agency": "",
+    "source": "Propmark",
+    "url": "https://propmark.com.br/uncategorized/avon-estreia-recurso-do-instagram-para-live-ads-no-brasil/",
+    "region": "Brasil",
+    "cc": "BR",
+    "image": "https://propmark.com.br/wp-content/uploads/2026/10/image-29-rotated.jpeg",
+    "images": [
+      "https://propmark.com.br/wp-content/uploads/2026/10/image-29-rotated.jpeg"
+    ],
+    "story": [
+      "A Avon tornou-se a primeira marca no Brasil a utilizar o Instagram Live Ads, novo formato publicitário da Meta.",
+      "A ferramenta foi usada durante uma transmissão ao vivo dedicada à linha de perfumaria ‘Avon Collection Paris Très Chic’, em parceria com a Mimo Live Sales, especializada em soluções de live commerce e parceira oficial da Meta para implementação da tecnologia no país.",
+      "O formato permite direcionar transmissões ao vivo para públicos além dos seguidores orgânicos do perfil, com segmentação de usuários considerados mais propensos à compra.",
+      "A proposta busca ampliar o alcance das lives e reduzir uma das limitações do live commerce, que é a dependência da audiência já formada pelos canais da marca. Segundo a Avon, a transmissão registrou engajamento superior à média de eventos anteriores realizados sem a ferramenta de amplificação paga.",
+      "Durante a ação, realizada no período noturno, o público impactado também apresentou maior adesão às ofertas apresentadas, de acordo com a empresa. A iniciativa foi aplicada durante uma live voltada à linha ‘Avon Collection Paris Très Chic’, que reúne seis fragrâncias deo parfum em frascos de 30 ml.",
+      "A coleção tem Paris como ponto de partida da linha Avon Collection e propõe diferentes perfis olfativos inspirados na capital francesa. Fique por dentro das novidades do mercado publicitário"
+    ],
+    "summary": "Ação com Mimo Live Sales amplia alcance de live commerce para públicos qualificados",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2026-10-05-roohts-roohts-lanca-metodologia-para-amplia",
+    "date": "2026-10-05",
+    "brand": "Roohts",
+    "title": "Roohts lança metodologia para ampliar eficácia criativa no OOH",
+    "agency": "",
+    "source": "Propmark",
+    "url": "https://propmark.com.br/out-of-home/roohts-lanca-metodologia-para-ampliar-eficacia-criativa-no-ooh/",
+    "region": "Brasil",
+    "cc": "BR",
+    "image": "https://propmark.com.br/wp-content/uploads/2026/10/Lideranca-Roohts-3-1.webp",
+    "images": [
+      "https://propmark.com.br/wp-content/uploads/2026/10/Lideranca-Roohts-3-1.webp"
+    ],
+    "story": [
+      "A Roohts, empresa do Grupo Dreamers especializada em mídia out of home, lança a Roohts UX, metodologia proprietária criada para orientar a criação e a avaliação de campanhas a partir da experiência das pessoas, das características dos ativos e dos objetivos de negócio das marcas.",
+      "A proposta combina criação, mídia, estratégia, dados e negócios para ampliar a análise sobre a eficácia das campanhas de publicidade exterior.",
+      "A Roohts UX foi desenvolvida a partir da observação das cidades, das jornadas, dos comportamentos e das experiências das pessoas diante dos diferentes ativos de mídia exterior. O trabalho teve início em São Paulo e vem sendo ampliado para outras regiões do país.",
+      "O processo resultou em oito pilares que orientam a avaliação criativa das campanhas: jornada, contexto e carga cognitiva; hierarquia visual; grid e composição por ativo; cores, contraste e acessibilidade; tipografia e legibilidade; fotografia; animação; e objetivo de comunicação.",
+      "A proposta parte da compreensão de que a análise da criatividade em OOH precisa considerar não apenas a execução da peça, mas também a relação entre a mensagem, o ambiente, o ativo e a experiência de quem circula pela cidade.",
+      "Nesse contexto, a metodologia busca conectar a construção criativa aos objetivos de comunicação e aos resultados esperados pelas marcas. A Roohts UX integra o Roohts OS, sistema operacional proprietário da empresa desenvolvido em Google Cloud Platform.",
+      "A plataforma concentra a inteligência da operação e reúne recursos voltados à análise e à mensuração do OOH. Entre eles está o Data Lake, que cruza diferentes informações relevantes para o mercado de mídia exterior, e o módulo OOH ROI, direcionado à mensuração dos resultados das campanhas.",
+      "“As plataformas de mídia oferecem momentos de atenção contextualizados, mas é criatividade e a qualidade da produção que capturam a atenção, transmitem a mensagem e mobilizam o consumidor.",
+      "Comunicação é uma ciência onde a criatividade deve ser exercida com profissionalismo, lastreada por pesquisas e fomentada pelo intelecto e a sensibilidade.",
+      "Esse cuidado multiplica a eficácia e a eficiência do OOH, onde o impacto é inevitável, mas o resultado, como demonstram as pesquisas, é construído por cada detalhe.”, conta Flávio Ferrari, sócio fundador da SocialData."
+    ],
+    "summary": "Roohts UX combina experiência, dados, design e estratégia na avaliação de campanhas de mídia exterior",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2026-10-05-docile-docile-leva-cuca-para-o-halloween-em",
@@ -73177,6 +73326,35 @@
     }
   },
   {
+    "id": "2026-08-11-pmes-aqui-ads-plataforma-da-globo-para-pm",
+    "date": "2026-08-11",
+    "brand": "PMEs",
+    "title": "Aqui ads, plataforma da Globo para PMEs, reforça operação e anuncia chegada de duas diretoras",
+    "agency": "",
+    "source": "Creativosbr",
+    "url": "https://creativosbr.com.br/aqui-ads-plataforma-da-globo-para-pmes-reforca-operacao-e-anuncia-chegada-de-duas-diretoras/?utm_source=rss&utm_medium=rss&utm_campaign=aqui-ads-plataforma-da-globo-para-pmes-reforca-operacao-e-anuncia-chegada-de-duas-diretoras",
+    "region": "Brasil",
+    "cc": "BR",
+    "image": "https://creativosbr.com.br/wp-content/uploads/2026/08/Aqui-ads-plataforma-da-Globo-para-PMEs-reforca-operacao-e-anuncia-chegada-de-duas-diretoras-.jpg",
+    "images": [
+      "https://creativosbr.com.br/wp-content/uploads/2026/08/Aqui-ads-plataforma-da-Globo-para-PMEs-reforca-operacao-e-anuncia-chegada-de-duas-diretoras-.jpg"
+    ],
+    "story": [
+      "O Aqui ads, unidade de negócio que reúne as soluções de mídia Out of Home (OOH), TV Globo, Streaming Globoplay, Canais Digitais e Rádio do Grupo Globo voltada para pequenas e médias empresas (PMEs), anuncia a chegada de duas novas executivas para fortalecer sua estrutura de liderança.",
+      "Heloisa Lima assume o cargo de Diretora de Marketing e Produto, enquanto Luciane Garcia chega para ocupar a cadeira de Diretora Comercial. A movimentação reflete a nova fase de aceleração e expansão nas operações da plataforma.",
+      "Com mais de 20 anos de experiência no mercado, Heloisa Lima é publicitária e cientista de dados, com formação em Comunicação e especializações em Applied Data Science e Inteligência Artificial Generativa pelo MIT (Massachusetts Institute of Technology) .",
+      "Especialista em mídia, dados, inovação e conteúdo, Heloisa construiu sua trajetória em grandes agências como DM9DDB, AlmapBBDO, Leo Burnett e Africa Creative.",
+      "A executiva também tem experiência internacional pela Tribal DDB (Nova Iorque) e liderou a área de estudos de Mídia e Digital da Kantar Millward Brown. “Estou muito feliz por receber esse convite que representa uma virada de chave na minha carreira.",
+      "Sempre tive o desejo de atuar em uma empresa de tecnologia e poder fazer parte do Aqui ads tem sido muito melhor do que eu imaginava.",
+      "Chego com vontade de contribuir com a minha experiência, mas também aprender continuamente e desenvolver novas competências em inovação e tecnologia” , comenta Heloisa Lima, Diretora de Marketing e Produto do Aqui ads.",
+      "Já Luciane Garcia, diretora comercial, soma ao time seus 17 anos de experiência em mídia, tecnologia e publicidade, com forte atuação em TV e digital, especialmente mídia programática.",
+      "Formada em Administração e com MBA em Marketing Digital pela FGV, Luciane acumula passagens por empresas como Folha de S. Paulo, Record, OLX, Warner Bros. Discovery e DSP Yahoo/Verizon Media, onde liderou equipes comerciais e projetos de expansão no Brasil e na América Latina.",
+      "Em sua experiência mais recente, liderou a operação da Adzymic na Ásia-Pacífico a partir da Austrália, aprofundando-se no mercado de DOOH ( Digital Out-of-Home )."
+    ],
+    "summary": "O Aqui ads, unidade de negócio que reúne as soluções de mídia Out of Home (OOH), TV Globo, Streaming Globoplay, Canais Digitais e Rádio do Grupo Globo voltada para pequenas e médias empresas (PMEs), anuncia a chegada de duas novas…",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
     "id": "2026-08-11-klook-klook-launches-global-get-your-trave",
     "date": "2026-08-11",
     "brand": "Klook",
@@ -78149,7 +78327,8 @@
           "«No pudimos dejar pasar la oportunidad cuando vimos cómo Internet se enamoraba de esta receta, más de 400 millones de visualizaciones en TikTok y la cifra sigue creciendo. Así que hicimos lo que mejor sabe hacer Heinz: embotellar esa magia."
         ]
       }
-    }
+    },
+    "images": []
   },
   {
     "id": "2026-07-30-haleon-deu-eno-deu-bom",
@@ -81512,6 +81691,22 @@
     }
   },
   {
+    "id": "2026-07-21-maxibon-maxibon-presenta-su-edicion-limitada",
+    "date": "2026-07-21",
+    "brand": "Maxibon",
+    "title": "Maxibon presenta su edición limitada Maxibon x Stranger Things con una campaña que tiene el claim ‘Muerde y entra en el Mundo del Revés’",
+    "agency": "",
+    "source": "marketinginsiderreview.com",
+    "url": "https://marketinginsiderreview.com/maxibon-presenta-su-edicion-limitada-maxibon-x-stranger-things-con-una-campana-que-tiene-el-claim-muerde-y-entra-en-el-mundo-del-reves/",
+    "region": "Global",
+    "cc": "",
+    "yt": [
+      "C_xKBINSIEw"
+    ],
+    "summary": "Maxibon presenta su edición limitada Maxibon x Stranger Things con una campaña que tiene el claim 'Muerde y entra en el Mundo del Revés'.",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
     "id": "2026-07-21-johnnie-walker-keep-walking-cabo-verde",
     "date": "2026-07-21",
     "brand": "Johnnie Walker",
@@ -84054,6 +84249,22 @@
         "name": "MBM"
       }
     ]
+  },
+  {
+    "id": "2026-07-15-kfc-kfc-lanza-duos-una-nueva-campana-par",
+    "date": "2026-07-15",
+    "brand": "KFC",
+    "title": "KFC lanza ‘Dúos’, una nueva campaña para presentar su promoción de dos productos por dos euros",
+    "agency": "",
+    "source": "marketinginsiderreview.com",
+    "url": "https://marketinginsiderreview.com/kfc-lanza-campana-duos-promocionar-dos-productos-a-dos-euros/",
+    "region": "Global",
+    "cc": "",
+    "yt": [
+      "-AsZHL3M8rE"
+    ],
+    "summary": "KFC lanza 'Dúos', una nueva campaña para presentar su promoción de dos productos por dos euros.",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2026-07-15-whittaker-whittaker-s-campaign-celebrates-misc",
@@ -114327,7 +114538,19 @@
         "summary": "Swisse Wellness ha marcado el comienzo de una nueva era de bienestar sensorial a través de la próxima evolución de su plataforma de gomitas Func...",
         "ok": 2
       }
-    }
+    },
+    "story": [
+      "Now in its third iteration, Functional. Fun. Gummies. has been built year-on-year. From launching a fashion line with The Inspired Unemployed in 2023, to “employing” them in 2024 to create the parody ‘Rizz Gummie’ that broke the internet.",
+      "Swisse returns in 2026 with its boldest chapter yet: a ‘Sweet Treat’ inspired creative campaign that makes functional wellness impossible to ignore.",
+      "With ‘pill fatigue’ the insight to crack for Gen Z and Millennials seeking more enjoyable to consume supplements, in addition to the functional benefits. Swisse’s Functional. Fun.",
+      "Gummies. leans into indulgence, spotlighting the sensorial experience of their gummies: soft to the touch, satisfying to chew, and bursting with flavour.",
+      "Says Stephanie Taylor, Swisse ANZ Marketing Director: “With our Gummies campaign, we set out to make taste the hero – creating a colourful, flavour-forward world that combines the trend driven ‘sweet treat’ experience that brings our Swisse Gummies campaign to life.",
+      "Brought to life by our in-house team, this campaign is driven by pure, creative energy and engined by a deep understanding of our brand, with a shared belief that wellness can, and should be fun.”",
+      "The campaign rolls out across social, digital, and high impact out of home, using bold, stylised visuals and cheeky, category-pushing copy to play with the cultural tension of what gummies are, “technically a supplement, [however], tastes like a sweet treat”.",
+      "OOH executions bring the “sweet treat” experience of the campaign to life through placements in and around food precincts via street posters and hand-painted murals.",
+      "Time targeted motion rail formats are used to align specific Gummies products with moments of consumer relevance, such as Swisse Ultiboost Calm + Sleep Gummies appearing in night-time environments. Beyond paid media, earned PR activity officially kicks off on Friday 1 May.",
+      "The campaign features a hand painted mural of Australia’s ‘King of Sweet Treats’, Undiagnosed Anthony, celebrating his appointment as Swisse’s Quality Taste Assurance Manager sitting alongside a broader PR program; spanning an ice-cream collaboration with Gelato Gemelli, a ‘Swisse Whip’ chrome van touring the Gold Coast delivering bespoke Gummies-inspired gelato to a mix of talent homes and…"
+    ]
   },
   {
     "id": "2026-04-27-sleepmaker-sleepmaker-launches-new-integrated-c",
@@ -114487,7 +114710,19 @@
         "summary": "La marca de muebles e interiores de lujo Coco Republic ha presentado su colección Otoño / Invierno '26 a través de una nueva b...",
         "ok": 2
       }
-    }
+    },
+    "story": [
+      "Shifting Spaces transforms the Autumn / Winter ’26 collection into a culturally resonant brand moment, reinforcing Coco Republic’s position as an iconic luxury design brand while driving desire and commercial impact.",
+      "The brief outlined a need to showcase Coco Republic’s new ‘small spaces’ range, while staying true to its core designing furniture to reside in Australia and New Zealand’s most aspirational spaces.",
+      "The campaign introduces a single, cohesive narrative that unfolds across one continuous day, moving from city to country, returning to the brand’s roots and original name ‘Town and Country’.",
+      "This evolving visual journey demonstrates the craftsmanship, materiality and versatility of Coco Republic furniture, showing how each piece feels equally at home in compact urban environments and large scale residences.",
+      "Human elements are introduced, a woman, a man and their beloved dog, hinting at the warm comfort of the real life playing out behind the two aspirational residences. Shifting Spaces bridges inspiration and conversion within a single system.",
+      "Each scene was crafted to work simultaneously as emotive brand storytelling and high-performing retail imagery, allowing assets to transition seamlessly across owned, paid and eCommerce channels.",
+      "The modular approach enables campaign content to flex across Coco Republic’s diverse product range, from statement furniture to small space living and décor, while maintaining a cohesive brand narrative.",
+      "Detailed product moments, contextual hero shots and adaptable crops ensure the collection is both aspirational and functionally clear, helping customers better understand scale, proportion and versatility.",
+      "By integrating storytelling and retail utility, the campaign closes the gap between desire and purchase while building long-term brand equity, positioning Coco Republic’s Autumn / Winter ’26 collection as both a design statement and a commercial driver.",
+      "Creative: The Idea Shed John Volckman: Partner / ECD Karin Adreasson: General Manager John Fairley: Design Director Mia Gall: Account Director Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below."
+    ]
   },
   {
     "id": "2026-04-27-prego-havas-malaysia-creates-raya-film-for",
@@ -116168,7 +116403,19 @@
         "summary": "La campaña sigue dos historias reales de jóvenes australianos cuyas vidas han cambiado gracias a Youth Off The Streets....",
         "ok": 2
       }
-    }
+    },
+    "story": [
+      "The campaign follows two real stories from young Australians who have had their lives changed by Youth Off The Streets. ‘Blanket’ tells the story of Layla, who became homeless with her younger sisters to escape domestic violence and found herself sleeping under a towel on the floor of a motel room.",
+      "Today, with support from Youth Off The Streets, she and her sisters have their own home and are now thriving.",
+      "‘Cuppa’ tells the story of Ben, an at-risk young person who lived on the streets, received support from Youth Off The Streets and is now a trained youth worker, helping other young people navigate the challenges he experienced firsthand.",
+      "Now in its second year working to combat youth homelessness, PHD continues to build momentum behind the cause. Last year, the agency generated $3.4 million in media value with over 20 partners rallying behind the cause.",
+      "This year, in support of Youth Off The Streets, the agency has already secured more than $1 million in media value, kicking off fundraising with a media briefing attended by 30+ partners just last week.",
+      "Says Karen Penning, Head of Communications at Youth Off The Streets: “For too long, young people facing homelessness and disadvantage have been invisible or misrepresented, seen as problems rather than victims of broken systems. When these realities aren’t seen, they aren’t solved.",
+      "Through our partnership with UnLtd, INNOCEAN Australia, Rabbit and PHD, we’ve been able to change that.",
+      "Together, we’ve shared stories of real young people with honesty, dignity and humanity, and we’re deeply grateful for the care, creativity and commitment each partner brought to making those voices heard.”",
+      "Says Gemma Dawkins, National Head of Digital & Charity Committee Lead at PHD Media: “We’re hugely grateful to our media partners for their ongoing support and generously donated inventory.",
+      "We talk a lot about purpose in this industry, and I can’t think of something that brings more purpose to our days than to work towards a future where every young person in Australia has a safe space to sleep.”"
+    ]
   },
   {
     "id": "2026-04-20-vivo-a-paixao-pelo-futebol-fica",
@@ -116725,7 +116972,19 @@
         "summary": "El comediante, presentador de televisión, autor de libros infantiles y empresario Andy Lee se pondrá el verde y el dorado para conseguir R...",
         "ok": 2
       }
-    }
+    },
+    "story": [
+      "Running from today until the end of May, the playful series of (15-second, 30-second and longer form) TV, radio, out-of-home and social media advertisements unveil ‘Austra-LEE-an Made Week’ in honour of the week’s biggest fan.",
+      "Australian Made Campaign Limited (AMCL) Chief Executive Ben Lazzaro said the new campaign spearheaded by Lee highlights the breadth of Australian-made options across nearly every product category – manufactured and grown to the highest safety and quality standards right here in our own backyard: “It’s fantastic to have Andy on board as we celebrate the 40-year milestone for the Australian Made…",
+      "“We asked Hive to help bring this to life in a way that suitably reflects Andy’s passion and sense of humour.",
+      "“Today, the widely recognised Australian Made, Australian Grown logo remains the most trusted country-of-origin symbol in the nation, with 93% of surveyed Australians saying they trust the brand.",
+      "“This year will be our sixth Australian Made Week and the campaign continues to expand each year, providing a great platform to draw attention to the benefits of buying local and shine a spotlight on the interesting and inspiring people behind the 4,500 businesses that consider their Australian Made certification as a badge of honour.”",
+      "The longer form ‘mockumentary’ style TVC opens with Andy applying green and yellow zinc while giving himself a pep talk about being Australian Made Week’s Biggest Fan, before showing off some souvenired Australian Made products from past Australian Made Week ambassadors – Ariarne Titmus’s tracksuit, Jess Mauboy’s microphone and Adam Liaw’s frying pan.",
+      "A voice-over and montage of Andy’s shopping ‘training prep’ ahead of Australian Made Week leads into a shout-out to the iconic Australian Made kangaroo logo turning ‘the big 4-0’ and Andy waxing lyrical about the ‘great stuff made right here’, from industrial equipment to furniture, everyday goods, skincare and ‘even space rockets.’",
+      "Hive Creative’s Creative Director Michael Cain explained that the creative approach to the campaign was to adopt a tongue-in-check mockumentary tone that enabled the important message of supporting Australian manufacturers to be presented in an entertaining way, perfectly suited to Andy: “The creative really taps into Andy’s comedic strengths and rapport with audiences as well as his enthusiastic…",
+      "“Andy has been a dream talent to work with.",
+      "At the shoot, he was full of energy and even added some improvised magic to the script and action shots – seeing a larger-than-life six-foot-three guy in a green and gold tracksuit and thongs riding a kids’ miniature Australian Made kangaroo rocker like a rodeo cowboy was something special.”"
+    ]
   },
   {
     "id": "2026-04-19-google-pay-google-pay-launches-pocket-money-fea",
@@ -117345,7 +117604,8 @@
     "cc": "IE",
     "image": "https://campaignbrief.com/wp-content/uploads/2026/04/Screenshot-2026-04-16-at-7.58.13-am-1024x784.jpg",
     "images": [
-      "https://campaignbrief.com/wp-content/uploads/2026/04/Screenshot-2026-04-16-at-7.58.13-am-1024x784.jpg"
+      "https://campaignbrief.com/wp-content/uploads/2026/04/Screenshot-2026-04-16-at-7.58.13-am-1024x784.jpg",
+      "https://campaignbrief.com/wp-content/uploads/2026/04/Screenshot-2026-04-16-at-7.58.55-am.jpg"
     ],
     "story": [
       "Live throughout Gather Round, the Jameson Clubhouse transformed Adelaide’s Highway Hotel into a must visit destination, designed to earn a genuine place inside footy culture.",
@@ -118317,6 +118577,34 @@
     }
   },
   {
+    "id": "2026-04-13-australian-governmen-australian-government-launches-new-n",
+    "date": "2026-04-13",
+    "brand": "Australian Government",
+    "title": "Australian Government launches new national fuel security campaign ‘Every little bit helps’",
+    "agency": "",
+    "source": "Campaign Brief",
+    "url": "https://campaignbrief.com/australian-government-launches-new-national-fuel-security-campaign-every-little-bit-helps/",
+    "region": "Austrália",
+    "cc": "AU",
+    "image": "https://campaignbrief.com/wp-content/uploads/2026/04/260407_Project_Moving_Shot_05_2695-1024x768.jpg",
+    "images": [
+      "https://campaignbrief.com/wp-content/uploads/2026/04/260407_Project_Moving_Shot_05_2695-1024x768.jpg"
+    ],
+    "story": [
+      "The campaign supports the recently introduced National Fuel Security Plan, announced following a National Cabinet meeting on 30 March, designed to guide the country through the ongoing fuel crisis.",
+      "The four-level plan aims to manage fuel supply chain pressures driven by conflict in the Middle East, with Australia currently at Level 2 – ‘Keep Australia moving’. The campaign outlines practical actions Australians can take now to assist, as the Government works to secure ongoing fuel supply.",
+      "Further instructions will be communicated if the plan escalates to higher levels. Australians are also directed to the fuelplan.gov.au website for more information.",
+      "Catherine King, Minister for Infrastructure, Transport, Regional Development and Local Government, said: “This campaign will help communicate the Government’s plan to the public and outline what actions they can take to help. “The global fuel shortage is affecting us all and every little bit helps.",
+      "From running errands in fewer trips to only filling up with the fuel you need, this will help us keep essential services moving.",
+      "“The rollout of this campaign and National Fuel Security Plan ensures that we can get the public the information they need, and keep them updated if and when the situation may change.”"
+    ],
+    "summary": "The Australian Government has launched a new national information campaign, ‘Every little bit helps’, rolling out to...",
+    "addedAt": "2026-11-28T16:56:34Z",
+    "yt": [
+      "xDLVJHF0sd0"
+    ]
+  },
+  {
     "id": "2026-04-13-oppo-oppo-rolls-out-new-f33-series-campai",
     "date": "2026-04-13",
     "brand": "OPPO",
@@ -118525,6 +118813,21 @@
         "summary": "No Japão, a Apple transformou o 'A' da App Store em portais para 16 universos de aplicativos ilustrados por 13 artistas e estúdios, com trilha inédita do grupo IVE e uma instalação na estação de Shibuya."
       }
     }
+  },
+  {
+    "id": "2026-04-12-telstra-telstra-shows-australia-how-to-conne",
+    "date": "2026-04-12",
+    "brand": "Telstra",
+    "title": "Telstra shows Australia how to connect in more places in new campaign via BMEOF with +61",
+    "agency": "BMEOF",
+    "source": "Campaign Brief",
+    "url": "https://campaignbrief.com/telstra-shows-australia-how-to-connect-in-more-places-in-new-campaign-via-bmeof-with-61/",
+    "region": "Austrália",
+    "cc": "AU",
+    "video": "https://vimeo.com/1181811452",
+    "image": "https://campaignbrief.com/wp-content/uploads/2026/04/Screenshot-2026-04-13-at-8.18.32-am-1024x575.jpg",
+    "summary": "Telstra is taking connectivity beyond the limits of traditional coverage with a new integrated campaign via Bear Meets E...",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2026-04-12-dubai-s-parkin-and-fp7-mccann-dubai-turn-par",
@@ -119181,6 +119484,37 @@
     ]
   },
   {
+    "id": "2026-04-09-macquarie-centre-macquarie-centre-launches-a-w-2026-s",
+    "date": "2026-04-09",
+    "brand": "Macquarie Centre",
+    "title": "Macquarie Centre launches A/W 2026 season with new digital-first campaign via iD Collective",
+    "agency": "Macquarie Centre",
+    "source": "Campaign Brief",
+    "url": "https://campaignbrief.com/macquarie-centre-launches-a-w-2026-season-with-new-digital-first-campaign-via-id-collective/",
+    "region": "Austrália",
+    "cc": "AU",
+    "image": "https://campaignbrief.com/wp-content/uploads/2026/04/Screenshot-2026-04-10-at-8.55.09-am-1024x763.jpg",
+    "images": [
+      "https://campaignbrief.com/wp-content/uploads/2026/04/Screenshot-2026-04-10-at-8.55.09-am-1024x763.jpg"
+    ],
+    "story": [
+      "iD Collective was responsible for creative, digital and content services; delivering the content-led roll out across influencer, paid and owned channels.",
+      "The project leveraged internationally-recognised actor and singer Tammin Sursok, alongside model Francesca Hung who lend their combined local connection and fashion credentials to Macquarie Centre’s Autumn Winter launch.",
+      "The pair model new season looks in centre from leading brands including Aje, Polo Ralph Lauren, Witchery and Zara, across a series of video and stills amplified on Macquarie Centre’s own social and digital channels.",
+      "The seasonal moment is extended through a series of influencer partnerships; with key content creators and friends of the centre also sharing their Autumn Winter fashion experiences from Macquarie Centre – ensuring holistic storytelling and consistency of brand experience.",
+      "Shot on site, Macquarie Centre’s modern textures and architectural shapes form the backdrop of the editorial-inspired creative execution.",
+      "The creative approach aims to reinforce the centre’s accessible fashion offering, spotlighting real people and down-to-earth style within a recognisable location, the result is authentic and relatable without compromising on style.",
+      "Macquarie Centre offers Sydney’s best shopping, dining and entertainment all in one place.",
+      "With over 360 stores including premium Australian brands Aje, Bec + Bridge, Scanlon Theodore, Zimmermann and many more of your global and local favourites, Macquarie Centre welcomes you to discover The AW26 Edit.",
+      "iD Collective and sibling agency Noisy Beast are one of Australia’s largest independent full-service agencies, with offices in Sydney and Melbourne, along with a presence in Adelaide, New Zealand and the UK, together they create meaningful work that gives your brand a bigger voice."
+    ],
+    "summary": "Macquarie Centre has partnered with iD Collective to launch the Autumn Winter 2026 season for the shopping destination, ...",
+    "addedAt": "2026-11-28T16:56:34Z",
+    "yt": [
+      "V8Tu47pyW9U"
+    ]
+  },
+  {
     "id": "2026-04-09-coca-cola-coca-cola-launches-global-uncanned-e",
     "date": "2026-04-09",
     "brand": "Coca-Cola",
@@ -119374,6 +119708,94 @@
         "name": "Shutterstock"
       }
     ]
+  },
+  {
+    "id": "2026-04-08-liquorland-liquorland-teams-up-with-aussie-star",
+    "date": "2026-04-08",
+    "brand": "Liquorland",
+    "title": "Liquorland teams up with Aussie stars for a campaign that is ‘Legendary’ via Bashful",
+    "agency": "Bashful",
+    "source": "Campaign Brief",
+    "url": "https://campaignbrief.com/liquorland-teams-up-with-aussie-stars-for-a-campaign-that-is-legendary-via-bashful/",
+    "region": "Austrália",
+    "cc": "AU",
+    "image": "https://campaignbrief.com/wp-content/uploads/2026/04/LIQUORLAND-LEGENDARY-1024x527.jpg",
+    "images": [
+      "https://campaignbrief.com/wp-content/uploads/2026/04/LIQUORLAND-LEGENDARY-1024x527.jpg"
+    ],
+    "story": [
+      "The hero TVC sees Liquorland partner with alcohol brands travla, El Arquero and Barry and combine them with some star power, thanks to Andy Allen, Adam Gilchrist, Bailey Smith and Charlie Curnow showing up at the right place at the right time.",
+      "At a dinner party on the brink of disaster, travla Co-Founder and MasterChef’s Andy Allen steps in just in time to fix an overly thick batter, adding a can of his low-carb lager to the mix.",
+      "Meanwhile, at an outdoor barbecue, cricket legend and El Arquero tequila Founder Adam Gilchrist takes the perfect catch to stop a flying frisbee, before turning his attention to mixing his signature cocktails.",
+      "Finally, at a house party facing the threat of warm drinks, AFL stars and Founders of low-calorie mixed drink Barry, Bailey Smith and Charlie Curnow arrive with the forgotten ice.",
+      "Bashful Strategy Partner, Guy Marshall said the campaign is a celebration of the little legendary moments that happen across Australia every day: “We were excited by the opportunity to create a long-term brand platform for Liquorland, one that is creatively evocative and has enormous scope to help shape so many future brand behaviours.",
+      "The chance to bring this to life with some true Aussie legends was the cherry on top.” The launch of the Legendary campaign coincides with the premiere of MasterChef Australia season 18, of which Liquorland has joined as the exclusive liquor partner.",
+      "MasterChef Australia judge, Andy Allen said the campaign raises a glass to the little things that make all the difference when hosting an event: “I’m so pumped to be part of this campaign and to showcase travla to Australians in a way that celebrates those everyday moments we all know and love.",
+      "It was a lot of fun teaming up with Gilly, Bailey and Charlie to bring it to life and highlight those legendary, everyday wins.”",
+      "Coles Liquor General Manager of Customer Loyalty, Mia Horner said the campaign highlighted how Liquorland supports Aussies as the ultimate occasion solver: “At Liquorland, we know it’s often the smallest gestures that bring people together, like arriving to the party with the drinks in hand.",
+      "This campaign celebrates those everyday moments and the people who make them happen.” The integrated campaign features an omnichannel strategy, tailored to reach customers nationwide across in-store, owned and paid media from Monday 13th April."
+    ],
+    "summary": "Liquorland has redefined legendary moments, taking stars from the pitch, field and screen and transforming them into eve...",
+    "addedAt": "2026-11-28T16:56:34Z",
+    "video": "https://vimeo.com/1181379055"
+  },
+  {
+    "id": "2026-04-08-belong-belong-turns-reddit-hacks-into-natio",
+    "date": "2026-04-08",
+    "brand": "Belong",
+    "title": "Belong turns Reddit hacks into national media campaign via OMD and Pembleton",
+    "agency": "OMD and Pembleton",
+    "source": "Campaign Brief",
+    "url": "https://campaignbrief.com/belong-turns-reddit-hacks-into-national-media-campaign-via-omd-and-pembleton/",
+    "region": "Austrália",
+    "cc": "AU",
+    "image": "https://campaignbrief.com/wp-content/uploads/2026/04/Belong-x-Reddit-1024x683.jpg",
+    "images": [
+      "https://campaignbrief.com/wp-content/uploads/2026/04/Belong-x-Reddit-1024x683.jpg"
+    ],
+    "story": [
+      "The campaign ‘Simple Solutions’ positions Belong as the enabler of connection by tapping directly into how Australians already use media platforms to navigate life’s everyday chaos.",
+      "Recognising that millions of Australians look to online communities for simple, practical solutions, OMD uncovered a powerful behavioural truth. This became the foundation of the campaign, with media serving as both inspiration for the idea and the force that amplified it.",
+      "Rather than telling audiences that Belong is simple, the work uses media to demonstrate it, elevating real, practical solutions sourced from online communities and amplifying them across an integrated media ecosystem.",
+      "At the heart of the campaign is conversations on Reddit – one of Australia’s fastest-growing and most trusted platforms for peer-to-peer advice, humour and community.",
+      "Working in collaboration with Reddit, OMD Create – OMD’s integrated content and partnerships solution – identified and curated authentic ‘simple solutions’ from real conversations, turning native community content into the creative platform itself.",
+      "In partnership with Pembleton, these real solutions were then elevated into branded creative that celebrates the internet in its truest form: unpolished, practical, and deeply human.",
+      "Says Peita Golden, Chief Marketing Officer, Belong: “This campaign shows what Belong looks like in the real world – useful, human and genuinely connected to how Australians live.",
+      "Customers that are attracted to a value brand like Belong increasingly turn to online communities to seek recommendations, which is why Reddit is such a natural fit for this campaign.",
+      "By elevating content generated by communities online and bringing those ideas to life through partners like Nova and broad OOH channels, we’re turning our brand platform into something people can see, hear, experience and connect with in a simple way.",
+      "It’s a simple idea, executed in a way that reflects the role Belong plays in helping Australians navigate life’s chaos and be connected to what matters most to them.”"
+    ],
+    "summary": "Belong has unveiled a new national campaign via OMD, delivering a first-to-market, media-led execution that transforms e...",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2026-04-08-le-puree-le-puree-makes-baby-food-simple-in-n",
+    "date": "2026-04-08",
+    "brand": "Le Purée",
+    "title": "Le Purée makes baby food simple in new campaign with Steph Claire Smith via Willow & Blake",
+    "agency": "Willow & Blake",
+    "source": "Campaign Brief",
+    "url": "https://campaignbrief.com/le-puree-makes-baby-food-simple-in-new-campaign-with-steph-claire-smith-via-willow-blake/",
+    "region": "Austrália",
+    "cc": "AU",
+    "image": "https://campaignbrief.com/wp-content/uploads/2026/04/Le-Puree_Steph-Claire-Smith-campaign-1024x683.jpeg",
+    "images": [
+      "https://campaignbrief.com/wp-content/uploads/2026/04/Le-Puree_Steph-Claire-Smith-campaign-1024x683.jpeg"
+    ],
+    "story": [
+      "Le Purée has partnered with Steph Claire Smith as the face of its new campaign. Known for promoting nutritious food and a balanced lifestyle at KIC, the campaign draws on her experience as a new mother to connect the past and the present.",
+      "Modern parenting has evolved, but the desire to nourish your child with wholesome food never changes.",
+      "Working closely with Le Purée, creative branding agency Willow & Blake built a campaign that reframes Le Purée as more than a convenience baby food brand, instead positioning the brand as a trusted choice for modern parents.",
+      "Says Jennifer McCormick, Head of Marketing & Brand at Le Purée: “Parenting has always been shaped by love, instinct and care.",
+      "But when you become a parent yourself, there’s this unexpected return to your own childhood… the Friday night family dinners, the lunchboxes your mum packed, the family meals that were always on repeat. Suddenly, those small, everyday moments take on a whole new meaning.",
+      "“Working with Steph Claire Smith on this campaign allowed us to bring that feeling to life – blending the nostalgia of how we were raised with the realities of modern parenting.",
+      "Because while routines, tools and lifestyles evolve, the emotional connection to how we feed and care for our children remains deeply rooted in the past.” The campaign centres around the emotional heart of the home: the kitchen.",
+      "The messaging focuses on real ingredients, wholefoods and the time saved by modern parents, signalling a brand with a deep understanding of parenting, food, nutrition and the emotional realities of raising a child.",
+      "Says Zoran Konjaski, Design Director, Willow & Blake: “Our approach was to ground the campaign in realism, documenting parenting as it genuinely unfolds; from preparation through to the everyday juggle and feeding.",
+      "Nothing was staged; instead, we captured real moments rather than a perfected performance of parenting. Through the lens, we observed the relationship between Steph and her daughter Billie within their own home."
+    ],
+    "summary": "Parents search for simplicity. But in the baby food aisle, it often comes with hidden additives and unpronounceable ingr...",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2026-04-08-duolingo-english-tes-duolingo-english-test-launches-india",
@@ -120264,6 +120686,35 @@
     }
   },
   {
+    "id": "2026-04-06-bendigo-bank-bendigo-bank-launches-new-bigger-for",
+    "date": "2026-04-06",
+    "brand": "Bendigo Bank",
+    "title": "Bendigo Bank launches new ‘Bigger for getting you moving’ home loan campaign via Dig",
+    "agency": "Dig",
+    "source": "Campaign Brief",
+    "url": "https://campaignbrief.com/bendigo-bank-launches-new-bigger-for-getting-you-moving-home-loan-campaign-via-dig/",
+    "region": "Austrália",
+    "cc": "AU",
+    "image": "https://campaignbrief.com/wp-content/uploads/2026/04/Bendigo-Bank-still-TVC-2026-1024x542.jpg",
+    "images": [
+      "https://campaignbrief.com/wp-content/uploads/2026/04/Bendigo-Bank-still-TVC-2026-1024x542.jpg"
+    ],
+    "story": [
+      "With many Australians feeling the pressure of today’s economic environment, the path to property can feel harder and more uncertain than ever. The insight driving the work is that finding a home loan can feel daunting and mechanical, often lacking the reassurance that comes with a human connection.",
+      "The campaign ‘Bigger for getting you moving.’ brings to life a common feeling of being stuck when it comes to property goals, and shows how Bendigo Bank’s tailored support and real care help customers move forward with confidence.",
+      "The campaign builds on the successful “Bigger for You” brand platform created by Dig in 2024 and continues to ladder up to Bendigo Bank’s overarching positioning as ‘The Better Big Bank’. It includes 30-second and 3 x 15-second TVCs, alongside out-of-home and radio executions.",
+      "The campaign launches nationally in early April.",
+      "David Joubert, Chief Creative Officer at Dig, said the campaign was a natural next step for the brand: “There was a real opportunity to build on the strength of the Bigger for You platform, while bringing a fresh spin that reflects how people are feeling about home loans right now.”",
+      "Sarah Bateson, Chief Marketing Officer at Bendigo Bank, said the work strikes the right balance between rational product benefits and human connection: “With the current cost of living we know so many Australians feel stuck or anxious about their financial future and this campaign uses a simple yet engaging idea that clearly conveys both the practical drivers of our home loan offer and the human…",
+      "It shows that you can be a bigger bank and still make the experience feel genuinely personal.”",
+      "Bendigo Bank Sarah Bateson, General Manager, Marketing | Consumer Banking Janet Thompson, Head of Brand, Media, and Content Sasha Rosman, Senior Manager, Brand Strategy and Content Sagar Sheth, Senior Marketing Manager Kate Sokulski, Senior Marketing Manager Fiona Benjamin, Marketing Manager Chelsea Downing, Customer & Market Insights Manager",
+      "Dig Paul Rhodes, Chief Executive Officer David Joubert, Chief Creative Officer Peter Cerny, Chief Strategy Officer Lisa Ramsey, Managing Director Anneka Hosken, Account Director Glenn Symmons, Copywriter Kai Faulkner, Art Director Jo Alach, Senior Producer"
+    ],
+    "summary": "Independent agency Dig has unveiled a new integrated home loan campaign for Bendigo Bank, designed to position the bank ...",
+    "addedAt": "2026-11-28T16:56:34Z",
+    "video": "https://vimeo.com/1178302279/983dbf092e"
+  },
+  {
     "id": "2026-04-06-biedronka-do-mojej-ide-vou-pra-minha-casa",
     "date": "2026-04-06",
     "brand": "Biedronka",
@@ -120886,6 +121337,30 @@
     ]
   },
   {
+    "id": "2026-04-01-honda-honda-turns-to-the-isley-brothers-to",
+    "date": "2026-04-01",
+    "brand": "Honda",
+    "title": "Honda turns to The Isley Brothers to prove CR-V hybrid smoothness in new campaign via Special",
+    "agency": "Special",
+    "source": "Campaign Brief",
+    "url": "https://campaignbrief.com/honda-turns-to-the-isley-brothers-to-prove-cr-v-hybrid-smoothness-in-new-campaign-via-special/",
+    "region": "Austrália",
+    "cc": "AU",
+    "image": "https://campaignbrief.com/wp-content/uploads/2026/04/Screenshot-2026-04-02-at-6.47.55-am-1024x435.jpg",
+    "images": [
+      "https://campaignbrief.com/wp-content/uploads/2026/04/Screenshot-2026-04-02-at-6.47.55-am-1024x435.jpg"
+    ],
+    "story": [
+      "The campaign introduces the 2026 Honda CR-V, which sees the brand’s e:HEV hybrid technology expanded across the range, lowering the entry point for hybrid buyers. At the centre of the work is a single-take execution designed to demonstrate the vehicle’s smoothness.",
+      "A record player was mounted to the roof of the car as it travelled through regional New South Wales, playing music that was captured live through the vehicle’s sound system without skipping.",
+      "The campaign will roll out across film, digital and in-dealership channels, supported by PR, media and social.",
+      "Creative Agency: Special CEO/Partners: Lindsey Evans & Cade Heyde CCO/Partners: Tom Martin & Julian Schreiber CSO/Partner: Rebecca Stambanis National Managing Director: Sasha Firth National Head of Production: Tash Johnson Strategy Director: Sam Butcher GCDs: Sian Binder, Lea Egan Creative: Harry Roth Executive Producers: Tania Jeram, Wendy Gillies Senior Producer: Di Williams Head of Design:…"
+    ],
+    "summary": "Honda Australia has launched a new campaign highlighting the smooth driving experience of its CR-V hybrid, via its agenc...",
+    "addedAt": "2026-11-28T16:56:34Z",
+    "video": "https://vimeo.com/1178675524"
+  },
+  {
     "id": "2026-04-01-drogaria-araujo-120-anos",
     "date": "2026-04-01",
     "brand": "Drogaria Araujo",
@@ -121388,6 +121863,64 @@
         "name": "Publicis Media"
       }
     ]
+  },
+  {
+    "id": "2026-03-30-tourism-tasmania-tourism-tasmania-celebrates-the-curi",
+    "date": "2026-03-30",
+    "brand": "Tourism Tasmania",
+    "title": "Tourism Tasmania celebrates the curious, the devilish, the steamy, the nude and the odd in latest chapter of ‘Off Season’ campaign via BMF",
+    "agency": "BMF",
+    "source": "Campaign Brief",
+    "url": "https://campaignbrief.com/tourism-tasmania-celebrates-the-curious-the-devilish-the-steamy-the-nude-and-the-odd-in-latest-chapter-of-off-season-campaign-via-bmf/",
+    "region": "Austrália",
+    "cc": "AU",
+    "image": "https://campaignbrief.com/wp-content/uploads/2026/03/Screenshot-2026-03-30-at-12.22.55-pm-1024x573.jpg",
+    "images": [
+      "https://campaignbrief.com/wp-content/uploads/2026/03/Screenshot-2026-03-30-at-12.22.55-pm-1024x573.jpg"
+    ],
+    "story": [
+      "The campaign leans into Tasmania’s bold winter identity, celebrating those who embrace the cold rather than endure it.",
+      "Featuring visually striking black-and-white portraits of ‘winter people’, overlaid with contrasting neon-green copy, the category-defying creative is designed to stand out from competitors – leveraging the perceived negatives of winter weather to position Tasmania’s Off Season as energising, off-beat, restorative and – a little bit magical – with experiences found nowhere else in Australia, or in…",
+      "The campaign aims to convert inspiration into bookings through more than 500 Off Season offers and events, developed in collaboration with tourism operators across the island – many created specifically for, or only accessible during, Tasmania’s cooler months.",
+      "These experiences range from cosy, luxe and cheeky clothing-optional stays to deep wilderness expeditions, floating sauna, contrast therapy and meditation experiences, alongside indulgent culinary offerings including long-table feasts, black truffle degustations, ocean-to-plate seafood, and whisky, wine and mulled cider tastings.",
+      "Off Season experiences will also come alive under Tasmania’s long winter nights and dramatic landscapes – from dark-sky cruises and bioluminescence tours to nocturnal wildlife encounters, stargazing and immersive storytelling, as well as mountain biking, snow, foraging, fungi and fossicking adventures, farm goat and wine dog escapades, scavenger hunts and hands-on workshops spanning photography,…",
+      "A bumper calendar of distinctive festivals and events, including Dark Mofo, Beaker Street Festival, Tasmanian Whisky Week and the Nude Solstice Swim, further showcases the diversity, depth, breadth and otherworldly atmosphere of a Tasmanian winter.",
+      "The 2026 campaign launches off the back of record visitor spend and visitation during Tasmania’s May to August period last year, reflecting growing demand for the island’s winter experiences.",
+      "Alongside BMF, the integrated campaign will roll out nationally through paid, earned, digital and trade partner channels, in collaboration with agency partners Starcom, Orchard and Havas Red.",
+      "The paid campaign will run across free-to-air television, video-on-demand, digital, social media, out-of-home advertising and media partnerships in New South Wales, Victoria, Queensland, South Australia, Western Australia and Tasmania.",
+      "High-impact outdoor placements will include an immersive audio-visual takeover of Sydney’s Martin Place Metro tunnel, alongside placements across tram stops and train stations throughout Melbourne’s CBD."
+    ],
+    "summary": "Tourism Tasmania has today launched the 2026 iteration of its Effie award-winning Off Season campaign, inviting Australi...",
+    "addedAt": "2026-11-28T16:56:34Z",
+    "video": "https://vimeo.com/1178317643/2286cf3443"
+  },
+  {
+    "id": "2026-03-30-pillow-talk-pillow-talk-celebrates-the-joy-when",
+    "date": "2026-03-30",
+    "brand": "Pillow Talk",
+    "title": "Pillow Talk celebrates the joy when you ‘feel right at home’ in new campaign via Whippet",
+    "agency": "Whippet",
+    "source": "Campaign Brief",
+    "url": "https://campaignbrief.com/pillow-talk-celebrates-the-joy-when-you-feel-right-at-home-in-new-campaign-via-whippet/",
+    "region": "Austrália",
+    "cc": "AU",
+    "image": "https://campaignbrief.com/wp-content/uploads/2026/03/Screenshot-2026-03-30-at-2.32.19-pm-1024x573.jpg",
+    "images": [
+      "https://campaignbrief.com/wp-content/uploads/2026/03/Screenshot-2026-03-30-at-2.32.19-pm-1024x573.jpg"
+    ],
+    "story": [
+      "The campaign marks a deliberate shift for Pillow Talk, from promotion-led communications to a longer-lasting brand platform designed to grow with the business nationally.",
+      "“This campaign started with a simple truth: home isn’t just where you live, it’s how you feel”, says Bec Williams, Associate Creative Director at Whippet.",
+      "“Everything we created, from the use of textures and movement to tell the story, to the bespoke soundtrack, was designed to bring that feeling to life.",
+      "Together with a fantastic crew and the team at Pillow Talk, we’ve crafted an experience that captures Pillow Talk’s personality and brings much-needed energy to the homewares space.”",
+      "At the heart of the work is a specially commissioned original song “Home”, written in collaboration with composers Al and Sam Harding, which will serve as the brand’s sonic signature.",
+      "Says Maddy Naylor, Pillow Talk Head of Marketing: “‘Feel Right at Home’ isn’t just a campaign line, it’s the lens through which we want our customers to experience everything Pillow Talk offers.",
+      "This is the beginning of an exciting new chapter for our brand and we’re incredibly proud of the work we’ve created with the Whippet team.” The campaign rolls out nationally this month across cinema, BVOD, radio, digital channels and print.",
+      "Music: Music Composers: Al Harding, Sam Harding Lyricists: Flavia Mazdon, Al Harding, Sam Harding"
+    ],
+    "summary": "National bedding and homewares retailer Pillow Talk has launched a major new brand campaign via Melbourne creative agenc...",
+    "addedAt": "2026-11-28T16:56:34Z",
+    "video": "https://vimeo.com/1178333988"
   },
   {
     "id": "2026-03-30-cif-e-serasa-cif-limpa-nome-na-serasa",
@@ -145513,7 +146046,19 @@
         "summary": "LAUDHAUS, la agencia lanzada a principios de este año por Keith Lawler, ha creado una nueva campaña personalizada basada en sonido para la Universidad de Limerick y UL Sport, llamada \"UnLeash Your Best\". Según LAUDHAUS, la campaña se basa en...",
         "ok": 2
       }
-    }
+    },
+    "story": [
+      "LAUDHAUS, the agency launched earlier this year by Keith Lawler, has created a bespoke new sound-driven campaign for the University of Limerick and UL Sport, called “UnLeash Your Best.”",
+      "According to LAUDHAUS, the campaign is built around the belief that “everyone’s ‘best’ exists within them and can be unlocked through the right environment, support and community.",
+      "It positions UL not just as a place of study, but as a catalyst where potential becomes performance across sport, academia and the arts.” What sets the campaign apart, however, is its fully bespoke soundtrack, composed using only recorded sounds captured on the UL campus.",
+      "The campaign follows six UL Sports Scholarship athletes- Olympians, inter-county players, All-Stars and record-breakers. The end result offers a gritty, naturalistic view of elite performance in training.",
+      "The production team recorded the physical sounds of sport in action: a hurley scraping across a dressing-room floor, boxing gloves striking a bag, medicine balls hitting concrete, running studs on track, laboured breathing, impacts and collisions.",
+      "These raw sounds were edited into a dynamic score created by LAUDHAUS in collaboration with Choice Prize-winning artist and producer MuRli, known for his work with Denise Chaila and Rusangano Family.",
+      "Research widely shows that music is one of the strongest emotional triggers in the human brain, activating pleasure centres more rapidly than visuals alone. LAUDHAUS said it uses this principle strategically by designing sound as a primary creative asset rather than a supporting element.",
+      "“Sound is one of the most underused assets in brand building,” Lawler said. “It reaches the brain’s emotional centres in milliseconds, much faster than visuals do. When you design it intentionally, you unlock a deeper emotional connection with your audience.”",
+      "The film features swimmer and junior world record holder Jon Shortt, rower Sadhbh Ní Laoighre, rugby player Catriona Finn, hurdler Fintan DeWhirst, boxer Nell McLaughlin and hurler Diarmuid Stritch.",
+      "Each was filmed across UL’s sports facilities, highlighting the physical demands of high-performance training within the university’s sporting ecosystem."
+    ]
   },
   {
     "id": "2025-12-05-smithwick-s-ringers-rolls-out-new-campaign-for-s",
@@ -149256,6 +149801,53 @@
       "Says Low: “The creative team at BBH had a good idea. The sort of idea you think, “has nobody done this before?” I filmed that idea as faithfully as I could and I think it worked out pretty well because I didn’t get cute about it.",
       "I honestly just tried to craft a story that conveys that initial idea.” The campaign also extends in-store with illustrated Christmas cards and themed F&F jumpers, and includes cultural tie-ins such as a Gogglebox partnership to spark national conversation around “what makes it Christmas.”"
     ]
+  },
+  {
+    "id": "2025-11-14-dublin-landmark-the-public-house-rolls-out-integrate",
+    "date": "2025-11-14",
+    "brand": "Dublin Landmark",
+    "title": "The Public House Rolls Out Integrated Campaign for Dublin Landmark",
+    "agency": "",
+    "source": "Adworld.ie",
+    "url": "https://www.adworld.ie/2025/11/14/the-public-house-rolls-out-integrated-campaign-for-dublin-landmark/",
+    "region": "Irlanda",
+    "cc": "IE",
+    "images": [
+      "https://www.adworld.ie/wp-content/uploads/2025/11/The-Public-House.nOLV-ROW-1.jpg"
+    ],
+    "story": [
+      "DUBLIN — The Public House has developed a comprehensive brand identity for Bolands Mills as the historic Dublin landmark undergoes transformation into a mixed-use cultural and commercial destination.",
+      "The Dublin agency delivered strategy, design and communications work for the project, creating a visual system that combines the site’s industrial heritage with contemporary design elements.",
+      "According to the agency, the rebrand centres on a logo inspired by the building’s distinctive facade, designed to work across formats from large-scale signage to digital applications. .",
+      "In addition, the agency created a colour palette that deliberately contrasts with the site’s original brickwork, alongside custom brand shapes drawn from architectural details found throughout the property.",
+      "“The design approach pairs archival references with contemporary photography to reflect the site’s evolution,” it said.",
+      "“Getting the opportunity to work on the branding for Bolands Mills has been an absolute privilege,” said Eimear O’Sullivan, creative director and head of design at The Public House.",
+      "“The entire team was deeply invested, driven by a genuine passion to create design solutions worthy of this iconic landmark, honouring its rich history while celebrating its future.”",
+      "“Bolands Mills is one of the most exciting developments to happen in Dublin in decades,” said Kerrie Sweeney, managing director at The Public House. “We loved working with our wonderful clients to capture that sense of pride and possibility while keeping it rooted in the character of the city.”",
+      "Creative Director, Head of Design: Eimear O’Sullivan Senior Designer/Production Lead: Trevor Nolan Midweight Designer: Molly Devlin Head of Strategy: Sarah Walsh Account Director: Rebecca Mullen Marketing & Communications Manager: Harriet Mansergh"
+    ],
+    "summary": "DUBLIN — The Public House has developed a comprehensive brand identity for Bolands Mills as the historic Dublin landmark undergoes transformation into a mixed-use cultural and commercial destination.",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2025-11-14-bonfire-bonfire-launches-irish-pharmacy-unio",
+    "date": "2025-11-14",
+    "brand": "Bonfire",
+    "title": "Bonfire launches Irish Pharmacy Union campaign",
+    "agency": "",
+    "source": "Adworld.ie",
+    "url": "https://www.adworld.ie/2025/11/14/bonfire-launches-irish-pharmacy-union-campaign/",
+    "region": "Irlanda",
+    "cc": "IE",
+    "images": [
+      "https://www.adworld.ie/wp-content/uploads/2025/11/Picture-1.jpg"
+    ],
+    "story": [
+      "Bonfire has launched its first campaign for the Irish Pharmacy Union to increase awareness of community pharmacists as experts in medicine. Bonfire has created a new branding platform to promote local community pharmacies, under the theme ‘The answer lies within’.",
+      "The theme is based on a simple truth, that pharmacies are the place to go for advice on all healthcare needs and expertise on medicines. Visually, the campaign utilises the green cross pharmacy symbol, with each execution featuring a different representation of the various styles of pharmacy signs."
+    ],
+    "summary": "Bonfire has launched its first campaign for the Irish Pharmacy Union to increase awareness of community pharmacists as experts in medicine.",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2025-11-14-smyths-toys-droga5-dublin-rolls-out-festive-pan",
@@ -153557,7 +154149,19 @@
         "summary": "Indriya de Aditya Birla Group marca el comienzo de la temporada festiva con su nueva colección, Alka, presentada a través de un vídeo musical...",
         "ok": 2
       }
-    }
+    },
+    "story": [
+      "With music composed by Sneha Khanwalkar and lyrics and direction by Anvita Dutt, the video tells a tender tale of a couple stealing moments of intimacy amid festive grandeur.",
+      "It reflects a cultural shift toward cherishing deep bonds and shared experiences, reminding us of the joy of finding the ‘us’ within the ‘we’. Indriya’s jewellery is positioned as a timeless expression of both personal love and treasured relationships.",
+      "The Alka collection draws inspiration from the mythical city of Kubera, the God of Wealth and Prosperity, celebrating the richness of festivity. Crafted in gold, diamonds, and polki, it showcases opulent necklaces, earrings, and bangles designed for every celebratory moment.",
+      "With motifs drawn from ancient lore—eternal lotuses, gliding swans, and moonlit peacocks—each piece embodies grace, prosperity, and joy. Festive at heart, timeless in spirit, Indriya’s Alka collection invites you to fall in love all over again—just as the heart sings, “Dil Abhi Bhara Nahin.”",
+      "Sandeep Kohli, CEO, Indriya, said: “We see jewellery as a powerful symbol of the bonds that truly matter. This campaign is our ode to the quiet, personal moments that make the festive season so special—the ones you share with the people who are closest to your heart.",
+      "Aditi and Siddharth’s real-life chemistry brought this narrative to life beautifully, showing that true luxury isn’t in grand displays, but in the small, heartfelt connections we cherish.”",
+      "Shantiswarup Panda, CMO, Indriya, added: “Indriya’s exquisitely designed festive collection, ‘Alka’, is inspired by the beauty and bountifulness of Alkapuri, the mythical abode of Kubera the God of wealth.",
+      "This collection embodies the warmth & prosperity of the festive season, along with the deep longing for those closest to our hearts. Our campaign beautifully brings out this endless love through a story featuring Aditi Rao and Siddharth Suryanarayan stealing a moment amid festive celebrations.",
+      "This festive season, Indriya unveils the full version of the soulful, reimagined rendition of the classic song, Dil Abhi Bhara Nahi, offering a fresh, emotional ode to the endless love the brand celebrates.”",
+      "Tanuja Bhat, Senior Executive Creative Director & Creative Head, Beauty & Luxury Collective, Ogilvy West, said: “For a brand like Indriya that stands for endless love for her jewellery, we wanted to carve out a new, intimate space within the festive narrative."
+    ]
   },
   {
     "id": "2025-09-21-travel-billy-loizou-conversion-apis-unlocki",
@@ -153571,7 +154175,8 @@
     "cc": "AU",
     "image": "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/09/Travel-ad-campaign-performance-hacks-1.jpg",
     "images": [
-      "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/09/Travel-ad-campaign-performance-hacks-1.jpg"
+      "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/09/Travel-ad-campaign-performance-hacks-1.jpg",
+      "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/02/Billy-headshot.jpg"
     ],
     "story": [
       "The Australian travel and tourism industry , which this year is expected to contribute $314.4 billion to local GDP and support 1.7 million jobs , is experiencing massive growth with strong demand from both domestic and international travellers.",
@@ -153820,7 +154425,19 @@
         "summary": "Directors Think Tank (DTT) se asoció recientemente con Gray Malaysia para presentar la película de la marca del Día Nacional de CelcomDigi, \"D...",
         "ok": 2
       }
-    }
+    },
+    "story": [
+      "Built on the beloved saying “Dari mata turun ke hati” (“from the eyes to the heart”), the brief was clear: skip the postcards, find the pulse.",
+      "Over two and a half weeks, five DTT directors fanned out to chase granular, hyper-local stories only locals would know — the kind you hear at a warung, not a tourist desk.",
+      "The result: authentic slices of everyday Malaysia, stitched into a single journey film that captures moments from 160 towns across all 14 states. The creative mandate came from Grey Malaysia’s CCO Graham Drew and ECD Jeremy Yeoh.",
+      "As Yeoh put it, the idea sprang from a simple realisation: we don’t know our own backyard as much as we think — and the film is a nudge to rediscover it.",
+      "To move fast and keep the visual language consistent, DTT mobilised multiple in-house directors under the lead of Carolyn Chon, whose annual solo photo expeditions shaped the project’s street-meets-travelogue aesthetic.",
+      "Each team leaned into personal ties to their states, trusting the road to throw up the good stuff.",
+      "Chon charted a coastal arc from Terengganu down through Pahang to Johor; Maurice Noone cut through his father’s home state of Kelantan, through the Pahang highlands before rolling into his mother’s home state of Negeri Sembilan and then Melaka; Zaim Rosli canvassed Wilayah Persekutuan and Selangor; Chevie Law explored Penang and Perak; and Aiman Aliff, a proud Langkawi son, covered Kedah and Perlis.",
+      "Carolyn and Maurice then hop on planes with their teams to hit the East Malaysian states of Sabah and Sarawak. “Dari Mata Kita” was conceived to feel found, not staged — part travelogue, part commercial photography — letting scenes unfold in markets, workshops, kampungs and back alleys.",
+      "The soundtrack leans into the nation’s textures, from wayang kulit rhythms to the clatter of a beca passing by, narrated by veteran actor Ahmad Tarmimi Siregar with music supervised by Tank Music Asia.",
+      "For CelcomDigi, the film is more than festive fare — it’s a statement about connection as a human enabler, not just a network promise. That’s why the brand set out to present the widest representation of Malaysia in a single narrative, spanning big cities to quiet pockets most of us drive past."
+    ]
   },
   {
     "id": "2025-09-16-gigil-philippines-gigil-philippines-celebrates-as-the",
@@ -153848,7 +154465,16 @@
         "summary": "La agencia de publicidad independiente GIGIL Filipinas ha sido nombrada Agencia del Año de Asia y el Pacífico en The Work 2025, un hito...",
         "ok": 2
       }
-    }
+    },
+    "story": [
+      "The agency led with 46 Acceptances representing 27 campaigns across no less than 16 clients, a performance that also made The Work 2025 declare GIGIL as the No. 1 agency in the Philippines.",
+      "Now on its 23rd year, The Work is widely regarded as one of the region’s most authoritative benchmarks of advertising creativity, featuring the very best campaigns from Asia, Australia, and New Zealand.",
+      "Published annually by Campaign Brief, it is seen as a definitive record of the industry’s most outstanding work.",
+      "GIGIL’s wins were for clients Closeup, Defensil Antibacterial Soap, Grab, Havaianas, Jiang Nan Hotpot Restaurant, Jollibee, Knorr, LBC Express Inc, Lagundex Cough Syrup, Macbeth Apparel, Mandaue Foam, Netflix, ONE Asia Creative Awards, PalawanPay, Rogin-E, and Skyro Loans.",
+      "In the last 5 years, GIGIL also has consistently won trophies for marketing effectiveness in the APAC Effie Awards. “This milestone is a testament to the power of Filipino creativity,” said Badong Abesamis, Founding Partner of GIGIL. “This is not just GIGIL’s win — it is the Philippines’”",
+      "“With this historic recognition, GIGIL proves that Filipino ideas can outwit the best of the Asia-Pacific region’s,” he said. Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below. Register for Free and receive the Campaign Brief Daily Bulletin.",
+      "Type your email address in the space below."
+    ]
   },
   {
     "id": "2025-09-16-quiero-cafe-10-anos",
@@ -154005,7 +154631,19 @@
         "summary": "OPPO India ha lanzado su última campaña de marca, 'Business Badhega, Smooth Chalega' que presenta el OPPO F31 S...",
         "ok": 2
       }
-    }
+    },
+    "story": [
+      "The two actors play travel agents whose normal workdays suddenly go wrong: A desert mix-up, a broken lift, and a storm in a powerless tent give the F31 a chance to prove itself.",
+      "The three short films, where the F31 steps in as the quiet problem-solver, debut on Bigg Boss and will also go live on social media and OTT platforms. In the desert, its SuperCool VC System and Snapdragon® 7 Gen 3 keep it running smoothly under blistering heat.",
+      "In the elevator, India’s first Network Boost Chip holds the signal steady so work goes on uninterrupted. And in the storm, the 7000mAh battery with 80W SUPERVOOC™ Flash Charge keeps the lights on when everything else fails.",
+      "At the close of each film, Rao delivers the line: “Chahe Jo Ho Jaaye… Business Badhega, Smooth Chalega.” His comic timing pairs neatly with Dimri’s expressive presence, bringing a sense of warmth to situations most would find stressful. The device itself lives up to the campaign’s promise.",
+      "Built with IP69, IP68, and IP66 ratings, the F31 shrugs off water, dust, and heat. Its 360° armour body and military-grade durability make it fit for rough use, while ColorOS 15 layers on graphics, security, and features like O-Lock for data protection.",
+      "Gamers and content creators get a Vapour Chamber Cooling system that holds steady during 4K shoots and long play sessions. The big battery powers through entire days and even reverse charges other devices.",
+      "Sushant Vashistha, Head of Product and Digital Marketing at OPPO India, said: “The F31 embodies what we stand for; it’s built to last, to perform in heat, and to stay connected in the toughest conditions.",
+      "The campaign celebrates that everyday ingenuity, brought alive through Rajkummar and Triptii’s chemistry.” Rao added: “The fun of this campaign is how it turns problems into stories. The F31 doesn’t just work; it helps you carry on, whether you’re stranded or stuck.",
+      "It’s technology that empowers you to carry on with confidence.” Dimri echoed the sentiment: “This campaign celebrates everyday resilience—the little ways we keep going no matter what. The F31 feels like a partner. Power, durability, connection—it adapts to life as it comes.”",
+      "For OPPO, the F31 extends the F Series’ legacy of smooth performance and rugged build in the mid-range segment. It blends reliability with design, proving once again why the series has grown into one of OPPO’s most loved lineups. Register for Free and receive the Campaign Brief Daily Bulletin."
+    ]
   },
   {
     "id": "2025-09-15-jameson-watch-jameson-unveils-new-ad-series",
@@ -154195,7 +154833,12 @@
         "summary": "Para la última campaña global 'Hurts So Good' de Sprite, FVSE Singapur creó \"A Symphony of Suffering\" y...",
         "ok": 2
       }
-    }
+    },
+    "story": [
+      "Firebreathing through Gioachino Rossini’s iconic William Tell Overture, the piece reimagines the instantaneously recognisable melody with a choir of voices, weaving layers of humour, grandeur and pain into the soundscape.",
+      "The result is an over-the-top operatic chorus that captures Sprite’s spirit of playful exaggeration, tracing every spice lover’s fiery journey from simmering hot flashes to the manic-craze of spontaneous human combustion – it’s a dance between pain and pleasure.",
+      "Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below. Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below."
+    ]
   },
   {
     "id": "2025-09-10-rissul-vem-pro-rissul",
@@ -155045,6 +155688,34 @@
     }
   },
   {
+    "id": "2025-08-28-the-pizza-company-vml-thailand-turn-unused-sauce-packe",
+    "date": "2025-08-28",
+    "brand": "The Pizza Company",
+    "title": "VML Thailand turn unused sauce packets into discounts in The Pizza Company’s new campaign",
+    "agency": "",
+    "source": "Campaign Brief Asia",
+    "url": "https://campaignbriefasia.com/2025/08/28/vml-thailand-turn-unused-sauce-packets-into-discounts-in-the-pizza-companys-new-campaign/",
+    "region": "Tailândia",
+    "cc": "TH",
+    "image": "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/The-Pizza-Comp-x-Sauce-Packet-Coupon1.jpg",
+    "images": [
+      "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/The-Pizza-Comp-x-Sauce-Packet-Coupon1.jpg",
+      "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/The-Pizza-Comp-x-Sauce-Packet-Coupon6.jpg",
+      "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/The-Pizza-Comp-x-Sauce-Packet-Coupon2.jpg",
+      "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/The-Pizza-Comp-x-Sauce-Packet-Coupon.jpg"
+    ],
+    "story": [
+      "Instead of seeing a mess, The Pizza Company and VML Thailand saw potential: transform those forgotten packets into free pizza and bring people back into restaurants.",
+      "On Mother’s Day, honoring the country’s No. 1 sauce keepers, the brand launched “Sauce Packet Coupon.” The mechanic was pure simplicity: bring any unused sauce packets, from any brand, to any Pizza Company restaurant nationwide. Weigh them.",
+      "The heavier the stash, the bigger the discount, up to 100 baht, enough for a medium pizza. The response was immediate. Social media lit up, and families showed up with bags, boxes, even buckets of sauce packets. Dining rooms filled across the country.",
+      "Beyond sparking conversation, the campaign delivered measurable results: Average Order Value (spending per bill) increased by 58%. On digital platforms, the campaign reached an additional 2.6 million people, with engagement soaring by 109,000 interactions.",
+      "From delivery-era clutter to dine-in crowds, a zero-cost item found in every home became zero-baht pizza and one of Thailand’s most loved brand activations of the year. Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below.",
+      "Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below."
+    ],
+    "summary": "The Pizza Company, Thailand’s largest pizza chain, together with VML Thailand, has launched a new campaign that turns ...",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
     "id": "2025-08-28-volkswagen-volkswagen-celebrates-its-drivers-in",
     "date": "2025-08-28",
     "brand": "Volkswagen",
@@ -155149,6 +155820,83 @@
         "ok": 2
       }
     }
+  },
+  {
+    "id": "2025-08-26-mother-colgate-strong-teeth-highlights-moth",
+    "date": "2025-08-26",
+    "brand": "Mother",
+    "title": "Colgate Strong Teeth highlights Mother’s confidence in latest campaign via WPP@CP",
+    "agency": "WPP",
+    "source": "Campaign Brief Asia",
+    "url": "https://campaignbriefasia.com/2025/08/26/colgate-strong-teeth-highlights-mothers-confidence-in-latest-campaign-via-wppcp/",
+    "region": "Índia",
+    "cc": "IN",
+    "image": "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/Cavity-Proof.jpg",
+    "images": [
+      "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/Cavity-Proof.jpg"
+    ],
+    "story": [
+      "The campaign draws attention to the confidence that Colgate Strong Teeth mothers place in the brand.",
+      "While modern consumption habits, such as frequent junk food intake, heighten the risk of cavities in children, they do not shake the trust mothers have in the protection Colgate Strong Teeth provides.",
+      "Colgate Strong Teeth is powered by its clinically proven advanced Arginine + Calcium Boost Technology, designed with dual functionality.",
+      "While Arginine helps reduce demineralisation of teeth, Calcium Boost works to accelerate remineralisation, thereby providing 24-hour cavity protection with regular brushing twice a day.",
+      "The campaign portrays a confident mother who easily sees through her child’s attempt to fake a toothache to avoid school. Her confidence stems from the trust she places in Colgate Strong Teeth to protect her child’s teeth even in her absence.",
+      "Speaking at the launch, Gunjit Jain, Executive Vice President, Marketing at Colgate-Palmolive (India) Limited, said, “Parenting is filled with moments of navigating around a child’s imagination.",
+      "The new campaign on our flagship brand, Colgate Strong Teeth, illustrates this beautifully – while children often devise clever excuses to skip school, the excuse of cavity pain is one that discerning Colgate mums confidently dismiss.",
+      "With Colgate Strong Teeth’s advanced Arginine + Calcium Boost technology, Colgate mums are fully confident that their kids are protected from cavities for 24-hours non-stop.”",
+      "Speaking on the campaign Juneston Mathana Executive Creative Director WPP@CP said “The film took us back to when we were children looking for any excuse to bunk school. Toothache was on top of my list. So seeing the child actor express his cavity pain so cutely brought back fond memories.",
+      "Kudos to Hemant, our Director for giving us such a memorable film.”"
+    ],
+    "summary": "Colgate-Palmolive (India) Limited, the market leader in oral care, has launched its latest campaign “CAVITY-PROOF” u...",
+    "addedAt": "2026-11-28T16:56:34Z",
+    "yt": [
+      "ZfKpqQj8K4s"
+    ]
+  },
+  {
+    "id": "2025-08-26-cheil-india-cheil-india-unveils-new-samsung-gala",
+    "date": "2025-08-26",
+    "brand": "Cheil India",
+    "title": "Cheil India unveils new Samsung Galaxy F36 5G campaign: ‘India! Go Hi-FAI’",
+    "agency": "",
+    "source": "Campaign Brief Asia",
+    "url": "https://campaignbriefasia.com/2025/08/26/cheil-india-unveils-new-samsung-galaxy-f36-5g-campaign-india-go-hi-fai/",
+    "region": "Índia",
+    "cc": "IN",
+    "yt": [
+      "Yr37_9Tq9_4"
+    ],
+    "summary": "Cheil India has launched a new campaign for the Samsung Galaxy F36 5G, highlighting the smartphone’s AI upgrade with t...",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2025-08-26-the-shout-group-the-shout-group-celebrates-success-o",
+    "date": "2025-08-26",
+    "brand": "The Shout Group",
+    "title": "The Shout Group celebrates success of Tropicana Twister’s ‘Multiply The Goodness’ campaign with historic entry in the Malaysia Book of Records",
+    "agency": "",
+    "source": "Campaign Brief Asia",
+    "url": "https://campaignbriefasia.com/2025/08/26/the-shout-group-celebrates-success-of-tropicana-twisters-multiply-the-goodness-campaign-with-historic-entry-in-the-malaysia-book-of-records/",
+    "region": "Malásia",
+    "cc": "MY",
+    "image": "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/Jennifer-Lee-and-Jwan-Heah.jpg",
+    "images": [
+      "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/Jennifer-Lee-and-Jwan-Heah.jpg"
+    ],
+    "story": [
+      "The campaign, which launched earlier this year , was an uplifting digital initiative that encouraged Malaysians to journal acts of kindness, concluded with a heartfelt handover ceremony marking two major milestones: the distribution of RM200,000 in care packages to 5,000 underprivileged families nationwide, and official recognition in the Malaysia Book of Records for the “Most Digital Journals…",
+      "Beyond the numbers, it captured the true spirit of Ramadan and Raya, proving that even the smallest gestures can ripple outward to create meaningful change.",
+      "“The beauty of this campaign lies in its simplicity — every small act of kindness had the power to ripple outward and touch lives in a real, tangible way.",
+      "By combining creativity with purpose, we were able to design an initiative that didn’t just resonate emotionally but also delivered measurable social impact.",
+      "To see it recognised by the Malaysia Book of Records makes it even more meaningful for everyone involved,” said Syahriza Badron, Managing Director of THE SHOUT GROUP. “The response received was heartfelt, powerful, and genuine.",
+      "Each journalled deed, no matter how small, helped build something meaningful. We witnessed the impact firsthand, as joy and gratitude lit up the faces of those we reached.",
+      "Being recognised by the Malaysia Book of Records is truly an honour, but beyond the accolade, we are heartened to have served thousands of underserved families and brightened their day. This achievement is also a tribute to the generosity of everyday Malaysians who chose to make a difference.",
+      "This campaign wouldn’t have been possible without our partners, NGOs, and retailers. Together, we’ve proven that simple stories of kindness can scale into real-world impact,” said Jennifer Lee, Head of Marketing, PepsiCo in Malaysia.",
+      "‘Gandakan Kebaikan’ is a powerful reminder that meaningful creativity doesn’t just capture attention — it creates change. For THE SHOUT GROUP, the campaign proved how purpose-led ideas can spark movements, turning simple acts of kindness into collective impact.",
+      "In doing so, Tropicana Twister went beyond being a beverage brand to become a catalyst for kindness — uplifting thousands of families, uniting Malaysians, and making history in the Malaysia Book of Records."
+    ],
+    "summary": "The Shout Group in collaboration with Tropicana Twister, is proud to celebrate the outstanding success of the ‘Gandaka...",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2025-08-26-ragazzo-ragazzo-lanca-primeira-campanha-feit",
@@ -155379,6 +156127,38 @@
     }
   },
   {
+    "id": "2025-08-21-bayer-bayer-launches-supradyn-naturals-gin",
+    "date": "2025-08-21",
+    "brand": "Bayer",
+    "title": "Bayer launches Supradyn Naturals Ginseng with ‘Morning Wala Josh Poore Din’ film",
+    "agency": "",
+    "source": "Campaign Brief Asia",
+    "url": "https://campaignbriefasia.com/2025/08/22/bayer-launches-supradyn-naturals-ginseng-with-morning-wala-josh-poore-din-film/",
+    "region": "Índia",
+    "cc": "IN",
+    "yt": [
+      "UtEEpqwYXSg"
+    ],
+    "summary": "Bayer’s Consumer Health Division in India has launched its new campaign, ‘Morning Wala Josh Poore Din’, for Suprad...",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2025-08-21-colgate-palmolive-colgate-palmolive-taps-k-pop-icon-iu",
+    "date": "2025-08-21",
+    "brand": "Colgate-Palmolive",
+    "title": "Colgate-Palmolive taps K-Pop icon IU for Optic White Purple campaign across Asia-Pacific",
+    "agency": "",
+    "source": "Campaign Brief Asia",
+    "url": "https://campaignbriefasia.com/2025/08/21/colgate-palmolive-taps-k-pop-icon-iu-for-optic-white-purple-campaign-across-asia-pacific/",
+    "region": "Singapura",
+    "cc": "SG",
+    "yt": [
+      "KsRxjhJcBHo"
+    ],
+    "summary": "Colgate-Palmolive has launched a new campaign for Colgate Optic White Purple, starring global K-Pop idol and beauty icon...",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
     "id": "2025-08-21-omo-bolt-participa-de-campanha-para-omo",
     "date": "2025-08-21",
     "brand": "Omo",
@@ -155481,6 +156261,22 @@
         "ok": 2
       }
     }
+  },
+  {
+    "id": "2025-08-20-applecrumby-applecrumby-teams-up-with-kingdom-di",
+    "date": "2025-08-20",
+    "brand": "Applecrumby",
+    "title": "Applecrumby teams up with Kingdom Digital to Launch “Kisah Kasih Ibu” campaign",
+    "agency": "",
+    "source": "Campaign Brief Asia",
+    "url": "https://campaignbriefasia.com/2025/08/21/applecrumby-teams-up-with-kingdom-digital-to-launch-kisah-kasih-ibu-campaign/",
+    "region": "Singapura",
+    "cc": "SG",
+    "yt": [
+      "1gz_xthZzHQ"
+    ],
+    "summary": "Applecrumby, a premium diaper brand, has partnered with Kingdom Digital to launch “Kisah Kasih Ibu,” an inte...",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2025-08-20-gomes-da-costa-sabor-mais-caseiro-impossivel",
@@ -155600,6 +156396,22 @@
     }
   },
   {
+    "id": "2025-08-19-fenesta-fenesta-celebrates-true-freedom-with",
+    "date": "2025-08-19",
+    "brand": "Fenesta",
+    "title": "Fenesta celebrates true freedom with #ShutTheShor campaign starring Sangeeta Gharu",
+    "agency": "",
+    "source": "Campaign Brief Asia",
+    "url": "https://campaignbriefasia.com/2025/08/20/fenesta-celebrates-true-freedom-with-shuttheshor-campaign-starring-sangeeta-gharu/",
+    "region": "Índia",
+    "cc": "IN",
+    "yt": [
+      "Y8voIAKzKSo"
+    ],
+    "summary": "August brings with it the spirit of patriotism, when every Indian remembers the battles that defined our freedom struggl...",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
     "id": "2025-08-19-anchor-zero-lacto-anchor-reunites-kiwis-with-dairy-in",
     "date": "2025-08-19",
     "brand": "Anchor Zero Lacto",
@@ -155640,6 +156452,22 @@
         "ok": 2
       }
     }
+  },
+  {
+    "id": "2025-08-18-smart-ddb-philippines-espresso-launches-ge",
+    "date": "2025-08-18",
+    "brand": "Smart",
+    "title": "DDB Philippines’ Espresso+ launches Gen Z–focused KiQ Mobile campaign for Smart",
+    "agency": "",
+    "source": "Campaign Brief Asia",
+    "url": "https://campaignbriefasia.com/2025/08/19/ddb-philippines-espresso-launches-gen-z-focused-kiq-mobile-campaign-for-smart/",
+    "region": "Filipinas",
+    "cc": "PH",
+    "yt": [
+      "C9sdmi-uqsQ"
+    ],
+    "summary": "DDB Philippines’ dedicated telco unit Espresso+ has spearheaded a new campaign for KiQ Mobile, Smart Communication...",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2025-08-18-mcdonald-s-hello-kitty",
@@ -155741,6 +156569,52 @@
         "ok": 2
       }
     }
+  },
+  {
+    "id": "2025-08-14-asian-paints-asian-paints-unveils-the-colours-of",
+    "date": "2025-08-14",
+    "brand": "Asian Paints",
+    "title": "Asian Paints unveils ‘The Colours of India’ print campaign to celebrate Independence Day",
+    "agency": "",
+    "source": "Campaign Brief Asia",
+    "url": "https://campaignbriefasia.com/2025/08/14/asian-paints-unveils-the-colours-of-india-print-campaign-to-celebrate-independence-day/",
+    "region": "Índia",
+    "cc": "IN",
+    "image": "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/The-Colours-of-India_Asian-Paints2.jpg",
+    "images": [
+      "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/The-Colours-of-India_Asian-Paints2.jpg",
+      "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/The-Colours-of-India_Asian-Paints1.jpg",
+      "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/The-Colours-of-India_Asian-Paints3.jpg"
+    ],
+    "story": [
+      "From vibrant saffrons to crisp whites and lush greens, these colours reflect the beauty and identity of the nation within our homes. The print campaign launched in India’s leading newspapers, turning the simple act of flipping a page into a moment of patriotism.",
+      "The visual tribute celebrates unity and identity through colour — a reminder that patriotism isn’t just felt on one day, but can be seen, touched, and cherished every day.",
+      "Each colour featured in The Colours of India is an actual shade from Asian Paints’ extensive colour library, complete with its shade code.",
+      "As readers turn the page, they discover not only a heartfelt tribute to the tricolour, but also the sheer vastness of Asian Paints’ offering — a portfolio of over 5,000 unique shades that gives every Indian the complete freedom to bring their personal vision to life, without compromise.",
+      "From bold, statement hues to subtle, timeless tones, every shade is backed by the trusted Asian Paints Ki Warranty — a legacy of protecting homes and memories for over eight decades.",
+      "Amit Syngle, Managing Director & CEO, Asian Paints, said: “Marking India’s 79th year of Independence, Asian Paints celebrates the spirit of the nation with a campaign that goes beyond walls.",
+      "At Asian Paints, colours are more than aesthetic choices — they are expressions of ones shared spirit and individuality. For over eight decades, we’ve been custodians of this vibrant canvas, enabling every Indian to make their spaces a true reflection of themselves.",
+      "This campaign is a reminder that love for our country and personal expression aren’t limited to one day — they can be lived and cherished every day in the spaces we call our own.”",
+      "With The Colours of India, Asian Paints invites everyone to celebrate the nation’s spirit through colours that are true, trusted, and closely connected to who we are. Featured in leading print media & with digital extensions, the campaign marks Independence Day reaching consumers across the country.",
+      "Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below. Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below."
+    ],
+    "summary": "Asian Paints is celebrating this Independence Day by bringing the spirit of the nation into living spaces with “Th...",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2025-08-14-vietnam-vietnam-launches-nationwide-campaign",
+    "date": "2025-08-14",
+    "brand": "Vietnam",
+    "title": "Vietnam launches nationwide campaign to combat HPV and prevent related cancers",
+    "agency": "",
+    "source": "Campaign Brief Asia",
+    "url": "https://campaignbriefasia.com/2025/08/14/vietnam-launches-nationwide-campaign-to-combat-hpv-and-prevent-related-cancers/",
+    "region": "Vietnã",
+    "cc": "VN",
+    "video": "https://vimeo.com/1109880654",
+    "image": "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/For-a-Vietnam-free-from-the-burdens-of-HPV1.jpg",
+    "summary": "Vietnam’s Ministry of Health has launched a national communication campaign “For a Vietnam free from the burdens of ...",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2025-08-14-itausa-por-dentro-da-itausa",
@@ -155868,6 +156742,53 @@
         "ok": 2
       }
     }
+  },
+  {
+    "id": "2025-08-13-federal-bank-federal-bank-rolls-out-catchy-anthem",
+    "date": "2025-08-13",
+    "brand": "Federal Bank",
+    "title": "Federal Bank rolls out catchy anthem in second phase of cybersecurity campaign",
+    "agency": "",
+    "source": "Campaign Brief Asia",
+    "url": "https://campaignbriefasia.com/2025/08/14/federal-bank-rolls-out-catchy-anthem-in-second-phase-of-cybersecurity-campaign/",
+    "region": "Singapura",
+    "cc": "SG",
+    "yt": [
+      "00gWXnIXEUw"
+    ],
+    "summary": "Imagine a tune so catchy, it makes cybersecurity tips stick in your mind like your favorite song.",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2025-08-13-oppo-oppo-unveils-visually-striking-campa",
+    "date": "2025-08-13",
+    "brand": "OPPO",
+    "title": "OPPO unveils visually striking campaign for Reno14 series showcasing next-gen AI technology",
+    "agency": "",
+    "source": "Campaign Brief Asia",
+    "url": "https://campaignbriefasia.com/2025/08/14/oppo-unveils-visually-striking-campaign-for-reno14-series-showcasing-next-gen-ai-technology/",
+    "region": "Singapura",
+    "cc": "SG",
+    "yt": [
+      "_uqKsUjpcB4"
+    ],
+    "summary": "OPPO has launched a new campaign for its Reno14 smartphone, putting a sharp spotlight on the device’s next-generation ...",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2025-08-13-thai-health-thai-health-launches-latest-anti-e-c",
+    "date": "2025-08-13",
+    "brand": "Thai Health",
+    "title": "Thai Health launches latest Anti E-Cigarette film via Grey Thailand and Mum Films",
+    "agency": "Grey Thailand and Mum Films",
+    "source": "Campaign Brief Asia",
+    "url": "https://campaignbriefasia.com/2025/08/13/thai-health-launches-latest-anti-e-cigarette-film-via-grey-thailand-and-mum-films/",
+    "region": "Tailândia",
+    "cc": "TH",
+    "video": "https://vimeo.com/1109553000",
+    "image": "https://campaignbriefasia.com/wp-content/uploads/sites/2/2025/08/Thai-Health-Promotion-Foundation-x-Wonderful-World3.jpg",
+    "summary": "Grey Thailand, in collaboration with Mum Films, has released a new online film as part of the Thai Health Promotion Foun...",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2025-08-07-unimed-ta-seguro",
@@ -157689,7 +158610,19 @@
         "summary": "Creado por Africa Creative, el lanzamiento presenta el SUV híbrido de lujo con tres películas inspiradas en ensayos editoriales del mundo de la moda y producidas con el apoyo de la tecnología. El nuevo Outlander PHEV, SUV híbrido de lujo de…",
         "ok": 2
       }
-    }
+    },
+    "story": [
+      "O novo Outlander PHEV, SUV híbrido de luxo da Mitsubishi Motors, acaba de ganhar uma nova campanha que traduz toda sua essência premium e de inovação.",
+      "Baseada em uma produção igualmente híbrida – combinando tecnologia de ponta, sofisticação e linguagem cinematográfica com uso de IA e 3D, a ação é composta por três filmes de 30 segundos que buscam traduzir exatamente o que o veículo oferece a seus clientes.",
+      "Produzida pela Africa Creative, a campanha inverte a lógica do mercado da moda – que historicamente tem o hábito de colocar carros como coadjuvantes de luxo nos seus ensaios – e dá o protagonismo para o All New Outlander, ignorando os modelos na cena e focando no híbrido da Mitsubishi.",
+      "Os três filmes apostam em cenários lúdicos e de alto padrão, inspirados na estética da comunicação do universo fashion, e serão lançados semanalmente na TV aberta, Pay Tv, digital e TV conectada . Para assistir ao primeiro vídeo que se passa nas dunas de um deserto.",
+      "“O Mitsubishi Outlander PHEV é o mais luxuoso e tecnológico veículo já produzido em toda a história da marca e a ideia sempre foi a produção de uma campanha que conseguisse traduzir tudo isso para o público em geral e o time da Africa Creative foi muito bem sucedido nesse desafio.",
+      "O resultado é uma campanha sofisticada e inovadora” , afirma Marcia Neri, CMO da Mitsubishi Motors no Brasil. Mesmo criada com uso de recursos de inteligência artificial, a campanha mobilizou um grande número de profissionais entre produtores, roteiristas, animadores, entre outros.",
+      "No total, mais de 100 pessoas fizeram parte desta produção. Entre os profissionais participantes do projeto está o stylist e diretor criativo Dudu Bertholini, responsável por traduzir o espírito de cada ambientação dos vídeos em looks contemporâneos e exclusivos.",
+      "“Foi incrível participar desse processo criativo novo e inovador: o de criar um styling de Moda para um filme publicitário, através da IA. Foi a primeira vez que tive a chance de participar de um projeto como esse.",
+      "Criamos uma linguagem de Moda distinta para cada um dos três cenários icônicos – deserto, cidade e campo – com uma paleta de cores específica , com silhuetas, acessórios, nuances e sutilezas que definiram uma narrativa visual única para cada uma dessas locações – preservando sempre a característica de luxo que define a categoria do carro” , comenta Dudu Bertholini.",
+      "Além dos filmes, a campanha também conta com desdobramentos digitais, sociais e peças de OOH nas cidades de São Paulo, Rio de Janeiro, Brasília, Curitiba e Belo Horizonte."
+    ]
   },
   {
     "id": "2025-06-25-neoenergia-propeg-assina-campanha-da-neoenergia",
@@ -157802,6 +158735,18 @@
     "igm": [
       54,
       500
+    ],
+    "story": [
+      "Eudora Siàge , marca especialista em tratamentos de danos capilares e preferida das consumidoras, lança filme estrelado pela atriz Grazi Massafera.",
+      "Com exibição na televisão aberta no dia 23 de junho, as cenas apresentam a nova linha Nutri Acid.Complex, que eleva a nutrição capilar a um novo patamar ao combinar um exclusivo blend de ácidos e óleos vegetais em uma tecnologia inovadora.",
+      "A novidade transforma cabelos ressecados em fios radiantes em apenas 20 segundos, promovendo nutrição profunda, fios brilhantes, extremamente macios e mais resistentes.",
+      "O projeto em vídeo, criado em parceria com a AlmapBBDO, faz parte da campanha 360°, que traz o conceito “cabelos radiantes em 20 segundos”, refletindo a nutrição incomparável de Siàge.",
+      "No comercial de 15 segundos, que também está disponível nas redes sociais da marca, a embaixadora Grazi Massafera aparece em um cenário sofisticado, narrando o claim principal da campanha enquanto os elementos da fórmula se fundem visualmente, evidenciando o resultado rápido e o Óleo em Creme, produto hero da linha.",
+      "Além disso, as imagens mostram detalhes do cabelo da protagonista e os efeitos visíveis de nutrição e brilho intensos. “ Se o produto traz o encontro de óleos e ácidos, a campanha traz o encontro da tecnologia com o mundo da beleza para um cabelo incomparável.",
+      "Traduzimos em imagem o que Eudora Siàge entrega em cada fio: uma inovação que respeita o tempo da mulher, revelando seu brilho com verdade e potência “, comenta a dupla de diretoras criativas da AlmapBBDO, Ana Novis e Sabrina Villar.",
+      "Além do comercial veiculado na televisão, a campanha se desdobra em uma estratégia 360º com alto potencial de engajamento e impacto real.",
+      "Com ativações nas redes sociais, presença em pontos de venda, envio massivo de press kit desejo para influenciadores orgânicos das cinco regiões do país, conteúdos com experts, creators e imprensa especializada em beleza, Eudora Siàge transforma a experiência do consumidor em uma jornada completa.",
+      "A marca ainda capturou uma fala recorrente entre seu público: “quem usa Siàge, não quer emprestar” e a traduziu em uma narrativa que combina entretenimento e prova social."
     ]
   },
   {
@@ -157830,7 +158775,19 @@
         "summary": "Creada por AlmapBBDO, la película muestra las nuevas motocicletas MT-03 y MT-07 y rinde homenaje al público urbano y nocturno. Yamaha acaba de lanzar la campaña “Riding the Night” para presentar las nuevas versiones de las motos MT-03 Connected y MT-07…",
         "ok": 2
       }
-    }
+    },
+    "story": [
+      "A Yamaha acaba de lançar a campanha “Riding the Night” para apresentar as novas versões das motocicletas MT-03 Connected e MT-07 Connected.",
+      "Criada pela AlmapBBDO, a comunicação faz uma homenagem àqueles que não apenas vivem a noite – mas fazem dela um estilo de vida, e aceleram enquanto o mundo desacelera.",
+      "“ As novas motocicletas da Série Master of Torque chegaram ao Brasil mais agressivas e arrojadas, com mais tecnologia, embreagem assistida e deslizante e conectividade.",
+      "Essa campanha evidencia essa modernidade, o lado sombrio, agressivo e ao mesmo tempo vibrante das novas MT-03 Connected e MT-07 Connected ” afirma Giovana do Vale, gerente de Brand, Marketing e Racing da Yamaha Motor do Brasil.",
+      "Com uma estética urbana e tom provocativo, o filme marca o primeiro grande projeto da marca em parceria com a agência e se diferencia por não se prender aos formatos tradicionais da categoria.",
+      "Em vez disso, aposta em um território simbólico e muitas vezes cinematográfico: a noite como combustível de quem deseja viver intensamente, com liberdade e potência.",
+      "“ Esse filme, além de mostrar uma galera noturna que tem tudo a ver com as Masters of Torque, na verdade, e sobretudo, mostra o espírito Yamaha de ser. É tudo muito sensorial, porque a sensação de pilotar uma Yamaha é muito diferente.",
+      "Por isso, quisemos trazer algo diferenciado para a categoria – não se vê filmes assim no mercado de motos “, comenta Iron Britto da AlmapBBDO. Além da estreia na TV, o filme conta com veiculações nos canais digitais e mídia sociais da Yamaha.",
+      "A Yamaha MT-03 Connected é leve, compacta e ágil, com uma aparência agressiva inspirada nas maiores Hyper Naked da marca. Ideal para quem busca controle e emoção, além de reforçar o posicionamento da Yamaha entre o público jovem e urbano.",
+      "Já a Yamaha MT-07 Connected abraça o conceito “Dark Side of Japan” , inspirada na subcultura japonesa. Forte, versátil e divertida, o modelo traz curvas sofisticadas e minimalistas que criam uma conexão entre piloto e máquina, sendo perfeita tanto para uso urbano e estrada."
+    ]
   },
   {
     "id": "2025-06-23-meridian-meridian-brings-fresh-energy-and-com",
@@ -163400,6 +164357,34 @@
     }
   },
   {
+    "id": "2025-05-30-astrazeneca-astrazeneca-lanca-campanha-digital-d",
+    "date": "2025-05-30",
+    "brand": "AstraZeneca",
+    "title": "AstraZeneca lança campanha digital de conscientização no Dia Mundial Sem Tabaco",
+    "agency": "Wish Propaganda",
+    "source": "Creativosbr",
+    "url": "https://creativosbr.com.br/astrazeneca-lanca-campanha-digital-de-conscientizacao-no-dia-mundial-sem-tabaco/?utm_source=rss&utm_medium=rss&utm_campaign=astrazeneca-lanca-campanha-digital-de-conscientizacao-no-dia-mundial-sem-tabaco",
+    "region": "Brasil",
+    "cc": "BR",
+    "image": "https://creativosbr.com.br/wp-content/uploads/2025/05/PHOTO-2025-05-DIVULGACAO-ARY-FONTOURA-scaled.jpg",
+    "images": [
+      "https://creativosbr.com.br/wp-content/uploads/2025/05/PHOTO-2025-05-DIVULGACAO-ARY-FONTOURA-scaled.jpg"
+    ],
+    "story": [
+      "Neste 31 de maio, Dia Mundial Sem Tabaco, a AstraZeneca reforça a campanha digital “E se for DPOC?”, criada pela Wish Propaganda, com novo foco no tabagismo.",
+      "Com os atores Ary Fontoura e Solange Couto como embaixadores, a campanha foi produzida com o objetivo de abordar a Doença Pulmonar Obstrutiva Crônica (DPOC) com sensibilidade, acolhimento e impacto, alertando sobre sintomas, causas e caminhos possíveis para diagnóstico e tratamento.",
+      "A campanha “E se for DPOC?” foi estruturada em diferentes frentes estratégicas para atingir a população com sensibilidade e impacto real. Solange Couto protagonizou o manifesto principal, com leitura poética e simbólica sobre os impactos da falta de ar no cotidiano.",
+      "Já Ary Fontoura estrelou a ação especial do Dia Mundial Sem Tabaco, com um relato pessoal sobre o rompimento com o cigarro. A campanha terá veiculação em collab nos perfis oficiais dos embaixadores e no canal proprietário da AstraZeneca, o FazBem.",
+      "A estratégia, criada pela agência, também explora os canais digitais (Google e Meta – Facebook e Instagram) com ações específicas em cada plataforma. E, também, ocupará o ambiente clínico com leveza e propósito, por meio de presença em telas em espaços como clínicas e hospitais.",
+      "Todos os canais levam ao site da campanha, que reúne informações acessíveis sobre sintomas, diagnóstico e tratamento da DPOC. Os vídeos e outras informações estão disponíveis no site .",
+      "A AstraZeneca é uma empresa biofarmacêutica global, orientada pela ciência, que está focada na descoberta, desenvolvimento e comercialização de medicamentos de prescrição médica em Oncologia, Doenças Raras e Biofarmacêuticos, incluindo Medicina Cardiovascular, Renal e Metabólica, Respiratória e Imunologia.",
+      "Com sede em Cambridge, Reino Unido, a AstraZeneca opera em mais de 100 países e seus medicamentos inovadores são usados por milhões de pacientes em todo o mundo. Para mais informações, visite: www.astrazeneca.com.br e siga a empresa no Instagram @astrazenecabr. Gostou do conteúdo?",
+      "Acesse nossa home e veja mais. Acompanhe também nosso perfil nas mídias sociais ."
+    ],
+    "summary": "Criada pela Wish Propaganda, nova campanha “E se for DPOC?” traz Ary Fontoura e Solange como embaixadores Neste 31 de maio, Dia Mundial Sem Tabaco, a AstraZeneca reforça a campanha digital “E se for DPOC?”, criada pela Wish Propaganda,…",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
     "id": "2025-05-30-lisa-fedyszyn-s-d-ad-lisa-fedyszyn-s-d-ad-diary-danke-pen",
     "date": "2025-05-30",
     "brand": "Lisa Fedyszyn’s D&AD Diary",
@@ -163680,6 +164665,22 @@
         "ok": 2
       }
     }
+  },
+  {
+    "id": "2025-05-28-amstel-amstel-lanca-filme-da-campanha-todas",
+    "date": "2025-05-28",
+    "brand": "Amstel",
+    "title": "Amstel lança filme da campanha Todas as Emoções em Jogo",
+    "agency": "",
+    "source": "Creativosbr",
+    "url": "https://creativosbr.com.br/amstel-lanca-filme-da-campanha-todas-as-emocoes-em-jogo/?utm_source=rss&utm_medium=rss&utm_campaign=amstel-lanca-filme-da-campanha-todas-as-emocoes-em-jogo",
+    "region": "Brasil",
+    "cc": "BR",
+    "yt": [
+      "rW6IG4CKpnI"
+    ],
+    "summary": "Marca celebra a paixão dos amantes do futebol em filme que retrata a montanha-russa de sentimentos que os torcedores vivem durante uma partida da competição A Amstel, uma das marcas de cerveja puro malte mais vendidas do Brasil, segundo…",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2025-05-28-avenue-iof-de-volta",
@@ -166675,7 +167676,19 @@
         "summary": "La empresa de servicios financieros Sunlife, con sede en el Reino Unido, está redefiniendo la publicidad de seguros de vida para mayores de 50 años con una nueva e inexp...",
         "ok": 2
       }
-    }
+    },
+    "story": [
+      "SunLife, one the leading UK financial companies in the over 50’s life insurance sector, has partnered with TBWA\\London to create an ambitious brand platform, brought to life in three TV spots.",
+      "This marks a transformative step in SunLife’s journey to empower its customer demographic to live life with confidence, knowing they’ve made a good choice for their future.",
+      "The campaign is TBWA\\London’s first major work for SunLife since winning the account in August last year and represents the brand’s most ambitious marketing push since 2017.",
+      "It signals a bold departure from the kind of traditional, product-focused messaging that has become commonplace in the market, by introducing a fresh and modernised brand platform centred on everyday confidence.",
+      "This transformation follows extensive consumer research with over 2,500 people over 45, and reflects SunLife’s commitment to evolving with its audience and their needs.",
+      "TBWA\\London’s trademark disruptive approach hopes to reshape perceptions of the brand, positioning it as a forward-thinking, empowering force in financial services. Directed by Freddy Mandy, the campaign uses humour to connect with today’s customers.",
+      "The work follows three individuals’ insurance journeys: from a newly-naturist couple breaking the news to their children, to a self-assured mum mastering jiu-jitsu, to a dad taking his wood-carving passion to the extreme.",
+      "The campaign highlights how SunLife’s Guaranteed Over 50 Plan empowers policyholders to live confidently and unapologetically. SunLife offers simple, affordable financial solutions tailored to the needs of people over 50.",
+      "Its life insurance products – the Guaranteed Over 50 Plan and the Guaranteed Inheritance Plan – provide peace of mind to families across the UK, and its equity release offering enables homeowners to unlock money to make the most of retirement.",
+      "Says Swinburne: “If my naked parents sat me down to tell me they had become naturists, I’d be horrified. And I’d need a lot of counseling. But part of me would be impressed too. We’ve had a lot of fun telling stories of the confidence SunLife cover can unlock in your life."
+    ]
   },
   {
     "id": "2025-03-18-porto-bortoleto-e-porto",
@@ -167221,7 +168234,10 @@
     "cc": "AU",
     "image": "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Oliver-Boots-1024x575.jpg",
     "images": [
-      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Oliver-Boots-1024x575.jpg"
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Oliver-Boots-1024x575.jpg",
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Tools-and-tongs-billboard-mockup-FNQ.jpg",
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Nailed-It-billboard-mockup-Melbourne.jpg",
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Handle-the-Heat-billboard-mockup-Brisbane-airport.jpg"
     ],
     "story": [
       "With Australians alone spending nearly half a billion dollars annually on work boots (IBISWorld 2024), Oliver’s campaign reflects what it truly means to be ‘on the tools.’ After a year of research involving over 100 workers, Oliver discovered their boots are more than just site safety gear – they’re a symbol of identity, reliabilty, and pride.",
@@ -167245,7 +168261,10 @@
         "summary": "Oliver, el fabricante de botas nacido en Ballarat, ha lanzado su primera gran campaña publicitaria internacional, 'Built for ThisR...",
         "ok": 2
       }
-    }
+    },
+    "yt": [
+      "mQdlHJMqp2Y"
+    ]
   },
   {
     "id": "2025-02-25-de-longhi-de-longhi-launches-new-global-campai",
@@ -167259,7 +168278,10 @@
     "cc": "NZ",
     "image": "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/DeLonghi-La-Specialista-Touch-1024x570.jpg",
     "images": [
-      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/DeLonghi-La-Specialista-Touch-1024x570.jpg"
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/DeLonghi-La-Specialista-Touch-1024x570.jpg",
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Touch-Focus-Creative-Push_Billboard-2.jpg",
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Touch-Focus-Creative-TV-mockup.jpg",
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Touch-Focus-Creative-Print-Ad_Brown-Background.jpg"
     ],
     "story": [
       "Winning a competitive pitch, Focus Creative was entrusted with developing a 15 and 30-second video, as well as out-of-home, digital, POS and social assets. Internally referred to as the Confidence Campaign, the creative concept revolves around the empowerment La Specialista Touch gives its users.",
@@ -167286,7 +168308,8 @@
         "summary": "Focus Creative ha lanzado una campaña global para La Specialista Touch de De'Longhi, marcando otro éxito...",
         "ok": 2
       }
-    }
+    },
+    "video": "https://vimeo.com/1058823517"
   },
   {
     "id": "2025-02-24-abralatas-latacadabra",
@@ -167360,6 +168383,45 @@
         "ok": 2
       }
     }
+  },
+  {
+    "id": "2025-02-20-banks-track-banks-track-launches-bold-new-headli",
+    "date": "2025-02-20",
+    "brand": "Banks Track",
+    "title": "Banks Track launches bold new headline campaign to inspire young adventurers",
+    "agency": "",
+    "source": "Campaign Brief NZ",
+    "url": "https://campaignbrief.co.nz/2025/02/21/banks-track-launches-bold-new-headline-campaign-to-inspire-young-adventurers/",
+    "region": "Nova Zelândia",
+    "cc": "NZ",
+    "image": "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/9.-Birdsong.jpg",
+    "images": [
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/9.-Birdsong.jpg"
+    ],
+    "story": [
+      "Designed to engage a younger audience—particularly busy professionals seeking a digital detox—the campaign highlights the track’s unparalleled beauty, tranquility, and remoteness through nine compelling motifs.",
+      "With messages celebrating stunning views, absolute calm, a sky full of stars, and the rare diversity of landscapes and wildlife, the campaign reminds hikers why Banks Track is a truly unique escape.",
+      "The track’s exclusivity—limited to just 16 walkers per day—adds to its appeal as an intimate and immersive nature experience.",
+      "Crafted for social media and digital platforms, the campaign was brought to life by copywriter Nils Tscharnke, art director Julia Hartmann, creative consultant Josef Hoehnow and photographer Francis Streisel.",
+      "The campaign’s launch marks a fresh chapter for Banks Track, inspiring the next generation of hikers to swap screens for breathtaking scenery, silence, and birdsong."
+    ],
+    "summary": "Banks Track, the legendary multi-day hike traversing an ancient volcanic landscape on Banks Peninsula, has unveiled a st...",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2025-02-20-no-ugly-no-ugly-transforms-inner-gut-beauty",
+    "date": "2025-02-20",
+    "brand": "No Ugly",
+    "title": "No Ugly transforms inner gut beauty into works of art in new campaign via Droga5 Aotearoa",
+    "agency": "Droga5 Aotearoa",
+    "source": "Campaign Brief NZ",
+    "url": "https://campaignbrief.co.nz/2025/02/20/no-ugly-transforms-inner-gut-beauty-into-works-of-art-in-new-campaign-via-droga5-aotearoa/",
+    "region": "Nova Zelândia",
+    "cc": "NZ",
+    "video": "https://vimeo.com/1058433297/0cdb5f2c29",
+    "image": "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Biomes_Press_V1-1024x724.jpeg",
+    "summary": "New Zealand wellness brand No Ugly is showing Kiwis that beauty starts on the inside by turning the science of gut healt...",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2025-02-19-cruzeiro-do-sul-educ-ead-e-medicina",
@@ -167443,6 +168505,60 @@
         "ok": 2
       }
     }
+  },
+  {
+    "id": "2025-02-16-sexual-wellbeing-aot-sexual-wellbeing-aotearoa-launches-e",
+    "date": "2025-02-16",
+    "brand": "Sexual Wellbeing Aotearoa",
+    "title": "Sexual Wellbeing Aotearoa launches ‘Emotional Support Bits’ campaign via Special Wellington",
+    "agency": "Special Wellington",
+    "source": "Campaign Brief NZ",
+    "url": "https://campaignbrief.co.nz/2025/02/17/sexual-wellbeing-aotearoa-launches-emotional-support-bits-campaign-via-special-wellington/",
+    "region": "Nova Zelândia",
+    "cc": "NZ",
+    "image": "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/1.Emotional-Support-Bits-Header-1024x576.jpg",
+    "images": [
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/1.Emotional-Support-Bits-Header-1024x576.jpg"
+    ],
+    "story": [
+      "This playful initiative encourages participants to draw their “bits”, which are turned into custom plush toys – intimate, personalised companions designed to make the uncomfortable feel more comfortable.",
+      "Riffing off the emotional support items – soft toys, weighted blankets, even drink bottles – that many people take with them everywhere for comfort. Says Jackie Edmond, Chief Executive of Sexual Wellbeing Aotearoa: “The response to our brand evolution has been overwhelmingly positive.",
+      "Sexual Wellbeing Aotearoa reflects the breadth of our work and connects with Kiwi in an accessible way. However, there’s still a long way to go.",
+      "Our research shows the majority of Kiwi (62%) feel the need to keep sexual health concerns to themselves, with some (16%) admitting they have never spoken about them at all. We hope Emotional Support Bits helps break the silence, encouraging Kiwi to embrace these essential conversations.”",
+      "Says Bethany Omeri, Head of Strategy, Special Wellington: “SWA’s rebrand was introduced to explicitly recognise sexual and reproductive health as a critical component of overall wellbeing.",
+      "Unfortunately, societal conditioning means often people feel too ashamed to seek out the information, support or advice they need to optimise their sexual wellbeing. Emotional Support Bits directly challenges that stigma — our ‘bits’ aren’t shameful, they’re something to embrace.",
+      "We hope these bits help people feel a little more supported talking about and taking care of their own bits.” Says Mark Forgan, Executive Creative Director, Special Wellington: “We needed some talkability about just how little we’re talking about sexual health.",
+      "Bringing peoples ‘doodles’ to life and turning them into 60cm cuddly Emotional Support Bits felt like it could achieve this impact. There seems to be emotional support ‘everythings’ out there these days – so why not now on an important subject that young Kiwi really need support with.”",
+      "Adds Edmond: “We are delighted to continue our work with Special and launch this impactful campaign. Emotional Support Bits aim to break barriers in an unexpected, approachable way – encouraging Kiwi to embrace the uncomfortable, connect with their bodies, and start essential conversations.",
+      "And for those who find it difficult to talk to friends or whānau, Sexual Wellbeing Aotearoa is here with confidential, expert support.”"
+    ],
+    "summary": "Last year, Special undertook the monumental task of rebranding the 80-year-old Family Planning brand, ushering in the bi...",
+    "addedAt": "2026-11-28T16:56:34Z",
+    "video": "https://vimeo.com/1057351375"
+  },
+  {
+    "id": "2025-02-13-kotsovolos-kotsovolos-turns-up-the-heat-for-val",
+    "date": "2025-02-13",
+    "brand": "Kotsovolos",
+    "title": "Kotsovolos turns up the heat for Valentine’s Day in cheeky campaign via The Newtons Laboratory",
+    "agency": "The Newtons Laboratory",
+    "source": "Campaign Brief NZ",
+    "url": "https://campaignbrief.co.nz/2025/02/14/kotsovolos-turns-up-the-heat-for-valentines-day-in-cheeky-campaign-via-the-newtons-laboratory/",
+    "region": "Nova Zelândia",
+    "cc": "NZ",
+    "image": "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Artboard-Thumbnail-1024x745.jpg",
+    "images": [
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Artboard-Thumbnail-1024x745.jpg",
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Artboard-6-copy-7G.jpeg",
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Artboard-6-copy-9G.jpeg",
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Artboard-6-copy-8G.jpeg"
+    ],
+    "story": [
+      "Created by independent agency The Newtons Laboratory, the campaign features three playful executions that put a risqué twist on everyday appliances. The campaign was shot by photographer Marios Theologis. Register for Free and receive the Campaign Brief Daily Bulletin.",
+      "Type your email address in the space below. Register for Free and receive the Campaign Brief Daily Bulletin. Type your email address in the space below."
+    ],
+    "summary": "Global Brief – Greek home appliance retailer Kotsovolos is stirring up some Valentine’s Day fun with a cheeky ne...",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2025-02-12-natura-tododia-energia",
@@ -167561,6 +168677,51 @@
         "ok": 2
       }
     }
+  },
+  {
+    "id": "2025-02-10-kfc-kfc-launches-zing-air-private-airlin",
+    "date": "2025-02-10",
+    "brand": "KFC",
+    "title": "KFC launches ‘Zing Air’ private airline service delivering mates to super rugby in new campaign via Special PR, Stanley St, PHD, Drum and Culture",
+    "agency": "Special PR",
+    "source": "Campaign Brief NZ",
+    "url": "https://campaignbrief.co.nz/2025/02/11/kfc-launches-zing-air-private-airline-service-delivering-mates-to-super-rugby-in-new-campaign-via-special-pr-stanley-st-phd-drum-and-culture/",
+    "region": "Nova Zelândia",
+    "cc": "NZ",
+    "yt": [
+      "xqKj8kjlbgI"
+    ],
+    "summary": "Hold onto your drumsticks because this Super Rugby season, KFC is taking fan loyalty to new heights – literally.",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2025-02-09-dulux-dulux-celebrates-new-zealand-s-natur",
+    "date": "2025-02-09",
+    "brand": "Dulux",
+    "title": "Dulux celebrates New Zealand’s natural beauty in new DOOH campaign via MBM, LUMO + Pitchblack",
+    "agency": "MBM",
+    "source": "Campaign Brief NZ",
+    "url": "https://campaignbrief.co.nz/2025/02/10/dulux-celebrates-new-zealands-natural-beauty-in-new-dooh-campaign-via-mbm-lumo-pitchblack/",
+    "region": "Nova Zelândia",
+    "cc": "NZ",
+    "image": "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Dulux-Thumbnail-1024x631.jpg",
+    "images": [
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Dulux-Thumbnail-1024x631.jpg"
+    ],
+    "story": [
+      "Using cameras attached to five key LUMO billboards across the country, the campaign captures live footage of the sky and surrounding scenery behind each screen.",
+      "This footage is displayed on the billboards, creating a transparent effect so audiences can see the skyline as it changes throughout the day and into the night.",
+      "The result is a visually stunning integration of the physical and digital worlds, making the billboards feel like an extension of the environment itself.",
+      "Appearing over the live feed will be Dulux Colours of New Zealand swatches, automatically updating every 2 minutes to reflect the real-time colours in the background. As the sky shifts, audiences will see a fresh snapshot, accompanied by Dulux shades that best represent the scene.",
+      "Shontelle Crosswell, Dulux NZ Head of Marketing, says that the campaign is about celebrating New Zealand’s colours and inspiring homeowners to start their painting project.",
+      "“Nature is one of the best sources of inspiration for colours, and these billboards bring that idea to life in a fresh and innovative way,” says Crosswell. “Choosing the right colours can be overwhelming – there are so many options to choose from, and they need to work together harmoniously.",
+      "This campaign, along with our new ‘Find Your Dream Exterior Colour Scheme’ project guide, helps simplify the process by showcasing colour combinations inspired by our beautiful local landscapes.”",
+      "Thanks to LUMO’s cutting-edge technology and development partner, Latch, the campaign offers a fresh, dynamic view of New Zealand’s natural beauty, while reinforcing Dulux’s expertise in colour.",
+      "More than just a showcase of colour, Dulux Colours of New Zealand LIVE celebrates our country’s ever-changing landscape. From the deep blues of a crisp morning to the fiery hues of sunset and the soft greys of an overcast afternoon, the campaign highlights the beauty in everyday moments.",
+      "Through advanced technology and real-time visuals, it brings New Zealand’s natural beauty into focus for audiences to enjoy."
+    ],
+    "summary": "Dulux NZ, MBM and Pitchblack have teamed up with LUMO to launch Dulux Colours of New Zealand LIVE, a dynamic digital cam...",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2025-02-07-repelex-adote-um-pet",
@@ -167824,6 +168985,90 @@
     }
   },
   {
+    "id": "2025-02-05-how-ai-billy-loizou-how-ai-helps-kick-ad-go",
+    "date": "2025-02-05",
+    "brand": "How AI",
+    "title": "Billy Loizou: How AI helps kick ad goals during Super Bowl",
+    "agency": "",
+    "source": "Campaign Brief NZ",
+    "url": "https://campaignbrief.co.nz/2025/02/05/billy-loizou-how-ai-helps-kick-ad-goals-during-super-bowl/",
+    "region": "Nova Zelândia",
+    "cc": "NZ",
+    "image": "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/football-67701_1920-1024x681.jpg",
+    "images": [
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/football-67701_1920-1024x681.jpg"
+    ],
+    "story": [
+      "As the Super Bowl fast approaches, retail advertisers face a critical challenge: converting a $8 million, 30-second advertising investment into measurable success. The added challenge is traditional ROI measurement falls short for retailers investing in Super Bowl advertising.",
+      "While basic metrics like store traffic spikes or website visits offer some insight, they fail to capture the full customer journey from awareness to purchase. Retailers often struggle to connect online activity with in-store purchases or attribute sales lift to specific campaign elements.",
+      "Without real-time insights, brands miss opportunities to optimise their multi-channel follow-up campaigns using fresh sales data. These challenges underscore why advancements in AI and first-party data have become critical for retail marketers.",
+      "By providing real-time attribution and optimisation tools, these technologies empower brands to link Super Bowl advertising directly to customer actions, reducing guesswork and uncovering previously unmeasured conversions.",
+      "This shift allows marketers to go beyond vague metrics like impressions and focus on actionable insights that maximise campaign performance across both digital and physical retail environments.",
+      "Retailers have a unique advantage in Super Bowl advertising: rich first-party data from loyalty programs, purchase history, and omnichannel shopping behaviour. This data becomes powerful when combined with AI to predict campaign performance.",
+      "By analyzing purchase history, browsing behaviour, and other customer data, brands can create detailed audience profiles and segmentations. In the weeks leading up to the Super Bowl, retail brands face intense pressure to make critical decisions about media placements and audience targeting.",
+      "First-party data offers a competitive edge by enabling brands to predict which platforms and demographics are most likely to deliver the highest ROI. AI tools simulate campaign outcomes across different platforms, helping marketers identify the optimal media mix for their Super Bowl spend.",
+      "This predictive approach ensures that brands aren’t relying on guesswork but are instead making data-driven decisions to maximise reach and engagement. Modern retail success requires understanding how Super Bowl advertising drives both immediate digital engagement and long-term store traffic.",
+      "AI-powered attribution tools now map complete customer journeys across channels and platforms, often identifying previously unmeasured conversions."
+    ],
+    "summary": "By Billy Loizou, APAC Area VP, Amperity As the Super Bowl fast approaches, retail advertisers face a critical cha...",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2025-02-04-apple-pay-actor-zach-woods-treats-rescue-dogs",
+    "date": "2025-02-04",
+    "brand": "Apple Pay",
+    "title": "Actor Zach Woods treats rescue dogs to a day of pampering in new social campaign for Apple Pay",
+    "agency": "Woods",
+    "source": "Campaign Brief NZ",
+    "url": "https://campaignbrief.co.nz/2025/02/05/actor-zach-woods-treats-rescue-dogs-to-a-day-of-pampering-in-new-social-campaign-for-apple-pay/",
+    "region": "Nova Zelândia",
+    "cc": "NZ",
+    "image": "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Zach-Woods-Apple-Pay-1024x712.jpg",
+    "images": [
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/02/Zach-Woods-Apple-Pay-1024x712.jpg"
+    ],
+    "story": [
+      "Directed by Woods himself, this mostly improvised spot follows him as he humorously spoils two pairs of inseparable pups using Apple Pay’s seamless payment experience across local pet-focused businesses.",
+      "Inspired by Woods’ viral content showcasing his efforts with Much Love Animal Rescue , the reel highlights the convenience of Apple Pay as he treats the dogs to a day of indulgence—from selecting artisanal treats at a small dog bakery to picking out toys at a locally owned pet store and even treating them to a professional dog massage to ease their shelter stress.",
+      "This partnership becomes even more meaningful with the news that, after seven months in foster care, two of the dogs have found a permanent home. This campaign marks Apple Pay’s first collaboration with a celebrity in this social series.",
+      "Previously, the series has partnered with popular TikTok creators, including the much-loved Grandma Droniak, Nimbus, and Drew Dirksen, to name a few.",
+      "By equipping them with bespoke, open-ended questions—”Can I _____ with Apple Pay?”—the content educates audiences on Apple Pay’s features by showing endless possibilities for fast and secure transactions.",
+      "Apple Pay enables secure payments in stores, online, and in apps and can be used across iPhone, Apple Watch, iPad, Mac, and Apple Vision Pro. Accepted at millions of retailers worldwide, the service continues to transform how people make everyday purchases.",
+      "For more information on Apple Pay, visit: https://www.apple.com/apple-pay/ Talent: Zach Woods (@mrzachwoods) Agency: Apple in-house Director: Zach Woods Production Company: Imposter VFX: Trafik Audio Mix: Lime Editing: Block Party Director of Photography: Andre Lascaris Music: Apple"
+    ],
+    "summary": "Apple Pay has partnered with actor and comedian Zach Woods to help rescue dogs in the latest installment of the “C...",
+    "addedAt": "2026-11-28T16:56:34Z",
+    "video": "https://www.instagram.com/reel/DFnxh6kS0YJ/"
+  },
+  {
+    "id": "2025-01-30-fair-food-fair-food-launches-new-summer-campai",
+    "date": "2025-01-30",
+    "brand": "Fair Food",
+    "title": "Fair Food launches new summer campaign “packed with purpose” via Daylight",
+    "agency": "Daylight",
+    "source": "Campaign Brief NZ",
+    "url": "https://campaignbrief.co.nz/2025/01/31/fair-food-launches-new-summer-campaign-packed-with-purpose-via-daylight/",
+    "region": "Nova Zelândia",
+    "cc": "NZ",
+    "image": "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/01/Fair-Food-Press-Release-01-.jpg",
+    "images": [
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/01/Fair-Food-Press-Release-01-.jpg"
+    ],
+    "story": [
+      "Every month, Fair Food collects approximately 50.7 tonnes of food destined for landfill from our biggest supermarkets and suppliers. As this precious kai approaches its best-before date, Fair Food volunteers sort, save and send it to community partners to feed New Zealanders in need.",
+      "Run on the generosity of donors and an incredible volunteer network; the organisation has distributed more than 7.5 million meals since 2021. “Summer is a time for gathering with loved ones and sharing meals, but it’s also when food waste is at its highest.",
+      "At Fair Food, we believe every piece of kai has value, and through our work, we’re not just rescuing food – we’re nourishing communities and protecting our planet,” says Michelle Blau, general manager at Fair Food.",
+      "To highlight its mission and inspire others to join the movement, Fair Food has launched ‘Packed with Purpose’, a poster campaign that showcases the incredible volume of kai they rescue from waste every day. During the sorting process, volunteers recycle thousands of pieces of food packaging.",
+      "The idea was simple: repurpose this packaging into visually striking collages that demonstrate the sheer volume of kai being rescued and redistributed to those who need it most.",
+      "From the stickers found on crates of produce and mass amounts of baked goods through to labels from cans and dairy products – the collaged backgrounds cover a huge range of food.",
+      "During the art-working process, volunteers recorded the exact weight of each item, calculating the total mass of rescued food. These staggering figures were then presented through big labels pasted on top, with beautiful typography outlining Fair Food’s purpose.",
+      "Says Charlie Godinet, ECD, Daylight: “We love hands-on craft at Daylight, and we couldn’t think of a better organisation to roll up our sleeves for. Fair Food’s work is truly inspiring, and we’re delighted to help showcase it and celebrate their cause.”",
+      "The final collages were then scanned and distributed through the Phantom network of street posters for mass reach. In total, this campaign was made with 2473kg of lovingly rescued food, a powerful representation of the Fair Food mission and one day’s worth of food shared"
+    ],
+    "summary": "Independent agency Daylight has partnered with Fair Food, Auckland’s original food rescue charity established in 2...",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
     "id": "2025-01-30-energisa-seguranca-urgente",
     "date": "2025-01-30",
     "brand": "Energisa",
@@ -167859,6 +169104,27 @@
         "ok": 2
       }
     }
+  },
+  {
+    "id": "2025-01-27-espn-espn-helps-aussies-and-kiwis-solve-s",
+    "date": "2025-01-27",
+    "brand": "ESPN",
+    "title": "ESPN helps Aussies and Kiwis solve Super Bowl fever in latest ‘Super Bowl Sickie’ campaign",
+    "agency": "",
+    "source": "Campaign Brief NZ",
+    "url": "https://campaignbrief.co.nz/2025/01/28/espn-helps-aussies-and-kiwis-solve-super-bowl-fever-in-latest-super-bowl-sickie-campaign/",
+    "region": "Austrália",
+    "cc": "AU",
+    "image": "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/01/ESPN-Super-Bow-Sickie-1024x572.jpg",
+    "images": [
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/01/ESPN-Super-Bow-Sickie-1024x572.jpg"
+    ],
+    "story": [
+      "You might have been ‘Swooped by a Magpie’, struck down by ‘Servo Coffee Shock’ or are suffering from ‘Esky Elbow’ – whatever the ailment, ESPN has the inspiration you need for your ‘Super Bowl Sickie’.",
+      "ESPN has taken the playful ‘Super Bowl Sickie’ campaign up a notch this year, with fans potentially earning themselves a trip to New Orleans by taking part and downloading their ‘Sickie’ certificate."
+    ],
+    "summary": "With Super Bowl LIX airing on Monday February 10 in Australia and New Zealand, ESPN is helping sports fans get creative ...",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2025-01-27-claro-sao-paulo-e-multi",
@@ -168050,6 +169316,22 @@
     }
   },
   {
+    "id": "2025-01-21-omo-omo-invites-aussies-and-kiwis-to-com",
+    "date": "2025-01-21",
+    "brand": "OMO",
+    "title": "OMO invites Aussies and Kiwis to come back to sport in new campaign via 303 MullenLowe",
+    "agency": "",
+    "source": "Campaign Brief NZ",
+    "url": "https://campaignbrief.co.nz/2025/01/22/omo-invites-aussies-and-kiwis-to-come-back-to-sport-in-new-campaign-via-303-mullenlowe/",
+    "region": "Austrália",
+    "cc": "AU",
+    "yt": [
+      "TrK9Dkolk90"
+    ],
+    "summary": "Laundry detergent brand OMO is urging Aussies and Kiwi to get back into sport in its latest trams-Tasman campaign ‘...",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
     "id": "2025-01-21-mcdonald-s-simplesmente-mcchicken",
     "date": "2025-01-21",
     "brand": "McDonald’s",
@@ -168186,6 +169468,88 @@
         "ok": 2
       }
     }
+  },
+  {
+    "id": "2025-01-20-simon-barnett-simon-barnett-makes-triumphant-retur",
+    "date": "2025-01-20",
+    "brand": "Simon Barnett",
+    "title": "Simon Barnett makes triumphant return to More FM in new campaign via MediaWorks’ Passionfruit",
+    "agency": "MediaWorks’ Passionfruit",
+    "source": "Campaign Brief NZ",
+    "url": "https://campaignbrief.co.nz/2025/01/21/simon-barnett-makes-triumphant-return-to-more-fm-in-new-campaign-via-mediaworks-passionfruit/",
+    "region": "Nova Zelândia",
+    "cc": "NZ",
+    "image": "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/01/More-FM-1024x768.jpg",
+    "images": [
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/01/More-FM-1024x768.jpg"
+    ],
+    "story": [
+      "Yesterday, Barnett kicked off his morning with a 4.30am alarm, marking his return to More FM. He joined friend and co-host Lana Searle and the Breakfast Club for what promises to be an exciting year of great music, fun conversations, and unforgettable moments.",
+      "After stepping away from the More FM mic for over five years, Barnett’s return was teased with a fun and quirky summer campaign, showcasing Barnett as a wild, untamed figure—a nod to his time away before returning home to More FM.",
+      "The “Simon Barnett’s Back for More” campaign brings to life the energy, fun, and personality that Barnett and More FM have always been known for.",
+      "The new logo, a centerpiece of the campaign, will be showcased across all touchpoints — from billboards and buses to social to brand vehicles and beyond — bringing a fresh, modern look that reflects More FM’s industry leadership.",
+      "It’s a design that connects with listeners while reinforcing the station’s contemporary edge. Says Alex Kenny, creative director at Passionfruit: “Passionfruit was thrilled to collaborate on this exciting project for Simon’s return.",
+      "His comeback prompted us to dive deeper into the essence of the More FM brand and how it could better reflect its identity in 2025. The result is a refreshed look that aligns with the station’s evolution and captures the vibrant personalities behind the music.",
+      "It’s a premium, approachable aesthetic with long-term appeal in an ever-changing media landscape.” The rebranding, created by MediaWorks’ in-house creative studio Passionfruit, was supported by a creative partnership with Eyes and Ears, who produced the TVC.",
+      "MediaWorks: Creative Director: Alex Kenny Art Director: Brad Baird Creative Strategist: Alastair Barran Senior Designer: Anton Herbert Graphic Designers: Sam Curtis and Aisha Johan Sound Engineer: Grant Brodie Senior Marketing Manager: Rachel Mancini Insights Lead: Cate Owen Digital / Social Lead: Mel Low"
+    ],
+    "summary": "One of New Zealand’s leading music stations More FM has kicked off 2025 with the highly anticipated return of belo...",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2025-01-19-peroni-nastro-azzurr-campbell-co-launches-three-standout",
+    "date": "2025-01-19",
+    "brand": "Peroni Nastro Azzurro",
+    "title": "Campbell+Co launches three standout brand activations at the ASB Classic for Peroni Nastro Azzurro, Somersby Cider and Avène x MoleMap",
+    "agency": "",
+    "source": "Campaign Brief NZ",
+    "url": "https://campaignbrief.co.nz/2025/01/20/campbellco-launches-three-standout-brand-activations-at-the-asb-classic-for-peroni-nastro-azzurro-somersby-cider-and-avene-x-molemap/",
+    "region": "Nova Zelândia",
+    "cc": "NZ",
+    "image": "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/01/Avène-x-MoleMap-1-1024x760.jpg",
+    "images": [
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/01/Avène-x-MoleMap-1-1024x760.jpg"
+    ],
+    "story": [
+      "At the heart of the event was the Peroni Bar, The Serve’s main hub, perfectly positioned overlooking the courtside screens.",
+      "This premium space served up effortless Italian sophistication in the summer sunshine throughout the two-week event, creating a vibrant social hub where attendees could enjoy a taste of Italy while soaking in the action.",
+      "For those seeking a more relaxed experience, the Somersby Ultra Garden was the perfect chill-out zone. Nestled within a cosy garden setting, it delivered the ultimate cider summer atmosphere, inviting guests to unwind with a refreshing pour in a laid-back, sun-soaked space.",
+      "Making a purposeful impact, the Avène x MoleMap Activation focused on sun safety and skin health, which is especially critical in New Zealand given our high UV levels.",
+      "Attendees received complimentary Avène sunscreen, experienced a UV coverage check to visualise their UV protection, and were offered free MoleMap spot checks by a team of melanographers.",
+      "The activation made a tangible difference, with a significant number of attendees identified with potential skin cancers and referred for further diagnosis or treatment, reinforcing the importance of proactive skin health awareness.",
+      "Says Vinny Sherry, director, Campbell+Co: “The ASB Classic was an ideal platform for Campbell+Co to deliver creative, purpose-driven brand experiences that enhanced the event atmosphere and left a lasting impact on the community.",
+      "We’re very proud to have had such a strong involvement for our clients this year at this world-class event.”"
+    ],
+    "summary": "Campbell+Co made a significant impact at this year’s ASB Classic, delivering three dynamic brand activations that ...",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2025-01-19-xero-xero-unveils-new-global-campaign-you",
+    "date": "2025-01-19",
+    "brand": "Xero",
+    "title": "Xero unveils new global campaign ‘Your business supercharged’ via Interbrand, Hooves + The Hub",
+    "agency": "Interbrand",
+    "source": "Campaign Brief NZ",
+    "url": "https://campaignbrief.co.nz/2025/01/20/xero-launches-new-global-brand-campaign-your-business-supercharged-via-interbrand/",
+    "region": "Nova Zelândia",
+    "cc": "NZ",
+    "image": "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/01/Xero-2025-still-1024x573.jpg",
+    "images": [
+      "https://campaignbrief.co.nz/wp-content/uploads/sites/4/2025/01/Xero-2025-still-1024x573.jpg"
+    ],
+    "story": [
+      "‘ Your business supercharged’ signals Xero’s commitment to providing small businesses and their advisors with the tools, insights, and connections they need to thrive.",
+      "For the third time in the company’s history, Xero is aligning its brand promise to reflect the value it provides customers today and in the future.",
+      "Says James Kyd, executive general manager of brand and marketing at Xero: “Our platform is more powerful, personalised and automated than ever before and ‘ Your business supercharged’ synthesises the overall benefit our customers have come to know and expect.",
+      "“Small business owners know what’s best for their business and accountants and bookkeepers play a pivotal role in helping realise these aspirations. ‘ Your business supercharged’ reflects this while also acknowledging the role Xero plays – by providing an intuitive platform, actionable insights, and access to an expert community.",
+      "“In developing ‘ Your business supercharged’, we engaged in extensive conversations with small businesses and their advisors. This feedback played a crucial role in shaping the platform, ensuring it resonates with the needs and aspirations of our customers.",
+      "They expressed a strong belief that ‘ Your business supercharged’ effectively captures how Xero can help them to unlock growth and achieve the freedom they desire.” Xero partnered with Interbrand, leveraging its network across London, New York and Sydney to build a truly global positioning.",
+      "Market research firm, Insights Exchange , supported through the delivery of large scale research across key geographies.",
+      "Says Sam Ashken, senior strategy director at Interbrand: “Small business owners crave control, and they want to feel that they have the specific support they need for their business. Accountants and bookkeepers want to help their clients grow.",
+      "These insights are true around the world, for current and potential Xero customers alike. We are delighted to have collaborated with the Xero team around the world to develop their new global brand platform and are excited to see what’s next.”"
+    ],
+    "summary": "Global small business platform Xero has today announced an evolution of its brand, introducing the tagline – ̵...",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2025-01-15-universidade-sao-jud-diplomao",
@@ -199299,7 +200663,13 @@
     "story": [
       "If you didn’t know much about the supply chain pre-2020, Covid certainly helped educate you on its importance. Still, unanswered questions remain. And Steve Burns is on the case.",
       "The actor, who solved weekly mysteries in the ’90s as the host of Nick Jr.’s Blue’s Clues, now tackles supply chain questions—like how much is a fuckload?—with the help of Flock Freight.",
-      "“Define Your Load,” a campaign from Maximum Effort, gets down to measuring the lengths of fuckload and its smaller, distant cousin, shitload. In his quest for answers, Burns sits down with a Flock Freight exec in a 60-second to learn more:"
+      "“Define Your Load,” a campaign from Maximum Effort, gets down to measuring the lengths of fuckload and its smaller, distant cousin, shitload. In his quest for answers, Burns sits down with a Flock Freight exec in a 60-second to learn more:",
+      "A fuckload is anywhere from 40 feet and beyond, while shitloads measure anything less than that, allowing multiple shitloads to share one shipping truck and save, perhaps, a shitload of money? “Truckload, fuckload, They rhyme. That’s neat,” says Burns.",
+      "“I wouldn’t say we were looking for edgy,” says Orlando Baeza, CMO at Flock Freight. “But we also don’t take ourselves too seriously either. For example, our onboarding program is called Flock U—so we enjoy a good pun here.",
+      "From our first conversation [with Maximum Effort], we could feel the creative chemistry between us. And that chemistry and collaboration was there all the way throughout.” In a second video, Burns speaks with a Flock Freight warehouse employee and it’s “Fucking Efficient.”",
+      "As you can see, the F word returns and Burns gives us supply-chain novices a better breakdown on how the flock Flock Freight works. “We knew we wanted to infuse humor and accessibility into the brand and industry, which to many seems dense and complex to get into,” Baeza tells Muse.",
+      "“What we thought would be perfect for this concept was the ability to lean into the parody, and the Blue’s Clues to ‘investigative journalist’ leap was one we knew Steve could pull off. And Steve is so revered and loved by multiple generations, we knew he’d be well received.",
+      "Then you add the novelty of the language involved coming from Steve, and we knew we had something special.”"
     ],
     "summary": "If you didn’t know much about the supply chain pre-2020, Covid certainly helped educate you on its importance.",
     "addedAt": "2026-11-28T08:04:36Z",
@@ -199314,7 +200684,8 @@
         "summary": "Si no sabía mucho sobre la cadena de suministro antes de 2020, Covid ciertamente le ayudó a comprender su importancia.",
         "ok": 2
       }
-    }
+    },
+    "images": []
   },
   {
     "id": "2022-11-17-abree-abree-pro-novo",
@@ -199745,7 +201116,8 @@
         "summary": "La gente disfraza el juego de muchas maneras.",
         "ok": 2
       }
-    }
+    },
+    "images": []
   },
   {
     "id": "2022-10-31-danone-milnutri-agora-e-mil-e-um",
@@ -201016,7 +202388,11 @@
     "story": [
       "I happened to be at Serena Williams’ U.S. Open match in 2016 when Beyoncé was in the crowd cheering her on. The atmosphere was electric—one iconic Black woman who’d put such a mark on American culture, showing up to support another.",
       "With Serena’s impending retirement, Beyoncé has now stepped up to support her again, narrating a new 60-second Gatorade ad that broke late Sunday just ahead of Williams’ swan song at the U.S. Open.",
-      "The spot is titled “Love Means Everything,” and it salutes Serena for her trailblazing career and how, from the beginning, she beautifully and forcefully embodied the power of loving oneself, and one’s true identity, in the face of adversity."
+      "The spot is titled “Love Means Everything,” and it salutes Serena for her trailblazing career and how, from the beginning, she beautifully and forcefully embodied the power of loving oneself, and one’s true identity, in the face of adversity.",
+      "The ad was created by TBWAChiatDay and directed by Jake Nava, who’s worked with Beyoncé for two decades, going all the way back to her “Crazy in Love” video in 2003. “When the world writes her down in history, we’ll begin where she started—at love. A love that started a movement.",
+      "A movement to always love exactly who you are. To be so in love with your identity that your very essence cannot be contained. To love the sound of your own voice, and the way you move. To cherish every muscle, and every curve your body exhibits.",
+      "To feel like a queen unapologetically, with a crown indefinitely. To always love being a proud Black woman, a parent, a dreamer. To always love being you. The whole you. The real you. To always love you.” Serena and Gatorade have worked together for year.",
+      "This latest effort also includes a new limited-edition Serena Gatorade bottle , which she’s also done before. Tim Nudd was editor in chief of the Clio Awards and editor of Muse by Clio from 2018 to 2023."
     ],
     "summary": "I happened to be at Serena Williams’ U.S.",
     "addedAt": "2026-11-28T08:04:36Z",
@@ -201031,7 +202407,8 @@
         "summary": "Estaba en los EE.UU. de Serena Williams.",
         "ok": 2
       }
-    }
+    },
+    "images": []
   },
   {
     "id": "2022-08-25-uniao-israelita-port-expresse-seu-judaismo",
@@ -201904,6 +203281,32 @@
     }
   },
   {
+    "id": "2022-08-01-jack-mark-hamill-clowns-around-for-jack-i",
+    "date": "2022-08-01",
+    "brand": "Jack",
+    "title": "Mark Hamill Clowns Around for Jack in the Box Drive-Thru Stunt",
+    "agency": "TBWAChiatDay Los Angeles",
+    "source": "Muse by Clios",
+    "url": "https://musebyclios.com/advertising/mark-hamill-clowns-around-for-jack-in-the-box-drive-thru-stunt/?utm_source=rss&utm_medium=rss&utm_campaign=mark-hamill-clowns-around-for-jack-in-the-box-drive-thru-stunt",
+    "region": "França",
+    "cc": "FR",
+    "image": "https://cdn.musebyclios.com/wp-content/uploads/2024/06/11201549/1JackInBox-hed-2022.jpg",
+    "story": [
+      "A long time ago, before finding galactic fame as Luke Skywalker, teenage Mark Hamill worked at Jack in the Box. Alas, he got canned for impersonating a clown over the drive-thru mic.",
+      "Now, the Jedi returns to the fast feeder in a fun campaign from TBWAChiatDay Los Angeles promoting Jack’s Spicy Chicken Strips and French Toast Sticks. The stunt below stars professional actors who knew they were filming a commercial, but had no idea Mark would be filling their orders.",
+      "The Force is strong in this one! It’s a compelling ride, especially when the folks behind the wheel tell Mark how much they love his movies. A young woman exclaims, “I have grown up with you!” and we feel the pure joy of fandom. Mark’s “let’s do a selfie!” response seems heartfelt, too.",
+      "“We were looking for a way to make a limited-time offer campaign special and breakthrough when the team came across a clip of Mark on The Late Late Show telling the story of how he was once fired from a Jack in the Box for impersonating a clown in the drive-thru,” TBWACD creative director Jeff O’Keefe tells Muse.",
+      "“The idea of bringing Mark back along with a couple of other fan favorites was born.” Mark co-stars with brand mascot Jack Box in two additional ads: “The commercials involved a lot of improv and trying out different lines and bits to see what worked,” Hamill says. “That’s catnip for a performer.",
+      "This was a really collaborative bunch and we just had a lot of fun.” Ham’s used to hanging with dudes in weird headgear. At least Jack’s not his father. We think. The pair also show up in a comic book, which drops across social this week, with a print addition planned:",
+      "Below, the TBWACD creative team takes us behind the scenes: Bert Marissen, creative director: Mark was quite excited about it from the start. You can imagine that he’s been hit up countless times by brands looking to leverage a famous sci-fi franchise.",
+      "This, instead, was an authentic way for him to do a campaign that drew from his life. To hear him explain it, he has only fond memories of his time at Jack in the Box, even though he got canned. Jeff O’Keefe: The drive-thru stunt was filmed at an L.A.-area Jack in the Box one day in early July.",
+      "We put Mark in the window for a couple of hours and had him get up to some of the mischief that got him in trouble his first time out—greeting people in a crazy clown voice. Mark, of course, is just as beloved by fans for his voice acting work, so he had a great time.",
+      "Marissen: During the audition process, they were asked about TV and movie franchises they loved, which allowed us to highlight some potential fans of Mark’s work. They had no idea they were going to meet Mark—all they knew was that they had to pull up to the menu and order a few items."
+    ],
+    "summary": "A long time ago, before finding galactic fame as Luke Skywalker, teenage Mark Hamill worked at Jack in the Box.",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
     "id": "2022-07-28-mercantil-sua-experiencia-nos-inspira",
     "date": "2022-07-28",
     "brand": "Mercantil",
@@ -201983,6 +203386,25 @@
         "ok": 2
       }
     }
+  },
+  {
+    "id": "2022-07-27-period-underwear-thinx-comically-highlights-the-gener",
+    "date": "2022-07-27",
+    "brand": "Period Underwear",
+    "title": "Thinx Comically Highlights the Generation Gap in Ads for Period Underwear",
+    "agency": "Clios",
+    "source": "Muse by Clios",
+    "url": "https://musebyclios.com/advertising/thinx-comically-highlights-the-generation-gap-in-ads-for-period-underwear/?utm_source=rss&utm_medium=rss&utm_campaign=thinx-comically-highlights-the-generation-gap-in-ads-for-period-underwear",
+    "region": "EUA",
+    "cc": "US",
+    "image": "https://cdn.musebyclios.com/wp-content/uploads/2024/06/11201541/Thinx-Savedbysister-hed-2022_0.jpg",
+    "story": [
+      "Back in the old days, period underpants were the permanently blood-stained skivvies you wore at your time of the month so you wouldn’t ruin your good pairs. Times have changed, and there’s more options than pads, tampons and cups. There’s sustainable, reusable period underwear, like Thinx.",
+      "The brand launched a pair of ads, created by agency Oberland and directed by Pamela Adlon—the first commercial spots from the actor, director, producer and screenwriter, who recently signed with Girl Culture Films—to illustrate “How a New Generation Thinx.”",
+      "“Saved by Sister,” promoting the launch of Thinx Teens, relieves a girl from having her mom uncomfortably and awkwardly show her how to insert a tampon. Big Sis comes to the rescue, kicks Mom out of the bathroom and hands Little Sis a pair of Thinx Teens."
+    ],
+    "summary": "Back in the old days, period underpants were the permanently blood-stained skivvies you wore at your time of the month so you wouldn’t ruin your good pairs.",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2022-07-27-sky-falta-de-assunto-perdidos-na-program",
@@ -205456,6 +206878,48 @@
     }
   },
   {
+    "id": "2022-06-14-racism-pills-hit-cure-for-racism-pills-hit-nyc-stores",
+    "date": "2022-06-14",
+    "brand": "Racism' Pills Hit",
+    "title": "'Cure for Racism' Pills Hit NYC Stores in Agency's Rogue Stunt",
+    "agency": "Clios",
+    "source": "Muse by Clios",
+    "url": "https://musebyclios.com/advertising/cure-for-racism-pills-hit-nyc-stores-in-agencys-rogue-stunt/?utm_source=rss&utm_medium=rss&utm_campaign=cure-for-racism-pills-hit-nyc-stores-in-agencys-rogue-stunt",
+    "region": "EUA",
+    "cc": "US",
+    "image": "https://cdn.musebyclios.com/wp-content/uploads/2024/06/11201429/Cure-for-Racism-final-hed-2022.jpg",
+    "story": [
+      "Hate crimes against the Asian American Pacific Islander (AAPI) community increased 300 percent during the pandemic and remain a serious problem across the country.",
+      "In response, Anchor Worldwide created a series of fake pill boxes and placed them in pharmacies throughout New York City to educate residents about the rise in AAPI crimes and how to help. “Cure for Racism: AAPI Formula” looks like an average package of pills at your local pharmacy.",
+      "A closer look shows it’s anything but. “There is no recommended dosage of anti-racism treatment,” reads the fine print. “Only learning and understanding can help. If you are experiencing racist thoughts or behavior and feel increasingly violent towards others, just stay home and rest. Forever.",
+      "No one wants racists out on the city streets. We all belong here.”",
+      "The back side reads in bold font that “There is no medical cure for racism,” while side copy drives people to StopAAPIhate.org for ways to support and give help or for those with biased thoughts towards the AAPI community to receive help.",
+      "“Since 2020, we have all lived in fear of Covid, but my family and Asian friends had to face an additional fear: anti-AAPI hate,” says Kevin Bae, art director at Anchor Worldwide. “We had to be cautious of our surroundings on the streets, even in the daytime.",
+      "We had to check on each other every time we were outside. We wished for some magical, miraculous way to rid our world of racism, like the vaccines did for Covid, but there is no medical cure for hate. It still spreads like a disease, infecting people’s minds.",
+      "That’s where the idea of a ‘Cure for Racism’ came from. Our pill packaging and faux pharma ads inform and educate people in areas where hate crimes have happened.” There are more than 100 boxes in 40 pharmacies in downtown and midtown Manhattan. Brooklyn and Queens are next.",
+      "The stores are not being made aware of the stunt, nor did the agency ask for permission to place the boxes. In addition to the faux pill packages, wild postings throughout the city use headlines like “Cure for racism” and “Feel less racist, fast” to stop residents in their tracks.",
+      "A QR code offers more info. “We are looking at ways to provide the print-ready designs online so we can scale this NYC operation nationally wherever anti-AAPI hate crimes are happening,” Bae tells Muse."
+    ],
+    "summary": "Hate crimes against the Asian American Pacific Islander (AAPI) community increased 300 percent during the pandemic and remain a serious problem across the country.",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
+    "id": "2022-06-07-plant-based-meat-here-s-the-most-weirdly-delightful-a",
+    "date": "2022-06-07",
+    "brand": "Plant-Based Meat",
+    "title": "Here's the Most Weirdly Delightful Ad Yet for Plant-Based Meat",
+    "agency": "Forsman & Bordenfors",
+    "source": "Muse by Clios",
+    "url": "https://musebyclios.com/advertising/heres-the-most-weirdly-delightful-ad-yet-for-plant-based-meat/?utm_source=rss&utm_medium=rss&utm_campaign=heres-the-most-weirdly-delightful-ad-yet-for-plant-based-meat",
+    "region": "Suécia",
+    "cc": "SE",
+    "yt": [
+      "VJVrYv8MaLI"
+    ],
+    "summary": "“All your favorite foods are now plant-based!” This is the proclamation that concludes “The Field,” the latest work by Forsman & Bordenfors for food tech startup Peas of Heaven.",
+    "addedAt": "2026-11-28T16:56:34Z"
+  },
+  {
     "id": "2022-06-07-prudence-so-vai",
     "date": "2022-06-07",
     "brand": "Prudence",
@@ -205497,6 +206961,29 @@
         "ok": 2
       }
     }
+  },
+  {
+    "id": "2022-06-06-carpe-antiperspirant-sweat-gets-roughed-up-mafia-style-in",
+    "date": "2022-06-06",
+    "brand": "Carpe Antiperspirant",
+    "title": "Sweat Gets Roughed Up, Mafia Style, in Mischief's Ads for Carpe Antiperspirant",
+    "agency": "Clios",
+    "source": "Muse by Clios",
+    "url": "https://musebyclios.com/advertising/sweat-gets-roughed-up-mafia-style-in-mischiefs-ads-for-carpe-antiperspirant/?utm_source=rss&utm_medium=rss&utm_campaign=sweat-gets-roughed-up-mafia-style-in-mischiefs-ads-for-carpe-antiperspirant",
+    "region": "EUA",
+    "cc": "US",
+    "image": "https://cdn.musebyclios.com/wp-content/uploads/2024/06/11201414/Carpe-hed-2022_0.jpg",
+    "story": [
+      "We’re a sucker for well-written, copy-heavy OOH ads. And here are some fun ones by creative agency Mischief for Carpe , the antiperspirant brand. Sweat is Carpe’s enemy.",
+      "And where Carpe comes from, there’s one thing you do to your enemies. (Actually, there are several things.) You drive past their house and intimidate them. You cut off their pinky and mail it to their mom. You dig a hole and do what has to be done.",
+      "All of which happens to sweat in the wry ads below, parodying mob violence. ( RIP, Ray. ) Because apparently sweat wasn’t listening. “Sweat won’t be bothering you anymore,” says the wild postings, which are appearing across New York City.",
+      "“Sweat’s tactics are menacing—it sneaks up on our lives at the most unexpected and uncontrollable moments,” says David Spratte, Carpe’s CEO and co-founder. “For excessive sweaters, it is constantly bludgeoning.",
+      "And without the ability to change the thermostat, open windows or duck into a room to wipe off, sweat maroons us to the safe space of homes, alone, with the AC cranked up. But not with Carpe. With this campaign we want to celebrate the shift of power. Sweat won’t be bothering you anymore.”",
+      "“Carpe’s stronger than a lot of deodorants,” add Mischief creative directors Pete Stott and Ryan Lefebvre. “So while most sweat-care products talk about how they’re going to protect you from sweat, with Carpe, it seemed like sweat would need protection from you.",
+      "It’s a bit like Liam Neeson of the deodorant aisle. With that, we just had fun thinking of ways Carpe would end sweat on your behalf.” The post Sweat Gets Roughed Up, Mafia Style, in Mischief's Ads for Carpe Antiperspirant first appeared on Muse by Clios ."
+    ],
+    "summary": "We’re a sucker for well-written, copy-heavy OOH ads.",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2022-06-03-samsung-electronics-a-bespoke-original-series",
@@ -206185,6 +207672,32 @@
         "ok": 2
       }
     }
+  },
+  {
+    "id": "2022-05-12-truffle-spread-marmite-s-love-it-or-hate-it-campaig",
+    "date": "2022-05-12",
+    "brand": "Truffle Spread",
+    "title": "Marmite's 'Love It or Hate It' Campaign Gets Posh in Ads for Truffle Spread",
+    "agency": "England’s",
+    "source": "Muse by Clios",
+    "url": "https://musebyclios.com/advertising/marmites-love-it-or-hate-it-campaign-gets-posh-in-ads-for-truffle-spread/?utm_source=rss&utm_medium=rss&utm_campaign=marmites-love-it-or-hate-it-campaign-gets-posh-in-ads-for-truffle-spread",
+    "region": "Reino Unido",
+    "cc": "GB",
+    "image": "https://cdn.musebyclios.com/wp-content/uploads/2024/06/11201328/Marmite-Truffle-hed-2022_0.jpg",
+    "story": [
+      "Nothing says Marmite like regal, gold-trimmed signage driven around London’s elegant Eaton Square via horse and carriage. “One either loves it or finds it really rather beastly,” the ad proclaims.",
+      "The OOH initiative from adam&eveDDB trumpets Marmite Truffle , a new savory flavor from England’s most loved/hated, yeasty/salty food spread.",
+      "“We’ve carefully curated our new product with the distinct flavor of truffle for the most discerning Marmite connoisseur,” senior brand manager Sophie Allan says in a statement. “Gracing the poshest of tables from brunch through to supper, Marmite Truffle is deliciously decadent.”",
+      "“From the very first moment one saw this campaign, one’s been struggling to contain one’s excitement,” quips adam&eveDDB group executive creative director Ben Tollett.",
+      "Unilever-owned Marmite has long traded on its polarizing rep, with fun work focused on everything from hypnosis to facial recognition , and brand extensions including a limited-edition ale developed with Camden Town Brewery. (Yuck? Yum?)",
+      "Marmite Truffle has received mostly thumbs up so far. (But they like kidney pie there, too, so proceed with caution.) The stuff retails for £4.50 (about $6, mate!) online and at Sainsbury’s stores throughout the U.K.",
+      "Design and retouching: King Henry Designer: Martin Murphy Senior Designer: Carl Warren Head of Design: Paul Knowles Artworker: Sam Stabler Head of Artwork: Dave Callow Retouching Supervisor: Daniel Sandals Retoucher: Charlie Townsend",
+      "Media agency: Mindshare Client Director/s: Clemmie Marcel Account Director: Tess Domenet Account Manager: Tash Irwin Account Executive: Siobhain Molloy OOH Account Director: Rikul Sudra",
+      "PR Agency: W Communications Associate Director: Jess O’Donohoe Senior Account Manager: Paige Hartley Account Manager: Susana Micolta Senior Account Executive: Ella Bull",
+      "Photographer (Still Life): Sam Hofman Photographer (Lifestyle): Dan Burn-Forti Photography agent: Coco Wolf Shoot Producer: Sasha Rickerd Agency: Making Pictures The post Marmite's 'Love It or Hate It' Campaign Gets Posh in Ads for Truffle Spread first appeared on Muse by Clios ."
+    ],
+    "summary": "Nothing says Marmite like regal, gold-trimmed signage driven around London’s elegant Eaton Square via horse and carriage.",
+    "addedAt": "2026-11-28T16:56:34Z"
   },
   {
     "id": "2022-05-12-philips-walita-o-upgrade-do-seu-dia-a-dia",
