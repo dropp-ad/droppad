@@ -172,7 +172,11 @@ def deduplicar(camp, dias=14):
     if not camp:
         return camp
     limite = (dt.date.today() - dt.timedelta(days=dias)).isoformat()
-    recentes = [c for c in camp if c.get("date", "") >= limite and not c.get("hidden")]
+    # Filmes de uma série publicados separadamente por decisão editorial mantêm seus posts.
+    recentes = [
+        c for c in camp
+        if c.get("date", "") >= limite and not c.get("hidden") and not c.get("manter_separado")
+    ]
     fora = set()
     for i, a in enumerate(recentes):
         if a["id"] in fora:
