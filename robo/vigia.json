@@ -45,7 +45,7 @@
       "mod": "Sat, 28 Nov 2026 04:16:53 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Sat, 28 Nov 2026 04:24:06 GMT"
+      "mod": "Sat, 28 Nov 2026 04:28:07 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"f4abc62c32e214333d47d7d137a21cf0\"",
@@ -91,11 +91,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Sat, 28 Nov 2026 04:24:07 GMT"
+      "mod": "Sat, 28 Nov 2026 04:28:07 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"052527b44a461bd46afd86e5d34e96b1-gzip\"",
-      "mod": "Sat, 28 Nov 2026 04:18:23 GMT"
+      "etag": "W/\"d13aa03cb30217802f4f2132de181707-gzip\"",
+      "mod": "Sat, 28 Nov 2026 04:27:58 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -168,7 +168,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Sat, 28 Nov 2026 04:23:39 GMT"
+      "mod": "Sat, 28 Nov 2026 04:27:44 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -291,7 +291,7 @@
       "mod": "Fri, 27 Nov 2026 13:53:58 GMT"
     },
     "https://theinspirationroom.com/daily/feed/": {
-      "mod": "Sat, 28 Nov 2026 04:19:52 GMT"
+      "mod": "Sat, 28 Nov 2026 04:22:52 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"a05f66262a5bf3e0ef9615a768b6d32d\"",
@@ -323,7 +323,7 @@
       "mod": "Thu, 27 Jun 2024 15:55:37 GMT"
     }
   },
-  "yt_pos": 110,
+  "yt_pos": 139,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1171,7 +1171,7 @@
       "Crispin": "crispinagency"
     },
     "tentadas": {},
-    "pos": 4395,
+    "pos": 4404,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1681,7 +1681,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 4982,
+    "rodadas": 4986,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3455,7 +3455,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 2204,
+    "pos_quente": 2208,
     "lida": {
       "droga5sp": "2026-11-28T03:47:05.048866+00:00",
       "mboothagency": "2026-11-28T03:18:04.510217+00:00",
@@ -3475,9 +3475,9 @@
       "groupmagency": "2026-11-27T18:34:47.562515+00:00",
       "archertroy": "2026-11-28T04:22:04.378978+00:00",
       "omnicom": "2026-11-28T00:47:04.985591+00:00",
-      "razorfish": "2026-11-28T03:04:04.310728+00:00",
+      "razorfish": "2026-11-28T04:25:04.923658+00:00",
       "tribe": "2026-11-27T18:35:47.650896+00:00",
-      "wpp": "2026-11-28T03:05:04.741189+00:00",
+      "wpp": "2026-11-28T04:28:04.767871+00:00",
       "qualitymeats_": "2026-11-28T03:22:04.523686+00:00",
       "workinprogress": "2026-11-28T03:06:04.964125+00:00",
       "directiveconsulting": "2026-11-28T03:23:04.940982+00:00",
@@ -3504,7 +3504,7 @@
       "meaningfulsocialclub": "2026-11-28T03:18:04.510217+00:00",
       "vamp": "2026-11-28T04:24:04.736287+00:00",
       "melbournesocialco": "2026-11-28T03:19:05.197766+00:00",
-      "ogilvyitaly": "2026-11-28T03:31:04.857994+00:00",
+      "ogilvyitaly": "2026-11-28T04:25:04.923658+00:00",
       "squidgroupnz": "2026-11-28T03:20:04.756522+00:00",
       "thjnk": "2026-11-28T03:32:04.918728+00:00",
       "digitalinfluencenz": "2026-11-28T03:21:04.944573+00:00",
@@ -3524,7 +3524,7 @@
       "ogilvy": "2026-11-28T03:27:04.473306+00:00",
       "nakedcreative_": "2026-11-28T03:36:04.586358+00:00",
       "droga5": "2026-11-28T03:28:04.663033+00:00",
-      "smithsocialagency": "2026-11-28T03:37:04.499834+00:00",
+      "smithsocialagency": "2026-11-28T04:26:04.583001+00:00",
       "tbwa": "2026-11-28T04:22:04.378978+00:00",
       "optagency": "2026-11-27T19:00:48.275161+00:00",
       "mischiefusa": "2026-11-28T03:57:04.241303+00:00",
@@ -3548,7 +3548,7 @@
       "crispin": "2026-11-26T20:11:48.293263+00:00",
       "clockworkagency": "2026-11-28T03:42:04.219775+00:00",
       "thecommunityagency": "2026-11-28T03:37:04.499834+00:00",
-      "publicisgroupeafrica": "2026-11-28T03:43:04.965891+00:00",
+      "publicisgroupeafrica": "2026-11-28T04:27:05.093375+00:00",
       "silversideai": "2026-11-28T03:38:04.908585+00:00",
       "zenithsouthafrica": "2026-11-27T19:12:48.142708+00:00",
       "72andsunny_": "2026-11-28T03:39:04.473159+00:00",
@@ -3558,7 +3558,7 @@
       "anomaly": "2026-11-28T03:41:05.090342+00:00",
       "ckdigital": "2026-11-27T19:15:47.898455+00:00",
       "mckinney": "2026-11-27T23:30:03.992204+00:00",
-      "tbwaconcept": "2026-11-28T03:44:04.399613+00:00",
+      "tbwaconcept": "2026-11-28T04:28:04.767871+00:00",
       "bbdo": "2026-11-28T03:42:04.219775+00:00",
       "eclipsecommunications": "2026-11-27T19:17:47.505012+00:00",
       "grey": "2026-11-28T03:43:04.965891+00:00",
@@ -3651,8 +3651,8 @@
       "umworldwide": "2026-11-27T20:19:48.053658+00:00",
       "mindshare": "2026-11-27T20:20:47.804723+00:00",
       "heartsandscience": "2026-11-27T20:21:47.870965+00:00",
-      "sparkfoundry": "2026-11-27T20:22:47.999316+00:00",
-      "publicismedia": "2026-11-27T20:23:48.162822+00:00",
+      "sparkfoundry": "2026-11-28T04:26:04.583001+00:00",
+      "publicismedia": "2026-11-28T04:27:05.093375+00:00",
       "publicisgroupe": "2026-11-27T20:25:48.152332+00:00",
       "havas": "2026-11-27T20:26:48.205164+00:00",
       "jellysmack": "2026-11-27T20:27:48.066564+00:00",
@@ -4802,8 +4802,9 @@
     "https://roastbrief.com.mx/2026/11/la-industria-publicitaria-iberoamericana-despide-a-pedro-marcet-a-los-94-anos",
     "https://roastbrief.com.mx/2026/11/creator-ads-llega-a-mexico-con-su-ia-the-guardian-pretende-disminuir-tiempo-y-costos-en-campanas-publicitarias",
     "https://www.thestable.com.au/world-of-tanks-nez-khammal-the-gaming-ad-of-the-year-has-arrived",
-    "https://www.merca20.com/la-nueva-generacion-publicitaria-impulsada-por-la-busqueda-inteligente"
+    "https://www.merca20.com/la-nueva-generacion-publicitaria-impulsada-por-la-busqueda-inteligente",
+    "https://www.medianews4u.com/cheilx-launches-mg-hector-tomahawk-ev-campaign-inspired-by-wwii-fighter-aircraft"
   ],
-  "ultima_rodada": "2026-11-28T04:24:04.736287+00:00",
-  "ultima_novidade": "2026-11-28T03:50:04.378941+00:00"
+  "ultima_rodada": "2026-11-28T04:28:04.767871+00:00",
+  "ultima_novidade": "2026-11-28T04:28:04.767871+00:00"
 }
