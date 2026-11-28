@@ -12,7 +12,7 @@
       "mod": "Fri, 27 Nov 2026 18:47:39 GMT"
     },
     "https://marcaspelomundo.com.br/feed/": {
-      "mod": "Sat, 28 Nov 2026 16:17:28 GMT"
+      "mod": "Sat, 28 Nov 2026 16:25:40 GMT"
     },
     "https://www.informabtl.com/feed/": {
       "etag": "W/\"20dc6789ec28ef7303bf809a8817d1eb\"",
@@ -30,7 +30,7 @@
       "mod": "Sat, 28 Nov 2026 13:22:33 GMT"
     },
     "https://www.contentgrip.com/feed/": {
-      "etag": "W/\"3ab06-NLsZbFbubVCjhIzMREMe51pHIUA\""
+      "etag": "W/\"3af16-a9qc1PYTZ0uAVtwWZjLQuYXrMCQ\""
     },
     "https://www.nossomeio.com.br/feed/": {
       "etag": "\"1dff6-66155c221b891\"",
@@ -45,7 +45,7 @@
       "mod": "Sat, 28 Nov 2026 15:44:00 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Sat, 28 Nov 2026 16:24:29 GMT"
+      "mod": "Sat, 28 Nov 2026 16:29:43 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"f4abc62c32e214333d47d7d137a21cf0\"",
@@ -72,7 +72,7 @@
       "mod": "Fri, 27 Nov 2026 05:40:50 GMT"
     },
     "https://www.afaqs.com/rss": {
-      "mod": "Sat, 28 Nov 2026 10:54:31 GMT"
+      "mod": "Sat, 28 Nov 2026 10:58:23 GMT"
     },
     "https://campaignbriefasia.com/feed/": {
       "etag": "\"46e541598e978833b9badc101e82c636\"",
@@ -91,7 +91,7 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Sat, 28 Nov 2026 16:24:30 GMT"
+      "mod": "Sat, 28 Nov 2026 16:30:45 GMT"
     },
     "https://www.medianews4u.com/feed/": {
       "etag": "W/\"f55b060279931cf7d1187e87431e7f00-gzip\"",
@@ -141,7 +141,7 @@
       "mod": "Tue, 27 Oct 2026 14:40:14 GMT"
     },
     "https://www.thjnk.ch/blog-feed.xml": {
-      "mod": "Fri, 27 Nov 2026 12:04:41 GMT"
+      "mod": "Sat, 28 Nov 2026 16:25:46 GMT"
     },
     "https://www.tbwa.it/feed/": {
       "etag": "W/\"b893c0154ed7bafaac2f0b8c9b414324\"",
@@ -168,7 +168,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Sat, 28 Nov 2026 16:24:10 GMT"
+      "mod": "Sat, 28 Nov 2026 16:30:44 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -245,7 +245,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Sat, 28 Nov 2026 16:14:32 GMT"
+      "mod": "Sat, 28 Nov 2026 16:25:48 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -291,16 +291,42 @@
       "mod": "Sat, 28 Nov 2026 07:24:31 GMT"
     },
     "https://theinspirationroom.com/daily/feed/": {
-      "mod": "Sat, 28 Nov 2026 16:18:24 GMT"
+      "mod": "Sat, 28 Nov 2026 16:27:44 GMT"
     },
     "https://www.strategies.fr/feed": {
-      "mod": "Sat, 28 Nov 2026 10:43:21 GMT"
+      "mod": "Sat, 28 Nov 2026 16:30:45 GMT"
     },
     "https://www.marketingdirecto.com/feed/": {
       "mod": "Sat, 28 Nov 2026 11:00:00 GMT"
+    },
+    "https://roastbrief.com.mx/rss": {
+      "etag": "\"a05f66262a5bf3e0ef9615a768b6d32d\"",
+      "mod": "Fri, 27 Nov 2026 21:34:08 GMT"
+    },
+    "https://www.bandt.com.au/feed/": {
+      "mod": "Sat, 28 Nov 2026 04:04:34 GMT"
+    },
+    "https://www.decisionmarketing.co.uk/feed/": {
+      "mod": "Fri, 27 Nov 2026 10:30:28 GMT"
+    },
+    "https://thestable.com.au/feed/": {
+      "etag": "\"b4c1b029ea51c573375dbd9c59e34f5f\"",
+      "mod": "Fri, 27 Nov 2026 22:51:37 GMT"
+    },
+    "https://ansonstoner.com/feed/": {
+      "etag": "\"3d1dfd4ec40c364ee8f3707791fc87dc\"",
+      "mod": "Thu, 30 Jul 2026 19:59:18 GMT"
+    },
+    "https://bruketa-zinic.com/feed/": {
+      "etag": "\"5b10a6b158834169546a0780b1fe9526\"",
+      "mod": "Tue, 17 Nov 2026 10:31:34 GMT"
+    },
+    "https://www.cohnandjansen.ro/feed/": {
+      "etag": "\"ea5f6db108ae1cfc1ac4d2200809ccb4\"",
+      "mod": "Thu, 27 Jun 2024 15:55:37 GMT"
     }
   },
-  "yt_pos": 160,
+  "yt_pos": 277,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1148,7 +1174,7 @@
       "Crispin": "crispinagency"
     },
     "tentadas": {},
-    "pos": 5488,
+    "pos": 5496,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1658,7 +1684,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 5702,
+    "rodadas": 5708,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3432,7 +3458,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 2924,
+    "pos_quente": 2930,
     "lida": {
       "droga5sp": "2026-11-28T15:43:28.289581+00:00",
       "mboothagency": "2026-11-28T15:15:28.291987+00:00",
@@ -3524,19 +3550,19 @@
       "cbimarket": "2026-11-28T15:38:28.515663+00:00",
       "crispin": "2026-11-26T20:11:48.293263+00:00",
       "clockworkagency": "2026-11-28T15:39:28.552230+00:00",
-      "thecommunityagency": "2026-11-28T14:49:28.593402+00:00",
+      "thecommunityagency": "2026-11-28T16:25:39.672386+00:00",
       "publicisgroupeafrica": "2026-11-28T15:40:29.096758+00:00",
-      "silversideai": "2026-11-28T14:50:28.448379+00:00",
+      "silversideai": "2026-11-28T16:26:40.126131+00:00",
       "zenithsouthafrica": "2026-11-27T19:12:48.142708+00:00",
-      "72andsunny_": "2026-11-28T14:51:28.914669+00:00",
+      "72andsunny_": "2026-11-28T16:27:39.426546+00:00",
       "squaddigital": "2026-11-27T19:13:47.728874+00:00",
-      "goodby_silverstein": "2026-11-28T14:52:28.678395+00:00",
+      "goodby_silverstein": "2026-11-28T16:28:40.362496+00:00",
       "zurisocial": "2026-11-27T19:14:47.488827+00:00",
-      "anomaly": "2026-11-28T14:53:28.514015+00:00",
+      "anomaly": "2026-11-28T16:29:40.197222+00:00",
       "ckdigital": "2026-11-27T19:15:47.898455+00:00",
       "mckinney": "2026-11-28T12:18:28.862875+00:00",
       "tbwaconcept": "2026-11-28T15:41:28.959835+00:00",
-      "bbdo": "2026-11-28T14:54:29.178760+00:00",
+      "bbdo": "2026-11-28T16:30:39.548074+00:00",
       "eclipsecommunications": "2026-11-27T19:17:47.505012+00:00",
       "grey": "2026-11-28T14:55:28.463155+00:00",
       "houseofbrave_": "2026-11-28T15:42:28.801028+00:00",
@@ -3630,14 +3656,14 @@
       "heartsandscience": "2026-11-27T20:21:47.870965+00:00",
       "sparkfoundry": "2026-11-28T16:22:28.492246+00:00",
       "publicismedia": "2026-11-28T16:23:28.663040+00:00",
-      "publicisgroupe": "2026-11-28T10:27:14.290000+00:00",
-      "havas": "2026-11-28T10:28:14.647999+00:00",
+      "publicisgroupe": "2026-11-28T16:25:39.672386+00:00",
+      "havas": "2026-11-28T16:26:40.126131+00:00",
       "jellysmack": "2026-11-27T20:27:48.066564+00:00",
-      "neilpateldigital": "2026-11-28T10:29:14.544897+00:00",
-      "monks": "2026-11-28T10:30:14.987171+00:00",
+      "neilpateldigital": "2026-11-28T16:27:39.426546+00:00",
+      "monks": "2026-11-28T16:28:40.362496+00:00",
       "iprospect": "2026-11-27T20:30:47.771532+00:00",
-      "pereiraodell": "2026-11-28T13:18:28.858240+00:00",
-      "instrument": "2026-11-28T13:46:28.457701+00:00",
+      "pereiraodell": "2026-11-28T16:29:40.197222+00:00",
+      "instrument": "2026-11-28T16:30:39.548074+00:00",
       "metrictheory": "2026-11-27T20:34:47.344274+00:00",
       "seerinteractive": "2026-11-27T20:35:47.879349+00:00",
       "webfx": "2026-11-28T10:34:15.213474+00:00",
@@ -4793,8 +4819,9 @@
     "https://www.medianews4u.com/kirukal-rebrands-junior-kuppanna-with-goated-rooted-campaign-celebrating-tamil-heritage",
     "https://www.adobomagazine.com/campaign-spotlight/khukri-rums-mero-khukri-campaign-enters-a-new-chapter",
     "https://exame.com/exame-in/da-chapa-ao-pixel-eu-ja-vi-este-filme",
-    "https://www.merca20.com/campana-publicitaria-de-navidad-coop-suiza-ojos-plastico"
+    "https://www.merca20.com/campana-publicitaria-de-navidad-coop-suiza-ojos-plastico",
+    "https://www.contentgrip.com/bench-aura-campaign-analysis"
   ],
-  "ultima_rodada": "2026-11-28T16:24:28.389205+00:00",
-  "ultima_novidade": "2026-11-28T15:46:28.744872+00:00"
+  "ultima_rodada": "2026-11-28T16:30:39.548074+00:00",
+  "ultima_novidade": "2026-11-28T16:30:39.548074+00:00"
 }
