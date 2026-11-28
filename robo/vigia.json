@@ -45,7 +45,7 @@
       "mod": "Sat, 28 Nov 2026 04:46:48 GMT"
     },
     "https://www.mediaweek.com.au/feed/": {
-      "mod": "Sat, 28 Nov 2026 06:55:42 GMT"
+      "mod": "Sat, 28 Nov 2026 07:04:17 GMT"
     },
     "https://mumbrella.com.au/feed/": {
       "etag": "\"f4abc62c32e214333d47d7d137a21cf0\"",
@@ -91,11 +91,11 @@
       "mod": "Tue, 29 Sep 2026 19:55:48 GMT"
     },
     "https://clios.com/rss.xml": {
-      "mod": "Sat, 28 Nov 2026 06:56:18 GMT"
+      "mod": "Sat, 28 Nov 2026 07:04:18 GMT"
     },
     "https://www.medianews4u.com/feed/": {
-      "etag": "W/\"1da0e2db8a9d7a57b561f990fcfacd3e-gzip\"",
-      "mod": "Sat, 28 Nov 2026 06:56:07 GMT"
+      "etag": "W/\"7931ee58fa61d30d303f4ddb55b0bed7-gzip\"",
+      "mod": "Sat, 28 Nov 2026 06:59:06 GMT"
     },
     "https://www.mccann.com/feed/": {
       "etag": "W/\"9cf0a61d7e5c322175827a4facbab471\"",
@@ -168,7 +168,7 @@
       "mod": "Thu, 19 Nov 2026 23:15:31 GMT"
     },
     "https://www.horizont.net/news/feed/": {
-      "mod": "Sat, 28 Nov 2026 06:55:19 GMT"
+      "mod": "Sat, 28 Nov 2026 07:03:19 GMT"
     },
     "https://modernclimate.com/feed/": {
       "etag": "\"6af7d4f60ef3af657a13ada7dd12860e\"",
@@ -245,7 +245,7 @@
       "mod": "Mon, 03 Aug 2026 16:24:56 GMT"
     },
     "https://vaultcommunications.com/rss.xml": {
-      "mod": "Sat, 28 Nov 2026 06:49:21 GMT"
+      "mod": "Sat, 28 Nov 2026 07:00:21 GMT"
     },
     "https://hlkagency.com/feed/": {
       "etag": "W/\"6e928ffbfea5f77bdda772a9df70b32b\"",
@@ -291,7 +291,7 @@
       "mod": "Fri, 27 Nov 2026 13:53:58 GMT"
     },
     "https://theinspirationroom.com/daily/feed/": {
-      "mod": "Sat, 28 Nov 2026 06:52:50 GMT"
+      "mod": "Sat, 28 Nov 2026 06:59:51 GMT"
     },
     "https://roastbrief.com.mx/rss": {
       "etag": "\"a05f66262a5bf3e0ef9615a768b6d32d\"",
@@ -304,7 +304,7 @@
       "mod": "Sat, 28 Nov 2026 04:04:34 GMT"
     },
     "https://www.strategies.fr/feed": {
-      "mod": "Sat, 28 Nov 2026 06:55:20 GMT"
+      "mod": "Sat, 28 Nov 2026 07:03:20 GMT"
     },
     "https://thestable.com.au/feed/": {
       "etag": "\"b4c1b029ea51c573375dbd9c59e34f5f\"",
@@ -326,7 +326,7 @@
       "mod": "Fri, 27 Nov 2026 15:58:13 GMT"
     }
   },
-  "yt_pos": 157,
+  "yt_pos": 215,
   "ig": {
     "contas": {
       "Mother": "motherlondon",
@@ -1174,7 +1174,7 @@
       "Crispin": "crispinagency"
     },
     "tentadas": {},
-    "pos": 4636,
+    "pos": 4645,
     "revistas": [
       "DPZ",
       "Wieden+Kennedy",
@@ -1684,7 +1684,7 @@
       "Boomtown",
       "Liquorice"
     ],
-    "rodadas": 5134,
+    "rodadas": 5142,
     "site_ig": {
       "DPZ": [
         "dpzoficial"
@@ -3458,7 +3458,7 @@
       "honeyandmoonza": "2026-11-25T04:14:09.893893+00:00",
       "liquoriceza": "2026-11-25T04:14:09.893893+00:00"
     },
-    "pos_quente": 2356,
+    "pos_quente": 2364,
     "lida": {
       "droga5sp": "2026-11-28T06:05:14.107333+00:00",
       "mboothagency": "2026-11-28T03:18:04.510217+00:00",
@@ -3495,7 +3495,7 @@
       "thegoatagency": "2026-11-28T06:23:14.122764+00:00",
       "collinsagency": "2026-11-28T03:25:05.183376+00:00",
       "sociallypowerful": "2026-11-28T06:24:13.607759+00:00",
-      "betcparis": "2026-11-28T06:33:14.085378+00:00",
+      "betcparis": "2026-11-28T06:58:14.151640+00:00",
       "traackr": "2026-11-28T06:25:13.556278+00:00",
       "tbwaparis": "2026-11-28T03:27:04.473306+00:00",
       "meltwater": "2026-11-28T06:26:13.942756+00:00",
@@ -3568,15 +3568,15 @@
       "houseofbrave_": "2026-11-28T03:45:04.750629+00:00",
       "akqa": "2026-11-28T06:56:14.263816+00:00",
       "honeymoonagency": "2026-11-27T19:19:47.419108+00:00",
-      "jungvonmatt": "2026-11-28T06:36:13.409515+00:00",
+      "jungvonmatt": "2026-11-28T06:59:13.971665+00:00",
       "lewlaratbwa": "2026-11-27T19:21:47.786298+00:00",
-      "antoniberlin": "2026-11-28T05:24:14.254930+00:00",
+      "antoniberlin": "2026-11-28T07:00:13.904800+00:00",
       "ogilvybrasil": "2026-11-28T03:48:04.804502+00:00",
-      "scholzandfriends": "2026-11-28T06:37:14.276479+00:00",
-      "bbdobelgium": "2026-11-28T06:45:13.566383+00:00",
-      "agency_brigada": "2026-11-28T06:46:14.102436+00:00",
+      "scholzandfriends": "2026-11-28T07:01:14.057125+00:00",
+      "bbdobelgium": "2026-11-28T07:02:14.246731+00:00",
+      "agency_brigada": "2026-11-28T07:03:14.262187+00:00",
       "akqacasa": "2026-11-28T03:51:05.213210+00:00",
-      "happinessbrussels": "2026-11-28T06:47:13.688063+00:00",
+      "happinessbrussels": "2026-11-28T07:04:13.800829+00:00",
       "cpbbrasil": "2026-11-28T03:52:04.846598+00:00",
       "boysandgirlsltd": "2026-11-28T06:48:13.991197+00:00",
       "akestamholst": "2026-11-28T06:50:13.683674+00:00",
@@ -3770,7 +3770,7 @@
       "publiciswestafrica": "2026-11-28T05:41:13.767615+00:00",
       "flowcomms": "2026-11-28T05:42:13.326929+00:00",
       "gridworldwide": "2026-11-27T22:36:48.974369+00:00",
-      "motherlondon": "2026-11-28T06:36:13.409515+00:00",
+      "motherlondon": "2026-11-28T06:57:13.914079+00:00",
       "africacreative": "2026-11-27T22:39:48.478685+00:00",
       "gutagency": "2026-11-28T05:45:14.153717+00:00",
       "uncommoncreativestudio": "2026-11-28T06:30:13.437998+00:00",
@@ -3830,15 +3830,15 @@
       "hasanpartners": "2026-11-28T06:54:14.233070+00:00",
       "nordagencygroup": "2026-11-28T06:55:14.272260+00:00",
       "sekagency": "2026-11-28T00:14:03.641039+00:00",
-      "180heartbeats_jvm": "2026-11-28T00:16:04.185451+00:00",
-      "this_is_locco": "2026-11-28T00:17:03.870559+00:00",
-      "hellowearemito": "2026-11-28T00:18:03.543894+00:00",
-      "cohnandjansen": "2026-11-28T00:19:04.037319+00:00",
-      "banda": "2026-11-28T00:20:04.101925+00:00",
-      "vilvi.vilkyskiu": "2026-11-28T00:21:03.845540+00:00",
+      "180heartbeats_jvm": "2026-11-28T06:57:13.914079+00:00",
+      "this_is_locco": "2026-11-28T06:58:14.151640+00:00",
+      "hellowearemito": "2026-11-28T06:59:13.971665+00:00",
+      "cohnandjansen": "2026-11-28T07:00:13.904800+00:00",
+      "banda": "2026-11-28T07:01:14.057125+00:00",
+      "vilvi.vilkyskiu": "2026-11-28T07:02:14.246731+00:00",
       "tabasco.theagency": "2026-11-28T00:22:03.879104+00:00",
-      "age.creative": "2026-11-28T00:23:03.638911+00:00",
-      "bruketa_and": "2026-11-28T00:24:03.694852+00:00",
+      "age.creative": "2026-11-28T07:03:14.262187+00:00",
+      "bruketa_and": "2026-11-28T07:04:13.800829+00:00",
       "imago.ogilvy": "2026-11-28T00:25:03.817853+00:00",
       "communis_agency": "2026-11-28T00:26:03.575229+00:00",
       "proof.agency": "2026-11-28T00:27:03.256926+00:00",
@@ -4817,6 +4817,6 @@
     "https://www.medianews4u.com/platinum-love-bands-celebrates-finding-love-in-an-arranged-match-through-new-campaign",
     "https://www.medianews4u.com/khukri-rum-brings-back-mero-khukri-campaign-with-mero-khukri-mero-way"
   ],
-  "ultima_rodada": "2026-11-28T06:56:14.263816+00:00",
+  "ultima_rodada": "2026-11-28T07:04:13.800829+00:00",
   "ultima_novidade": "2026-11-28T06:56:14.263816+00:00"
 }
